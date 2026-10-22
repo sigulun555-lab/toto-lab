@@ -2,6 +2,9 @@
 
 このディレクトリは、Claude版（totoGOAL Artifact）と ChatGPT版（`sigulun555-lab/gpt`）の
 予測を「同じ試合・同じ予測時点・同じ採点方法」で公平に比較するための基盤です。
+新規作成された **`sigulun555-lab/toto-lab`**（両モデル側が書き込める共有リポジトリ）への
+配置を想定していますが、`sigulun555-lab/gpt` に新規フォルダとして追加する形でも動作します
+（詳細は7章）。
 
 **本番の予測ロジック・補正値（Dixon-Coles、ドロー補正、シュリンケージ、マーケットブレンド等）には
 一切変更を加えていません。** この比較基盤は既存の予測生成処理の外側に完全に独立して置かれており、
@@ -104,14 +107,17 @@ results/round_1665_results.jsonl
   - 時刻はISO8601 UTC（`Z`終端）以外を拒否
   - `probabilities` のキーは `"1","0","2"` のみ、合計は1（許容誤差1e-6）
   - `revisionOf` が指す `predictionId` が未知の場合は拒否
-  - チーム名が `team_name_dictionary.json` で解決できない場合は、**保存は拒否しないが**
-    警告として明示する（`isUnmappedTeam` 的な扱い。推測で統合はしない）
+  - チーム名が `team_name_dictionary.json` の正規名称（canonicalName）に変換できない場合は、
+    **保存は拒否しないが**警告として明示する（推測で統合はしない。採点時に除外される）
 
 ### `scripts/score_predictions.js`
 
 - `predictions/*.jsonl` を全読み込み、`results/<file>.jsonl` と突き合わせて採点する
-- 照合キーは **`round + matchNumber + homeTeam + awayTeam` の文字列完全一致のみ**。
-  一致しない予測は `unresolved` に明示され、採点対象から除外される（推測補完はしない）
+- 照合は **まず homeTeam / awayTeam を `team_name_dictionary.json` の正規名称
+  （canonicalName）に変換し、そのうえで `round + matchNumber + 正規名称(home) + 正規名称(away)`
+  の完全一致のみ**を許可する。正規名称に変換できないチームは `unresolvedTeamNames` に
+  理由・件数とともに記録し、採点対象から除外する（推測補完はしない）。正規名称への変換は
+  できても一致する結果レコードが無い場合は `unresolved` に記録して除外する
 - `predictionConfirmedAt >= deadlineAt` のレコードは二重に防御され、採点対象から除外される
 - 同一 `(round, matchNumber, modelName, modelVersion)` に複数の有効レコードがある場合
   （= `revisionOf` による修正履歴がある場合）、**締切前に確定した中で最も新しい1件のみ**を採点に使う
@@ -124,7 +130,7 @@ results/round_1665_results.jsonl
 ### `tests/test_toto_compare.js`
 
 一時ディレクトリ内で以下を実データに近い形で確認する（本番の `predictions/` `results/` には
-一切触れない）。**実行結果：10件すべてpass。**
+一切触れない）。**実行結果：11件すべてpass。**
 
 1. 正常なレコードの追記
 2. `predictionId` 重複の拒否
@@ -133,9 +139,11 @@ results/round_1665_results.jsonl
 5. 存在しない `revisionOf` の拒否
 6. 正しい修正レコードの追記
 7. 修正履歴のうち締切前の最終確定予測のみが採点に使われること
-8. チーム名・試合不一致が推測補完されず `unresolved` になること
-9. Brier scoreが sum-of-3-squares 方式で正確に算出されること（手計算と照合）
-10. リーグ別集計が機能すること
+8. gpt側の略称表記（例「鹿島」）とClaude側の表記（例「鹿島アントラーズ」）が、文字列としては
+   異なっていても正規名称への変換を経て同一クラブとして正しく突き合わされること
+9. 正規名称に変換できない試合（架空のチーム名）が推測補完されず `unresolvedTeamNames` になること
+10. Brier scoreが sum-of-3-squares 方式で正確に算出されること（手計算と照合）
+11. リーグ別集計が機能すること
 
 実行方法：
 ```
@@ -156,38 +164,170 @@ claude : n=1 accuracy=1.0000 brier=0.1325 logloss=0.3491
 （この1試合ではどちらも「ホーム勝」を正しく当てているが、確率の確信度がChatGPT側の方が
 結果に近かった、という例。n=1なので何かを結論づけるものではなく、動作確認のための実例）
 
-## 5. チーム名辞書（`team_name_dictionary.json`）について
+## 5. チーム名辞書（`team_name_dictionary.json`）について — 正規名称（canonicalName）方式
 
-- `sigulun555-lab/gpt` の `data/history.json` に実際に出現する60チームの表記と、
-  Claude側Artifactの `teamDatabase`（56のJリーグチーム、欧州クラブ26は対象外）を
-  実データから直接突き合わせて作成（推測統合なし）
-- 56チームは `mapping` に `{claudeKey, claudeFullName}` として登録
-- **4チームは明示的に未対応（`unmapped`）**: `北九州`（ギラヴァンツ北九州）、`奈良`（奈良クラブ）、
-  `岐阜`（FC岐阜）、`相模原`（SC相模原）— いずれもClaude側 `teamDatabase` に未登録であることを
-  実際のソースコードを読んで確認済み。これらのチームが絡む試合は、辞書を更新するまで
-  比較対象外として扱われる（類似文字列での自動統合は行わない）
+**正規名称の基準**: Jリーグ公式サイト「[2026特別シーズン、2026/27シーズン クラブ編成](https://www.jleague.jp/news/article/32852/)」
+（2025/12/19掲載）に掲載された、2026年J1（20）・J2（20）・J3（20）全60クラブの名称。
+この公式資料を全文取得し、記載の60クラブすべてを `clubs[]` の `canonicalName` として採用した
+（推測統合なし。全60クラブの出典URL付きリストは本ファイル末尾の「全60クラブ一覧」を参照）。
 
-## 6. GitHubへの実装に必要な操作（重要な制約）
+スキーマ（1クラブ1エントリ）：
+```jsonc
+{
+  "canonicalName": "鹿島アントラーズ",      // 正規名称（NFKC正規化で半角統一）
+  "officialPageText": "鹿島アントラーズ",    // Jリーグ公式ページの表示そのまま（全角英数字含む場合あり）
+  "jleagueUrlSlug": "kashima",
+  "jleagueUrl": "https://www.jleague.jp/club/kashima",
+  "league2026": "J1",
+  "aliases": {
+    "gptHistoryJson": "鹿島",                      // sigulun555-lab/gpt data/history.json での表記
+    "claudeTeamDatabaseKey": "kashima",            // Claude側teamDatabaseのキー
+    "claudeTeamDatabaseName": "鹿島アントラーズ"    // Claude側teamDatabaseの表記
+  },
+  "claudeAppSupported": true   // Claude側teamDatabaseにエントリがあるか（predictScore()で予測可能か）
+}
+```
 
-**このセッション（Claude Cowork）からは `sigulun555-lab/gpt` にも `sigulun555-lab/claude` にも
-pushできません。** 今回、`gpt` リポジトリに対しても実際に試験的な `git push` を実行して
-再確認しましたが、以下のエラーで拒否されました：
+**正規化について**: 公式ページ本文は全角英数字（ＦＣ・ＳＣ等）で表示されているが、これはページ
+全体で日本語文中の英数字を全角に統一する表示上の処理であり、クラブの正式表記が全角という
+意味ではない（toto公式データ・gpt側データ・Claude側データのいずれも半角表記）。`canonicalName`
+はUnicode正規化（NFKC）で半角化した表記を採用し、公式ページそのままの表示は `officialPageText`
+に別途保持する。NFKCは一意な機械的文字変換であり、推測によるマッチングではない。
+
+**照合できたもの**:
+- gpt側 `history.json` に実際に出現する60表記すべてが、`aliases.gptHistoryJson` として
+  全60クラブに登録できた（60/60、実データから直接確認。推測統合なし）
+- Claude側Artifactの `teamDatabase`（56のJリーグチーム、欧州クラブ26件は対象外）のうち
+  **54チームは正規名称と文字列が完全一致**、**2チームは表記が異なるが同一クラブと確認できた**
+  （`jleagueUrlSlug` とClaude側のキー名が一致することで確認。推測ではない）:
+  - `京都サンガF.C.`（公式正規名称） ⇔ Claude側表記「京都サンガ」（F.C.が付かない旧称/略称）
+  - `ザスパ群馬`（公式正規名称・2026年時点） ⇔ Claude側表記「ザスパクサツ群馬」（旧クラブ名。
+    「クサツ」が外れて改称されている）
+  これら2件は `claudeNameDiscrepancyNote` に根拠を明記した上で `aliases` に確認済みの別名として登録した
+
+**Claude側アプリが未対応の4クラブ**: `ギラヴァンツ北九州`、`奈良クラブ`、`FC岐阜`、`SC相模原` は、
+Jリーグ公式資料上は2026年J3の正規クラブとして一意に存在が確認できる（＝比較基盤での正規名称への
+変換・採点は可能）が、Claude側Artifactの `teamDatabase` にはエントリが無いため、
+**Claude側の `predictScore()` で予測を生成することはできない**（`claudeAppSupported: false`）。
+これは「チーム名が解決できない」という問題ではなく、「Claude側アプリの対応クラブ範囲の問題」
+であり、両者は別の課題として扱う。ChatGPT側の予測はこれら4クラブが絡む試合でも正規名称に変換でき、
+採点対象になる。
+
+**過去シーズンのデータに適用する際の注意**: この60クラブは『2026特別シーズン、2026/27シーズン
+クラブ編成』時点のものである。過去シーズンの試合データには、改称前の旧クラブ名や、当時は異なる
+リーグ（J1/J2/J3）に所属していたクラブが含まれる場合がある。本辞書は「名称が同一クラブを指すか」
+だけを確認済みのエイリアスとして保証するものであり、「そのクラブが当時どのリーグに所属していたか」
+は保証しない。過去データに対して正規名称へ変換する場合も、改称履行や昇降格を考慮せず機械的に
+現行名へ置換することは誤照合の原因になるため行わない（例：旧名で記録された試合は、まずそのクラブが
+現在のどのクラブと同一かを本辞書のエイリアスで確認したうえで変換するが、「2026年にJ1/J2/J3のどこに
+いたか」という `league2026` フィールドを過去の試合の所属リーグとして転用しない）。
+
+## 6. 全60クラブ一覧（2026年J1/J2/J3、出典: Jリーグ公式サイト）
+
+出典: https://www.jleague.jp/news/article/32852/ （2025/12/19掲載）
+
+### J1（20クラブ）
+
+| 正規名称 | gpt側表記 | Claude側アプリ対応 | 備考 |
+|---|---|---|---|
+| [FC町田ゼルビア](https://www.jleague.jp/club/machida) | 町田 | 対応 |  |
+| [FC東京](https://www.jleague.jp/club/ftokyo) | FC東京 | 対応 |  |
+| [V・ファーレン長崎](https://www.jleague.jp/club/nagasaki) | 長崎 | 対応 |  |
+| [アビスパ福岡](https://www.jleague.jp/club/fukuoka) | 福岡 | 対応 |  |
+| [ヴィッセル神戸](https://www.jleague.jp/club/kobe) | 神戸 | 対応 |  |
+| [ガンバ大阪](https://www.jleague.jp/club/gosaka) | G大阪 | 対応 |  |
+| [サンフレッチェ広島](https://www.jleague.jp/club/hiroshima) | 広島 | 対応 |  |
+| [ジェフユナイテッド千葉](https://www.jleague.jp/club/chiba) | 千葉 | 対応 |  |
+| [セレッソ大阪](https://www.jleague.jp/club/cosaka) | C大阪 | 対応 |  |
+| [ファジアーノ岡山](https://www.jleague.jp/club/okayama) | 岡山 | 対応 |  |
+| [浦和レッズ](https://www.jleague.jp/club/urawa) | 浦和 | 対応 |  |
+| [横浜F・マリノス](https://www.jleague.jp/club/yokohamafm) | 横浜FM | 対応 |  |
+| [京都サンガF.C.](https://www.jleague.jp/club/kyoto) | 京都 | 対応 | 旧名/表記差あり（本文参照） |
+| [鹿島アントラーズ](https://www.jleague.jp/club/kashima) | 鹿島 | 対応 |  |
+| [水戸ホーリーホック](https://www.jleague.jp/club/mito) | 水戸 | 対応 |  |
+| [清水エスパルス](https://www.jleague.jp/club/shimizu) | 清水 | 対応 |  |
+| [川崎フロンターレ](https://www.jleague.jp/club/kawasakif) | 川崎F | 対応 |  |
+| [東京ヴェルディ](https://www.jleague.jp/club/tokyov) | 東京V | 対応 |  |
+| [柏レイソル](https://www.jleague.jp/club/kashiwa) | 柏 | 対応 |  |
+| [名古屋グランパス](https://www.jleague.jp/club/nagoya) | 名古屋 | 対応 |  |
+
+### J2（20クラブ）
+
+| 正規名称 | gpt側表記 | Claude側アプリ対応 | 備考 |
+|---|---|---|---|
+| [FC今治](https://www.jleague.jp/club/imabari) | 今治 | 対応 |  |
+| [RB大宮アルディージャ](https://www.jleague.jp/club/omiya) | 大宮 | 対応 |  |
+| [アルビレックス新潟](https://www.jleague.jp/club/niigata) | 新潟 | 対応 |  |
+| [いわきFC](https://www.jleague.jp/club/iwaki) | いわき | 対応 |  |
+| [ヴァンフォーレ甲府](https://www.jleague.jp/club/kofu) | 甲府 | 対応 |  |
+| [ヴァンラーレ八戸](https://www.jleague.jp/club/hachinohe) | 八戸 | 対応 |  |
+| [カターレ富山](https://www.jleague.jp/club/toyama) | 富山 | 対応 |  |
+| [サガン鳥栖](https://www.jleague.jp/club/tosu) | 鳥栖 | 対応 |  |
+| [ジュビロ磐田](https://www.jleague.jp/club/iwata) | 磐田 | 対応 |  |
+| [テゲバジャーロ宮崎](https://www.jleague.jp/club/miyazaki) | 宮崎 | 対応 |  |
+| [ブラウブリッツ秋田](https://www.jleague.jp/club/akita) | 秋田 | 対応 |  |
+| [ベガルタ仙台](https://www.jleague.jp/club/sendai) | 仙台 | 対応 |  |
+| [モンテディオ山形](https://www.jleague.jp/club/yamagata) | 山形 | 対応 |  |
+| [横浜FC](https://www.jleague.jp/club/yokohamafc) | 横浜FC | 対応 |  |
+| [湘南ベルマーレ](https://www.jleague.jp/club/shonan) | 湘南 | 対応 |  |
+| [大分トリニータ](https://www.jleague.jp/club/oita) | 大分 | 対応 |  |
+| [藤枝MYFC](https://www.jleague.jp/club/fujieda) | 藤枝 | 対応 |  |
+| [徳島ヴォルティス](https://www.jleague.jp/club/tokushima) | 徳島 | 対応 |  |
+| [栃木シティ](https://www.jleague.jp/club/tochigic) | 栃木C | 対応 |  |
+| [北海道コンサドーレ札幌](https://www.jleague.jp/club/sapporo) | 札幌 | 対応 |  |
+
+### J3（20クラブ）
+
+| 正規名称 | gpt側表記 | Claude側アプリ対応 | 備考 |
+|---|---|---|---|
+| [AC長野パルセイロ](https://www.jleague.jp/club/nagano) | 長野 | 対応 |  |
+| [FC岐阜](https://www.jleague.jp/club/gifu) | 岐阜 | **未対応** |  |
+| [FC大阪](https://www.jleague.jp/club/fosaka) | FC大阪 | 対応 |  |
+| [FC琉球](https://www.jleague.jp/club/ryukyu) | 琉球 | 対応 |  |
+| [SC相模原](https://www.jleague.jp/club/sagamihara) | 相模原 | **未対応** |  |
+| [ガイナーレ鳥取](https://www.jleague.jp/club/tottori) | 鳥取 | 対応 |  |
+| [カマタマーレ讃岐](https://www.jleague.jp/club/sanuki) | 讃岐 | 対応 |  |
+| [ギラヴァンツ北九州](https://www.jleague.jp/club/kitakyushu) | 北九州 | **未対応** |  |
+| [ザスパ群馬](https://www.jleague.jp/club/gunma) | 群馬 | 対応 | 旧名/表記差あり（本文参照） |
+| [ツエーゲン金沢](https://www.jleague.jp/club/kanazawa) | 金沢 | 対応 |  |
+| [レイラック滋賀FC](https://www.jleague.jp/club/shiga) | 滋賀 | 対応 |  |
+| [レノファ山口FC](https://www.jleague.jp/club/yamaguchi) | 山口 | 対応 |  |
+| [ロアッソ熊本](https://www.jleague.jp/club/kumamoto) | 熊本 | 対応 |  |
+| [愛媛FC](https://www.jleague.jp/club/ehime) | 愛媛 | 対応 |  |
+| [高知ユナイテッドSC](https://www.jleague.jp/club/kochi) | 高知 | 対応 |  |
+| [鹿児島ユナイテッドFC](https://www.jleague.jp/club/kagoshima) | 鹿児島 | 対応 |  |
+| [松本山雅FC](https://www.jleague.jp/club/matsumoto) | 松本 | 対応 |  |
+| [栃木SC](https://www.jleague.jp/club/tochigi) | 栃木SC | 対応 |  |
+| [奈良クラブ](https://www.jleague.jp/club/nara) | 奈良 | **未対応** |  |
+| [福島ユナイテッドFC](https://www.jleague.jp/club/fukushima) | 福島 | 対応 |  |
+
+
+## 7. GitHubへの実装に必要な操作（重要な制約）
+
+**このセッション（Claude Cowork）からは、ユーザー様のどのリポジトリにもpushできません。**
+`sigulun555-lab/gpt` `sigulun555-lab/claude` に加えて、新規作成された
+**`sigulun555-lab/toto-lab`（空リポジトリ、確認済み）に対しても同じ制約が適用されます**。
+新しいリポジトリを作成しても、このセッションが使えるリポジトリの範囲（Anthropic側の
+セッション権限）には追加されないため、以下のエラーで拒否されます：
 
 ```
-remote: access denied by the git proxy: sigulun555-lab/gpt is not in this session's
-authorized repository set, so the proxy will not inject a credential for it.
+HTTP 403: sessions are bound to their configured repositories.
 ```
 
-これはGitHub側の公開/非公開設定とは無関係の、Anthropic側セッションの権限の問題で、
-このセッション内から回避する方法はありません。したがって、以下のいずれかの方法で
-人間側（またはChatGPT側の実装担当）が実際のpushを行う必要があります。
+これはGitHub側の公開/非公開設定や、どちらのアカウントがリポジトリを作成したかとは無関係の、
+Anthropic側セッションの権限の問題で、このセッション内から回避する方法はありません。
+したがって、以下のいずれかの方法で人間側（またはChatGPT側の実装担当）が実際のpushを
+行う必要があります。
 
 **方法A（推奨・最も確実）: GitHub Web UIから手動アップロード**（`claude`リポジトリの
 `toto/`フォルダで既に2回成功している方法と同じ）
-1. `https://github.com/sigulun555-lab/gpt` を開く
-2. 新規ディレクトリとして `toto_compare/` を作る必要があるため、以下のURLを直接開くと
-   ドラッグ&ドロップのアップロード画面が `toto_compare/` 配下を対象にして開きます：
-   `https://github.com/sigulun555-lab/gpt/upload/main/toto_compare`
+1. `https://github.com/sigulun555-lab/toto-lab` を開く
+2. 以下のURLを直接開くと、ドラッグ&ドロップのアップロード画面が開きます：
+   `https://github.com/sigulun555-lab/toto-lab/upload/main/`
+   （リポジトリが空のため、ルート直下にこの `toto_compare/` フォルダ構造ごとアップロードする
+   か、`toto_compare/` というフォルダ名を付けずにこのディレクトリの内容をそのままルートに
+   置いても構いません。ChatGPT側と共有する前提であれば、`toto_compare/` を付けずに
+   ルート直下に置く方がシンプルです）
 3. このディレクトリ内の全ファイル（`README.md`, `team_name_dictionary.json`,
    `scripts/validate_prediction.js`, `scripts/score_predictions.js`,
    `predictions/example_claude.jsonl`, `predictions/example_chatgpt.jsonl`,
@@ -198,18 +338,17 @@ authorized repository set, so the proxy will not inject a credential for it.
 4. コミットメッセージ例：`Add toto_compare: Claude/ChatGPT prediction comparison infra (no production logic changed)`
 
 **方法B: ChatGPT側の実装担当に直接渡す**
-`gpt` リポジトリには既に `github-actions[bot]` によるコミットがある（`.github/workflows/update-predictions.yml`
-による自動更新）ため、ChatGPT側の実装担当は明らかに書き込み権限を持っています。このディレクトリを
-そのまま渡し、`toto_compare/` という新規トップレベルフォルダとして追加してもらうのが最短です。
-**既存の `scripts/`, `tests/`, `data/`, `model.js`, `app.js` 等は一切変更不要・変更しないでください**
-——このフォルダは既存ファイルと名前が衝突せず、既存の自動更新ワークフローの監視パス
-（`scripts/**` `tests/**` `model.js` `app.js` `index.html` `styles.css` `package.json` `data/**`）にも
-含まれないため、追加するだけで既存のtotoアプリの動作に一切影響しません。
+`toto-lab` はまだ空のリポジトリなので、どちらが先にpushしても問題ありません。ChatGPT側の
+実装担当（`gpt` リポジトリで既に `github-actions[bot]` の自動更新を動かしている＝書き込み
+権限を持っている側）にこのディレクトリをそのまま渡し、`toto-lab` にpushしてもらうのが
+最短です。
 
-**方法Aでも方法Bでも、どちらの場合も production の `model.js` / Claude側Artifactのロジックには
-一切触れません。** このディレクトリは「比較基盤」のみを追加するものです。
+**どちらの方法でも、production の `model.js` / `sigulun555-lab/gpt` の既存ファイル /
+Claude側Artifactのロジックには一切触れません。** `toto-lab` は比較基盤専用の新規リポジトリ
+なので、既存の `gpt` リポジトリの自動更新ワークフロー（`.github/workflows/update-predictions.yml`）
+とは物理的に別リポジトリであり、影響のしようがありません。
 
-## 7. 今後の運用イメージ（このラウンドから始める場合）
+## 8. 今後の運用イメージ（このラウンドから始める場合）
 
 1. 各ラウンドの締切前に、Claude側・ChatGPT側それぞれが自分の予測を
    `predictions/round_<N>_<model>.jsonl` に `validate_prediction.js` 経由で追記する
@@ -222,7 +361,7 @@ authorized repository set, so the proxy will not inject a credential for it.
    **このログに基づく「未使用データでの事前登録済み評価」** として行う
    （チューニングに使ったデータと最終評価データを混同しない、という元の方針どおり）
 
-## 8. このラウンドで「まだやらないこと」の確認
+## 9. このラウンドで「まだやらないこと」の確認
 
 - 本番の `model.js` / Claude側Artifactの予測ロジック・補正値は変更しない
 - シュリンケージ・Dixon-Coles・マーケットブレンド等の採用判断はまだ行わない

@@ -12,9 +12,12 @@
  *      これを満たさないレコードは保存時点で拒否する（締切後の確定は記録自体を作らせない）。
  *   3. すべての時刻は ISO 8601 UTC（末尾 "Z"）で統一する。タイムゾーンのばらつきで
  *      誤判定が起きることを防ぐため、Z 以外の表記は拒否する。
- *   4. チーム名は team_name_dictionary.json で解決できるものだけを許可する。
- *      辞書に無い表記は「推測で補完」せず、isUnmappedTeam フラグ付きで明示的に
- *      要確認とする（スコアリング対象には含めない）。
+ *   4. チーム名は team_name_dictionary.json の正規名称（canonicalName）に変換できる
+ *      ものだけを許可する。この正規名称はJリーグ公式サイト「2026特別シーズン、
+ *      2026/27シーズン クラブ編成」(https://www.jleague.jp/news/article/32852/)
+ *      に掲載された2026年J1/J2/J3全60クラブの表記を基準とする。辞書に無い表記は
+ *      「推測で補完」せず、isUnmappedTeam フラグ付きで明示的に要確認とする
+ *      （スコアリング対象には含めない）。
  *   5. 予測結果（スコア・実際の試合結果）はこのファイルでは一切扱わない。
  *      結果は score_predictions.js が別ファイル（results.jsonl）から読む。
  *
@@ -48,26 +51,53 @@ class ValidationError extends Error {
     }
 }
 
+function nfkc(s) { return String(s).normalize('NFKC'); }
+
 /**
- * gpt側の生表記（例: "C大阪"）をチーム名辞書で解決する。
- * 戻り値: { resolved: boolean, claudeKey: string|null, claudeFullName: string|null, raw: string }
- * 辞書に無い場合も例外にはせず resolved:false を返す（呼び出し側が isUnmappedTeam として扱う）。
+ * team_name_dictionary.json の clubs[] から「あらゆる既知の表記 -> クラブ情報」の
+ * 検索テーブルを構築する。各クラブにつき canonicalName / officialPageText /
+ * aliases.* の文字列と、それぞれのNFKC正規化形の両方をキーとして登録する
+ * （NFKCは全角↔半角の一意な機械的変換であり、推測によるマッチングではない）。
  */
-function resolveTeamName(rawName) {
+let _lookup = null;
+function buildLookup() {
+    if (_lookup) return _lookup;
     const dict = loadTeamDict();
-    if (dict.mapping[rawName]) {
-        return { resolved: true, claudeKey: dict.mapping[rawName].claudeKey, claudeFullName: dict.mapping[rawName].claudeFullName, raw: rawName };
-    }
-    // 既に正式名称（claudeFullName）そのものが渡された場合もそのまま通す
-    for (const [gptName, v] of Object.entries(dict.mapping)) {
-        if (v.claudeFullName === rawName || v.claudeKey === rawName) {
-            return { resolved: true, claudeKey: v.claudeKey, claudeFullName: v.claudeFullName, raw: rawName };
+    const map = new Map();
+    for (const club of dict.clubs) {
+        const variants = new Set([club.canonicalName, club.officialPageText]);
+        if (club.aliases) {
+            for (const v of Object.values(club.aliases)) {
+                if (typeof v === 'string') variants.add(v);
+            }
+        }
+        for (const v of variants) {
+            map.set(v, club);
+            map.set(nfkc(v), club);
         }
     }
-    if (dict.unmapped[rawName]) {
-        return { resolved: false, claudeKey: null, claudeFullName: null, raw: rawName, reason: dict.unmapped[rawName].reason };
+    _lookup = map;
+    return map;
+}
+
+/**
+ * 任意の表記（gpt側の略称、Claude側teamDatabaseの表記、公式ページの表記等）を
+ * team_name_dictionary.json の正規名称（canonicalName）に変換する。
+ * 正規名称はJリーグ公式サイト「2026特別シーズン、2026/27シーズン クラブ編成」
+ * (https://www.jleague.jp/news/article/32852/) の表記を基準とする。
+ * 戻り値: { resolved: boolean, canonicalName: string|null, club: object|null, raw: string, reason?: string }
+ * 辞書で解決できない場合も例外にはせず resolved:false を返す（呼び出し側が isUnmappedTeam として扱う）。
+ */
+function resolveTeamName(rawName) {
+    const map = buildLookup();
+    const club = map.get(rawName) || map.get(nfkc(rawName));
+    if (club) {
+        return { resolved: true, canonicalName: club.canonicalName, club, raw: rawName };
     }
-    return { resolved: false, claudeKey: null, claudeFullName: null, raw: rawName, reason: 'team_name_dictionary.json に未登録（推測補完は行いません。手動で辞書に追加してください）' };
+    return {
+        resolved: false, canonicalName: null, club: null, raw: rawName,
+        reason: `team_name_dictionary.json（Jリーグ公式2026クラブ編成基準の正規名称辞書、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ、辞書のaliasesに追加してください）: ${JSON.stringify(rawName)}`,
+    };
 }
 
 const REQUIRED_FIELDS = [

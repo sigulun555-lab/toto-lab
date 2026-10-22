@@ -7,10 +7,13 @@
  * モデルごとの Accuracy / Brier score / Log loss を算出する。
  *
  * 強制ルール（ユーザー確認済み・変更不可）:
- *   1. 試合の照合は round + matchNumber + homeTeam + awayTeam の
- *      「文字列完全一致」のみを許可する。表記違い・類似度マッチ等による
- *      推測補完は一切行わない。一致しない場合は unresolved として報告し、
-     *      採点対象から除外する（推測で結果を割り当てない）。
+ *   1. 試合の照合は、まず homeTeam / awayTeam を team_name_dictionary.json の
+ *      正規名称（canonicalName、Jリーグ公式2026クラブ編成基準）に変換したうえで、
+ *      round + matchNumber + 正規化後のhomeTeam + awayTeam の「完全一致」のみを
+ *      許可する。正規名称に変換できないチーム（辞書に無い表記）は、採点対象外として
+ *      理由と件数を report.unresolvedTeamNames に明示する（推測補完は一切行わない）。
+ *      正規名称への変換ができても、その組み合わせに一致する結果レコードが無い場合は
+ *      report.unresolved に理由と共に記録し、採点対象から除外する。
  *   2. predictionConfirmedAt >= deadlineAt のレコードは採点対象から除外する
  *      （validate_prediction.js が保存時点で拒否する設計だが、他経路で
  *      紛れ込んだ場合に備えてここでも二重に防御する）。
@@ -29,6 +32,13 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
+const { resolveTeamName } = require('./validate_prediction.js');
+
+/** 正規名称に変換できればその文字列、できなければ null を返す（推測補完なし） */
+function canonicalizeTeam(rawName) {
+    const r = resolveTeamName(rawName);
+    return r.resolved ? r.canonicalName : null;
+}
 
 function readJsonl(filePath) {
     if (!fs.existsSync(filePath)) return [];
@@ -58,15 +68,23 @@ function matchKey(round, matchNumber, homeTeam, awayTeam) {
  * predictions: 生の予測レコード配列（複数モデル混在可）
  * results: 試合結果レコード配列 [{round, matchNumber, homeTeam, awayTeam, homeGoals, awayGoals, competition?, ...}]
  *
- * 戻り値: { byModel: {...}, unresolved: [...], excludedPostDeadline: [...], usedRecords: [...] }
+ * 戻り値: { usedRecords, unresolved, unresolvedTeamNames, excludedPostDeadline, supersededRecords }
  */
 function joinAndFilter(predictions, results) {
+    // 結果側も homeTeam/awayTeam を正規名称に変換してからインデックス化する。
+    // 結果側の表記が辞書で解決できない場合は、その結果レコードを静かに無視せず、
+    // 突き合わせの対象から外れたことが分かるように resultIndex に載せない
+    // （参照する側の予測レコードが unresolvedTeamNames または unresolved に落ちる）。
     const resultIndex = new Map();
     for (const r of results) {
-        resultIndex.set(matchKey(r.round, r.matchNumber, r.homeTeam, r.awayTeam), r);
+        const home = canonicalizeTeam(r.homeTeam);
+        const away = canonicalizeTeam(r.awayTeam);
+        if (!home || !away) continue; // 結果側のチーム名が正規化できない場合は照合不可（後述の不一致として扱われる）
+        resultIndex.set(matchKey(r.round, r.matchNumber, home, away), r);
     }
 
     const excludedPostDeadline = [];
+    const unresolvedTeamNames = [];
     const unresolved = [];
     const valid = [];
 
@@ -77,13 +95,30 @@ function joinAndFilter(predictions, results) {
             excludedPostDeadline.push({ predictionId: p.predictionId, reason: 'predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）' });
             continue;
         }
-        const key = matchKey(p.round, p.matchNumber, p.homeTeam, p.awayTeam);
+
+        // ルール1前段: 正規名称への変換（推測補完なし）
+        const homeResolved = resolveTeamName(p.homeTeam);
+        const awayResolved = resolveTeamName(p.awayTeam);
+        if (!homeResolved.resolved || !awayResolved.resolved) {
+            unresolvedTeamNames.push({
+                predictionId: p.predictionId, round: p.round, matchNumber: p.matchNumber,
+                homeTeam: p.homeTeam, awayTeam: p.awayTeam,
+                reason: [
+                    !homeResolved.resolved ? `homeTeam: ${homeResolved.reason}` : null,
+                    !awayResolved.resolved ? `awayTeam: ${awayResolved.reason}` : null,
+                ].filter(Boolean).join(' / '),
+            });
+            continue;
+        }
+
+        const key = matchKey(p.round, p.matchNumber, homeResolved.canonicalName, awayResolved.canonicalName);
         const result = resultIndex.get(key);
         if (!result) {
             unresolved.push({
                 predictionId: p.predictionId, round: p.round, matchNumber: p.matchNumber,
                 homeTeam: p.homeTeam, awayTeam: p.awayTeam,
-                reason: 'round+matchNumber+homeTeam+awayTeam の完全一致が results.jsonl に無い（推測補完せず除外）',
+                canonicalHomeTeam: homeResolved.canonicalName, canonicalAwayTeam: awayResolved.canonicalName,
+                reason: '正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results.jsonl に無い（推測補完せず除外）',
             });
             continue;
         }
@@ -108,7 +143,7 @@ function joinAndFilter(predictions, results) {
         }
     }
 
-    return { usedRecords, unresolved, excludedPostDeadline, supersededRecords };
+    return { usedRecords, unresolved, unresolvedTeamNames, excludedPostDeadline, supersededRecords };
 }
 
 function outcomeOf(result) {
@@ -152,7 +187,7 @@ function scoreGroup(records) {
 function buildReport(predictionsDir, resultsFilePath) {
     const predictions = loadAllPredictions(predictionsDir);
     const results = readJsonl(resultsFilePath);
-    const { usedRecords, unresolved, excludedPostDeadline, supersededRecords } = joinAndFilter(predictions, results);
+    const { usedRecords, unresolved, unresolvedTeamNames, excludedPostDeadline, supersededRecords } = joinAndFilter(predictions, results);
 
     const byModel = {};
     const byModelVersion = {};
@@ -173,6 +208,8 @@ function buildReport(predictionsDir, resultsFilePath) {
         inputCounts: { predictions: predictions.length, results: results.length },
         excludedPostDeadlineCount: excludedPostDeadline.length,
         excludedPostDeadline,
+        unresolvedTeamNameCount: unresolvedTeamNames.length,
+        unresolvedTeamNames,
         unresolvedCount: unresolved.length,
         unresolved,
         supersededByRevisionCount: supersededRecords.length,
@@ -197,7 +234,11 @@ if (require.main === module) {
     const report = buildReport(predictionsDir, resultsFilePath);
     console.log(`入力: 予測 ${report.inputCounts.predictions} 件 / 結果 ${report.inputCounts.results} 件`);
     console.log(`締切後確定で除外: ${report.excludedPostDeadlineCount} 件`);
-    console.log(`チーム名・試合不一致で未照合（除外）: ${report.unresolvedCount} 件`);
+    console.log(`正規名称に変換できないチーム名で除外: ${report.unresolvedTeamNameCount} 件`);
+    if (report.unresolvedTeamNameCount) {
+        console.log('  -> 詳細は出力JSONの unresolvedTeamNames を確認してください（推測補完はしていません）');
+    }
+    console.log(`正規名称への変換後も試合が一致せず未照合（除外）: ${report.unresolvedCount} 件`);
     if (report.unresolvedCount) {
         console.log('  -> 詳細は出力JSONの unresolved を確認してください（推測補完はしていません）');
     }

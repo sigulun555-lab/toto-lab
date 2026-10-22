@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sigulun555-lab/toto-lab/schemas/prediction.schema.json",
+  "title": "Toto prediction record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "predictionId",
+    "round",
+    "matchNumber",
+    "homeTeam",
+    "awayTeam",
+    "probabilities",
+    "predictionConfirmedAt",
+    "deadlineAt",
+    "modelName",
+    "modelVersion",
+    "revisionOf"
+  ],
+  "properties": {
+    "predictionId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "round": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "matchNumber": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 13
+    },
+    "homeTeam": {
+      "type": "string",
+      "minLength": 1
+    },
+    "awayTeam": {
+      "type": "string",
+      "minLength": 1
+    },
+    "probabilities": {
+      "type": "object",
+      "required": [
+        "1",
+        "0",
+        "2"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "0": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "1": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "2": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "predictionConfirmedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "deadlineAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "modelName": {
+      "type": "string",
+      "enum": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    "modelVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revisionOf": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sourceRetrievedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

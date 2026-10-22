@@ -1,0 +1,259 @@
+{
+  "_meta": {
+    "description": "gpt側 history.json の表記(略称) -> claude側 teamDatabase の正式名称 / キー 対応表。推測統合は行わず、未対応チームは null + unmapped 配列で明示。",
+    "generatedFrom": [
+      "sigulun555-lab/gpt data/history.json (60 unique team strings)",
+      "claude Artifact teamDatabase (56 J-league entries after excluding European-club entries)"
+    ],
+    "mappedCount": 56,
+    "unmappedCount": 4
+  },
+  "mapping": {
+    "C大阪": {
+      "claudeKey": "osaka",
+      "claudeFullName": "セレッソ大阪"
+    },
+    "FC大阪": {
+      "claudeKey": "fc_osaka",
+      "claudeFullName": "FC大阪"
+    },
+    "FC東京": {
+      "claudeKey": "fc_tokyo",
+      "claudeFullName": "FC東京"
+    },
+    "G大阪": {
+      "claudeKey": "gamba",
+      "claudeFullName": "ガンバ大阪"
+    },
+    "いわき": {
+      "claudeKey": "iwaki",
+      "claudeFullName": "いわきFC"
+    },
+    "京都": {
+      "claudeKey": "kyoto",
+      "claudeFullName": "京都サンガ"
+    },
+    "今治": {
+      "claudeKey": "imabari",
+      "claudeFullName": "FC今治"
+    },
+    "仙台": {
+      "claudeKey": "sendai",
+      "claudeFullName": "ベガルタ仙台"
+    },
+    "八戸": {
+      "claudeKey": "hachinohe",
+      "claudeFullName": "ヴァンラーレ八戸"
+    },
+    "千葉": {
+      "claudeKey": "chiba",
+      "claudeFullName": "ジェフユナイテッド千葉"
+    },
+    "名古屋": {
+      "claudeKey": "nagoya",
+      "claudeFullName": "名古屋グランパス"
+    },
+    "大分": {
+      "claudeKey": "oita",
+      "claudeFullName": "大分トリニータ"
+    },
+    "大宮": {
+      "claudeKey": "omiya_j2",
+      "claudeFullName": "RB大宮アルディージャ"
+    },
+    "宮崎": {
+      "claudeKey": "miyazaki",
+      "claudeFullName": "テゲバジャーロ宮崎"
+    },
+    "富山": {
+      "claudeKey": "toyama",
+      "claudeFullName": "カターレ富山"
+    },
+    "山口": {
+      "claudeKey": "renofa",
+      "claudeFullName": "レノファ山口FC"
+    },
+    "山形": {
+      "claudeKey": "yamagata",
+      "claudeFullName": "モンテディオ山形"
+    },
+    "岡山": {
+      "claudeKey": "okayama",
+      "claudeFullName": "ファジアーノ岡山"
+    },
+    "川崎F": {
+      "claudeKey": "kawasaki",
+      "claudeFullName": "川崎フロンターレ"
+    },
+    "広島": {
+      "claudeKey": "hiroshima",
+      "claudeFullName": "サンフレッチェ広島"
+    },
+    "徳島": {
+      "claudeKey": "tokushima",
+      "claudeFullName": "徳島ヴォルティス"
+    },
+    "愛媛": {
+      "claudeKey": "ehime",
+      "claudeFullName": "愛媛FC"
+    },
+    "新潟": {
+      "claudeKey": "albirex",
+      "claudeFullName": "アルビレックス新潟"
+    },
+    "札幌": {
+      "claudeKey": "hokkaido",
+      "claudeFullName": "北海道コンサドーレ札幌"
+    },
+    "東京V": {
+      "claudeKey": "verdy",
+      "claudeFullName": "東京ヴェルディ"
+    },
+    "松本": {
+      "claudeKey": "matsumoto",
+      "claudeFullName": "松本山雅FC"
+    },
+    "柏": {
+      "claudeKey": "kashiwa",
+      "claudeFullName": "柏レイソル"
+    },
+    "栃木C": {
+      "claudeKey": "tochigi_city",
+      "claudeFullName": "栃木シティ"
+    },
+    "栃木SC": {
+      "claudeKey": "tochigi_sc",
+      "claudeFullName": "栃木SC"
+    },
+    "横浜FC": {
+      "claudeKey": "yokohama_fc",
+      "claudeFullName": "横浜FC"
+    },
+    "横浜FM": {
+      "claudeKey": "yokohama",
+      "claudeFullName": "横浜F・マリノス"
+    },
+    "水戸": {
+      "claudeKey": "mito",
+      "claudeFullName": "水戸ホーリーホック"
+    },
+    "浦和": {
+      "claudeKey": "urawa",
+      "claudeFullName": "浦和レッズ"
+    },
+    "清水": {
+      "claudeKey": "shimizu",
+      "claudeFullName": "清水エスパルス"
+    },
+    "湘南": {
+      "claudeKey": "shonan",
+      "claudeFullName": "湘南ベルマーレ"
+    },
+    "滋賀": {
+      "claudeKey": "shiga",
+      "claudeFullName": "レイラック滋賀FC"
+    },
+    "熊本": {
+      "claudeKey": "kumamoto",
+      "claudeFullName": "ロアッソ熊本"
+    },
+    "琉球": {
+      "claudeKey": "ryukyu",
+      "claudeFullName": "FC琉球"
+    },
+    "甲府": {
+      "claudeKey": "kofu",
+      "claudeFullName": "ヴァンフォーレ甲府"
+    },
+    "町田": {
+      "claudeKey": "machida",
+      "claudeFullName": "FC町田ゼルビア"
+    },
+    "磐田": {
+      "claudeKey": "iwata_j2",
+      "claudeFullName": "ジュビロ磐田"
+    },
+    "神戸": {
+      "claudeKey": "kobe",
+      "claudeFullName": "ヴィッセル神戸"
+    },
+    "福岡": {
+      "claudeKey": "fukuoka",
+      "claudeFullName": "アビスパ福岡"
+    },
+    "福島": {
+      "claudeKey": "fukushima",
+      "claudeFullName": "福島ユナイテッドFC"
+    },
+    "秋田": {
+      "claudeKey": "akita",
+      "claudeFullName": "ブラウブリッツ秋田"
+    },
+    "群馬": {
+      "claudeKey": "gunma",
+      "claudeFullName": "ザスパクサツ群馬"
+    },
+    "藤枝": {
+      "claudeKey": "fujiedai",
+      "claudeFullName": "藤枝MYFC"
+    },
+    "讃岐": {
+      "claudeKey": "sanuki",
+      "claudeFullName": "カマタマーレ讃岐"
+    },
+    "金沢": {
+      "claudeKey": "kanazawa",
+      "claudeFullName": "ツエーゲン金沢"
+    },
+    "長崎": {
+      "claudeKey": "nagasaki",
+      "claudeFullName": "V・ファーレン長崎"
+    },
+    "長野": {
+      "claudeKey": "nagano",
+      "claudeFullName": "AC長野パルセイロ"
+    },
+    "高知": {
+      "claudeKey": "kochi",
+      "claudeFullName": "高知ユナイテッドSC"
+    },
+    "鳥取": {
+      "claudeKey": "tottori",
+      "claudeFullName": "ガイナーレ鳥取"
+    },
+    "鳥栖": {
+      "claudeKey": "tosu",
+      "claudeFullName": "サガン鳥栖"
+    },
+    "鹿児島": {
+      "claudeKey": "kagoshima",
+      "claudeFullName": "鹿児島ユナイテッドFC"
+    },
+    "鹿島": {
+      "claudeKey": "kashima",
+      "claudeFullName": "鹿島アントラーズ"
+    }
+  },
+  "unmapped": {
+    "北九州": {
+      "claudeKey": null,
+      "claudeFullName": null,
+      "reason": "ギラヴァンツ北九州 はClaude側teamDatabaseに未登録"
+    },
+    "奈良": {
+      "claudeKey": null,
+      "claudeFullName": null,
+      "reason": "奈良クラブ はClaude側teamDatabaseに未登録"
+    },
+    "岐阜": {
+      "claudeKey": null,
+      "claudeFullName": null,
+      "reason": "FC岐阜 はClaude側teamDatabaseに未登録"
+    },
+    "相模原": {
+      "claudeKey": null,
+      "claudeFullName": null,
+      "reason": "SC相模原 はClaude側teamDatabaseに未登録"
+    }
+  }
+}

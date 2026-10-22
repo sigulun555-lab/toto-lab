@@ -4,9 +4,9 @@ const path=require('node:path');
 const {resolveTeamName}=require('./validate_prediction.js');
 const FIELDS=new Set(['predictionId','round','matchNumber','team','opponent','isHome','probabilities','predictionConfirmedAt','deadlineAt','modelName','modelVersion','revisionOf','dataSource','notes']);
 const REQ=['predictionId','round','matchNumber','team','opponent','isHome','probabilities','predictionConfirmedAt','deadlineAt','modelName','modelVersion','revisionOf'];
-const UTC=/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d{1,3})?Z$/;
+const UTC=/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?Z$/;
 class ValidationError extends Error {}
-function readLines(file){if(!fs.existsSync(file))return [];return fs.readFileSync(file,'utf8').split(/\\r?\\n/).filter(x=>x.trim()).map((x,i)=>{try{return JSON.parse(x)}catch{throw new Error(`Invalid JSONL ${file} line ${i+1}`)}})}
+function readLines(file){if(!fs.existsSync(file))return [];return fs.readFileSync(file,'utf8').split(/\r?\n/).filter(x=>x.trim()).map((x,i)=>{try{return JSON.parse(x)}catch{throw new Error(`Invalid JSONL ${file} line ${i+1}`)}})}
 function validate(record,existing=[]){
  const errors=[],warnings=[];
  if(!record||typeof record!=='object'||Array.isArray(record))return {ok:false,errors:['record must be an object'],warnings};
@@ -34,6 +34,6 @@ function validate(record,existing=[]){
  for(const f of ['team','opponent']){const r=resolveTeamName(record[f]);if(!r.resolved)warnings.push(`${f} unresolved: ${r.reason}`);}
  return {ok:errors.length===0,errors,warnings};
 }
-function appendPrediction(file,record){const existing=readLines(file);const r=validate(record,existing);if(!r.ok)throw new ValidationError(r.errors.join('; '));fs.mkdirSync(path.dirname(file),{recursive:true});fs.appendFileSync(file,JSON.stringify(record)+'\\n','utf8');return r;}
+function appendPrediction(file,record){const existing=readLines(file);const r=validate(record,existing);if(!r.ok)throw new ValidationError(r.errors.join('; '));fs.mkdirSync(path.dirname(file),{recursive:true});fs.appendFileSync(file,JSON.stringify(record)+'\n','utf8');return r;}
 module.exports={validate,appendPrediction,readLines,ValidationError};
-if(require.main===module){const [file,jsonFile]=process.argv.slice(2);if(!file||!jsonFile){console.error('Usage: node scripts/validate_prediction_goal3.js <log.jsonl> <record.json>');process.exit(1);}try{const rec=JSON.parse(fs.readFileSync(jsonFile,'utf8'));const r=appendPrediction(file,rec);console.log('OK: appended '+rec.predictionId);if(r.warnings.length)console.warn(r.warnings.join('\\n'));}catch(e){console.error(e.message);process.exit(1);}}
+if(require.main===module){const [file,jsonFile]=process.argv.slice(2);if(!file||!jsonFile){console.error('Usage: node scripts/validate_prediction_goal3.js <log.jsonl> <record.json>');process.exit(1);}try{const rec=JSON.parse(fs.readFileSync(jsonFile,'utf8'));const r=appendPrediction(file,rec);console.log('OK: appended '+rec.predictionId);if(r.warnings.length)console.warn(r.warnings.join('\n'));}catch(e){console.error(e.message);process.exit(1);}}

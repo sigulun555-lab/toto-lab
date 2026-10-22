@@ -1,12 +1,15 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TotoGOAL3 team-goal probability record",
+  "$id": "https://github.com/sigulun555-lab/toto-lab/schemas/prediction_goal3.schema.json",
+  "title": "toto GOAL3 prediction record (per designated team, goal-count bucket)",
+  "description": "通常toto（13試合・1X2＝ホーム/ドロー/アウェイ）とは当たり方が異なる『totoGOAL3』用のレコード。totoGOAL3は指定された試合ごとに、ホーム・アウェイそれぞれのチームの『自チームの得点数』を0点/1点/2点/3点以上の4択で当てる仕組み（toto公式サイトの投票ページで1試合=2つの投票対象として扱われていることを確認済み）。そのため1試合につき、home側チームの予測レコードとaway側チームの予測レコードの2件を保存する。schemas/prediction.schema.json（1X2用）とは別スキーマとして併存させる（一方を他方に無理に合わせない）。",
   "type": "object",
   "additionalProperties": false,
   "required": [
     "predictionId",
     "round",
     "matchNumber",
+    "marketType",
     "team",
     "opponent",
     "isHome",
@@ -18,92 +21,65 @@
     "revisionOf"
   ],
   "properties": {
-    "predictionId": {
-      "type": "string",
-      "minLength": 1
-    },
-    "round": {
-      "type": "integer",
-      "minimum": 1
-    },
+    "predictionId": { "type": "string", "minLength": 1 },
+    "round": { "type": "integer", "minimum": 1 },
     "matchNumber": {
       "type": "integer",
       "minimum": 1,
-      "maximum": 3
+      "maximum": 3,
+      "description": "totoGOAL3は常に指定3試合のため1〜3。"
+    },
+    "marketType": {
+      "type": "string",
+      "enum": ["totoGOAL3"],
+      "description": "将来totoGOAL3以外の得点バケット系商品が出た場合のための区別用フィールド。現時点はtotoGOAL3のみ。"
     },
     "team": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "description": "得点数を予測する対象チーム（『自チームの得点』を当てる側）。"
     },
     "opponent": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "description": "対戦相手チーム（この対戦相手との試合における team の得点数を予測する）。"
     },
     "isHome": {
-      "type": "boolean"
+      "type": "boolean",
+      "description": "team が当該試合のホームかどうか。results/*.jsonl（round+matchNumber+homeTeam+awayTeam+homeGoals+awayGoals、1X2採点と共用）から実際の得点を引くのに必要。"
     },
     "probabilities": {
       "type": "object",
+      "required": ["0", "1", "2", "3"],
       "additionalProperties": false,
-      "required": [
-        "0",
-        "1",
-        "2",
-        "3"
-      ],
       "properties": {
-        "0": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 1
-        },
-        "1": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 1
-        },
-        "2": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 1
-        },
-        "3": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 1
-        }
+        "0": { "type": "number", "minimum": 0, "maximum": 1 },
+        "1": { "type": "number", "minimum": 0, "maximum": 1 },
+        "2": { "type": "number", "minimum": 0, "maximum": 1 },
+        "3": { "type": "number", "minimum": 0, "maximum": 1, "description": "『3点以上』バケット。" }
       }
     },
-    "predictionConfirmedAt": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "deadlineAt": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "modelName": {
-      "type": "string",
-      "enum": [
-        "ChatGPT",
-        "Claude"
-      ]
-    },
-    "modelVersion": {
-      "type": "string",
-      "minLength": 1
-    },
-    "revisionOf": {
-      "type": [
-        "string",
-        "null"
-      ]
+    "predictionConfirmedAt": { "type": "string", "format": "date-time" },
+    "deadlineAt": { "type": "string", "format": "date-time" },
+    "modelName": { "type": "string", "enum": ["ChatGPT", "Claude"] },
+    "modelVersion": { "type": "string", "minLength": 1 },
+    "revisionOf": { "type": ["string", "null"] },
+    "sourceRetrievedAt": { "type": "string", "format": "date-time" },
+    "notes": { "type": "string" },
+    "corrections": {
+      "type": "object",
+      "description": "本番予測モデルの補正値のスナップショット（任意）。この比較基盤自体は補正ロジックを変更しない。",
+      "additionalProperties": false,
+      "properties": {
+        "dixonColes": { "type": ["boolean", "null"] },
+        "drawBoostVariant": { "type": ["string", "null"] },
+        "shrinkageSampleTrust": { "type": ["number", "null"] },
+        "marketBlendWeight": { "type": ["number", "null"] }
+      }
     },
     "dataSource": {
-      "type": "string"
-    },
-    "notes": {
-      "type": "string"
+      "type": "string",
+      "description": "この予測値をどこから得たか（例: 本番アプリのpredictScore()内のcalculateScoreProbabilities()実際の出力）を記録する任意フィールド。"
     }
   }
 }

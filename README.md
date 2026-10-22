@@ -42,6 +42,35 @@ NFKC正規化（全角→半角などの一意な機械的変換）は `aliases`
   クラブ名が異なる場合があるため、機械的な現行名への置換は行っていません。本辞書は
   「表記が同一クラブを指すかどうか」のみを保証します。
 
+## totoGOAL3（指定3試合・チーム別得点バケット方式）について（2026-10-22）
+`schemas/prediction.schema.json`（上記の確率キー1/0/2）は、通常toto（13試合、ホーム勝ち/
+引き分け/アウェイ勝ちの「1X2」で当落が決まる）を前提に設計したものでした。しかし
+東海林さんのtotoGOAL3アプリ（本番モデル）の実コードとtoto公式投票ページ（toto-dream.com）を
+確認したところ、**totoGOAL3は1X2ではなく「指定された試合ごとに、ホーム・アウェイそれぞれの
+チームの自チーム得点数（0点/1点/2点/3点以上の4択）を当てる」商品**であることが判明しました
+（toto公式サイトも1試合をhome/away別の2投票対象として扱っています）。
+
+このため、totoGOAL3用に別スキーマ・別スクリプト群を追加し、既存の1X2用スキーマ・スクリプトは
+変更せずそのまま並存させています（一方を他方に無理に合わせていません）。
+
+- `schemas/prediction_goal3.schema.json`：1レコード＝1試合の片側チーム
+  （`team`/`opponent`/`isHome` + `probabilities`は`"0"/"1"/"2"/"3"`の4キー、合計1）。
+  1試合につきhome側・away側の2レコードを保存する。
+- `scripts/validate_prediction_goal3.js` / `scripts/save_prediction_goal3.js`：
+  保存先は `predictions/round_<開催回>_<ChatGPT|Claude>_goal3.jsonl`
+  （1X2用の`round_<開催回>_<model>.jsonl`とは別ファイル）。検証ルール
+  （締切判定・predictionId重複防止・追記専用・チーム名解決の方針）は1X2用と同じ。
+- `scripts/score_predictions_goal3.js`：採点は1X2用と**同じ`results/*.jsonl`を共用**する
+  （1試合の結果はhomeGoals/awayGoalsが分かればどちらの採点にも十分なため、totoGOAL3専用の
+  結果ログは別に持たない）。実際の得点は3点以上を"3"バケットにまとめて判定する。
+  Brier scoreは「4クラスの二乗誤差の合計」方式で、1X2の`"sum-of-3-squares"`とは別物であることを
+  明示するため`"brierConvention": "sum-of-4-squares (no division)"`を出力に明記する。
+
+本番アプリ側の`predictScore()`は内部でシミュレートした期待得点（`finalHomeGoals`/
+`finalAwayGoals`）から`calculateScoreProbabilities()`（totoGOAL3用）と`calculateOutcomeProbabilitiesV2()`
+（1X2用、`outcomeV2`）の両方を導出できる設計のため、将来通常toto（13試合）の回を比較する場合は
+既存の1X2スキーマを、totoGOAL3の回を比較する場合はこちらを使う。
+
 ## 予測レコードの原則（`schemas/prediction.schema.json`）
 - 確率キー: `1`=ホーム勝ち、`0`=引き分け、`2`=アウェイ勝ち。確率は0〜1、合計は許容誤差0.002以内で1。
 - `predictionConfirmedAt` と `deadlineAt` はUTC ISO8601（Z終端）。`predictionConfirmedAt >= deadlineAt`
@@ -57,8 +86,26 @@ NFKC正規化（全角→半角などの一意な機械的変換）は `aliases`
 
 ## スクリプト
 
+### `scripts/save_prediction.js`（運用時はこちらを使う）
+予測レコード（JSON）1件から `round` と `modelName` を読み取り、保存先ファイルパス
+`predictions/round_<開催回>_<ChatGPT|Claude>.jsonl` を自動的に決定して追記する。
+内部で `validate_prediction.js` の `appendPrediction()` を呼ぶため、検証ルール
+（スキーマ・締切・重複防止・追記専用）はすべてそのまま適用される。
+
+```sh
+node scripts/save_prediction.js new_record.json
+# => record.round=1665, record.modelName="ChatGPT" なら
+#    predictions/round_1665_ChatGPT.jsonl に自動で追記される
+```
+
+ファイルパスを手で組み立てる必要がなくなるため、「別ラウンド・別モデルのログに
+間違って書き込む」というヒューマンエラーを構造的に防ぐ。`modelName` が
+`"ChatGPT"`/`"Claude"` 以外の場合は、ファイルパスの決定自体がエラーになる
+（推測でファイル名を作らない）。
+
 ### `scripts/validate_prediction.js`
 予測レコードをスキーマ・締切・重複・チーム名解決の観点で検証し、問題なければJSONLログに1行追記する。
+`save_prediction.js` が内部で使う下位レイヤーだが、ファイルパスを直接指定したい場合はこちらも使える。
 
 ```sh
 node scripts/validate_prediction.js predictions/round_<開催回>_ChatGPT.jsonl new_record.json
@@ -89,9 +136,20 @@ node scripts/score_predictions.js predictions results report.json
 ### `scripts/check_teams.js`
 `data/teams.json` の構造チェック（60クラブ・J1/J2/J3各20・短縮名の衝突検知）。
 
+### totoGOAL3用（`scripts/save_prediction_goal3.js` / `validate_prediction_goal3.js` / `score_predictions_goal3.js`)
+上記「totoGOAL3について」の節を参照。使い方は1X2用と同じ形：
+
+```sh
+node scripts/save_prediction_goal3.js new_record.json
+# => predictions/round_<開催回>_<ChatGPT|Claude>_goal3.jsonl に自動で追記される
+
+node scripts/score_predictions_goal3.js predictions results report_goal3.json
+```
+
 ## テスト
 ```sh
-npm test            # tests/test.js + tests/test_predictions.js
+npm test            # tests/test.js + tests/test_predictions.js + tests/test_save_prediction.js
+                     # + tests/test_predictions_goal3.js + tests/test_save_prediction_goal3.js
 npm run check:teams # scripts/check_teams.js
 ```
 GitHub Actions（`.github/workflows/validate.yml`）が `main` への push / PR で自動実行する。

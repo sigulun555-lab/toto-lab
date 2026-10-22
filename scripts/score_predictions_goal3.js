@@ -32,4 +32,4 @@ function score(predictions,results){
 }
 function buildReport(predDir,resDir){return score(load(predDir),load(resDir));}
 module.exports={score,buildReport,load};
-if(require.main===module){const [predDir,resDir,out]=process.argv.slice(2);const report=buildReport(predDir||path.join(__dirname,'..','predictions'),resDir||path.join(__dirname,'..','results'));console.log(JSON.stringify(report,null,2));if(out)fs.writeFileSync(out,JSON.stringify(report,null,2)+'\\n');}
+if(require.main===module){const [predDir,resDir,out]=process.argv.slice(2);const report=buildReport(predDir||path.join(__dirname,'..','predictions'),resDir||path.join(__dirname,'..','results'));console.log(JSON.stringify(report,null,2));if(out)fs.writeFileSync(out,JSON.stringify(report,null,2)+'\n');}

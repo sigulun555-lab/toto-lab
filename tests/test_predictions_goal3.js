@@ -139,7 +139,7 @@ check('11. チーム名辞書で未解決のチーム名は推測補完されず
 const liveLogPath = path.join(__dirname, '..', 'predictions', 'round_1665_ChatGPT_goal3.jsonl');
 check('12. 第1665回ChatGPTログの全v2レコードに必須marketTypeがあり、スキーマ検証を通る', () => {
     const { validateSchema, validatePrediction } = require('../scripts/validate_prediction_goal3.js');
-    const liveRows = fs.readFileSync(liveLogPath, 'utf8').trim().split('\\n').filter(Boolean).map(line => JSON.parse(line));
+    const liveRows = fs.readFileSync(liveLogPath, 'utf8').trim().split('\n').filter(Boolean).map(line => JSON.parse(line));
     const v1Rows = liveRows.filter(x => x.predictionId.endsWith('-v1'));
     const v2Rows = liveRows.filter(x => x.predictionId.endsWith('-v2'));
     assert.strictEqual(v1Rows.length, 6, '元のv1 6件を保持する');
@@ -154,7 +154,7 @@ check('12. 第1665回ChatGPTログの全v2レコードに必須marketTypeがあ�
     }
 });
 check('13. 第1665回の鹿島・柏v2分布が異なり、両方とも確率合計が1', () => {
-    const liveRows = fs.readFileSync(liveLogPath, 'utf8').trim().split('\\n').filter(Boolean).map(line => JSON.parse(line));
+    const liveRows = fs.readFileSync(liveLogPath, 'utf8').trim().split('\n').filter(Boolean).map(line => JSON.parse(line));
     const home = liveRows.find(x => x.predictionId === '1665-goal3-chatgpt-2-home-v2');
     const away = liveRows.find(x => x.predictionId === '1665-goal3-chatgpt-2-away-v2');
     assert.ok(home && away, '鹿島・柏のv2レコードが存在する');

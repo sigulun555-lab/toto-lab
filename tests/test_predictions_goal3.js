@@ -162,6 +162,32 @@ check('13. 第1665回の鹿島・柏v2分布が異なり、両方とも確率合
     for (const rec of [home, away]) assert.ok(Math.abs(Object.values(rec.probabilities).reduce((a,b)=>a+b,0)-1) <= 0.002);
 });
 
+// ---- revisionOfで修正しつつmodelVersionも変える場合（2026-10-22、ChatGPT側の第1665回revisionで
+//      実際に発生）、旧版が正しく除外されることを確認する（score_predictions.js・1X2用と同じ
+//      構造の不具合の再発防止。goal3側は team も含めてグルーピングするため、teamも揃えて確認する）。
+const mvLogPath = path.join(predictionsDir, 'round_9004_TestModel_goal3.jsonl');
+const mvOld = {
+    ...homeBase, predictionId: 'Claude-v1-r9004-m1-kashima-20261022T000000Z', round: 9004,
+    modelVersion: 'v1', probabilities: { '0': 0.5, '1': 0.3, '2': 0.1, '3': 0.1 },
+};
+const mvNew = {
+    ...homeBase, predictionId: 'Claude-v2-r9004-m1-kashima-rev1-20261022T120000Z', round: 9004,
+    modelVersion: 'v2', // 修正と同時にmodelVersionも変える
+    probabilities: { '0': 0.1, '1': 0.2, '2': 0.3, '3': 0.4 },
+    revisionOf: 'Claude-v1-r9004-m1-kashima-20261022T000000Z',
+};
+appendPrediction(mvLogPath, mvOld);
+appendPrediction(mvLogPath, mvNew);
+fs.appendFileSync(resultsPath, JSON.stringify({
+    round: 9004, matchNumber: 1, homeTeam: '鹿島アントラーズ', awayTeam: '柏レイソル',
+    homeGoals: 2, awayGoals: 1, competition: 'J1', finishedAt: '2026-10-24T06:00:00Z',
+}) + '\n');
+const reportMv = buildReport(predictionsDir, resultsPath);
+check('14. revisionOfで修正しつつmodelVersionも変えた場合でも、旧版（modelVersion違い）が正しく除外される', () => {
+    assert.strictEqual(reportMv.usedRecordCount, report.usedRecordCount + 1, `round9004は1件（新版のみ）が採点対象になるはず。期待=${report.usedRecordCount + 1}, 実際=${reportMv.usedRecordCount}`);
+    assert.ok(reportMv.supersededRecords.some(s => s.predictionId === mvOld.predictionId && s.supersededBy === mvNew.predictionId), '旧版(modelVersion=v1)がsupersededRecordsに記録されているはず');
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 fs.rmSync(tmpDir, { recursive: true, force: true });
 process.exit(failed ? 1 : 0);

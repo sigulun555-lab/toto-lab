@@ -182,6 +182,33 @@ check('13. モデル×リーグ別の集計が機能する（results側の compe
     assert.strictEqual(report.byModelAndCompetition[key].n, 1);
 });
 
+// ---- revisionOfで修正しつつmodelVersionも変える場合（2026-10-22、ChatGPT側の第1665回revisionで
+//      実際に発生）、旧版が正しく除外されることを確認する（同一 round+matchNumber+modelName+
+//      modelVersion でのグルーピングだけに頼ると、modelVersionが変わった途端に旧版が
+//      別グループとして残ってしまう不具合の再発防止）。
+const mvLogPath = path.join(predictionsDir, 'round_9005_TestModel.jsonl');
+const mvOld = {
+    ...base, predictionId: 'ChatGPT-v1-r9005-m1-20261020T000000Z', round: 9005,
+    modelVersion: 'v1', probabilities: { '1': 0.9, '0': 0.05, '2': 0.05 },
+};
+const mvNew = {
+    ...base, predictionId: 'ChatGPT-v2-r9005-m1-rev1-20261020T120000Z', round: 9005,
+    modelVersion: 'v2', // 修正と同時にmodelVersionも変える
+    probabilities: { '1': 0.5, '0': 0.3, '2': 0.2 },
+    revisionOf: 'ChatGPT-v1-r9005-m1-20261020T000000Z',
+};
+appendPrediction(mvLogPath, mvOld);
+appendPrediction(mvLogPath, mvNew);
+fs.appendFileSync(resultsPath, JSON.stringify({
+    round: 9005, matchNumber: 1, homeTeam: '鹿島アントラーズ', awayTeam: '浦和レッズ',
+    homeGoals: 2, awayGoals: 1, competition: 'J1', finishedAt: '2026-10-20T15:00:00Z',
+}) + '\n');
+const reportMv = buildReport(predictionsDir, resultsPath);
+check('14. revisionOfで修正しつつmodelVersionも変えた場合でも、旧版（modelVersion違い）が正しく除外される', () => {
+    assert.strictEqual(reportMv.usedRecordCount, report.usedRecordCount + 1, `round9005は1件（新版のみ）が採点対象になるはず。期待=${report.usedRecordCount + 1}, 実際=${reportMv.usedRecordCount}`);
+    assert.ok(reportMv.supersededRecords.some(s => s.predictionId === mvOld.predictionId && s.supersededBy === mvNew.predictionId), '旧版(modelVersion=v1)がsupersededRecordsに記録されているはず');
+});
+
 // ---- *_goal3.jsonl（totoGOAL3用。team/opponent/isHomeスキーマ、homeTeam/awayTeamが無い）が
 //      同じpredictions/ディレクトリに混在していても、1X2用のscore_predictions.jsが
 //      誤って読み込まない（homeTeam=undefinedがunresolvedTeamNamesにノイズとして
@@ -193,9 +220,9 @@ fs.writeFileSync(path.join(predictionsDir, 'round_9001_TestModel_goal3.jsonl'), 
     predictionConfirmedAt: '2026-10-20T00:00:00Z', deadlineAt: '2026-10-21T00:00:00Z',
     modelName: 'ChatGPT', modelVersion: 'v1', revisionOf: null,
 }) + '\n');
-check('14. *_goal3.jsonl（totoGOAL3用スキーマ）はscore_predictions.js（1X2用）の読み込み対象外になる', () => {
+check('15. *_goal3.jsonl（totoGOAL3用スキーマ）はscore_predictions.js（1X2用）の読み込み対象外になる', () => {
     const report2 = buildReport(predictionsDir, resultsPath);
-    assert.strictEqual(report2.inputCounts.predictions, report.inputCounts.predictions, 'goal3ファイルを追加しても1X2側の予測件数は変化しないはず');
+    assert.strictEqual(report2.inputCounts.predictions, reportMv.inputCounts.predictions, 'goal3ファイルを追加しても1X2側の予測件数は変化しないはず');
     assert.ok(!report2.unresolvedTeamNames.some(u => u.predictionId === 'goal3-dummy'), 'goal3用レコードがunresolvedTeamNamesにノイズとして混入していないはず');
 });
 

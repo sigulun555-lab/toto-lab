@@ -135,21 +135,48 @@ function joinAndFilter(predictions, results) {
         valid.push({ prediction: p, result });
     }
 
-    // 同一 (round, matchNumber, modelName, modelVersion) につき、締切前確定の中で最新の1件のみ残す
-    const groups = new Map();
+    // 修正履歴（revisionOf）で旧版を除外する。
+    // 2026-10-22修正：以前は (round, matchNumber, modelName, modelVersion) でグルーピングし、
+    // その中で締切前確定の最新1件だけを残す方式だった。しかし revisionOf による修正と同時に
+    // modelVersion も変更された場合（実際にChatGPT側の第1665回revisionで発生）、新旧が別の
+    // グループに分かれてしまい、旧版が除外されずに両方とも採点対象へ混入する不具合があった。
+    // 修正後は「他の有効レコードの revisionOf から参照されているレコード」を、modelVersionの
+    // 異同に関わらず常に除外する方式にする（revisionOfの参照関係そのものを正とする）。
+    const byId = new Map();
+    for (const v of valid) byId.set(v.prediction.predictionId, v);
+
+    const supersededIds = new Set();
+    const supersededByOf = new Map();
     for (const v of valid) {
+        const rev = v.prediction.revisionOf;
+        if (rev && byId.has(rev)) {
+            supersededIds.add(rev);
+            supersededByOf.set(rev, v.prediction.predictionId);
+        }
+    }
+
+    const survivors = valid.filter(v => !supersededIds.has(v.prediction.predictionId));
+    const supersededRecords = [];
+    for (const [oldId, newId] of supersededByOf) {
+        supersededRecords.push({ predictionId: oldId, supersededBy: newId, reason: '別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）' });
+    }
+
+    // フォールバック：revisionOfの参照関係だけでは一意に絞れなかった場合
+    // （同一 round+matchNumber+modelName+modelVersion に複数の終端レコードが残る等）、
+    // 締切前確定の中で最新の1件のみを残す。
+    const groups = new Map();
+    for (const v of survivors) {
         const gk = `${v.prediction.round}__${v.prediction.matchNumber}__${v.prediction.modelName}__${v.prediction.modelVersion}`;
         if (!groups.has(gk)) groups.set(gk, []);
         groups.get(gk).push(v);
     }
     const usedRecords = [];
-    const supersededRecords = [];
     for (const [gk, arr] of groups) {
         arr.sort((a, b) => Date.parse(a.prediction.predictionConfirmedAt) - Date.parse(b.prediction.predictionConfirmedAt));
         const chosen = arr[arr.length - 1];
         usedRecords.push(chosen);
         for (const other of arr.slice(0, -1)) {
-            supersededRecords.push({ predictionId: other.prediction.predictionId, supersededBy: chosen.prediction.predictionId, reason: '同一試合・同一モデルの修正履歴のうち、締切前の最終確定予測ではないため採点から除外' });
+            supersededRecords.push({ predictionId: other.prediction.predictionId, supersededBy: chosen.prediction.predictionId, reason: '同一試合・同一モデル・同一modelVersionの複数レコードのうち、締切前の最終確定予測ではないため採点から除外（revisionOfの参照関係だけでは一意に絞れなかったフォールバック）' });
         }
     }
 

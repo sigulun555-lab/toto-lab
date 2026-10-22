@@ -4,9 +4,11 @@
   "private": true,
   "description": "Shared ChatGPT/Claude toto prediction evaluation infrastructure",
   "scripts": {
-    "test": "node tests/test.js && node tests/test_predictions.js",
+    "test": "node tests/test.js && node tests/test_predictions.js && node tests/test_predictions_goal3.js",
     "check:teams": "node scripts/check_teams.js",
-    "score": "node scripts/score_predictions.js"
+    "score": "node scripts/score_predictions.js",
+    "score:goal3": "node scripts/score_predictions_goal3.js",
+    "validate:goal3": "node scripts/validate_prediction_goal3.js"
   },
   "engines": {
     "node": ">=20"

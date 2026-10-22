@@ -1,11 +1,12 @@
 {
   "name": "toto-lab",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Shared ChatGPT/Claude toto prediction evaluation infrastructure",
   "scripts": {
-    "test": "node tests/test.js",
-    "check:teams": "node scripts/check_teams.js"
+    "test": "node tests/test.js && node tests/test_predictions.js",
+    "check:teams": "node scripts/check_teams.js",
+    "score": "node scripts/score_predictions.js"
   },
   "engines": {
     "node": ">=20"

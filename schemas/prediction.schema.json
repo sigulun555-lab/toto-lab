@@ -96,6 +96,41 @@
     },
     "notes": {
       "type": "string"
+    },
+    "corrections": {
+      "type": "object",
+      "description": "本番予測モデルの補正値のスナップショット（任意）。この比較基盤自体は補正ロジックを変更しない。未使用の補正は null を入れる。",
+      "additionalProperties": false,
+      "properties": {
+        "dixonColes": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "drawBoostVariant": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shrinkageSampleTrust": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "marketBlendWeight": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    },
+    "dataSource": {
+      "type": "string",
+      "description": "この予測値をどこから得たか（例: 本番アプリのpredictScore()実際の出力、過去スナップショットの再計算など）を記録する任意フィールド。"
     }
   }
 }

@@ -9,7 +9,10 @@
       "aliases": [
         "鹿島",
         "鹿島アントラーズ"
-      ]
+      ],
+      "jleagueUrlSlug": "kashima",
+      "jleagueUrl": "https://www.jleague.jp/club/kashima",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -17,7 +20,10 @@
       "aliases": [
         "水戸",
         "水戸ホーリーホック"
-      ]
+      ],
+      "jleagueUrlSlug": "mito",
+      "jleagueUrl": "https://www.jleague.jp/club/mito",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -25,7 +31,10 @@
       "aliases": [
         "浦和",
         "浦和レッズ"
-      ]
+      ],
+      "jleagueUrlSlug": "urawa",
+      "jleagueUrl": "https://www.jleague.jp/club/urawa",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -34,7 +43,10 @@
         "千葉",
         "ジェフ千葉",
         "ジェフユナイテッド千葉"
-      ]
+      ],
+      "jleagueUrlSlug": "chiba",
+      "jleagueUrl": "https://www.jleague.jp/club/chiba",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -42,7 +54,10 @@
       "aliases": [
         "柏",
         "柏レイソル"
-      ]
+      ],
+      "jleagueUrlSlug": "kashiwa",
+      "jleagueUrl": "https://www.jleague.jp/club/kashiwa",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -51,7 +66,10 @@
         "FC東京",
         "ＦＣ東京",
         "FC TOKYO"
-      ]
+      ],
+      "jleagueUrlSlug": "ftokyo",
+      "jleagueUrl": "https://www.jleague.jp/club/ftokyo",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -60,7 +78,10 @@
         "東京V",
         "東京ヴェルディ",
         "東京Ｖ"
-      ]
+      ],
+      "jleagueUrlSlug": "tokyov",
+      "jleagueUrl": "https://www.jleague.jp/club/tokyov",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -69,7 +90,10 @@
         "町田",
         "FC町田ゼルビア",
         "ＦＣ町田ゼルビア"
-      ]
+      ],
+      "jleagueUrlSlug": "machida",
+      "jleagueUrl": "https://www.jleague.jp/club/machida",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -79,7 +103,10 @@
         "川崎F",
         "川崎Ｆ",
         "川崎フロンターレ"
-      ]
+      ],
+      "jleagueUrlSlug": "kawasakif",
+      "jleagueUrl": "https://www.jleague.jp/club/kawasakif",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -88,7 +115,10 @@
         "横浜FM",
         "横浜F・マリノス",
         "横浜Ｆ・マリノス"
-      ]
+      ],
+      "jleagueUrlSlug": "yokohamafm",
+      "jleagueUrl": "https://www.jleague.jp/club/yokohamafm",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -96,7 +126,10 @@
       "aliases": [
         "清水",
         "清水エスパルス"
-      ]
+      ],
+      "jleagueUrlSlug": "shimizu",
+      "jleagueUrl": "https://www.jleague.jp/club/shimizu",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -104,7 +137,10 @@
       "aliases": [
         "名古屋",
         "名古屋グランパス"
-      ]
+      ],
+      "jleagueUrlSlug": "nagoya",
+      "jleagueUrl": "https://www.jleague.jp/club/nagoya",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -113,7 +149,11 @@
         "京都",
         "京都サンガ",
         "京都サンガF.C."
-      ]
+      ],
+      "jleagueUrlSlug": "kyoto",
+      "jleagueUrl": "https://www.jleague.jp/club/kyoto",
+      "claudeAppSupported": true,
+      "claudeNameDiscrepancyNote": "Claude側teamDatabaseの表記は「F.C.」が付かない旧称/略称。jleague.jp URLスラッグ(kyoto)が一致するため同一クラブと確認済み。"
     },
     {
       "league": "J1",
@@ -122,7 +162,10 @@
         "G大阪",
         "Ｇ大阪",
         "ガンバ大阪"
-      ]
+      ],
+      "jleagueUrlSlug": "gosaka",
+      "jleagueUrl": "https://www.jleague.jp/club/gosaka",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -131,7 +174,10 @@
         "C大阪",
         "Ｃ大阪",
         "セレッソ大阪"
-      ]
+      ],
+      "jleagueUrlSlug": "cosaka",
+      "jleagueUrl": "https://www.jleague.jp/club/cosaka",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -139,7 +185,10 @@
       "aliases": [
         "神戸",
         "ヴィッセル神戸"
-      ]
+      ],
+      "jleagueUrlSlug": "kobe",
+      "jleagueUrl": "https://www.jleague.jp/club/kobe",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -147,7 +196,10 @@
       "aliases": [
         "岡山",
         "ファジアーノ岡山"
-      ]
+      ],
+      "jleagueUrlSlug": "okayama",
+      "jleagueUrl": "https://www.jleague.jp/club/okayama",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -155,7 +207,10 @@
       "aliases": [
         "広島",
         "サンフレッチェ広島"
-      ]
+      ],
+      "jleagueUrlSlug": "hiroshima",
+      "jleagueUrl": "https://www.jleague.jp/club/hiroshima",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -163,7 +218,10 @@
       "aliases": [
         "福岡",
         "アビスパ福岡"
-      ]
+      ],
+      "jleagueUrlSlug": "fukuoka",
+      "jleagueUrl": "https://www.jleague.jp/club/fukuoka",
+      "claudeAppSupported": true
     },
     {
       "league": "J1",
@@ -172,7 +230,10 @@
         "長崎",
         "V・ファーレン長崎",
         "Ｖ・ファーレン長崎"
-      ]
+      ],
+      "jleagueUrlSlug": "nagasaki",
+      "jleagueUrl": "https://www.jleague.jp/club/nagasaki",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -180,7 +241,10 @@
       "aliases": [
         "札幌",
         "北海道コンサドーレ札幌"
-      ]
+      ],
+      "jleagueUrlSlug": "sapporo",
+      "jleagueUrl": "https://www.jleague.jp/club/sapporo",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -188,7 +252,10 @@
       "aliases": [
         "八戸",
         "ヴァンラーレ八戸"
-      ]
+      ],
+      "jleagueUrlSlug": "hachinohe",
+      "jleagueUrl": "https://www.jleague.jp/club/hachinohe",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -196,7 +263,10 @@
       "aliases": [
         "仙台",
         "ベガルタ仙台"
-      ]
+      ],
+      "jleagueUrlSlug": "sendai",
+      "jleagueUrl": "https://www.jleague.jp/club/sendai",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -204,7 +274,10 @@
       "aliases": [
         "秋田",
         "ブラウブリッツ秋田"
-      ]
+      ],
+      "jleagueUrlSlug": "akita",
+      "jleagueUrl": "https://www.jleague.jp/club/akita",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -212,7 +285,10 @@
       "aliases": [
         "山形",
         "モンテディオ山形"
-      ]
+      ],
+      "jleagueUrlSlug": "yamagata",
+      "jleagueUrl": "https://www.jleague.jp/club/yamagata",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -221,7 +297,10 @@
         "いわき",
         "いわきFC",
         "いわきＦＣ"
-      ]
+      ],
+      "jleagueUrlSlug": "iwaki",
+      "jleagueUrl": "https://www.jleague.jp/club/iwaki",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -230,7 +309,10 @@
         "栃木C",
         "栃木Ｃ",
         "栃木シティ"
-      ]
+      ],
+      "jleagueUrlSlug": "tochigic",
+      "jleagueUrl": "https://www.jleague.jp/club/tochigic",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -239,7 +321,10 @@
         "大宮",
         "RB大宮アルディージャ",
         "ＲＢ大宮アルディージャ"
-      ]
+      ],
+      "jleagueUrlSlug": "omiya",
+      "jleagueUrl": "https://www.jleague.jp/club/omiya",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -247,7 +332,10 @@
       "aliases": [
         "横浜FC",
         "横浜ＦＣ"
-      ]
+      ],
+      "jleagueUrlSlug": "yokohamafc",
+      "jleagueUrl": "https://www.jleague.jp/club/yokohamafc",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -255,7 +343,10 @@
       "aliases": [
         "湘南",
         "湘南ベルマーレ"
-      ]
+      ],
+      "jleagueUrlSlug": "shonan",
+      "jleagueUrl": "https://www.jleague.jp/club/shonan",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -263,7 +354,10 @@
       "aliases": [
         "甲府",
         "ヴァンフォーレ甲府"
-      ]
+      ],
+      "jleagueUrlSlug": "kofu",
+      "jleagueUrl": "https://www.jleague.jp/club/kofu",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -271,7 +365,10 @@
       "aliases": [
         "新潟",
         "アルビレックス新潟"
-      ]
+      ],
+      "jleagueUrlSlug": "niigata",
+      "jleagueUrl": "https://www.jleague.jp/club/niigata",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -279,7 +376,10 @@
       "aliases": [
         "富山",
         "カターレ富山"
-      ]
+      ],
+      "jleagueUrlSlug": "toyama",
+      "jleagueUrl": "https://www.jleague.jp/club/toyama",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -287,7 +387,10 @@
       "aliases": [
         "磐田",
         "ジュビロ磐田"
-      ]
+      ],
+      "jleagueUrlSlug": "iwata",
+      "jleagueUrl": "https://www.jleague.jp/club/iwata",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -296,7 +399,10 @@
         "藤枝",
         "藤枝MYFC",
         "藤枝ＭＹＦＣ"
-      ]
+      ],
+      "jleagueUrlSlug": "fujieda",
+      "jleagueUrl": "https://www.jleague.jp/club/fujieda",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -304,7 +410,10 @@
       "aliases": [
         "徳島",
         "徳島ヴォルティス"
-      ]
+      ],
+      "jleagueUrlSlug": "tokushima",
+      "jleagueUrl": "https://www.jleague.jp/club/tokushima",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -313,7 +422,10 @@
         "今治",
         "FC今治",
         "ＦＣ今治"
-      ]
+      ],
+      "jleagueUrlSlug": "imabari",
+      "jleagueUrl": "https://www.jleague.jp/club/imabari",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -321,7 +433,10 @@
       "aliases": [
         "鳥栖",
         "サガン鳥栖"
-      ]
+      ],
+      "jleagueUrlSlug": "tosu",
+      "jleagueUrl": "https://www.jleague.jp/club/tosu",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -329,7 +444,10 @@
       "aliases": [
         "大分",
         "大分トリニータ"
-      ]
+      ],
+      "jleagueUrlSlug": "oita",
+      "jleagueUrl": "https://www.jleague.jp/club/oita",
+      "claudeAppSupported": true
     },
     {
       "league": "J2",
@@ -337,7 +455,10 @@
       "aliases": [
         "宮崎",
         "テゲバジャーロ宮崎"
-      ]
+      ],
+      "jleagueUrlSlug": "miyazaki",
+      "jleagueUrl": "https://www.jleague.jp/club/miyazaki",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
@@ -346,7 +467,10 @@
         "福島",
         "福島ユナイテッドFC",
         "福島ユナイテッドＦＣ"
-      ]
+      ],
+      "jleagueUrlSlug": "fukushima",
+      "jleagueUrl": "https://www.jleague.jp/club/fukushima",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
@@ -354,15 +478,23 @@
       "aliases": [
         "栃木SC",
         "栃木ＳＣ"
-      ]
+      ],
+      "jleagueUrlSlug": "tochigi",
+      "jleagueUrl": "https://www.jleague.jp/club/tochigi",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
       "canonical": "ザスパ群馬",
       "aliases": [
         "群馬",
-        "ザスパ群馬"
-      ]
+        "ザスパ群馬",
+        "ザスパクサツ群馬"
+      ],
+      "jleagueUrlSlug": "gunma",
+      "jleagueUrl": "https://www.jleague.jp/club/gunma",
+      "claudeAppSupported": true,
+      "claudeNameDiscrepancyNote": "Claude側teamDatabaseの表記「ザスパクサツ群馬」は旧クラブ名。2026年公式名称は「ザスパ群馬」（クサツが外れた）。jleague.jp URLスラッグ(gunma)が一致するため同一クラブと確認済み。"
     },
     {
       "league": "J3",
@@ -371,7 +503,10 @@
         "相模原",
         "SC相模原",
         "ＳＣ相模原"
-      ]
+      ],
+      "jleagueUrlSlug": "sagamihara",
+      "jleagueUrl": "https://www.jleague.jp/club/sagamihara",
+      "claudeAppSupported": false
     },
     {
       "league": "J3",
@@ -380,7 +515,10 @@
         "松本",
         "松本山雅FC",
         "松本山雅ＦＣ"
-      ]
+      ],
+      "jleagueUrlSlug": "matsumoto",
+      "jleagueUrl": "https://www.jleague.jp/club/matsumoto",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
@@ -389,7 +527,10 @@
         "長野",
         "AC長野パルセイロ",
         "ＡＣ長野パルセイロ"
-      ]
+      ],
+      "jleagueUrlSlug": "nagano",
+      "jleagueUrl": "https://www.jleague.jp/club/nagano",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
@@ -397,7 +538,10 @@
       "aliases": [
         "金沢",
         "ツエーゲン金沢"
-      ]
+      ],
+      "jleagueUrlSlug": "kanazawa",
+      "jleagueUrl": "https://www.jleague.jp/club/kanazawa",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
@@ -406,7 +550,10 @@
         "岐阜",
         "FC岐阜",
         "ＦＣ岐阜"
-      ]
+      ],
+      "jleagueUrlSlug": "gifu",
+      "jleagueUrl": "https://www.jleague.jp/club/gifu",
+      "claudeAppSupported": false
     },
     {
       "league": "J3",
@@ -415,7 +562,10 @@
         "滋賀",
         "レイラック滋賀FC",
         "レイラック滋賀ＦＣ"
-      ]
+      ],
+      "jleagueUrlSlug": "shiga",
+      "jleagueUrl": "https://www.jleague.jp/club/shiga",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
@@ -423,7 +573,10 @@
       "aliases": [
         "FC大阪",
         "ＦＣ大阪"
-      ]
+      ],
+      "jleagueUrlSlug": "fosaka",
+      "jleagueUrl": "https://www.jleague.jp/club/fosaka",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
@@ -431,7 +584,10 @@
       "aliases": [
         "奈良",
         "奈良クラブ"
-      ]
+      ],
+      "jleagueUrlSlug": "nara",
+      "jleagueUrl": "https://www.jleague.jp/club/nara",
+      "claudeAppSupported": false
     },
     {
       "league": "J3",
@@ -439,7 +595,10 @@
       "aliases": [
         "鳥取",
         "ガイナーレ鳥取"
-      ]
+      ],
+      "jleagueUrlSlug": "tottori",
+      "jleagueUrl": "https://www.jleague.jp/club/tottori",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
@@ -448,7 +607,10 @@
         "山口",
         "レノファ山口FC",
         "レノファ山口ＦＣ"
-      ]
+      ],
+      "jleagueUrlSlug": "yamaguchi",
+      "jleagueUrl": "https://www.jleague.jp/club/yamaguchi",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
@@ -456,7 +618,10 @@
       "aliases": [
         "讃岐",
         "カマタマーレ讃岐"
-      ]
+      ],
+      "jleagueUrlSlug": "sanuki",
+      "jleagueUrl": "https://www.jleague.jp/club/sanuki",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
@@ -465,7 +630,10 @@
         "愛媛",
         "愛媛FC",
         "愛媛ＦＣ"
-      ]
+      ],
+      "jleagueUrlSlug": "ehime",
+      "jleagueUrl": "https://www.jleague.jp/club/ehime",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
@@ -474,7 +642,10 @@
         "高知",
         "高知ユナイテッドSC",
         "高知ユナイテッドＳＣ"
-      ]
+      ],
+      "jleagueUrlSlug": "kochi",
+      "jleagueUrl": "https://www.jleague.jp/club/kochi",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
@@ -482,7 +653,10 @@
       "aliases": [
         "北九州",
         "ギラヴァンツ北九州"
-      ]
+      ],
+      "jleagueUrlSlug": "kitakyushu",
+      "jleagueUrl": "https://www.jleague.jp/club/kitakyushu",
+      "claudeAppSupported": false
     },
     {
       "league": "J3",
@@ -490,7 +664,10 @@
       "aliases": [
         "熊本",
         "ロアッソ熊本"
-      ]
+      ],
+      "jleagueUrlSlug": "kumamoto",
+      "jleagueUrl": "https://www.jleague.jp/club/kumamoto",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
@@ -499,7 +676,10 @@
         "鹿児島",
         "鹿児島ユナイテッドFC",
         "鹿児島ユナイテッドＦＣ"
-      ]
+      ],
+      "jleagueUrlSlug": "kagoshima",
+      "jleagueUrl": "https://www.jleague.jp/club/kagoshima",
+      "claudeAppSupported": true
     },
     {
       "league": "J3",
@@ -508,7 +688,11 @@
         "琉球",
         "FC琉球",
         "ＦＣ琉球"
-      ]
+      ],
+      "jleagueUrlSlug": "ryukyu",
+      "jleagueUrl": "https://www.jleague.jp/club/ryukyu",
+      "claudeAppSupported": true
     }
-  ]
+  ],
+  "note": "canonicalはJリーグ公式資料の表記をそのまま保持（全角・半角も公式表記通り）。NFKC正規化は照合処理の内部変換に限り、canonical自体は変更しない。claudeAppSupported:falseのクラブは、Claude側アプリのteamDatabaseに対応エントリが無く予測を生成できない（名前解決の問題ではなくアプリ対応範囲の問題）。"
 }

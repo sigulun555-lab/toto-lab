@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TotoGOAL3 team-goal probability record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "predictionId",
+    "round",
+    "matchNumber",
+    "team",
+    "opponent",
+    "isHome",
+    "probabilities",
+    "predictionConfirmedAt",
+    "deadlineAt",
+    "modelName",
+    "modelVersion",
+    "revisionOf"
+  ],
+  "properties": {
+    "predictionId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "round": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "matchNumber": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "team": {
+      "type": "string",
+      "minLength": 1
+    },
+    "opponent": {
+      "type": "string",
+      "minLength": 1
+    },
+    "isHome": {
+      "type": "boolean"
+    },
+    "probabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "properties": {
+        "0": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "1": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "2": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "3": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "predictionConfirmedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "deadlineAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "modelName": {
+      "type": "string",
+      "enum": [
+        "ChatGPT",
+        "Claude"
+      ]
+    },
+    "modelVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revisionOf": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dataSource": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -182,6 +182,23 @@ check('13. モデル×リーグ別の集計が機能する（results側の compe
     assert.strictEqual(report.byModelAndCompetition[key].n, 1);
 });
 
+// ---- *_goal3.jsonl（totoGOAL3用。team/opponent/isHomeスキーマ、homeTeam/awayTeamが無い）が
+//      同じpredictions/ディレクトリに混在していても、1X2用のscore_predictions.jsが
+//      誤って読み込まない（homeTeam=undefinedがunresolvedTeamNamesにノイズとして
+//      混入しない）ことを確認する（2026-10-22、実データ検証で発覚した不具合の再発防止）。
+fs.writeFileSync(path.join(predictionsDir, 'round_9001_TestModel_goal3.jsonl'), JSON.stringify({
+    predictionId: 'goal3-dummy', round: 9001, matchNumber: 1, marketType: 'totoGOAL3',
+    team: '鹿島アントラーズ', opponent: '浦和レッズ', isHome: true,
+    probabilities: { '0': 0.2, '1': 0.3, '2': 0.3, '3': 0.2 },
+    predictionConfirmedAt: '2026-10-20T00:00:00Z', deadlineAt: '2026-10-21T00:00:00Z',
+    modelName: 'ChatGPT', modelVersion: 'v1', revisionOf: null,
+}) + '\n');
+check('14. *_goal3.jsonl（totoGOAL3用スキーマ）はscore_predictions.js（1X2用）の読み込み対象外になる', () => {
+    const report2 = buildReport(predictionsDir, resultsPath);
+    assert.strictEqual(report2.inputCounts.predictions, report.inputCounts.predictions, 'goal3ファイルを追加しても1X2側の予測件数は変化しないはず');
+    assert.ok(!report2.unresolvedTeamNames.some(u => u.predictionId === 'goal3-dummy'), 'goal3用レコードがunresolvedTeamNamesにノイズとして混入していないはず');
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 fs.rmSync(tmpDir, { recursive: true, force: true });
 process.exit(failed ? 1 : 0);

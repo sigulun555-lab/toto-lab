@@ -61,7 +61,10 @@ function readJsonlDirOrFile(target) {
 
 function loadAllPredictions(predictionsDir) {
     if (!fs.existsSync(predictionsDir)) return [];
-    const files = fs.readdirSync(predictionsDir).filter(f => f.endsWith('.jsonl'));
+    // *_goal3.jsonl（totoGOAL3用。homeTeam/awayTeamではなくteam/opponent/isHomeを使うスキーマ）は
+    // こちら（1X2用）の対象外。除外しないと、goal3側のレコードがhomeTeam=undefinedとして
+    // 読み込まれ、unresolvedTeamNamesに毎回ノイズとして混入してしまう（2026-10-22判明・修正）。
+    const files = fs.readdirSync(predictionsDir).filter(f => f.endsWith('.jsonl') && !f.endsWith('_goal3.jsonl'));
     let all = [];
     for (const f of files) {
         all = all.concat(readJsonl(path.join(predictionsDir, f)).map(r => ({ ...r, _sourceFile: f })));

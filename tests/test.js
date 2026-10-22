@@ -1,0 +1,14 @@
+'use strict';
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const teams = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'teams.json'), 'utf8'));
+assert.equal(teams.clubs.length, 60);
+assert.equal(teams.clubs.filter(x => x.league === 'J1').length, 20);
+assert.equal(teams.clubs.filter(x => x.league === 'J2').length, 20);
+assert.equal(teams.clubs.filter(x => x.league === 'J3').length, 20);
+assert.ok(teams.clubs.some(x => x.canonical === 'ギラヴァンツ北九州'));
+assert.ok(teams.clubs.some(x => x.canonical === '奈良クラブ'));
+assert.ok(teams.clubs.some(x => x.canonical === 'ＦＣ岐阜'));
+assert.ok(teams.clubs.some(x => x.canonical === 'ＳＣ相模原'));
+console.log('All tests passed (8 assertions).');

@@ -43,7 +43,7 @@
       "logLoss": null
     },
     "marketBlendV2": {
-      "label": "GPT + market blend V2 (50/50)",
+      "label": "GPT + market blend V2 (70/30; 30% market)",
       "matchesScored": 0,
       "accuracy": null,
       "brierScore": null,
@@ -52,5 +52,5 @@
   },
   "matches": [],
   "source": "predictions/round_1665_ChatGPT_market_blend_v2.jsonl + results/round_1665.jsonl",
-  "note": "No verified final-score records are present in results/round_1665.jsonl yet. Scores are intentionally blank; run npm run score:1665:blend after adding verified final scores."
+  "note": "No verified final-score records are present in results/round_1665.jsonl yet. Scores are intentionally blank; run npm run score:1665:blend after adding verified final scores. V2 now uses 70% GPT Poisson + 30% toto vote share."
 }

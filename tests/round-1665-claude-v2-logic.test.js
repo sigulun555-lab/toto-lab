@@ -76,3 +76,45 @@ test('latest GPT market-blend revision applies Claude V2 logic to GPT shared xG 
     assert.equal(saved.corrections.drawBoostVariant, 'V2');
   }
 });
+
+
+test('injury-adjusted revisions use corrected shared xG before market blend and exactly match Claude V2 reference logic', () => {
+  const xgRows = readJsonl('predictions/round_1665_ChatGPT_shared_score_v3.jsonl');
+  const blendRows = readJsonl('predictions/round_1665_ChatGPT_market_blend_v2.jsonl');
+  const factors = {
+    3: { home: 0.96875, away: 0.92 },
+    7: { home: 0.80, away: 0.7727272727 },
+    8: { home: 0.9285714286, away: 0.8461538462 },
+    11: { home: 0.9583333333, away: 1.0 },
+    13: { home: 1.0, away: 0.8 },
+  };
+  const latest = new Map();
+  for (const row of blendRows) latest.set(row.matchNumber, row);
+  assert.equal(Object.keys(factors).length, 5);
+  for (const [numberText, f] of Object.entries(factors)) {
+    const n = Number(numberText);
+    const g = xgRows.find(row => row.matchNumber === n);
+    const saved = latest.get(n);
+    const correctedHome = g.homeExpectedGoals * f.home;
+    const correctedAway = g.awayExpectedGoals * f.away;
+    assert.deepEqual(saved.correctionFactors, f);
+    assert.ok(Math.abs(saved.baseExpectedGoals.home - correctedHome) < 1e-12, 'corrected home xG ' + n);
+    assert.ok(Math.abs(saved.baseExpectedGoals.away - correctedAway) < 1e-12, 'corrected away xG ' + n);
+    const expected = computeMatch({
+      rawHomeGoals: correctedHome, rawAwayGoals: correctedAway,
+      marketHome: saved.marketVoteShare['1'], marketDraw: saved.marketVoteShare['0'], marketAway: saved.marketVoteShare['2']
+    });
+    assert.ok(Math.abs(saved.blendedExpectedGoals.home - expected.blend.homeGoals) < 1e-10, 'blended home xG ' + n);
+    assert.ok(Math.abs(saved.blendedExpectedGoals.away - expected.blend.awayGoals) < 1e-10, 'blended away xG ' + n);
+    for (const key of ['1','0','2']) {
+      const map = {'1':'home','0':'draw','2':'away'};
+      assert.ok(Math.abs(saved.probabilities[key] - expected.v2.final[map[key]]) < 1e-10, 'probability ' + key + ' match ' + n);
+    }
+    assert.equal(saved.displayVerification, 'not_checked');
+    assert.equal(saved.predictionCreatedAt, '');
+  }
+});
+
+function readJsonl(relative) {
+  return fs.readFileSync(path.join(__dirname, '..', relative), 'utf8').trim().split(/\r?\n/).filter(Boolean).map(JSON.parse);
+}

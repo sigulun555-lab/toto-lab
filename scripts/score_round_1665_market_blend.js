@@ -2,7 +2,7 @@
 'use strict';
 
 // Compare GPT's saved Poisson probabilities, market vote-share probabilities,
-// and the separately stored 50/50 market-blend V2 on the same completed fixtures.
+// and the separately stored 70/30 market-blend V2 on the same completed fixtures.
 // Results are read from results/round_1665.jsonl; this script never edits predictions.
 const fs = require('node:fs');
 const path = require('node:path');
@@ -46,7 +46,7 @@ function buildReport(baseRows, resultRows) {
   const models = [
     { key: 'gptPoisson', label: 'GPT Poisson only', probabilities: r => r.baseModelProbabilities },
     { key: 'marketOnly', label: 'Toto vote share only (not true outcome probabilities)', probabilities: r => r.marketVoteShare },
-    { key: 'marketBlendV2', label: 'GPT + market blend V2 (50/50)', probabilities: r => r.probabilities },
+    { key: 'marketBlendV2', label: 'GPT + market blend V2 (70/30; 30% market)', probabilities: r => r.probabilities },
   ];
   const scored = [];
   for (const p of baseRows) {

@@ -1,0 +1,56 @@
+{
+  "round": 1665,
+  "status": "awaiting_results",
+  "scoredMatchNumbers": [],
+  "missingMatchNumbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "metricDefinitions": {
+    "accuracy": "argmax probability equals actual 1X2 outcome",
+    "brierScore": "mean per-match sum of three squared errors; lower is better",
+    "logLoss": "mean negative log probability assigned to actual outcome; lower is better",
+    "outcomeKeys": {
+      "0": "draw",
+      "1": "home win",
+      "2": "away win"
+    }
+  },
+  "comparisons": {
+    "gptPoisson": {
+      "label": "GPT Poisson only",
+      "matchesScored": 0,
+      "accuracy": null,
+      "brierScore": null,
+      "logLoss": null
+    },
+    "marketOnly": {
+      "label": "Toto vote share only (not true outcome probabilities)",
+      "matchesScored": 0,
+      "accuracy": null,
+      "brierScore": null,
+      "logLoss": null
+    },
+    "marketBlendV2": {
+      "label": "GPT + market blend V2 (50/50)",
+      "matchesScored": 0,
+      "accuracy": null,
+      "brierScore": null,
+      "logLoss": null
+    }
+  },
+  "matches": [],
+  "source": "predictions/round_1665_ChatGPT_market_blend_v2.jsonl + results/round_1665.jsonl",
+  "note": "No verified final-score records are present in results/round_1665.jsonl yet. Scores are intentionally blank; run npm run score:1665:blend after adding verified final scores."
+}

@@ -110,7 +110,7 @@
             }
           }
         },
-        "homeTeamStatus": {
+        "teamStatus": {
           "type": "object",
           "additionalProperties": false,
           "properties": {
@@ -144,8 +144,8 @@
             }
           }
         },
-        "awayTeamStatus": {
-          "$ref": "#/properties/evidence/properties/homeTeamStatus"
+        "opponentStatus": {
+          "$ref": "#/properties/evidence/properties/teamStatus"
         },
         "probabilityRationale": {
           "type": "string"

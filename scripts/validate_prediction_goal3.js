@@ -19,7 +19,11 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { resolveTeamName, ValidationError, validateEvidence, ALLOWED_EVIDENCE_FIELDS } = require('./validate_prediction.js');
+const {
+    resolveTeamName, ValidationError, validateEvidence, allowedEvidenceFields, EVIDENCE_STATUS_KEYS_GOAL3,
+} = require('./validate_prediction.js');
+// GOAL3のevidenceは、レコード本体(team/opponent/isHome)に合わせて teamStatus/opponentStatus を使う
+const ALLOWED_EVIDENCE_FIELDS = allowedEvidenceFields(EVIDENCE_STATUS_KEYS_GOAL3);
 
 const ISO_UTC_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,3})?Z$/;
 const MODEL_NAME_ENUM = ['ChatGPT', 'Claude'];
@@ -102,8 +106,8 @@ function validateSchema(record) {
         }
     }
 
-    // evidence（予測根拠）の構造は1X2用と共通（検証ロジックは validate_prediction.js を共有）
-    if ('evidence' in record) errors.push(...validateEvidence(record.evidence));
+    // evidence（予測根拠）。検証ロジックは1X2用と共有し、両チームの状況のキー名だけ team/opponent 基準にする
+    if ('evidence' in record) errors.push(...validateEvidence(record.evidence, EVIDENCE_STATUS_KEYS_GOAL3));
 
     return errors;
 }

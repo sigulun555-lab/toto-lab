@@ -189,12 +189,12 @@ check('14. revisionOfで修正しつつmodelVersionも変えた場合でも、�
 });
 
 // ---- evidence（予測根拠）フィールド（1X2用と同一構造・検証ロジック共有） ----
-check('15. evidence（予測根拠）は正しい構造なら受理され、未知のキー・不正なenum/型・URL/日時は拒否される', () => {
+check('15. evidence（予測根拠、teamStatus/opponentStatus基準）は正しい構造なら受理され、未知のキー・不正なenum/型・URL/日時は拒否される', () => {
     const { validatePrediction: vp, ALLOWED_EVIDENCE_FIELDS } = require('../scripts/validate_prediction_goal3.js');
     const ok = {
         sources: [{ name: 'Jリーグ公式', url: 'https://www.jleague.jp/', retrievedAt: '2026-10-20T00:00:00Z' }],
-        homeTeamStatus: { standing: 3, goalDiff: null, recentFormPeriod: '直近5試合', homeAwaySplit: 'home', absences: 'なし' },
-        awayTeamStatus: { standing: 10, goalDiff: -2, homeAwaySplit: 'away' },
+        teamStatus: { standing: 3, goalDiff: null, recentFormPeriod: '直近5試合', homeAwaySplit: 'home', absences: 'なし' },
+        opponentStatus: { standing: 10, goalDiff: -2, homeAwaySplit: 'away' },
         probabilityRationale: 'テスト用', quantitativeContribution: 'quantified', confidenceLevel: 'low',
         unconfirmed: ['先発メンバー'], modelOrigin: 'production_model_output',
     };
@@ -202,7 +202,11 @@ check('15. evidence（予測根拠）は正しい構造なら受理され、未�
     assert.strictEqual(vp(rec(ok, 'ok'), new Set()).ok, true);
     const bad = [
         { ...ok, extra: 1 }, { ...ok, confidenceLevel: 'very-high' }, { ...ok, modelOrigin: 'guess' },
-        { ...ok, homeTeamStatus: { homeAwaySplit: 'neutral' } }, { ...ok, awayTeamStatus: { standing: 1.5 } },
+        { ...ok, teamStatus: { homeAwaySplit: 'neutral' } }, { ...ok, opponentStatus: { standing: 1.5 } },
+        { ...ok, opponentStatus: { unknownKey: 1 } },
+        // 1X2用のキー名(homeTeamStatus/awayTeamStatus)はGOAL3では未知のキーとして拒否される
+        { sources: ok.sources, homeTeamStatus: ok.teamStatus },
+        { sources: ok.sources, awayTeamStatus: ok.opponentStatus },
         { ...ok, sources: [{ name: 'x', url: 'not a uri', retrievedAt: '2026-10-20T00:00:00Z' }] },
         { ...ok, sources: [{ name: 'x', url: 'https://example.com/', retrievedAt: '2026/10/20' }] },
         'string',
@@ -210,8 +214,15 @@ check('15. evidence（予測根拠）は正しい構造なら受理され、未�
     bad.forEach((ev, i) => assert.strictEqual(vp(rec(ev, 'bad' + i), new Set()).ok, false, 'bad case ' + i + ' が受理された'));
     const schema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'schemas', 'prediction_goal3.schema.json'), 'utf8'));
     assert.deepStrictEqual(Object.keys(schema.properties.evidence.properties).sort(), [...ALLOWED_EVIDENCE_FIELDS].sort());
+    // 1X2用とは「両チームの状況」のキー名だけが異なり、中身の定義は同一のはず
     const schema1x2 = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'schemas', 'prediction.schema.json'), 'utf8'));
-    assert.deepStrictEqual(schema.properties.evidence, schema1x2.properties.evidence, '1X2用と同一定義のはず');
+    const e3 = schema.properties.evidence.properties, e1 = schema1x2.properties.evidence.properties;
+    assert.deepStrictEqual(e3.teamStatus, e1.homeTeamStatus);
+    assert.deepStrictEqual(e3.opponentStatus, { $ref: '#/properties/evidence/properties/teamStatus' });
+    assert.ok(!('homeTeamStatus' in e3) && !('awayTeamStatus' in e3));
+    const { sources, teamStatus, opponentStatus, ...rest3 } = e3, { sources: s1, homeTeamStatus, awayTeamStatus, ...rest1 } = e1;
+    assert.deepStrictEqual(sources, s1);
+    assert.deepStrictEqual(rest3, rest1);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

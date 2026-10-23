@@ -56,10 +56,17 @@ const REQUIRED_FIELDS = [
     'probabilities', 'predictionConfirmedAt', 'deadlineAt',
     'modelName', 'modelVersion', 'revisionOf',
 ];
-const ALLOWED_EVIDENCE_FIELDS = new Set([
-    'sources', 'homeTeamStatus', 'awayTeamStatus', 'probabilityRationale',
-    'quantitativeContribution', 'confidenceLevel', 'unconfirmed', 'modelOrigin',
-]);
+// evidence 内の「両チームの状況」のキー名。1X2用はホーム/アウェイ基準、totoGOAL3用はレコード本体の
+// team/opponent 基準に揃える（validate_prediction_goal3.js が EVIDENCE_STATUS_KEYS_GOAL3 を渡す）。
+const EVIDENCE_STATUS_KEYS_1X2 = Object.freeze({ primary: 'homeTeamStatus', secondary: 'awayTeamStatus' });
+const EVIDENCE_STATUS_KEYS_GOAL3 = Object.freeze({ primary: 'teamStatus', secondary: 'opponentStatus' });
+function allowedEvidenceFields(statusKeys = EVIDENCE_STATUS_KEYS_1X2) {
+    return new Set([
+        'sources', statusKeys.primary, statusKeys.secondary, 'probabilityRationale',
+        'quantitativeContribution', 'confidenceLevel', 'unconfirmed', 'modelOrigin',
+    ]);
+}
+const ALLOWED_EVIDENCE_FIELDS = allowedEvidenceFields(EVIDENCE_STATUS_KEYS_1X2);
 const ALLOWED_TEAM_STATUS_FIELDS = new Set([
     'standing', 'goalDiff', 'recentFormPeriod', 'recentFormCompetitions', 'homeAwaySplit', 'absences',
 ]);
@@ -124,12 +131,17 @@ function isUri(x) {
     try { new URL(x); return true; } catch (e) { return false; }
 }
 
-/** evidence（予測根拠）の検証。schemas/prediction.schema.json の properties.evidence に対応。 */
-function validateEvidence(ev) {
+/**
+ * evidence（予測根拠）の検証。schemas/prediction.schema.json の properties.evidence に対応。
+ * statusKeys で「両チームの状況」のキー名を切り替える（既定は1X2用の homeTeamStatus/awayTeamStatus。
+ * totoGOAL3用は EVIDENCE_STATUS_KEYS_GOAL3 = teamStatus/opponentStatus）。
+ */
+function validateEvidence(ev, statusKeys = EVIDENCE_STATUS_KEYS_1X2) {
     const errors = [];
+    const allowedFields = allowedEvidenceFields(statusKeys);
     if (!isPlainObject(ev)) return ['evidence はオブジェクトである必要がある'];
     for (const k of Object.keys(ev)) {
-        if (!ALLOWED_EVIDENCE_FIELDS.has(k)) errors.push(`evidence に未知のフィールド（additionalProperties:false）: ${k}`);
+        if (!allowedFields.has(k)) errors.push(`evidence に未知のフィールド（additionalProperties:false）: ${k}`);
     }
     if ('sources' in ev) {
         if (!Array.isArray(ev.sources)) errors.push('evidence.sources は配列である必要がある');
@@ -148,7 +160,7 @@ function validateEvidence(ev) {
             }
         });
     }
-    for (const side of ['homeTeamStatus', 'awayTeamStatus']) {
+    for (const side of [statusKeys.primary, statusKeys.secondary]) {
         if (!(side in ev)) continue;
         const st = ev[side];
         if (!isPlainObject(st)) { errors.push(`evidence.${side} はオブジェクトである必要がある`); continue; }
@@ -334,6 +346,9 @@ module.exports = {
     REQUIRED_FIELDS,
     ALLOWED_FIELDS,
     ALLOWED_EVIDENCE_FIELDS,
+    EVIDENCE_STATUS_KEYS_1X2,
+    EVIDENCE_STATUS_KEYS_GOAL3,
+    allowedEvidenceFields,
     validateEvidence,
     MODEL_NAME_ENUM,
 };

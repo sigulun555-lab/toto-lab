@@ -104,6 +104,39 @@ check('6. 未知のmodelNameはファイルパス決定自体でエラーにな�
     assert.strictEqual(threw, true);
 });
 
-console.log(`\n${passed} passed, ${failed} failed`);
+check('7. evidence付き1X2レコードが検証・保存される', () => {
+    const withEvidence = {
+        ...base,
+        predictionId: 'ChatGPT-v1-r12345-m2-EVIDENCE',
+        evidence: {
+            sources: [{ name: 'Unit test source', url: 'https://example.com/source', retrievedAt: '2026-11-01T00:00:00Z' }],
+            homeTeamStatus: { standing: 5, goalDiff: 3, recentFormPeriod: '直近5試合', recentFormCompetitions: 'J1のみ', homeAwaySplit: 'home', absences: '未確認' },
+            awayTeamStatus: { standing: 8, goalDiff: -2, recentFormPeriod: '直近5試合', recentFormCompetitions: 'J1のみ', homeAwaySplit: 'away', absences: '未確認' },
+            probabilityRationale: 'テスト用の根拠。確率への寄与は未算出。',
+            quantitativeContribution: 'not_quantified',
+            confidenceLevel: 'medium',
+            unconfirmed: ['先発メンバー'],
+            modelOrigin: 'independent_estimate'
+        }
+    };
+    const r = savePrediction(withEvidence);
+    assert.strictEqual(r.ok, true);
+    const saved = JSON.parse(fs.readFileSync(r.logPath, 'utf8').trim().split('\\n').slice(-1)[0]);
+    assert.strictEqual(saved.evidence.modelOrigin, 'independent_estimate');
+    assert.strictEqual(saved.evidence.sources[0].retrievedAt, '2026-11-01T00:00:00Z');
+});
+
+check('8. evidenceの不正enum値は保存前に拒否される', () => {
+    const bad = {
+        ...base,
+        predictionId: 'ChatGPT-v1-r12345-m3-BAD-EVIDENCE',
+        evidence: { confidenceLevel: 'certain' }
+    };
+    let threw = false;
+    try { savePrediction(bad); } catch (e) { threw = e instanceof ValidationError && /confidenceLevel/.test(e.message); }
+    assert.strictEqual(threw, true);
+});
+
+console.log(`\\n${passed} passed, ${failed} failed`);
 fs.rmSync(tmpRepoDir, { recursive: true, force: true });
 process.exit(failed ? 1 : 0);

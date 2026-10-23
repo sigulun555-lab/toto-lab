@@ -54,3 +54,25 @@ test('V1 (no market blend) reproduces the submitted baseline for each fixture ma
     assert.ok(Math.abs(o.final.draw - m.v1NoBlend.final['0']) < TOL, `V1 draw ${m.matchNumber}`);
   }
 });
+
+
+test('latest GPT market-blend revision applies Claude V2 logic to GPT shared xG for all 13 matches', () => {
+  const gptRows = fs.readFileSync(path.join(__dirname, '..', 'predictions', 'round_1665_ChatGPT_shared_score_v3.jsonl'), 'utf8').trim().split(/\\r?\\n/).map(JSON.parse);
+  const blendRows = fs.readFileSync(path.join(__dirname, '..', 'predictions', 'round_1665_ChatGPT_market_blend_v2.jsonl'), 'utf8').trim().split(/\\r?\\n/).map(JSON.parse);
+  const latestByMatch = new Map();
+  for (const row of blendRows) latestByMatch.set(row.matchNumber, row);
+  assert.equal(gptRows.length, 13);
+  for (const g of gptRows) {
+    const m = fixture.matches.find(x => x.matchNumber === g.matchNumber);
+    const saved = latestByMatch.get(g.matchNumber);
+    assert.ok(saved, 'missing aligned revision');
+    assert.match(saved.modelVersion, /Claude-V2-market-blend-30-70/);
+    const expected = computeMatch({ rawHomeGoals: g.homeExpectedGoals, rawAwayGoals: g.awayExpectedGoals, marketHome: m.input.officialVoteShare['1'], marketDraw: m.input.officialVoteShare['0'], marketAway: m.input.officialVoteShare['2'] });
+    assert.ok(Math.abs(saved.blendedExpectedGoals.home - expected.blend.homeGoals) < 1e-10);
+    assert.ok(Math.abs(saved.blendedExpectedGoals.away - expected.blend.awayGoals) < 1e-10);
+    const keys = { '1': 'home', '0': 'draw', '2': 'away' };
+    for (const key of ['1', '0', '2']) assert.ok(Math.abs(saved.probabilities[key] - expected.v2.final[keys[key]]) < 1e-10);
+    assert.equal(saved.corrections.dixonColes, true);
+    assert.equal(saved.corrections.drawBoostVariant, 'V2');
+  }
+});

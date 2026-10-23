@@ -96,7 +96,7 @@ check('6. evidence付きtotoGOAL3レコードがteamStatus/opponentStatusで検�
     };
     const r = savePrediction(withEvidence);
     assert.strictEqual(r.ok, true);
-    const saved = JSON.parse(fs.readFileSync(r.logPath, 'utf8').trim().split('\\n').slice(-1)[0]);
+    const saved = JSON.parse(fs.readFileSync(r.logPath, 'utf8').trim().split('\n').slice(-1)[0]);
     assert.strictEqual(saved.evidence.modelOrigin, 'independent_estimate');
     assert.strictEqual(saved.evidence.teamStatus.homeAwaySplit, 'home');
 });

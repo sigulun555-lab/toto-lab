@@ -43,7 +43,7 @@
       "logLoss": null
     },
     "marketBlendV2": {
-      "label": "GPT + market blend V2 (30% model / 70% market)",
+      "label": "GPT shared xG + Claude V2 expected-goal market blend (30/70; DC + draw boost)",
       "matchesScored": 0,
       "accuracy": null,
       "brierScore": null,
@@ -52,7 +52,7 @@
   },
   "matches": [],
   "source": "predictions/round_1665_ChatGPT_market_blend_v2.jsonl + results/round_1665.jsonl",
-  "note": "No verified final-score records are present in results/round_1665.jsonl yet. Scores remain blank until verified results are added. Latest V2 revision uses 30% GPT Poisson + 70% toto official vote share from the user-provided 2026-10-24 00:59 JST snapshot; direct page verification was unavailable. Latest V2 comparison rows now use expected-goal-stage blending (30% model / 70% market) and GPT Poisson probability conversion; previous linear-probability rows remain preserved.",
+  "note": "No verified final-score records are present in results/round_1665.jsonl yet. Scores remain blank until verified results are added. Latest appended revision uses GPT shared-score V3 expected goals and Claude V2 expected-goal blend, Dixon-Coles and V2 draw-boost formulas. Official vote-share snapshot was provided by Claude and was not independently fetched.",
   "marketBlendV2Revision": {
     "predictionCreatedAt": "2026-10-23T21:02:24Z",
     "marketOfficialDisplayAt": "2026-10-24T00:59:00+09:00",
@@ -101,6 +101,32 @@
       "oldRowsPreserved": true,
       "directClaudeProbabilityParity": false,
       "caveat": "Claude's Dixon-Coles correction and V2 draw-boost implementation details were not available, so only the expected-goal blending stage is aligned. Final probabilities are not asserted to be numerically identical to Claude V2."
+    },
+    "claudeV2AlignedRevision": {
+      "predictionCreatedAt": "2026-10-24T08:00:00Z",
+      "method": "Same Claude V2 expected-goal blend formula: market edge=(home vote share-away vote share)*1.6; 30% model edge and 70% market edge; preserve total expected goals; minimum 0.15 goals per side.",
+      "probabilityConversion": "0..8 independent Poisson score matrix, Dixon-Coles rho=-0.10 on 0-0/0-1/1-0/1-1, normalize once, then V2 draw boost for |home-away|<0.30 with amount 0.20.",
+      "appendedPredictionIds": [
+        "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-01",
+        "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-02",
+        "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-03",
+        "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-04",
+        "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-05",
+        "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-06",
+        "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-07",
+        "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-08",
+        "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-09",
+        "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-10",
+        "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-11",
+        "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-12",
+        "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-13"
+      ],
+      "inputXGSource": "predictions/round_1665_ChatGPT_shared_score_v3.jsonl",
+      "marketSnapshotSource": "Claude-provided official vote-share snapshot displayed at 2026-10-24 00:59 JST; not independently verified.",
+      "previousRowsPreserved": true,
+      "downstreamLogicMatchesClaudeV2": true,
+      "finalProbabilityParityWithClaude": false,
+      "caveat": "Final probabilities differ if GPT expected-goal inputs differ from Claude's raw expected-goal inputs."
     }
   }
 }

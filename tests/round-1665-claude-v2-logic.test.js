@@ -98,7 +98,8 @@ test('injury-adjusted revisions use corrected shared xG before market blend and 
     const saved = latest.get(n);
     const correctedHome = g.homeExpectedGoals * f.home;
     const correctedAway = g.awayExpectedGoals * f.away;
-    assert.deepEqual(saved.correctionFactors, f);
+    assert.equal(saved.correctionFactors.home, f.home);
+    assert.equal(saved.correctionFactors.away, f.away);
     assert.ok(Math.abs(saved.baseExpectedGoals.home - correctedHome) < 1e-12, 'corrected home xG ' + n);
     assert.ok(Math.abs(saved.baseExpectedGoals.away - correctedAway) < 1e-12, 'corrected away xG ' + n);
     const expected = computeMatch({

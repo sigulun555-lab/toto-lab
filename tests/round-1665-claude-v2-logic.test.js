@@ -57,8 +57,8 @@ test('V1 (no market blend) reproduces the submitted baseline for each fixture ma
 
 
 test('latest GPT market-blend revision applies Claude V2 logic to GPT shared xG for all 13 matches', () => {
-  const gptRows = fs.readFileSync(path.join(__dirname, '..', 'predictions', 'round_1665_ChatGPT_shared_score_v3.jsonl'), 'utf8').trim().split(/\\r?\\n/).map(JSON.parse);
-  const blendRows = fs.readFileSync(path.join(__dirname, '..', 'predictions', 'round_1665_ChatGPT_market_blend_v2.jsonl'), 'utf8').trim().split(/\\r?\\n/).map(JSON.parse);
+  const gptRows = fs.readFileSync(path.join(__dirname, '..', 'predictions', 'round_1665_ChatGPT_shared_score_v3.jsonl'), 'utf8').trim().split(/\r?\n/).map(JSON.parse);
+  const blendRows = fs.readFileSync(path.join(__dirname, '..', 'predictions', 'round_1665_ChatGPT_market_blend_v2.jsonl'), 'utf8').trim().split(/\r?\n/).map(JSON.parse);
   const latestByMatch = new Map();
   for (const row of blendRows) latestByMatch.set(row.matchNumber, row);
   assert.equal(gptRows.length, 13);

@@ -1,16 +1,9 @@
-# Round 1665 shared score-distribution snapshot
+# Round 1665 shared score model — corrected v2
 
-This is an append-only experimental snapshot. It preserves prior 1X2 heuristic and GOAL3 estimates rather than rewriting historical predictions.
+Version 2 supersedes the earlier v1 snapshot where team-name aliases were not consistently normalized. Team names are canonicalized using aliases from `toto-lab/data/teams.json` before matching the historical dataset.
 
-- One row per each of the 13 toto fixtures.
-- The same home/away expected-goal rates (lambda) produce both 0/1/2/3+ goal buckets and 1X2 probabilities.
-- 1X2 is calculated by summing independent-Poisson score pairs from 0 through 10, then normalizing the truncated total.
-- Goal buckets use exact Poisson probabilities for 0, 1, and 2, with the remaining tail grouped as 3+.
-- Source: locally stored `gpt/model.js` baseline algorithm, historical file `data/history.json`, and team aliases from `toto-lab/data/teams.json`; team-name normalization was corrected before recalculation.
-- This is not calibrated production output. Stored history, mixed competitions, rate estimates, and fixture metadata still require audit. No current injuries/suspensions or market odds were used.
+The same expected-goal rates generate both exact independent-Poisson score-pair 1X2 probabilities (scores 0–10, renormalized) and goal buckets (0, 1, 2, 3+). This keeps the two markets on the same model basis.
 
-Run the structural tests with:
+Run `node --test tests/round-1665-shared-score-v2.test.js` to validate 13 fixtures, unique IDs, alias-normalized history availability, valid probabilities and sums.
 
-```sh
-node --test tests/round-1665-shared-score.test.js
-```
+Limitations: this remains an uncalibrated baseline. The historical source is a community mirror with a mixed competition set; injury/suspension data and market odds are not included.

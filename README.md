@@ -56,6 +56,8 @@ NFKC正規化（全角→半角などの一意な機械的変換）は `aliases`
 - `schemas/prediction_goal3.schema.json`：1レコード＝1試合の片側チーム
   （`team`/`opponent`/`isHome` + `probabilities`は`"0"/"1"/"2"/"3"`の4キー、合計1）。
   1試合につきhome側・away側の2レコードを保存する。
+- `evidence`（予測根拠）は1X2用と同一の任意フィールド（定義・検証ロジックとも共通。`homeTeamStatus`/`awayTeamStatus` は
+  試合のホーム側・アウェイ側チームの状況で、そのレコードの `team` がどちら側かは `isHome` で判別する）。
 - `scripts/validate_prediction_goal3.js` / `scripts/save_prediction_goal3.js`：
   保存先は `predictions/round_<開催回>_<ChatGPT|Claude>_goal3.jsonl`
   （1X2用の`round_<開催回>_<model>.jsonl`とは別ファイル）。検証ルール

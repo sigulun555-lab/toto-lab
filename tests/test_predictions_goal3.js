@@ -188,6 +188,32 @@ check('14. revisionOfで修正しつつmodelVersionも変えた場合でも、�
     assert.ok(reportMv.supersededRecords.some(s => s.predictionId === mvOld.predictionId && s.supersededBy === mvNew.predictionId), '旧版(modelVersion=v1)がsupersededRecordsに記録されているはず');
 });
 
+// ---- evidence（予測根拠）フィールド（1X2用と同一構造・検証ロジック共有） ----
+check('15. evidence（予測根拠）は正しい構造なら受理され、未知のキー・不正なenum/型・URL/日時は拒否される', () => {
+    const { validatePrediction: vp, ALLOWED_EVIDENCE_FIELDS } = require('../scripts/validate_prediction_goal3.js');
+    const ok = {
+        sources: [{ name: 'Jリーグ公式', url: 'https://www.jleague.jp/', retrievedAt: '2026-10-20T00:00:00Z' }],
+        homeTeamStatus: { standing: 3, goalDiff: null, recentFormPeriod: '直近5試合', homeAwaySplit: 'home', absences: 'なし' },
+        awayTeamStatus: { standing: 10, goalDiff: -2, homeAwaySplit: 'away' },
+        probabilityRationale: 'テスト用', quantitativeContribution: 'quantified', confidenceLevel: 'low',
+        unconfirmed: ['先発メンバー'], modelOrigin: 'production_model_output',
+    };
+    const rec = (ev, n) => ({ ...homeBase, predictionId: 'goal3-evidence-' + n, evidence: ev });
+    assert.strictEqual(vp(rec(ok, 'ok'), new Set()).ok, true);
+    const bad = [
+        { ...ok, extra: 1 }, { ...ok, confidenceLevel: 'very-high' }, { ...ok, modelOrigin: 'guess' },
+        { ...ok, homeTeamStatus: { homeAwaySplit: 'neutral' } }, { ...ok, awayTeamStatus: { standing: 1.5 } },
+        { ...ok, sources: [{ name: 'x', url: 'not a uri', retrievedAt: '2026-10-20T00:00:00Z' }] },
+        { ...ok, sources: [{ name: 'x', url: 'https://example.com/', retrievedAt: '2026/10/20' }] },
+        'string',
+    ];
+    bad.forEach((ev, i) => assert.strictEqual(vp(rec(ev, 'bad' + i), new Set()).ok, false, 'bad case ' + i + ' が受理された'));
+    const schema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'schemas', 'prediction_goal3.schema.json'), 'utf8'));
+    assert.deepStrictEqual(Object.keys(schema.properties.evidence.properties).sort(), [...ALLOWED_EVIDENCE_FIELDS].sort());
+    const schema1x2 = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'schemas', 'prediction.schema.json'), 'utf8'));
+    assert.deepStrictEqual(schema.properties.evidence, schema1x2.properties.evidence, '1X2用と同一定義のはず');
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 fs.rmSync(tmpDir, { recursive: true, force: true });
 process.exit(failed ? 1 : 0);

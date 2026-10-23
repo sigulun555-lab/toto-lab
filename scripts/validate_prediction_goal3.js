@@ -19,7 +19,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { resolveTeamName, ValidationError } = require('./validate_prediction.js');
+const { resolveTeamName, ValidationError, validateEvidence, ALLOWED_EVIDENCE_FIELDS } = require('./validate_prediction.js');
 
 const ISO_UTC_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,3})?Z$/;
 const MODEL_NAME_ENUM = ['ChatGPT', 'Claude'];
@@ -28,7 +28,7 @@ const ALLOWED_FIELDS = new Set([
     'predictionId', 'round', 'matchNumber', 'marketType', 'team', 'opponent', 'isHome',
     'probabilities', 'predictionConfirmedAt', 'deadlineAt',
     'modelName', 'modelVersion', 'revisionOf',
-    'sourceRetrievedAt', 'notes', 'corrections', 'dataSource',
+    'sourceRetrievedAt', 'notes', 'corrections', 'dataSource', 'evidence',
 ]);
 const REQUIRED_FIELDS = [
     'predictionId', 'round', 'matchNumber', 'marketType', 'team', 'opponent', 'isHome',
@@ -101,6 +101,9 @@ function validateSchema(record) {
             }
         }
     }
+
+    // evidence（予測根拠）の構造は1X2用と共通（検証ロジックは validate_prediction.js を共有）
+    if ('evidence' in record) errors.push(...validateEvidence(record.evidence));
 
     return errors;
 }
@@ -176,6 +179,7 @@ module.exports = {
     ValidationError,
     REQUIRED_FIELDS,
     ALLOWED_FIELDS,
+    ALLOWED_EVIDENCE_FIELDS,
     MODEL_NAME_ENUM,
     MARKET_TYPE_ENUM,
     GOAL_BUCKET_KEYS,

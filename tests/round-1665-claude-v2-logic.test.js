@@ -67,7 +67,8 @@ test('latest GPT market-blend revision applies Claude V2 logic to GPT shared xG 
     const saved = latestByMatch.get(g.matchNumber);
     assert.ok(saved, 'missing aligned revision');
     assert.match(saved.modelVersion, /Claude-V2-market-blend-30-70/);
-    const expected = computeMatch({ rawHomeGoals: g.homeExpectedGoals, rawAwayGoals: g.awayExpectedGoals, marketHome: m.input.officialVoteShare['1'], marketDraw: m.input.officialVoteShare['0'], marketAway: m.input.officialVoteShare['2'] });
+    const correction = saved.correctionFactors || { home: 1, away: 1 };
+    const expected = computeMatch({ rawHomeGoals: g.homeExpectedGoals * correction.home, rawAwayGoals: g.awayExpectedGoals * correction.away, marketHome: saved.marketVoteShare['1'] ?? m.input.officialVoteShare['1'], marketDraw: saved.marketVoteShare['0'] ?? m.input.officialVoteShare['0'], marketAway: saved.marketVoteShare['2'] ?? m.input.officialVoteShare['2'] });
     assert.ok(Math.abs(saved.blendedExpectedGoals.home - expected.blend.homeGoals) < 1e-10);
     assert.ok(Math.abs(saved.blendedExpectedGoals.away - expected.blend.awayGoals) < 1e-10);
     const keys = { '1': 'home', '0': 'draw', '2': 'away' };

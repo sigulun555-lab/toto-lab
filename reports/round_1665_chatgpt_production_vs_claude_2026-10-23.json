@@ -1,0 +1,414 @@
+{
+  "reportTitle": "第1665回 toto ChatGPT production vs Claude comparison",
+  "round": 1665,
+  "createdAt": "2026-10-23T08:15:13Z",
+  "deadlineAt": "2026-10-24T04:50:00Z",
+  "chatgptSource": {
+    "repository": "sigulun555-lab/gpt",
+    "path": "reports/toto-1665-forecast-2026-10-23.json",
+    "modelVersion": "Poisson-baseline-production-2026-10-23",
+    "snapshotAt": "2026-10-23T08:15:13Z"
+  },
+  "claudeSource": {
+    "repository": "sigulun555-lab/toto-lab",
+    "path": "predictions/round_1665_Claude.jsonl",
+    "selection": "latest record per matchNumber; append-only revision history preserved"
+  },
+  "methodNotes": [
+    "1=home win, 0=draw, 2=away win.",
+    "This is a probability comparison, not evidence of which model is more accurate. Accuracy cannot be assessed until official match results are saved and scored.",
+    "ChatGPT production forecast is the latest snapshot already present in gpt at 2026-10-23T08:15:13Z; it was registered here, not freshly recomputed from external sources at this commit.",
+    "Injuries/suspensions are unavailable in the ChatGPT production snapshot."
+  ],
+  "summary": {
+    "matchesCompared": 13,
+    "sameTopPick": 7,
+    "differentTopPick": [
+      3,
+      6,
+      7,
+      8,
+      11,
+      13
+    ]
+  },
+  "matches": [
+    {
+      "matchNumber": 1,
+      "homeTeam": "サンフレッチェ広島",
+      "awayTeam": "清水エスパルス",
+      "chatgpt": {
+        "predictionId": "toto-1665-chatgpt-production-01-v1",
+        "probabilities": {
+          "0": 0.13027310881982795,
+          "1": 0.8133809695772064,
+          "2": 0.0563459216029657
+        },
+        "topPick": "1"
+      },
+      "claude": {
+        "predictionId": "Claude-toto13-v1-r1665-m1-hiroshima_shimizu-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+        "probabilities": {
+          "0": 0.1333,
+          "1": 0.7653,
+          "2": 0.1014
+        },
+        "topPick": "1"
+      },
+      "sameTopPick": true,
+      "absoluteDifferencePercentagePoints": {
+        "0": 0.3,
+        "1": 4.81,
+        "2": 4.51
+      }
+    },
+    {
+      "matchNumber": 2,
+      "homeTeam": "鹿島アントラーズ",
+      "awayTeam": "柏レイソル",
+      "chatgpt": {
+        "predictionId": "toto-1665-chatgpt-production-02-v1",
+        "probabilities": {
+          "0": 0.18780478111253412,
+          "1": 0.4759783604338558,
+          "2": 0.33621685845361016
+        },
+        "topPick": "1"
+      },
+      "claude": {
+        "predictionId": "Claude-toto13-v1-r1665-m2-kashima_kashiwa-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+        "probabilities": {
+          "0": 0.1601,
+          "1": 0.67,
+          "2": 0.1699
+        },
+        "topPick": "1"
+      },
+      "sameTopPick": true,
+      "absoluteDifferencePercentagePoints": {
+        "0": 2.77,
+        "1": 19.4,
+        "2": 16.63
+      }
+    },
+    {
+      "matchNumber": 3,
+      "homeTeam": "ヴィッセル神戸",
+      "awayTeam": "ＦＣ町田ゼルビア",
+      "chatgpt": {
+        "predictionId": "toto-1665-chatgpt-production-03-v1",
+        "probabilities": {
+          "0": 0.23313227480704,
+          "1": 0.24870812918069984,
+          "2": 0.5181595960122601
+        },
+        "topPick": "2"
+      },
+      "claude": {
+        "predictionId": "Claude-toto13-v1-r1665-m3-kobe_machida-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+        "probabilities": {
+          "0": 0.3554,
+          "1": 0.347,
+          "2": 0.2976
+        },
+        "topPick": "0"
+      },
+      "sameTopPick": false,
+      "absoluteDifferencePercentagePoints": {
+        "0": 12.23,
+        "1": 9.83,
+        "2": 22.06
+      }
+    },
+    {
+      "matchNumber": 4,
+      "homeTeam": "セレッソ大阪",
+      "awayTeam": "ジェフユナイテッド千葉",
+      "chatgpt": {
+        "predictionId": "toto-1665-chatgpt-production-04-v1",
+        "probabilities": {
+          "0": 0.26964407902931686,
+          "1": 0.48757315776445287,
+          "2": 0.24278276320623018
+        },
+        "topPick": "1"
+      },
+      "claude": {
+        "predictionId": "Claude-toto13-v1-r1665-m4-osaka_chiba-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+        "probabilities": {
+          "0": 0.2639,
+          "1": 0.5363,
+          "2": 0.1998
+        },
+        "topPick": "1"
+      },
+      "sameTopPick": true,
+      "absoluteDifferencePercentagePoints": {
+        "0": 0.57,
+        "1": 4.87,
+        "2": 4.3
+      }
+    },
+    {
+      "matchNumber": 5,
+      "homeTeam": "ＦＣ東京",
+      "awayTeam": "水戸ホーリーホック",
+      "chatgpt": {
+        "predictionId": "toto-1665-chatgpt-production-05-v1",
+        "probabilities": {
+          "0": 0.16869019950869588,
+          "1": 0.756896187619988,
+          "2": 0.0744136128713161
+        },
+        "topPick": "1"
+      },
+      "claude": {
+        "predictionId": "Claude-toto13-v1-r1665-m5-fc_tokyo_mito-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+        "probabilities": {
+          "0": 0.2061,
+          "1": 0.5952,
+          "2": 0.1986
+        },
+        "topPick": "1"
+      },
+      "sameTopPick": true,
+      "absoluteDifferencePercentagePoints": {
+        "0": 3.74,
+        "1": 16.17,
+        "2": 12.42
+      }
+    },
+    {
+      "matchNumber": 6,
+      "homeTeam": "東京ヴェルディ",
+      "awayTeam": "アビスパ福岡",
+      "chatgpt": {
+        "predictionId": "toto-1665-chatgpt-production-06-v1",
+        "probabilities": {
+          "0": 0.29037743141930455,
+          "1": 0.20106964023924537,
+          "2": 0.5085529283414502
+        },
+        "topPick": "2"
+      },
+      "claude": {
+        "predictionId": "Claude-toto13-v1-r1665-m6-verdy_fukuoka-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+        "probabilities": {
+          "0": 0.4361,
+          "1": 0.1662,
+          "2": 0.3976
+        },
+        "topPick": "0"
+      },
+      "sameTopPick": false,
+      "absoluteDifferencePercentagePoints": {
+        "0": 14.57,
+        "1": 3.49,
+        "2": 11.1
+      }
+    },
+    {
+      "matchNumber": 7,
+      "homeTeam": "ガンバ大阪",
+      "awayTeam": "京都サンガF.C.",
+      "chatgpt": {
+        "predictionId": "toto-1665-chatgpt-production-07-v1",
+        "probabilities": {
+          "0": 0.24193060443214398,
+          "1": 0.44436130003125274,
+          "2": 0.3137080955366032
+        },
+        "topPick": "1"
+      },
+      "claude": {
+        "predictionId": "Claude-toto13-v1-r1665-m7-gamba_kyoto-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+        "probabilities": {
+          "0": 0.4833,
+          "1": 0.2524,
+          "2": 0.2643
+        },
+        "topPick": "0"
+      },
+      "sameTopPick": false,
+      "absoluteDifferencePercentagePoints": {
+        "0": 24.14,
+        "1": 19.2,
+        "2": 4.94
+      }
+    },
+    {
+      "matchNumber": 8,
+      "homeTeam": "名古屋グランパス",
+      "awayTeam": "横浜Ｆ・マリノス",
+      "chatgpt": {
+        "predictionId": "toto-1665-chatgpt-production-08-v1",
+        "probabilities": {
+          "0": 0.274536689707015,
+          "1": 0.25230521758078367,
+          "2": 0.4731580927122013
+        },
+        "topPick": "2"
+      },
+      "claude": {
+        "predictionId": "Claude-toto13-v1-r1665-m8-nagoya_yokohama-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+        "probabilities": {
+          "0": 0.3156,
+          "1": 0.4357,
+          "2": 0.2486
+        },
+        "topPick": "1"
+      },
+      "sameTopPick": false,
+      "absoluteDifferencePercentagePoints": {
+        "0": 4.11,
+        "1": 18.34,
+        "2": 22.46
+      }
+    },
+    {
+      "matchNumber": 9,
+      "homeTeam": "川崎フロンターレ",
+      "awayTeam": "ファジアーノ岡山",
+      "chatgpt": {
+        "predictionId": "toto-1665-chatgpt-production-09-v1",
+        "probabilities": {
+          "0": 0.19944212004200015,
+          "1": 0.5879823520631294,
+          "2": 0.21257552789487033
+        },
+        "topPick": "1"
+      },
+      "claude": {
+        "predictionId": "Claude-toto13-v1-r1665-m9-kawasaki_okayama-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+        "probabilities": {
+          "0": 0.1874,
+          "1": 0.6183,
+          "2": 0.1943
+        },
+        "topPick": "1"
+      },
+      "sameTopPick": true,
+      "absoluteDifferencePercentagePoints": {
+        "0": 1.2,
+        "1": 3.03,
+        "2": 1.83
+      }
+    },
+    {
+      "matchNumber": 10,
+      "homeTeam": "浦和レッズ",
+      "awayTeam": "Ｖ・ファーレン長崎",
+      "chatgpt": {
+        "predictionId": "toto-1665-chatgpt-production-10-v1",
+        "probabilities": {
+          "0": 0.19741678321817419,
+          "1": 0.4886294007208524,
+          "2": 0.3139538160609735
+        },
+        "topPick": "1"
+      },
+      "claude": {
+        "predictionId": "Claude-toto13-v1-r1665-m10-urawa_nagasaki-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+        "probabilities": {
+          "0": 0.1819,
+          "1": 0.6856,
+          "2": 0.1324
+        },
+        "topPick": "1"
+      },
+      "sameTopPick": true,
+      "absoluteDifferencePercentagePoints": {
+        "0": 1.55,
+        "1": 19.7,
+        "2": 18.16
+      }
+    },
+    {
+      "matchNumber": 11,
+      "homeTeam": "ブラウブリッツ秋田",
+      "awayTeam": "ＦＣ今治",
+      "chatgpt": {
+        "predictionId": "toto-1665-chatgpt-production-11-v1",
+        "probabilities": {
+          "0": 0.23344555670937198,
+          "1": 0.5651034282414376,
+          "2": 0.2014510150491904
+        },
+        "topPick": "1"
+      },
+      "claude": {
+        "predictionId": "Claude-toto13-v1-r1665-m11-akita_imabari-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+        "probabilities": {
+          "0": 0.418,
+          "1": 0.3215,
+          "2": 0.2605
+        },
+        "topPick": "0"
+      },
+      "sameTopPick": false,
+      "absoluteDifferencePercentagePoints": {
+        "0": 18.46,
+        "1": 24.36,
+        "2": 5.9
+      }
+    },
+    {
+      "matchNumber": 12,
+      "homeTeam": "サガン鳥栖",
+      "awayTeam": "ヴァンラーレ八戸",
+      "chatgpt": {
+        "predictionId": "toto-1665-chatgpt-production-12-v1",
+        "probabilities": {
+          "0": 0.28943885772932265,
+          "1": 0.5160163175265363,
+          "2": 0.19454482474414095
+        },
+        "topPick": "1"
+      },
+      "claude": {
+        "predictionId": "Claude-toto13-v1-r1665-m12-tosu_hachinohe-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+        "probabilities": {
+          "0": 0.3234,
+          "1": 0.4407,
+          "2": 0.2359
+        },
+        "topPick": "1"
+      },
+      "sameTopPick": true,
+      "absoluteDifferencePercentagePoints": {
+        "0": 3.4,
+        "1": 7.53,
+        "2": 4.14
+      }
+    },
+    {
+      "matchNumber": 13,
+      "homeTeam": "カターレ富山",
+      "awayTeam": "北海道コンサドーレ札幌",
+      "chatgpt": {
+        "predictionId": "toto-1665-chatgpt-production-13-v1",
+        "probabilities": {
+          "0": 0.16483677734952323,
+          "1": 0.7357232079806992,
+          "2": 0.09944001466977757
+        },
+        "topPick": "1"
+      },
+      "claude": {
+        "predictionId": "Claude-toto13-v1-r1665-m13-toyama_hokkaido-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+        "probabilities": {
+          "0": 0.4297,
+          "1": 0.2461,
+          "2": 0.3242
+        },
+        "topPick": "0"
+      },
+      "sameTopPick": false,
+      "absoluteDifferencePercentagePoints": {
+        "0": 26.49,
+        "1": 48.96,
+        "2": 22.48
+      }
+    }
+  ]
+}

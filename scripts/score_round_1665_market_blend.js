@@ -51,7 +51,7 @@ function buildReport(baseRows, resultRows) {
   const models = [
     { key: 'gptPoisson', label: 'GPT Poisson only', probabilities: r => r.baseModelProbabilities },
     { key: 'marketOnly', label: 'Toto vote share only (not true outcome probabilities)', probabilities: r => r.marketVoteShare },
-    { key: 'marketBlendV2', label: 'GPT + market blend V2 (30% model / 70% market)', probabilities: r => r.probabilities },
+    { key: 'marketBlendV2', label: 'GPT goal-expectancy market blend V2 (30/70; GPT Poisson probability conversion)', probabilities: r => r.probabilities },
   ];
   const scored = [];
   for (const p of predictionRows) {

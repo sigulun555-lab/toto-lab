@@ -39,3 +39,21 @@ test('comparison scores all models on the same verified subset only', () => {
   assert.equal(report.comparisons.gptPoisson.accuracy, 0);
   assert.equal(report.comparisons.marketOnly.accuracy, 1);
 });
+
+test('append-only revisions score only the latest row for each match', () => {
+  const base = [{
+    matchNumber: 1, homeTeam: 'Home', awayTeam: 'Away',
+    baseModelProbabilities: { '1': 0.7, '0': 0.2, '2': 0.1 },
+    marketVoteShare: { '1': 0.2, '0': 0.3, '2': 0.5 },
+    probabilities: { '1': 0.45, '0': 0.25, '2': 0.3 },
+  }, {
+    matchNumber: 1, homeTeam: 'Home', awayTeam: 'Away',
+    baseModelProbabilities: { '1': 0.7, '0': 0.2, '2': 0.1 },
+    marketVoteShare: { '1': 0.8, '0': 0.1, '2': 0.1 },
+    probabilities: { '1': 0.77, '0': 0.13, '2': 0.1 },
+  }];
+  const report = buildReport(base, [{ round: 1665, matchNumber: 1, homeGoals: 1, awayGoals: 0 }]);
+  assert.equal(report.matches.length, 1);
+  assert.deepEqual(report.matches[0].modelProbabilities.marketBlendV2, { '1': 0.77, '0': 0.13, '2': 0.1 });
+});
+

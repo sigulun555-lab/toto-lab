@@ -1,0 +1,656 @@
+{
+  "generatedBy": "scripts/claude_v2_logic.js",
+  "note": "Claude V2 reference. Inputs: Claude raw expected goals (homeExpGoals/awayExpGoals from matchScores) and official 00:59 vote shares. Probabilities rounded to 6dp. Keys: 1=home,0=draw,2=away.",
+  "matches": [
+    {
+      "matchNumber": 1,
+      "input": {
+        "rawHomeExpGoals": 3.348,
+        "rawAwayExpGoals": 1.264,
+        "officialVoteShare": {
+          "0": 0.1353,
+          "1": 0.7756000000000001,
+          "2": 0.0891
+        }
+      },
+      "intermediate": {
+        "marketEdge": 1.0984,
+        "rawEdge": 2.084,
+        "blendedEdge": 1.39408,
+        "totalGoals": 4.612,
+        "blendedHomeExpGoals": 3.00304,
+        "blendedAwayExpGoals": 1.60896
+      },
+      "v1NoBlend": {
+        "note": "submitted V1: raw xG, no market blend, V2 outcome logic",
+        "preBoost": {
+          "0": 0.133339,
+          "1": 0.765207,
+          "2": 0.101454
+        },
+        "final": {
+          "0": 0.133339,
+          "1": 0.765207,
+          "2": 0.101454
+        }
+      },
+      "v2Blend": {
+        "preBoost": {
+          "0": 0.168745,
+          "1": 0.652751,
+          "2": 0.178504
+        },
+        "drawBoost": {
+          "gap": 0.474246,
+          "threshold": 0.3,
+          "amount": 0.2
+        },
+        "final": {
+          "0": 0.168745,
+          "1": 0.652751,
+          "2": 0.178504
+        }
+      }
+    },
+    {
+      "matchNumber": 2,
+      "input": {
+        "rawHomeExpGoals": 3.167,
+        "rawAwayExpGoals": 1.654,
+        "officialVoteShare": {
+          "0": 0.2413,
+          "1": 0.4959,
+          "2": 0.26280000000000003
+        }
+      },
+      "intermediate": {
+        "marketEdge": 0.37296,
+        "rawEdge": 1.513,
+        "blendedEdge": 0.714972,
+        "totalGoals": 4.821,
+        "blendedHomeExpGoals": 2.767986,
+        "blendedAwayExpGoals": 2.053014
+      },
+      "v1NoBlend": {
+        "note": "submitted V1: raw xG, no market blend, V2 outcome logic",
+        "preBoost": {
+          "0": 0.160136,
+          "1": 0.669823,
+          "2": 0.170041
+        },
+        "final": {
+          "0": 0.160136,
+          "1": 0.669823,
+          "2": 0.170041
+        }
+      },
+      "v2Blend": {
+        "preBoost": {
+          "0": 0.188129,
+          "1": 0.529871,
+          "2": 0.282
+        },
+        "drawBoost": {
+          "gap": 0.247871,
+          "threshold": 0.3,
+          "amount": 0.2
+        },
+        "final": {
+          "0": 0.222881,
+          "1": 0.50719,
+          "2": 0.269929
+        }
+      }
+    },
+    {
+      "matchNumber": 3,
+      "input": {
+        "rawHomeExpGoals": 2.495,
+        "rawAwayExpGoals": 2.32,
+        "officialVoteShare": {
+          "0": 0.2623,
+          "1": 0.3057,
+          "2": 0.43200000000000005
+        }
+      },
+      "intermediate": {
+        "marketEdge": -0.20208,
+        "rawEdge": 0.175,
+        "blendedEdge": -0.088956,
+        "totalGoals": 4.815,
+        "blendedHomeExpGoals": 2.363022,
+        "blendedAwayExpGoals": 2.451978
+      },
+      "v1NoBlend": {
+        "note": "submitted V1: raw xG, no market blend, V2 outcome logic",
+        "preBoost": {
+          "0": 0.196484,
+          "1": 0.432518,
+          "2": 0.370998
+        },
+        "final": {
+          "0": 0.355471,
+          "1": 0.346938,
+          "2": 0.297591
+        }
+      },
+      "v2Blend": {
+        "preBoost": {
+          "0": 0.19688,
+          "1": 0.385914,
+          "2": 0.417206
+        },
+        "drawBoost": {
+          "gap": 0.031292,
+          "threshold": 0.3,
+          "amount": 0.2
+        },
+        "final": {
+          "0": 0.376019,
+          "1": 0.299835,
+          "2": 0.324147
+        }
+      }
+    },
+    {
+      "matchNumber": 4,
+      "input": {
+        "rawHomeExpGoals": 1.69,
+        "rawAwayExpGoals": 0.95,
+        "officialVoteShare": {
+          "0": 0.1822,
+          "1": 0.6934999999999999,
+          "2": 0.1243
+        }
+      },
+      "intermediate": {
+        "marketEdge": 0.91072,
+        "rawEdge": 0.74,
+        "blendedEdge": 0.859504,
+        "totalGoals": 2.64,
+        "blendedHomeExpGoals": 1.749752,
+        "blendedAwayExpGoals": 0.890248
+      },
+      "v1NoBlend": {
+        "note": "submitted V1: raw xG, no market blend, V2 outcome logic",
+        "preBoost": {
+          "0": 0.263932,
+          "1": 0.536308,
+          "2": 0.19976
+        },
+        "final": {
+          "0": 0.263932,
+          "1": 0.536308,
+          "2": 0.19976
+        }
+      },
+      "v2Blend": {
+        "preBoost": {
+          "0": 0.256335,
+          "1": 0.565723,
+          "2": 0.177942
+        },
+        "drawBoost": {
+          "gap": 0.387781,
+          "threshold": 0.3,
+          "amount": 0.2
+        },
+        "final": {
+          "0": 0.256335,
+          "1": 0.565723,
+          "2": 0.177942
+        }
+      }
+    },
+    {
+      "matchNumber": 5,
+      "input": {
+        "rawHomeExpGoals": 2.373,
+        "rawAwayExpGoals": 1.342,
+        "officialVoteShare": {
+          "0": 0.0968,
+          "1": 0.8245,
+          "2": 0.0787
+        }
+      },
+      "intermediate": {
+        "marketEdge": 1.19328,
+        "rawEdge": 1.031,
+        "blendedEdge": 1.144596,
+        "totalGoals": 3.715,
+        "blendedHomeExpGoals": 2.429798,
+        "blendedAwayExpGoals": 1.285202
+      },
+      "v1NoBlend": {
+        "note": "submitted V1: raw xG, no market blend, V2 outcome logic",
+        "preBoost": {
+          "0": 0.206151,
+          "1": 0.59525,
+          "2": 0.198599
+        },
+        "final": {
+          "0": 0.206151,
+          "1": 0.59525,
+          "2": 0.198599
+        }
+      },
+      "v2Blend": {
+        "preBoost": {
+          "0": 0.200363,
+          "1": 0.618193,
+          "2": 0.181445
+        },
+        "drawBoost": {
+          "gap": 0.436748,
+          "threshold": 0.3,
+          "amount": 0.2
+        },
+        "final": {
+          "0": 0.200363,
+          "1": 0.618193,
+          "2": 0.181445
+        }
+      }
+    },
+    {
+      "matchNumber": 6,
+      "input": {
+        "rawHomeExpGoals": 0.47,
+        "rawAwayExpGoals": 0.877,
+        "officialVoteShare": {
+          "0": 0.3442,
+          "1": 0.3256,
+          "2": 0.33020000000000005
+        }
+      },
+      "intermediate": {
+        "marketEdge": -0.00736,
+        "rawEdge": -0.407,
+        "blendedEdge": -0.127252,
+        "totalGoals": 1.347,
+        "blendedHomeExpGoals": 0.609874,
+        "blendedAwayExpGoals": 0.737126
+      },
+      "v1NoBlend": {
+        "note": "submitted V1: raw xG, no market blend, V2 outcome logic",
+        "preBoost": {
+          "0": 0.400195,
+          "1": 0.176957,
+          "2": 0.422848
+        },
+        "final": {
+          "0": 0.436268,
+          "1": 0.166315,
+          "2": 0.397417
+        }
+      },
+      "v2Blend": {
+        "preBoost": {
+          "0": 0.414103,
+          "1": 0.254174,
+          "2": 0.331724
+        },
+        "drawBoost": {
+          "gap": 0.07755,
+          "threshold": 0.3,
+          "amount": 0.2
+        },
+        "final": {
+          "0": 0.562403,
+          "1": 0.189838,
+          "2": 0.247759
+        }
+      }
+    },
+    {
+      "matchNumber": 7,
+      "input": {
+        "rawHomeExpGoals": 1.244,
+        "rawAwayExpGoals": 1.278,
+        "officialVoteShare": {
+          "0": 0.2605,
+          "1": 0.49770000000000003,
+          "2": 0.2418
+        }
+      },
+      "intermediate": {
+        "marketEdge": 0.40944,
+        "rawEdge": -0.034,
+        "blendedEdge": 0.276408,
+        "totalGoals": 2.522,
+        "blendedHomeExpGoals": 1.399204,
+        "blendedAwayExpGoals": 1.122796
+      },
+      "v1NoBlend": {
+        "note": "submitted V1: raw xG, no market blend, V2 outcome logic",
+        "preBoost": {
+          "0": 0.29415,
+          "1": 0.344854,
+          "2": 0.360996
+        },
+        "final": {
+          "0": 0.483389,
+          "1": 0.252398,
+          "2": 0.264213
+        }
+      },
+      "v2Blend": {
+        "preBoost": {
+          "0": 0.290786,
+          "1": 0.420007,
+          "2": 0.289207
+        },
+        "drawBoost": {
+          "gap": 0.1308,
+          "threshold": 0.3,
+          "amount": 0.2
+        },
+        "final": {
+          "0": 0.403586,
+          "1": 0.353206,
+          "2": 0.243209
+        }
+      }
+    },
+    {
+      "matchNumber": 8,
+      "input": {
+        "rawHomeExpGoals": 1.795,
+        "rawAwayExpGoals": 1.318,
+        "officialVoteShare": {
+          "0": 0.2596,
+          "1": 0.36469999999999997,
+          "2": 0.3757
+        }
+      },
+      "intermediate": {
+        "marketEdge": -0.0176,
+        "rawEdge": 0.477,
+        "blendedEdge": 0.13078,
+        "totalGoals": 3.113,
+        "blendedHomeExpGoals": 1.62189,
+        "blendedAwayExpGoals": 1.49111
+      },
+      "v1NoBlend": {
+        "note": "submitted V1: raw xG, no market blend, V2 outcome logic",
+        "preBoost": {
+          "0": 0.251979,
+          "1": 0.476258,
+          "2": 0.271763
+        },
+        "final": {
+          "0": 0.315649,
+          "1": 0.43572,
+          "2": 0.248631
+        }
+      },
+      "v2Blend": {
+        "preBoost": {
+          "0": 0.258941,
+          "1": 0.398788,
+          "2": 0.34227
+        },
+        "drawBoost": {
+          "gap": 0.056518,
+          "threshold": 0.3,
+          "amount": 0.2
+        },
+        "final": {
+          "0": 0.421263,
+          "1": 0.311438,
+          "2": 0.2673
+        }
+      }
+    },
+    {
+      "matchNumber": 9,
+      "input": {
+        "rawHomeExpGoals": 2.675,
+        "rawAwayExpGoals": 1.502,
+        "officialVoteShare": {
+          "0": 0.16699999999999998,
+          "1": 0.7140000000000001,
+          "2": 0.11900000000000001
+        }
+      },
+      "intermediate": {
+        "marketEdge": 0.952,
+        "rawEdge": 1.173,
+        "blendedEdge": 1.0183,
+        "totalGoals": 4.177,
+        "blendedHomeExpGoals": 2.59765,
+        "blendedAwayExpGoals": 1.57935
+      },
+      "v1NoBlend": {
+        "note": "submitted V1: raw xG, no market blend, V2 outcome logic",
+        "preBoost": {
+          "0": 0.187435,
+          "1": 0.618346,
+          "2": 0.194219
+        },
+        "final": {
+          "0": 0.187435,
+          "1": 0.618346,
+          "2": 0.194219
+        }
+      },
+      "v2Blend": {
+        "preBoost": {
+          "0": 0.19412,
+          "1": 0.58895,
+          "2": 0.216929
+        },
+        "drawBoost": {
+          "gap": 0.372021,
+          "threshold": 0.3,
+          "amount": 0.2
+        },
+        "final": {
+          "0": 0.19412,
+          "1": 0.58895,
+          "2": 0.216929
+        }
+      }
+    },
+    {
+      "matchNumber": 10,
+      "input": {
+        "rawHomeExpGoals": 2.564,
+        "rawAwayExpGoals": 1.083,
+        "officialVoteShare": {
+          "0": 0.1598,
+          "1": 0.6759999999999999,
+          "2": 0.1642
+        }
+      },
+      "intermediate": {
+        "marketEdge": 0.81888,
+        "rawEdge": 1.481,
+        "blendedEdge": 1.017516,
+        "totalGoals": 3.647,
+        "blendedHomeExpGoals": 2.332258,
+        "blendedAwayExpGoals": 1.314742
+      },
+      "v1NoBlend": {
+        "note": "submitted V1: raw xG, no market blend, V2 outcome logic",
+        "preBoost": {
+          "0": 0.181955,
+          "1": 0.685574,
+          "2": 0.132471
+        },
+        "final": {
+          "0": 0.181955,
+          "1": 0.685574,
+          "2": 0.132471
+        }
+      },
+      "v2Blend": {
+        "preBoost": {
+          "0": 0.208834,
+          "1": 0.593099,
+          "2": 0.198067
+        },
+        "drawBoost": {
+          "gap": 0.395032,
+          "threshold": 0.3,
+          "amount": 0.2
+        },
+        "final": {
+          "0": 0.208834,
+          "1": 0.593099,
+          "2": 0.198067
+        }
+      }
+    },
+    {
+      "matchNumber": 11,
+      "input": {
+        "rawHomeExpGoals": 1.543,
+        "rawAwayExpGoals": 1.37,
+        "officialVoteShare": {
+          "0": 0.2625,
+          "1": 0.4337,
+          "2": 0.3038
+        }
+      },
+      "intermediate": {
+        "marketEdge": 0.20784,
+        "rawEdge": 0.173,
+        "blendedEdge": 0.197388,
+        "totalGoals": 2.913,
+        "blendedHomeExpGoals": 1.555194,
+        "blendedAwayExpGoals": 1.357806
+      },
+      "v1NoBlend": {
+        "note": "submitted V1: raw xG, no market blend, V2 outcome logic",
+        "preBoost": {
+          "0": 0.269078,
+          "1": 0.403955,
+          "2": 0.326967
+        },
+        "final": {
+          "0": 0.417753,
+          "1": 0.321787,
+          "2": 0.260459
+        }
+      },
+      "v2Blend": {
+        "preBoost": {
+          "0": 0.268747,
+          "1": 0.409531,
+          "2": 0.321722
+        },
+        "drawBoost": {
+          "gap": 0.08781,
+          "threshold": 0.3,
+          "amount": 0.2
+        },
+        "final": {
+          "0": 0.410208,
+          "1": 0.330308,
+          "2": 0.259485
+        }
+      }
+    },
+    {
+      "matchNumber": 12,
+      "input": {
+        "rawHomeExpGoals": 1.616,
+        "rawAwayExpGoals": 1.129,
+        "officialVoteShare": {
+          "0": 0.19440000000000002,
+          "1": 0.6627,
+          "2": 0.1429
+        }
+      },
+      "intermediate": {
+        "marketEdge": 0.83168,
+        "rawEdge": 0.487,
+        "blendedEdge": 0.728276,
+        "totalGoals": 2.745,
+        "blendedHomeExpGoals": 1.736638,
+        "blendedAwayExpGoals": 1.008362
+      },
+      "v1NoBlend": {
+        "note": "submitted V1: raw xG, no market blend, V2 outcome logic",
+        "preBoost": {
+          "0": 0.270559,
+          "1": 0.475031,
+          "2": 0.254409
+        },
+        "final": {
+          "0": 0.323478,
+          "1": 0.440569,
+          "2": 0.235953
+        }
+      },
+      "v2Blend": {
+        "preBoost": {
+          "0": 0.259246,
+          "1": 0.533366,
+          "2": 0.207388
+        },
+        "drawBoost": {
+          "gap": 0.325978,
+          "threshold": 0.3,
+          "amount": 0.2
+        },
+        "final": {
+          "0": 0.259246,
+          "1": 0.533366,
+          "2": 0.207388
+        }
+      }
+    },
+    {
+      "matchNumber": 13,
+      "input": {
+        "rawHomeExpGoals": 1.146,
+        "rawAwayExpGoals": 1.349,
+        "officialVoteShare": {
+          "0": 0.2003,
+          "1": 0.5659000000000001,
+          "2": 0.23379999999999998
+        }
+      },
+      "intermediate": {
+        "marketEdge": 0.53136,
+        "rawEdge": -0.203,
+        "blendedEdge": 0.311052,
+        "totalGoals": 2.495,
+        "blendedHomeExpGoals": 1.403026,
+        "blendedAwayExpGoals": 1.091974
+      },
+      "v1NoBlend": {
+        "note": "submitted V1: raw xG, no market blend, V2 outcome logic",
+        "preBoost": {
+          "0": 0.294173,
+          "1": 0.304584,
+          "2": 0.401243
+        },
+        "final": {
+          "0": 0.429733,
+          "1": 0.246086,
+          "2": 0.324181
+        }
+      },
+      "v2Blend": {
+        "preBoost": {
+          "0": 0.29166,
+          "1": 0.428045,
+          "2": 0.280295
+        },
+        "drawBoost": {
+          "gap": 0.14775,
+          "threshold": 0.3,
+          "amount": 0.2
+        },
+        "final": {
+          "0": 0.39316,
+          "1": 0.366709,
+          "2": 0.240131
+        }
+      }
+    }
+  ]
+}

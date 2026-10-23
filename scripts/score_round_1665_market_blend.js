@@ -43,13 +43,18 @@ function buildReport(baseRows, resultRows) {
     if (!Number.isFinite(r.homeGoals) || !Number.isFinite(r.awayGoals)) continue;
     resultByMatch.set(r.matchNumber, r);
   }
+  // Append-only prediction logs may contain multiple revisions per fixture.
+  // Use the last record for each match number (latest appended revision).
+  const latestByMatch = new Map();
+  for (const row of baseRows) latestByMatch.set(row.matchNumber, row);
+  const predictionRows = [...latestByMatch.values()].sort((a, b) => a.matchNumber - b.matchNumber);
   const models = [
     { key: 'gptPoisson', label: 'GPT Poisson only', probabilities: r => r.baseModelProbabilities },
     { key: 'marketOnly', label: 'Toto vote share only (not true outcome probabilities)', probabilities: r => r.marketVoteShare },
     { key: 'marketBlendV2', label: 'GPT + market blend V2 (30% model / 70% market)', probabilities: r => r.probabilities },
   ];
   const scored = [];
-  for (const p of baseRows) {
+  for (const p of predictionRows) {
     const result = resultByMatch.get(p.matchNumber);
     if (!result) continue;
     scored.push({
@@ -65,14 +70,14 @@ function buildReport(baseRows, resultRows) {
   for (const m of models) {
     comparisons[m.key] = {
       label: m.label,
-      ...scoreRows(scored.map(s => ({ actual: s.actual, probabilities: m.probabilities(baseRows.find(p => p.matchNumber === s.matchNumber)) }))),
+      ...scoreRows(scored.map(s => ({ actual: s.actual, probabilities: m.probabilities(predictionRows.find(p => p.matchNumber === s.matchNumber)) }))),
     };
   }
   return {
     round: 1665,
     status: scored.length === 13 ? 'complete' : scored.length > 0 ? 'partial_results' : 'awaiting_results',
     scoredMatchNumbers: scored.map(s => s.matchNumber).sort((a, b) => a - b),
-    missingMatchNumbers: baseRows.map(r => r.matchNumber).filter(n => !resultByMatch.has(n)).sort((a, b) => a - b),
+    missingMatchNumbers: predictionRows.map(r => r.matchNumber).filter(n => !resultByMatch.has(n)).sort((a, b) => a - b),
     metricDefinitions: {
       accuracy: 'argmax probability equals actual 1X2 outcome',
       brierScore: 'mean per-match sum of three squared errors; lower is better',

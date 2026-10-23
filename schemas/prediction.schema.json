@@ -131,6 +131,105 @@
     "dataSource": {
       "type": "string",
       "description": "この予測値をどこから得たか（例: 本番アプリのpredictScore()実際の出力、過去スナップショットの再計算など）を記録する任意フィールド。"
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "url",
+              "retrievedAt"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "retrievedAt": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        },
+        "homeTeamStatus": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "standing": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "goalDiff": {
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "recentFormPeriod": {
+              "type": "string"
+            },
+            "recentFormCompetitions": {
+              "type": "string"
+            },
+            "homeAwaySplit": {
+              "type": "string",
+              "enum": [
+                "home",
+                "away"
+              ]
+            },
+            "absences": {
+              "type": "string"
+            }
+          }
+        },
+        "awayTeamStatus": {
+          "$ref": "#/properties/evidence/properties/homeTeamStatus"
+        },
+        "probabilityRationale": {
+          "type": "string"
+        },
+        "quantitativeContribution": {
+          "type": "string",
+          "enum": [
+            "quantified",
+            "not_quantified"
+          ]
+        },
+        "confidenceLevel": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "unconfirmed": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "modelOrigin": {
+          "type": "string",
+          "enum": [
+            "production_model_output",
+            "independent_estimate"
+          ]
+        }
+      }
     }
   }
 }

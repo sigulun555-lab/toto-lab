@@ -19,6 +19,7 @@
  *      ブロックせず warnings に記録され、採点時に推測補完せず unresolvedTeamNames になる
  *  12. Brier score が「sum-of-3-squares」方式で算出される（手計算との一致を確認）
  *  13. モデル×リーグ別の集計が機能する（results側の competition フィールドを使用）
+ *  16. evidence（予測根拠）フィールドの検証（受理・拒否・スキーマとの整合）
  *
  * 実行方法: node tests/test_predictions.js
  * 既存の本番 predictions/ ・ results/ には一切触れない（専用の一時ディレクトリを使用）。
@@ -224,6 +225,37 @@ check('15. *_goal3.jsonl（totoGOAL3用スキーマ）はscore_predictions.js（
     const report2 = buildReport(predictionsDir, resultsPath);
     assert.strictEqual(report2.inputCounts.predictions, reportMv.inputCounts.predictions, 'goal3ファイルを追加しても1X2側の予測件数は変化しないはず');
     assert.ok(!report2.unresolvedTeamNames.some(u => u.predictionId === 'goal3-dummy'), 'goal3用レコードがunresolvedTeamNamesにノイズとして混入していないはず');
+});
+
+// ---- evidence（予測根拠）フィールド ----
+const evidenceOk = {
+    sources: [{ name: 'Jリーグ公式', url: 'https://www.jleague.jp/', retrievedAt: '2026-10-20T00:00:00Z' }],
+    homeTeamStatus: { standing: 3, goalDiff: null, recentFormPeriod: '直近5試合', recentFormCompetitions: 'J1', homeAwaySplit: 'home', absences: 'なし' },
+    awayTeamStatus: { standing: 10, goalDiff: -2, homeAwaySplit: 'away' },
+    probabilityRationale: 'テスト用', quantitativeContribution: 'not_quantified', confidenceLevel: 'medium',
+    unconfirmed: ['先発メンバー'], modelOrigin: 'independent_estimate',
+};
+check('16. evidence（予測根拠）は正しい構造なら受理され、未知のキー・不正なenum/型・URL/日時は拒否される', () => {
+    const rec = (ev, n) => ({ ...base, predictionId: 'evidence-test-' + n, evidence: ev });
+    assert.strictEqual(validatePrediction(rec(evidenceOk, 'ok'), new Set()).ok, true);
+    const bad = [
+        { ...evidenceOk, extra: 1 },
+        { ...evidenceOk, confidenceLevel: 'very-high' },
+        { ...evidenceOk, modelOrigin: 'guess' },
+        { ...evidenceOk, quantitativeContribution: 'maybe' },
+        { ...evidenceOk, homeTeamStatus: { homeAwaySplit: 'neutral' } },
+        { ...evidenceOk, homeTeamStatus: { standing: 1.5 } },
+        { ...evidenceOk, awayTeamStatus: { unknownKey: 1 } },
+        { ...evidenceOk, sources: [{ name: 'x', url: 'not a uri', retrievedAt: '2026-10-20T00:00:00Z' }] },
+        { ...evidenceOk, sources: [{ name: 'x', url: 'https://example.com/' }] },
+        { ...evidenceOk, sources: [{ name: 'x', url: 'https://example.com/', retrievedAt: '2026/10/20' }] },
+        { ...evidenceOk, unconfirmed: [1] },
+        'string',
+    ];
+    bad.forEach((ev, i) => assert.strictEqual(validatePrediction(rec(ev, 'bad' + i), new Set()).ok, false, 'bad case ' + i + ' が受理された'));
+    // スキーマ(JSON)側にも同じキーが定義されていること（validatorとの乖離防止）
+    const schema = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'schemas', 'prediction.schema.json'), 'utf8'));
+    assert.deepStrictEqual(Object.keys(schema.properties.evidence.properties).sort(), [...require('../scripts/validate_prediction.js').ALLOWED_EVIDENCE_FIELDS].sort());
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

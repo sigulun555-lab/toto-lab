@@ -49,13 +49,21 @@ const ALLOWED_FIELDS = new Set([
     'predictionId', 'round', 'matchNumber', 'homeTeam', 'awayTeam',
     'probabilities', 'predictionConfirmedAt', 'deadlineAt',
     'modelName', 'modelVersion', 'revisionOf',
-    'sourceRetrievedAt', 'notes', 'corrections', 'dataSource',
+    'sourceRetrievedAt', 'notes', 'corrections', 'dataSource', 'evidence',
 ]);
 const REQUIRED_FIELDS = [
     'predictionId', 'round', 'matchNumber', 'homeTeam', 'awayTeam',
     'probabilities', 'predictionConfirmedAt', 'deadlineAt',
     'modelName', 'modelVersion', 'revisionOf',
 ];
+const ALLOWED_EVIDENCE_FIELDS = new Set([
+    'sources', 'homeTeamStatus', 'awayTeamStatus', 'probabilityRationale',
+    'quantitativeContribution', 'confidenceLevel', 'unconfirmed', 'modelOrigin',
+]);
+const ALLOWED_TEAM_STATUS_FIELDS = new Set([
+    'standing', 'goalDiff', 'recentFormPeriod', 'recentFormCompetitions', 'homeAwaySplit', 'absences',
+]);
+const ALLOWED_SOURCE_FIELDS = new Set(['name', 'url', 'retrievedAt']);
 const ALLOWED_CORRECTIONS_FIELDS = new Set(['dixonColes', 'drawBoostVariant', 'shrinkageSampleTrust', 'marketBlendWeight']);
 
 class ValidationError extends Error {
@@ -105,6 +113,62 @@ function resolveTeamName(rawName) {
         resolved: false, canonicalName: null, club: null, raw: rawName,
         reason: `data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: ${JSON.stringify(rawName)}`,
     };
+}
+
+function isPlainObject(x) {
+    return typeof x === 'object' && x !== null && !Array.isArray(x);
+}
+
+function isUri(x) {
+    if (typeof x !== 'string') return false;
+    try { new URL(x); return true; } catch (e) { return false; }
+}
+
+/** evidence（予測根拠）の検証。schemas/prediction.schema.json の properties.evidence に対応。 */
+function validateEvidence(ev) {
+    const errors = [];
+    if (!isPlainObject(ev)) return ['evidence はオブジェクトである必要がある'];
+    for (const k of Object.keys(ev)) {
+        if (!ALLOWED_EVIDENCE_FIELDS.has(k)) errors.push(`evidence に未知のフィールド（additionalProperties:false）: ${k}`);
+    }
+    if ('sources' in ev) {
+        if (!Array.isArray(ev.sources)) errors.push('evidence.sources は配列である必要がある');
+        else ev.sources.forEach((s, i) => {
+            if (!isPlainObject(s)) { errors.push(`evidence.sources[${i}] はオブジェクトである必要がある`); return; }
+            for (const k of Object.keys(s)) {
+                if (!ALLOWED_SOURCE_FIELDS.has(k)) errors.push(`evidence.sources[${i}] に未知のフィールド（additionalProperties:false）: ${k}`);
+            }
+            for (const k of ['name', 'url', 'retrievedAt']) {
+                if (!(k in s)) errors.push(`evidence.sources[${i}] の必須フィールドが欠落: ${k}`);
+            }
+            if ('name' in s && typeof s.name !== 'string') errors.push(`evidence.sources[${i}].name は文字列`);
+            if ('url' in s && !isUri(s.url)) errors.push(`evidence.sources[${i}].url は URI 形式の文字列`);
+            if ('retrievedAt' in s && (typeof s.retrievedAt !== 'string' || !ISO_UTC_RE.test(s.retrievedAt))) {
+                errors.push(`evidence.sources[${i}].retrievedAt は ISO 8601 UTC 形式`);
+            }
+        });
+    }
+    for (const side of ['homeTeamStatus', 'awayTeamStatus']) {
+        if (!(side in ev)) continue;
+        const st = ev[side];
+        if (!isPlainObject(st)) { errors.push(`evidence.${side} はオブジェクトである必要がある`); continue; }
+        for (const k of Object.keys(st)) {
+            if (!ALLOWED_TEAM_STATUS_FIELDS.has(k)) errors.push(`evidence.${side} に未知のフィールド（additionalProperties:false）: ${k}`);
+        }
+        for (const k of ['standing', 'goalDiff']) {
+            if (k in st && st[k] !== null && !Number.isInteger(st[k])) errors.push(`evidence.${side}.${k} は整数か null`);
+        }
+        for (const k of ['recentFormPeriod', 'recentFormCompetitions', 'absences']) {
+            if (k in st && typeof st[k] !== 'string') errors.push(`evidence.${side}.${k} は文字列`);
+        }
+        if ('homeAwaySplit' in st && !['home', 'away'].includes(st.homeAwaySplit)) errors.push(`evidence.${side}.homeAwaySplit は "home" か "away"`);
+    }
+    if ('probabilityRationale' in ev && typeof ev.probabilityRationale !== 'string') errors.push('evidence.probabilityRationale は文字列');
+    if ('quantitativeContribution' in ev && !['quantified', 'not_quantified'].includes(ev.quantitativeContribution)) errors.push('evidence.quantitativeContribution は "quantified" か "not_quantified"');
+    if ('confidenceLevel' in ev && !['high', 'medium', 'low'].includes(ev.confidenceLevel)) errors.push('evidence.confidenceLevel は "high"/"medium"/"low"');
+    if ('unconfirmed' in ev && (!Array.isArray(ev.unconfirmed) || ev.unconfirmed.some(x => typeof x !== 'string'))) errors.push('evidence.unconfirmed は文字列の配列');
+    if ('modelOrigin' in ev && !['production_model_output', 'independent_estimate'].includes(ev.modelOrigin)) errors.push('evidence.modelOrigin は "production_model_output" か "independent_estimate"');
+    return errors;
 }
 
 /**
@@ -177,6 +241,8 @@ function validateSchema(record) {
             if ('marketBlendWeight' in c && c.marketBlendWeight !== null && typeof c.marketBlendWeight !== 'number') errors.push('corrections.marketBlendWeight は数値か null');
         }
     }
+
+    if ('evidence' in record) errors.push(...validateEvidence(record.evidence));
 
     return errors;
 }
@@ -267,6 +333,8 @@ module.exports = {
     ValidationError,
     REQUIRED_FIELDS,
     ALLOWED_FIELDS,
+    ALLOWED_EVIDENCE_FIELDS,
+    validateEvidence,
     MODEL_NAME_ENUM,
 };
 

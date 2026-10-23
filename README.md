@@ -80,7 +80,10 @@ NFKC正規化（全角→半角などの一意な機械的変換）は `aliases`
   `revisionOf` に元の `predictionId` を設定した**新しいレコード**として追記する
   （既存レコードは一切書き換えない）。
 - `modelName` は `"ChatGPT"` または `"Claude"` に統一する。
-- `corrections`（本番モデルの補正値スナップショット）・`dataSource`（予測値の出典）は任意フィールド。
+- `corrections`（本番モデルの補正値スナップショット）・`dataSource`（予測値の出典）・`evidence`（予測根拠）は任意フィールド。
+  `evidence` は `sources`（name/url/retrievedAt）、`homeTeamStatus`/`awayTeamStatus`（順位・得失点差・直近成績・欠場者など）、
+  `probabilityRationale`、`quantitativeContribution`（quantified/not_quantified）、`confidenceLevel`（high/medium/low）、
+  `unconfirmed`、`modelOrigin`（production_model_output/independent_estimate）を持てる。
   スキーマは `additionalProperties: false` のため、未定義のフィールドは拒否される。
 - 結果（`results/*.jsonl`）は予測ログとは別ファイルに保存する。
 

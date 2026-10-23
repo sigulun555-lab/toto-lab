@@ -121,7 +121,7 @@ check('7. evidence付き1X2レコードが検証・保存される', () => {
     };
     const r = savePrediction(withEvidence);
     assert.strictEqual(r.ok, true);
-    const saved = JSON.parse(fs.readFileSync(r.logPath, 'utf8').trim().split('\\n').slice(-1)[0]);
+    const saved = JSON.parse(fs.readFileSync(r.logPath, 'utf8').trim().split('\n').slice(-1)[0]);
     assert.strictEqual(saved.evidence.modelOrigin, 'independent_estimate');
     assert.strictEqual(saved.evidence.sources[0].retrievedAt, '2026-11-01T00:00:00Z');
 });

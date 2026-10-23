@@ -52,5 +52,32 @@
   },
   "matches": [],
   "source": "predictions/round_1665_ChatGPT_market_blend_v2.jsonl + results/round_1665.jsonl",
-  "note": "No verified final-score records are present in results/round_1665.jsonl yet. Scores are intentionally blank; run npm run score:1665:blend after adding verified final scores. V2 uses 30% GPT Poisson + 70% toto vote share."
+  "note": "No verified final-score records are present in results/round_1665.jsonl yet. Scores remain blank until verified results are added. Latest V2 revision uses 30% GPT Poisson + 70% toto official vote share from the user-provided 2026-10-24 00:59 JST snapshot; direct page verification was unavailable.",
+  "marketBlendV2Revision": {
+    "predictionCreatedAt": "2026-10-23T21:02:24Z",
+    "marketOfficialDisplayAt": "2026-10-24T00:59:00+09:00",
+    "marketDataUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=01&fromId=SSIN026&gameAssortment=2&holdCntId=1665",
+    "blendWeights": {
+      "poissonModel": 0.3,
+      "totoVoteShare": 0.7
+    },
+    "appendedPredictionIds": [
+      "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-01",
+      "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-02",
+      "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-03",
+      "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-04",
+      "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-05",
+      "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-06",
+      "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-07",
+      "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-08",
+      "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-09",
+      "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-10",
+      "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-11",
+      "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-12",
+      "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-13"
+    ],
+    "probabilitySumsVerified": true,
+    "directOfficialPageVerification": "unavailable in this environment; using user-provided Claude snapshot",
+    "note": "Append-only revision; the prior 13 V2 rows remain verbatim. The scoring script selects the latest appended row per match."
+  }
 }

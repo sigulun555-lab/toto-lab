@@ -1,0 +1,132 @@
+{
+  "audit": {
+    "rows": 380,
+    "j_rows": 380,
+    "date_min": "2026-08-07",
+    "date_max": "2026-10-25",
+    "missing_goals": 0,
+    "duplicate_keys": 0,
+    "order_is_sorted": true,
+    "n_matches": 380,
+    "competition_counts": {
+      "J1": 120,
+      "J2": 130,
+      "J3": 130
+    }
+  },
+  "snapshot": "data/audit/history_snapshot_gpt_96fdd4a.json",
+  "tables": {
+    "60": {
+      "baseline": {
+        "n": 320,
+        "accuracy": 0.434375,
+        "brier": 0.6535343357148503,
+        "logloss": 1.0793118624385614,
+        "draw_argmax_count": 0
+      },
+      "lambda_10": {
+        "n": 320,
+        "accuracy": 0.440625,
+        "brier": 0.6390339314823427,
+        "logloss": 1.0584325801339283,
+        "draw_argmax_count": 0
+      },
+      "lambda_30": {
+        "n": 320,
+        "accuracy": 0.459375,
+        "brier": 0.6421483402141329,
+        "logloss": 1.0628268496240612,
+        "draw_argmax_count": 0
+      }
+    },
+    "100": {
+      "baseline": {
+        "n": 280,
+        "accuracy": 0.42142857142857143,
+        "brier": 0.658301010424318,
+        "logloss": 1.0856532625519826,
+        "draw_argmax_count": 0
+      },
+      "lambda_10": {
+        "n": 280,
+        "accuracy": 0.43214285714285716,
+        "brier": 0.6420042950399402,
+        "logloss": 1.0624570434517797,
+        "draw_argmax_count": 0
+      },
+      "lambda_30": {
+        "n": 280,
+        "accuracy": 0.45,
+        "brier": 0.6457327345679255,
+        "logloss": 1.067675363459281,
+        "draw_argmax_count": 0
+      }
+    },
+    "150": {
+      "baseline": {
+        "n": 230,
+        "accuracy": 0.4391304347826087,
+        "brier": 0.6505384967345245,
+        "logloss": 1.07503642351878,
+        "draw_argmax_count": 0
+      },
+      "lambda_10": {
+        "n": 230,
+        "accuracy": 0.44782608695652176,
+        "brier": 0.632150748313001,
+        "logloss": 1.0487190362902306,
+        "draw_argmax_count": 0
+      },
+      "lambda_30": {
+        "n": 230,
+        "accuracy": 0.46956521739130436,
+        "brier": 0.6380897607281322,
+        "logloss": 1.0572628250033391,
+        "draw_argmax_count": 0
+      }
+    }
+  },
+  "convergence": {
+    "60": {
+      "lambda_10": {
+        "fits": 320,
+        "not_success": 0,
+        "non_finite": 0
+      },
+      "lambda_30": {
+        "fits": 320,
+        "not_success": 0,
+        "non_finite": 0
+      },
+      "leakage_check": true
+    },
+    "100": {
+      "lambda_10": {
+        "fits": 280,
+        "not_success": 0,
+        "non_finite": 0
+      },
+      "lambda_30": {
+        "fits": 280,
+        "not_success": 0,
+        "non_finite": 0
+      },
+      "leakage_check": true
+    },
+    "150": {
+      "lambda_10": {
+        "fits": 230,
+        "not_success": 0,
+        "non_finite": 0
+      },
+      "lambda_30": {
+        "fits": 230,
+        "not_success": 0,
+        "non_finite": 0
+      },
+      "leakage_check": true
+    }
+  },
+  "grid_tail_mass_max": 0.00047204832865932467,
+  "grid_tail_mass_mean": 1.3414456947649343e-05
+}

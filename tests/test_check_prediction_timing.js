@@ -28,7 +28,9 @@ try {
   runCase('valid', [base], 0, /合格1/);
   runCase('missing-confirmed', [{ ...base, predictionConfirmedAt: undefined, predictionCreatedAt: '2026-10-20T09:00:00Z' }], 1, /predictionConfirmedAtなし/);
   runCase('after-deadline', [{ ...base, predictionConfirmedAt: '2026-10-20T10:00:00Z' }], 1, /締切後または締切時刻と同時刻/);
-  runCase('offset-timezone', [{ ...base, predictionConfirmedAt: '2026-10-20T09:00:00+09:00' }], 1, /ISO 8601 UTC・Z終端/);
+  runCase('offset-timezone', [{ ...base, predictionConfirmedAt: '2026-10-20T09:00:00+09:00' }], 1, /有効なISO 8601 UTC・Z終端/);
+  runCase('invalid-calendar-date', [{ ...base, predictionConfirmedAt: '2026-02-30T09:00:00Z' }], 1, /有効なISO 8601 UTC・Z終端/);
+  runCase('empty-file', [], 1, /ファイルが空のため不合格/);
   console.log('test_check_prediction_timing.js: all tests passed');
 } finally {
   fs.rmSync(dir, { recursive: true, force: true });

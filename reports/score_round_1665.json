@@ -1,0 +1,1272 @@
+{
+  "generatedAt": "2026-10-26T06:41:31.813Z",
+  "inputCounts": {
+    "predictions": 283,
+    "results": 61
+  },
+  "excludedPostDeadlineCount": 83,
+  "excludedPostDeadline": [
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-01",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-02",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-03",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-04",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-05",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-06",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-07",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-08",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-09",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-10",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-11",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-12",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-13",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-01",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-02",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-03",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-04",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-05",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-06",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-07",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-08",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-09",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-10",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-11",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-12",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-official0059-20261024T060224JST-13",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-goalexpectancy-official0059-20261023T211027570Z-01",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-goalexpectancy-official0059-20261023T211027570Z-02",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-goalexpectancy-official0059-20261023T211027570Z-03",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-goalexpectancy-official0059-20261023T211027570Z-04",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-goalexpectancy-official0059-20261023T211027570Z-05",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-goalexpectancy-official0059-20261023T211027570Z-06",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-goalexpectancy-official0059-20261023T211027570Z-07",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-goalexpectancy-official0059-20261023T211027570Z-08",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-goalexpectancy-official0059-20261023T211027570Z-09",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-goalexpectancy-official0059-20261023T211027570Z-10",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-goalexpectancy-official0059-20261023T211027570Z-11",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-goalexpectancy-official0059-20261023T211027570Z-12",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-market-blend-v2-goalexpectancy-official0059-20261023T211027570Z-13",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-01",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-02",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-03",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-04",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-05",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-06",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-07",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-08",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-09",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-10",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-11",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-12",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-20261024T080000Z-13",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-revision-unknown-time-01",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-revision-unknown-time-02",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-revision-unknown-time-03",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-revision-unknown-time-04",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-revision-unknown-time-05",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-revision-unknown-time-06",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-revision-unknown-time-07",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-revision-unknown-time-08",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-revision-unknown-time-09",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-revision-unknown-time-10",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-revision-unknown-time-11",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-revision-unknown-time-12",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-claude-v2-aligned-revision-unknown-time-13",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-injury-xg-adjusted-revision-unknown-time-03",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-injury-xg-adjusted-revision-unknown-time-07",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-injury-xg-adjusted-revision-unknown-time-08",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-injury-xg-adjusted-revision-unknown-time-11",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-injury-xg-adjusted-revision-unknown-time-13",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-claude-market-blend-v2-official0059-20261023T210722Z-01",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-claude-market-blend-v2-official0059-20261023T210722Z-02",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-claude-market-blend-v2-official0059-20261023T210722Z-03",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-claude-market-blend-v2-official0059-20261023T210722Z-04",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-claude-market-blend-v2-official0059-20261023T210722Z-05",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-claude-market-blend-v2-official0059-20261023T210722Z-06",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-claude-market-blend-v2-official0059-20261023T210722Z-07",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-claude-market-blend-v2-official0059-20261023T210722Z-08",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-claude-market-blend-v2-official0059-20261023T210722Z-09",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-claude-market-blend-v2-official0059-20261023T210722Z-10",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-claude-market-blend-v2-official0059-20261023T210722Z-11",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-claude-market-blend-v2-official0059-20261023T210722Z-12",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    },
+    {
+      "predictionId": "toto-1665-claude-market-blend-v2-official0059-20261023T210722Z-13",
+      "reason": "predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）"
+    }
+  ],
+  "unresolvedTeamNameCount": 8,
+  "unresolvedTeamNames": [
+    {
+      "predictionId": "1665-goal3-chatgpt-1-home-evidence-v3",
+      "round": 1665,
+      "matchNumber": 1,
+      "reason": "homeTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined / awayTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-1-away-evidence-v3",
+      "round": 1665,
+      "matchNumber": 1,
+      "reason": "homeTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined / awayTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-2-home-evidence-v3",
+      "round": 1665,
+      "matchNumber": 2,
+      "reason": "homeTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined / awayTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-2-away-evidence-v3",
+      "round": 1665,
+      "matchNumber": 2,
+      "reason": "homeTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined / awayTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-3-home-evidence-v3",
+      "round": 1665,
+      "matchNumber": 3,
+      "reason": "homeTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined / awayTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-3-away-evidence-v3",
+      "round": 1665,
+      "matchNumber": 3,
+      "reason": "homeTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined / awayTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-1-home-evidence-v4-correction",
+      "round": 1665,
+      "matchNumber": 1,
+      "reason": "homeTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined / awayTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-1-away-evidence-v4-correction",
+      "round": 1665,
+      "matchNumber": 1,
+      "reason": "homeTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined / awayTeam: data/teams.json（Jリーグ公式2026クラブ編成基準、全60クラブ）で正規名称に変換できない表記です（推測補完は行いません。クラブを一意に確認できた場合のみ data/teams.json の aliases に追加してください）: undefined"
+    }
+  ],
+  "unresolvedCount": 0,
+  "unresolved": [],
+  "supersededByRevisionCount": 153,
+  "supersededRecords": [
+    {
+      "predictionId": "toto-1665-chatgpt-01-v1",
+      "supersededBy": "toto-1665-chatgpt-01-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-02-v1",
+      "supersededBy": "toto-1665-chatgpt-02-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-03-v1",
+      "supersededBy": "toto-1665-chatgpt-03-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-04-v1",
+      "supersededBy": "toto-1665-chatgpt-04-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-05-v1",
+      "supersededBy": "toto-1665-chatgpt-05-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-06-v1",
+      "supersededBy": "toto-1665-chatgpt-06-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-07-v1",
+      "supersededBy": "toto-1665-chatgpt-07-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-08-v1",
+      "supersededBy": "toto-1665-chatgpt-08-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-09-v1",
+      "supersededBy": "toto-1665-chatgpt-09-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-10-v1",
+      "supersededBy": "toto-1665-chatgpt-10-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-11-v1",
+      "supersededBy": "toto-1665-chatgpt-11-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-12-v1",
+      "supersededBy": "toto-1665-chatgpt-12-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-13-v1",
+      "supersededBy": "toto-1665-chatgpt-13-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-production-01-v1",
+      "supersededBy": "toto-1665-chatgpt-01-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-production-02-v1",
+      "supersededBy": "toto-1665-chatgpt-02-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-production-03-v1",
+      "supersededBy": "toto-1665-chatgpt-03-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-production-04-v1",
+      "supersededBy": "toto-1665-chatgpt-04-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-production-05-v1",
+      "supersededBy": "toto-1665-chatgpt-05-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-production-06-v1",
+      "supersededBy": "toto-1665-chatgpt-06-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-production-07-v1",
+      "supersededBy": "toto-1665-chatgpt-07-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-production-08-v1",
+      "supersededBy": "toto-1665-chatgpt-08-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-production-09-v1",
+      "supersededBy": "toto-1665-chatgpt-09-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-production-10-v1",
+      "supersededBy": "toto-1665-chatgpt-10-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-production-11-v1",
+      "supersededBy": "toto-1665-chatgpt-11-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-production-12-v1",
+      "supersededBy": "toto-1665-chatgpt-12-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-production-13-v1",
+      "supersededBy": "toto-1665-chatgpt-13-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-01-v2",
+      "supersededBy": "toto-1665-chatgpt-01-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-02-v2",
+      "supersededBy": "toto-1665-chatgpt-02-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-03-v2",
+      "supersededBy": "toto-1665-chatgpt-03-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-04-v2",
+      "supersededBy": "toto-1665-chatgpt-04-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-05-v2",
+      "supersededBy": "toto-1665-chatgpt-05-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-06-v2",
+      "supersededBy": "toto-1665-chatgpt-06-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-07-v2",
+      "supersededBy": "toto-1665-chatgpt-07-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-08-v2",
+      "supersededBy": "toto-1665-chatgpt-08-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-09-v2",
+      "supersededBy": "toto-1665-chatgpt-09-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-10-v2",
+      "supersededBy": "toto-1665-chatgpt-10-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-11-v2",
+      "supersededBy": "toto-1665-chatgpt-11-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-12-v2",
+      "supersededBy": "toto-1665-chatgpt-12-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-13-v2",
+      "supersededBy": "toto-1665-chatgpt-13-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-01-v3",
+      "supersededBy": "toto-1665-chatgpt-main-low-01-v4",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-02-v3",
+      "supersededBy": "toto-1665-chatgpt-main-low-02-v4",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-03-v3",
+      "supersededBy": "toto-1665-chatgpt-main-low-03-v4",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-04-v3",
+      "supersededBy": "toto-1665-chatgpt-main-low-04-v4",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-05-v3",
+      "supersededBy": "toto-1665-chatgpt-main-low-05-v4",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-06-v3",
+      "supersededBy": "toto-1665-chatgpt-main-low-06-v4",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-07-v3",
+      "supersededBy": "toto-1665-chatgpt-main-low-07-v4",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-08-v3",
+      "supersededBy": "toto-1665-chatgpt-main-low-08-v4",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-09-v3",
+      "supersededBy": "toto-1665-chatgpt-main-low-09-v4",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-10-v3",
+      "supersededBy": "toto-1665-chatgpt-main-low-10-v4",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-11-v3",
+      "supersededBy": "toto-1665-chatgpt-main-low-11-v4",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-12-v3",
+      "supersededBy": "toto-1665-chatgpt-main-low-12-v4",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-13-v3",
+      "supersededBy": "toto-1665-chatgpt-main-low-13-v4",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-main-low-01-v4",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-01-v5",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-main-low-02-v4",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-02-v5",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-main-low-03-v4",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-03-v5",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-main-low-04-v4",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-04-v5",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-main-low-05-v4",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-05-v5",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-main-low-06-v4",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-06-v5",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-main-low-07-v4",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-07-v5",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-main-low-08-v4",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-08-v5",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-main-low-09-v4",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-09-v5",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-main-low-10-v4",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-10-v5",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-main-low-11-v4",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-11-v5",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-main-low-12-v4",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-12-v5",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-main-low-13-v4",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-13-v5",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-01-v1",
+      "supersededBy": "toto-1665-chatgpt-score-shared-01-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-02-v1",
+      "supersededBy": "toto-1665-chatgpt-score-shared-02-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-03-v1",
+      "supersededBy": "toto-1665-chatgpt-score-shared-03-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-04-v1",
+      "supersededBy": "toto-1665-chatgpt-score-shared-04-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-05-v1",
+      "supersededBy": "toto-1665-chatgpt-score-shared-05-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-06-v1",
+      "supersededBy": "toto-1665-chatgpt-score-shared-06-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-07-v1",
+      "supersededBy": "toto-1665-chatgpt-score-shared-07-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-08-v1",
+      "supersededBy": "toto-1665-chatgpt-score-shared-08-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-09-v1",
+      "supersededBy": "toto-1665-chatgpt-score-shared-09-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-10-v1",
+      "supersededBy": "toto-1665-chatgpt-score-shared-10-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-11-v1",
+      "supersededBy": "toto-1665-chatgpt-score-shared-11-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-12-v1",
+      "supersededBy": "toto-1665-chatgpt-score-shared-12-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-13-v1",
+      "supersededBy": "toto-1665-chatgpt-score-shared-13-v2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-01-v2",
+      "supersededBy": "toto-1665-chatgpt-score-shared-01-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-02-v2",
+      "supersededBy": "toto-1665-chatgpt-score-shared-02-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-03-v2",
+      "supersededBy": "toto-1665-chatgpt-score-shared-03-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-04-v2",
+      "supersededBy": "toto-1665-chatgpt-score-shared-04-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-05-v2",
+      "supersededBy": "toto-1665-chatgpt-score-shared-05-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-06-v2",
+      "supersededBy": "toto-1665-chatgpt-score-shared-06-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-07-v2",
+      "supersededBy": "toto-1665-chatgpt-score-shared-07-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-08-v2",
+      "supersededBy": "toto-1665-chatgpt-score-shared-08-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-09-v2",
+      "supersededBy": "toto-1665-chatgpt-score-shared-09-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-10-v2",
+      "supersededBy": "toto-1665-chatgpt-score-shared-10-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-11-v2",
+      "supersededBy": "toto-1665-chatgpt-score-shared-11-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-12-v2",
+      "supersededBy": "toto-1665-chatgpt-score-shared-12-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-13-v2",
+      "supersededBy": "toto-1665-chatgpt-score-shared-13-v3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m1-hiroshima_shimizu-20261022T180912Z",
+      "supersededBy": "Claude-toto13-v1-r1665-m1-hiroshima_shimizu-20261022T180912Z-EVIDENCE-20261023",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m2-kashima_kashiwa-20261022T180912Z",
+      "supersededBy": "Claude-toto13-v1-r1665-m2-kashima_kashiwa-20261022T180912Z-EVIDENCE-20261023",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m3-kobe_machida-20261022T180912Z",
+      "supersededBy": "Claude-toto13-v1-r1665-m3-kobe_machida-20261022T180912Z-EVIDENCE-20261023",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m4-osaka_chiba-20261022T180912Z",
+      "supersededBy": "Claude-toto13-v1-r1665-m4-osaka_chiba-20261022T180912Z-EVIDENCE-20261023",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m5-fc_tokyo_mito-20261022T180912Z",
+      "supersededBy": "Claude-toto13-v1-r1665-m5-fc_tokyo_mito-20261022T180912Z-EVIDENCE-20261023",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m6-verdy_fukuoka-20261022T180912Z",
+      "supersededBy": "Claude-toto13-v1-r1665-m6-verdy_fukuoka-20261022T180912Z-EVIDENCE-20261023",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m7-gamba_kyoto-20261022T180912Z",
+      "supersededBy": "Claude-toto13-v1-r1665-m7-gamba_kyoto-20261022T180912Z-EVIDENCE-20261023",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m8-nagoya_yokohama-20261022T180912Z",
+      "supersededBy": "Claude-toto13-v1-r1665-m8-nagoya_yokohama-20261022T180912Z-EVIDENCE-20261023",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m9-kawasaki_okayama-20261022T180912Z",
+      "supersededBy": "Claude-toto13-v1-r1665-m9-kawasaki_okayama-20261022T180912Z-EVIDENCE-20261023",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m10-urawa_nagasaki-20261022T180912Z",
+      "supersededBy": "Claude-toto13-v1-r1665-m10-urawa_nagasaki-20261022T180912Z-EVIDENCE-20261023",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m11-akita_imabari-20261022T180912Z",
+      "supersededBy": "Claude-toto13-v1-r1665-m11-akita_imabari-20261022T180912Z-EVIDENCE-20261023",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m12-tosu_hachinohe-20261022T180912Z",
+      "supersededBy": "Claude-toto13-v1-r1665-m12-tosu_hachinohe-20261022T180912Z-EVIDENCE-20261023",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m13-toyama_hokkaido-20261022T180912Z",
+      "supersededBy": "Claude-toto13-v1-r1665-m13-toyama_hokkaido-20261022T180912Z-EVIDENCE-20261023",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m1-hiroshima_shimizu-20261022T180912Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-toto13-v1-r1665-m1-hiroshima_shimizu-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m2-kashima_kashiwa-20261022T180912Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-toto13-v1-r1665-m2-kashima_kashiwa-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m3-kobe_machida-20261022T180912Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-toto13-v1-r1665-m3-kobe_machida-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m4-osaka_chiba-20261022T180912Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-toto13-v1-r1665-m4-osaka_chiba-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m5-fc_tokyo_mito-20261022T180912Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-toto13-v1-r1665-m5-fc_tokyo_mito-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m6-verdy_fukuoka-20261022T180912Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-toto13-v1-r1665-m6-verdy_fukuoka-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m7-gamba_kyoto-20261022T180912Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-toto13-v1-r1665-m7-gamba_kyoto-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m8-nagoya_yokohama-20261022T180912Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-toto13-v1-r1665-m8-nagoya_yokohama-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m9-kawasaki_okayama-20261022T180912Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-toto13-v1-r1665-m9-kawasaki_okayama-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m10-urawa_nagasaki-20261022T180912Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-toto13-v1-r1665-m10-urawa_nagasaki-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m11-akita_imabari-20261022T180912Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-toto13-v1-r1665-m11-akita_imabari-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m12-tosu_hachinohe-20261022T180912Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-toto13-v1-r1665-m12-tosu_hachinohe-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m13-toyama_hokkaido-20261022T180912Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-toto13-v1-r1665-m13-toyama_hokkaido-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m1-hiroshima_shimizu-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "supersededBy": "Claude-toto13-v1-r1665-m1-hiroshima_shimizu-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m2-kashima_kashiwa-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "supersededBy": "Claude-toto13-v1-r1665-m2-kashima_kashiwa-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m3-kobe_machida-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "supersededBy": "Claude-toto13-v1-r1665-m3-kobe_machida-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m4-osaka_chiba-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "supersededBy": "Claude-toto13-v1-r1665-m4-osaka_chiba-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m5-fc_tokyo_mito-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "supersededBy": "Claude-toto13-v1-r1665-m5-fc_tokyo_mito-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m6-verdy_fukuoka-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "supersededBy": "Claude-toto13-v1-r1665-m6-verdy_fukuoka-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m7-gamba_kyoto-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "supersededBy": "Claude-toto13-v1-r1665-m7-gamba_kyoto-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m8-nagoya_yokohama-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "supersededBy": "Claude-toto13-v1-r1665-m8-nagoya_yokohama-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m9-kawasaki_okayama-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "supersededBy": "Claude-toto13-v1-r1665-m9-kawasaki_okayama-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m10-urawa_nagasaki-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "supersededBy": "Claude-toto13-v1-r1665-m10-urawa_nagasaki-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m11-akita_imabari-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "supersededBy": "Claude-toto13-v1-r1665-m11-akita_imabari-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m12-tosu_hachinohe-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "supersededBy": "Claude-toto13-v1-r1665-m12-tosu_hachinohe-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m13-toyama_hokkaido-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b",
+      "supersededBy": "Claude-toto13-v1-r1665-m13-toyama_hokkaido-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m1-hiroshima_shimizu-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "supersededBy": "Claude-toto13-v1-r1665-m1-hiroshima_shimizu-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m2-kashima_kashiwa-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "supersededBy": "Claude-toto13-v1-r1665-m2-kashima_kashiwa-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m3-kobe_machida-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "supersededBy": "Claude-toto13-v1-r1665-m3-kobe_machida-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m4-osaka_chiba-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "supersededBy": "Claude-toto13-v1-r1665-m4-osaka_chiba-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m5-fc_tokyo_mito-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "supersededBy": "Claude-toto13-v1-r1665-m5-fc_tokyo_mito-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m6-verdy_fukuoka-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "supersededBy": "Claude-toto13-v1-r1665-m6-verdy_fukuoka-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m7-gamba_kyoto-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "supersededBy": "Claude-toto13-v1-r1665-m7-gamba_kyoto-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m8-nagoya_yokohama-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "supersededBy": "Claude-toto13-v1-r1665-m8-nagoya_yokohama-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m9-kawasaki_okayama-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "supersededBy": "Claude-toto13-v1-r1665-m9-kawasaki_okayama-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1665-m10-urawa_nagasaki-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2",
+      "supersededBy": "Claude-toto13-v1-r1665-m10-urawa_nagasaki-20261022T180912Z-EVIDENCE-20261023-CONF-20261023b-R2-R3",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-01-v3",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-01-v5",
+      "reason": "同一試合・同一モデル・同一modelVersionの複数レコードのうち、締切前の最終確定予測ではないため採点から除外（revisionOfの参照関係だけでは一意に絞れなかったフォールバック）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-02-v3",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-02-v5",
+      "reason": "同一試合・同一モデル・同一modelVersionの複数レコードのうち、締切前の最終確定予測ではないため採点から除外（revisionOfの参照関係だけでは一意に絞れなかったフォールバック）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-03-v3",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-03-v5",
+      "reason": "同一試合・同一モデル・同一modelVersionの複数レコードのうち、締切前の最終確定予測ではないため採点から除外（revisionOfの参照関係だけでは一意に絞れなかったフォールバック）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-04-v3",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-04-v5",
+      "reason": "同一試合・同一モデル・同一modelVersionの複数レコードのうち、締切前の最終確定予測ではないため採点から除外（revisionOfの参照関係だけでは一意に絞れなかったフォールバック）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-05-v3",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-05-v5",
+      "reason": "同一試合・同一モデル・同一modelVersionの複数レコードのうち、締切前の最終確定予測ではないため採点から除外（revisionOfの参照関係だけでは一意に絞れなかったフォールバック）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-06-v3",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-06-v5",
+      "reason": "同一試合・同一モデル・同一modelVersionの複数レコードのうち、締切前の最終確定予測ではないため採点から除外（revisionOfの参照関係だけでは一意に絞れなかったフォールバック）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-07-v3",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-07-v5",
+      "reason": "同一試合・同一モデル・同一modelVersionの複数レコードのうち、締切前の最終確定予測ではないため採点から除外（revisionOfの参照関係だけでは一意に絞れなかったフォールバック）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-08-v3",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-08-v5",
+      "reason": "同一試合・同一モデル・同一modelVersionの複数レコードのうち、締切前の最終確定予測ではないため採点から除外（revisionOfの参照関係だけでは一意に絞れなかったフォールバック）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-09-v3",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-09-v5",
+      "reason": "同一試合・同一モデル・同一modelVersionの複数レコードのうち、締切前の最終確定予測ではないため採点から除外（revisionOfの参照関係だけでは一意に絞れなかったフォールバック）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-10-v3",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-10-v5",
+      "reason": "同一試合・同一モデル・同一modelVersionの複数レコードのうち、締切前の最終確定予測ではないため採点から除外（revisionOfの参照関係だけでは一意に絞れなかったフォールバック）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-11-v3",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-11-v5",
+      "reason": "同一試合・同一モデル・同一modelVersionの複数レコードのうち、締切前の最終確定予測ではないため採点から除外（revisionOfの参照関係だけでは一意に絞れなかったフォールバック）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-12-v3",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-12-v5",
+      "reason": "同一試合・同一モデル・同一modelVersionの複数レコードのうち、締切前の最終確定予測ではないため採点から除外（revisionOfの参照関係だけでは一意に絞れなかったフォールバック）"
+    },
+    {
+      "predictionId": "toto-1665-chatgpt-score-shared-13-v3",
+      "supersededBy": "toto-1665-chatgpt-evidence-low-13-v5",
+      "reason": "同一試合・同一モデル・同一modelVersionの複数レコードのうち、締切前の最終確定予測ではないため採点から除外（revisionOfの参照関係だけでは一意に絞れなかったフォールバック）"
+    }
+  ],
+  "usedRecordCount": 26,
+  "byModel": {
+    "ChatGPT": {
+      "n": 13,
+      "accuracy": 0.46153846153846156,
+      "brier": 0.6106106807045015,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 1.034272122662641,
+      "avgPredicted": {
+        "0": 0.2216,
+        "1": 0.5057,
+        "2": 0.2727
+      },
+      "actualRate": {
+        "0": 0.3077,
+        "1": 0.5385,
+        "2": 0.1538
+      }
+    },
+    "Claude": {
+      "n": 13,
+      "accuracy": 0.5384615384615384,
+      "brier": 0.5689533507692308,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 0.9645641017389169,
+      "avgPredicted": {
+        "0": 0.2996,
+        "1": 0.4677,
+        "2": 0.2327
+      },
+      "actualRate": {
+        "0": 0.3077,
+        "1": 0.5385,
+        "2": 0.1538
+      }
+    }
+  },
+  "byModelVersion": {
+    "ChatGPT@GPT-shared-poisson-score-v2-alias-normalized-2026-10-23": {
+      "n": 13,
+      "accuracy": 0.46153846153846156,
+      "brier": 0.6106106807045015,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 1.034272122662641,
+      "avgPredicted": {
+        "0": 0.2216,
+        "1": 0.5057,
+        "2": 0.2727
+      },
+      "actualRate": {
+        "0": 0.3077,
+        "1": 0.5385,
+        "2": 0.1538
+      }
+    },
+    "Claude@toto13-v1": {
+      "n": 13,
+      "accuracy": 0.5384615384615384,
+      "brier": 0.5689533507692308,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 0.9645641017389169,
+      "avgPredicted": {
+        "0": 0.2996,
+        "1": 0.4677,
+        "2": 0.2327
+      },
+      "actualRate": {
+        "0": 0.3077,
+        "1": 0.5385,
+        "2": 0.1538
+      }
+    }
+  },
+  "byModelAndCompetition": {
+    "ChatGPT__J_LEAGUE": {
+      "n": 13,
+      "accuracy": 0.46153846153846156,
+      "brier": 0.6106106807045015,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 1.034272122662641,
+      "avgPredicted": {
+        "0": 0.2216,
+        "1": 0.5057,
+        "2": 0.2727
+      },
+      "actualRate": {
+        "0": 0.3077,
+        "1": 0.5385,
+        "2": 0.1538
+      }
+    },
+    "Claude__J_LEAGUE": {
+      "n": 13,
+      "accuracy": 0.5384615384615384,
+      "brier": 0.5689533507692308,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 0.9645641017389169,
+      "avgPredicted": {
+        "0": 0.2996,
+        "1": 0.4677,
+        "2": 0.2327
+      },
+      "actualRate": {
+        "0": 0.3077,
+        "1": 0.5385,
+        "2": 0.1538
+      }
+    }
+  }
+}

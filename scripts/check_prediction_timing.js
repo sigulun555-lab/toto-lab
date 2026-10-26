@@ -8,7 +8,7 @@
 'use strict';
 const fs = require('fs');
 
-const ISO_UTC_RE = /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,3})?Z$/;
+const ISO_UTC_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,3})?Z$/;
 
 function parseUtc(value) {
   if (typeof value !== 'string' || !ISO_UTC_RE.test(value)) return null;
@@ -17,7 +17,7 @@ function parseUtc(value) {
 }
 
 function checkFile(filePath) {
-  const lines = fs.readFileSync(filePath, 'utf8').split('\\n').filter((line) => line.trim());
+  const lines = fs.readFileSync(filePath, 'utf8').split('\n').filter((line) => line.trim());
   const counts = {
     ok: 0,
     after_deadline: 0,
@@ -35,11 +35,11 @@ function checkFile(filePath) {
       record = JSON.parse(line);
     } catch {
       counts.invalid_json++;
-      rows.push({ lineNumber, id: `line${lineNumber}`, confirmedAt: '-', deadlineAt: '-', status: '不合格', reason: 'JSON解析不可' });
+      rows.push({ lineNumber, id: \`line\${lineNumber}\`, confirmedAt: '-', deadlineAt: '-', status: '不合格', reason: 'JSON解析不可' });
       return;
     }
 
-    const id = record.predictionId || `line${lineNumber}`;
+    const id = record.predictionId || \`line\${lineNumber}\`;
     const confirmedAt = record.predictionConfirmedAt;
     const deadlineAt = record.deadlineAt;
 
@@ -86,7 +86,7 @@ for (const filePath of files) {
   try {
     result = checkFile(filePath);
   } catch (error) {
-    console.error(`${filePath}: ファイル読込失敗: ${error.message}`);
+    console.error(\`\${filePath}: ファイル読込失敗: \${error.message}\`);
     anyFail = true;
     continue;
   }
@@ -95,9 +95,9 @@ for (const filePath of files) {
   const failed = total - counts.ok;
   if (failed > 0) anyFail = true;
 
-  console.log(`\\n${filePath}: 全${total}行 / 合格${counts.ok} / 不合格${failed} / 締切後${counts.after_deadline} / 確定時刻なし${counts.missing_confirmed_at} / 締切時刻なし${counts.missing_deadline} / UTC形式不正${counts.invalid_utc_time} / JSON解析不可${counts.invalid_json}`);
+  console.log(\`\n\${filePath}: 全\${total}行 / 合格\${counts.ok} / 不合格\${failed} / 締切後\${counts.after_deadline} / 確定時刻なし\${counts.missing_confirmed_at} / 締切時刻なし\${counts.missing_deadline} / UTC形式不正\${counts.invalid_utc_time} / JSON解析不可\${counts.invalid_json}\`);
   for (const row of rows) {
-    console.log(`  [${row.status}] 行${row.lineNumber} ${row.id} | predictionConfirmedAt=${row.confirmedAt} | deadlineAt=${row.deadlineAt}${row.reason ? ` | ${row.reason}` : ''}`);
+    console.log(\`  [\${row.status}] 行\${row.lineNumber} \${row.id} | predictionConfirmedAt=\${row.confirmedAt} | deadlineAt=\${row.deadlineAt}\${row.reason ? \` | \${row.reason}\` : ''}\`);
   }
 }
 

@@ -13,7 +13,10 @@ const ISO_UTC_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,3})?Z$/;
 function parseUtc(value) {
   if (typeof value !== 'string' || !ISO_UTC_RE.test(value)) return null;
   const time = Date.parse(value);
-  return Number.isNaN(time) ? null : time;
+  if (Number.isNaN(time)) return null;
+  // Date.parse が 2月30日などを翌月に正規化するケースも拒否する。
+  if (new Date(time).toISOString().slice(0, 19) !== value.slice(0, 19)) return null;
+  return time;
 }
 
 function checkFile(filePath) {
@@ -58,7 +61,7 @@ function checkFile(filePath) {
     const deadlineMs = parseUtc(deadlineAt);
     if (confirmedMs === null || deadlineMs === null) {
       counts.invalid_utc_time++;
-      rows.push({ lineNumber, id, confirmedAt, deadlineAt, status: '不合格', reason: '時刻形式不正（ISO 8601 UTC・Z終端が必要）' });
+      rows.push({ lineNumber, id, confirmedAt, deadlineAt, status: '不合格', reason: '時刻形式不正（有効なISO 8601 UTC・Z終端が必要）' });
       return;
     }
 
@@ -95,9 +98,9 @@ for (const filePath of files) {
   const rows = result.rows;
   const total = result.total;
   const failed = total - counts.ok;
-  if (failed > 0) anyFail = true;
+  if (failed > 0 || total === 0) anyFail = true;
 
-  console.log('\n' + filePath + ': 全' + total + '行 / 合格' + counts.ok + ' / 不合格' + failed + ' / 締切後' + counts.after_deadline + ' / 確定時刻なし' + counts.missing_confirmed_at + ' / 締切時刻なし' + counts.missing_deadline + ' / UTC形式不正' + counts.invalid_utc_time + ' / JSON解析不可' + counts.invalid_json);
+  console.log('\n' + filePath + ': 全' + total + '行 / 合格' + counts.ok + ' / 不合格' + (total === 0 ? 'ファイルが空のため不合格' : failed) + ' / 締切後' + counts.after_deadline + ' / 確定時刻なし' + counts.missing_confirmed_at + ' / 締切時刻なし' + counts.missing_deadline + ' / UTC形式不正' + counts.invalid_utc_time + ' / JSON解析不可' + counts.invalid_json);
   for (const row of rows) {
     console.log('  [' + row.status + '] 行' + row.lineNumber + ' ' + row.id + ' | predictionConfirmedAt=' + row.confirmedAt + ' | deadlineAt=' + row.deadlineAt + (row.reason ? ' | ' + row.reason : ''));
   }

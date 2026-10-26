@@ -11,10 +11,10 @@ const script = path.join(__dirname, '..', 'scripts', 'check_prediction_timing.js
 const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'check-prediction-timing-'));
 
 function runCase(name, records, expectedCode, expectedText) {
-  const file = path.join(dir, \`\${name}.jsonl\`);
+  const file = path.join(dir, name + '.jsonl');
   fs.writeFileSync(file, records.map((record) => JSON.stringify(record)).join('\n') + '\n');
   const result = spawnSync(process.execPath, [script, file], { encoding: 'utf8' });
-  assert.equal(result.status, expectedCode, \`\${name}: \${result.stdout}\n\${result.stderr}\`);
+  assert.equal(result.status, expectedCode, name + ': ' + result.stdout + '\n' + result.stderr);
   assert.match(result.stdout, expectedText);
 }
 

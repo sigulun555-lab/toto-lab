@@ -1,50 +1,104 @@
 #!/usr/bin/env node
-// 締切前記録の検証スクリプト（読み取りのみ・既存データは変更しない）
-// 使い方: node scripts/check_prediction_timing.js predictions/round_XXXX_*.jsonl ...
-// 判定: 各行の predictionConfirmedAt（なければ predictionCreatedAt）が deadlineAt より前であること。
-//       空欄・締切後・締切時刻なし・時刻の解析不能は「不合格」として集計する。
-// 終了コード: 不合格が1件でもあれば 1、なければ 0。
+// 締切前予測の事前検証（読み取りのみ・予測ファイルは変更しない）
+// 使い方: node scripts/check_prediction_timing.js <jsonl> [...]
+// 必須: predictionConfirmedAt と deadlineAt の両方が ISO 8601 UTC（Z終端）であること。
+// 合格条件: predictionConfirmedAt < deadlineAt。
+// 終了コード: 全行合格なら 0、不合格が1件以上なら 1、引数なしなら 2。
 
-const fs = require("fs");
+'use strict';
+const fs = require('fs');
 
-function parseUtc(s) {
-  if (!s || typeof s !== "string") return null;
-  const t = Date.parse(s);
-  return Number.isNaN(t) ? null : t;
+const ISO_UTC_RE = /^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{1,3})?Z$/;
+
+function parseUtc(value) {
+  if (typeof value !== 'string' || !ISO_UTC_RE.test(value)) return null;
+  const time = Date.parse(value);
+  return Number.isNaN(time) ? null : time;
 }
 
-function checkFile(path) {
-  const lines = fs.readFileSync(path, "utf8").split("\n").filter((l) => l.trim());
-  const counts = { ok: 0, after_deadline: 0, blank_time: 0, no_deadline: 0, bad_time: 0 };
-  const failures = [];
-  lines.forEach((line, idx) => {
-    let r;
-    try { r = JSON.parse(line); } catch (e) { counts.bad_time++; failures.push([idx + 1, "JSON解析不可"]); return; }
-    const id = r.predictionId || `line${idx + 1}`;
-    const deadline = parseUtc(r.deadlineAt);
-    if (deadline === null) { counts.no_deadline++; failures.push([id, "締切時刻なし"]); return; }
-    const raw = r.predictionConfirmedAt || r.predictionCreatedAt;
-    if (!raw) { counts.blank_time++; failures.push([id, "作成時刻が空欄"]); return; }
-    const t = parseUtc(raw);
-    if (t === null) { counts.bad_time++; failures.push([id, `時刻を解析できない: ${raw}`]); return; }
-    if (t < deadline) { counts.ok++; }
-    else { counts.after_deadline++; failures.push([id, `締切後: ${raw}`]); }
+function checkFile(filePath) {
+  const lines = fs.readFileSync(filePath, 'utf8').split('\\n').filter((line) => line.trim());
+  const counts = {
+    ok: 0,
+    after_deadline: 0,
+    missing_confirmed_at: 0,
+    missing_deadline: 0,
+    invalid_utc_time: 0,
+    invalid_json: 0,
+  };
+  const rows = [];
+
+  lines.forEach((line, index) => {
+    const lineNumber = index + 1;
+    let record;
+    try {
+      record = JSON.parse(line);
+    } catch {
+      counts.invalid_json++;
+      rows.push({ lineNumber, id: `line${lineNumber}`, confirmedAt: '-', deadlineAt: '-', status: '不合格', reason: 'JSON解析不可' });
+      return;
+    }
+
+    const id = record.predictionId || `line${lineNumber}`;
+    const confirmedAt = record.predictionConfirmedAt;
+    const deadlineAt = record.deadlineAt;
+
+    if (!confirmedAt) {
+      counts.missing_confirmed_at++;
+      rows.push({ lineNumber, id, confirmedAt: confirmedAt || '-', deadlineAt: deadlineAt || '-', status: '不合格', reason: 'predictionConfirmedAtなし（predictionCreatedAtで代用しない）' });
+      return;
+    }
+    if (!deadlineAt) {
+      counts.missing_deadline++;
+      rows.push({ lineNumber, id, confirmedAt, deadlineAt: deadlineAt || '-', status: '不合格', reason: 'deadlineAtなし' });
+      return;
+    }
+
+    const confirmedMs = parseUtc(confirmedAt);
+    const deadlineMs = parseUtc(deadlineAt);
+    if (confirmedMs === null || deadlineMs === null) {
+      counts.invalid_utc_time++;
+      rows.push({ lineNumber, id, confirmedAt, deadlineAt, status: '不合格', reason: '時刻形式不正（ISO 8601 UTC・Z終端が必要）' });
+      return;
+    }
+
+    if (confirmedMs < deadlineMs) {
+      counts.ok++;
+      rows.push({ lineNumber, id, confirmedAt, deadlineAt, status: '合格', reason: '' });
+    } else {
+      counts.after_deadline++;
+      rows.push({ lineNumber, id, confirmedAt, deadlineAt, status: '不合格', reason: '締切後または締切時刻と同時刻' });
+    }
   });
-  return { counts, failures, total: lines.length };
+
+  return { counts, rows, total: lines.length };
 }
 
 const files = process.argv.slice(2);
 if (files.length === 0) {
-  console.error("使い方: node scripts/check_prediction_timing.js <jsonl> ...");
+  console.error('使い方: node scripts/check_prediction_timing.js <jsonl> [...]');
   process.exit(2);
 }
+
 let anyFail = false;
-for (const f of files) {
-  const { counts, failures, total } = checkFile(f);
-  const bad = total - counts.ok;
-  if (bad > 0) anyFail = true;
-  console.log(`${f}: 全${total}行 / 合格${counts.ok} / 締切後${counts.after_deadline} / 空欄${counts.blank_time} / 締切時刻なし${counts.no_deadline} / 解析不可${counts.bad_time}`);
-  failures.slice(0, 5).forEach(([id, msg]) => console.log(`   - ${id}: ${msg}`));
-  if (failures.length > 5) console.log(`   ...ほか${failures.length - 5}件`);
+for (const filePath of files) {
+  let result;
+  try {
+    result = checkFile(filePath);
+  } catch (error) {
+    console.error(`${filePath}: ファイル読込失敗: ${error.message}`);
+    anyFail = true;
+    continue;
+  }
+
+  const { counts, rows, total } = result;
+  const failed = total - counts.ok;
+  if (failed > 0) anyFail = true;
+
+  console.log(`\\n${filePath}: 全${total}行 / 合格${counts.ok} / 不合格${failed} / 締切後${counts.after_deadline} / 確定時刻なし${counts.missing_confirmed_at} / 締切時刻なし${counts.missing_deadline} / UTC形式不正${counts.invalid_utc_time} / JSON解析不可${counts.invalid_json}`);
+  for (const row of rows) {
+    console.log(`  [${row.status}] 行${row.lineNumber} ${row.id} | predictionConfirmedAt=${row.confirmedAt} | deadlineAt=${row.deadlineAt}${row.reason ? ` | ${row.reason}` : ''}`);
+  }
 }
+
 process.exit(anyFail ? 1 : 0);

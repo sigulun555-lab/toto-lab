@@ -30,7 +30,14 @@ market = {
 MARKET_WEIGHT = 0.7
 
 def blend(model_p, market_p, w=MARKET_WEIGHT):
-    raw = [w*m + (1-w)*p for m, p in zip(market_p, model_p)]
+    # Normalize the market vector to sum to 1 BEFORE blending. The raw
+    # market_p values are rounded percentages off the toto ONE screenshot
+    # and sum to 97-99%, not exactly 100%; blending the un-normalized
+    # vector and renormalizing only afterward silently shifts the
+    # effective market weight per side (GPT's review on toto-lab PR #17).
+    market_total = sum(market_p)
+    market_norm = [m / market_total for m in market_p]
+    raw = [w*m + (1-w)*p for m, p in zip(market_norm, model_p)]
     s = sum(raw)
     return [x/s for x in raw]
 

@@ -1,0 +1,170 @@
+{
+  "round": 1666,
+  "marketWeight": 0.7,
+  "marketSource": "toto ONE (totoone.jp) purchase ratio, screenshot 2026-10-28T16:20+09:00, not official toto-dream.com page",
+  "note": "Trial blend only. v1 (submitted) prediction is unchanged. MARKET_WEIGHT carried over from round 1665's 1X2 blend, unvalidated for GOAL3.",
+  "results": [
+    {
+      "matchNumber": "1",
+      "team": "水戸ホーリーホック",
+      "side": "home",
+      "v1_probabilities": [
+        0.2455,
+        0.3448,
+        0.2421,
+        0.1675
+      ],
+      "v1_pred": "1",
+      "market_probabilities": [
+        0.35,
+        0.37,
+        0.18,
+        0.08
+      ],
+      "market_pred": "1",
+      "v2_probabilities": [
+        0.3232,
+        0.3676,
+        0.2015,
+        0.1078
+      ],
+      "v2_pred": "1",
+      "v1_vs_v2_agree": true
+    },
+    {
+      "matchNumber": "1",
+      "team": "セレッソ大阪",
+      "side": "away",
+      "v1_probabilities": [
+        0.3008,
+        0.3613,
+        0.2171,
+        0.1208
+      ],
+      "v1_pred": "1",
+      "market_probabilities": [
+        0.16,
+        0.31,
+        0.32,
+        0.19
+      ],
+      "market_pred": "2",
+      "v2_probabilities": [
+        0.2051,
+        0.33,
+        0.2932,
+        0.1716
+      ],
+      "v2_pred": "1",
+      "v1_vs_v2_agree": true
+    },
+    {
+      "matchNumber": "2",
+      "team": "横浜Ｆ・マリノス",
+      "side": "home",
+      "v1_probabilities": [
+        0.2902,
+        0.359,
+        0.2221,
+        0.1287
+      ],
+      "v1_pred": "1",
+      "market_probabilities": [
+        0.24,
+        0.36,
+        0.26,
+        0.12
+      ],
+      "market_pred": "1",
+      "v2_probabilities": [
+        0.2587,
+        0.3648,
+        0.2522,
+        0.1244
+      ],
+      "v2_pred": "1",
+      "v1_vs_v2_agree": true
+    },
+    {
+      "matchNumber": "2",
+      "team": "サンフレッチェ広島",
+      "side": "away",
+      "v1_probabilities": [
+        0.2424,
+        0.3435,
+        0.2434,
+        0.1706
+      ],
+      "v1_pred": "1",
+      "market_probabilities": [
+        0.16,
+        0.29,
+        0.32,
+        0.21
+      ],
+      "market_pred": "2",
+      "v2_probabilities": [
+        0.1873,
+        0.3104,
+        0.3012,
+        0.201
+      ],
+      "v2_pred": "1",
+      "v1_vs_v2_agree": true
+    },
+    {
+      "matchNumber": "3",
+      "team": "名古屋グランパス",
+      "side": "home",
+      "v1_probabilities": [
+        0.1948,
+        0.3186,
+        0.2606,
+        0.226
+      ],
+      "v1_pred": "1",
+      "market_probabilities": [
+        0.2,
+        0.35,
+        0.28,
+        0.16
+      ],
+      "market_pred": "1",
+      "v2_probabilities": [
+        0.1998,
+        0.343,
+        0.2761,
+        0.1811
+      ],
+      "v2_pred": "1",
+      "v1_vs_v2_agree": true
+    },
+    {
+      "matchNumber": "3",
+      "team": "浦和レッズ",
+      "side": "away",
+      "v1_probabilities": [
+        0.2507,
+        0.3468,
+        0.2399,
+        0.1625
+      ],
+      "v1_pred": "1",
+      "market_probabilities": [
+        0.18,
+        0.35,
+        0.28,
+        0.16
+      ],
+      "market_pred": "1",
+      "v2_probabilities": [
+        0.2055,
+        0.3565,
+        0.2737,
+        0.1642
+      ],
+      "v2_pred": "1",
+      "v1_vs_v2_agree": true
+    }
+  ]
+}

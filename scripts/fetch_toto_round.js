@@ -74,16 +74,24 @@ function identifyGroup(htmlBeforeTable, previousTableEnd) {
 export function parseScheduleHtml(html, round, sourceUrl = "") {
   const groupData = {};
   const tables = [...html.matchAll(/<table\b[^>]*>[\s\S]*?<\/table>/gi)];
-  let previousTableEnd = 0;
+  const foundFiveMatchTables = [];
 
   for (const tableMatch of tables) {
-    const before = html.slice(0, tableMatch.index);
-    const group = identifyGroup(before, previousTableEnd);
     const matches = parseRows(tableMatch[0]);
-    if (group && matches.length === group.expected && !groupData[group.key]) {
-      groupData[group.key] = matches;
+    if (matches.length === 13 && !groupData.toto) {
+      groupData.toto = matches;
+    } else if (matches.length === 5) {
+      foundFiveMatchTables.push(matches);
+    } else if (matches.length === 3 && !groupData.totoGoal3) {
+      groupData.totoGoal3 = matches;
     }
-    previousTableEnd = tableMatch.index + tableMatch[0].length;
+  }
+
+  // The source schedule lists mini toto-A before mini toto-B.
+  // Require two distinct five-match tables; never infer missing fixtures.
+  if (foundFiveMatchTables.length >= 2) {
+    groupData.miniTotoA = foundFiveMatchTables[0];
+    groupData.miniTotoB = foundFiveMatchTables[1];
   }
 
   for (const group of GROUPS) {

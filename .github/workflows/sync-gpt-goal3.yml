@@ -32,6 +32,10 @@ jobs:
         run: node scripts/sync_gpt_goal3.js gpt-source/data/predictions.json predictions
       - name: Test synchronization logic
         run: node tests/test_sync_gpt_goal3.js
+      - name: Run repository regression tests on synchronized data
+        run: npm test
+      - name: Check canonical team dictionary
+        run: npm run check:teams
       - name: Create or update sync pull request
         uses: peter-evans/create-pull-request@v7
         with:
@@ -43,6 +47,5 @@ jobs:
           body: |
             Automated append-only synchronization from sigulun555-lab/gpt main data/predictions.json.
             Original snapshots are preserved, source probabilities are copied without recalculation, and CI must pass before merge.
-          labels: automated-sync
           add-paths: |
             predictions/*_ChatGPT_goal3.jsonl

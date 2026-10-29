@@ -2,7 +2,7 @@
 
 - Audit date: 2026-10-29 JST
 - Repository: `sigulun555-lab/toto-lab`
-- Scope: read-only audit of current `main` inventory and reproducible round-1665 score joins. This branch adds documentation only; no production code/model changes.
+- Scope: audit current `main` inventory, reproduce completed-round score joins, archive verified round-1666 results and the existing pre-deadline round-1668 V1 forecast, and document capture procedure. No production model or prediction workflow changes.
 - Source tree inspected at main; GOAL3-specific files are listed below.
 
 ## Executive summary

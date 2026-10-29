@@ -1,0 +1,51 @@
+name: Sync GPT GOAL3 forecasts
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: sync-gpt-goal3
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout toto-lab
+        uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Checkout GPT source
+        uses: actions/checkout@v4
+        with:
+          repository: sigulun555-lab/gpt
+          ref: main
+          path: gpt-source
+          persist-credentials: false
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Synchronize latest GOAL3 snapshot append-only
+        run: node scripts/sync_gpt_goal3.js gpt-source/data/predictions.json predictions
+      - name: Test synchronization logic
+        run: node tests/test_sync_gpt_goal3.js
+      - name: Run repository regression tests on synchronized data
+        run: npm test
+      - name: Check canonical team dictionary
+        run: npm run check:teams
+      - name: Create or update sync pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: automation/sync-gpt-goal3
+          delete-branch: false
+          commit-message: 'sync: append latest GPT GOAL3 forecast snapshot'
+          title: 'sync: latest GPT totoGOAL3 forecast'
+          body: |
+            Automated append-only synchronization from sigulun555-lab/gpt main data/predictions.json.
+            Original snapshots are preserved, source probabilities are copied without recalculation, and CI must pass before merge.
+          add-paths: |
+            predictions/*_ChatGPT_goal3.jsonl

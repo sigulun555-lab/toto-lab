@@ -78,6 +78,10 @@ function joinAndFilter(predictions, results) {
     const unresolved = [];
     const valid = [];
 
+    // First select only pre-deadline records, then apply revision links before joining
+    // results. A newer forecast must supersede its predecessor even while the match
+    // result is still unavailable; otherwise both revisions are counted as unresolved.
+    const eligible = [];
     for (const p of predictions) {
         const confirmed = Date.parse(p.predictionConfirmedAt);
         const deadline = Date.parse(p.deadlineAt);
@@ -85,7 +89,20 @@ function joinAndFilter(predictions, results) {
             excludedPostDeadline.push({ predictionId: p.predictionId, reason: 'predictionConfirmedAt >= deadlineAt（締切後確定、または時刻不正）' });
             continue;
         }
+        eligible.push(p);
+    }
+    const eligibleIds = new Set(eligible.map(p => p.predictionId));
+    const supersededIds = new Set();
+    const supersededByOf = new Map();
+    for (const p of eligible) {
+        if (p.revisionOf && eligibleIds.has(p.revisionOf)) {
+            supersededIds.add(p.revisionOf);
+            supersededByOf.set(p.revisionOf, p.predictionId);
+        }
+    }
+    const activePredictions = eligible.filter(p => !supersededIds.has(p.predictionId));
 
+    for (const p of activePredictions) {
         const teamResolved = resolveTeamName(p.team);
         const opponentResolved = resolveTeamName(p.opponent);
         if (!teamResolved.resolved || !opponentResolved.resolved) {
@@ -126,31 +143,12 @@ function joinAndFilter(predictions, results) {
         valid.push({ prediction: p, result, actualBucket: bucket });
     }
 
-    // 修正履歴（revisionOf）で旧版を除外する。
-    // 2026-10-22修正：以前は (round, matchNumber, team, modelName, modelVersion) でグルーピングし、
-    // その中で締切前確定の最新1件だけを残す方式だった。しかし revisionOf による修正と同時に
-    // modelVersion も変更された場合（実際にChatGPT側の第1665回revisionで発生）、新旧が別の
-    // グループに分かれてしまい、旧版が除外されずに両方とも採点対象へ混入する不具合があった
-    // （score_predictions.js・1X2用と同じ構造の不具合。両方を同時に修正する）。
-    // 修正後は「他の有効レコードの revisionOf から参照されているレコード」を、modelVersionの
-    // 異同に関わらず常に除外する方式にする（revisionOfの参照関係そのものを正とする）。
-    const byId = new Map();
-    for (const v of valid) byId.set(v.prediction.predictionId, v);
-
-    const supersededIds = new Set();
-    const supersededByOf = new Map();
-    for (const v of valid) {
-        const rev = v.prediction.revisionOf;
-        if (rev && byId.has(rev)) {
-            supersededIds.add(rev);
-            supersededByOf.set(rev, v.prediction.predictionId);
-        }
-    }
-
-    const survivors = valid.filter(v => !supersededIds.has(v.prediction.predictionId));
+    // Revision links are resolved before result joining, so this list also records
+    // superseded forecasts whose round has no result yet.
+    const survivors = valid;
     const supersededRecords = [];
     for (const [oldId, newId] of supersededByOf) {
-        supersededRecords.push({ predictionId: oldId, supersededBy: newId, reason: '別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）' });
+        supersededRecords.push({ predictionId: oldId, supersededBy: newId, reason: '別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）' });
     }
 
     // フォールバック：revisionOfの参照関係だけでは一意に絞れなかった場合の安全策。

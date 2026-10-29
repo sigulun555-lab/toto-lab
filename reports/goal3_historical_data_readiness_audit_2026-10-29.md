@@ -82,6 +82,7 @@ Found snapshot:
 Round 1668:
 - Current main status file records round 1668 and a deadline of 2026-10-31 13:50 JST; the matching six-target GPT V1-only forecast is archived in this branch. The status file is not proof of a current official GOAL3 market snapshot.
 - The current official purchase page could not be opened directly. A secondary archive (`totomark.info`) displayed six round-1668 vote-share vectors with its own snapshot time of 2026-10-28 06:40 JST. These values were archived separately with `captureStatus=secondary_source_captured_official_source_not_independently_verified`; they are **not** represented as a directly verified official capture.
+- A later read of the same secondary page, https://totomark.info/goal3/1668/, displayed a newer table timestamp of 2026-10-28 22:55 JST. The current web-reading interface did not expose an exact retrieval timestamp for that later rendering, so it was **not** written as a new JSONL snapshot or used in the saved comparison. Keep the 06:40 snapshot immutable; if a precise retrieval time can be recorded later, save 22:55 as a separate secondary-source record.
 - Do not copy round-1666 vote shares forward, use standard toto 1X2 percentages, or backfill with post-deadline values. Treat the round-1668 secondary values as provisional until directly cross-checked against the official page.
 - Capture once the official GOAL3 vote-status page is accessible and the selected round, all three fixtures/six team sides, the page's own update timestamp, and retrieval time can be verified.
 

@@ -7,12 +7,12 @@
 
 ## Executive summary
 
-- GOAL3 prediction files exist for rounds **1665 and 1666 only**: 48 raw records total (36 for round 1665; 12 for round 1666).
-- All 48 prediction records have parseable `predictionConfirmedAt` and `deadlineAt` values and were confirmed before their recorded deadline.
+- GOAL3 prediction files cover rounds **1665, 1666, and 1668**: 54 raw records total (36 for round 1665; 12 for round 1666; six pre-deadline V1 targets for round 1668).
+- All 54 prediction records have parseable `predictionConfirmedAt` and `deadlineAt` values and were confirmed before their recorded deadline.
 - Round 1665 has results for all three GOAL3 fixtures, allowing six unique team-target outcomes per model/version to be scored after applying the latest pre-deadline revision rule.
 - Round 1666 initially lacked local results; this audit branch now adds `results/round_1666.jsonl` with three verified 90-minute match rows. The Nagoya–Urawa score is 1–1 after 90 minutes; Urawa's 2–1 win includes a 117th-minute extra-time goal, which must not be counted for GOAL3.
 - The only GOAL3 vote-share snapshot found is for round 1666, captured at 2026-10-28 17:29 JST and transcribed from a user-provided screenshot. It contains six team distributions. It is not a multi-round market dataset and must not be treated as calibrated scoring probabilities.
-- No verified round-1668 GOAL3 market-share vector was captured in this audit. A web-indexed official purchase page did not expose a current round-1668 GOAL3 vote-share table; no percentages have been inferred or fabricated.
+- A six-target round-1668 GPT V1-only forecast has now been archived from the existing main `data/predictions.json` without recalculation. It was generated at 2026-10-29 07:33:30.811 JST, before the recorded 2026-10-31 13:50 JST deadline. No verified round-1668 GOAL3 market-share vector was captured; the indexed official purchase page did not expose the current vote-share table, so no market percentages have been inferred or fabricated.
 - Historical market-blend performance remains unproven. Keep market weight 0.7 as an exploratory inherited value only; do not tune or promote it to production.
 
 ## GOAL3 prediction inventory
@@ -24,7 +24,8 @@
 | 1665 | Claude `totoGOAL3-v1` | 24 | 24 | 6 |
 | 1666 | ChatGPT `gpt-poisson-goal-dist-v1` | 6 | 6 | 6 |
 | 1666 | Claude `shrinkage-poisson-lambda10-2026only-v1` | 6 | 6 | 6 |
-| **Total** | | **48** | **48** | **30 scored target rows across round-1665/1666 model-version groups** |
+| 1668 | ChatGPT `gpt-poisson-goal-dist-v1` | 6 | 6 | 0 — results pending |
+| **Total** | | **54** | **54** | **30 scored target rows across completed rounds 1665/1666; six round-1668 targets await results** |
 
 The 24 Claude round-1665 rows are revision/evidence history for six targets, not 24 independent predictions. Apply the latest pre-deadline revision within each (round, match, team, model, version) group.
 
@@ -70,25 +71,25 @@ The separate `results/pending_single_source/` files are pending/alternate-source
 
 Found snapshot:
 - `data/goal3_market_snapshots/round_1666_2026-10-28T1729JST.jsonl`
+- `predictions/round_1668_ChatGPT_goal3.jsonl` — V1-only forecast archive, generated 2026-10-29 07:33:30.811 JST, before the 2026-10-31 13:50 JST deadline. Six team targets, no market blend.
 - Source URL: `https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=02&holdCntId=1666`
 - Timestamp: 2026-10-28 17:29 JST
 - Source evidence: user-provided screenshot; vote shares transcribed into six team-side distributions.
 - Important distinction: market vote share is the share of ticket selections, not a calibrated probability of a team's goal bucket.
 
 Round 1668:
-- Current main status file records round 1668 and a deadline of 2026-10-31 13:50 JST for the regular toto feed. That status is not proof of a current GOAL3 market snapshot.
+- Current main status file records round 1668 and a deadline of 2026-10-31 13:50 JST; a matching six-target GPT V1-only forecast is archived in this branch. The status file is not proof of a current GOAL3 market snapshot.
 - The public official purchase page could be discovered, but the current GOAL3 vote-share table for round 1668 was not independently retrievable in this audit. Therefore there is **no valid round-1668 GOAL3 snapshot to commit yet**.
 - Do not copy round-1666 vote shares forward, use standard toto 1X2 percentages, or backfill with post-deadline values.
 - Capture once the official GOAL3 vote-status page is accessible and the selected round, all three fixtures/six team sides, the page's own update timestamp, and retrieval time can be verified.
 
 ## Next steps
 
-1. Capture round-1668 GOAL3 vote shares with a screenshot or directly retrievable official page; preserve the original evidence and a separate retrieval timestamp.
-2. Save a corresponding pre-deadline V1 forecast for the same six team targets and a model/version identifier. Keep model and market timestamps separate if they are not synchronized.
-3. Run the repository's canonical `score_predictions_goal3.js` against the new round-1666 result rows and check that its alias resolver matches the independent reproduction in this report.
-4. Repeat the capture protocol for future GOAL3 rounds to build multiple matched rounds.
-5. Compare V1-only, market-only, and fixed blend weights (including 0.7 as a trial only) using identical matched targets and chronological validation once sample size supports it.
-6. Keep production logic unchanged until repeated, out-of-sample results and independent review support a change.
+1. Capture round-1668 GOAL3 vote shares with a screenshot or directly retrievable official page; preserve original evidence, page-displayed update time, and a separate retrieval timestamp.
+2. Re-run the regression test and canonical `score_predictions_goal3.js` against the archived round-1668 V1 forecast and verified round-1666 results; leave round 1668 unscored until its results exist.
+3. Repeat the capture protocol for future GOAL3 rounds to build multiple matched rounds.
+4. Compare V1-only, market-only, and fixed blend weights (including 0.7 as a trial only) using identical matched targets and chronological validation once sample size supports it.
+5. Keep production logic unchanged until repeated, out-of-sample results and independent review support a change.
 
 ## Guardrails
 

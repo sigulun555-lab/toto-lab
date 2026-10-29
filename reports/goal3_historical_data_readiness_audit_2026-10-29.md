@@ -11,7 +11,7 @@
 - All 54 prediction records have parseable `predictionConfirmedAt` and `deadlineAt` values and were confirmed before their recorded deadline.
 - Round 1665 has results for all three GOAL3 fixtures, allowing six unique team-target outcomes per model/version to be scored after applying the latest pre-deadline revision rule.
 - Round 1666 initially lacked local results; this audit branch now adds `results/round_1666.jsonl` with three verified 90-minute match rows. The Nagoya–Urawa score is 1–1 after 90 minutes; Urawa's 2–1 win includes a 117th-minute extra-time goal, which must not be counted for GOAL3.
-- The only GOAL3 vote-share snapshot found is for round 1666, captured at 2026-10-28 17:29 JST and transcribed from a user-provided screenshot. It contains six team distributions. It is not a multi-round market dataset and must not be treated as calibrated scoring probabilities.
+- Two round-level GOAL3 vote-share records are now present: round 1666 from a user-provided screenshot, and round 1668 transcribed from a secondary archive page displaying an official-feed-derived snapshot at 2026-10-28 06:40 JST. The official round-1668 page itself could not be independently opened, so the new record is explicitly marked secondary/unverified. This is still far too little matched history for model adoption and vote shares are not calibrated scoring probabilities.
 - A six-target round-1668 GPT V1-only forecast has now been archived from the existing main `data/predictions.json` without recalculation. It was generated at 2026-10-29 07:33:30.811 JST, before the recorded 2026-10-31 13:50 JST deadline. No verified round-1668 GOAL3 market-share vector was captured; the indexed official purchase page did not expose the current vote-share table, so no market percentages have been inferred or fabricated.
 - Historical market-blend performance remains unproven. Keep market weight 0.7 as an exploratory inherited value only; do not tune or promote it to production.
 
@@ -71,6 +71,8 @@ The separate `results/pending_single_source/` files are pending/alternate-source
 
 Found snapshot:
 - `data/goal3_market_snapshots/round_1666_2026-10-28T1729JST.jsonl`
+- `data/goal3_market_snapshots/round_1668_2026-10-28T0640JST_secondary.jsonl` — six team vectors transcribed from a secondary page reporting official vote-share data; official page not independently verified.
+- `reports/round_1668_goal3_v1_market_snapshot_comparison_2026-10-29.json` — descriptive forecast-vs-market comparison only, no outcome scoring.
 - `predictions/round_1668_ChatGPT_goal3.jsonl` — V1-only forecast archive, generated 2026-10-29 07:33:30.811 JST, before the 2026-10-31 13:50 JST deadline. Six team targets, no market blend.
 - Source URL: `https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=02&holdCntId=1666`
 - Timestamp: 2026-10-28 17:29 JST
@@ -79,8 +81,8 @@ Found snapshot:
 
 Round 1668:
 - Current main status file records round 1668 and a deadline of 2026-10-31 13:50 JST; a matching six-target GPT V1-only forecast is archived in this branch. The status file is not proof of a current GOAL3 market snapshot.
-- The public official purchase page could be discovered, but the current GOAL3 vote-share table for round 1668 was not independently retrievable in this audit. Therefore there is **no valid round-1668 GOAL3 snapshot to commit yet**.
-- Do not copy round-1666 vote shares forward, use standard toto 1X2 percentages, or backfill with post-deadline values.
+- The current official purchase page could not be opened directly. A secondary archive (`totomark.info`) displayed six round-1668 vote-share vectors with its own snapshot time of 2026-10-28 06:40 JST. These values were archived separately with `captureStatus=secondary_source_captured_official_source_not_independently_verified`; they are **not** represented as a directly verified official capture.
+- Do not copy round-1666 vote shares forward, use standard toto 1X2 percentages, or backfill with post-deadline values. Treat the round-1668 secondary values as provisional until directly cross-checked against the official page.
 - Capture once the official GOAL3 vote-status page is accessible and the selected round, all three fixtures/six team sides, the page's own update timestamp, and retrieval time can be verified.
 
 ## Next steps

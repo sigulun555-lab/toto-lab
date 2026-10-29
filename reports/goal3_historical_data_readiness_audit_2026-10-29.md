@@ -2,17 +2,17 @@
 
 - Audit date: 2026-10-29 JST
 - Repository: `sigulun555-lab/toto-lab`
-- Scope: audit current `main` inventory, add verified round-1666 results and reproducible score tests, and document market-capture procedure. The round-1668 V1 forecast is kept in separate Draft PR #29 to avoid duplicate file additions. No production model or prediction workflow changes.
+- Scope: audit current `main` inventory, add verified round-1666 results, archive the pre-deadline round-1668 V1 forecast, preserve both official-source retrieval status and secondary-source snapshot evidence, and add reproducible score tests. No production model or prediction workflow changes.
 - Source tree inspected at main; GOAL3-specific files are listed below.
 
 ## Executive summary
 
-- The current `main` GOAL3 prediction inventory covers rounds **1665 and 1666**: 48 raw records total (36 for round 1665; 12 for round 1666). A six-target pre-deadline round-1668 V1 archive is proposed separately in Draft PR #29.
-- All 48 prediction records currently in the GOAL3-specific main files have parseable `predictionConfirmedAt` and `deadlineAt` values and were confirmed before their recorded deadline. The six round-1668 archive records in PR #29 also preserve the original pre-deadline generation time.
+- The GOAL3 prediction inventory on this audit branch covers rounds **1665, 1666, and 1668**: 54 raw records total (36 for round 1665; 12 for round 1666; six pre-deadline V1 targets for round 1668).
+- All 54 prediction records have parseable `predictionConfirmedAt` and `deadlineAt` values and were confirmed before their recorded deadline. The round-1668 V1 records preserve the original generation time from main; they were not recalculated.
 - Round 1665 has results for all three GOAL3 fixtures, allowing six unique team-target outcomes per model/version to be scored after applying the latest pre-deadline revision rule.
 - Round 1666 initially lacked local results; this audit branch now adds `results/round_1666.jsonl` with three verified 90-minute match rows. The Nagoya–Urawa score is 1–1 after 90 minutes; Urawa's 2–1 win includes a 117th-minute extra-time goal, which must not be counted for GOAL3.
 - Two round-level GOAL3 vote-share records are now present: round 1666 from a user-provided screenshot, and round 1668 transcribed from a secondary archive page displaying an official-feed-derived snapshot at 2026-10-28 06:40 JST. The official round-1668 page itself could not be independently opened, so the new record is explicitly marked secondary/unverified. This is still far too little matched history for model adoption and vote shares are not calibrated scoring probabilities.
-- A six-target round-1668 GPT V1-only forecast, copied without recalculation from existing main `data/predictions.json`, is proposed in separate Draft PR #29. It preserves `generatedAt=2026-10-28T22:33:30.811Z` (2026-10-29 07:33:30.811 JST), before the recorded 2026-10-31 13:50 JST deadline. No verified round-1668 GOAL3 market-share vector was captured; the indexed official purchase page did not expose the current vote-share table, so no market percentages have been inferred or fabricated.
+- A six-target round-1668 GPT V1-only forecast is archived in `predictions/round_1668_ChatGPT_goal3.jsonl`, copied without recalculation from existing main `data/predictions.json`. It preserves `generatedAt=2026-10-28T22:33:30.811Z` (2026-10-29 07:33:30.811 JST), before the recorded 2026-10-31 13:50 JST deadline. No verified round-1668 GOAL3 market-share vector was captured; the indexed official purchase page did not expose the current vote-share table, so no market percentages have been inferred or fabricated.
 - Historical market-blend performance remains unproven. Keep market weight 0.7 as an exploratory inherited value only; do not tune or promote it to production.
 
 ## GOAL3 prediction inventory
@@ -24,7 +24,8 @@
 | 1665 | Claude `totoGOAL3-v1` | 24 | 24 | 6 |
 | 1666 | ChatGPT `gpt-poisson-goal-dist-v1` | 6 | 6 | 6 |
 | 1666 | Claude `shrinkage-poisson-lambda10-2026only-v1` | 6 | 6 | 6 |
-| **Total** | | **48** | **48** | **30 scored target rows across completed rounds 1665/1666** |
+| 1668 | ChatGPT `gpt-poisson-goal-dist-v1` | 6 | 6 | 0 — results pending |
+| **Total** | | **54** | **54** | **30 scored target rows across completed rounds 1665/1666; six round-1668 targets await results** |
 
 The 24 Claude round-1665 rows are revision/evidence history for six targets, not 24 independent predictions. Apply the latest pre-deadline revision within each (round, match, team, model, version) group.
 
@@ -72,14 +73,14 @@ Found snapshot:
 - `data/goal3_market_snapshots/round_1666_2026-10-28T1729JST.jsonl`
 - `data/goal3_market_snapshots/round_1668_2026-10-28T0640JST_secondary.jsonl` — six team vectors transcribed from a secondary page reporting official vote-share data; official page not independently verified.
 - `reports/round_1668_goal3_v1_market_snapshot_comparison_2026-10-29.json` — descriptive forecast-vs-market comparison only, no outcome scoring.
-- The separate forecast archive is proposed in [Draft PR #29](https://github.com/sigulun555-lab/toto-lab/pull/29): `predictions/round_1668_ChatGPT_goal3.jsonl`, six team targets, no market blend.
+- The six-target V1-only forecast is archived in `predictions/round_1668_ChatGPT_goal3.jsonl`, with no market blend.
 - Source URL: `https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=02&holdCntId=1666`
 - Timestamp: 2026-10-28 17:29 JST
 - Source evidence: user-provided screenshot; vote shares transcribed into six team-side distributions.
 - Important distinction: market vote share is the share of ticket selections, not a calibrated probability of a team's goal bucket.
 
 Round 1668:
-- Current main status file records round 1668 and a deadline of 2026-10-31 13:50 JST; the matching six-target GPT V1-only forecast is proposed in separate Draft PR #29. The status file is not proof of a current GOAL3 market snapshot.
+- Current main status file records round 1668 and a deadline of 2026-10-31 13:50 JST; the matching six-target GPT V1-only forecast is archived in this branch. The status file is not proof of a current official GOAL3 market snapshot.
 - The current official purchase page could not be opened directly. A secondary archive (`totomark.info`) displayed six round-1668 vote-share vectors with its own snapshot time of 2026-10-28 06:40 JST. These values were archived separately with `captureStatus=secondary_source_captured_official_source_not_independently_verified`; they are **not** represented as a directly verified official capture.
 - Do not copy round-1666 vote shares forward, use standard toto 1X2 percentages, or backfill with post-deadline values. Treat the round-1668 secondary values as provisional until directly cross-checked against the official page.
 - Capture once the official GOAL3 vote-status page is accessible and the selected round, all three fixtures/six team sides, the page's own update timestamp, and retrieval time can be verified.
@@ -87,7 +88,7 @@ Round 1668:
 ## Next steps
 
 1. Capture round-1668 GOAL3 vote shares with a screenshot or directly retrievable official page; preserve original evidence, page-displayed update time, and a separate retrieval timestamp.
-2. Verify the separate PR #29 forecast archive preserves the original pre-deadline metadata; leave round 1668 unscored until its results exist.
+2. Verify the archived round-1668 V1 forecast preserves the original pre-deadline metadata; leave round 1668 unscored until its results exist.
 3. Repeat the capture protocol for future GOAL3 rounds to build multiple matched rounds.
 4. Compare V1-only, market-only, and fixed blend weights (including 0.7 as a trial only) using identical matched targets and chronological validation once sample size supports it.
 5. Keep production logic unchanged until repeated, out-of-sample results and independent review support a change.

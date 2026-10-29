@@ -1,0 +1,135 @@
+{
+  "round": 1668,
+  "modelVersion": "gpt-poisson-goal-dist-v1",
+  "marketSnapshotAt": "2026-10-29T14:35:00+09:00",
+  "marketRetrievedAt": "2026-10-29T14:39:22.595+09:00",
+  "forecastAt": "2026-10-28T22:33:30.811Z",
+  "minutesBetweenMarketAndForecast": -421.48648333333335,
+  "sourceStatus": "secondary_source_captured_official_source_not_independently_verified",
+  "teamTargets": 6,
+  "topBucketMatches": 1,
+  "meanTotalVariation": 0.1678326974225024,
+  "rows": [
+    {
+      "matchNumber": 1,
+      "team": "ファジアーノ岡山",
+      "model": [
+        0.5205719183777666,
+        0.3398435228431352,
+        0.11092955261430522,
+        0.02865500616479298
+      ],
+      "market": [
+        0.359,
+        0.386,
+        0.162,
+        0.092
+      ],
+      "modelTop": "0",
+      "marketTop": "1",
+      "topMatches": false,
+      "totalVariation": 0.16107191837776663
+    },
+    {
+      "matchNumber": 1,
+      "team": "FC東京",
+      "model": [
+        0.12517948750791427,
+        0.26012381018080666,
+        0.27026950649043985,
+        0.3444271958208392
+      ],
+      "market": [
+        0.135,
+        0.239,
+        0.34,
+        0.287
+      ],
+      "modelTop": "3+",
+      "marketTop": "2",
+      "topMatches": false,
+      "totalVariation": 0.0790510060016459
+    },
+    {
+      "matchNumber": 2,
+      "team": "ヴィッセル神戸",
+      "model": [
+        0.17159237671665717,
+        0.3024544745728365,
+        0.2665581972216204,
+        0.25939495148888597
+      ],
+      "market": [
+        0.11900000000000001,
+        0.284,
+        0.353,
+        0.244
+      ],
+      "modelTop": "1",
+      "marketTop": "2",
+      "topMatches": false,
+      "totalVariation": 0.08644180277837962
+    },
+    {
+      "matchNumber": 2,
+      "team": "名古屋グランパス",
+      "model": [
+        0.49797961418733994,
+        0.347189463894889,
+        0.1210295767190513,
+        0.03380134519871973
+      ],
+      "market": [
+        0.281,
+        0.37799999999999995,
+        0.215,
+        0.126
+      ],
+      "modelTop": "0",
+      "marketTop": "1",
+      "topMatches": false,
+      "totalVariation": 0.21697961418733988
+    },
+    {
+      "matchNumber": 3,
+      "team": "柏レイソル",
+      "model": [
+        0.043799605384526104,
+        0.13701088022663174,
+        0.21429395465636264,
+        0.6048955597324794
+      ],
+      "market": [
+        0.14300000000000002,
+        0.258,
+        0.324,
+        0.275
+      ],
+      "modelTop": "3+",
+      "marketTop": "2",
+      "topMatches": false,
+      "totalVariation": 0.32989555973247947
+    },
+    {
+      "matchNumber": 3,
+      "team": "浦和レッズ",
+      "model": [
+        0.16424898314887412,
+        0.29669473339372293,
+        0.26797050166144587,
+        0.271085781795957
+      ],
+      "market": [
+        0.21899999999999997,
+        0.376,
+        0.265,
+        0.141
+      ],
+      "modelTop": "1",
+      "marketTop": "1",
+      "topMatches": true,
+      "totalVariation": 0.1335562834574029
+    }
+  ],
+  "caveat": "Descriptive only, not outcome scoring. The market source is a secondary archive and has not been independently verified against the official page. Vote shares are ticket-selection proportions, not calibrated goal probabilities."
+}

@@ -15,7 +15,11 @@ assert.equal(joined.unresolvedTeamNames.length, 0, 'team names should resolve th
 assert.equal(joined.unresolved.length, 6, 'only the six round 1668 forecasts should await results');
 assert.ok(joined.unresolved.every(x => x.round === 1668), 'no completed historical round should have unresolved prediction targets');
 const round1668Forecasts = predictions.filter(x => x.round === 1668);
-assert.equal(round1668Forecasts.length, 6, 'round 1668 must archive all six pre-deadline team targets');
+assert.equal(round1668Forecasts.length, 12, 'round 1668 must preserve the original six targets plus six synchronized revision records');
+const latestRound1668 = round1668Forecasts.filter(x => x.predictionConfirmedAt === '2026-10-29T05:45:17.396Z');
+assert.equal(latestRound1668.length, 6, 'the latest GPT-main snapshot must contain all six team targets');
+assert.equal(new Set(latestRound1668.map(x => x.matchNumber + ':' + x.isHome)).size, 6, 'latest snapshot must cover each of the six distinct team sides exactly once');
+assert.equal(joined.supersededRecords.filter(x => x.predictionId.includes('r1668-m') && x.predictionId.includes('predeadline')).length, 6, 'the original round 1668 records must be marked superseded by synchronized revisions');
 assert.equal(joined.usedRecords.filter(x => x.prediction.round === 1668).length, 0, 'round 1668 forecasts must remain unscored before results exist');
 for (const p of round1668Forecasts) {
   assert.ok(Date.parse(p.predictionConfirmedAt) < Date.parse(p.deadlineAt), 'round 1668 forecast must be pre-deadline');

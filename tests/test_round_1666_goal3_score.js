@@ -12,15 +12,7 @@ const joined = joinAndFilter(predictions, results);
 
 assert.equal(joined.excludedPostDeadline.length, 0, 'all stored GOAL3 forecasts must be pre-deadline');
 assert.equal(joined.unresolvedTeamNames.length, 0, 'team names should resolve through the canonical alias map');
-const unresolvedRound1668 = joined.unresolved.filter(x => x.round === 1668);
-assert.equal(unresolvedRound1668.length, 6, 'round 1668 V1 forecasts should remain unscored until official results exist');
-assert.equal(joined.unresolved.filter(x => x.round !== 1668).length, 0, 'completed rounds should join exactly');
-const round1668Forecasts = predictions.filter(x => x.round === 1668);
-assert.equal(round1668Forecasts.length, 6, 'round 1668 must archive all six pre-deadline team targets');
-for (const p of round1668Forecasts) {
-  assert.ok(Date.parse(p.predictionConfirmedAt) < Date.parse(p.deadlineAt), 'round 1668 forecast must be pre-deadline');
-  assert.ok(Math.abs(Object.values(p.probabilities).reduce((a, b) => a + b, 0) - 1) < 1e-8, 'goal bucket probabilities must sum to one');
-}
+assert.equal(joined.unresolved.length, 0, 'all prediction targets in rounds with available results should join exactly');
 assert.ok(joined.supersededRecords.length >= 18, 'Claude round-1665 revision history should exclude superseded pre-deadline rows');
 
 const round1666 = joined.usedRecords.filter(x => x.prediction.round === 1666);

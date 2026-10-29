@@ -20,5 +20,6 @@ assert.equal(result.groups.miniTotoA.matches.length, 5);
 assert.equal(result.groups.miniTotoB.matches.length, 5);
 assert.equal(result.groups.totoGoal3.matches.length, 3);
 assert.equal(result.groups.toto.matches[0].home, "toto Home 1");
-assert.throws(() => parseScheduleHtml(html.replace("toto Home 13", "missing"), 1668), /expected 13 matches/);
+const missingLastRow = html.replace('<tr><td>toto Home 13</td><td>vs</td><td>toto Away 13</td></tr>', "");
+assert.throws(() => parseScheduleHtml(missingLastRow, 1668), /expected 13 matches/);
 console.log("toto round parser tests passed");

@@ -12,7 +12,8 @@ const joined = joinAndFilter(predictions, results);
 
 assert.equal(joined.excludedPostDeadline.length, 0, 'all stored GOAL3 forecasts must be pre-deadline');
 assert.equal(joined.unresolvedTeamNames.length, 0, 'team names should resolve through the canonical alias map');
-assert.equal(joined.unresolved.length, 0, 'all prediction targets in rounds with available results should join exactly');
+assert.equal(joined.unresolved.length, 6, 'only the six round 1668 forecasts should await results');
+assert.ok(joined.unresolved.every(x => x.round === 1668), 'no completed historical round should have unresolved prediction targets');
 const round1668Forecasts = predictions.filter(x => x.round === 1668);
 assert.equal(round1668Forecasts.length, 6, 'round 1668 must archive all six pre-deadline team targets');
 assert.equal(joined.usedRecords.filter(x => x.prediction.round === 1668).length, 0, 'round 1668 forecasts must remain unscored before results exist');

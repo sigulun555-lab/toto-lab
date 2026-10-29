@@ -54,7 +54,7 @@ function identifyGroup(htmlBeforeTable, previousTableEnd) {
   const headings = [...localContext.matchAll(/<h[1-6]\b[^>]*>([\s\S]*?)<\/h[1-6]>/gi)];
   if (headings.length) {
     const label = cellText(headings.at(-1)[1]);
-    const byHeading = GROUPS.find((group) => label.includes(group.label));
+    const byHeading = [...GROUPS].sort((a, b) => b.label.length - a.label.length).find((group) => label.includes(group.label));
     if (byHeading) return byHeading;
   }
 

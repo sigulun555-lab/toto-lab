@@ -11,7 +11,7 @@ const snapshot = {
 };
 const original = Array.from({ length: 6 }, (_, i) => ({
   predictionId: 'old-' + i, round: 1668, matchNumber: Math.floor(i / 2) + 1,
-  marketType: 'totoGOAL3', team: 'team-' + i, isHome: i % 2 === 0,
+  marketType: 'totoGOAL3', modelName: 'ChatGPT', team: 'team-' + i, isHome: i % 2 === 0,
   predictionConfirmedAt: '2026-10-28T22:33:30.811Z', revisionOf: null
 }));
 const result = buildRecords(snapshot, original);

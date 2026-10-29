@@ -12,7 +12,6 @@ const joined = joinAndFilter(predictions, results);
 
 assert.equal(joined.excludedPostDeadline.length, 0, 'all stored GOAL3 forecasts must be pre-deadline');
 assert.equal(joined.unresolvedTeamNames.length, 0, 'team names should resolve through the canonical alias map');
-assert.equal(joined.unresolvedTeamNames.length, 0, 'team names should resolve through the canonical alias map');
 const unresolvedRound1668 = joined.unresolved.filter(x => x.round === 1668);
 assert.equal(unresolvedRound1668.length, 6, 'round 1668 V1 forecasts should remain unscored until official results exist');
 assert.equal(joined.unresolved.filter(x => x.round !== 1668).length, 0, 'completed rounds should join exactly');

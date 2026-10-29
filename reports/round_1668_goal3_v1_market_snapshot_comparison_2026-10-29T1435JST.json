@@ -4,7 +4,6 @@
   "marketSnapshotAt": "2026-10-29T14:35:00+09:00",
   "marketRetrievedAt": "2026-10-29T14:39:22.595+09:00",
   "forecastAt": "2026-10-28T22:33:30.811Z",
-  "minutesBetweenMarketAndForecast": -421.48648333333335,
   "sourceStatus": "secondary_source_captured_official_source_not_independently_verified",
   "teamTargets": 6,
   "topBucketMatches": 1,
@@ -131,5 +130,7 @@
       "totalVariation": 0.1335562834574029
     }
   ],
-  "caveat": "Descriptive only, not outcome scoring. The market source is a secondary archive and has not been independently verified against the official page. Vote shares are ticket-selection proportions, not calibrated goal probabilities."
+  "caveat": "Descriptive only, not outcome scoring. The market source is a secondary archive and has not been independently verified against the official page. Vote shares are ticket-selection proportions, not calibrated goal probabilities.",
+  "minutesMarketAfterForecast": 421.48648333333335,
+  "timingInterpretation": "The 2026-10-29 14:35 JST secondary market snapshot is about 421.5 minutes after the archived V1 forecast generated at 07:33 JST. It cannot be treated as market information available at forecast time; use only for descriptive market-movement comparison."
 }

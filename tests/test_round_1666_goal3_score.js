@@ -43,15 +43,26 @@ for (const item of cases) {
   assert.ok(Math.abs(scored.brier - item.expected.brier) < 1e-10, item.version + ' Brier');
   assert.ok(Math.abs(scored.logloss - item.expected.logloss) < 1e-10, item.version + ' LogLoss');
 }
-const marketSnapshotPath = path.join(root, 'data', 'goal3_market_snapshots', 'round_1668_2026-10-28T0640JST_secondary.jsonl');
-const marketSnapshot = JSON.parse(fs.readFileSync(marketSnapshotPath, 'utf8').trim());
-assert.equal(marketSnapshot.round, 1668);
-assert.equal(marketSnapshot.teams.length, 6, 'round 1668 market snapshot must contain all six team sides');
-assert.equal(marketSnapshot.captureStatus, 'secondary_source_captured_official_source_not_independently_verified', 'do not mislabel a secondary archive as directly verified official data');
-assert.ok(Date.parse(marketSnapshot.marketSnapshotAt) < Date.parse(marketSnapshot.deadlineAt), 'market snapshot must precede sales deadline');
-for (const team of marketSnapshot.teams) {
-  const pctSum = Object.values(team.voteSharePct).reduce((a, b) => a + b, 0);
-  assert.ok(Math.abs(pctSum - 100) <= 0.2, team.team + ' vote shares must sum to approximately 100%');
+const snapshotFiles = [
+  'round_1668_2026-10-28T0640JST_secondary.jsonl',
+  'round_1668_2026-10-29T1435JST_secondary.jsonl'
+];
+const snapshots = snapshotFiles.map(name => JSON.parse(fs.readFileSync(path.join(root, 'data', 'goal3_market_snapshots', name), 'utf8').trim()));
+for (const marketSnapshot of snapshots) {
+  assert.equal(marketSnapshot.round, 1668);
+  assert.equal(marketSnapshot.teams.length, 6, 'round 1668 market snapshot must contain all six team sides');
+  assert.equal(marketSnapshot.captureStatus, 'secondary_source_captured_official_source_not_independently_verified', 'do not mislabel a secondary archive as directly verified official data');
+  assert.ok(Date.parse(marketSnapshot.marketSnapshotAt) < Date.parse(marketSnapshot.deadlineAt), 'market snapshot must precede sales deadline');
+  for (const team of marketSnapshot.teams) {
+    const pctSum = Object.values(team.voteSharePct).reduce((a, b) => a + b, 0);
+    assert.ok(Math.abs(pctSum - 100) <= 0.2, team.team + ' vote shares must sum to approximately 100%');
+  }
 }
-console.log('OK - round 1668 secondary market snapshot provenance and six-team coverage');
+const laterSnapshot = snapshots.find(x => x.sourceDisplayedTimestamp === '2026-10-29 14:35 JST');
+assert.ok(laterSnapshot, 'later secondary snapshot should preserve its displayed timestamp');
+assert.ok(Date.parse(laterSnapshot.marketSnapshotAt) > Date.parse(predictions.find(x => x.round === 1668).predictionConfirmedAt),
+  'later market snapshot must be flagged as post-forecast, not used as forecast-time market data');
+const laterComparison = JSON.parse(fs.readFileSync(path.join(root, 'reports', 'round_1668_goal3_v1_market_snapshot_comparison_2026-10-29T1435JST.json'), 'utf8'));
+assert.ok(laterComparison.minutesMarketAfterForecast > 0, 'post-forecast market comparison must retain timing direction');
+console.log('OK - round 1668 secondary snapshots, provenance, six-team coverage, and temporal leakage guard');
 console.log('OK - round 1666 GOAL3 official 90-minute results join and scoring');

@@ -49,25 +49,41 @@ function parseRows(tableHtml) {
   return matches;
 }
 
+function identifyGroup(htmlBeforeTable, previousTableEnd) {
+  const localContext = htmlBeforeTable.slice(Math.max(previousTableEnd, htmlBeforeTable.length - 12000));
+  const headings = [...localContext.matchAll(/<h[1-6]\b[^>]*>([\s\S]*?)<\/h[1-6]>/gi)];
+  if (headings.length) {
+    const label = cellText(headings.at(-1)[1]);
+    const byHeading = GROUPS.find((group) => label.includes(group.label));
+    if (byHeading) return byHeading;
+  }
+
+  // Fallback for pages that use non-heading elements for the section title.
+  let selected = null;
+  let selectedIndex = -1;
+  for (const candidate of GROUPS) {
+    const idx = localContext.lastIndexOf(candidate.label);
+    if (idx > selectedIndex) {
+      selectedIndex = idx;
+      selected = candidate;
+    }
+  }
+  return selectedIndex >= 0 ? selected : null;
+}
+
 export function parseScheduleHtml(html, round, sourceUrl = "") {
   const groupData = {};
-  const tableMatches = [...html.matchAll(/<table\b[^>]*>[\s\S]*?<\/table>/gi)];
-  for (const tableMatch of tableMatches) {
+  const tables = [...html.matchAll(/<table\b[^>]*>[\s\S]*?<\/table>/gi)];
+  let previousTableEnd = 0;
+
+  for (const tableMatch of tables) {
     const before = html.slice(0, tableMatch.index);
-    let group = null;
-    let lastIndex = -1;
-    for (const candidate of GROUPS) {
-      const idx = before.lastIndexOf(candidate.label);
-      if (idx > lastIndex) {
-        lastIndex = idx;
-        group = candidate;
-      }
-    }
-    if (!group) continue;
+    const group = identifyGroup(before, previousTableEnd);
     const matches = parseRows(tableMatch[0]);
-    if (matches.length >= group.expected && !groupData[group.key]) {
-      groupData[group.key] = matches.slice(0, group.expected);
+    if (group && matches.length === group.expected && !groupData[group.key]) {
+      groupData[group.key] = matches;
     }
+    previousTableEnd = tableMatch.index + tableMatch[0].length;
   }
 
   for (const group of GROUPS) {
@@ -109,7 +125,7 @@ async function main() {
   console.log(`JSON written to ${OUTPUT}`);
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && import.meta.url === `file://${process.argv[1]}`) {
   main().catch((error) => {
     console.error(error.message);
     process.exitCode = 1;

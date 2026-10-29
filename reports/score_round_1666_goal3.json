@@ -1,0 +1,447 @@
+{
+  "generatedAt": "2026-10-29T09:36:39.355Z",
+  "marketType": "totoGOAL3",
+  "inputCounts": {
+    "predictions": 60,
+    "results": 3
+  },
+  "excludedPostDeadlineCount": 0,
+  "excludedPostDeadline": [],
+  "unresolvedTeamNameCount": 0,
+  "unresolvedTeamNames": [],
+  "unresolvedCount": 18,
+  "unresolved": [
+    {
+      "predictionId": "1665-goal3-chatgpt-1-home-v2",
+      "round": 1665,
+      "matchNumber": 1,
+      "team": "サンフレッチェ広島",
+      "opponent": "清水エスパルス",
+      "isHome": true,
+      "canonicalHomeTeam": "サンフレッチェ広島",
+      "canonicalAwayTeam": "清水エスパルス",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-1-away-v2",
+      "round": 1665,
+      "matchNumber": 1,
+      "team": "清水エスパルス",
+      "opponent": "サンフレッチェ広島",
+      "isHome": false,
+      "canonicalHomeTeam": "サンフレッチェ広島",
+      "canonicalAwayTeam": "清水エスパルス",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-2-home-v2",
+      "round": 1665,
+      "matchNumber": 2,
+      "team": "鹿島アントラーズ",
+      "opponent": "柏レイソル",
+      "isHome": true,
+      "canonicalHomeTeam": "鹿島アントラーズ",
+      "canonicalAwayTeam": "柏レイソル",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-2-away-v2",
+      "round": 1665,
+      "matchNumber": 2,
+      "team": "柏レイソル",
+      "opponent": "鹿島アントラーズ",
+      "isHome": false,
+      "canonicalHomeTeam": "鹿島アントラーズ",
+      "canonicalAwayTeam": "柏レイソル",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-3-home-v2",
+      "round": 1665,
+      "matchNumber": 3,
+      "team": "ヴィッセル神戸",
+      "opponent": "ＦＣ町田ゼルビア",
+      "isHome": true,
+      "canonicalHomeTeam": "ヴィッセル神戸",
+      "canonicalAwayTeam": "ＦＣ町田ゼルビア",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-3-away-v2",
+      "round": 1665,
+      "matchNumber": 3,
+      "team": "ＦＣ町田ゼルビア",
+      "opponent": "ヴィッセル神戸",
+      "isHome": false,
+      "canonicalHomeTeam": "ヴィッセル神戸",
+      "canonicalAwayTeam": "ＦＣ町田ゼルビア",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m1-hiroshima_shimizu-home-20261022T160948Z-EVIDENCE-20261023-R2-R3",
+      "round": 1665,
+      "matchNumber": 1,
+      "team": "サンフレッチェ広島",
+      "opponent": "清水エスパルス",
+      "isHome": true,
+      "canonicalHomeTeam": "サンフレッチェ広島",
+      "canonicalAwayTeam": "清水エスパルス",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m1-hiroshima_shimizu-away-20261022T160948Z-EVIDENCE-20261023-R2-R3",
+      "round": 1665,
+      "matchNumber": 1,
+      "team": "清水エスパルス",
+      "opponent": "サンフレッチェ広島",
+      "isHome": false,
+      "canonicalHomeTeam": "サンフレッチェ広島",
+      "canonicalAwayTeam": "清水エスパルス",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m2-kashima_kashiwa-home-20261022T160948Z-EVIDENCE-20261023-R2-R3",
+      "round": 1665,
+      "matchNumber": 2,
+      "team": "鹿島アントラーズ",
+      "opponent": "柏レイソル",
+      "isHome": true,
+      "canonicalHomeTeam": "鹿島アントラーズ",
+      "canonicalAwayTeam": "柏レイソル",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m2-kashima_kashiwa-away-20261022T160948Z-EVIDENCE-20261023-R2-R3",
+      "round": 1665,
+      "matchNumber": 2,
+      "team": "柏レイソル",
+      "opponent": "鹿島アントラーズ",
+      "isHome": false,
+      "canonicalHomeTeam": "鹿島アントラーズ",
+      "canonicalAwayTeam": "柏レイソル",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m3-kobe_machida-home-20261022T160948Z-EVIDENCE-20261023-R2-R3",
+      "round": 1665,
+      "matchNumber": 3,
+      "team": "ヴィッセル神戸",
+      "opponent": "FC町田ゼルビア",
+      "isHome": true,
+      "canonicalHomeTeam": "ヴィッセル神戸",
+      "canonicalAwayTeam": "ＦＣ町田ゼルビア",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m3-kobe_machida-away-20261022T160948Z-EVIDENCE-20261023-R2-R3",
+      "round": 1665,
+      "matchNumber": 3,
+      "team": "FC町田ゼルビア",
+      "opponent": "ヴィッセル神戸",
+      "isHome": false,
+      "canonicalHomeTeam": "ヴィッセル神戸",
+      "canonicalAwayTeam": "ＦＣ町田ゼルビア",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m1-home-revision-20261029T054517Z",
+      "round": 1668,
+      "matchNumber": 1,
+      "team": "ファジアーノ岡山",
+      "opponent": "FC東京",
+      "isHome": true,
+      "canonicalHomeTeam": "ファジアーノ岡山",
+      "canonicalAwayTeam": "ＦＣ東京",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m1-away-revision-20261029T054517Z",
+      "round": 1668,
+      "matchNumber": 1,
+      "team": "FC東京",
+      "opponent": "ファジアーノ岡山",
+      "isHome": false,
+      "canonicalHomeTeam": "ファジアーノ岡山",
+      "canonicalAwayTeam": "ＦＣ東京",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m2-home-revision-20261029T054517Z",
+      "round": 1668,
+      "matchNumber": 2,
+      "team": "ヴィッセル神戸",
+      "opponent": "名古屋グランパス",
+      "isHome": true,
+      "canonicalHomeTeam": "ヴィッセル神戸",
+      "canonicalAwayTeam": "名古屋グランパス",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m2-away-revision-20261029T054517Z",
+      "round": 1668,
+      "matchNumber": 2,
+      "team": "名古屋グランパス",
+      "opponent": "ヴィッセル神戸",
+      "isHome": false,
+      "canonicalHomeTeam": "ヴィッセル神戸",
+      "canonicalAwayTeam": "名古屋グランパス",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m3-home-revision-20261029T054517Z",
+      "round": 1668,
+      "matchNumber": 3,
+      "team": "柏レイソル",
+      "opponent": "浦和レッズ",
+      "isHome": true,
+      "canonicalHomeTeam": "柏レイソル",
+      "canonicalAwayTeam": "浦和レッズ",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m3-away-revision-20261029T054517Z",
+      "round": 1668,
+      "matchNumber": 3,
+      "team": "浦和レッズ",
+      "opponent": "柏レイソル",
+      "isHome": false,
+      "canonicalHomeTeam": "柏レイソル",
+      "canonicalAwayTeam": "浦和レッズ",
+      "reason": "正規名称への変換後、round+matchNumber+homeTeam+awayTeam の完全一致が results に無い（推測補完せず除外）"
+    }
+  ],
+  "supersededByRevisionCount": 30,
+  "supersededRecords": [
+    {
+      "predictionId": "1665-goal3-chatgpt-1-home-v1",
+      "supersededBy": "1665-goal3-chatgpt-1-home-v2",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-1-away-v1",
+      "supersededBy": "1665-goal3-chatgpt-1-away-v2",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-2-home-v1",
+      "supersededBy": "1665-goal3-chatgpt-2-home-v2",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-2-away-v1",
+      "supersededBy": "1665-goal3-chatgpt-2-away-v2",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-3-home-v1",
+      "supersededBy": "1665-goal3-chatgpt-3-home-v2",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "1665-goal3-chatgpt-3-away-v1",
+      "supersededBy": "1665-goal3-chatgpt-3-away-v2",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m1-hiroshima_shimizu-home-20261022T160948Z",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m1-hiroshima_shimizu-home-20261022T160948Z-EVIDENCE-20261023",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m1-hiroshima_shimizu-away-20261022T160948Z",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m1-hiroshima_shimizu-away-20261022T160948Z-EVIDENCE-20261023",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m2-kashima_kashiwa-home-20261022T160948Z",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m2-kashima_kashiwa-home-20261022T160948Z-EVIDENCE-20261023",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m2-kashima_kashiwa-away-20261022T160948Z",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m2-kashima_kashiwa-away-20261022T160948Z-EVIDENCE-20261023",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m3-kobe_machida-home-20261022T160948Z",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m3-kobe_machida-home-20261022T160948Z-EVIDENCE-20261023",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m3-kobe_machida-away-20261022T160948Z",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m3-kobe_machida-away-20261022T160948Z-EVIDENCE-20261023",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m1-hiroshima_shimizu-home-20261022T160948Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m1-hiroshima_shimizu-home-20261022T160948Z-EVIDENCE-20261023-R2",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m1-hiroshima_shimizu-away-20261022T160948Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m1-hiroshima_shimizu-away-20261022T160948Z-EVIDENCE-20261023-R2",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m2-kashima_kashiwa-home-20261022T160948Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m2-kashima_kashiwa-home-20261022T160948Z-EVIDENCE-20261023-R2",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m2-kashima_kashiwa-away-20261022T160948Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m2-kashima_kashiwa-away-20261022T160948Z-EVIDENCE-20261023-R2",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m3-kobe_machida-home-20261022T160948Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m3-kobe_machida-home-20261022T160948Z-EVIDENCE-20261023-R2",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m3-kobe_machida-away-20261022T160948Z-EVIDENCE-20261023",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m3-kobe_machida-away-20261022T160948Z-EVIDENCE-20261023-R2",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m1-hiroshima_shimizu-home-20261022T160948Z-EVIDENCE-20261023-R2",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m1-hiroshima_shimizu-home-20261022T160948Z-EVIDENCE-20261023-R2-R3",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m1-hiroshima_shimizu-away-20261022T160948Z-EVIDENCE-20261023-R2",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m1-hiroshima_shimizu-away-20261022T160948Z-EVIDENCE-20261023-R2-R3",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m2-kashima_kashiwa-home-20261022T160948Z-EVIDENCE-20261023-R2",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m2-kashima_kashiwa-home-20261022T160948Z-EVIDENCE-20261023-R2-R3",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m2-kashima_kashiwa-away-20261022T160948Z-EVIDENCE-20261023-R2",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m2-kashima_kashiwa-away-20261022T160948Z-EVIDENCE-20261023-R2-R3",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m3-kobe_machida-home-20261022T160948Z-EVIDENCE-20261023-R2",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m3-kobe_machida-home-20261022T160948Z-EVIDENCE-20261023-R2-R3",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "Claude-totoGOAL3-v1-r1665-m3-kobe_machida-away-20261022T160948Z-EVIDENCE-20261023-R2",
+      "supersededBy": "Claude-totoGOAL3-v1-r1665-m3-kobe_machida-away-20261022T160948Z-EVIDENCE-20261023-R2-R3",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m1-home-predeadline-20261028T223330Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m1-home-revision-20261029T054517Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m1-away-predeadline-20261028T223330Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m1-away-revision-20261029T054517Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m2-home-predeadline-20261028T223330Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m2-home-revision-20261029T054517Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m2-away-predeadline-20261028T223330Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m2-away-revision-20261029T054517Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m3-home-predeadline-20261028T223330Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m3-home-revision-20261029T054517Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m3-away-predeadline-20261028T223330Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1668-m3-away-revision-20261029T054517Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    }
+  ],
+  "usedRecordCount": 12,
+  "byModel": {
+    "ChatGPT": {
+      "n": 6,
+      "accuracy": 0.5,
+      "brier": 0.8260656687725119,
+      "brierConvention": "sum-of-4-squares (no division)",
+      "logloss": 1.6533149956306354,
+      "avgPredicted": {
+        "0": 0.2619,
+        "1": 0.3373,
+        "2": 0.2308,
+        "3": 0.1699
+      },
+      "actualRate": {
+        "0": 0,
+        "1": 0.5,
+        "2": 0,
+        "3": 0.5
+      }
+    },
+    "Claude": {
+      "n": 6,
+      "accuracy": 0.5,
+      "brier": 0.7929294583333334,
+      "brierConvention": "sum-of-4-squares (no division)",
+      "logloss": 1.533323409593429,
+      "avgPredicted": {
+        "0": 0.2541,
+        "1": 0.3457,
+        "2": 0.2375,
+        "3": 0.1627
+      },
+      "actualRate": {
+        "0": 0,
+        "1": 0.5,
+        "2": 0,
+        "3": 0.5
+      }
+    }
+  },
+  "byModelVersion": {
+    "ChatGPT@gpt-poisson-goal-dist-v1": {
+      "n": 6,
+      "accuracy": 0.5,
+      "brier": 0.8260656687725119,
+      "brierConvention": "sum-of-4-squares (no division)",
+      "logloss": 1.6533149956306354,
+      "avgPredicted": {
+        "0": 0.2619,
+        "1": 0.3373,
+        "2": 0.2308,
+        "3": 0.1699
+      },
+      "actualRate": {
+        "0": 0,
+        "1": 0.5,
+        "2": 0,
+        "3": 0.5
+      }
+    },
+    "Claude@shrinkage-poisson-lambda10-2026only-v1": {
+      "n": 6,
+      "accuracy": 0.5,
+      "brier": 0.7929294583333334,
+      "brierConvention": "sum-of-4-squares (no division)",
+      "logloss": 1.533323409593429,
+      "avgPredicted": {
+        "0": 0.2541,
+        "1": 0.3457,
+        "2": 0.2375,
+        "3": 0.1627
+      },
+      "actualRate": {
+        "0": 0,
+        "1": 0.5,
+        "2": 0,
+        "3": 0.5
+      }
+    }
+  }
+}

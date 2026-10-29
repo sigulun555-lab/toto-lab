@@ -1,5 +1,6 @@
 'use strict';
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
 const path = require('node:path');
 const { loadAllPredictionsGoal3, joinAndFilter, scoreGroup } = require('../scripts/score_predictions_goal3.js');
 const { readJsonlDirOrFile } = require('../scripts/score_predictions.js');
@@ -43,4 +44,15 @@ for (const item of cases) {
   assert.ok(Math.abs(scored.brier - item.expected.brier) < 1e-10, item.version + ' Brier');
   assert.ok(Math.abs(scored.logloss - item.expected.logloss) < 1e-10, item.version + ' LogLoss');
 }
+const marketSnapshotPath = path.join(root, 'data', 'goal3_market_snapshots', 'round_1668_2026-10-28T0640JST_secondary.jsonl');
+const marketSnapshot = JSON.parse(fs.readFileSync(marketSnapshotPath, 'utf8').trim());
+assert.equal(marketSnapshot.round, 1668);
+assert.equal(marketSnapshot.teams.length, 6, 'round 1668 market snapshot must contain all six team sides');
+assert.equal(marketSnapshot.captureStatus, 'secondary_source_captured_official_source_not_independently_verified', 'do not mislabel a secondary archive as directly verified official data');
+assert.ok(Date.parse(marketSnapshot.marketSnapshotAt) < Date.parse(marketSnapshot.deadlineAt), 'market snapshot must precede sales deadline');
+for (const team of marketSnapshot.teams) {
+  const pctSum = Object.values(team.voteSharePct).reduce((a, b) => a + b, 0);
+  assert.ok(Math.abs(pctSum - 100) <= 0.2, team.team + ' vote shares must sum to approximately 100%');
+}
+console.log('OK - round 1668 secondary market snapshot provenance and six-team coverage');
 console.log('OK - round 1666 GOAL3 official 90-minute results join and scoring');

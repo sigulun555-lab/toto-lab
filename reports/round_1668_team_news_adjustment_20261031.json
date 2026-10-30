@@ -182,7 +182,7 @@
     }
   ],
   "lineupStatus": "2026-10-31 08:50 JST時点で公式先発は未発表/未確認。予想先発を確定情報として扱わず、キックオフ前の再確認が必要。",
-  "method": "Base expected goals retained. Only official confirmed suspensions or clearly documented long-term injuries received small conservative manual xG deltas. Deltas are provisional heuristic, not fitted player-value estimates. V1 uses revised Poisson outcome probabilities. V2 blends revised Poisson 30% with the pre-existing market vote share 70%.",
+  "method": "Unified adjustment framework (provisional): use the same xG-delta mechanism for every team, while setting the delta magnitude individually by player role, confirmed absence status, recent involvement/minutes, replacement depth, and team context. Attack/creation absences reduce the absent team's own xG; defensive/goalkeeper absences increase the opponent's xG. Do not mix arbitrary adjustment mechanisms or apply a universal per-player delta. If role/availability/impact is uncertain, record it without numeric adjustment. Current round's numeric deltas remain conservative manual heuristics, not fitted player-value estimates; no retrospective claim of calibration. V1 recalculates Poisson probabilities from adjusted xG. V2 blends revised Poisson 30% with the pre-existing official market vote share 70%.",
   "sources": [
     "https://www.jleague.jp/news/article/35233/",
     "https://www.fagiano-okayama.com/news/202610171600/",
@@ -192,5 +192,19 @@
     "https://www.frontale.co.jp/info/2026/1018_1.html",
     "https://www.jleague.jp/player/1636988/",
     "https://www.jleague.jp/player/1633161/"
-  ]
+  ],
+  "adjustmentPolicy": {
+    "version": "unified-xg-delta-v1",
+    "status": "provisional_policy_for_future_rounds",
+    "commonMechanism": "All confirmed absence adjustments are expressed through homeExpectedGoalsDelta and/or awayExpectedGoalsDelta before probability calculation.",
+    "roleMapping": {
+      "attacking_or_chance_creation": "Reduce the absent team's own expected goals.",
+      "defensive_or_goalkeeper": "Increase the opponent's expected goals.",
+      "two_way_or_unclear_role": "Assess the player's primary role and evidence; if impact direction cannot be supported, do not apply a numeric adjustment."
+    },
+    "individualizedMagnitude": "Set the magnitude by role, verified absence duration/status, recent appearances and minutes, replacement quality/depth, and team context. Do not use one fixed delta for all teams or players.",
+    "uncertainty": "Unconfirmed injuries, expected lineups, and uncertain return status are tracked but receive no numeric adjustment until verified.",
+    "calibration": "Treat manual deltas as provisional heuristics. Store the rationale and source; calibrate magnitudes only through historical/out-of-sample validation.",
+    "timing": "Official starting lineups are a separate final pre-kickoff update and must not be conflated with this interim team-news revision."
+  }
 }

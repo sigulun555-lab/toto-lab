@@ -1,0 +1,195 @@
+{
+  "round": 1668,
+  "generatedAt": "2026-10-30T23:50:28.000Z",
+  "timezone": "JST",
+  "status": "provisional_team_news_revision",
+  "deadlineAt": "2026-10-31T04:50:00Z",
+  "scope": "13 fixtures; injury/suspension/news review; confirmed starting lineups not yet released/verified at 2026-10-31 08:50 JST",
+  "confirmedAdjustments": [
+    {
+      "matchNumber": 1,
+      "team": "ファジアーノ岡山",
+      "player": "田上大地",
+      "status": "長期離脱",
+      "detail": "10/7負傷。前十字靱帯・外側半月板・内側側副靱帯損傷。",
+      "adjustment": "FC東京 xG +0.06",
+      "source": "https://www.fagiano-okayama.com/news/202610171600/"
+    },
+    {
+      "matchNumber": 3,
+      "team": "名古屋グランパス",
+      "player": "高嶺朋樹",
+      "status": "出場停止確定",
+      "detail": "J1第13節第1日（10/31）の出場停止。",
+      "adjustment": "名古屋 xG -0.08",
+      "source": "https://www.jleague.jp/news/article/35233/"
+    },
+    {
+      "matchNumber": 5,
+      "team": "柏レイソル",
+      "player": "馬場晴也",
+      "status": "長期離脱",
+      "detail": "右膝前十字靱帯損傷等。",
+      "adjustment": "浦和 xG +0.06",
+      "source": "https://www.jleague.jp/news/article/35139/"
+    },
+    {
+      "matchNumber": 6,
+      "team": "京都サンガF.C.",
+      "player": "佐藤響",
+      "status": "出場停止確定",
+      "detail": "J1第13節第1日（10/31）の出場停止。",
+      "adjustment": "清水 xG +0.06",
+      "source": "https://www.jleague.jp/news/article/35233/"
+    },
+    {
+      "matchNumber": 9,
+      "team": "ガンバ大阪",
+      "player": "一森純",
+      "status": "出場停止確定",
+      "detail": "J1第13節第2日（11/1）の出場停止。",
+      "adjustment": "町田 xG +0.10",
+      "source": "https://www.jleague.jp/news/article/35233/"
+    },
+    {
+      "matchNumber": 10,
+      "team": "横浜F・マリノス",
+      "player": "知念慶",
+      "status": "長期離脱",
+      "detail": "右足リスフラン関節損傷、全治6〜8週間。",
+      "adjustment": "横浜FM xG -0.06",
+      "source": "https://www.jleague.jp/news/article/35195/"
+    },
+    {
+      "matchNumber": 11,
+      "team": "RB大宮アルディージャ",
+      "player": "加藤玄",
+      "status": "出場停止確定",
+      "detail": "10/31出場停止。MF。直近13試合出場・8先発・1037分。",
+      "adjustment": "大宮 xG -0.05",
+      "source": "https://www.jleague.jp/news/article/35233/"
+    },
+    {
+      "matchNumber": 13,
+      "team": "大分トリニータ",
+      "player": "ペレイラ",
+      "status": "長期離脱",
+      "detail": "右腓骨骨折、右足関節遠位脛腓間損傷、三角靱帯損傷。",
+      "adjustment": "宮崎 xG +0.08",
+      "source": "https://www.jleague.jp/news/article/35146/"
+    }
+  ],
+  "unquantifiedButTracked": [
+    {
+      "matchNumber": 2,
+      "team": "水戸",
+      "players": [
+        "内野航太郎",
+        "鳥海芳樹",
+        "岡本一真"
+      ],
+      "status": "10/18公式負傷発表。10/30時点の出場可否は確定確認できず。"
+    },
+    {
+      "matchNumber": 2,
+      "team": "広島",
+      "players": [
+        "川村拓夢",
+        "浅野拓磨"
+      ],
+      "status": "川村は10/24負傷交代・診断/出場可否未確認。浅野は10/24復帰後初ゴール。"
+    },
+    {
+      "matchNumber": 3,
+      "team": "神戸",
+      "players": [
+        "佐々木大樹"
+      ],
+      "status": "10/24に今季初ベンチ入り。先発/出場時間は未確定。"
+    },
+    {
+      "matchNumber": 4,
+      "team": "鹿島",
+      "players": [
+        "レオ・セアラ"
+      ],
+      "status": "10/21負傷交代、10/24はベンチ外。10/31の可否は未確認。"
+    },
+    {
+      "matchNumber": 5,
+      "team": "浦和",
+      "players": [
+        "南野遥海"
+      ],
+      "status": "10/25にベンチ入りして復帰。先発は未確認。"
+    },
+    {
+      "matchNumber": 6,
+      "team": "清水",
+      "players": [
+        "木下康介"
+      ],
+      "status": "10/24負傷交代。程度・10/31の可否未確認。"
+    },
+    {
+      "matchNumber": 9,
+      "team": "町田",
+      "players": [
+        "テテ・イェンギ"
+      ],
+      "status": "10/21試合前アップで負傷、10/24もメンバー外。復帰時期未確認。"
+    },
+    {
+      "matchNumber": 9,
+      "team": "G大阪",
+      "players": [
+        "ウェルトン",
+        "荒木琉偉"
+      ],
+      "status": "ウェルトンは10/24ベンチ入り。荒木は負傷報道あり、公式な最新出場可否は未確認。"
+    },
+    {
+      "matchNumber": 10,
+      "team": "川崎F",
+      "players": [
+        "野田裕人"
+      ],
+      "status": "10/18クラブ公式が右腓腹筋肉離れを発表。トップチームへの影響度/出場可否は未確認。"
+    },
+    {
+      "matchNumber": 7,
+      "teams": [
+        "千葉",
+        "福岡"
+      ],
+      "status": "今回確認した範囲で個別の確定離脱情報を確認できず。"
+    },
+    {
+      "matchNumber": 8,
+      "teams": [
+        "長崎",
+        "東京V"
+      ],
+      "status": "今回確認した範囲で個別の確定離脱情報を確認できず。"
+    },
+    {
+      "matchNumber": 12,
+      "teams": [
+        "新潟",
+        "富山"
+      ],
+      "status": "今回確認した範囲で個別の確定離脱情報を確認できず。"
+    }
+  ],
+  "lineupStatus": "2026-10-31 08:50 JST時点で公式先発は未発表/未確認。予想先発を確定情報として扱わず、キックオフ前の再確認が必要。",
+  "method": "Base expected goals retained. Only official confirmed suspensions or clearly documented long-term injuries received small conservative manual xG deltas. Deltas are provisional heuristic, not fitted player-value estimates. V1 uses revised Poisson outcome probabilities. V2 blends revised Poisson 30% with the pre-existing market vote share 70%.",
+  "sources": [
+    "https://www.jleague.jp/news/article/35233/",
+    "https://www.fagiano-okayama.com/news/202610171600/",
+    "https://www.jleague.jp/news/article/35145/",
+    "https://www.jleague.jp/news/article/35146/",
+    "https://www.jleague.jp/news/article/35195/",
+    "https://www.frontale.co.jp/info/2026/1018_1.html",
+    "https://www.jleague.jp/player/1636988/"
+  ]
+}

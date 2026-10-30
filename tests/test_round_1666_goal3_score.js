@@ -74,7 +74,9 @@ assert.equal(joined.usedRecords.filter(x => x.prediction.round === 1668).length,
   'round 1668 forecasts must remain unscored before results exist');
 for (const p of round1668Forecasts) {
   assert.ok(Date.parse(p.predictionConfirmedAt) < Date.parse(p.deadlineAt), 'round 1668 forecast must be pre-deadline');
-  assert.ok(Math.abs(Object.values(p.probabilities).reduce((a, b) => a + b, 0) - 1) < 1e-8, 'goal bucket probabilities must sum to one');
+  // Keep the historical scoring regression aligned with validate_prediction_goal3.js: stored 0/1/2/3+ vectors may be rounded, with an allowed sum tolerance of 0.002.
+  assert.ok(Math.abs(Object.values(p.probabilities).reduce((a, b) => a + b, 0) - 1) <= 0.002,
+    'goal bucket probabilities must sum to one within the GOAL3 schema tolerance');
 }
 assert.ok(joined.supersededRecords.length >= 18, 'Claude round-1665 revision history should exclude superseded pre-deadline rows');
 

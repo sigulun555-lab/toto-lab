@@ -28,6 +28,11 @@ for (const p of round1668Forecasts) {
 }
 assert.ok(round1668ByModel.size >= 1, 'at least one model must have submitted round 1668 forecasts');
 
+// GOAL3の指定試合番号は、toto公式の指定試合表どおり厳密に1・2・3でなければ
+// ならない（「3種類の値があればよい」という緩い検証では、試合番号の取り違え
+// （例：1・2・4）を見逃してしまう）。
+const EXPECTED_GOAL3_MATCH_NUMBERS = [1, 2, 3];
+
 for (const [key, rowsForModel] of round1668ByModel) {
   assert.ok(rowsForModel.length >= 6 && rowsForModel.length % 6 === 0,
     `${key}: round 1668 must retain complete six-team snapshots as append-only revisions`);
@@ -43,22 +48,66 @@ for (const [key, rowsForModel] of round1668ByModel) {
     assert.equal(rows.length, 6, `${key}: each round 1668 snapshot must contain six team targets`);
     assert.equal(new Set(rows.map(x => x.matchNumber + ':' + x.isHome)).size, 6,
       `${key}: each round 1668 snapshot must cover all six distinct team sides exactly once`);
+    const matchNumbersInSnapshot = [...new Set(rows.map(x => x.matchNumber))].sort((a, b) => a - b);
+    assert.deepEqual(matchNumbersInSnapshot, EXPECTED_GOAL3_MATCH_NUMBERS,
+      `${key}: round 1668 GOAL3 designated match numbers must be exactly 1, 2, 3 (saw ${matchNumbersInSnapshot.join(',')})`);
   }
 
   const latestSnapshotAt = snapshotTimes[snapshotTimes.length - 1];
   const latestForModel = rowsForModel.filter(x => x.predictionConfirmedAt === latestSnapshotAt);
   assert.equal(latestForModel.length, 6, `${key}: the newest snapshot must contain all six team targets`);
-  if (snapshotTimes.length > 1) {
-    for (const p of latestForModel) {
-      assert.ok(p.revisionOf, `${key}: every non-initial snapshot record must reference the prior record`);
-      assert.ok(rowsForModel.some(prev =>
-        prev.predictionId === p.revisionOf &&
-        prev.matchNumber === p.matchNumber &&
-        prev.isHome === p.isHome &&
-        Date.parse(prev.predictionConfirmedAt) < Date.parse(p.predictionConfirmedAt)),
-      `${key}: revisionOf must reference an earlier record from the same model for the same team side`);
+
+  // revisionOfの連鎖は「最新スナップショットが直前のどこかを指していればよい」
+  // ではなく、全履歴の各非初回レコードが、同一モデル・同一試合・同一サイドの
+  // 「直前の」スナップショットを正確に指していることを検証する（例：3回目の
+  // スナップショットが2回目ではなく1回目や別サイドを指すような取り違えを
+  // 検出できるようにする）。
+  const bySide = new Map(); // 'matchNumber:isHome' -> rows sorted by predictionConfirmedAt
+  for (const p of rowsForModel) {
+    const sideKey = `${p.matchNumber}:${p.isHome}`;
+    if (!bySide.has(sideKey)) bySide.set(sideKey, []);
+    bySide.get(sideKey).push(p);
+  }
+  for (const [sideKey, sideRows] of bySide) {
+    sideRows.sort((a, b) => Date.parse(a.predictionConfirmedAt) - Date.parse(b.predictionConfirmedAt));
+    assert.equal(sideRows.length, snapshotTimes.length,
+      `${key}/${sideKey}: this team side must appear exactly once per snapshot across the full history`);
+    assert.equal(sideRows[0].revisionOf, null,
+      `${key}/${sideKey}: the first (initial) snapshot record must not reference a prior record`);
+    for (let i = 1; i < sideRows.length; i++) {
+      const prev = sideRows[i - 1];
+      const curr = sideRows[i];
+      assert.equal(curr.revisionOf, prev.predictionId,
+        `${key}/${sideKey}: snapshot ${i + 1}'s revisionOf must point to the immediately preceding snapshot's record (snapshot ${i}), not an earlier or later one`);
     }
   }
+}
+
+// モデル識別子（modelName/modelVersion）の重複・不正な登録を検出できることを
+// 確認する：(a) predictionIdは全予測（全ラウンド・全マーケット・全モデル）を
+// 通じて一意でなければならない、(b) modelName/modelVersionは空文字・前後空白
+// つきの文字列であってはならない（表記ゆれによる意図しない別モデル化を防ぐ）、
+// (c) 大文字小文字や空白だけが異なる実質同一のmodelKeyが複数登録されていないか
+// （意図しない重複登録の典型例）を検出する。
+const allPredictions = predictions;
+assert.equal(new Set(allPredictions.map(x => x.predictionId)).size, allPredictions.length,
+  'predictionId must be globally unique across all stored predictions, not just within one round/model');
+for (const p of allPredictions) {
+  assert.ok(typeof p.modelName === 'string' && p.modelName === p.modelName.trim() && p.modelName.length > 0,
+    `prediction ${p.predictionId}: modelName must be a non-empty, non-whitespace-padded string (saw ${JSON.stringify(p.modelName)})`);
+  assert.ok(typeof p.modelVersion === 'string' && p.modelVersion === p.modelVersion.trim() && p.modelVersion.length > 0,
+    `prediction ${p.predictionId}: modelVersion must be a non-empty, non-whitespace-padded string (saw ${JSON.stringify(p.modelVersion)})`);
+}
+const normalizedModelKeyToActualKeys = new Map();
+for (const p of allPredictions) {
+  const actualKey = modelKey(p);
+  const normalizedKey = actualKey.toLowerCase().replace(/\s+/g, '');
+  if (!normalizedModelKeyToActualKeys.has(normalizedKey)) normalizedModelKeyToActualKeys.set(normalizedKey, new Set());
+  normalizedModelKeyToActualKeys.get(normalizedKey).add(actualKey);
+}
+for (const [normalizedKey, actualKeys] of normalizedModelKeyToActualKeys) {
+  assert.equal(actualKeys.size, 1,
+    `model identifier collision: ${[...actualKeys].join(' vs ')} normalize to the same key (${normalizedKey}) but are registered as distinct modelName::modelVersion pairs`);
 }
 
 // 未確定（unresolved）件数は「提出済みモデル数×6」と厳密に一致しなければならない

@@ -48,3 +48,29 @@ test('short(<=3) and long_core(6-8) buckets reproduce the documented counts', ()
     assert.equal(shortN, 165);
     assert.equal(longCoreN, 387);
 });
+
+test('pts column is a correct 3/1/0 result derived from gf/ga, and bucket means match README', () => {
+    const text = fs.readFileSync(csvPath, 'utf8').trim();
+    const [headerLine, ...rows] = text.split('\n').map(l => l.replace(/\r$/, ''));
+    const header = headerLine.split(',');
+    const gfIdx = header.indexOf('gf');
+    const gaIdx = header.indexOf('ga');
+    const ptsIdx = header.indexOf('pts');
+    const restIdx = header.indexOf('rest_days_between_matches');
+    let shortPts = [], longCorePts = [];
+    for (const line of rows) {
+        const cols = line.split(',');
+        const gf = Number(cols[gfIdx]);
+        const ga = Number(cols[gaIdx]);
+        const pts = Number(cols[ptsIdx]);
+        const expectedPts = gf > ga ? 3 : (gf === ga ? 1 : 0);
+        assert.equal(pts, expectedPts, `pts mismatch: ${line}`);
+        const rest = Number(cols[restIdx]);
+        if (rest <= 3) shortPts.push(pts);
+        else if (rest >= 6 && rest <= 8) longCorePts.push(pts);
+    }
+    const mean = (xs) => xs.reduce((a, b) => a + b, 0) / xs.length;
+    // READMEに記載の平均勝点（short(<=3)=1.3818, long_core(6-8)=1.3928）を再現する。
+    assert.ok(Math.abs(mean(shortPts) - 1.3818) < 1e-3, `short mean pts was ${mean(shortPts)}`);
+    assert.ok(Math.abs(mean(longCorePts) - 1.3928) < 1e-3, `long_core mean pts was ${mean(longCorePts)}`);
+});

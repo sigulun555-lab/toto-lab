@@ -158,6 +158,14 @@ def main():
     res2 = team_paired_compare(rows, "short(<=3)", "long_core(6-8)", key="gd")
     print({k: v for k, v in res2.items() if k != "detail"})
 
+    print("\n[pooled comparison] short(<=3) vs long_core(6-8), key=pts")
+    res_pts = pooled_compare(buckets["short(<=3)"], buckets["long_core(6-8)"], key="pts")
+    print(res_pts)
+
+    print("\n[team-paired comparison] short(<=3) vs long_core(6-8), key=pts")
+    res2_pts = team_paired_compare(rows, "short(<=3)", "long_core(6-8)", key="pts")
+    print({k: v for k, v in res2_pts.items() if k != "detail"})
+
     # sanity check for round 1668's actual case: calendar_day_gap should be 4 (10/21 -> 10/25)
     example = [r for r in rows if r["team"] in ("水戸", "広島", "名古屋", "C大阪", "横浜FM", "浦和")
                and r["date"] == "2026-10-25"]

@@ -12,43 +12,72 @@ const joined = joinAndFilter(predictions, results);
 
 assert.equal(joined.excludedPostDeadline.length, 0, 'all stored GOAL3 forecasts must be pre-deadline');
 assert.equal(joined.unresolvedTeamNames.length, 0, 'team names should resolve through the canonical alias map');
-assert.equal(joined.unresolved.length, 6, 'only the six round 1668 forecasts should await results');
 assert.ok(joined.unresolved.every(x => x.round === 1668), 'no completed historical round should have unresolved prediction targets');
+
+// round 1668はまだ結果が無いため、提出済みの各モデルについて「未確定6件
+// （指定3試合×ホーム/アウェイ）」が揃っていることを、モデルごとに検証する。
+// 2026-10-30時点でClaude・ChatGPTの両方が第1668回を提出したため、
+// 固定値6ではなく「モデル数×6」で検証する（モデルが増えても対応できる形）。
 const round1668Forecasts = predictions.filter(x => x.round === 1668);
-assert.ok(round1668Forecasts.length >= 12 && round1668Forecasts.length % 6 === 0,
-  'round 1668 must retain complete six-team snapshots as append-only revisions');
-assert.equal(new Set(round1668Forecasts.map(x => x.predictionId)).size, round1668Forecasts.length,
-  'round 1668 prediction IDs must remain unique');
-const round1668SnapshotTimes = [...new Set(round1668Forecasts.map(x => x.predictionConfirmedAt))]
-  .sort((a, b) => Date.parse(a) - Date.parse(b));
-assert.equal(round1668SnapshotTimes.length, round1668Forecasts.length / 6,
-  'each round 1668 snapshot timestamp must contain exactly one complete six-team snapshot');
-for (const snapshotAt of round1668SnapshotTimes) {
-  const rows = round1668Forecasts.filter(x => x.predictionConfirmedAt === snapshotAt);
-  assert.equal(rows.length, 6, 'each round 1668 snapshot must contain six team targets');
-  assert.equal(new Set(rows.map(x => x.matchNumber + ':' + x.isHome)).size, 6,
-    'each round 1668 snapshot must cover all six distinct team sides exactly once');
+const modelKey = (p) => `${p.modelName}::${p.modelVersion}`;
+const round1668ByModel = new Map();
+for (const p of round1668Forecasts) {
+  const key = modelKey(p);
+  if (!round1668ByModel.has(key)) round1668ByModel.set(key, []);
+  round1668ByModel.get(key).push(p);
 }
-const latestSnapshotAt = round1668SnapshotTimes[round1668SnapshotTimes.length - 1];
-const latestRound1668 = round1668Forecasts.filter(x => x.predictionConfirmedAt === latestSnapshotAt);
-assert.equal(latestRound1668.length, 6, 'the newest GPT-main snapshot must contain all six team targets');
-if (round1668SnapshotTimes.length > 1) {
-  for (const p of latestRound1668) {
-    assert.ok(p.revisionOf, 'every non-initial snapshot record must reference the prior record');
-    assert.ok(round1668Forecasts.some(prev =>
-      prev.predictionId === p.revisionOf &&
-      prev.matchNumber === p.matchNumber &&
-      prev.isHome === p.isHome &&
-      Date.parse(prev.predictionConfirmedAt) < Date.parse(p.predictionConfirmedAt)),
-    'revisionOf must reference an earlier record for the same team side');
+assert.ok(round1668ByModel.size >= 1, 'at least one model must have submitted round 1668 forecasts');
+
+for (const [key, rowsForModel] of round1668ByModel) {
+  assert.ok(rowsForModel.length >= 6 && rowsForModel.length % 6 === 0,
+    `${key}: round 1668 must retain complete six-team snapshots as append-only revisions`);
+  assert.equal(new Set(rowsForModel.map(x => x.predictionId)).size, rowsForModel.length,
+    `${key}: round 1668 prediction IDs must remain unique`);
+
+  const snapshotTimes = [...new Set(rowsForModel.map(x => x.predictionConfirmedAt))]
+    .sort((a, b) => Date.parse(a) - Date.parse(b));
+  assert.equal(snapshotTimes.length, rowsForModel.length / 6,
+    `${key}: each round 1668 snapshot timestamp must contain exactly one complete six-team snapshot`);
+  for (const snapshotAt of snapshotTimes) {
+    const rows = rowsForModel.filter(x => x.predictionConfirmedAt === snapshotAt);
+    assert.equal(rows.length, 6, `${key}: each round 1668 snapshot must contain six team targets`);
+    assert.equal(new Set(rows.map(x => x.matchNumber + ':' + x.isHome)).size, 6,
+      `${key}: each round 1668 snapshot must cover all six distinct team sides exactly once`);
+  }
+
+  const latestSnapshotAt = snapshotTimes[snapshotTimes.length - 1];
+  const latestForModel = rowsForModel.filter(x => x.predictionConfirmedAt === latestSnapshotAt);
+  assert.equal(latestForModel.length, 6, `${key}: the newest snapshot must contain all six team targets`);
+  if (snapshotTimes.length > 1) {
+    for (const p of latestForModel) {
+      assert.ok(p.revisionOf, `${key}: every non-initial snapshot record must reference the prior record`);
+      assert.ok(rowsForModel.some(prev =>
+        prev.predictionId === p.revisionOf &&
+        prev.matchNumber === p.matchNumber &&
+        prev.isHome === p.isHome &&
+        Date.parse(prev.predictionConfirmedAt) < Date.parse(p.predictionConfirmedAt)),
+      `${key}: revisionOf must reference an earlier record from the same model for the same team side`);
+    }
   }
 }
+
+// 未確定（unresolved）件数は「提出済みモデル数×6」と厳密に一致しなければならない
+// （6の倍数であればOKという緩い検証ではなく、モデルごとの最新スナップショットの
+// 合計と一致することを確認する。モデルの重複や対象試合の欠落・余分があれば、
+// 上のループまたはここで検出されて失敗する）。
+const expectedUnresolved = round1668ByModel.size * 6;
+assert.equal(joined.unresolved.length, expectedUnresolved,
+  `unresolved round 1668 forecasts must equal (model count × 6); saw ${round1668ByModel.size} model(s)`);
 assert.equal(joined.supersededRecords.filter(x => x.predictionId.includes('r1668-m') && x.predictionId.includes('predeadline')).length, 6,
   'the original round 1668 records must remain superseded by synchronized revisions');
 assert.equal(joined.usedRecords.filter(x => x.prediction.round === 1668).length, 0, 'round 1668 forecasts must remain unscored before results exist');
 for (const p of round1668Forecasts) {
   assert.ok(Date.parse(p.predictionConfirmedAt) < Date.parse(p.deadlineAt), 'round 1668 forecast must be pre-deadline');
-  assert.ok(Math.abs(Object.values(p.probabilities).reduce((a, b) => a + b, 0) - 1) < 1e-8, 'goal bucket probabilities must sum to one');
+  // 4桁に丸めた確率4つの合計は、丸め誤差だけで最大約0.0002ずれ得る
+  // （例：0.9999や1.0001）。実際に過去の確定済みレコード（round 1665/1666の
+  // Claude・ChatGPT双方）でもこの範囲のずれが広く見られるため、1e-8という
+  // 非現実的に厳しい許容値ではなく、丸め誤差を許容する5e-4を使う。
+  assert.ok(Math.abs(Object.values(p.probabilities).reduce((a, b) => a + b, 0) - 1) < 5e-4, 'goal bucket probabilities must sum to one (within 4-decimal rounding tolerance)');
 }
 assert.ok(joined.supersededRecords.length >= 18, 'Claude round-1665 revision history should exclude superseded pre-deadline rows');
 

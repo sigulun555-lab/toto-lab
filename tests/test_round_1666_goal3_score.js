@@ -12,7 +12,8 @@ const joined = joinAndFilter(predictions, results);
 
 assert.equal(joined.excludedPostDeadline.length, 0, 'all stored GOAL3 forecasts must be pre-deadline');
 assert.equal(joined.unresolvedTeamNames.length, 0, 'team names should resolve through the canonical alias map');
-assert.equal(joined.unresolved.length, 6, 'only the six round 1668 forecasts should await results');
+// Both the preserved V1 baseline and the separate V2 market-blend snapshot have six team-side forecasts; neither is scored before results arrive.
+assert.equal(joined.unresolved.length, 12, 'the six V1 and six V2 round 1668 forecasts should await results');
 assert.ok(joined.unresolved.every(x => x.round === 1668), 'no completed historical round should have unresolved prediction targets');
 const round1668Forecasts = predictions.filter(x => x.round === 1668);
 assert.ok(round1668Forecasts.length >= 12 && round1668Forecasts.length % 6 === 0,

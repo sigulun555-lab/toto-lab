@@ -1,10 +1,10 @@
 {
   "round": 1668,
-  "generatedAt": "2026-10-30T23:50:28.000Z",
+  "generatedAt": "2026-10-31T00:12:58.000Z",
   "timezone": "JST",
   "status": "provisional_team_news_revision",
   "deadlineAt": "2026-10-31T04:50:00Z",
-  "scope": "13 fixtures; injury/suspension/news review; confirmed starting lineups not yet released/verified at 2026-10-31 08:50 JST",
+  "scope": "13 fixtures; team-news audit refreshed at 2026-10-31 09:12 JST; official starting lineups not yet published/verified",
   "confirmedAdjustments": [
     {
       "matchNumber": 1,
@@ -80,16 +80,6 @@
     }
   ],
   "unquantifiedButTracked": [
-    {
-      "matchNumber": 2,
-      "team": "水戸",
-      "players": [
-        "内野航太郎",
-        "鳥海芳樹",
-        "岡本一真"
-      ],
-      "status": "10/18公式負傷発表。10/30時点の出場可否は確定確認できず。"
-    },
     {
       "matchNumber": 2,
       "team": "広島",
@@ -179,10 +169,22 @@
         "富山"
       ],
       "status": "今回確認した範囲で個別の確定離脱情報を確認できず。"
+    },
+    {
+      "matchNumber": 2,
+      "team": "水戸",
+      "players": [
+        "渡邉新太",
+        "河面旺成",
+        "岡本一真",
+        "鳥海芳樹",
+        "内野航太郎"
+      ],
+      "status": "最新確認（2026-10-31 09:12 JST）：クラブ公式の負傷診断は確認。10/30時点の第三者トラッカーでは渡邉・河面は欠場、岡本・鳥海・内野は欠場から出場微妙へ変更。ただし本試合の出場可否を示すクラブ公式発表は確認できず、全員数値補正なし。各選手の公式負傷発表URLと第三者トラッカーはlatestAudit.sourcesを参照。"
     }
   ],
-  "lineupStatus": "2026-10-31 08:50 JST時点で公式先発は未発表/未確認。予想先発を確定情報として扱わず、キックオフ前の再確認が必要。",
-  "method": "Unified adjustment framework (provisional): use the same xG-delta mechanism for every team, while setting the delta magnitude individually by player role, confirmed absence status, recent involvement/minutes, replacement depth, and team context. Attack/creation absences reduce the absent team's own xG; defensive/goalkeeper absences increase the opponent's xG. Do not mix arbitrary adjustment mechanisms or apply a universal per-player delta. If role/availability/impact is uncertain, record it without numeric adjustment. Current round's numeric deltas remain conservative manual heuristics, not fitted player-value estimates; no retrospective claim of calibration. V1 recalculates Poisson probabilities from adjusted xG. V2 blends revised Poisson 30% with the pre-existing official market vote share 70%.",
+  "lineupStatus": "2026-10-31 09:12 JST時点で公式先発は未発表/未確認。最初の対象試合は14:00開始。先発発表後に別工程で再確認する。",
+  "method": "Unified adjustment framework (provisional): use the same xG-delta mechanism for every team, while setting the delta magnitude individually by player role, confirmed absence status, recent involvement/minutes, replacement depth, and team context. Attack/creation absences reduce the absent team's own xG; defensive/goalkeeper absences increase the opponent's xG. Do not mix arbitrary adjustment mechanisms or apply a universal per-player delta. If role/availability/impact is uncertain, record it without numeric adjustment. Current round's numeric deltas remain conservative manual heuristics, not fitted player-value estimates; no retrospective claim of calibration. V1 recalculates Poisson probabilities from adjusted xG. V2 blends revised Poisson 30% with the pre-existing official market vote share 70%. Latest 2026-10-31 09:12 JST audit: Mito's five official injury announcements were reviewed; 10/30 third-party availability changes were tracked, but no numeric adjustment was added because match-specific availability was not officially confirmed. The 08:35 JST official toto vote snapshot was verified and is already the snapshot used in V2.",
   "sources": [
     "https://www.jleague.jp/news/article/35233/",
     "https://www.fagiano-okayama.com/news/202610171600/",
@@ -206,5 +208,65 @@
     "uncertainty": "Unconfirmed injuries, expected lineups, and uncertain return status are tracked but receive no numeric adjustment until verified.",
     "calibration": "Treat manual deltas as provisional heuristics. Store the rationale and source; calibrate magnitudes only through historical/out-of-sample validation.",
     "timing": "Official starting lineups are a separate final pre-kickoff update and must not be conflated with this interim team-news revision."
+  },
+  "latestAudit": {
+    "checkedAt": "2026-10-31T09:12:58+09:00",
+    "officialStartingLineups": "Not yet published/verified at this check. First fixtures kick off at 14:00 JST; recheck near lineup release.",
+    "officialTotoVoteSnapshot": {
+      "displayAt": "2026-10-31T08:35:00+09:00",
+      "status": "Latest official snapshot verified during this audit; same snapshot already used by V2. No newer official snapshot was confirmed.",
+      "source": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1668"
+    },
+    "newlyReviewedMitoAvailability": [
+      {
+        "player": "渡邉新太",
+        "role": "FW",
+        "officialInjury": "Left medial collateral ligament injury; club announcement dated 2026-10-12, injury occurred 2026-09-26.",
+        "latestAvailability": "Third-party tracker listed as absent on 2026-10-30; no current match-specific club confirmation found.",
+        "numericAdjustment": "none",
+        "reason": "Current match availability and current role/minute impact are not sufficiently confirmed."
+      },
+      {
+        "player": "河面旺成",
+        "role": "DF",
+        "officialInjury": "Left gastrocnemius strain; club announcement dated 2026-10-12, injury occurred 2026-10-04.",
+        "latestAvailability": "Third-party tracker listed as absent on 2026-10-30; no current match-specific club confirmation found.",
+        "numericAdjustment": "none",
+        "reason": "Current match availability and replacement impact are not sufficiently confirmed."
+      },
+      {
+        "player": "岡本一真",
+        "role": "DF",
+        "officialInjury": "Right ankle sprain; club announcement dated 2026-10-18, injury occurred 2026-10-15.",
+        "latestAvailability": "Third-party tracker changed from absent to questionable on 2026-10-30.",
+        "numericAdjustment": "none",
+        "reason": "Availability remains uncertain."
+      },
+      {
+        "player": "鳥海芳樹",
+        "role": "MF",
+        "officialInjury": "Left semitendinosus strain; club announcement dated 2026-10-18, injury occurred 2026-10-11.",
+        "latestAvailability": "Third-party tracker changed from absent to questionable on 2026-10-30.",
+        "numericAdjustment": "none",
+        "reason": "Availability remains uncertain."
+      },
+      {
+        "player": "内野航太郎",
+        "role": "FW",
+        "officialInjury": "Left biceps femoris strain; club announcement dated 2026-10-18, injury occurred 2026-10-11.",
+        "latestAvailability": "Third-party tracker changed from absent to questionable on 2026-10-30.",
+        "numericAdjustment": "none",
+        "reason": "Availability remains uncertain."
+      }
+    ],
+    "decision": "No new numeric xG adjustment applied. The newly checked Mito statuses are recorded as uncertain; existing V1/V2 injury-adjusted probabilities remain unchanged pending official lineup/availability confirmation.",
+    "sources": [
+      "https://www.mito-hollyhock.net/news/p=55043/",
+      "https://www.mito-hollyhock.net/news/p=55241/",
+      "https://www.mito-hollyhock.net/news/p=55379/",
+      "https://www.mito-hollyhock.net/news/p=55378/",
+      "https://www.mito-hollyhock.net/news/p=55377/",
+      "https://dailyil.com/ja/team/j1-mit/"
+    ]
   }
 }

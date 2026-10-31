@@ -12,10 +12,31 @@ const joined = joinAndFilter(predictions, results);
 
 assert.equal(joined.excludedPostDeadline.length, 0, 'all stored GOAL3 forecasts must be pre-deadline');
 assert.equal(joined.unresolvedTeamNames.length, 0, 'team names should resolve through the canonical alias map');
-// Both the preserved V1 baseline and the separate V2 market-blend snapshot have six team-side forecasts; neither is scored before results arrive.
-assert.equal(joined.unresolved.length, 12, 'the six V1 and six V2 round 1668 forecasts should await results');
+// Each submitted model/version must retain exactly six active team-side records.
+// Count both unresolved and already-scored active records so this remains valid after
+// official round 1668 results are appended. At present the active versions are GPT V1,
+// GPT V2 market-blend, and Claude V1 (18 team-side records in total).
 assert.ok(joined.unresolved.every(x => x.round === 1668), 'no completed historical round should have unresolved prediction targets');
 const round1668Forecasts = predictions.filter(x => x.round === 1668);
+const modelKey = p => `${p.modelName}::${p.modelVersion}`;
+const round1668ModelKeys = new Set(round1668Forecasts.map(modelKey));
+const activeRound1668Ids = new Set([
+  ...joined.usedRecords.filter(x => x.prediction.round === 1668).map(x => x.prediction.predictionId),
+  ...joined.unresolved.filter(x => x.round === 1668).map(x => x.predictionId)
+]);
+const activeRound1668 = round1668Forecasts.filter(p => activeRound1668Ids.has(p.predictionId));
+assert.equal(activeRound1668.length, round1668ModelKeys.size * 6,
+  'round 1668 must have exactly six active team-side forecasts per submitted model/version');
+for (const key of round1668ModelKeys) {
+  const rows = activeRound1668.filter(p => modelKey(p) === key);
+  assert.equal(rows.length, 6, `${key}: exactly six active team-side forecasts are required`);
+  assert.equal(new Set(rows.map(p => `${p.matchNumber}:${p.isHome}`)).size, 6,
+    `${key}: active forecasts must cover all six match-side combinations exactly once`);
+}
+const unresolved1668Count = joined.unresolved.filter(x => x.round === 1668).length;
+const scored1668Count = joined.usedRecords.filter(x => x.prediction.round === 1668).length;
+assert.equal(unresolved1668Count + scored1668Count, round1668ModelKeys.size * 6,
+  'round 1668 active forecasts must be fully accounted for as unresolved or scored');
 assert.ok(round1668Forecasts.length >= 12 && round1668Forecasts.length % 6 === 0,
   'round 1668 must retain complete six-team snapshots as append-only revisions');
 assert.equal(new Set(round1668Forecasts.map(x => x.predictionId)).size, round1668Forecasts.length,

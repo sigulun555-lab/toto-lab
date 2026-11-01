@@ -292,8 +292,8 @@
     "displayAt": "2026-11-02T00:17:00+09:00",
     "retrievedAt": "2026-11-01T15:34:18Z",
     "priorMarketVoteShareKeyOrder": {
-      "0": "home_win",
-      "1": "draw",
+      "0": "draw",
+      "1": "home_win",
       "2": "away_win"
     },
     "correctModelOutcomeKeyOrder": {
@@ -301,7 +301,7 @@
       "1": "home_win",
       "2": "away_win"
     },
-    "finding": "The prior V2 marketVoteShare values were stored in home/draw/away order under keys 0/1/2, while model.js and the market-blend test define 0=draw, 1=home, 2=away. The prior V2 probabilities therefore mixed mismatched classes. The original records remain preserved; the appended revisions correct the mapping."
+    "finding": "The prior V2 marketVoteShare values were already keyed consistently with model.js and the existing market-blend test: 0=draw, 1=home win, 2=away win. No key-order defect was found. This revision only refreshes the official vote snapshot from the later 05:08 JST display; the prior records remain preserved."
   },
   "validation": {
     "fixtureCount": 13,
@@ -315,5 +315,5 @@
   },
   "predictionConfirmedAt": "2026-11-01T20:30:18Z",
   "deadlineAt": "2026-11-03T04:45:00Z",
-  "notes": "Official displayed percentages and vote counts were transcribed directly from the official page. The displayed timestamp is 05:08 JST, 21 minutes 25 seconds before retrieval; it is a timestamped official snapshot, not a claim that the values were live at retrieval. No secondary source was used. No injury or lineup adjustment was applied."
+  "notes": "Official displayed percentages and vote counts were transcribed directly from the official page. The displayed timestamp is 05:08 JST, 21 minutes 25 seconds before retrieval; it is a timestamped official snapshot, not a claim that the values were live at retrieval. No secondary source was used. The prior 00:17 JST snapshot is retained in the original V2 records and its key order is consistent. No injury or lineup adjustment was applied."
 }

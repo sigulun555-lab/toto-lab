@@ -4,11 +4,68 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { loadAllPredictionsGoal3, joinAndFilter, scoreGroup } = require('../scripts/score_predictions_goal3.js');
 const { readJsonlDirOrFile } = require('../scripts/score_predictions.js');
+const { resolveTeamName } = require('../scripts/validate_prediction_goal3.js');
 
 const root = path.resolve(__dirname, '..');
 const predictions = loadAllPredictionsGoal3(path.join(root, 'predictions'));
 const results = readJsonlDirOrFile(path.join(root, 'results'));
 const joined = joinAndFilter(predictions, results);
+
+// A round is considered complete for GOAL3 only when results contain every
+// distinct fixture represented by its eligible forecast records. This permits
+// genuinely future rounds (zero results) and partially completed rounds, while
+// still rejecting unresolved predictions once all their fixtures have results.
+function completedRoundsWithResultCoverage(predictionRows, resultRows) {
+  const fixturesByRound = new Map();
+  for (const p of predictionRows) {
+    const confirmed = Date.parse(p.predictionConfirmedAt);
+    const deadline = Date.parse(p.deadlineAt);
+    if (!Number.isFinite(confirmed) || !Number.isFinite(deadline) || confirmed >= deadline) continue;
+    const team = resolveTeamName(p.team);
+    const opponent = resolveTeamName(p.opponent);
+    if (!team.resolved || !opponent.resolved) continue;
+    const home = p.isHome ? team.canonicalName : opponent.canonicalName;
+    const away = p.isHome ? opponent.canonicalName : team.canonicalName;
+    const key = `${p.round}__${p.matchNumber}__${home}__${away}`;
+    const round = String(p.round);
+    if (!fixturesByRound.has(round)) fixturesByRound.set(round, new Set());
+    fixturesByRound.get(round).add(key);
+  }
+
+  const resultFixtures = new Set();
+  for (const r of resultRows) {
+    const home = resolveTeamName(r.homeTeam);
+    const away = resolveTeamName(r.awayTeam);
+    if (!home.resolved || !away.resolved) continue;
+    resultFixtures.add(`${r.round}__${r.matchNumber}__${home.canonicalName}__${away.canonicalName}`);
+  }
+
+  return new Set([...fixturesByRound.entries()]
+    .filter(([, fixtures]) => fixtures.size > 0 && [...fixtures].every(key => resultFixtures.has(key)))
+    .map(([round]) => Number(round)));
+}
+
+// Regression guard: no result means a future round is not complete; one of two
+// fixtures means a round is still partial; both matching results complete it.
+const sampleFuturePredictions = [
+  { round: 9999, matchNumber: 1, team: '水戸ホーリーホック', opponent: 'セレッソ大阪', isHome: true,
+    predictionConfirmedAt: '2026-11-01T00:00:00Z', deadlineAt: '2026-11-03T04:45:00Z' },
+  { round: 9999, matchNumber: 2, team: '名古屋グランパス', opponent: '浦和レッズ', isHome: true,
+    predictionConfirmedAt: '2026-11-01T00:00:00Z', deadlineAt: '2026-11-03T04:45:00Z' }
+];
+const sampleFirstResult = [
+  { round: 9999, matchNumber: 1, homeTeam: '水戸ホーリーホック', awayTeam: 'セレッソ大阪', homeGoals: 1, awayGoals: 0 }
+];
+const sampleSecondResult = [
+  { round: 9999, matchNumber: 2, homeTeam: '名古屋グランパス', awayTeam: '浦和レッズ', homeGoals: 0, awayGoals: 0 }
+];
+assert.equal(completedRoundsWithResultCoverage(sampleFuturePredictions, []).has(9999), false,
+  'a future round with no results must remain unresolved, not completed');
+assert.equal(completedRoundsWithResultCoverage(sampleFuturePredictions, sampleFirstResult).has(9999), false,
+  'a round with only partial result coverage must remain incomplete');
+assert.equal(completedRoundsWithResultCoverage(sampleFuturePredictions, [...sampleFirstResult, ...sampleSecondResult]).has(9999), true,
+  'a round becomes complete only when every predicted fixture has a matching result');
+
 
 assert.equal(joined.excludedPostDeadline.length, 0, 'all stored GOAL3 forecasts must be pre-deadline');
 assert.equal(joined.unresolvedTeamNames.length, 0, 'team names should resolve through the canonical alias map');
@@ -16,7 +73,9 @@ assert.equal(joined.unresolvedTeamNames.length, 0, 'team names should resolve th
 // Count both unresolved and already-scored active records so this remains valid after
 // official round 1668 results are appended. At present the active versions are GPT V1,
 // GPT V2 market-blend, and Claude V1 (18 team-side records in total).
-assert.ok(joined.unresolved.every(x => x.round === 1668), 'no completed historical round should have unresolved prediction targets');
+const completedRounds = completedRoundsWithResultCoverage(predictions, results);
+assert.ok(joined.unresolved.every(x => !completedRounds.has(Number(x.round))),
+  'rounds with complete matching result coverage must not have unresolved prediction targets');
 const round1668Forecasts = predictions.filter(x => x.round === 1668);
 const modelKey = p => `${p.modelName}::${p.modelVersion}`;
 const round1668ModelKeys = new Set(round1668Forecasts.map(modelKey));

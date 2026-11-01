@@ -6,7 +6,7 @@ const path = require('node:path');
 
 const logPath = path.join(__dirname, '..', 'predictions', 'round_1669_ChatGPT_shared_score_v2.jsonl');
 const snapshotPath = path.join(__dirname, '..', 'reports', 'round_1669_toto13_official_market_snapshot_20261102T0508JST.json');
-const rows = fs.readFileSync(logPath, 'utf8').trim().split(/\\r?\\n/).map(JSON.parse);
+const rows = fs.readFileSync(logPath, 'utf8').trim().split(/\r?\n/).map(JSON.parse);
 const snapshot = JSON.parse(fs.readFileSync(snapshotPath, 'utf8'));
 const originalReport = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'reports', 'round_1669_toto13_team_news_20261102.json'), 'utf8'));
 

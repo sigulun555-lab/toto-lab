@@ -8,6 +8,23 @@ const logPath = path.join(__dirname, '..', 'predictions', 'round_1669_ChatGPT_sh
 const snapshotPath = path.join(__dirname, '..', 'reports', 'round_1669_toto13_official_market_snapshot_20261102T0508JST.json');
 const rows = fs.readFileSync(logPath, 'utf8').trim().split(/\\r?\\n/).map(JSON.parse);
 const snapshot = JSON.parse(fs.readFileSync(snapshotPath, 'utf8'));
+const originalReport = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'reports', 'round_1669_toto13_team_news_20261102.json'), 'utf8'));
+
+test('the original 00:17 market snapshot already uses 0=draw, 1=home, 2=away', () => {
+  const originalRows = rows.slice(0, 13);
+  const sourceRows = originalReport.officialVoteSnapshot.rows;
+  assert.equal(originalRows.length, 13);
+  assert.equal(sourceRows.length, 13);
+  for (let i = 0; i < 13; i++) {
+    const source = sourceRows[i];
+    const row = originalRows[i];
+    const round4 = value => Number(value.toFixed(4));
+    assert.deepEqual(row.marketVoteShare, source.voteShare);
+    assert.equal(source.voteShare['0'], round4(source.votes.draw / source.votes.total));
+    assert.equal(source.voteShare['1'], round4(source.votes.home / source.votes.total));
+    assert.equal(source.voteShare['2'], round4(source.votes.away / source.votes.total));
+  }
+});
 
 test('round 1669 V2 uses official market outcome keys 0=draw, 1=home, 2=away', () => {
   assert.equal(snapshot.round, 1669);

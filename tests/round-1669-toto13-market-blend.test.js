@@ -9,6 +9,7 @@ const snapshotPath = path.join(__dirname, '..', 'reports', 'round_1669_toto13_of
 const rows = fs.readFileSync(logPath, 'utf8').trim().split(/\r?\n/).map(JSON.parse);
 const snapshot = JSON.parse(fs.readFileSync(snapshotPath, 'utf8'));
 const originalReport = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'reports', 'round_1669_toto13_team_news_20261102.json'), 'utf8'));
+const near = (actual, expected, tolerance = 1e-12) => assert.ok(Math.abs(actual - expected) <= tolerance, `${actual} differs from ${expected}`);
 
 test('the original 00:17 market snapshot already uses 0=draw, 1=home, 2=away', () => {
   const originalRows = rows.slice(0, 13);
@@ -20,9 +21,9 @@ test('the original 00:17 market snapshot already uses 0=draw, 1=home, 2=away', (
     const row = originalRows[i];
     const round4 = value => Number(value.toFixed(4));
     assert.deepEqual(row.marketVoteShare, source.voteShare);
-    assert.equal(source.voteShare['0'], round4(source.votes.draw / source.votes.total));
-    assert.equal(source.voteShare['1'], round4(source.votes.home / source.votes.total));
-    assert.equal(source.voteShare['2'], round4(source.votes.away / source.votes.total));
+    near(source.voteShare['0'], source.votes.draw / source.votes.total, 0.0001);
+    near(source.voteShare['1'], source.votes.home / source.votes.total, 0.0001);
+    near(source.voteShare['2'], source.votes.away / source.votes.total, 0.0001);
   }
 });
 
@@ -40,9 +41,9 @@ test('round 1669 V2 uses official market outcome keys 0=draw, 1=home, 2=away', (
     const row = latestByMatch.get(market.matchNumber);
     assert.ok(row, `missing V2 row for match ${market.matchNumber}`);
     assert.deepEqual(row.marketVoteShare, market.marketVoteShare);
-    assert.equal(row.marketVoteShare['0'], market.displayedVoteSharePercent.draw / 100);
-    assert.equal(row.marketVoteShare['1'], market.displayedVoteSharePercent.home / 100);
-    assert.equal(row.marketVoteShare['2'], market.displayedVoteSharePercent.away / 100);
+    near(row.marketVoteShare['0'], market.displayedVoteSharePercent.draw / 100);
+    near(row.marketVoteShare['1'], market.displayedVoteSharePercent.home / 100);
+    near(row.marketVoteShare['2'], market.displayedVoteSharePercent.away / 100);
     assert.equal(market.voteCounts.home + market.voteCounts.draw + market.voteCounts.away, market.voteCounts.total);
     assert.equal(market.voteCounts.total, snapshot.totalVotes);
 

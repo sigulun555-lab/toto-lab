@@ -34,7 +34,18 @@ jobs:
               case "$file" in
                 predictions/*_ChatGPT_goal3.jsonl)
                   mkdir -p "$(dirname "$file")"
-                  git show "FETCH_HEAD:$file" > "$file"
+                  tmp_branch="$(mktemp)"
+                  git show "FETCH_HEAD:$file" > "$tmp_branch"
+                  if [ -f "$file" ]; then
+                    # Union merge: keep every line already on main, then add lines
+                    # that exist only on the sync branch. Never drop a line.
+                    tmp_union="$(mktemp)"
+                    cat "$file" "$tmp_branch" | awk 'NF && !seen[$0]++' > "$tmp_union"
+                    mv "$tmp_union" "$file"
+                  else
+                    mv "$tmp_branch" "$file"
+                  fi
+                  rm -f "$tmp_branch"
                   ;;
               esac
             done < <(git ls-tree -r --name-only FETCH_HEAD -- predictions)

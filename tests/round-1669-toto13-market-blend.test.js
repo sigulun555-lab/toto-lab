@@ -42,8 +42,8 @@ function assertRevisionAgainstSnapshot(revisions, marketSnapshot) {
     }
     const sum = Object.values(row.outcomeProbabilities).reduce((a, b) => a + b, 0);
     assert.ok(Math.abs(sum - 1) <= 2e-8);
-    assert.equal(row.marketOfficialDisplayAt, marketSnapshot.sourceDisplayedAt);
-    assert.equal(row.marketRetrievedAt, marketSnapshot.retrievedAt);
+    assert.equal(Date.parse(row.marketOfficialDisplayAt), Date.parse(marketSnapshot.sourceDisplayedAt));
+    assert.equal(Date.parse(row.marketRetrievedAt), Date.parse(marketSnapshot.retrievedAt));
     assert.ok(Date.parse(row.predictionConfirmedAt) < Date.parse(row.deadlineAt));
   }
 }

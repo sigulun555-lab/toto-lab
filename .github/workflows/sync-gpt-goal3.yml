@@ -24,6 +24,24 @@ jobs:
           ref: main
           path: gpt-source
           persist-credentials: false
+      - name: Restore existing sync PR snapshots before append
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-remote --exit-code --heads origin automation/sync-gpt-goal3 >/dev/null 2>&1; then
+            git fetch --no-tags origin automation/sync-gpt-goal3
+            while IFS= read -r file; do
+              case "$file" in
+                predictions/*_ChatGPT_goal3.jsonl)
+                  mkdir -p "$(dirname "$file")"
+                  git show "FETCH_HEAD:$file" > "$file"
+                  ;;
+              esac
+            done < <(git ls-tree -r --name-only FETCH_HEAD -- predictions)
+          else
+            echo "No existing sync PR branch; starting from main."
+          fi
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:

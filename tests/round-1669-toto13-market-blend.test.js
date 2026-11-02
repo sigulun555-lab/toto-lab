@@ -8,10 +8,12 @@ const dir = path.join(__dirname, '..');
 const logPath = path.join(dir, 'predictions', 'round_1669_ChatGPT_shared_score_v2.jsonl');
 const oldSnapshotPath = path.join(dir, 'reports', 'round_1669_toto13_official_market_snapshot_20261102T0508JST.json');
 const snapshotPath = path.join(dir, 'reports', 'round_1669_toto13_official_market_snapshot_20261102T1548JST.json');
+const latestSnapshotPath = path.join(dir, 'reports', 'round_1669_toto13_official_market_snapshot_20261102T2040JST.json');
 const originalReportPath = path.join(dir, 'reports', 'round_1669_toto13_team_news_20261102.json');
 const rows = fs.readFileSync(logPath, 'utf8').trim().split(/\r?\n/).map(JSON.parse);
 const oldSnapshot = JSON.parse(fs.readFileSync(oldSnapshotPath, 'utf8'));
 const snapshot = JSON.parse(fs.readFileSync(snapshotPath, 'utf8'));
+const latestSnapshot = JSON.parse(fs.readFileSync(latestSnapshotPath, 'utf8'));
 const originalReport = JSON.parse(fs.readFileSync(originalReportPath, 'utf8'));
 const near = (actual, expected, tolerance = 1e-12) => assert.ok(Math.abs(actual - expected) <= tolerance, `${actual} differs from ${expected}`);
 
@@ -64,10 +66,17 @@ test('the 05:08 official market snapshot and its 13 V2 revisions remain preserve
   assertRevisionAgainstSnapshot(rows.slice(13, 26), oldSnapshot);
 });
 
-test('the 15:48 official market snapshot is used by the latest 13 V2 revisions', () => {
+test('the 15:48 official market snapshot and its 13 V2 revisions remain preserved', () => {
   assert.equal(snapshot.round, 1669);
   assert.equal(snapshot.totalVotes, 248628);
   assert.deepEqual(snapshot.outcomeKeyOrder, { '0': 'draw', '1': 'home_win', '2': 'away_win' });
-  assert.equal(rows.length, 39);
+  assert.equal(rows.length, 52);
   assertRevisionAgainstSnapshot(rows.slice(26, 39), snapshot);
+});
+
+test('the 20:40 official market snapshot is used by the latest 13 V2 revisions', () => {
+  assert.equal(latestSnapshot.round, 1669);
+  assert.equal(latestSnapshot.totalVotes, 310144);
+  assert.deepEqual(latestSnapshot.outcomeKeyOrder, { '0': 'draw', '1': 'home_win', '2': 'away_win' });
+  assertRevisionAgainstSnapshot(rows.slice(39, 52), latestSnapshot);
 });

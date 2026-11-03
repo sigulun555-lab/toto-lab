@@ -1,0 +1,1532 @@
+{
+  "round": 1669,
+  "product": "toto13",
+  "matchDate": "2026-11-03",
+  "generatedAt": "2026-11-01T15:34:18Z",
+  "deadlineAt": "2026-11-03T04:45:00Z",
+  "officialSchedule": {
+    "sourceUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardSalesTermtotoSP.form?holdCntId=1669",
+    "retrievedAt": "2026-11-01T15:34:18Z",
+    "networkDeadlineJst": "2026-11-03 13:45",
+    "matchCount": 13,
+    "fixtures": [
+      {
+        "matchNumber": 1,
+        "homeTeam": "カターレ富山",
+        "awayTeam": "ベガルタ仙台"
+      },
+      {
+        "matchNumber": 2,
+        "homeTeam": "ＲＢ大宮アルディージャ",
+        "awayTeam": "いわきＦＣ"
+      },
+      {
+        "matchNumber": 3,
+        "homeTeam": "大分トリニータ",
+        "awayTeam": "ヴァンラーレ八戸"
+      },
+      {
+        "matchNumber": 4,
+        "homeTeam": "モンテディオ山形",
+        "awayTeam": "徳島ヴォルティス"
+      },
+      {
+        "matchNumber": 5,
+        "homeTeam": "湘南ベルマーレ",
+        "awayTeam": "サガン鳥栖"
+      },
+      {
+        "matchNumber": 6,
+        "homeTeam": "ヴァンフォーレ甲府",
+        "awayTeam": "アルビレックス新潟"
+      },
+      {
+        "matchNumber": 7,
+        "homeTeam": "藤枝ＭＹＦＣ",
+        "awayTeam": "ジュビロ磐田"
+      },
+      {
+        "matchNumber": 8,
+        "homeTeam": "テゲバジャーロ宮崎",
+        "awayTeam": "栃木シティ"
+      },
+      {
+        "matchNumber": 9,
+        "homeTeam": "ＦＣ今治",
+        "awayTeam": "北海道コンサドーレ札幌"
+      },
+      {
+        "matchNumber": 10,
+        "homeTeam": "横浜ＦＣ",
+        "awayTeam": "ブラウブリッツ秋田"
+      },
+      {
+        "matchNumber": 11,
+        "homeTeam": "奈良クラブ",
+        "awayTeam": "ザスパ群馬"
+      },
+      {
+        "matchNumber": 12,
+        "homeTeam": "レノファ山口ＦＣ",
+        "awayTeam": "鹿児島ユナイテッドＦＣ"
+      },
+      {
+        "matchNumber": 13,
+        "homeTeam": "カマタマーレ讃岐",
+        "awayTeam": "松本山雅ＦＣ"
+      }
+    ]
+  },
+  "officialVoteSnapshot": {
+    "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1669",
+    "displayAt": "2026-11-02T00:17:00+09:00",
+    "retrievedAt": "2026-11-01T15:34:18Z",
+    "totalVotes": 169096,
+    "rows": [
+      {
+        "matchNumber": 1,
+        "homeTeam": "カターレ富山",
+        "awayTeam": "ベガルタ仙台",
+        "votes": {
+          "home": 53465,
+          "draw": 45739,
+          "away": 69892,
+          "total": 169096
+        },
+        "voteShare": {
+          "0": 0.2705,
+          "1": 0.3162,
+          "2": 0.4133
+        }
+      },
+      {
+        "matchNumber": 2,
+        "homeTeam": "ＲＢ大宮アルディージャ",
+        "awayTeam": "いわきＦＣ",
+        "votes": {
+          "home": 93718,
+          "draw": 37656,
+          "away": 37722,
+          "total": 169096
+        },
+        "voteShare": {
+          "0": 0.2227,
+          "1": 0.5542,
+          "2": 0.2231
+        }
+      },
+      {
+        "matchNumber": 3,
+        "homeTeam": "大分トリニータ",
+        "awayTeam": "ヴァンラーレ八戸",
+        "votes": {
+          "home": 102746,
+          "draw": 36720,
+          "away": 29630,
+          "total": 169096
+        },
+        "voteShare": {
+          "0": 0.2172,
+          "1": 0.6076,
+          "2": 0.1752
+        }
+      },
+      {
+        "matchNumber": 4,
+        "homeTeam": "モンテディオ山形",
+        "awayTeam": "徳島ヴォルティス",
+        "votes": {
+          "home": 59412,
+          "draw": 49776,
+          "away": 59908,
+          "total": 169096
+        },
+        "voteShare": {
+          "0": 0.2944,
+          "1": 0.3513,
+          "2": 0.3543
+        }
+      },
+      {
+        "matchNumber": 5,
+        "homeTeam": "湘南ベルマーレ",
+        "awayTeam": "サガン鳥栖",
+        "votes": {
+          "home": 92277,
+          "draw": 41747,
+          "away": 35072,
+          "total": 169096
+        },
+        "voteShare": {
+          "0": 0.2469,
+          "1": 0.5457,
+          "2": 0.2074
+        }
+      },
+      {
+        "matchNumber": 6,
+        "homeTeam": "ヴァンフォーレ甲府",
+        "awayTeam": "アルビレックス新潟",
+        "votes": {
+          "home": 35846,
+          "draw": 35091,
+          "away": 98159,
+          "total": 169096
+        },
+        "voteShare": {
+          "0": 0.2075,
+          "1": 0.212,
+          "2": 0.5805
+        }
+      },
+      {
+        "matchNumber": 7,
+        "homeTeam": "藤枝ＭＹＦＣ",
+        "awayTeam": "ジュビロ磐田",
+        "votes": {
+          "home": 45738,
+          "draw": 50195,
+          "away": 73163,
+          "total": 169096
+        },
+        "voteShare": {
+          "0": 0.2968,
+          "1": 0.2705,
+          "2": 0.4327
+        }
+      },
+      {
+        "matchNumber": 8,
+        "homeTeam": "テゲバジャーロ宮崎",
+        "awayTeam": "栃木シティ",
+        "votes": {
+          "home": 105777,
+          "draw": 32535,
+          "away": 30784,
+          "total": 169096
+        },
+        "voteShare": {
+          "0": 0.1924,
+          "1": 0.6255,
+          "2": 0.1821
+        }
+      },
+      {
+        "matchNumber": 9,
+        "homeTeam": "ＦＣ今治",
+        "awayTeam": "北海道コンサドーレ札幌",
+        "votes": {
+          "home": 37782,
+          "draw": 41839,
+          "away": 89475,
+          "total": 169096
+        },
+        "voteShare": {
+          "0": 0.2474,
+          "1": 0.2234,
+          "2": 0.5292
+        }
+      },
+      {
+        "matchNumber": 10,
+        "homeTeam": "横浜ＦＣ",
+        "awayTeam": "ブラウブリッツ秋田",
+        "votes": {
+          "home": 108090,
+          "draw": 32271,
+          "away": 28735,
+          "total": 169096
+        },
+        "voteShare": {
+          "0": 0.1909,
+          "1": 0.6392,
+          "2": 0.1699
+        }
+      },
+      {
+        "matchNumber": 11,
+        "homeTeam": "奈良クラブ",
+        "awayTeam": "ザスパ群馬",
+        "votes": {
+          "home": 103657,
+          "draw": 33885,
+          "away": 31554,
+          "total": 169096
+        },
+        "voteShare": {
+          "0": 0.2004,
+          "1": 0.613,
+          "2": 0.1866
+        }
+      },
+      {
+        "matchNumber": 12,
+        "homeTeam": "レノファ山口ＦＣ",
+        "awayTeam": "鹿児島ユナイテッドＦＣ",
+        "votes": {
+          "home": 60331,
+          "draw": 46614,
+          "away": 62151,
+          "total": 169096
+        },
+        "voteShare": {
+          "0": 0.2757,
+          "1": 0.3568,
+          "2": 0.3675
+        }
+      },
+      {
+        "matchNumber": 13,
+        "homeTeam": "カマタマーレ讃岐",
+        "awayTeam": "松本山雅ＦＣ",
+        "votes": {
+          "home": 35584,
+          "draw": 39920,
+          "away": 93592,
+          "total": 169096
+        },
+        "voteShare": {
+          "0": 0.2361,
+          "1": 0.2104,
+          "2": 0.5535
+        }
+      }
+    ]
+  },
+  "modelInputs": {
+    "modelPath": "sigulun555-lab/gpt:model.js",
+    "modelSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+    "historyPath": "sigulun555-lab/gpt:data/history.json",
+    "historySha": "795857ae4112411aa00d52ededffdc078ffc7c96",
+    "aliasesPath": "sigulun555-lab/gpt:data/team_aliases.json",
+    "aliasesSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab",
+    "teamsPath": "sigulun555-lab/toto-lab:data/teams.json",
+    "teamsSha": "41096236f986f9456beeb15f1c35e61e0529caeb",
+    "historyRows": 410,
+    "eligibleHistoricalMatches": 410,
+    "latestEligibleMatchDate": "2026-11-01",
+    "historyFetchedAtValues": [
+      "2026-11-01T13:20:28.125Z"
+    ],
+    "matchesPerTeam": 12
+  },
+  "validation": {
+    "fixtureCount": 13,
+    "teamCount": 26,
+    "allTeamsResolved": true,
+    "allTeamsHave12HistoryMatches": true,
+    "v1ProbabilitySumsValid": true,
+    "v2ProbabilitySumsValid": true,
+    "v2BlendMatches30_70": true,
+    "predictionBeforeDeadline": true,
+    "noInjuryOrLineupNumericAdjustment": true,
+    "priorRound1668V1Reproduction": "all 13 matches reproduced from existing model.js with max absolute difference < 5e-9"
+  },
+  "teamNewsMethod": "クラブ/Jリーグ公式情報を優先し、取得できた公式試合・日程ページを確認。個別の負傷・出場停止・復帰情報は確認できた範囲で未確認。補助としてFootball LABの全13試合プレビューを確認した。",
+  "teamNewsChecks": [
+    {
+      "matchNumber": 1,
+      "homeTeam": "カターレ富山",
+      "awayTeam": "ベガルタ仙台",
+      "previewSource": {
+        "name": "Football LAB",
+        "url": "https://www.football-lab.jp/toya/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "homeTeamCheck": {
+        "team": "カターレ富山",
+        "side": "home",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/toya/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "亀田　歩夢",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/toya/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "深澤　壯太",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/toya/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "awayTeamCheck": {
+        "team": "ベガルタ仙台",
+        "side": "away",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/toya/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "井上　詩音",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/toya/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "五十嵐　聖己",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/toya/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "predictedLineup": {
+        "status": "not_published_on_preview_page",
+        "detail": "Football LABのスタメン予想欄は「予想フォーメーションは後日更新予定」。",
+        "officialLineup": "確認した公式試合情報では未取得。公式先発確定として扱わない。",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "recentMemberChanges": "個別の直近メンバー変更は確認した公式情報の範囲で未確認。"
+    },
+    {
+      "matchNumber": 2,
+      "homeTeam": "ＲＢ大宮アルディージャ",
+      "awayTeam": "いわきＦＣ",
+      "previewSource": {
+        "name": "Football LAB",
+        "url": "https://www.football-lab.jp/omiy/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "homeTeamCheck": {
+        "team": "ＲＢ大宮アルディージャ",
+        "side": "home",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/omiy/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "小島　幹敏",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/omiy/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "カウアン　ディニース",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/omiy/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "awayTeamCheck": {
+        "team": "いわきＦＣ",
+        "side": "away",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/omiy/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "柴田　壮介",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/omiy/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "加藤　有輝",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/omiy/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "大氏　凜州",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/omiy/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "岩下　航",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/omiy/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "predictedLineup": {
+        "status": "not_published_on_preview_page",
+        "detail": "Football LABのスタメン予想欄は「予想フォーメーションは後日更新予定」。",
+        "officialLineup": "確認した公式試合情報では未取得。公式先発確定として扱わない。",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "recentMemberChanges": "個別の直近メンバー変更は確認した公式情報の範囲で未確認。"
+    },
+    {
+      "matchNumber": 3,
+      "homeTeam": "大分トリニータ",
+      "awayTeam": "ヴァンラーレ八戸",
+      "previewSource": {
+        "name": "Football LAB",
+        "url": "https://www.football-lab.jp/oita/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "homeTeamCheck": {
+        "team": "大分トリニータ",
+        "side": "home",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/oita/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "山口　卓己",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/oita/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "有働　夢叶",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/oita/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "ペレイラ",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/oita/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "awayTeamCheck": {
+        "team": "ヴァンラーレ八戸",
+        "side": "away",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/oita/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "稲積　大介",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/oita/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "predictedLineup": {
+        "status": "not_published_on_preview_page",
+        "detail": "Football LABのスタメン予想欄は「予想フォーメーションは後日更新予定」。",
+        "officialLineup": "確認した公式試合情報では未取得。公式先発確定として扱わない。",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "recentMemberChanges": "個別の直近メンバー変更は確認した公式情報の範囲で未確認。"
+    },
+    {
+      "matchNumber": 4,
+      "homeTeam": "モンテディオ山形",
+      "awayTeam": "徳島ヴォルティス",
+      "previewSource": {
+        "name": "Football LAB",
+        "url": "https://www.football-lab.jp/yama/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "homeTeamCheck": {
+        "team": "モンテディオ山形",
+        "side": "home",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/yama/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "西村　慧祐",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/yama/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "氣田　亮真",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/yama/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "awayTeamCheck": {
+        "team": "徳島ヴォルティス",
+        "side": "away",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/yama/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "青木　駿人",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/yama/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "尾上　瑠聖",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/yama/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "髙田　颯也",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/yama/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "柳澤　亘",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/yama/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "predictedLineup": {
+        "status": "not_published_on_preview_page",
+        "detail": "Football LABのスタメン予想欄は「予想フォーメーションは後日更新予定」。",
+        "officialLineup": "確認した公式試合情報では未取得。公式先発確定として扱わない。",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "recentMemberChanges": "個別の直近メンバー変更は確認した公式情報の範囲で未確認。"
+    },
+    {
+      "matchNumber": 5,
+      "homeTeam": "湘南ベルマーレ",
+      "awayTeam": "サガン鳥栖",
+      "previewSource": {
+        "name": "Football LAB",
+        "url": "https://www.football-lab.jp/shon/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "homeTeamCheck": {
+        "team": "湘南ベルマーレ",
+        "side": "home",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/shon/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "堂鼻　起暉",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/shon/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "加瀬　直輝",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/shon/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "渡邊　啓吾",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/shon/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "小田　裕太郎",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/shon/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "太田　修介",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/shon/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "アルトゥール　シルバ",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/shon/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "awayTeamCheck": {
+        "team": "サガン鳥栖",
+        "side": "away",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/shon/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "堺屋　佳介",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/shon/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "水巻　時飛",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/shon/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "鈴木　大馳",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/shon/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "松本　凪生",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/shon/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "城定　幹大",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/shon/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "predictedLineup": {
+        "status": "not_published_on_preview_page",
+        "detail": "Football LABのスタメン予想欄は「予想フォーメーションは後日更新予定」。",
+        "officialLineup": "確認した公式試合情報では未取得。公式先発確定として扱わない。",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "recentMemberChanges": "個別の直近メンバー変更は確認した公式情報の範囲で未確認。"
+    },
+    {
+      "matchNumber": 6,
+      "homeTeam": "ヴァンフォーレ甲府",
+      "awayTeam": "アルビレックス新潟",
+      "previewSource": {
+        "name": "Football LAB",
+        "url": "https://www.football-lab.jp/kofu/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "homeTeamCheck": {
+        "team": "ヴァンフォーレ甲府",
+        "side": "home",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/kofu/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "福井　啓太",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/kofu/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "河田　晃兵",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/kofu/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "藤井　一志",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/kofu/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "井上　樹",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/kofu/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "awayTeamCheck": {
+        "team": "アルビレックス新潟",
+        "side": "away",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/kofu/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "小野　裕二",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/kofu/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "落合　陸",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/kofu/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "藤原　優大",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/kofu/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "predictedLineup": {
+        "status": "not_published_on_preview_page",
+        "detail": "Football LABのスタメン予想欄は「予想フォーメーションは後日更新予定」。",
+        "officialLineup": "確認した公式試合情報では未取得。公式先発確定として扱わない。",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "recentMemberChanges": "個別の直近メンバー変更は確認した公式情報の範囲で未確認。"
+    },
+    {
+      "matchNumber": 7,
+      "homeTeam": "藤枝ＭＹＦＣ",
+      "awayTeam": "ジュビロ磐田",
+      "previewSource": {
+        "name": "Football LAB",
+        "url": "https://www.football-lab.jp/fuji/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "homeTeamCheck": {
+        "team": "藤枝ＭＹＦＣ",
+        "side": "home",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/fuji/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "行友　祐翔",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/fuji/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "三木　仁太",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/fuji/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "杉田　真彦",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/fuji/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "菊井　悠介",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/fuji/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "awayTeamCheck": {
+        "team": "ジュビロ磐田",
+        "side": "away",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/fuji/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "相田　勇樹",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/fuji/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "甲斐　佑蒼",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/fuji/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "植村　洋斗",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/fuji/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "渡邉　りょう",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/fuji/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "川合　徳孟",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/fuji/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "上夷　克典",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/fuji/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "山﨑　浩介",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/fuji/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "藤原　健介",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/fuji/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "predictedLineup": {
+        "status": "not_published_on_preview_page",
+        "detail": "Football LABのスタメン予想欄は「予想フォーメーションは後日更新予定」。",
+        "officialLineup": "確認した公式試合情報では未取得。公式先発確定として扱わない。",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "recentMemberChanges": "個別の直近メンバー変更は確認した公式情報の範囲で未確認。"
+    },
+    {
+      "matchNumber": 8,
+      "homeTeam": "テゲバジャーロ宮崎",
+      "awayTeam": "栃木シティ",
+      "previewSource": {
+        "name": "Football LAB",
+        "url": "https://www.football-lab.jp/myzk/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "homeTeamCheck": {
+        "team": "テゲバジャーロ宮崎",
+        "side": "home",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/myzk/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "unconfirmed_in_checked_scope",
+        "playerListings": [],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "awayTeamCheck": {
+        "team": "栃木シティ",
+        "side": "away",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/myzk/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "unconfirmed_in_checked_scope",
+        "playerListings": [],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "predictedLineup": {
+        "status": "not_published_on_preview_page",
+        "detail": "Football LABのスタメン予想欄は「予想フォーメーションは後日更新予定」。",
+        "officialLineup": "確認した公式試合情報では未取得。公式先発確定として扱わない。",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "recentMemberChanges": "個別の直近メンバー変更は確認した公式情報の範囲で未確認。"
+    },
+    {
+      "matchNumber": 9,
+      "homeTeam": "ＦＣ今治",
+      "awayTeam": "北海道コンサドーレ札幌",
+      "previewSource": {
+        "name": "Football LAB",
+        "url": "https://www.football-lab.jp/imab/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "homeTeamCheck": {
+        "team": "ＦＣ今治",
+        "side": "home",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/imab/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "佐藤　璃樹",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/imab/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "高木和　徹",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/imab/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "土屋　巧",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/imab/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "市原　亮太",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/imab/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "新井　光",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/imab/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "awayTeamCheck": {
+        "team": "北海道コンサドーレ札幌",
+        "side": "away",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/imab/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "中村　桐耶",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/imab/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "野瀬　翔也",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/imab/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "大﨑　玲央",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/imab/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          },
+          {
+            "name": "白井　陽斗",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/imab/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "predictedLineup": {
+        "status": "not_published_on_preview_page",
+        "detail": "Football LABのスタメン予想欄は「予想フォーメーションは後日更新予定」。",
+        "officialLineup": "確認した公式試合情報では未取得。公式先発確定として扱わない。",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "recentMemberChanges": "個別の直近メンバー変更は確認した公式情報の範囲で未確認。"
+    },
+    {
+      "matchNumber": 10,
+      "homeTeam": "横浜ＦＣ",
+      "awayTeam": "ブラウブリッツ秋田",
+      "previewSource": {
+        "name": "Football LAB",
+        "url": "https://www.football-lab.jp/y-fc/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "homeTeamCheck": {
+        "team": "横浜ＦＣ",
+        "side": "home",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/y-fc/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "前田　勘太朗",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/y-fc/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "awayTeamCheck": {
+        "team": "ブラウブリッツ秋田",
+        "side": "away",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/y-fc/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "secondary_absence_listing_only",
+        "playerListings": [
+          {
+            "name": "畑橋　拓輝",
+            "status": "Football LABの欠場選手情報欄に掲載。負傷/代表招集等の理由・期間・当該試合の出場可否は未確認。",
+            "officialAnnouncementAt": null,
+            "sourceName": "Football LAB",
+            "sourceUrl": "https://www.football-lab.jp/y-fc/preview",
+            "sourceUpdatedAt": "2026-10-27",
+            "retrievedAt": "2026-11-01T15:34:18Z"
+          }
+        ],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "predictedLineup": {
+        "status": "not_published_on_preview_page",
+        "detail": "Football LABのスタメン予想欄は「予想フォーメーションは後日更新予定」。",
+        "officialLineup": "確認した公式試合情報では未取得。公式先発確定として扱わない。",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "recentMemberChanges": "個別の直近メンバー変更は確認した公式情報の範囲で未確認。"
+    },
+    {
+      "matchNumber": 11,
+      "homeTeam": "奈良クラブ",
+      "awayTeam": "ザスパ群馬",
+      "previewSource": {
+        "name": "Football LAB",
+        "url": "https://www.football-lab.jp/nara/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "homeTeamCheck": {
+        "team": "奈良クラブ",
+        "side": "home",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/nara/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "unconfirmed_in_checked_scope",
+        "playerListings": [],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "awayTeamCheck": {
+        "team": "ザスパ群馬",
+        "side": "away",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/nara/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "unconfirmed_in_checked_scope",
+        "playerListings": [],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "predictedLineup": {
+        "status": "not_available_in_checked_preview_page",
+        "detail": "確認したページ範囲に予想先発/予想フォーメーションの具体的記載なし。",
+        "officialLineup": "確認した公式試合情報では未取得。公式先発確定として扱わない。",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "recentMemberChanges": "個別の直近メンバー変更は確認した公式情報の範囲で未確認。"
+    },
+    {
+      "matchNumber": 12,
+      "homeTeam": "レノファ山口ＦＣ",
+      "awayTeam": "鹿児島ユナイテッドＦＣ",
+      "previewSource": {
+        "name": "Football LAB",
+        "url": "https://www.football-lab.jp/r-ya/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "homeTeamCheck": {
+        "team": "レノファ山口ＦＣ",
+        "side": "home",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/r-ya/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "unconfirmed_in_checked_scope",
+        "playerListings": [],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "awayTeamCheck": {
+        "team": "鹿児島ユナイテッドＦＣ",
+        "side": "away",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/r-ya/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "unconfirmed_in_checked_scope",
+        "playerListings": [],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "predictedLineup": {
+        "status": "not_available_in_checked_preview_page",
+        "detail": "確認したページ範囲に予想先発/予想フォーメーションの具体的記載なし。",
+        "officialLineup": "確認した公式試合情報では未取得。公式先発確定として扱わない。",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "recentMemberChanges": "個別の直近メンバー変更は確認した公式情報の範囲で未確認。"
+    },
+    {
+      "matchNumber": 13,
+      "homeTeam": "カマタマーレ讃岐",
+      "awayTeam": "松本山雅ＦＣ",
+      "previewSource": {
+        "name": "Football LAB",
+        "url": "https://www.football-lab.jp/sanu/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "homeTeamCheck": {
+        "team": "カマタマーレ讃岐",
+        "side": "home",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/sanu/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "unconfirmed_in_checked_scope",
+        "playerListings": [],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "awayTeamCheck": {
+        "team": "松本山雅ＦＣ",
+        "side": "away",
+        "sourceName": "Football LAB match preview (secondary source)",
+        "sourceUrl": "https://www.football-lab.jp/sanu/preview",
+        "sourceUpdatedAt": "2026-10-27",
+        "retrievedAt": "2026-11-01T15:34:18Z",
+        "status": "unconfirmed_in_checked_scope",
+        "playerListings": [],
+        "officialClubOrJLeagueConfirmation": "retrieved_official_sources_did_not_confirm_individual_status",
+        "quantitativeAdjustmentApplied": false
+      },
+      "predictedLineup": {
+        "status": "not_available_in_checked_preview_page",
+        "detail": "確認したページ範囲に予想先発/予想フォーメーションの具体的記載なし。",
+        "officialLineup": "確認した公式試合情報では未取得。公式先発確定として扱わない。",
+        "retrievedAt": "2026-11-01T15:34:18Z"
+      },
+      "recentMemberChanges": "個別の直近メンバー変更は確認した公式情報の範囲で未確認。"
+    }
+  ],
+  "officialSourcesChecked": [
+    {
+      "name": "スポーツくじ公式 第1669回toto販売/指定試合情報",
+      "url": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardSalesTermtotoSP.form?holdCntId=1669",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "スポーツくじ公式 第1669回toto投票状況",
+      "url": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1669",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "カターレ富山公式 仙台戦試合情報",
+      "url": "https://www.kataller.co.jp/events/event/vs-%E3%83%99%E3%82%AC%E3%83%AB%E3%82%BF%E4%BB%99%E5%8F%B0%EF%BC%BBhome-3/",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "RB大宮アルディージャ公式 11/3いわき戦情報",
+      "url": "https://www.rbomiya.com/jp-ja/news/omiya-46838",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "大分トリニータ公式 11/3八戸戦情報",
+      "url": "https://www.oita-trinita.co.jp/news/news-37176/",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "ヴァンラーレ八戸公式 11/3大分戦情報",
+      "url": "https://vanraure.net/archives/726676",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "モンテディオ山形公式 11/3徳島戦情報",
+      "url": "https://www.montedioyamagata.jp/information/20261103/",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "徳島ヴォルティス公式スケジュール",
+      "url": "https://vortis.jp/team/schedule/",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "テゲバジャーロ宮崎公式 11/3栃木戦マッチデーガイド",
+      "url": "https://www.tegevajaro.com/news/983",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "栃木シティ公式 次節試合日程",
+      "url": "https://tochigi-city.com/nextgame/",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "松本山雅FC公式サイト",
+      "url": "https://www.yamaga-fc.com/",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "奈良クラブ公式 11/3群馬戦情報",
+      "url": "https://naraclub.jp/archives/event/%E5%A5%88%E8%89%AF%E3%82%AF%E3%83%A9%E3%83%96-vs-%E3%82%B6%E3%82%B9%E3%83%91%E7%BE%A4%E9%A6%AC",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "Jリーグ公式 甲府vs新潟",
+      "url": "https://www.jleague.jp/match/j2/2026/110312/",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "Jリーグ公式 藤枝vs磐田",
+      "url": "https://www.jleague.jp/match/j2/2026/110313/",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "Jリーグ公式 奈良vs群馬",
+      "url": "https://www.jleague.jp/match/j3/2026/110319/",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    },
+    {
+      "name": "Jリーグ公式 山口vs鹿児島",
+      "url": "https://www.jleague.jp/match/j3/2026/110321/",
+      "retrievedAt": "2026-11-01T15:34:18Z"
+    }
+  ],
+  "limitations": [
+    "公式先発は取得できておらず、公式確定として扱っていない。",
+    "Football LABのプレビューは2026-10-27更新表示で、欠場欄は二次情報。掲載選手も当該試合の確定欠場とは断定できず、理由・発表時刻・復帰見込みは未取得。",
+    "13試合中1〜10のプレビューは予想フォーメーションが後日更新予定。11〜13は確認した範囲に具体的な予想先発記載なし。",
+    "欠場欄が見つからない試合も「該当情報なし」とは断定せず、確認した範囲で未確認とした。",
+    "V1/V2ともチームニュースは数値補正に使用していない。PR #57の未校正手動xG補正は流用していない。",
+    "公式投票率は表示時刻2026-11-02 00:17 JSTのスナップショット。後続更新があれば締切前に再取得し、必要ならrevisionOf付きで改訂する。"
+  ],
+  "quantitativeTreatment": "V1=既存model.js Poisson team-adjusted baseline。V2=0.30×V1 + 0.70×公式toto投票シェア。新しいモデル/補正は導入していない。"
+}

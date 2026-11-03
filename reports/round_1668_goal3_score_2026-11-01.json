@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "round": 1668,
+  "marketType": "totoGOAL3",
+  "generatedAt": "2026-11-01T07:13:25.000Z",
+  "deadlineAt": "2026-10-31T04:50:00Z",
+  "resultBasis": "official 90-minute final scores; GOAL3 bucket 3 represents 3 or more goals",
+  "actualResults": [
+    {
+      "matchNumber": 1,
+      "homeTeam": "ファジアーノ岡山",
+      "awayTeam": "FC東京",
+      "homeGoals": 0,
+      "awayGoals": 4,
+      "homeBucket": "0",
+      "awayBucket": "3",
+      "source": "Official FC Tokyo match result; 2026-10-31 final score 0-4. https://www.fctokyo.co.jp/match/schedule/result/20261031/"
+    },
+    {
+      "matchNumber": 2,
+      "homeTeam": "ヴィッセル神戸",
+      "awayTeam": "名古屋グランパス",
+      "homeGoals": 3,
+      "awayGoals": 1,
+      "homeBucket": "3",
+      "awayBucket": "1",
+      "source": "Official J.League match result; 2026-10-31 final score 3-1. https://www.jleague.jp/match/j1/2026/103113/?mode=pc"
+    },
+    {
+      "matchNumber": 3,
+      "homeTeam": "柏レイソル",
+      "awayTeam": "浦和レッズ",
+      "homeGoals": 4,
+      "awayGoals": 0,
+      "homeBucket": "3",
+      "awayBucket": "0",
+      "source": "Official J.League match result; 2026-10-31 final score 4-0. https://www.jleague.jp/match/j1/2026/103111/"
+    }
+  ],
+  "predictionSnapshots": [
+    {
+      "label": "GPT V1",
+      "modelName": "ChatGPT",
+      "modelVersion": "gpt-poisson-goal-dist-v1",
+      "sourceFile": "predictions/round_1668_ChatGPT_goal3.jsonl",
+      "predictionConfirmedAt": "2026-10-30T05:45:45.599Z",
+      "deadlineAt": "2026-10-31T04:50:00.000Z",
+      "metrics": {
+        "n": 6,
+        "correct": 3,
+        "accuracy": 0.5,
+        "brier": 0.5882596260192946,
+        "logloss": 1.0725098602573975
+      },
+      "details": [
+        {
+          "matchNumber": 1,
+          "team": "ファジアーノ岡山",
+          "isHome": true,
+          "actualBucket": "0",
+          "predictedBucket": "0",
+          "correct": true,
+          "actualBucketProbability": 0.5205719183777666,
+          "brier": 0.3584713804879216,
+          "logloss": 0.652827228756736
+        },
+        {
+          "matchNumber": 1,
+          "team": "FC東京",
+          "isHome": false,
+          "actualBucket": "3",
+          "predictedBucket": "3",
+          "correct": true,
+          "actualBucketProbability": 0.3444271958208392,
+          "brier": 0.5861556084336387,
+          "logloss": 1.0658725437481726
+        },
+        {
+          "matchNumber": 2,
+          "team": "ヴィッセル神戸",
+          "isHome": true,
+          "actualBucket": "3",
+          "predictedBucket": "1",
+          "correct": false,
+          "actualBucketProbability": 0.25939495148888597,
+          "brier": 0.7404717633225915,
+          "logloss": 1.3494034695525399
+        },
+        {
+          "matchNumber": 2,
+          "team": "名古屋グランパス",
+          "isHome": false,
+          "actualBucket": "1",
+          "predictedBucket": "0",
+          "correct": false,
+          "actualBucketProbability": 0.347189463894889,
+          "brier": 0.68993598157405,
+          "logloss": 1.0578846425812476
+        },
+        {
+          "matchNumber": 3,
+          "team": "柏レイソル",
+          "isHome": true,
+          "actualBucket": "3",
+          "predictedBucket": "3",
+          "correct": true,
+          "actualBucketProbability": 0.6048955597324794,
+          "brier": 0.22271980445369055,
+          "logloss": 0.5026994643946736
+        },
+        {
+          "matchNumber": 3,
+          "team": "浦和レッズ",
+          "isHome": false,
+          "actualBucket": "0",
+          "predictedBucket": "1",
+          "correct": false,
+          "actualBucketProbability": 0.16424898314887412,
+          "brier": 0.9318032178438753,
+          "logloss": 1.8063718125110153
+        }
+      ]
+    },
+    {
+      "label": "Claude V1",
+      "modelName": "Claude",
+      "modelVersion": "goal3-v1",
+      "sourceFile": "predictions/round_1668_Claude_goal3.jsonl",
+      "predictionConfirmedAt": "2026-10-30T13:07:27Z",
+      "deadlineAt": "2026-10-31T04:50:00Z",
+      "metrics": {
+        "n": 6,
+        "correct": 3,
+        "accuracy": 0.5,
+        "brier": 0.6338573316666666,
+        "logloss": 1.1629402447428674
+      },
+      "details": [
+        {
+          "matchNumber": 1,
+          "team": "ファジアーノ岡山",
+          "isHome": true,
+          "actualBucket": "0",
+          "predictedBucket": "1",
+          "correct": false,
+          "actualBucketProbability": 0.2579,
+          "brier": 0.7475694199999999,
+          "logloss": 1.3551833660948378
+        },
+        {
+          "matchNumber": 1,
+          "team": "ＦＣ東京",
+          "isHome": false,
+          "actualBucket": "3",
+          "predictedBucket": "1",
+          "correct": false,
+          "actualBucketProbability": 0.2677,
+          "brier": 0.7211380999999999,
+          "logloss": 1.3178883284558303
+        },
+        {
+          "matchNumber": 2,
+          "team": "ヴィッセル神戸",
+          "isHome": true,
+          "actualBucket": "3",
+          "predictedBucket": "3",
+          "correct": true,
+          "actualBucketProbability": 0.4021,
+          "brier": 0.48302627,
+          "logloss": 0.9110544650789086
+        },
+        {
+          "matchNumber": 2,
+          "team": "名古屋グランパス",
+          "isHome": false,
+          "actualBucket": "1",
+          "predictedBucket": "1",
+          "correct": true,
+          "actualBucketProbability": 0.3583,
+          "brier": 0.5633690599999999,
+          "logloss": 1.026384654671229
+        },
+        {
+          "matchNumber": 3,
+          "team": "柏レイソル",
+          "isHome": true,
+          "actualBucket": "3",
+          "predictedBucket": "3",
+          "correct": true,
+          "actualBucketProbability": 0.3954,
+          "brier": 0.49901694,
+          "logloss": 0.9278573682456206
+        },
+        {
+          "matchNumber": 3,
+          "team": "浦和レッズ",
+          "isHome": false,
+          "actualBucket": "0",
+          "predictedBucket": "1",
+          "correct": false,
+          "actualBucketProbability": 0.2371,
+          "brier": 0.7890242000000001,
+          "logloss": 1.4392732859107773
+        }
+      ]
+    },
+    {
+      "label": "GPT V2 market blend 30/70",
+      "modelName": "ChatGPT",
+      "modelVersion": "gpt-goal3-v2-market-blend-30-70-2026-10-31-1307JST",
+      "sourceFile": "predictions/round_1668_ChatGPT_goal3_market_blend_v2_1307JST.jsonl",
+      "predictionConfirmedAt": "2026-10-31T04:12:24.009Z",
+      "deadlineAt": "2026-10-31T04:50:00Z",
+      "metrics": {
+        "n": 6,
+        "correct": 4,
+        "accuracy": 0.6666666666666666,
+        "brier": 0.6451615154219659,
+        "logloss": 1.1639438556766322
+      },
+      "details": [
+        {
+          "matchNumber": 1,
+          "team": "ファジアーノ岡山",
+          "isHome": true,
+          "actualBucket": "0",
+          "predictedBucket": "0",
+          "correct": true,
+          "actualBucketProbability": 0.4211915755,
+          "brier": 0.49786140317871264,
+          "logloss": 0.8646675001094275
+        },
+        {
+          "matchNumber": 1,
+          "team": "FC東京",
+          "isHome": false,
+          "actualBucket": "3",
+          "predictedBucket": "3",
+          "correct": true,
+          "actualBucketProbability": 0.3191381587,
+          "brier": 0.635767955949456,
+          "logloss": 1.1421311705847144
+        },
+        {
+          "matchNumber": 2,
+          "team": "ヴィッセル神戸",
+          "isHome": true,
+          "actualBucket": "3",
+          "predictedBucket": "2",
+          "correct": false,
+          "actualBucketProbability": 0.2589784854,
+          "brier": 0.753193727008186,
+          "logloss": 1.3510102886866007
+        },
+        {
+          "matchNumber": 2,
+          "team": "名古屋グランパス",
+          "isHome": false,
+          "actualBucket": "1",
+          "predictedBucket": "1",
+          "correct": true,
+          "actualBucketProbability": 0.3763868392,
+          "brier": 0.5560812565519794,
+          "logloss": 0.9771378368131245
+        },
+        {
+          "matchNumber": 3,
+          "team": "柏レイソル",
+          "isHome": true,
+          "actualBucket": "3",
+          "predictedBucket": "3",
+          "correct": true,
+          "actualBucketProbability": 0.3733386679,
+          "brier": 0.5385032145159501,
+          "logloss": 0.9852693144453365
+        },
+        {
+          "matchNumber": 3,
+          "team": "浦和レッズ",
+          "isHome": false,
+          "actualBucket": "0",
+          "predictedBucket": "1",
+          "correct": false,
+          "actualBucketProbability": 0.1894846949,
+          "brier": 0.8895615353275106,
+          "logloss": 1.6634470234205891
+        }
+      ]
+    }
+  ],
+  "scoringDefinition": {
+    "accuracy": "highest-probability goal bucket per team-side",
+    "brier": "mean of the sum of four squared bucket errors (0/1/2/3+); same convention as scripts/score_predictions_goal3.js",
+    "logloss": "mean negative natural log of the probability assigned to the actual bucket"
+  },
+  "limitations": [
+    "Only six team-side targets (three fixtures); these metrics are descriptive and do not justify changing or adopting a model.",
+    "GPT V1 uses the latest pre-deadline snapshot on toto-lab main. No post-deadline recalculation was performed.",
+    "GPT V2 uses the saved 13:07 JST official market snapshot and the already-saved 30% model / 70% market probabilities; this is exploratory and the 70% market weight is not validated as optimal.",
+    "No production model, app, fixture updater, prediction log, or market snapshot was modified."
+  ]
+}

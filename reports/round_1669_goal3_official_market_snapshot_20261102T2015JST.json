@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "round": 1669,
+  "product": "totoGOAL3",
+  "marketType": "totoGOAL3",
+  "source": "スポーツくじ公式・第1669回 totoGOAL3投票状況",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=02&holdCntId=1669",
+  "sourceDisplayedAt": "2026-11-02T20:15:00+09:00",
+  "retrievedAt": "2026-11-02T11:40:00Z",
+  "totalVotes": 65518,
+  "goalKeyOrder": {
+    "0": "0 goals",
+    "1": "1 goal",
+    "2": "2 goals",
+    "3": "3+ goals"
+  },
+  "rows": [
+    {
+      "matchNumber": 1,
+      "team": "富山",
+      "side": "home",
+      "counts": [
+        14802,
+        23037,
+        17380,
+        10299
+      ],
+      "shares": [
+        0.2259,
+        0.3516,
+        0.2653,
+        0.1572
+      ],
+      "voteCounts": [
+        14802,
+        23037,
+        17380,
+        10299
+      ],
+      "displayedVoteSharePercent": [
+        22.59,
+        35.160000000000004,
+        26.529999999999998,
+        15.72
+      ],
+      "marketVoteShare": [
+        0.2259,
+        0.3516,
+        0.2653,
+        0.1572
+      ]
+    },
+    {
+      "matchNumber": 1,
+      "team": "仙台",
+      "side": "away",
+      "counts": [
+        12759,
+        22470,
+        19169,
+        11120
+      ],
+      "shares": [
+        0.1947,
+        0.343,
+        0.2926,
+        0.1697
+      ],
+      "voteCounts": [
+        12759,
+        22470,
+        19169,
+        11120
+      ],
+      "displayedVoteSharePercent": [
+        19.470000000000002,
+        34.300000000000004,
+        29.26,
+        16.97
+      ],
+      "marketVoteShare": [
+        0.1947,
+        0.343,
+        0.2926,
+        0.1697
+      ]
+    },
+    {
+      "matchNumber": 2,
+      "team": "大宮",
+      "side": "home",
+      "counts": [
+        7868,
+        17755,
+        23174,
+        16721
+      ],
+      "shares": [
+        0.1201,
+        0.271,
+        0.3537,
+        0.2552
+      ],
+      "voteCounts": [
+        7868,
+        17755,
+        23174,
+        16721
+      ],
+      "displayedVoteSharePercent": [
+        12.01,
+        27.1,
+        35.370000000000005,
+        25.52
+      ],
+      "marketVoteShare": [
+        0.1201,
+        0.271,
+        0.3537,
+        0.2552
+      ]
+    },
+    {
+      "matchNumber": 2,
+      "team": "いわき",
+      "side": "away",
+      "counts": [
+        17251,
+        25169,
+        15919,
+        7179
+      ],
+      "shares": [
+        0.2633,
+        0.3841,
+        0.243,
+        0.1096
+      ],
+      "voteCounts": [
+        17251,
+        25169,
+        15919,
+        7179
+      ],
+      "displayedVoteSharePercent": [
+        26.33,
+        38.41,
+        24.3,
+        10.96
+      ],
+      "marketVoteShare": [
+        0.2633,
+        0.3841,
+        0.243,
+        0.1096
+      ]
+    },
+    {
+      "matchNumber": 3,
+      "team": "大分",
+      "side": "home",
+      "counts": [
+        9499,
+        19809,
+        21830,
+        14380
+      ],
+      "shares": [
+        0.145,
+        0.3023,
+        0.3332,
+        0.2195
+      ],
+      "voteCounts": [
+        9499,
+        19809,
+        21830,
+        14380
+      ],
+      "displayedVoteSharePercent": [
+        14.499999999999998,
+        30.23,
+        33.32,
+        21.95
+      ],
+      "marketVoteShare": [
+        0.145,
+        0.3023,
+        0.3332,
+        0.2195
+      ]
+    },
+    {
+      "matchNumber": 3,
+      "team": "八戸",
+      "side": "away",
+      "counts": [
+        27838,
+        23662,
+        9061,
+        4957
+      ],
+      "shares": [
+        0.4249,
+        0.3611,
+        0.1383,
+        0.0757
+      ],
+      "voteCounts": [
+        27838,
+        23662,
+        9061,
+        4957
+      ],
+      "displayedVoteSharePercent": [
+        42.49,
+        36.11,
+        13.83,
+        7.57
+      ],
+      "marketVoteShare": [
+        0.4249,
+        0.3611,
+        0.1383,
+        0.0757
+      ]
+    }
+  ],
+  "auditNotes": [
+    "Official displayed goal-bucket shares are retained; 0,1,2,3+ order.",
+    "The six team-side vote totals each sum to 65,518.",
+    "This is a market snapshot only; it is not a recalculation or adjustment of GPT's Poisson goal distributions."
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "round": 1669,
+  "marketType": "totoGOAL3",
+  "retrievedAt": "2026-11-02",
+  "scope": "GOAL3対象3試合・6チームのうち、Football LAB欠場欄掲載選手についてクラブ/Jリーグ公式の負傷発表を追加確認",
+  "officialInjuryAnnouncements": [
+    {
+      "matchNumber": 1,
+      "team": "カターレ富山",
+      "player": "亀田 歩夢",
+      "sourcePublishedAt": "2026-09-17",
+      "diagnosis": "右膝前十字靭帯断裂・内側側副靱帯損傷・外側半月板損傷",
+      "estimatedRecovery": "約10か月",
+      "sourceUrl": "https://www.jleague.jp/news/article/34934/",
+      "status": "official_injury_announcement_found_matchday_availability_not_rechecked"
+    },
+    {
+      "matchNumber": 1,
+      "team": "カターレ富山",
+      "player": "深澤 壯太",
+      "sourcePublishedAt": "2026-10-28",
+      "diagnosis": "両肩関節唇損傷。10月26日に手術終了",
+      "estimatedRecovery": "約6か月",
+      "sourceUrl": "https://www.kataller.co.jp/all/topteam/深澤壯太選手の怪我について/",
+      "status": "official_injury_announcement_found_matchday_availability_not_rechecked"
+    },
+    {
+      "matchNumber": 2,
+      "team": "いわきFC",
+      "player": "加藤 有輝",
+      "sourcePublishedAt": "2026-09-04",
+      "diagnosis": "左膝前十字靭帯断裂。9月3日に手術",
+      "estimatedRecovery": "6〜8か月",
+      "sourceUrl": "https://iwakifc.com/2026/09/04/injury_kato/",
+      "status": "official_injury_announcement_found_matchday_availability_not_rechecked"
+    },
+    {
+      "matchNumber": 2,
+      "team": "いわきFC",
+      "player": "大氏 凜州",
+      "sourcePublishedAt": "2026-09-06",
+      "diagnosis": "左第五中足骨疲労骨折",
+      "estimatedRecovery": "約3か月",
+      "sourceUrl": "https://iwakifc.com/2026/09/06/injuary_ouji/",
+      "status": "official_injury_announcement_found_matchday_availability_not_rechecked"
+    },
+    {
+      "matchNumber": 2,
+      "team": "いわきFC",
+      "player": "岩下 航",
+      "sourcePublishedAt": "2026-09-17",
+      "diagnosis": "右大腿二頭筋肉離れ",
+      "estimatedRecovery": "約2か月",
+      "sourceUrl": "https://iwakifc.com/2026/09/17/injuary_iwashita/",
+      "status": "official_injury_announcement_found_matchday_availability_not_rechecked"
+    },
+    {
+      "matchNumber": 3,
+      "team": "大分トリニータ",
+      "player": "山口 卓己",
+      "sourcePublishedAt": "2026-08-23",
+      "diagnosis": "右膝内側側副靱帯損傷",
+      "estimatedRecovery": null,
+      "sourceUrl": "https://www.oita-trinita.co.jp/news/news-35335/",
+      "status": "official_injury_announcement_found_matchday_availability_not_rechecked"
+    },
+    {
+      "matchNumber": 3,
+      "team": "大分トリニータ",
+      "player": "有働 夢叶",
+      "sourcePublishedAt": "2026-10-11",
+      "diagnosis": "大腿直筋肉離れ",
+      "estimatedRecovery": null,
+      "sourceUrl": "https://www.oita-trinita.co.jp/news/news-37358/",
+      "status": "official_injury_announcement_found_matchday_availability_not_rechecked"
+    },
+    {
+      "matchNumber": 3,
+      "team": "大分トリニータ",
+      "player": "ペレイラ",
+      "sourcePublishedAt": "2026-10-18",
+      "diagnosis": "右腓骨骨折・右足関節遠位脛腓間損傷・右足関節三角靭帯損傷。手術実施",
+      "estimatedRecovery": null,
+      "sourceUrl": "https://www.oita-trinita.co.jp/news/news-37511/",
+      "status": "official_injury_announcement_found_matchday_availability_not_rechecked"
+    },
+    {
+      "matchNumber": 3,
+      "team": "ヴァンラーレ八戸",
+      "player": "稲積 大介",
+      "sourcePublishedAt": "2026-09-24",
+      "diagnosis": "左大腿直筋肉離れ",
+      "estimatedRecovery": null,
+      "sourceUrl": "https://vanraure.net/archives/725868",
+      "status": "official_injury_announcement_found_matchday_availability_not_rechecked"
+    }
+  ],
+  "notConfirmedInThisSearchScope": [
+    {
+      "team": "ベガルタ仙台",
+      "players": [
+        "井上 詩音",
+        "五十嵐 聖己"
+      ],
+      "note": "Football LAB欠場欄掲載は確認。クラブ/Jリーグ公式の該当負傷発表は今回の検索範囲で特定できず。"
+    },
+    {
+      "team": "ＲＢ大宮アルディージャ",
+      "players": [
+        "小島 幹敏",
+        "カウアン ディニース"
+      ],
+      "note": "Football LAB欠場欄掲載は確認。クラブ/Jリーグ公式の該当負傷発表は今回の検索範囲で特定できず。"
+    },
+    {
+      "team": "いわきFC",
+      "players": [
+        "柴田 壮介"
+      ],
+      "note": "Football LAB欠場欄掲載は確認。今回の検索範囲では公式負傷発表を特定できず。"
+    }
+  ],
+  "auditNotes": [
+    "Official injury announcements confirm the injury diagnoses and estimated recovery where published, but do not by themselves confirm the final availability for the 2026-11-03 fixture.",
+    "No numerical prediction adjustments were applied. No return-to-training or matchday squad confirmation was found in this evidence set.",
+    "Absence-list data from Football LAB remains secondary evidence; it is not treated as a confirmed matchday unavailable list.",
+    "This report covers the six totoGOAL3 team sides only, not all 26 team sides in toto13."
+  ]
+}

@@ -4,51 +4,138 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { loadAllPredictionsGoal3, joinAndFilter, scoreGroup } = require('../scripts/score_predictions_goal3.js');
 const { readJsonlDirOrFile } = require('../scripts/score_predictions.js');
+const { resolveTeamName } = require('../scripts/validate_prediction_goal3.js');
 
 const root = path.resolve(__dirname, '..');
 const predictions = loadAllPredictionsGoal3(path.join(root, 'predictions'));
 const results = readJsonlDirOrFile(path.join(root, 'results'));
 const joined = joinAndFilter(predictions, results);
 
+// A round is considered complete for GOAL3 only when results contain every
+// distinct fixture represented by its eligible forecast records. This permits
+// genuinely future rounds (zero results) and partially completed rounds, while
+// still rejecting unresolved predictions once all their fixtures have results.
+function completedRoundsWithResultCoverage(predictionRows, resultRows) {
+  const fixturesByRound = new Map();
+  for (const p of predictionRows) {
+    const confirmed = Date.parse(p.predictionConfirmedAt);
+    const deadline = Date.parse(p.deadlineAt);
+    if (!Number.isFinite(confirmed) || !Number.isFinite(deadline) || confirmed >= deadline) continue;
+    const team = resolveTeamName(p.team);
+    const opponent = resolveTeamName(p.opponent);
+    if (!team.resolved || !opponent.resolved) continue;
+    const home = p.isHome ? team.canonicalName : opponent.canonicalName;
+    const away = p.isHome ? opponent.canonicalName : team.canonicalName;
+    const key = `${p.round}__${p.matchNumber}__${home}__${away}`;
+    const round = String(p.round);
+    if (!fixturesByRound.has(round)) fixturesByRound.set(round, new Set());
+    fixturesByRound.get(round).add(key);
+  }
+
+  const resultFixtures = new Set();
+  for (const r of resultRows) {
+    const home = resolveTeamName(r.homeTeam);
+    const away = resolveTeamName(r.awayTeam);
+    if (!home.resolved || !away.resolved) continue;
+    resultFixtures.add(`${r.round}__${r.matchNumber}__${home.canonicalName}__${away.canonicalName}`);
+  }
+
+  return new Set([...fixturesByRound.entries()]
+    .filter(([, fixtures]) => fixtures.size > 0 && [...fixtures].every(key => resultFixtures.has(key)))
+    .map(([round]) => Number(round)));
+}
+
+// Regression guard: no result means a future round is not complete; one of two
+// fixtures means a round is still partial; both matching results complete it.
+const sampleFuturePredictions = [
+  { round: 9999, matchNumber: 1, team: '水戸ホーリーホック', opponent: 'セレッソ大阪', isHome: true,
+    predictionConfirmedAt: '2026-11-01T00:00:00Z', deadlineAt: '2026-11-03T04:45:00Z' },
+  { round: 9999, matchNumber: 2, team: '名古屋グランパス', opponent: '浦和レッズ', isHome: true,
+    predictionConfirmedAt: '2026-11-01T00:00:00Z', deadlineAt: '2026-11-03T04:45:00Z' }
+];
+const sampleFirstResult = [
+  { round: 9999, matchNumber: 1, homeTeam: '水戸ホーリーホック', awayTeam: 'セレッソ大阪', homeGoals: 1, awayGoals: 0 }
+];
+const sampleSecondResult = [
+  { round: 9999, matchNumber: 2, homeTeam: '名古屋グランパス', awayTeam: '浦和レッズ', homeGoals: 0, awayGoals: 0 }
+];
+assert.equal(completedRoundsWithResultCoverage(sampleFuturePredictions, []).has(9999), false,
+  'a future round with no results must remain unresolved, not completed');
+assert.equal(completedRoundsWithResultCoverage(sampleFuturePredictions, sampleFirstResult).has(9999), false,
+  'a round with only partial result coverage must remain incomplete');
+assert.equal(completedRoundsWithResultCoverage(sampleFuturePredictions, [...sampleFirstResult, ...sampleSecondResult]).has(9999), true,
+  'a round becomes complete only when every predicted fixture has a matching result');
+
+
 assert.equal(joined.excludedPostDeadline.length, 0, 'all stored GOAL3 forecasts must be pre-deadline');
 assert.equal(joined.unresolvedTeamNames.length, 0, 'team names should resolve through the canonical alias map');
-assert.equal(joined.unresolved.length, 6, 'only the six round 1668 forecasts should await results');
-assert.ok(joined.unresolved.every(x => x.round === 1668), 'no completed historical round should have unresolved prediction targets');
+// Each submitted model/version must retain exactly six active team-side records.
+// Count both unresolved and already-scored active records so this remains valid after
+// official round 1668 results are appended. At present the active versions are GPT V1,
+// GPT V2 market-blend, and Claude V1 (18 team-side records in total).
+const completedRounds = completedRoundsWithResultCoverage(predictions, results);
+assert.ok(joined.unresolved.every(x => !completedRounds.has(Number(x.round))),
+  'rounds with complete matching result coverage must not have unresolved prediction targets');
 const round1668Forecasts = predictions.filter(x => x.round === 1668);
+const modelKey = p => `${p.modelName}::${p.modelVersion}`;
+const round1668ModelKeys = new Set(round1668Forecasts.map(modelKey));
+const activeRound1668Ids = new Set([
+  ...joined.usedRecords.filter(x => x.prediction.round === 1668).map(x => x.prediction.predictionId),
+  ...joined.unresolved.filter(x => x.round === 1668).map(x => x.predictionId)
+]);
+const activeRound1668 = round1668Forecasts.filter(p => activeRound1668Ids.has(p.predictionId));
+assert.equal(activeRound1668.length, round1668ModelKeys.size * 6,
+  'round 1668 must have exactly six active team-side forecasts per submitted model/version');
+for (const key of round1668ModelKeys) {
+  const rows = activeRound1668.filter(p => modelKey(p) === key);
+  assert.equal(rows.length, 6, `${key}: exactly six active team-side forecasts are required`);
+  assert.equal(new Set(rows.map(p => `${p.matchNumber}:${p.isHome}`)).size, 6,
+    `${key}: active forecasts must cover all six match-side combinations exactly once`);
+}
+const unresolved1668Count = joined.unresolved.filter(x => x.round === 1668).length;
+const scored1668Count = joined.usedRecords.filter(x => x.prediction.round === 1668).length;
+assert.equal(unresolved1668Count + scored1668Count, round1668ModelKeys.size * 6,
+  'round 1668 active forecasts must be fully accounted for as unresolved or scored');
 assert.ok(round1668Forecasts.length >= 12 && round1668Forecasts.length % 6 === 0,
   'round 1668 must retain complete six-team snapshots as append-only revisions');
 assert.equal(new Set(round1668Forecasts.map(x => x.predictionId)).size, round1668Forecasts.length,
   'round 1668 prediction IDs must remain unique');
-const round1668SnapshotTimes = [...new Set(round1668Forecasts.map(x => x.predictionConfirmedAt))]
+// Validate the GPT Poisson V1 append-only revision chain separately from Claude's independent first snapshot and the distinct V2 model version.
+const round1668GptV1 = round1668Forecasts.filter(x =>
+  x.modelName === 'ChatGPT' && x.modelVersion === 'gpt-poisson-goal-dist-v1');
+const round1668SnapshotTimes = [...new Set(round1668GptV1.map(x => x.predictionConfirmedAt))]
   .sort((a, b) => Date.parse(a) - Date.parse(b));
-assert.equal(round1668SnapshotTimes.length, round1668Forecasts.length / 6,
-  'each round 1668 snapshot timestamp must contain exactly one complete six-team snapshot');
+assert.ok(round1668SnapshotTimes.length >= 1, 'GPT V1 must retain at least one complete round 1668 snapshot');
 for (const snapshotAt of round1668SnapshotTimes) {
-  const rows = round1668Forecasts.filter(x => x.predictionConfirmedAt === snapshotAt);
-  assert.equal(rows.length, 6, 'each round 1668 snapshot must contain six team targets');
+  const rows = round1668GptV1.filter(x => x.predictionConfirmedAt === snapshotAt);
+  assert.equal(rows.length, 6, 'each GPT V1 round 1668 snapshot must contain six team targets');
   assert.equal(new Set(rows.map(x => x.matchNumber + ':' + x.isHome)).size, 6,
-    'each round 1668 snapshot must cover all six distinct team sides exactly once');
+    'each GPT V1 snapshot must cover all six distinct team sides exactly once');
 }
 const latestSnapshotAt = round1668SnapshotTimes[round1668SnapshotTimes.length - 1];
-const latestRound1668 = round1668Forecasts.filter(x => x.predictionConfirmedAt === latestSnapshotAt);
-assert.equal(latestRound1668.length, 6, 'the newest GPT-main snapshot must contain all six team targets');
+const latestRound1668 = round1668GptV1.filter(x => x.predictionConfirmedAt === latestSnapshotAt);
+assert.equal(latestRound1668.length, 6, 'the newest GPT V1 snapshot must contain all six team targets');
 if (round1668SnapshotTimes.length > 1) {
   for (const p of latestRound1668) {
-    assert.ok(p.revisionOf, 'every non-initial snapshot record must reference the prior record');
-    assert.ok(round1668Forecasts.some(prev =>
+    assert.ok(p.revisionOf, 'every non-initial GPT V1 snapshot record must reference the prior V1 record');
+    assert.ok(round1668GptV1.some(prev =>
       prev.predictionId === p.revisionOf &&
       prev.matchNumber === p.matchNumber &&
       prev.isHome === p.isHome &&
       Date.parse(prev.predictionConfirmedAt) < Date.parse(p.predictionConfirmedAt)),
-    'revisionOf must reference an earlier record for the same team side');
+    'revisionOf must reference an earlier GPT V1 record for the same team side');
   }
 }
 assert.equal(joined.supersededRecords.filter(x => x.predictionId.includes('r1668-m') && x.predictionId.includes('predeadline')).length, 6,
   'the original round 1668 records must remain superseded by synchronized revisions');
-assert.equal(joined.usedRecords.filter(x => x.prediction.round === 1668).length, 0, 'round 1668 forecasts must remain unscored before results exist');
+// Round 1668 may be either unresolved before official results arrive or scored after full result coverage.
 for (const p of round1668Forecasts) {
   assert.ok(Date.parse(p.predictionConfirmedAt) < Date.parse(p.deadlineAt), 'round 1668 forecast must be pre-deadline');
-  assert.ok(Math.abs(Object.values(p.probabilities).reduce((a, b) => a + b, 0) - 1) < 1e-8, 'goal bucket probabilities must sum to one');
+  const probabilitySum = Object.values(p.probabilities).reduce((a, b) => a + b, 0);
+  // Claude's independent baseline is stored to four decimal places; allow only its corresponding rounding tolerance.
+  const sumTolerance = p.modelName === 'Claude' ? 0.0002 : 1e-8;
+  assert.ok(Math.abs(probabilitySum - 1) <= sumTolerance,
+    'goal bucket probabilities must sum to one within the source precision');
 }
 assert.ok(joined.supersededRecords.length >= 18, 'Claude round-1665 revision history should exclude superseded pre-deadline rows');
 

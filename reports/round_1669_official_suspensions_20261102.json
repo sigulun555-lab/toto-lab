@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "round": 1669,
+  "product": "toto13",
+  "source": "Jリーグ公式 出場停止選手のお知らせ（2026/11/02）",
+  "sourceUrl": "https://www.jleague.jp/news/article/35271/",
+  "sourcePublishedAt": "2026-11-02T18:40:00+09:00",
+  "retrievedAt": "2026-11-02T20:45:00+09:00",
+  "suspensions": [
+    {
+      "fixtureMatchNumber": 6,
+      "homeTeam": "ヴァンフォーレ甲府",
+      "awayTeam": "アルビレックス新潟",
+      "person": "遠藤 光",
+      "team": "ヴァンフォーレ甲府",
+      "competition": "J2",
+      "suspensionCode": "f",
+      "suspensionMeaning": "累積警告による1試合停止",
+      "scheduledMatchDate": "2026-11-03",
+      "status": "officially_announced"
+    },
+    {
+      "fixtureMatchNumber": 13,
+      "homeTeam": "カマタマーレ讃岐",
+      "awayTeam": "松本山雅ＦＣ",
+      "person": "禹 相皓",
+      "team": "カマタマーレ讃岐",
+      "competition": "J3",
+      "suspensionCode": "f",
+      "suspensionMeaning": "累積警告による1試合停止",
+      "scheduledMatchDate": "2026-11-03",
+      "status": "officially_announced"
+    },
+    {
+      "fixtureMatchNumber": 7,
+      "homeTeam": "藤枝ＭＹＦＣ",
+      "awayTeam": "ジュビロ磐田",
+      "person": "槙野 智章",
+      "team": "藤枝ＭＹＦＣ",
+      "role": "監督",
+      "competition": "J2",
+      "suspensionCode": "b",
+      "suspensionMeaning": "2試合停止の処分中。11/3の対象試合もベンチ入り停止",
+      "scheduledMatchDate": "2026-11-03",
+      "status": "officially_announced",
+      "clubSourceUrl": "https://myfc.co.jp/news/20261029/1193009/"
+    }
+  ],
+  "auditNotes": [
+    "This is the 2026-11-02 official J.League notice and supersedes the earlier 2026-10-29 suspension-only check for these fixtures.",
+    "No numeric prediction adjustment has been applied. The information is recorded for manual review only.",
+    "Injury status, availability beyond the suspension notice, and confirmed starting lineups remain unverified."
+  ]
+}

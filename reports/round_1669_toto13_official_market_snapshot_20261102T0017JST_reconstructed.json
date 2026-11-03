@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "round": 1669,
+  "product": "toto13",
+  "marketType": "toto",
+  "source": "スポーツくじ公式・第1669回 toto投票状況",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1669",
+  "sourceDisplayedAt": "2026-11-02T00:17:00+09:00",
+  "retrievedAt": "2026-11-02T00:34:18+09:00",
+  "totalVotes": null,
+  "outcomeKeyOrder": {
+    "0": "draw",
+    "1": "home_win",
+    "2": "away_win"
+  },
+  "reconstruction": {
+    "status": "reconstructed_from_v2_prediction_rows",
+    "originalSnapshotFileFound": false,
+    "rawVoteCountsAvailable": false,
+    "method": "Copied marketVoteShare without recalculation from the 13 V2 prediction rows whose marketOfficialDisplayAt equals sourceDisplayedAt.",
+    "evidenceFile": "predictions/round_1669_ChatGPT_shared_score_v2.jsonl",
+    "warning": "This is a reconstructed audit record, not the original raw snapshot. Original vote counts and exact source-page capture bytes were not retained; percentages below are copied from the saved V2 rows."
+  },
+  "rows": [
+    {
+      "matchNumber": 1,
+      "homeTeam": "カターレ富山",
+      "awayTeam": "ベガルタ仙台",
+      "displayedVoteSharePercent": {
+        "draw": 27.05,
+        "home": 31.62,
+        "away": 41.33
+      },
+      "marketVoteShare": {
+        "0": 0.2705,
+        "1": 0.3162,
+        "2": 0.4133
+      }
+    },
+    {
+      "matchNumber": 2,
+      "homeTeam": "ＲＢ大宮アルディージャ",
+      "awayTeam": "いわきＦＣ",
+      "displayedVoteSharePercent": {
+        "draw": 22.27,
+        "home": 55.42,
+        "away": 22.31
+      },
+      "marketVoteShare": {
+        "0": 0.2227,
+        "1": 0.5542,
+        "2": 0.2231
+      }
+    },
+    {
+      "matchNumber": 3,
+      "homeTeam": "大分トリニータ",
+      "awayTeam": "ヴァンラーレ八戸",
+      "displayedVoteSharePercent": {
+        "draw": 21.72,
+        "home": 60.76,
+        "away": 17.52
+      },
+      "marketVoteShare": {
+        "0": 0.2172,
+        "1": 0.6076,
+        "2": 0.1752
+      }
+    },
+    {
+      "matchNumber": 4,
+      "homeTeam": "モンテディオ山形",
+      "awayTeam": "徳島ヴォルティス",
+      "displayedVoteSharePercent": {
+        "draw": 29.44,
+        "home": 35.13,
+        "away": 35.43
+      },
+      "marketVoteShare": {
+        "0": 0.2944,
+        "1": 0.3513,
+        "2": 0.3543
+      }
+    },
+    {
+      "matchNumber": 5,
+      "homeTeam": "湘南ベルマーレ",
+      "awayTeam": "サガン鳥栖",
+      "displayedVoteSharePercent": {
+        "draw": 24.69,
+        "home": 54.57,
+        "away": 20.74
+      },
+      "marketVoteShare": {
+        "0": 0.2469,
+        "1": 0.5457,
+        "2": 0.2074
+      }
+    },
+    {
+      "matchNumber": 6,
+      "homeTeam": "ヴァンフォーレ甲府",
+      "awayTeam": "アルビレックス新潟",
+      "displayedVoteSharePercent": {
+        "draw": 20.75,
+        "home": 21.2,
+        "away": 58.05
+      },
+      "marketVoteShare": {
+        "0": 0.2075,
+        "1": 0.212,
+        "2": 0.5805
+      }
+    },
+    {
+      "matchNumber": 7,
+      "homeTeam": "藤枝ＭＹＦＣ",
+      "awayTeam": "ジュビロ磐田",
+      "displayedVoteSharePercent": {
+        "draw": 29.68,
+        "home": 27.05,
+        "away": 43.27
+      },
+      "marketVoteShare": {
+        "0": 0.2968,
+        "1": 0.2705,
+        "2": 0.4327
+      }
+    },
+    {
+      "matchNumber": 8,
+      "homeTeam": "テゲバジャーロ宮崎",
+      "awayTeam": "栃木シティ",
+      "displayedVoteSharePercent": {
+        "draw": 19.24,
+        "home": 62.55,
+        "away": 18.21
+      },
+      "marketVoteShare": {
+        "0": 0.1924,
+        "1": 0.6255,
+        "2": 0.1821
+      }
+    },
+    {
+      "matchNumber": 9,
+      "homeTeam": "ＦＣ今治",
+      "awayTeam": "北海道コンサドーレ札幌",
+      "displayedVoteSharePercent": {
+        "draw": 24.74,
+        "home": 22.34,
+        "away": 52.92
+      },
+      "marketVoteShare": {
+        "0": 0.2474,
+        "1": 0.2234,
+        "2": 0.5292
+      }
+    },
+    {
+      "matchNumber": 10,
+      "homeTeam": "横浜ＦＣ",
+      "awayTeam": "ブラウブリッツ秋田",
+      "displayedVoteSharePercent": {
+        "draw": 19.09,
+        "home": 63.92,
+        "away": 16.99
+      },
+      "marketVoteShare": {
+        "0": 0.1909,
+        "1": 0.6392,
+        "2": 0.1699
+      }
+    },
+    {
+      "matchNumber": 11,
+      "homeTeam": "奈良クラブ",
+      "awayTeam": "ザスパ群馬",
+      "displayedVoteSharePercent": {
+        "draw": 20.04,
+        "home": 61.3,
+        "away": 18.66
+      },
+      "marketVoteShare": {
+        "0": 0.2004,
+        "1": 0.613,
+        "2": 0.1866
+      }
+    },
+    {
+      "matchNumber": 12,
+      "homeTeam": "レノファ山口ＦＣ",
+      "awayTeam": "鹿児島ユナイテッドＦＣ",
+      "displayedVoteSharePercent": {
+        "draw": 27.57,
+        "home": 35.68,
+        "away": 36.75
+      },
+      "marketVoteShare": {
+        "0": 0.2757,
+        "1": 0.3568,
+        "2": 0.3675
+      }
+    },
+    {
+      "matchNumber": 13,
+      "homeTeam": "カマタマーレ讃岐",
+      "awayTeam": "松本山雅ＦＣ",
+      "displayedVoteSharePercent": {
+        "draw": 23.61,
+        "home": 21.04,
+        "away": 55.35
+      },
+      "marketVoteShare": {
+        "0": 0.2361,
+        "1": 0.2104,
+        "2": 0.5535
+      }
+    }
+  ]
+}

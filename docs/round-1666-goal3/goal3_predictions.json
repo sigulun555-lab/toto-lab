@@ -1,0 +1,74 @@
+[
+  {
+    "match": "水戸 vs C大阪",
+    "team": "水戸",
+    "side": "home",
+    "expected_goals": 1.404,
+    "p0": 0.2455,
+    "p1": 0.3448,
+    "p2": 0.2421,
+    "p3plus": 0.1675,
+    "prediction": "1",
+    "confidence": 0.3448
+  },
+  {
+    "match": "水戸 vs C大阪",
+    "team": "C大阪",
+    "side": "away",
+    "expected_goals": 1.201,
+    "p0": 0.3008,
+    "p1": 0.3613,
+    "p2": 0.2171,
+    "p3plus": 0.1208,
+    "prediction": "1",
+    "confidence": 0.3613
+  },
+  {
+    "match": "横浜FM vs 広島",
+    "team": "横浜FM",
+    "side": "home",
+    "expected_goals": 1.237,
+    "p0": 0.2902,
+    "p1": 0.359,
+    "p2": 0.2221,
+    "p3plus": 0.1287,
+    "prediction": "1",
+    "confidence": 0.359
+  },
+  {
+    "match": "横浜FM vs 広島",
+    "team": "広島",
+    "side": "away",
+    "expected_goals": 1.417,
+    "p0": 0.2424,
+    "p1": 0.3435,
+    "p2": 0.2434,
+    "p3plus": 0.1706,
+    "prediction": "1",
+    "confidence": 0.3435
+  },
+  {
+    "match": "名古屋 vs 浦和",
+    "team": "名古屋",
+    "side": "home",
+    "expected_goals": 1.636,
+    "p0": 0.1948,
+    "p1": 0.3186,
+    "p2": 0.2606,
+    "p3plus": 0.226,
+    "prediction": "1",
+    "confidence": 0.3186
+  },
+  {
+    "match": "名古屋 vs 浦和",
+    "team": "浦和",
+    "side": "away",
+    "expected_goals": 1.384,
+    "p0": 0.2507,
+    "p1": 0.3468,
+    "p2": 0.2399,
+    "p3plus": 0.1625,
+    "prediction": "1",
+    "confidence": 0.3468
+  }
+]

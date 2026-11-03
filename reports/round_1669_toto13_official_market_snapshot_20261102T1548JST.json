@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "round": 1669,
+  "product": "toto13",
+  "marketType": "toto",
+  "source": "スポーツくじ公式・第1669回 toto投票状況",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1669",
+  "sourceDisplayedAt": "2026-11-02T15:48:00+09:00",
+  "retrievedAt": "2026-11-02T16:10:37+09:00",
+  "totalVotes": 248628,
+  "outcomeKeyOrder": {
+    "0": "draw",
+    "1": "home_win",
+    "2": "away_win"
+  },
+  "rows": [
+    {
+      "matchNumber": 1,
+      "homeTeam": "カターレ富山",
+      "awayTeam": "ベガルタ仙台",
+      "voteCounts": {
+        "home": 77673,
+        "draw": 66397,
+        "away": 104558,
+        "total": 248628
+      },
+      "displayedVoteSharePercent": {
+        "home": 31.24,
+        "draw": 26.71,
+        "away": 42.05
+      },
+      "marketVoteShare": {
+        "0": 0.2671,
+        "1": 0.3124,
+        "2": 0.4205
+      }
+    },
+    {
+      "matchNumber": 2,
+      "homeTeam": "ＲＢ大宮アルディージャ",
+      "awayTeam": "いわきＦＣ",
+      "voteCounts": {
+        "home": 146811,
+        "draw": 51891,
+        "away": 49926,
+        "total": 248628
+      },
+      "displayedVoteSharePercent": {
+        "home": 59.05,
+        "draw": 20.87,
+        "away": 20.08
+      },
+      "marketVoteShare": {
+        "0": 0.2087,
+        "1": 0.5905,
+        "2": 0.2008
+      }
+    },
+    {
+      "matchNumber": 3,
+      "homeTeam": "大分トリニータ",
+      "awayTeam": "ヴァンラーレ八戸",
+      "voteCounts": {
+        "home": 164452,
+        "draw": 49270,
+        "away": 34906,
+        "total": 248628
+      },
+      "displayedVoteSharePercent": {
+        "home": 66.14,
+        "draw": 19.82,
+        "away": 14.04
+      },
+      "marketVoteShare": {
+        "0": 0.1982,
+        "1": 0.6614,
+        "2": 0.1404
+      }
+    },
+    {
+      "matchNumber": 4,
+      "homeTeam": "モンテディオ山形",
+      "awayTeam": "徳島ヴォルティス",
+      "voteCounts": {
+        "home": 89277,
+        "draw": 73192,
+        "away": 86159,
+        "total": 248628
+      },
+      "displayedVoteSharePercent": {
+        "home": 35.91,
+        "draw": 29.44,
+        "away": 34.65
+      },
+      "marketVoteShare": {
+        "0": 0.2944,
+        "1": 0.3591,
+        "2": 0.3465
+      }
+    },
+    {
+      "matchNumber": 5,
+      "homeTeam": "湘南ベルマーレ",
+      "awayTeam": "サガン鳥栖",
+      "voteCounts": {
+        "home": 146707,
+        "draw": 58390,
+        "away": 43531,
+        "total": 248628
+      },
+      "displayedVoteSharePercent": {
+        "home": 59.01,
+        "draw": 23.48,
+        "away": 17.51
+      },
+      "marketVoteShare": {
+        "0": 0.2348,
+        "1": 0.5901,
+        "2": 0.1751
+      }
+    },
+    {
+      "matchNumber": 6,
+      "homeTeam": "ヴァンフォーレ甲府",
+      "awayTeam": "アルビレックス新潟",
+      "voteCounts": {
+        "home": 42252,
+        "draw": 43956,
+        "away": 162420,
+        "total": 248628
+      },
+      "displayedVoteSharePercent": {
+        "home": 16.99,
+        "draw": 17.68,
+        "away": 65.33
+      },
+      "marketVoteShare": {
+        "0": 0.1768,
+        "1": 0.1699,
+        "2": 0.6533
+      }
+    },
+    {
+      "matchNumber": 7,
+      "homeTeam": "藤枝ＭＹＦＣ",
+      "awayTeam": "ジュビロ磐田",
+      "voteCounts": {
+        "home": 62858,
+        "draw": 75278,
+        "away": 110492,
+        "total": 248628
+      },
+      "displayedVoteSharePercent": {
+        "home": 25.28,
+        "draw": 30.28,
+        "away": 44.44
+      },
+      "marketVoteShare": {
+        "0": 0.3028,
+        "1": 0.2528,
+        "2": 0.4444
+      }
+    },
+    {
+      "matchNumber": 8,
+      "homeTeam": "テゲバジャーロ宮崎",
+      "awayTeam": "栃木シティ",
+      "voteCounts": {
+        "home": 170278,
+        "draw": 41300,
+        "away": 37050,
+        "total": 248628
+      },
+      "displayedVoteSharePercent": {
+        "home": 68.49,
+        "draw": 16.61,
+        "away": 14.9
+      },
+      "marketVoteShare": {
+        "0": 0.1661,
+        "1": 0.6849,
+        "2": 0.149
+      }
+    },
+    {
+      "matchNumber": 9,
+      "homeTeam": "ＦＣ今治",
+      "awayTeam": "北海道コンサドーレ札幌",
+      "voteCounts": {
+        "home": 46921,
+        "draw": 56946,
+        "away": 144761,
+        "total": 248628
+      },
+      "displayedVoteSharePercent": {
+        "home": 18.87,
+        "draw": 22.91,
+        "away": 58.22
+      },
+      "marketVoteShare": {
+        "0": 0.2291,
+        "1": 0.1887,
+        "2": 0.5822
+      }
+    },
+    {
+      "matchNumber": 10,
+      "homeTeam": "横浜ＦＣ",
+      "awayTeam": "ブラウブリッツ秋田",
+      "voteCounts": {
+        "home": 175874,
+        "draw": 39152,
+        "away": 33602,
+        "total": 248628
+      },
+      "displayedVoteSharePercent": {
+        "home": 70.74,
+        "draw": 15.75,
+        "away": 13.51
+      },
+      "marketVoteShare": {
+        "0": 0.1575,
+        "1": 0.7074,
+        "2": 0.1351
+      }
+    },
+    {
+      "matchNumber": 11,
+      "homeTeam": "奈良クラブ",
+      "awayTeam": "ザスパ群馬",
+      "voteCounts": {
+        "home": 167647,
+        "draw": 42124,
+        "away": 38857,
+        "total": 248628
+      },
+      "displayedVoteSharePercent": {
+        "home": 67.43,
+        "draw": 16.94,
+        "away": 15.63
+      },
+      "marketVoteShare": {
+        "0": 0.1694,
+        "1": 0.6743,
+        "2": 0.1563
+      }
+    },
+    {
+      "matchNumber": 12,
+      "homeTeam": "レノファ山口ＦＣ",
+      "awayTeam": "鹿児島ユナイテッドＦＣ",
+      "voteCounts": {
+        "home": 89984,
+        "draw": 67985,
+        "away": 90659,
+        "total": 248628
+      },
+      "displayedVoteSharePercent": {
+        "home": 36.19,
+        "draw": 27.35,
+        "away": 36.46
+      },
+      "marketVoteShare": {
+        "0": 0.2735,
+        "1": 0.3619,
+        "2": 0.3646
+      }
+    },
+    {
+      "matchNumber": 13,
+      "homeTeam": "カマタマーレ讃岐",
+      "awayTeam": "松本山雅ＦＣ",
+      "voteCounts": {
+        "home": 44668,
+        "draw": 54285,
+        "away": 149675,
+        "total": 248628
+      },
+      "displayedVoteSharePercent": {
+        "home": 17.97,
+        "draw": 21.83,
+        "away": 60.2
+      },
+      "marketVoteShare": {
+        "0": 0.2183,
+        "1": 0.1797,
+        "2": 0.602
+      }
+    }
+  ],
+  "auditNotes": [
+    "All 13 match vote-count triplets sum to the displayed total of 248,628.",
+    "The official displayed percentages were used for marketVoteShare (0=draw, 1=home win, 2=away win).",
+    "For match 9 draw and match 12 draw, the displayed percentage differs by 0.01 percentage point from a percentage independently recomputed from the displayed vote counts; both original official values are retained without correction."
+  ]
+}

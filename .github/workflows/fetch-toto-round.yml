@@ -1,0 +1,45 @@
+name: Fetch and validate toto round data
+
+on:
+  workflow_dispatch:
+    inputs:
+      round:
+        description: "Four-digit toto round number (e.g. 1668)"
+        required: true
+        default: "1668"
+        type: string
+  push:
+    branches:
+      - experiment/toto-round-data-fetch
+    paths:
+      - "scripts/fetch_toto_round.js"
+      - "tests/test_fetch_toto_round.js"
+      - ".github/workflows/fetch-toto-round.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Run parser tests
+        run: node tests/test_fetch_toto_round.js
+      - name: Fetch and validate requested round
+        env:
+          TOTO_ROUND: ${{ inputs.round || '1668' }}
+        run: node scripts/fetch_toto_round.js
+      - name: Upload validated JSON
+        uses: actions/upload-artifact@v4
+        with:
+          name: toto-round-${{ inputs.round || '1668' }}
+          path: artifacts/toto-round.json
+          if-no-files-found: error
+          retention-days: 14

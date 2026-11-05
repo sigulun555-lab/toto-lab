@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const root = path.resolve(__dirname, '..');
-const readJsonl = file => fs.readFileSync(path.join(root, file), 'utf8').trim().split(/\\r?\\n/).map(JSON.parse);
+const readJsonl = file => fs.readFileSync(path.join(root, file), 'utf8').trim().split(/\r?\n/).map(JSON.parse);
 const round8 = n => Number(n.toFixed(8));
 const sum = obj => Object.values(obj).reduce((a, b) => a + b, 0);
 

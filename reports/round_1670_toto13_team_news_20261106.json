@@ -17,7 +17,7 @@
         "kickoff": "13:00",
         "home": "清水エスパルス",
         "away": "東京ヴェルディ",
-        "officialMatchPageUrl": "https://www.jleague.jp/match/j1/2026/110706/"
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
       },
       {
         "matchNumber": 2,
@@ -25,7 +25,7 @@
         "kickoff": "14:00",
         "home": "横浜Ｆ・マリノス",
         "away": "ファジアーノ岡山",
-        "officialMatchPageUrl": "https://www.jleague.jp/match/j1/2026/110707/"
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
       },
       {
         "matchNumber": 3,
@@ -33,7 +33,7 @@
         "kickoff": "15:00",
         "home": "アビスパ福岡",
         "away": "Ｖ・ファーレン長崎",
-        "officialMatchPageUrl": "https://www.jleague.jp/match/j1/2026/110710/"
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
       },
       {
         "matchNumber": 4,
@@ -41,7 +41,7 @@
         "kickoff": "15:00",
         "home": "ＦＣ東京",
         "away": "鹿島アントラーズ",
-        "officialMatchPageUrl": "https://www.jleague.jp/match/j1/2026/110709/"
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
       },
       {
         "matchNumber": 5,
@@ -49,7 +49,7 @@
         "kickoff": "16:00",
         "home": "柏レイソル",
         "away": "川崎フロンターレ",
-        "officialMatchPageUrl": "https://www.jleague.jp/match/j1/2026/110711/"
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
       },
       {
         "matchNumber": 6,
@@ -57,7 +57,7 @@
         "kickoff": "14:00",
         "home": "名古屋グランパス",
         "away": "京都サンガF.C.",
-        "officialMatchPageUrl": "https://www.jleague.jp/match/j1/2026/110708/"
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
       },
       {
         "matchNumber": 7,
@@ -65,7 +65,7 @@
         "kickoff": "14:00",
         "home": "ヴィッセル神戸",
         "away": "浦和レッズ",
-        "officialMatchPageUrl": "https://www.jleague.jp/match/j1/2026/110802/"
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
       },
       {
         "matchNumber": 8,
@@ -73,7 +73,7 @@
         "kickoff": "15:00",
         "home": "ガンバ大阪",
         "away": "セレッソ大阪",
-        "officialMatchPageUrl": "https://www.jleague.jp/match/j1/2026/110804/"
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
       },
       {
         "matchNumber": 9,
@@ -81,7 +81,7 @@
         "kickoff": "17:00",
         "home": "ジェフユナイテッド千葉",
         "away": "水戸ホーリーホック",
-        "officialMatchPageUrl": "https://www.jleague.jp/match/j1/2026/110805/"
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
       },
       {
         "matchNumber": 10,
@@ -89,7 +89,7 @@
         "kickoff": "14:00",
         "home": "ＦＣ町田ゼルビア",
         "away": "サンフレッチェ広島",
-        "officialMatchPageUrl": "https://www.jleague.jp/match/j1/2026/110803/"
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
       },
       {
         "matchNumber": 11,
@@ -97,7 +97,7 @@
         "kickoff": "14:00",
         "home": "徳島ヴォルティス",
         "away": "テゲバジャーロ宮崎",
-        "officialMatchPageUrl": "https://www.jleague.jp/match/j2/2026/110716/"
+        "officialMatchPageUrl": "https://www.jleague.jp/match/j2/2026/110716/preview/?mode=pc"
       },
       {
         "matchNumber": 12,
@@ -105,7 +105,7 @@
         "kickoff": "13:00",
         "home": "ヴァンラーレ八戸",
         "away": "北海道コンサドーレ札幌",
-        "officialMatchPageUrl": "https://www.jleague.jp/match/j2/2026/110806/"
+        "officialMatchPageUrl": "https://www.jleague.jp/match/j2/2026/110806/preview/?mode=pc"
       },
       {
         "matchNumber": 13,
@@ -241,9 +241,9 @@
         "sourceUrl": "https://www.football-lab.jp/shim/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110706/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -324,9 +324,9 @@
         "sourceUrl": "https://www.football-lab.jp/shim/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110706/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -389,9 +389,9 @@
         "sourceUrl": "https://www.football-lab.jp/okay/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110707/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -455,9 +455,9 @@
         "sourceUrl": "https://www.football-lab.jp/okay/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110707/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -502,9 +502,9 @@
         "sourceUrl": "https://www.football-lab.jp/fuku/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110710/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -585,9 +585,9 @@
         "sourceUrl": "https://www.football-lab.jp/fuku/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110710/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -641,9 +641,9 @@
         "sourceUrl": "https://www.football-lab.jp/kasm/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110709/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -697,9 +697,9 @@
         "sourceUrl": "https://www.football-lab.jp/kasm/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110709/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -771,9 +771,9 @@
         "sourceUrl": "https://www.football-lab.jp/kasw/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110711/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -836,9 +836,9 @@
         "sourceUrl": "https://www.football-lab.jp/kasw/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110711/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -892,9 +892,9 @@
         "sourceUrl": "https://www.football-lab.jp/nago/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110708/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -930,9 +930,9 @@
         "sourceUrl": "https://www.football-lab.jp/nago/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110708/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -986,9 +986,9 @@
         "sourceUrl": "https://www.football-lab.jp/uraw/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110802/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -1043,9 +1043,9 @@
         "sourceUrl": "https://www.football-lab.jp/uraw/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110802/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -1126,9 +1126,9 @@
         "sourceUrl": "https://www.football-lab.jp/c-os/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110804/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -1173,9 +1173,9 @@
         "sourceUrl": "https://www.football-lab.jp/c-os/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110804/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -1220,9 +1220,9 @@
         "sourceUrl": "https://www.football-lab.jp/chib/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110805/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -1331,9 +1331,9 @@
         "sourceUrl": "https://www.football-lab.jp/chib/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110805/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -1352,16 +1352,16 @@
       "secondaryAbsenceCandidates": [],
       "secondarySourceStatus": "no_current_preview",
       "secondarySourceUrl": "https://www.football-lab.jp/mcd/preview",
-      "secondarySourceUpdatedAt": null,
+      "secondarySourceUpdatedAt": "2026-09-14",
       "expectedStartingXI": {
         "status": "current_preview_not_available_stale_page",
         "checkedAt": "2026-11-06T03:10:46+09:00",
         "sourceUrl": "https://www.football-lab.jp/mcd/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110803/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -1380,16 +1380,16 @@
       "secondaryAbsenceCandidates": [],
       "secondarySourceStatus": "no_current_preview",
       "secondarySourceUrl": "https://www.football-lab.jp/hiro/preview",
-      "secondarySourceUpdatedAt": null,
+      "secondarySourceUpdatedAt": "2026-09-07",
       "expectedStartingXI": {
         "status": "current_preview_not_available_stale_page",
         "checkedAt": "2026-11-06T03:10:46+09:00",
         "sourceUrl": "https://www.football-lab.jp/hiro/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j1/2026/110803/"
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -1452,9 +1452,9 @@
         "sourceUrl": "https://www.football-lab.jp/toku/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j2/2026/110716/"
+        "sourceUrl": "https://www.jleague.jp/match/j2/2026/110716/preview/?mode=pc"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -1480,9 +1480,9 @@
         "sourceUrl": "https://www.football-lab.jp/toku/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j2/2026/110716/"
+        "sourceUrl": "https://www.jleague.jp/match/j2/2026/110716/preview/?mode=pc"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -1518,9 +1518,9 @@
         "sourceUrl": "https://www.football-lab.jp/sapp/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j2/2026/110806/"
+        "sourceUrl": "https://www.jleague.jp/match/j2/2026/110806/preview/?mode=pc"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -1611,9 +1611,9 @@
         "sourceUrl": "https://www.football-lab.jp/sapp/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
-        "sourceUrl": "https://www.jleague.jp/match/j2/2026/110806/"
+        "sourceUrl": "https://www.jleague.jp/match/j2/2026/110806/preview/?mode=pc"
       },
       "recentRosterChanges": {
         "status": "not_confirmed_in_checked_scope",
@@ -1685,7 +1685,7 @@
         "sourceUrl": "https://www.football-lab.jp/tosu/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
         "sourceUrl": "https://www.jleague.jp/j2/match/search-list/?enddate=2026-11-08&period=custom&startdate=2026-11-07"
       },
@@ -1760,7 +1760,7 @@
         "sourceUrl": "https://www.football-lab.jp/tosu/preview"
       },
       "officialStartingXI": {
-        "status": "not_available_in_checked_official_match_page_at_check_time",
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
         "checkedAt": "2026-11-06T03:10:46+09:00",
         "sourceUrl": "https://www.jleague.jp/j2/match/search-list/?enddate=2026-11-08&period=custom&startdate=2026-11-07"
       },
@@ -1827,7 +1827,8 @@
     "Football LAB absence lists are secondary screening only and explicitly warn that listed players may still play.",
     "Machida/Hiroshima current preview data was not available; the available preview pages were stale (Machida 2026-09-14, Hiroshima 2026-09-07), so no stale player list was used.",
     "For Miyazaki, no absence entry appeared in the current Tokushima/Miyazaki preview; this is not interpreted as no injuries.",
-    "Official lineups and some club-level availability/return confirmations remain uncollected."
+    "Official lineups and some club-level availability/return confirmations remain uncollected.",
+    "The current official J1 schedule page was used for J1 lineup status; only the Tokushima-Miyazaki and Hachinohe-Sapporo J2 match pages were directly opened. The remaining J2 lineup status is linked to the official J2 schedule page."
   ],
   "modelExecution": {
     "executedExactExistingSource": true,
@@ -1841,6 +1842,9 @@
     "teamAliasesPath": "data/team_aliases.json",
     "totoLabTeamsBlobSha": "41096236f986f9456beeb15f1c35e61e0529caeb",
     "last12MatchesPerTeamVerified": true,
-    "noSubstituteLogicUsed": true
+    "noSubstituteLogicUsed": true,
+    "modelBlobSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+    "historyBlobSha": "ed832e99a3ad7efc6be1e4115f94527263ce4df9",
+    "teamAliasesBlobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab"
   }
 }

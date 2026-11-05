@@ -20,6 +20,10 @@ test('round 1670 toto13 V1/V2 are complete, pre-deadline, and use the frozen 30/
   assert.equal(new Set(v2.map(x => x.predictionId)).size, 13);
   assert.equal(market.rows.length, 13);
   assert.equal(news.teams.length, 26);
+  assert.equal(news.modelExecution.modelBlobSha, '20cde0fc85016db3ef7abac7d2bb485510ba4e22');
+  assert.equal(news.modelExecution.historyBlobSha, 'ed832e99a3ad7efc6be1e4115f94527263ce4df9');
+  assert.equal(news.modelExecution.teamAliasesBlobSha, '5de22584524ff4c07ddac1d27f49afbbbc5f88ab');
+  assert.ok(v1.every(x => !x.dataSource.includes('undefined')));
   assert.equal(new Set(news.teams.map(x => x.team)).size, 26);
   assert.equal(market.overallVotes, 323902);
   assert.ok(Date.parse(v1[0].predictionConfirmedAt) < Date.parse('2026-11-06T13:00:00Z'));

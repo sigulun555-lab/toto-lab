@@ -1,0 +1,338 @@
+{
+  "round": 1670,
+  "product": "toto13",
+  "source": "スポーツくじ公式投票状況",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1670",
+  "officialDisplayAt": "2026-11-06T02:14:00+09:00",
+  "retrievedAt": "2026-11-06T03:08:40+09:00",
+  "displayLagMinutes": 54.67,
+  "overallVotes": 323902,
+  "rows": [
+    {
+      "matchNumber": 1,
+      "date": "2026-11-07",
+      "kickoff": "13:00",
+      "homeTeam": "清水エスパルス",
+      "awayTeam": "東京ヴェルディ",
+      "canonicalHomeTeam": "清水エスパルス",
+      "canonicalAwayTeam": "東京ヴェルディ",
+      "voteCounts": {
+        "home": 140676,
+        "draw": 81685,
+        "away": 101541
+      },
+      "totalVotes": 323902,
+      "displayedVoteSharePercent": {
+        "home": 43.43,
+        "draw": 25.22,
+        "away": 31.35
+      },
+      "marketVoteShare": {
+        "0": 0.2522,
+        "1": 0.4343,
+        "2": 0.3135
+      }
+    },
+    {
+      "matchNumber": 2,
+      "date": "2026-11-07",
+      "kickoff": "14:00",
+      "homeTeam": "横浜Ｆ・マリノス",
+      "awayTeam": "ファジアーノ岡山",
+      "canonicalHomeTeam": "横浜F・マリノス",
+      "canonicalAwayTeam": "ファジアーノ岡山",
+      "voteCounts": {
+        "home": 229594,
+        "draw": 47313,
+        "away": 46995
+      },
+      "totalVotes": 323902,
+      "displayedVoteSharePercent": {
+        "home": 70.88,
+        "draw": 14.61,
+        "away": 14.51
+      },
+      "marketVoteShare": {
+        "0": 0.1461,
+        "1": 0.7088,
+        "2": 0.1451
+      }
+    },
+    {
+      "matchNumber": 3,
+      "date": "2026-11-07",
+      "kickoff": "15:00",
+      "homeTeam": "アビスパ福岡",
+      "awayTeam": "Ｖ・ファーレン長崎",
+      "canonicalHomeTeam": "アビスパ福岡",
+      "canonicalAwayTeam": "V・ファーレン長崎",
+      "voteCounts": {
+        "home": 81283,
+        "draw": 86313,
+        "away": 156306
+      },
+      "totalVotes": 323902,
+      "displayedVoteSharePercent": {
+        "home": 25.09,
+        "draw": 26.65,
+        "away": 48.26
+      },
+      "marketVoteShare": {
+        "0": 0.2665,
+        "1": 0.2509,
+        "2": 0.4826
+      }
+    },
+    {
+      "matchNumber": 4,
+      "date": "2026-11-07",
+      "kickoff": "15:00",
+      "homeTeam": "ＦＣ東京",
+      "awayTeam": "鹿島アントラーズ",
+      "canonicalHomeTeam": "FC東京",
+      "canonicalAwayTeam": "鹿島アントラーズ",
+      "voteCounts": {
+        "home": 151278,
+        "draw": 71983,
+        "away": 100641
+      },
+      "totalVotes": 323902,
+      "displayedVoteSharePercent": {
+        "home": 46.71,
+        "draw": 22.22,
+        "away": 31.07
+      },
+      "marketVoteShare": {
+        "0": 0.2222,
+        "1": 0.4671,
+        "2": 0.3107
+      }
+    },
+    {
+      "matchNumber": 5,
+      "date": "2026-11-07",
+      "kickoff": "16:00",
+      "homeTeam": "柏レイソル",
+      "awayTeam": "川崎フロンターレ",
+      "canonicalHomeTeam": "柏レイソル",
+      "canonicalAwayTeam": "川崎フロンターレ",
+      "voteCounts": {
+        "home": 195346,
+        "draw": 59201,
+        "away": 69355
+      },
+      "totalVotes": 323902,
+      "displayedVoteSharePercent": {
+        "home": 60.31,
+        "draw": 18.28,
+        "away": 21.41
+      },
+      "marketVoteShare": {
+        "0": 0.1828,
+        "1": 0.6031,
+        "2": 0.2141
+      }
+    },
+    {
+      "matchNumber": 6,
+      "date": "2026-11-07",
+      "kickoff": "14:00",
+      "homeTeam": "名古屋グランパス",
+      "awayTeam": "京都サンガF.C.",
+      "canonicalHomeTeam": "名古屋グランパス",
+      "canonicalAwayTeam": "京都サンガF.C.",
+      "voteCounts": {
+        "home": 163377,
+        "draw": 79487,
+        "away": 81038
+      },
+      "totalVotes": 323902,
+      "displayedVoteSharePercent": {
+        "home": 50.44,
+        "draw": 24.54,
+        "away": 25.02
+      },
+      "marketVoteShare": {
+        "0": 0.2454,
+        "1": 0.5044,
+        "2": 0.2502
+      }
+    },
+    {
+      "matchNumber": 7,
+      "date": "2026-11-08",
+      "kickoff": "14:00",
+      "homeTeam": "ヴィッセル神戸",
+      "awayTeam": "浦和レッズ",
+      "canonicalHomeTeam": "ヴィッセル神戸",
+      "canonicalAwayTeam": "浦和レッズ",
+      "voteCounts": {
+        "home": 214928,
+        "draw": 51716,
+        "away": 57258
+      },
+      "totalVotes": 323902,
+      "displayedVoteSharePercent": {
+        "home": 66.35,
+        "draw": 15.97,
+        "away": 17.68
+      },
+      "marketVoteShare": {
+        "0": 0.1597,
+        "1": 0.6635,
+        "2": 0.1768
+      }
+    },
+    {
+      "matchNumber": 8,
+      "date": "2026-11-08",
+      "kickoff": "15:00",
+      "homeTeam": "ガンバ大阪",
+      "awayTeam": "セレッソ大阪",
+      "canonicalHomeTeam": "ガンバ大阪",
+      "canonicalAwayTeam": "セレッソ大阪",
+      "voteCounts": {
+        "home": 126216,
+        "draw": 95051,
+        "away": 102635
+      },
+      "totalVotes": 323902,
+      "displayedVoteSharePercent": {
+        "home": 38.97,
+        "draw": 29.34,
+        "away": 31.69
+      },
+      "marketVoteShare": {
+        "0": 0.2934,
+        "1": 0.3897,
+        "2": 0.3169
+      }
+    },
+    {
+      "matchNumber": 9,
+      "date": "2026-11-08",
+      "kickoff": "17:00",
+      "homeTeam": "ジェフユナイテッド千葉",
+      "awayTeam": "水戸ホーリーホック",
+      "canonicalHomeTeam": "ジェフユナイテッド千葉",
+      "canonicalAwayTeam": "水戸ホーリーホック",
+      "voteCounts": {
+        "home": 207667,
+        "draw": 64628,
+        "away": 51607
+      },
+      "totalVotes": 323902,
+      "displayedVoteSharePercent": {
+        "home": 64.12,
+        "draw": 19.95,
+        "away": 15.93
+      },
+      "marketVoteShare": {
+        "0": 0.1995,
+        "1": 0.6412,
+        "2": 0.1593
+      }
+    },
+    {
+      "matchNumber": 10,
+      "date": "2026-11-08",
+      "kickoff": "14:00",
+      "homeTeam": "ＦＣ町田ゼルビア",
+      "awayTeam": "サンフレッチェ広島",
+      "canonicalHomeTeam": "FC町田ゼルビア",
+      "canonicalAwayTeam": "サンフレッチェ広島",
+      "voteCounts": {
+        "home": 106831,
+        "draw": 82902,
+        "away": 134169
+      },
+      "totalVotes": 323902,
+      "displayedVoteSharePercent": {
+        "home": 32.98,
+        "draw": 25.6,
+        "away": 41.42
+      },
+      "marketVoteShare": {
+        "0": 0.256,
+        "1": 0.3298,
+        "2": 0.4142
+      }
+    },
+    {
+      "matchNumber": 11,
+      "date": "2026-11-07",
+      "kickoff": "14:00",
+      "homeTeam": "徳島ヴォルティス",
+      "awayTeam": "テゲバジャーロ宮崎",
+      "canonicalHomeTeam": "徳島ヴォルティス",
+      "canonicalAwayTeam": "テゲバジャーロ宮崎",
+      "voteCounts": {
+        "home": 63821,
+        "draw": 55869,
+        "away": 204212
+      },
+      "totalVotes": 323902,
+      "displayedVoteSharePercent": {
+        "home": 19.7,
+        "draw": 17.25,
+        "away": 63.05
+      },
+      "marketVoteShare": {
+        "0": 0.1725,
+        "1": 0.197,
+        "2": 0.6305
+      }
+    },
+    {
+      "matchNumber": 12,
+      "date": "2026-11-08",
+      "kickoff": "13:00",
+      "homeTeam": "ヴァンラーレ八戸",
+      "awayTeam": "北海道コンサドーレ札幌",
+      "canonicalHomeTeam": "ヴァンラーレ八戸",
+      "canonicalAwayTeam": "北海道コンサドーレ札幌",
+      "voteCounts": {
+        "home": 43133,
+        "draw": 45329,
+        "away": 235440
+      },
+      "totalVotes": 323902,
+      "displayedVoteSharePercent": {
+        "home": 13.32,
+        "draw": 13.99,
+        "away": 72.69
+      },
+      "marketVoteShare": {
+        "0": 0.1399,
+        "1": 0.1332,
+        "2": 0.7269
+      }
+    },
+    {
+      "matchNumber": 13,
+      "date": "2026-11-07",
+      "kickoff": "14:00",
+      "homeTeam": "サガン鳥栖",
+      "awayTeam": "カターレ富山",
+      "canonicalHomeTeam": "サガン鳥栖",
+      "canonicalAwayTeam": "カターレ富山",
+      "voteCounts": {
+        "home": 89586,
+        "draw": 59862,
+        "away": 174454
+      },
+      "totalVotes": 323902,
+      "displayedVoteSharePercent": {
+        "home": 27.66,
+        "draw": 18.48,
+        "away": 53.86
+      },
+      "marketVoteShare": {
+        "0": 0.1848,
+        "1": 0.2766,
+        "2": 0.5386
+      }
+    }
+  ],
+  "note": "Official displayed vote shares are stored as market choice shares. They are not treated as calibrated true probabilities. No secondary market source was mixed in."
+}

@@ -1,0 +1,167 @@
+{
+  "round": 1670,
+  "target_date": "2026-11-04",
+  "deadline": "2026-11-07T12:50:00+09:00",
+  "generatedAt_note": "Result file last written 2026-11-06 22:39 JST (file mtime). Script run immediately before; exact computation start not separately logged.",
+  "generatedAt": "2026-11-06T22:39:52+09:00",
+  "script": "research/goal3_versions/goal3_versions.py",
+  "history_file": "scratchpad/review/history_now.json (429 rows, J1-J3 2026 only, latest 2026-11-03)",
+  "history_sha256": "efca00ea491fcfea6a1267af403cb5ba80ae540fca97a076def25815fc318201",
+  "history_rows_used": 429,
+  "fixture_names_note": "History spellings used: 清水, 東京V, 福岡, 長崎, 柏, 川崎F (official 東京Ｖ/川崎Ｆ not in history keys).",
+  "versions": {
+    "v0": {
+      "lambda": 10,
+      "status": "ok",
+      "spec": "same as v1"
+    },
+    "v0.5": {
+      "lambda": 6,
+      "status": "ok",
+      "note": "pre-production test, not adopted"
+    },
+    "v1": {
+      "lambda": 10,
+      "status": "ok",
+      "spec": "Claude existing GOAL3 model"
+    },
+    "v2": {
+      "status": "not_run",
+      "reason": "no market snapshot for round 1670"
+    }
+  },
+  "predictions": {
+    "v0": {
+      "清水 vs 東京V": {
+        "home": [
+          0.2732,
+          0.3545,
+          0.23,
+          0.1423
+        ],
+        "away": [
+          0.3377,
+          0.3666,
+          0.199,
+          0.0967
+        ]
+      },
+      "福岡 vs 長崎": {
+        "home": [
+          0.2567,
+          0.3491,
+          0.2373,
+          0.1568
+        ],
+        "away": [
+          0.2584,
+          0.3497,
+          0.2366,
+          0.1553
+        ]
+      },
+      "柏 vs 川崎F": {
+        "home": [
+          0.1125,
+          0.2458,
+          0.2685,
+          0.3732
+        ],
+        "away": [
+          0.2119,
+          0.3288,
+          0.2551,
+          0.2042
+        ]
+      }
+    },
+    "v0.5": {
+      "清水 vs 東京V": {
+        "home": [
+          0.2947,
+          0.3601,
+          0.22,
+          0.1253
+        ],
+        "away": [
+          0.3581,
+          0.3677,
+          0.1888,
+          0.0853
+        ]
+      },
+      "福岡 vs 長崎": {
+        "home": [
+          0.2718,
+          0.3541,
+          0.2306,
+          0.1435
+        ],
+        "away": [
+          0.2523,
+          0.3475,
+          0.2392,
+          0.161
+        ]
+      },
+      "柏 vs 川崎F": {
+        "home": [
+          0.092,
+          0.2195,
+          0.2619,
+          0.4266
+        ],
+        "away": [
+          0.1963,
+          0.3196,
+          0.2602,
+          0.2239
+        ]
+      }
+    },
+    "v1": {
+      "清水 vs 東京V": {
+        "home": [
+          0.2732,
+          0.3545,
+          0.23,
+          0.1423
+        ],
+        "away": [
+          0.3377,
+          0.3666,
+          0.199,
+          0.0967
+        ]
+      },
+      "福岡 vs 長崎": {
+        "home": [
+          0.2567,
+          0.3491,
+          0.2373,
+          0.1568
+        ],
+        "away": [
+          0.2584,
+          0.3497,
+          0.2366,
+          0.1553
+        ]
+      },
+      "柏 vs 川崎F": {
+        "home": [
+          0.1125,
+          0.2458,
+          0.2685,
+          0.3732
+        ],
+        "away": [
+          0.2119,
+          0.3288,
+          0.2551,
+          0.2042
+        ]
+      }
+    }
+  }
+}

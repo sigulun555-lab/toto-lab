@@ -53,15 +53,20 @@ test('round 1670 toto13 V1/V2 snapshots are complete, append-only, timestamp-aud
       assert.deepEqual(row.baseModelOutcomeProbabilities,v1[i].outcomeProbabilities);
       assert.equal(row.blendWeights.poissonModel,0.3);
       assert.equal(row.blendWeights.totoVoteShare,0.7);
-      assert.deepEqual(row.marketVoteShare,marketRevision.rows[i].marketVoteShare);
-      for(const key of ['0','1','2']){
-        const expected=round8(0.3*v1[i].outcomeProbabilities[key]+0.7*marketRevision.rows[i].marketVoteShare[key]);
-        assert.equal(row.outcomeProbabilities[key],expected);
-      }
     }
     assert.equal(first.revisionOf,null);
     assert.equal(r1.revisionOf,first.predictionId);
     assert.equal(r2.revisionOf,r1.predictionId);
+    assert.deepEqual(first.marketVoteShare,marketInitial.rows[i].marketVoteShare);
+    assert.deepEqual(r1.marketVoteShare,marketRevision.rows[i].marketVoteShare);
+    assert.deepEqual(r2.marketVoteShare,marketRevision.rows[i].marketVoteShare);
+    for (const key of ['0','1','2']) {
+      const expectedInitial=round8(0.3*v1[i].outcomeProbabilities[key]+0.7*marketInitial.rows[i].marketVoteShare[key]);
+      const expectedRevision=round8(0.3*v1[i].outcomeProbabilities[key]+0.7*marketRevision.rows[i].marketVoteShare[key]);
+      assert.equal(first.outcomeProbabilities[key],expectedInitial);
+      assert.equal(r1.outcomeProbabilities[key],expectedRevision);
+      assert.equal(r2.outcomeProbabilities[key],expectedRevision);
+    }
     assert.equal(r1.predictionConfirmedAt,marketRevision.retrievedAt);
     assert.equal(r2.predictionConfirmedAt,'2026-11-06T03:12:07Z');
     assert.equal(r2.marketOfficialDisplayAt,marketRevision.officialDisplayAt);

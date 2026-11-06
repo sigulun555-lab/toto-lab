@@ -32,7 +32,30 @@
     "teamAliasesBlobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab",
     "teamAliasesSha256": "92e6377068df8dd63935e0c003adfd7b355e7adac23f7aace4f947be4f5f027e",
     "modelCodePath": "verification/goal3_independent/nested_validation.py",
-    "modelCodeBlobSha": "7ac8f83da420fa577b45e9c5c021ce46387f584e"
+    "modelCodeBlobSha": "7ac8f83da420fa577b45e9c5c021ce46387f584e",
+    "currentMainHistoryCheck": {
+      "sourceCommit": "d83b0d00d3a68b2bdc8c2f8318c04c9b44d61374",
+      "currentMainHistoryRows": 430,
+      "strictCutoffExclusive": "2026-11-04",
+      "rowsAfterCutoff": 429,
+      "exactSixFieldMatchAgainstReference": true,
+      "comparedFields": [
+        "date",
+        "competition",
+        "home",
+        "away",
+        "home_goals",
+        "away_goals"
+      ],
+      "excludedPostCutoffRow": {
+        "date": "2026-11-04",
+        "competition": "J3",
+        "home": "FC大阪",
+        "away": "熊本",
+        "homeGoals": 2,
+        "awayGoals": 1
+      }
+    }
   },
   "runtime": {
     "python": "3.13.5",

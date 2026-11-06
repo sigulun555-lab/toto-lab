@@ -1,0 +1,233 @@
+{
+  "schemaVersion": "goal3-research-prediction-v1",
+  "product": "totoGOAL3",
+  "round": 1670,
+  "roundDate": "2026-11-07",
+  "trainingCutoffExclusive": "2026-11-04",
+  "deadline": "2026-11-07T12:50:00+09:00",
+  "generatedAt": "2026-11-07T06:05:44.421+09:00",
+  "generatedAtUtc": "2026-11-06T21:05:44.421Z",
+  "status": "research_only_not_production",
+  "modelSpec": {
+    "v0": "shrinkage-MLE Poisson, lambda=10, 2026-only J1/J2/J3",
+    "v0.5": "shrinkage-MLE Poisson, lambda=6, 2026-only J1/J2/J3; pre-production comparison only",
+    "marketBlend": "none",
+    "optimizer": "SciPy L-BFGS-B, maxiter=300, default tolerances; fit_shrinkage/predict_shrinkage from nested_validation.py",
+    "teamCanonicalization": "NFKC + data/team_aliases.json aliases"
+  },
+  "input": {
+    "historyPath": "data/history.json",
+    "historyBlobSha": "f5cc8c044758e45b1e679e4ce796e68b3f27a854",
+    "historySha256": "efca00ea491fcfea6a1267af403cb5ba80ae540fca97a076def25815fc318201",
+    "historyRowsUsed": 429,
+    "historyDistinctDates": 37,
+    "canonicalTeams": 60,
+    "historyLatestDate": "2026-11-03",
+    "historyFetchedAt": "2026-11-03T23:21:25.123Z",
+    "historySource": "community-source; first-known availability not independently proven",
+    "sourceWorkflowRun": 41738470252,
+    "sourceArtifact": 13280600896,
+    "sourceDataCommit": "dedac00e69afd884c317e95882b319979c5ed253",
+    "teamAliasesPath": "data/team_aliases.json",
+    "teamAliasesBlobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab",
+    "teamAliasesSha256": "92e6377068df8dd63935e0c003adfd7b355e7adac23f7aace4f947be4f5f027e",
+    "modelCodePath": "verification/goal3_independent/nested_validation.py",
+    "modelCodeBlobSha": "7ac8f83da420fa577b45e9c5c021ce46387f584e",
+    "currentMainHistoryCheck": {
+      "sourceCommit": "d83b0d00d3a68b2bdc8c2f8318c04c9b44d61374",
+      "currentMainHistoryRows": 430,
+      "strictCutoffExclusive": "2026-11-04",
+      "rowsAfterCutoff": 429,
+      "exactSixFieldMatchAgainstReference": true,
+      "comparedFields": [
+        "date",
+        "competition",
+        "home",
+        "away",
+        "home_goals",
+        "away_goals"
+      ],
+      "excludedPostCutoffRow": {
+        "date": "2026-11-04",
+        "competition": "J3",
+        "home": "FC大阪",
+        "away": "熊本",
+        "homeGoals": 2,
+        "awayGoals": 1
+      }
+    }
+  },
+  "runtime": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "predictions": {
+    "v0": {
+      "lambda": 10,
+      "status": "ok",
+      "optimizer": {
+        "success": true,
+        "status": 0,
+        "iterations": 16,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      "fixtures": [
+        {
+          "home": "清水",
+          "away": "東京V",
+          "homeCanonical": "清水エスパルス",
+          "awayCanonical": "東京ヴェルディ",
+          "homeProbabilities": [
+            0.2731798808657279,
+            0.3544849873188036,
+            0.22999425476756832,
+            0.14234087704790008
+          ],
+          "awayProbabilities": [
+            0.3376684639748555,
+            0.3666035247593811,
+            0.19900902616717286,
+            0.0967189850985905
+          ]
+        },
+        {
+          "home": "福岡",
+          "away": "長崎",
+          "homeCanonical": "アビスパ福岡",
+          "awayCanonical": "V・ファーレン長崎",
+          "homeProbabilities": [
+            0.256742383099798,
+            0.34908802189738536,
+            0.23732436686322336,
+            0.15684522813959326
+          ],
+          "awayProbabilities": [
+            0.2584111330812015,
+            0.34968282991005983,
+            0.23659600125565008,
+            0.15531003575308852
+          ]
+        },
+        {
+          "home": "柏",
+          "away": "川崎F",
+          "homeCanonical": "柏レイソル",
+          "awayCanonical": "川崎フロンターレ",
+          "homeProbabilities": [
+            0.11249302318651404,
+            0.24578196509117325,
+            0.2685000929520786,
+            0.37322491877023417
+          ],
+          "awayProbabilities": [
+            0.21188452426029408,
+            0.3287841508099211,
+            0.25508946016983386,
+            0.204241864759951
+          ]
+        }
+      ]
+    },
+    "v0.5": {
+      "lambda": 6,
+      "status": "ok",
+      "optimizer": {
+        "success": true,
+        "status": 0,
+        "iterations": 22,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+      },
+      "fixtures": [
+        {
+          "home": "清水",
+          "away": "東京V",
+          "homeCanonical": "清水エスパルス",
+          "awayCanonical": "東京ヴェルディ",
+          "homeProbabilities": [
+            0.29466188251147163,
+            0.36005523378391413,
+            0.21998055919252127,
+            0.12530232451209297
+          ],
+          "awayProbabilities": [
+            0.3580821027926339,
+            0.3677478063564959,
+            0.18883720803875484,
+            0.08533288281211529
+          ]
+        },
+        {
+          "home": "福岡",
+          "away": "長崎",
+          "homeCanonical": "アビスパ福岡",
+          "awayCanonical": "V・ファーレン長崎",
+          "homeProbabilities": [
+            0.2717869003490843,
+            0.3540668442276543,
+            0.23062798468269216,
+            0.1435182707405693
+          ],
+          "awayProbabilities": [
+            0.2523214100630659,
+            0.34745959321366165,
+            0.23923488871996257,
+            0.1609841080033098
+          ]
+        },
+        {
+          "home": "柏",
+          "away": "川崎F",
+          "homeCanonical": "柏レイソル",
+          "awayCanonical": "川崎フロンターレ",
+          "homeProbabilities": [
+            0.09199175270396942,
+            0.21949750573049204,
+            0.26186670873066464,
+            0.42664403283487384
+          ],
+          "awayProbabilities": [
+            0.19629560964168524,
+            0.31959546650022697,
+            0.26017204968044033,
+            0.22393687417764746
+          ]
+        }
+      ]
+    }
+  },
+  "claudeComparison": {
+    "referenceBranch": "claude/goal3-versions-20261106",
+    "referenceCommit": "b85fd85",
+    "referencePath": "research/goal3_versions/round_1670_predictions.json",
+    "claudeGeneratedAt": "2026-11-06T22:39:52+09:00",
+    "claudeTimeNote": "file mtime only; exact calculation start not separately logged",
+    "sameHistorySha256": "efca00ea491fcfea6a1267af403cb5ba80ae540fca97a076def25815fc318201",
+    "v0VsClaudeV0": {
+      "rounded4dpExactMatch": true,
+      "maxAbsDiffBeforeRounding": 0.000045228139593261885
+    },
+    "v0VsClaudeV1": {
+      "rounded4dpExactMatch": true,
+      "maxAbsDiffBeforeRounding": 0.000045228139593261885
+    },
+    "v0_5VsClaudeV0_5": {
+      "rounded4dpExactMatch": true,
+      "maxAbsDiffBeforeRounding": 0.00004780635649587195
+    },
+    "maxSimplexError": 0,
+    "v2": {
+      "status": "not_run",
+      "reason": "No round 1670 market snapshot was supplied to the model"
+    }
+  },
+  "limitations": [
+    "Research-only independent forecast; it does not replace or revise the production GPT Poisson forecast.",
+    "Claude's exact computation start time is not recorded, so this is not a strict same-time comparison.",
+    "The 429-row history is community-source and historical first-known availability is not proven.",
+    "Claude's saved probabilities are rounded to four decimals; equality was verified after rounding."
+  ],
+  "productionChanged": false,
+  "existingPredictionLogsChanged": false,
+  "marketWeightChanged": false
+}

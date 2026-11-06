@@ -89,6 +89,7 @@ for name, rows in results.items():
     with open(f'rev2_0to10_pred_{name}.csv', 'w', newline='', encoding='utf-8') as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys())); w.writeheader(); w.writerows(rows)
 
+# T1 vs baseline: date-block bootstrap of log-loss difference (k=6 minus k=0)
 def per_match_ll(rows):
     return {r['matchId']: -math.log(max({'1': r['pH'], '0': r['pD'], '2': r['pA']}[r['actual']], 1e-12)) for r in rows}
 def bootstrap(a, b, reps=2000, seed=1):
@@ -104,6 +105,7 @@ def bootstrap(a, b, reps=2000, seed=1):
     return round(mean, 4), round(stats[int(.025 * reps)], 4), round(stats[int(.975 * reps)], 4)
 print('T1 k6 minus k0 logloss diff (mean, 95% date-block bootstrap):', bootstrap(results['T1_k6'], results['T1_k0_baseline']))
 print('T2 without boost minus with boost (mean, 95% CI):', bootstrap(results['T2_without_boost(DC+k6)'], results['T2_with_boost(DC+boost+k6)']))
+# per league for k6 vs k0
 for lg in ['J1', 'J2', 'J3']:
     a = [r for r in results['T1_k6'] if r['competition'] == lg]
     b = [r for r in results['T1_k0_baseline'] if r['competition'] == lg]

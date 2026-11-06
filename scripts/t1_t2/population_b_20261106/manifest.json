@@ -1,0 +1,32 @@
+{
+  "population": {
+    "history_blob": "b36927fa70fac0cea8fa8411698ff2d0cf04df88",
+    "history_source": "sigulun555-lab/gpt main data/history.json",
+    "updatedAt": "2026-11-05T19:56:26.247Z",
+    "rows": 430,
+    "eval_start": "2026-09-01",
+    "eval_matches": 311,
+    "eval_dates": 27
+  },
+  "script": {
+    "path": "scripts/t1_t2/population_b_20261106/repro_rev2.py",
+    "blob": "243f7166bcbd579a9133b108e58eec32b863b940",
+    "origin": "claude/t1-t2-429-check-20261104:scripts/t1_t2/t1_t2_repro_rev2_0to10.py"
+  },
+  "bootstrap": {
+    "default_reps": 2000,
+    "seed": 1,
+    "unit": "date cluster (dates resampled with replacement, all matches on chosen dates kept)"
+  },
+  "outputs_sha256": {
+    "rev2_0to10_pred_T1_k0_baseline.csv": "e39ccc9a5f2c8213ae34dc1c66447f0881c03d289846deead2c6f4ae420f9ee0",
+    "rev2_0to10_pred_T1_k4.csv": "8a6070583e828ef825610bbf0386e32e69283727289f2231cb297bb8759f2843",
+    "rev2_0to10_pred_T1_k6.csv": "94ad4ec57bf49f1b786c2b2deb1c25f6569afe6edbfb28db0082cfbe4f008800",
+    "rev2_0to10_pred_T1_k8.csv": "7091164a06a6f0fc872c66c895e61881b9c830da4c258a3857d3f25528c13ecd",
+    "rev2_0to10_pred_T1_k10.csv": "35a03a47ff0bf47a646a477670d4257dc56f1c0748d047b7449afe8a1ca08e46",
+    "rev2_0to10_pred_T1_k12.csv": "c4bea486579c1b8ff9d491398f27a00f36abf816ebefaa8848015d74111fc5b8",
+    "rev2_0to10_pred_T2_with_boost(DC+boost+k6).csv": "c82821e1110b6f38be0c09b05ff3e74fd4612582f57d80a460ff5853a628d6f6",
+    "rev2_0to10_pred_T2_without_boost(DC+k6).csv": "eaaf72e82a5db0d464b32efb3f05fc8e94ced78d6ce6533d1be365d636ca1858",
+    "run_log_default_reps.txt": "2c1a0d1b2a27108196e59966d9ff4155c08ab3d87ee105c665e4dc420c8f96b5"
+  }
+}

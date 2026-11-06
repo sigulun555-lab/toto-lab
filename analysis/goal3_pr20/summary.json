@@ -1,0 +1,23 @@
+{
+ "description": "GOAL3 outer per-target k=6 vs k=10 (2026_only), reproduced from PR #19 nested_validation.py functions",
+ "nested_validation_py_sha256": "60a64b20a99b69807ee3d5d8aabeee9ec321801dbb88887c3ead641a2b65af55",
+ "window": "2026_only",
+ "k": [6.0, 10.0],
+ "folds": [
+  {"fold": 1, "testDates": 5, "testStart": "2026-09-19", "testEnd": "2026-10-03"},
+  {"fold": 2, "testDates": 6, "testStart": "2026-10-04", "testEnd": "2026-10-18"},
+  {"fold": 3, "testDates": 6, "testStart": "2026-10-21", "testEnd": "2026-11-03"}
+ ],
+ "summary": {
+  "teamSides": 472, "matches": 236, "dates": 17,
+  "pointD": {"brier": -0.000617, "logloss": -0.002159, "acc": 0.008475},
+  "dateBlockBootstrapCI95": {"brier": [-0.003603, 0.002343], "logloss": [-0.008308, 0.003585]},
+  "matchClusterBootstrapCI95": {"brier": [-0.003610, 0.002336], "logloss": [-0.008262, 0.004021]},
+  "bootstrap": {"B": 10000, "seed": 1, "method": "percentile"},
+  "leagues": {
+   "J1": {"teamSides": 120, "matches": 60, "dates": 12, "meanD_brier": -0.003754, "meanD_ll": -0.004515},
+   "J2": {"teamSides": 178, "matches": 89, "dates": 14, "meanD_brier": 0.000864, "meanD_ll": -0.003007},
+   "J3": {"teamSides": 174, "matches": 87, "dates": 16, "meanD_brier": 0.000033, "meanD_ll": 0.000334}
+  }
+ }
+}

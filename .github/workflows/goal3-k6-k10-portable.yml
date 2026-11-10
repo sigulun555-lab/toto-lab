@@ -1,0 +1,27 @@
+name: GOAL3 Claude k6-k10 portable tests
+
+on:
+  push:
+    branches:
+      - gpt/goal3-k6-k10-portable-20261111
+  pull_request:
+    paths:
+      - research/goal3_k6_k10_2026-11-10/**
+      - tests/test_goal3_k6_k10_portable.py
+      - .github/workflows/goal3-k6-k10-portable.yml
+
+permissions:
+  contents: read
+
+jobs:
+  portable-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install test dependency
+        run: python -m pip install pytest
+      - name: Run portable-path and provenance unit tests
+        run: python -m pytest -q tests/test_goal3_k6_k10_portable.py

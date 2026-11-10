@@ -1,0 +1,118 @@
+{
+  "protocol": "17 outer dates (2026-only train, fixed k=6 vs k=10), D=score(k6)-score(k10), date-block bootstrap B=10000 seed=1 percentile 95%; match-cluster sensitivity",
+  "team_side_targets": 472,
+  "matches": 236,
+  "overall": {
+    "D_brier": -0.000616668372191149,
+    "D_ll": -0.0021587883976713863
+  },
+  "bootstrap": {
+    "D_brier": {
+      "date_block_ci95": [
+        -0.0036025686983032676,
+        0.0023428863066394454
+      ],
+      "n_dates": 17,
+      "match_cluster_ci95": [
+        -0.003621890389504156,
+        0.0023162483110745276
+      ],
+      "n_matches": 236
+    },
+    "D_ll": {
+      "date_block_ci95": [
+        -0.008255739497355797,
+        0.003671166715622359
+      ],
+      "n_dates": 17,
+      "match_cluster_ci95": [
+        -0.00829406726642952,
+        0.004046675411268778
+      ],
+      "n_matches": 236
+    }
+  },
+  "leagues": {
+    "J1": {
+      "team_sides": 120,
+      "matches": 60,
+      "dates": 12,
+      "D_brier_mean": -0.003754463710319943,
+      "D_brier_median_date": -0.0007985771685818051,
+      "D_brier_sd_date": 0.013483787693719126,
+      "D_ll_mean": -0.004514809433231666,
+      "D_ll_median_date": -0.0034075082349577547,
+      "D_ll_sd_date": 0.027662453073660855,
+      "date_league_brier_over_0.05": 0,
+      "date_league_ll_over_0.10": 0
+    },
+    "J2": {
+      "team_sides": 178,
+      "matches": 89,
+      "dates": 14,
+      "D_brier_mean": 0.0008636543571919154,
+      "D_brier_median_date": 0.001957732248897566,
+      "D_brier_sd_date": 0.00967613334426152,
+      "D_ll_mean": -0.003007026609299675,
+      "D_ll_median_date": 0.0005554335645507683,
+      "D_ll_sd_date": 0.017141693409548665,
+      "date_league_brier_over_0.05": 0,
+      "date_league_ll_over_0.10": 0
+    },
+    "J3": {
+      "team_sides": 174,
+      "matches": 87,
+      "dates": 16,
+      "D_brier_mean": 3.2975275770171925e-05,
+      "D_brier_median_date": -0.0015378880326755986,
+      "D_brier_sd_date": 0.01401371153416999,
+      "D_ll_mean": 0.0003337916364496991,
+      "D_ll_median_date": -0.005842242777824148,
+      "D_ll_sd_date": 0.02801155023738109,
+      "date_league_brier_over_0.05": 0,
+      "date_league_ll_over_0.10": 0
+    }
+  },
+  "calibration": {
+    "p_k6": {
+      "0": {
+        "mean_pred": 0.26132101864406776,
+        "observed": 0.2627118644067797
+      },
+      "1": {
+        "mean_pred": 0.33526817906779666,
+        "observed": 0.3474576271186441
+      },
+      "2": {
+        "mean_pred": 0.22910707110169493,
+        "observed": 0.2266949152542373
+      },
+      "3": {
+        "mean_pred": 0.17430373169491525,
+        "observed": 0.163135593220339
+      }
+    },
+    "p_k10": {
+      "0": {
+        "mean_pred": 0.2557471349364407,
+        "observed": 0.2627118644067797
+      },
+      "1": {
+        "mean_pred": 0.3386059610381356,
+        "observed": 0.3474576271186441
+      },
+      "2": {
+        "mean_pred": 0.23363354802966102,
+        "observed": 0.2266949152542373
+      },
+      "3": {
+        "mean_pred": 0.17201335591101696,
+        "observed": 0.163135593220339
+      }
+    }
+  },
+  "accuracy": {
+    "p_k6": 0.375,
+    "p_k10": 0.3665254237288136
+  }
+}

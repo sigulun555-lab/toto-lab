@@ -1,0 +1,33 @@
+{
+  "round": 1672,
+  "product": "toto13",
+  "generatedAt": "2026-11-11T20:17:01.000Z",
+  "retrievedAt": "2026-11-12T05:15:58+09:00",
+  "officialDisplayAt": "2026-11-12T05:09:00+09:00",
+  "displayLagSeconds": 418,
+  "previousV2PredictionCount": 39,
+  "appendedV2RevisionCount": 13,
+  "totalV2PredictionCount": 52,
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1672",
+  "overallVotesPerMatch": 251157,
+  "validation": {
+    "v1Rows": 13,
+    "initialV2Rows": 13,
+    "priorRevisionRows": 26,
+    "appendedRevisionRows": 13,
+    "totalV2Rows": 52,
+    "uniquePredictionIds": 52,
+    "duplicatePredictionIds": 0,
+    "danglingRevisionOf": 0,
+    "revisionChainsComplete": true,
+    "allFixturesMatchV1": true,
+    "allVotesPerMatchConsistent": true,
+    "allDisplayedSharesSum100": true,
+    "maxProbabilitySumError": 9.99999993922529e-9,
+    "maxBlendDifference": 5.0000000112460086e-9,
+    "allPreDeadline": true
+  },
+  "formula": "p_v2 = 0.3 * p_v1 + 0.7 * official 1X2 vote share; keys 0=draw, 1=home win, 2=away win",
+  "revisionOf": "each new row references the immediately preceding V2 revision for the same match",
+  "notes": "Append-only research comparison. The official page display 05:09 JST was retrieved at 05:15:58 JST (6m58s lag); do not treat as live at retrieval. No main, production model, market weight, app Artifact or fixture updater changes."
+}

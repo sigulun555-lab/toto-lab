@@ -1,0 +1,13 @@
+'use strict';
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const readJsonl=p=>fs.readFileSync(path.join(__dirname,'..',p),'utf8').trim().split(/\r?\n/).filter(Boolean).map(JSON.parse);
+const v1=readJsonl('predictions/round_1672_ChatGPT_shared_score_v1.jsonl');
+const v2=readJsonl('predictions/round_1672_ChatGPT_shared_score_v2.jsonl');
+const market=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1672_toto13_official_market_snapshot_20261112T0215JST.json'),'utf8'));
+test('round 1672 has exactly 13 unique V1 and V2 snapshots',()=>{assert.equal(v1.length,13);assert.equal(v2.length,13);assert.equal(new Set(v1.map(x=>x.predictionId)).size,13);assert.equal(new Set(v2.map(x=>x.predictionId)).size,13);assert.ok(v1.every(x=>x.revisionOf===null&&x.historyMatchesPerTeam===12));assert.ok(v2.every(x=>x.revisionOf===null&&x.historyMatchesPerTeam===12));});
+test('V1/V2 probability distributions and goal buckets are normalized',()=>{for(const row of [...v1,...v2]){assert.ok(Math.abs(Object.values(row.outcomeProbabilities).reduce((a,b)=>a+b,0)-1)<2e-8);assert.ok(Math.abs(row.homeGoalProbabilities.reduce((a,b)=>a+b,0)-1)<2e-8);assert.ok(Math.abs(row.awayGoalProbabilities.reduce((a,b)=>a+b,0)-1)<2e-8);}});
+test('V2 is exactly the documented 30/70 blend of V1 and official market shares',()=>{assert.equal(market.rows.length,13);for(let i=0;i<13;i++){const a=v1[i],b=v2[i],m=market.rows[i].marketVoteShare;assert.equal(a.matchNumber,i+1);assert.equal(b.matchNumber,i+1);assert.deepEqual(b.baseModelOutcomeProbabilities,a.outcomeProbabilities);assert.deepEqual(b.marketVoteShare,m);assert.deepEqual(b.blendWeights,{poissonModel:0.3,totoVoteShare:0.7});for(const k of ['0','1','2'])assert.ok(Math.abs(b.outcomeProbabilities[k]-(0.3*a.outcomeProbabilities[k]+0.7*m[k]))<2e-8);assert.equal(market.rows[i].totalVotes,248284);assert.equal(market.rows[i].voteCounts.home+market.rows[i].voteCounts.draw+market.rows[i].voteCounts.away,248284);assert.ok(Math.abs(market.rows[i].displayedVoteSharePercent.home+market.rows[i].displayedVoteSharePercent.draw+market.rows[i].displayedVoteSharePercent.away-100)<1e-9);}});
+test('all prediction rows share one real pre-deadline generation time',()=>{const times=new Set([...v1,...v2].map(x=>x.predictionConfirmedAt));assert.equal(times.size,1);const t=Date.parse(v1[0].predictionConfirmedAt),d=Date.parse(v1[0].deadlineAt);assert.ok(t<d);assert.equal(v1[0].deadlineAt,'2026-11-14T04:50:00.000Z');});

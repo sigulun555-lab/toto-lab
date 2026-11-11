@@ -49,6 +49,28 @@ def verify_git_blob(path: Path, expected: str, label: str) -> str:
     return observed
 
 
+def prepare_output_directory(out_dir: Path, repository_root: Path | None = None) -> Path:
+    """Require a dedicated, empty output directory outside the repository checkout."""
+    resolved_out = out_dir.expanduser().resolve()
+    root = (repository_root or Path.cwd()).expanduser().resolve()
+    try:
+        resolved_out.relative_to(root)
+    except ValueError:
+        pass
+    else:
+        raise ValueError(f"research output must be outside the repository checkout: {resolved_out}")
+    resolved_out.mkdir(parents=True, exist_ok=True)
+    if any(resolved_out.iterdir()):
+        raise FileExistsError(f"refusing non-empty research output directory: {resolved_out}")
+    return resolved_out
+
+
+def write_exclusive(path: Path, content: str) -> None:
+    """Create a new output file without ever replacing an existing file."""
+    with path.open("x", encoding="utf-8", newline="\n") as stream:
+        stream.write(content)
+
+
 def percentile_indices(values: list[float]) -> tuple[float, float]:
     """Keep Claude's original order-statistic indices; not NumPy linear quantiles."""
     ordered = sorted(values)
@@ -250,12 +272,12 @@ def main(argv=None):
                         "No production or market-weight change is performed."],
     }
 
-    out_dir.mkdir(parents=True, exist_ok=True)
+    out_dir = prepare_output_directory(out_dir)
     targets_path = out_dir / "goal3_outer_matches.json"
     summary_path = out_dir / "goal3_summary.json"
     manifest_path = out_dir / "run_manifest.json"
-    targets_path.write_text(json.dumps(rows, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    summary_path.write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_exclusive(targets_path, json.dumps(rows, ensure_ascii=False, indent=1) + "\n")
+    write_exclusive(summary_path, json.dumps(summary, ensure_ascii=False, indent=2) + "\n")
     manifest = {
         "cohort": cohort, "inputs": {
             "history": {"basename": history_path.name, "sha256": sha256_file(history_path)},
@@ -273,7 +295,7 @@ def main(argv=None):
         "outputs": {targets_path.name: sha256_file(targets_path),
                     summary_path.name: sha256_file(summary_path)},
     }
-    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_exclusive(manifest_path, json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
     print(json.dumps({"cohort": cohort, "overall": summary["overall"],
                       "bootstrap": bootstrap_result, "manifest": manifest},
                      ensure_ascii=False, indent=2))

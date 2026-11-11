@@ -86,3 +86,31 @@ def test_git_blob_sha_and_guard(tmp_path):
     assert analysis.verify_git_blob(path, expected, "fixture") == expected
     with pytest.raises(ValueError, match="Git blob SHA mismatch"):
         analysis.verify_git_blob(path, "0" * 40, "fixture")
+
+
+
+def test_research_output_must_be_outside_repository_checkout(tmp_path):
+    repo = tmp_path / "repo"
+    repo.mkdir()
+    with pytest.raises(ValueError, match="outside the repository checkout"):
+        analysis.prepare_output_directory(repo / "predictions", repo)
+    outside = analysis.prepare_output_directory(tmp_path / "research-output", repo)
+    assert outside == (tmp_path / "research-output").resolve()
+
+
+def test_nonempty_research_output_directory_fails_without_mutation(tmp_path):
+    out = tmp_path / "research-output"
+    out.mkdir()
+    sentinel = out / "goal3_outer_matches.json"
+    sentinel.write_text("preserve-existing-bytes", encoding="utf-8")
+    with pytest.raises(FileExistsError, match="non-empty research output directory"):
+        analysis.prepare_output_directory(out, tmp_path / "repo")
+    assert sentinel.read_text(encoding="utf-8") == "preserve-existing-bytes"
+
+
+def test_exclusive_output_file_creation_never_overwrites(tmp_path):
+    target = tmp_path / "run_manifest.json"
+    target.write_text("original", encoding="utf-8")
+    with pytest.raises(FileExistsError):
+        analysis.write_exclusive(target, "replacement")
+    assert target.read_text(encoding="utf-8") == "original"

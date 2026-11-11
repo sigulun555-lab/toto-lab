@@ -14,7 +14,7 @@
       "kickoff": "14:00",
       "homeTeam": "FC町田ゼルビア",
       "awayTeam": "ヴィッセル神戸",
-      "canonicalHomeTeam": "FC町田ゼルビア",
+      "canonicalHomeTeam": "ＦＣ町田ゼルビア",
       "canonicalAwayTeam": "ヴィッセル神戸",
       "voteCounts": {
         "home": 101086,
@@ -65,7 +65,7 @@
       "homeTeam": "鹿島アントラーズ",
       "awayTeam": "横浜Ｆ・マリノス",
       "canonicalHomeTeam": "鹿島アントラーズ",
-      "canonicalAwayTeam": "横浜F・マリノス",
+      "canonicalAwayTeam": "横浜Ｆ・マリノス",
       "voteCounts": {
         "home": 136498,
         "draw": 56121,
@@ -214,7 +214,7 @@
       "kickoff": "14:00",
       "homeTeam": "FC今治",
       "awayTeam": "ジュビロ磐田",
-      "canonicalHomeTeam": "FC今治",
+      "canonicalHomeTeam": "ＦＣ今治",
       "canonicalAwayTeam": "ジュビロ磐田",
       "voteCounts": {
         "home": 24429,
@@ -265,7 +265,7 @@
       "homeTeam": "ヴァンラーレ八戸",
       "awayTeam": "いわきFC",
       "canonicalHomeTeam": "ヴァンラーレ八戸",
-      "canonicalAwayTeam": "いわきFC",
+      "canonicalAwayTeam": "いわきＦＣ",
       "voteCounts": {
         "home": 32428,
         "draw": 38985,
@@ -289,7 +289,7 @@
       "kickoff": "14:00",
       "homeTeam": "藤枝MYFC",
       "awayTeam": "ヴァンフォーレ甲府",
-      "canonicalHomeTeam": "藤枝MYFC",
+      "canonicalHomeTeam": "藤枝ＭＹＦＣ",
       "canonicalAwayTeam": "ヴァンフォーレ甲府",
       "voteCounts": {
         "home": 109548,
@@ -314,7 +314,7 @@
       "kickoff": "14:00",
       "homeTeam": "RB大宮アルディージャ",
       "awayTeam": "モンテディオ山形",
-      "canonicalHomeTeam": "RB大宮アルディージャ",
+      "canonicalHomeTeam": "ＲＢ大宮アルディージャ",
       "canonicalAwayTeam": "モンテディオ山形",
       "voteCounts": {
         "home": 195463,

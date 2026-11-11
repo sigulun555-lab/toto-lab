@@ -1,0 +1,186 @@
+{
+  "generatedAt": "2026-11-11T02:39:31.440Z",
+  "inputCounts": {
+    "predictions": 41,
+    "results": 13
+  },
+  "excludedPostDeadlineCount": 0,
+  "excludedPostDeadline": [],
+  "unresolvedTeamNameCount": 0,
+  "unresolvedTeamNames": [],
+  "unresolvedCount": 0,
+  "unresolved": [],
+  "supersededByRevisionCount": 2,
+  "supersededRecords": [
+    {
+      "predictionId": "Claude-toto13-v1-r1669-m11-nara-gunma-20261102T114331Z",
+      "supersededBy": "Claude-toto13-v1-r1669-m11-nara-gunma-rev-20261102T120718Z",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    },
+    {
+      "predictionId": "Claude-toto13-v1-r1669-m11-nara-gunma-rev-20261102T120718Z",
+      "supersededBy": "Claude-toto13-v1-r1669-m11-nara-gunma-notefix-20261102T122651Z",
+      "reason": "別のレコードのrevisionOfから参照されている旧版のため採点から除外（modelVersionの異同は問わない）"
+    }
+  ],
+  "usedRecordCount": 39,
+  "byModel": {
+    "ChatGPT": {
+      "n": 13,
+      "accuracy": 0.6923076923076923,
+      "brier": 0.46372789758261546,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 0.8250976224871257,
+      "avgPredicted": {
+        "0": 0.2242,
+        "1": 0.4517,
+        "2": 0.3241
+      },
+      "actualRate": {
+        "0": 0.0769,
+        "1": 0.6154,
+        "2": 0.3077
+      }
+    },
+    "Claude": {
+      "n": 26,
+      "accuracy": 0.5769230769230769,
+      "brier": 0.5338724048308845,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 0.9180505043278603,
+      "avgPredicted": {
+        "0": 0.2877,
+        "1": 0.4282,
+        "2": 0.2842
+      },
+      "actualRate": {
+        "0": 0.0769,
+        "1": 0.6154,
+        "2": 0.3077
+      }
+    }
+  },
+  "byModelVersion": {
+    "ChatGPT@toto13-v3-market-blend-30-70": {
+      "n": 13,
+      "accuracy": 0.6923076923076923,
+      "brier": 0.46372789758261546,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 0.8250976224871257,
+      "avgPredicted": {
+        "0": 0.2242,
+        "1": 0.4517,
+        "2": 0.3241
+      },
+      "actualRate": {
+        "0": 0.0769,
+        "1": 0.6154,
+        "2": 0.3077
+      }
+    },
+    "Claude@toto13-v1": {
+      "n": 13,
+      "accuracy": 0.46153846153846156,
+      "brier": 0.5921718892307692,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 0.9993845411077273,
+      "avgPredicted": {
+        "0": 0.3263,
+        "1": 0.4172,
+        "2": 0.2565
+      },
+      "actualRate": {
+        "0": 0.0769,
+        "1": 0.6154,
+        "2": 0.3077
+      }
+    },
+    "Claude@toto13-v2-market-blend-30-70": {
+      "n": 13,
+      "accuracy": 0.6923076923076923,
+      "brier": 0.4755729204309999,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 0.8367164675479931,
+      "avgPredicted": {
+        "0": 0.249,
+        "1": 0.4392,
+        "2": 0.3119
+      },
+      "actualRate": {
+        "0": 0.0769,
+        "1": 0.6154,
+        "2": 0.3077
+      }
+    }
+  },
+  "byModelAndCompetition": {
+    "ChatGPT__J2_LEAGUE": {
+      "n": 10,
+      "accuracy": 0.8,
+      "brier": 0.3995251602672,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 0.7314812024871847,
+      "avgPredicted": {
+        "0": 0.2302,
+        "1": 0.4537,
+        "2": 0.3161
+      },
+      "actualRate": {
+        "0": 0,
+        "1": 0.6,
+        "2": 0.4
+      }
+    },
+    "ChatGPT__J3_LEAGUE": {
+      "n": 3,
+      "accuracy": 0.3333333333333333,
+      "brier": 0.6777370219673333,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 1.1371523558202625,
+      "avgPredicted": {
+        "0": 0.2041,
+        "1": 0.445,
+        "2": 0.3509
+      },
+      "actualRate": {
+        "0": 0.3333,
+        "1": 0.6667,
+        "2": 0
+      }
+    },
+    "Claude__J2_LEAGUE": {
+      "n": 20,
+      "accuracy": 0.6,
+      "brier": 0.5430596940308998,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 0.9365135600966392,
+      "avgPredicted": {
+        "0": 0.2973,
+        "1": 0.4215,
+        "2": 0.2812
+      },
+      "actualRate": {
+        "0": 0,
+        "1": 0.6,
+        "2": 0.4
+      }
+    },
+    "Claude__J3_LEAGUE": {
+      "n": 6,
+      "accuracy": 0.5,
+      "brier": 0.5032481074975,
+      "brierConvention": "sum-of-3-squares (no division)",
+      "logloss": 0.8565069850985972,
+      "avgPredicted": {
+        "0": 0.2557,
+        "1": 0.4504,
+        "2": 0.2939
+      },
+      "actualRate": {
+        "0": 0.3333,
+        "1": 0.6667,
+        "2": 0
+      }
+    }
+  }
+}

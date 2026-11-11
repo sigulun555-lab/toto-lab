@@ -1,0 +1,218 @@
+{
+  "generatedAt": "2026-11-11T02:39:22.907Z",
+  "marketType": "totoGOAL3",
+  "inputCounts": {
+    "predictions": 36,
+    "results": 13
+  },
+  "excludedPostDeadlineCount": 0,
+  "excludedPostDeadline": [],
+  "unresolvedTeamNameCount": 0,
+  "unresolvedTeamNames": [],
+  "unresolvedCount": 0,
+  "unresolved": [],
+  "supersededByRevisionCount": 24,
+  "supersededRecords": [
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-home-sync-20261101T132028Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-home-sync-20261101T215952Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-away-sync-20261101T132028Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-away-sync-20261101T215952Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-home-sync-20261101T132028Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-home-sync-20261101T215952Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-away-sync-20261101T132028Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-away-sync-20261101T215952Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-home-sync-20261101T132028Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-home-sync-20261101T215952Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-away-sync-20261101T132028Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-away-sync-20261101T215952Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-home-sync-20261101T215952Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-home-sync-20261102T055852Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-away-sync-20261101T215952Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-away-sync-20261102T055852Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-home-sync-20261101T215952Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-home-sync-20261102T055852Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-away-sync-20261101T215952Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-away-sync-20261102T055852Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-home-sync-20261101T215952Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-home-sync-20261102T055852Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-away-sync-20261101T215952Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-away-sync-20261102T055852Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-home-sync-20261102T055852Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-home-sync-20261102T154630Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-away-sync-20261102T055852Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-away-sync-20261102T154630Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-home-sync-20261102T055852Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-home-sync-20261102T154630Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-away-sync-20261102T055852Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-away-sync-20261102T154630Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-home-sync-20261102T055852Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-home-sync-20261102T154630Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-away-sync-20261102T055852Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-away-sync-20261102T154630Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-home-sync-20261102T154630Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-home-sync-20261103T005645Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-away-sync-20261102T154630Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m1-away-sync-20261103T005645Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-home-sync-20261102T154630Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-home-sync-20261103T005645Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-away-sync-20261102T154630Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m2-away-sync-20261103T005645Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-home-sync-20261102T154630Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-home-sync-20261103T005645Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    },
+    {
+      "predictionId": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-away-sync-20261102T154630Z",
+      "supersededBy": "ChatGPT-gpt-poisson-goal-dist-v1-r1669-m3-away-sync-20261103T005645Z",
+      "reason": "別の締切前レコードのrevisionOfから参照されている旧版のため採点から除外（結果未確定の場合も適用）"
+    }
+  ],
+  "usedRecordCount": 12,
+  "byModel": {
+    "ChatGPT": {
+      "n": 6,
+      "accuracy": 0.6666666666666666,
+      "brier": 0.5703879076737092,
+      "brierConvention": "sum-of-4-squares (no division)",
+      "logloss": 1.0462032530036167,
+      "avgPredicted": {
+        "0": 0.2995,
+        "1": 0.3244,
+        "2": 0.2146,
+        "3": 0.1615
+      },
+      "actualRate": {
+        "0": 0.3333,
+        "1": 0.5,
+        "2": 0.1667,
+        "3": 0
+      }
+    },
+    "Claude": {
+      "n": 6,
+      "accuracy": 0.5,
+      "brier": 0.6598874966666667,
+      "brierConvention": "sum-of-4-squares (no division)",
+      "logloss": 1.206363850534317,
+      "avgPredicted": {
+        "0": 0.2584,
+        "1": 0.3288,
+        "2": 0.2301,
+        "3": 0.1827
+      },
+      "actualRate": {
+        "0": 0.3333,
+        "1": 0.5,
+        "2": 0.1667,
+        "3": 0
+      }
+    }
+  },
+  "byModelVersion": {
+    "ChatGPT@gpt-poisson-goal-dist-v1": {
+      "n": 6,
+      "accuracy": 0.6666666666666666,
+      "brier": 0.5703879076737092,
+      "brierConvention": "sum-of-4-squares (no division)",
+      "logloss": 1.0462032530036167,
+      "avgPredicted": {
+        "0": 0.2995,
+        "1": 0.3244,
+        "2": 0.2146,
+        "3": 0.1615
+      },
+      "actualRate": {
+        "0": 0.3333,
+        "1": 0.5,
+        "2": 0.1667,
+        "3": 0
+      }
+    },
+    "Claude@goal3-v1": {
+      "n": 6,
+      "accuracy": 0.5,
+      "brier": 0.6598874966666667,
+      "brierConvention": "sum-of-4-squares (no division)",
+      "logloss": 1.206363850534317,
+      "avgPredicted": {
+        "0": 0.2584,
+        "1": 0.3288,
+        "2": 0.2301,
+        "3": 0.1827
+      },
+      "actualRate": {
+        "0": 0.3333,
+        "1": 0.5,
+        "2": 0.1667,
+        "3": 0
+      }
+    }
+  }
+}

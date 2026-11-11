@@ -11,6 +11,7 @@ import platform
 import random
 import statistics
 import sys
+from importlib.metadata import PackageNotFoundError, version as distribution_version
 from pathlib import Path
 
 EXPECTED = {
@@ -36,6 +37,14 @@ def verify_sha256(path: Path, expected: str, label: str) -> str:
     return observed
 
 
+def _package_installed(name: str) -> bool:
+    try:
+        distribution_version(name)
+        return True
+    except PackageNotFoundError:
+        return False
+
+
 def git_blob_sha(path: Path) -> str:
     data = path.read_bytes()
     header = b"blob " + str(len(data)).encode("ascii") + b"\0"
@@ -52,7 +61,9 @@ def verify_git_blob(path: Path, expected: str, label: str) -> str:
 def prepare_output_directory(out_dir: Path, repository_root: Path | None = None) -> Path:
     """Require a dedicated, empty output directory outside the repository checkout."""
     resolved_out = out_dir.expanduser().resolve()
-    root = (repository_root or Path.cwd()).expanduser().resolve()
+    # Anchor the safety boundary to this checkout, not the caller's cwd.
+    # The documented reproduction command may be launched from the separate GPT input checkout.
+    root = (repository_root or Path(__file__).resolve().parents[2]).expanduser().resolve()
     try:
         resolved_out.relative_to(root)
     except ValueError:
@@ -289,9 +300,18 @@ def main(argv=None):
             },
         },
         "code": {"analysis.py": sha256_file(Path(__file__).resolve())},
-        "environment": {"python": platform.python_version(), "rng": "Python random.Random",
-                        "seed": args.seed, "replicates": args.replicates,
-                        "quantile": "order statistics at floor(.025*B), floor(.975*B)-1"},
+        "environment": {
+            "python": platform.python_version(),
+            "implementation": platform.python_implementation(),
+            "platform": platform.platform(),
+            "packages": {
+                name: (distribution_version(name) if _package_installed(name) else None)
+                for name in ("numpy", "scipy")
+            },
+            "rng": "Python random.Random", "seed": args.seed,
+            "replicates": args.replicates,
+            "quantile": "order statistics at floor(.025*B), floor(.975*B)-1",
+        },
         "outputs": {targets_path.name: sha256_file(targets_path),
                     summary_path.name: sha256_file(summary_path)},
     }

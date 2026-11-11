@@ -98,6 +98,15 @@ def test_research_output_must_be_outside_repository_checkout(tmp_path):
     assert outside == (tmp_path / "research-output").resolve()
 
 
+def test_default_output_guard_uses_script_checkout_not_callers_cwd(tmp_path, monkeypatch):
+    repo_root = SCRIPT_DIR.parents[1]
+    monkeypatch.chdir(tmp_path)
+    forbidden = repo_root / ".goal3-output-guard-regression"
+    with pytest.raises(ValueError, match="outside the repository checkout"):
+        analysis.prepare_output_directory(forbidden)
+    assert not forbidden.exists()
+
+
 def test_nonempty_research_output_directory_fails_without_mutation(tmp_path):
     out = tmp_path / "research-output"
     out.mkdir()

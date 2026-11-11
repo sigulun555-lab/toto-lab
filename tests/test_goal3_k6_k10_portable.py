@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import hashlib
+import subprocess
 import sys
 from pathlib import Path
 
@@ -60,3 +61,18 @@ def test_bootstrap_rejects_too_few_replicates():
             "--aliases", "/tmp/aliases.json", "--csv", "/tmp/2025.csv",
             "--out-dir", "/tmp/out", "--replicates", "999",
         ])
+
+
+def test_no_claude_workspace_absolute_paths_remain():
+    source = (SCRIPT_DIR / "analysis.py").read_text(encoding="utf-8")
+    assert "/home/claude/work/" not in source
+
+
+def test_entrypoint_runs_in_python_isolated_mode():
+    result = subprocess.run(
+        [sys.executable, "-I", str(SCRIPT_DIR / "analysis.py"), "--help"],
+        capture_output=True, text=True, check=False,
+    )
+    assert result.returncode == 0
+    assert "--mod-dir" in result.stdout
+    assert "--out-dir" in result.stdout

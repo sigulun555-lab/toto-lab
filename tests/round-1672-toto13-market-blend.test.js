@@ -1,3 +1,4 @@
+// Revision lineage is append-only: each new official market snapshot points to the immediately preceding V2 row for that match.
 'use strict';
 const test=require('node:test');
 const assert=require('node:assert/strict');

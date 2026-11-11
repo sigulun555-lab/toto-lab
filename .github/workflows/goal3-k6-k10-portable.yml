@@ -114,7 +114,7 @@ jobs:
       - name: Upload new retrospective reproduction artifact
         uses: actions/upload-artifact@v4
         with:
-          name: goal3-claude-portable-reproduction-\${{ github.run_id }}
-          path: \${{ runner.temp }}/goal3-k6-k10-reproduction
+          name: goal3-claude-portable-reproduction-${{ github.run_id }}
+          path: ${{ runner.temp }}/goal3-k6-k10-reproduction
           if-no-files-found: error
           retention-days: 30

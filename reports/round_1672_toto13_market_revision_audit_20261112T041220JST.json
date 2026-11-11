@@ -1,0 +1,36 @@
+{
+  "round": 1672,
+  "product": "toto13",
+  "revisionType": "official-market-snapshot-revision",
+  "generatedAt": "2026-11-11T19:12:20.000Z",
+  "deadlineAt": "2026-11-14T04:50:00.000Z",
+  "previousV2PredictionCount": 13,
+  "appendedV2RevisionCount": 13,
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1672",
+  "officialDisplayAt": "2026-11-12T03:13:00+09:00",
+  "retrievedAt": "2026-11-12T04:12:20+09:00",
+  "displayLagSeconds": 3560,
+  "officialRows": 13,
+  "perMatchVoteCount": 250174,
+  "allPercentagesSumTo100": true,
+  "blend": {
+    "v1Weight": 0.3,
+    "officialVoteShareWeight": 0.7,
+    "formula": "p_v2_revision = 0.3 * p_v1 + 0.7 * official_vote_share"
+  },
+  "revisionOf": "each revised V2 row points to the same match's initial V2 predictionId",
+  "validation": {
+    "originalV1Rows": 13,
+    "originalV2Rows": 13,
+    "revisionRows": 13,
+    "uniquePredictionIds": 26,
+    "duplicatePredictionIds": 0,
+    "danglingRevisionOf": 0,
+    "maxProbabilitySumError": 9.99999993922529e-9,
+    "maxBlendDifference": 4.999999997368221e-9,
+    "allPreDeadline": true,
+    "allOfficialVoteCountsConsistent": true,
+    "allDisplayedSharesSum100": true
+  },
+  "notes": "Append-only research comparison only. Original V1 and V2 rows are preserved. The official page displayed 03:13 JST at retrieval 04:12:20 JST (59m20s lag); this is a timestamped official display snapshot, not a live current value. No production model, market weight, app Artifact, fixture updater, or main branch change."
+}

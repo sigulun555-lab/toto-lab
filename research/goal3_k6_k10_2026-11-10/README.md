@@ -28,8 +28,11 @@ From that checkout, run:
 
     python -I /path/to/toto-lab/research/goal3_k6_k10_2026-11-10/analysis.py --mod-dir verification/goal3_independent --history data/history.json --aliases data/team_aliases.json --csv verification/goal3_independent/2025.csv --out-dir /tmp/goal3-k6-k10-reproduction
 
-Optional overrides: --seed and --replicates (minimum 1,000). Do not point --out-dir
-at a production or shadow directory.
+Optional overrides: --seed and --replicates (minimum 1,000). The runner resolves
+--out-dir and rejects any path inside the repository checkout. It also refuses a
+non-empty output directory and creates each result file exclusively, so an existing
+research, production, or shadow file cannot be overwritten. The workflow uses a
+fresh RUNNER_TEMP directory for each run.
 
 The output directory contains:
 - goal3_outer_matches.json — per-team-side outputs;

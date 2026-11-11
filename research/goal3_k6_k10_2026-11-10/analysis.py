@@ -17,7 +17,7 @@ EXPECTED = {
     "history": "efca00ea491fcfea6a1267af403cb5ba80ae540fca97a076def25815fc318201",
     "aliases": "92e6377068df8dd63935e0c003adfd7b355e7adac23f7aace4f947be4f5f027e",
     "csv": "6175674bc28d4311b219eed5ea2aa5e478fe0f17b8e6b8653f37718057da4288",
-    "nested_validation": "1cbd349c4a772e4ba89b2e3c36c6a0396abbeaa618e131cfb100e6b4dae9b",
+    "nested_validation_git_blob": "5f73df9e6fdb43d5cf333c04036f87ae16c20d1f",
 }
 
 
@@ -33,6 +33,19 @@ def verify_sha256(path: Path, expected: str, label: str) -> str:
     observed = sha256_file(path)
     if observed != expected:
         raise ValueError(f"{label} SHA-256 mismatch: expected {expected}, got {observed}")
+    return observed
+
+
+def git_blob_sha(path: Path) -> str:
+    data = path.read_bytes()
+    header = b"blob " + str(len(data)).encode("ascii") + b"\0"
+    return hashlib.sha1(header + data).hexdigest()
+
+
+def verify_git_blob(path: Path, expected: str, label: str) -> str:
+    observed = git_blob_sha(path)
+    if observed != expected:
+        raise ValueError(f"{label} Git blob SHA mismatch: expected {expected}, got {observed}")
     return observed
 
 
@@ -87,7 +100,9 @@ def main(argv=None):
             raise FileNotFoundError(f"{label} input not found: {path}")
         verify_sha256(path, EXPECTED[label], label)
     nv_path = mod_dir / "nested_validation.py"
-    verify_sha256(nv_path, EXPECTED["nested_validation"], "nested_validation.py")
+    verify_git_blob(
+        nv_path, EXPECTED["nested_validation_git_blob"], "PR #19 nested_validation.py"
+    )
     nv = load_nv(mod_dir)
 
     h2025, h2026 = nv.load_data(str(history_path), str(aliases_path), str(csv_path))
@@ -178,7 +193,7 @@ def main(argv=None):
         stats = []
         for _ in range(args.replicates):
             total = count = 0
-            for key in (keys[rng.randrange(len(keys))] for _ in keys):
+            for key in [keys[rng.randrange(len(keys))] for _ in keys]:
                 s, nrows = sums[key]
                 total += s
                 count += nrows
@@ -246,7 +261,10 @@ def main(argv=None):
             "history": {"basename": history_path.name, "sha256": sha256_file(history_path)},
             "aliases": {"basename": aliases_path.name, "sha256": sha256_file(aliases_path)},
             "csv": {"basename": csv_path.name, "sha256": sha256_file(csv_path)},
-            "nested_validation.py": {"sha256": sha256_file(nv_path)},
+            "nested_validation.py": {
+                "sha256": sha256_file(nv_path),
+                "git_blob_sha": git_blob_sha(nv_path),
+            },
         },
         "code": {"analysis.py": sha256_file(Path(__file__).resolve())},
         "environment": {"python": platform.python_version(), "rng": "Python random.Random",

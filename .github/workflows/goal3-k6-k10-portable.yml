@@ -1,4 +1,4 @@
-name: GOAL3 Claude k6-k10 portable tests
+name: GOAL3 Claude k6-k10 portable reproduction
 
 on:
   push:
@@ -25,3 +25,96 @@ jobs:
         run: python -m pip install pytest
       - name: Run portable-path and provenance unit tests
         run: python -m pytest -q tests/test_goal3_k6_k10_portable.py
+
+  full-retrospective-reproduction:
+    needs: portable-unit-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout exact Claude PR #19 input snapshot
+        uses: actions/checkout@v4
+        with:
+          repository: sigulun555-lab/gpt
+          ref: 2adf65a20247dd30c5b86ae95c22bd75980cda89
+          path: gpt-inputs
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install numerical dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy
+      - name: Reproduce Claude's frozen 17-date outer cohort
+        run: |
+          python -I research/goal3_k6_k10_2026-11-10/analysis.py \
+            --mod-dir gpt-inputs/verification/goal3_independent \
+            --history gpt-inputs/data/history.json \
+            --aliases gpt-inputs/data/team_aliases.json \
+            --csv gpt-inputs/verification/goal3_independent/2025.csv \
+            --out-dir "$RUNNER_TEMP/goal3-k6-k10-reproduction"
+      - name: Compare generated rows and summary with Claude's frozen artifacts
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          root = Path("research/goal3_k6_k10_2026-11-10")
+          out = Path(os.environ["RUNNER_TEMP"]) / "goal3-k6-k10-reproduction"
+          ref_rows = json.loads((root / "goal3_outer_matches.json").read_text(encoding="utf-8"))
+          new_rows = json.loads((out / "goal3_outer_matches.json").read_text(encoding="utf-8"))
+          ref = json.loads((root / "goal3_summary.json").read_text(encoding="utf-8"))
+          new = json.loads((out / "goal3_summary.json").read_text(encoding="utf-8"))
+
+          assert len(ref_rows) == len(new_rows) == 472
+          key = lambda r: (r["date"], r["match"], r["side"])
+          ref_map = {key(r): r for r in ref_rows}
+          new_map = {key(r): r for r in new_rows}
+          assert ref_map.keys() == new_map.keys()
+          max_probability_diff = 0.0
+          max_score_diff = 0.0
+          for k, old in ref_map.items():
+              cur = new_map[k]
+              for field in ("fold", "date", "league", "match", "side", "actual", "cutoff_prior_max_date"):
+                  assert old[field] == cur[field], (k, field, old[field], cur[field])
+              for field in ("p_k6", "p_k10"):
+                  max_probability_diff = max(
+                      max_probability_diff,
+                      max(abs(a-b) for a,b in zip(old[field], cur[field]))
+                  )
+              for field in ("brier_k6", "brier_k10", "ll_k6", "ll_k10", "D_brier", "D_ll"):
+                  max_score_diff = max(max_score_diff, abs(old[field] - cur[field]))
+          assert max_probability_diff <= 1e-8, max_probability_diff
+          assert max_score_diff <= 2e-8, max_score_diff
+
+          assert new["cohort"] == {
+              "matches": ref["matches"],
+              "team_side_targets": ref["team_side_targets"],
+              "dates": 17,
+          }
+          for metric in ("D_brier", "D_ll"):
+              assert abs(new["overall"][metric] - ref["overall"][metric]) <= 2e-9
+              for method in ("date_block", "match_cluster"):
+                  old_ci = ref["bootstrap"][metric][method + "_ci95"]
+                  new_ci = new["bootstrap"][metric][method]["ci95"]
+                  assert max(abs(a-b) for a,b in zip(old_ci, new_ci)) <= 2e-8, (metric, method, old_ci, new_ci)
+          for league in ("J1", "J2", "J3"):
+              for field in ("team_sides", "matches", "dates", "D_brier_mean",
+                            "D_brier_median_date", "D_brier_sd_date", "D_ll_mean",
+                            "D_ll_median_date", "D_ll_sd_date"):
+                  assert abs(new["leagues"][league][field] - ref["leagues"][league][field]) <= 2e-8, (league, field)
+          for arm in ("p_k6", "p_k10"):
+              for category in ("0", "1", "2", "3"):
+                  for field in ("mean_pred", "observed"):
+                      assert abs(new["calibration"][arm][category][field] - ref["calibration"][arm][category][field]) <= 2e-8
+              assert abs(new["accuracy"][arm] - ref["accuracy"][arm]) <= 1e-12
+          print("Claude retrospective reproduction matched:")
+          print(f"  rows={len(new_rows)}; max_probability_diff={max_probability_diff:.3g}; max_score_diff={max_score_diff:.3g}")
+          print(f"  D_brier={new['overall']['D_brier']:.12f}; D_ll={new['overall']['D_ll']:.12f}")
+          print("  date-block and match-cluster bootstrap intervals matched within 2e-8")
+          PY
+      - name: Upload new retrospective reproduction artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: goal3-claude-portable-reproduction-\${{ github.run_id }}
+          path: \${{ runner.temp }}/goal3-k6-k10-reproduction
+          if-no-files-found: error
+          retention-days: 30

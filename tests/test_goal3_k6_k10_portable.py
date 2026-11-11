@@ -76,3 +76,13 @@ def test_entrypoint_runs_in_python_isolated_mode():
     assert result.returncode == 0
     assert "--mod-dir" in result.stdout
     assert "--out-dir" in result.stdout
+
+
+def test_git_blob_sha_and_guard(tmp_path):
+    path = tmp_path / "nested_validation.py"
+    path.write_bytes(b"goal3-research-only")
+    expected = hashlib.sha1(b"blob 19\0goal3-research-only").hexdigest()
+    assert analysis.git_blob_sha(path) == expected
+    assert analysis.verify_git_blob(path, expected, "fixture") == expected
+    with pytest.raises(ValueError, match="Git blob SHA mismatch"):
+        analysis.verify_git_blob(path, "0" * 40, "fixture")

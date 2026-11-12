@@ -1,0 +1,201 @@
+{
+  "round": 1672,
+  "product": "toto13",
+  "generatedAt": "2026-11-11T18:14:03.433Z",
+  "deadlineJst": "2026-11-14 13:50 JST",
+  "internalDeadlineJst": "2026-11-13 22:00 JST",
+  "modelRepository": "sigulun555-lab/gpt",
+  "modelPath": "model.js",
+  "modelFunction": "predict",
+  "modelBlobSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+  "historyPath": "data/history.json",
+  "historyBlobSha": "9bd79002132f4fcc640819c6f50dad143f936a99",
+  "historyRows": 460,
+  "latestHistoryDate": "2026-11-08",
+  "historyChronological": true,
+  "aliasesBlobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab",
+  "teamsBlobSha": "41096236f986f9456beeb15f1c35e61e0529caeb",
+  "fixtureCount": 13,
+  "teamSideCount": 26,
+  "allTeamsHave12Matches": true,
+  "teamNamesValidated": true,
+  "v1Definition": "Existing model.js predict() Poisson baseline; earlier historical results only; last 12 matches per team; no market or team-news adjustment.",
+  "v2Definition": "30% V1 outcome probabilities + 70% directly retrieved official toto vote share.",
+  "marketSnapshotPath": "reports/round_1672_toto13_official_market_snapshot_20261112T0215JST.json",
+  "marketOfficialDisplayAt": "2026-11-12T02:15:00+09:00",
+  "marketRetrievedAt": "2026-11-12T02:54:30+09:00",
+  "marketDisplayLagMinutes": 39.5,
+  "validation": {
+    "v1MaxProbabilitySumError": 9.99999993922529e-9,
+    "v2MaxProbabilitySumError": 9.99999993922529e-9,
+    "v2MaxBlendDifference": 5.000000025123796e-9,
+    "goalProbabilityMaxSumError": 1.1102230246251565e-16,
+    "allVoteTotals248284": true,
+    "allMarketPercentagesSum100": true
+  },
+  "injuryAndLineupAdjustmentsApplied": false,
+  "appArtifactChanged": false,
+  "fixtureUpdaterChanged": false,
+  "modelSourceChanged": false,
+  "mainDirectWrite": false,
+  "notes": "Experimental independent GPT comparison snapshots only; not production adoption. Executed repository model.js predict function, not an approximate replacement. No Claude comparison was available for this round at generation time.",
+  "teamNameMapping": [
+    {
+      "matchNumber": 1,
+      "field": "homeTeam",
+      "modelCanonical": "FC町田ゼルビア",
+      "teamsJsonCanonical": "ＦＣ町田ゼルビア"
+    },
+    {
+      "matchNumber": 1,
+      "field": "awayTeam",
+      "modelCanonical": "ヴィッセル神戸",
+      "teamsJsonCanonical": "ヴィッセル神戸"
+    },
+    {
+      "matchNumber": 2,
+      "field": "homeTeam",
+      "modelCanonical": "セレッソ大阪",
+      "teamsJsonCanonical": "セレッソ大阪"
+    },
+    {
+      "matchNumber": 2,
+      "field": "awayTeam",
+      "modelCanonical": "浦和レッズ",
+      "teamsJsonCanonical": "浦和レッズ"
+    },
+    {
+      "matchNumber": 3,
+      "field": "homeTeam",
+      "modelCanonical": "鹿島アントラーズ",
+      "teamsJsonCanonical": "鹿島アントラーズ"
+    },
+    {
+      "matchNumber": 3,
+      "field": "awayTeam",
+      "modelCanonical": "横浜F・マリノス",
+      "teamsJsonCanonical": "横浜Ｆ・マリノス"
+    },
+    {
+      "matchNumber": 4,
+      "field": "homeTeam",
+      "modelCanonical": "柏レイソル",
+      "teamsJsonCanonical": "柏レイソル"
+    },
+    {
+      "matchNumber": 4,
+      "field": "awayTeam",
+      "modelCanonical": "川崎フロンターレ",
+      "teamsJsonCanonical": "川崎フロンターレ"
+    },
+    {
+      "matchNumber": 5,
+      "field": "homeTeam",
+      "modelCanonical": "アルビレックス新潟",
+      "teamsJsonCanonical": "アルビレックス新潟"
+    },
+    {
+      "matchNumber": 5,
+      "field": "awayTeam",
+      "modelCanonical": "テゲバジャーロ宮崎",
+      "teamsJsonCanonical": "テゲバジャーロ宮崎"
+    },
+    {
+      "matchNumber": 6,
+      "field": "homeTeam",
+      "modelCanonical": "大分トリニータ",
+      "teamsJsonCanonical": "大分トリニータ"
+    },
+    {
+      "matchNumber": 6,
+      "field": "awayTeam",
+      "modelCanonical": "栃木シティ",
+      "teamsJsonCanonical": "栃木シティ"
+    },
+    {
+      "matchNumber": 7,
+      "field": "homeTeam",
+      "modelCanonical": "北海道コンサドーレ札幌",
+      "teamsJsonCanonical": "北海道コンサドーレ札幌"
+    },
+    {
+      "matchNumber": 7,
+      "field": "awayTeam",
+      "modelCanonical": "サガン鳥栖",
+      "teamsJsonCanonical": "サガン鳥栖"
+    },
+    {
+      "matchNumber": 8,
+      "field": "homeTeam",
+      "modelCanonical": "ベガルタ仙台",
+      "teamsJsonCanonical": "ベガルタ仙台"
+    },
+    {
+      "matchNumber": 8,
+      "field": "awayTeam",
+      "modelCanonical": "ブラウブリッツ秋田",
+      "teamsJsonCanonical": "ブラウブリッツ秋田"
+    },
+    {
+      "matchNumber": 9,
+      "field": "homeTeam",
+      "modelCanonical": "FC今治",
+      "teamsJsonCanonical": "ＦＣ今治"
+    },
+    {
+      "matchNumber": 9,
+      "field": "awayTeam",
+      "modelCanonical": "ジュビロ磐田",
+      "teamsJsonCanonical": "ジュビロ磐田"
+    },
+    {
+      "matchNumber": 10,
+      "field": "homeTeam",
+      "modelCanonical": "カターレ富山",
+      "teamsJsonCanonical": "カターレ富山"
+    },
+    {
+      "matchNumber": 10,
+      "field": "awayTeam",
+      "modelCanonical": "徳島ヴォルティス",
+      "teamsJsonCanonical": "徳島ヴォルティス"
+    },
+    {
+      "matchNumber": 11,
+      "field": "homeTeam",
+      "modelCanonical": "ヴァンラーレ八戸",
+      "teamsJsonCanonical": "ヴァンラーレ八戸"
+    },
+    {
+      "matchNumber": 11,
+      "field": "awayTeam",
+      "modelCanonical": "いわきFC",
+      "teamsJsonCanonical": "いわきＦＣ"
+    },
+    {
+      "matchNumber": 12,
+      "field": "homeTeam",
+      "modelCanonical": "藤枝MYFC",
+      "teamsJsonCanonical": "藤枝ＭＹＦＣ"
+    },
+    {
+      "matchNumber": 12,
+      "field": "awayTeam",
+      "modelCanonical": "ヴァンフォーレ甲府",
+      "teamsJsonCanonical": "ヴァンフォーレ甲府"
+    },
+    {
+      "matchNumber": 13,
+      "field": "homeTeam",
+      "modelCanonical": "RB大宮アルディージャ",
+      "teamsJsonCanonical": "ＲＢ大宮アルディージャ"
+    },
+    {
+      "matchNumber": 13,
+      "field": "awayTeam",
+      "modelCanonical": "モンテディオ山形",
+      "teamsJsonCanonical": "モンテディオ山形"
+    }
+  ],
+  "teamNameMappingNote": "Model history canonical labels were mapped through toto-lab/data/teams.json aliases to the repository's canonical club labels for storage; model probabilities were not changed."
+}

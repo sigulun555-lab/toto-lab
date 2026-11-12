@@ -1,0 +1,42 @@
+{
+  "round": 1672,
+  "product": "toto13",
+  "revisionType": "official-market-snapshot-revision",
+  "generatedAt": "2026-11-11T20:13:32.000Z",
+  "retrievedAt": "2026-11-12T05:09:37+09:00",
+  "deadlineAt": "2026-11-14T04:50:00.000Z",
+  "previousV2PredictionCount": 26,
+  "appendedV2RevisionCount": 13,
+  "totalV2PredictionCount": 39,
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1672",
+  "officialDisplayAt": "2026-11-12T04:14:00+09:00",
+  "displayLagSeconds": 3337,
+  "officialRows": 13,
+  "perMatchVoteCount": 250586,
+  "allPercentagesSumTo100": true,
+  "blend": {
+    "v1Weight": 0.3,
+    "officialVoteShareWeight": 0.7,
+    "formula": "p_v2_revision = 0.3 * p_v1 + 0.7 * official_vote_share"
+  },
+  "revisionOf": "each new V2 row points to the immediately preceding V2 revision for the same match",
+  "validation": {
+    "originalV1Rows": 13,
+    "initialV2Rows": 13,
+    "priorRevisionRows": 13,
+    "revisionRows": 13,
+    "totalV2Rows": 39,
+    "uniquePredictionIds": 39,
+    "duplicatePredictionIds": 0,
+    "danglingRevisionOf": 0,
+    "maxProbabilitySumError": 9.99999993922529e-9,
+    "maxGoalProbabilitySumError": 1.0000000050247593e-8,
+    "maxBlendDifference": 5.000000025123796e-9,
+    "allPreDeadline": true,
+    "allOfficialVoteCountsConsistent": true,
+    "allDisplayedSharesSum100": true,
+    "allFixturesMatchV1": true,
+    "revisionChainsComplete": true
+  },
+  "notes": "Append-only research comparison only. Original V1, initial V2, and 03:13 JST V2 revision are retained. Official page display 04:14 JST was directly retrieved at 05:09:37 JST (55m37s lag); this is a timestamped official display snapshot, not a live 05:09 value. No production model, market weight, app Artifact, fixture updater, or main branch change."
+}

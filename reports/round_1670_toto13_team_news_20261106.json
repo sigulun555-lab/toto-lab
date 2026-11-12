@@ -1,0 +1,1850 @@
+{
+  "round": 1670,
+  "product": "toto13",
+  "generatedAt": "2026-11-06T03:10:46+09:00",
+  "checkedAt": "2026-11-06T03:10:46+09:00",
+  "officialSchedule": {
+    "sourceUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardSalesTermtotoSP.form?holdCntId=1670",
+    "j1ScheduleUrl": "https://www.jleague.jp/j1/match/",
+    "j2ScheduleUrl": "https://www.jleague.jp/j2/match/search-list/?enddate=2026-11-08&period=custom&startdate=2026-11-07",
+    "deadlineJst": "2026-11-07T12:50:00+09:00",
+    "deadlineAt": "2026-11-07T03:50:00.000Z",
+    "matchCount": 13,
+    "fixtures": [
+      {
+        "matchNumber": 1,
+        "date": "2026-11-07",
+        "kickoff": "13:00",
+        "home": "清水エスパルス",
+        "away": "東京ヴェルディ",
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
+      },
+      {
+        "matchNumber": 2,
+        "date": "2026-11-07",
+        "kickoff": "14:00",
+        "home": "横浜Ｆ・マリノス",
+        "away": "ファジアーノ岡山",
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
+      },
+      {
+        "matchNumber": 3,
+        "date": "2026-11-07",
+        "kickoff": "15:00",
+        "home": "アビスパ福岡",
+        "away": "Ｖ・ファーレン長崎",
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
+      },
+      {
+        "matchNumber": 4,
+        "date": "2026-11-07",
+        "kickoff": "15:00",
+        "home": "ＦＣ東京",
+        "away": "鹿島アントラーズ",
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
+      },
+      {
+        "matchNumber": 5,
+        "date": "2026-11-07",
+        "kickoff": "16:00",
+        "home": "柏レイソル",
+        "away": "川崎フロンターレ",
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
+      },
+      {
+        "matchNumber": 6,
+        "date": "2026-11-07",
+        "kickoff": "14:00",
+        "home": "名古屋グランパス",
+        "away": "京都サンガF.C.",
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
+      },
+      {
+        "matchNumber": 7,
+        "date": "2026-11-08",
+        "kickoff": "14:00",
+        "home": "ヴィッセル神戸",
+        "away": "浦和レッズ",
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
+      },
+      {
+        "matchNumber": 8,
+        "date": "2026-11-08",
+        "kickoff": "15:00",
+        "home": "ガンバ大阪",
+        "away": "セレッソ大阪",
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
+      },
+      {
+        "matchNumber": 9,
+        "date": "2026-11-08",
+        "kickoff": "17:00",
+        "home": "ジェフユナイテッド千葉",
+        "away": "水戸ホーリーホック",
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
+      },
+      {
+        "matchNumber": 10,
+        "date": "2026-11-08",
+        "kickoff": "14:00",
+        "home": "ＦＣ町田ゼルビア",
+        "away": "サンフレッチェ広島",
+        "officialMatchPageUrl": "https://www.jleague.jp/j1/match/"
+      },
+      {
+        "matchNumber": 11,
+        "date": "2026-11-07",
+        "kickoff": "14:00",
+        "home": "徳島ヴォルティス",
+        "away": "テゲバジャーロ宮崎",
+        "officialMatchPageUrl": "https://www.jleague.jp/match/j2/2026/110716/preview/?mode=pc"
+      },
+      {
+        "matchNumber": 12,
+        "date": "2026-11-08",
+        "kickoff": "13:00",
+        "home": "ヴァンラーレ八戸",
+        "away": "北海道コンサドーレ札幌",
+        "officialMatchPageUrl": "https://www.jleague.jp/match/j2/2026/110806/preview/?mode=pc"
+      },
+      {
+        "matchNumber": 13,
+        "date": "2026-11-07",
+        "kickoff": "14:00",
+        "home": "サガン鳥栖",
+        "away": "カターレ富山",
+        "officialMatchPageUrl": "https://www.jleague.jp/j2/match/search-list/?enddate=2026-11-08&period=custom&startdate=2026-11-07"
+      }
+    ]
+  },
+  "officialInjuryRecords": [
+    {
+      "team": "カターレ富山",
+      "player": "チョン ウヨン",
+      "status": "confirmed_injury",
+      "details": "左ヒラメ筋損傷、全治約6週間。10/21のトレーニング中に負傷。11/7時点の復帰確認は未取得。",
+      "publishedAt": "2026-11-04T18:00:00+09:00",
+      "sourceUrl": "https://www.jleague.jp/news/article/35287/",
+      "retrievedAt": "2026-11-06T03:10:46+09:00"
+    },
+    {
+      "team": "北海道コンサドーレ札幌",
+      "player": "福森 晃斗",
+      "status": "confirmed_injury",
+      "details": "右大腿二頭筋肉離れ。10/25のトレーニング中に負傷。復帰予定時期は発表本文で未確認。",
+      "publishedAt": "2026-11-03T17:30:00+09:00",
+      "sourceUrl": "https://www.jleague.jp/news/article/35278/",
+      "retrievedAt": "2026-11-06T03:10:46+09:00"
+    },
+    {
+      "team": "ファジアーノ岡山",
+      "player": "小倉 幸成",
+      "status": "historical_official_injury_current_availability_unconfirmed",
+      "details": "左膝外側半月板断裂、6/15手術、全治約6か月の見込み。8/7発表。11/7時点の復帰可否は未確認。",
+      "publishedAt": "2026-08-07T18:00:00+09:00",
+      "sourceUrl": "https://www.jleague.jp/news/article/34592/",
+      "retrievedAt": "2026-11-06T03:10:46+09:00"
+    }
+  ],
+  "officialSuspensionRecords": [
+    {
+      "team": "水戸ホーリーホック",
+      "player": "真瀬 拓海",
+      "status": "confirmed_suspension",
+      "match": "2026-11-08 ジェフユナイテッド千葉戦",
+      "publishedAt": "2026-11-04T17:30:00+09:00",
+      "sourceUrl": "https://www.jleague.jp/news/article/35283/",
+      "retrievedAt": "2026-11-06T03:10:46+09:00"
+    },
+    {
+      "team": "浦和レッズ",
+      "player": "宮本 優太",
+      "status": "confirmed_suspension",
+      "match": "2026-11-08 ヴィッセル神戸戦",
+      "publishedAt": "2026-11-04T17:30:00+09:00",
+      "sourceUrl": "https://www.jleague.jp/news/article/35283/",
+      "retrievedAt": "2026-11-06T03:10:46+09:00"
+    }
+  ],
+  "teamCount": 26,
+  "teams": [
+    {
+      "matchNumber": 1,
+      "matchDate": "2026-11-07",
+      "team": "清水エスパルス",
+      "side": "home",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "石川 慧",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/shim/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "住吉 ジェラニレショーン",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/shim/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "木下 康介",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/shim/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "蓮川 壮大",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/shim/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "オコンクオ イケム ジェフ",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/shim/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "望月 栄汰",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/shim/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/shim/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/shim/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 1,
+      "matchDate": "2026-11-07",
+      "team": "東京ヴェルディ",
+      "side": "away",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "吉田 泰授",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/shim/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "山見 大登",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/shim/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "宮原 和也",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/shim/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "齋藤 功佑",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/shim/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "ゼイナー 大耀",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/shim/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "沼田 晃人",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/shim/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/shim/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/shim/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 2,
+      "matchDate": "2026-11-07",
+      "team": "横浜Ｆ・マリノス",
+      "side": "home",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "角田 涼太朗",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/okay/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "知念 慶",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/okay/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "ジョルディ クルークス",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/okay/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "天野 純",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/okay/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/okay/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/okay/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 2,
+      "matchDate": "2026-11-07",
+      "team": "ファジアーノ岡山",
+      "side": "away",
+      "officialInjuryStatus": "official_injury_notice_found_current_availability_check_pending",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [
+        {
+          "team": "ファジアーノ岡山",
+          "player": "小倉 幸成",
+          "status": "historical_official_injury_current_availability_unconfirmed",
+          "details": "左膝外側半月板断裂、6/15手術、全治約6か月の見込み。8/7発表。11/7時点の復帰可否は未確認。",
+          "publishedAt": "2026-08-07T18:00:00+09:00",
+          "sourceUrl": "https://www.jleague.jp/news/article/34592/",
+          "retrievedAt": "2026-11-06T03:10:46+09:00"
+        }
+      ],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "木村 太哉",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/okay/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "小倉 幸成",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/okay/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "田上 大地",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/okay/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/okay/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/okay/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 3,
+      "matchDate": "2026-11-07",
+      "team": "アビスパ福岡",
+      "side": "home",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "福島 和毅",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/fuku/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "深澤 大輝",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/fuku/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/fuku/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/fuku/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 3,
+      "matchDate": "2026-11-07",
+      "team": "Ｖ・ファーレン長崎",
+      "side": "away",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "名倉 巧",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/fuku/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "エドゥアルド",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/fuku/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "ルカ ラドティッチ",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/fuku/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "高畑 奎汰",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/fuku/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "ノーマン キャンベル",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/fuku/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "大下 蒼空",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/fuku/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/fuku/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/fuku/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 4,
+      "matchDate": "2026-11-07",
+      "team": "ＦＣ東京",
+      "side": "home",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "ニコライ ヴァリス",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasm/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "長友 佑都",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasm/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "室屋 成",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasm/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/kasm/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/kasm/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 4,
+      "matchDate": "2026-11-07",
+      "team": "鹿島アントラーズ",
+      "side": "away",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "安西 幸輝",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasm/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "キム テヒョン",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasm/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "広瀬 陸斗",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasm/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/kasm/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/kasm/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 5,
+      "matchDate": "2026-11-07",
+      "team": "柏レイソル",
+      "side": "home",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "山田 雄士",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasw/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "大久保 智明",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasw/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "熊坂 光希",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasw/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "馬場 晴也",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasw/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "若原 智哉",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasw/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/kasw/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/kasw/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 5,
+      "matchDate": "2026-11-07",
+      "team": "川崎フロンターレ",
+      "side": "away",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "宮城 天",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasw/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "ラザル ロマニッチ",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasw/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "紺野 和也",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasw/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "野田 裕人",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/kasw/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/kasw/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/kasw/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 6,
+      "matchDate": "2026-11-07",
+      "team": "名古屋グランパス",
+      "side": "home",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "マルクス ヴィニシウス",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/nago/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "浅野 雄也",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/nago/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "池田 歩弘",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/nago/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/nago/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/nago/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 6,
+      "matchDate": "2026-11-07",
+      "team": "京都サンガF.C.",
+      "side": "away",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "齊藤 未月",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/nago/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/nago/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/nago/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 7,
+      "matchDate": "2026-11-08",
+      "team": "ヴィッセル神戸",
+      "side": "home",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "冨永 虹七",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/uraw/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "扇原 貴宏",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/uraw/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "アンデルソン ロペス",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/uraw/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/uraw/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/uraw/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 7,
+      "matchDate": "2026-11-08",
+      "team": "浦和レッズ",
+      "side": "away",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "confirmed_suspension",
+      "officialPlayerRecords": [
+        {
+          "team": "浦和レッズ",
+          "player": "宮本 優太",
+          "status": "confirmed_suspension",
+          "match": "2026-11-08 ヴィッセル神戸戦",
+          "publishedAt": "2026-11-04T17:30:00+09:00",
+          "sourceUrl": "https://www.jleague.jp/news/article/35283/",
+          "retrievedAt": "2026-11-06T03:10:46+09:00"
+        }
+      ],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "宮本 優太",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/uraw/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "菊池 大河",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/uraw/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/uraw/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/uraw/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 8,
+      "matchDate": "2026-11-08",
+      "team": "ガンバ大阪",
+      "side": "home",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "横井 佑弥",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/c-os/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "半田 陸",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/c-os/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "植中 朝日",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/c-os/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "荒木 琉偉",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/c-os/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "ウェルトン",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/c-os/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "藤井 英翔",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/c-os/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/c-os/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/c-os/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 8,
+      "matchDate": "2026-11-08",
+      "team": "セレッソ大阪",
+      "side": "away",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "柴山 昌也",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/c-os/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "香川 真司",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/c-os/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/c-os/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/c-os/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 9,
+      "matchDate": "2026-11-08",
+      "team": "ジェフユナイテッド千葉",
+      "side": "home",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "植田 悠太",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/chib/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "喜田 陽",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/chib/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/chib/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/chib/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 9,
+      "matchDate": "2026-11-08",
+      "team": "水戸ホーリーホック",
+      "side": "away",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "confirmed_suspension",
+      "officialPlayerRecords": [
+        {
+          "team": "水戸ホーリーホック",
+          "player": "真瀬 拓海",
+          "status": "confirmed_suspension",
+          "match": "2026-11-08 ジェフユナイテッド千葉戦",
+          "publishedAt": "2026-11-04T17:30:00+09:00",
+          "sourceUrl": "https://www.jleague.jp/news/article/35283/",
+          "retrievedAt": "2026-11-06T03:10:46+09:00"
+        }
+      ],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "真瀬 拓海",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/chib/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "岩﨑 博",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/chib/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "河面 旺成",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/chib/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "渡邉 新太",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/chib/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "鳥海 芳樹",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/chib/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "内野 航太郎",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/chib/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "岡本 一真",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/chib/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "木本 恭生",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/chib/preview",
+          "sourceUpdatedAt": "2026-11-02",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/chib/preview",
+      "secondarySourceUpdatedAt": "2026-11-02",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/chib/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 10,
+      "matchDate": "2026-11-08",
+      "team": "ＦＣ町田ゼルビア",
+      "side": "home",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [],
+      "secondarySourceStatus": "no_current_preview",
+      "secondarySourceUrl": "https://www.football-lab.jp/mcd/preview",
+      "secondarySourceUpdatedAt": "2026-09-14",
+      "expectedStartingXI": {
+        "status": "current_preview_not_available_stale_page",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/mcd/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 10,
+      "matchDate": "2026-11-08",
+      "team": "サンフレッチェ広島",
+      "side": "away",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [],
+      "secondarySourceStatus": "no_current_preview",
+      "secondarySourceUrl": "https://www.football-lab.jp/hiro/preview",
+      "secondarySourceUpdatedAt": "2026-09-07",
+      "expectedStartingXI": {
+        "status": "current_preview_not_available_stale_page",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/hiro/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j1/match/"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 11,
+      "matchDate": "2026-11-07",
+      "team": "徳島ヴォルティス",
+      "side": "home",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "青木 駿人",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/toku/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "尾上 瑠聖",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/toku/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "髙田 颯也",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/toku/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "柳澤 亘",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/toku/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/toku/preview",
+      "secondarySourceUpdatedAt": "2026-11-05",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/toku/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/match/j2/2026/110716/preview/?mode=pc"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 11,
+      "matchDate": "2026-11-07",
+      "team": "テゲバジャーロ宮崎",
+      "side": "away",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/toku/preview",
+      "secondarySourceUpdatedAt": "2026-11-05",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/toku/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/match/j2/2026/110716/preview/?mode=pc"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 12,
+      "matchDate": "2026-11-08",
+      "team": "ヴァンラーレ八戸",
+      "side": "home",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "稲積 大介",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/sapp/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/sapp/preview",
+      "secondarySourceUpdatedAt": "2026-11-05",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/sapp/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/match/j2/2026/110806/preview/?mode=pc"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 12,
+      "matchDate": "2026-11-08",
+      "team": "北海道コンサドーレ札幌",
+      "side": "away",
+      "officialInjuryStatus": "official_injury_notice_found_current_availability_check_pending",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [
+        {
+          "team": "北海道コンサドーレ札幌",
+          "player": "福森 晃斗",
+          "status": "confirmed_injury",
+          "details": "右大腿二頭筋肉離れ。10/25のトレーニング中に負傷。復帰予定時期は発表本文で未確認。",
+          "publishedAt": "2026-11-03T17:30:00+09:00",
+          "sourceUrl": "https://www.jleague.jp/news/article/35278/",
+          "retrievedAt": "2026-11-06T03:10:46+09:00"
+        }
+      ],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "中村 桐耶",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/sapp/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "野瀬 翔也",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/sapp/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "大﨑 玲央",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/sapp/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "白井 陽斗",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/sapp/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "宮澤 裕樹",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/sapp/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "福森 晃斗",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/sapp/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/sapp/preview",
+      "secondarySourceUpdatedAt": "2026-11-05",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/sapp/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/match/j2/2026/110806/preview/?mode=pc"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 13,
+      "matchDate": "2026-11-07",
+      "team": "サガン鳥栖",
+      "side": "home",
+      "officialInjuryStatus": "not_confirmed_in_checked_scope",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "堺屋 佳介",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/tosu/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "水巻 時飛",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/tosu/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "鈴木 大馳",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/tosu/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "松本 凪生",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/tosu/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "城定 幹大",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/tosu/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/tosu/preview",
+      "secondarySourceUpdatedAt": "2026-11-05",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/tosu/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j2/match/search-list/?enddate=2026-11-08&period=custom&startdate=2026-11-07"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    },
+    {
+      "matchNumber": 13,
+      "matchDate": "2026-11-07",
+      "team": "カターレ富山",
+      "side": "away",
+      "officialInjuryStatus": "official_injury_notice_found_current_availability_check_pending",
+      "officialSuspensionStatus": "no_relevant_entry_in_2026-11-04_notice; broader_status_not_assumed",
+      "officialPlayerRecords": [
+        {
+          "team": "カターレ富山",
+          "player": "チョン ウヨン",
+          "status": "confirmed_injury",
+          "details": "左ヒラメ筋損傷、全治約6週間。10/21のトレーニング中に負傷。11/7時点の復帰確認は未取得。",
+          "publishedAt": "2026-11-04T18:00:00+09:00",
+          "sourceUrl": "https://www.jleague.jp/news/article/35287/",
+          "retrievedAt": "2026-11-06T03:10:46+09:00"
+        }
+      ],
+      "secondaryAbsenceCandidates": [
+        {
+          "player": "亀田 歩夢",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/tosu/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "深澤 壯太",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/tosu/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "岡本 將成",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/tosu/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        },
+        {
+          "player": "チョン ウヨン",
+          "status": "unconfirmed_secondary_absence_candidate",
+          "source": "Football LAB",
+          "sourceUrl": "https://www.football-lab.jp/tosu/preview",
+          "sourceUpdatedAt": "2026-11-05",
+          "retrievedAt": "2026-11-06T03:10:46+09:00",
+          "warning": "Football LAB says minor injuries or call-ups may be included and the player may still play; not treated as confirmed."
+        }
+      ],
+      "secondarySourceStatus": "current",
+      "secondarySourceUrl": "https://www.football-lab.jp/tosu/preview",
+      "secondarySourceUpdatedAt": "2026-11-05",
+      "expectedStartingXI": {
+        "status": "not_available_in_current_preview",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.football-lab.jp/tosu/preview"
+      },
+      "officialStartingXI": {
+        "status": "not_available_in_checked_official_schedule_or_match_page_at_check_time",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "sourceUrl": "https://www.jleague.jp/j2/match/search-list/?enddate=2026-11-08&period=custom&startdate=2026-11-07"
+      },
+      "recentRosterChanges": {
+        "status": "not_confirmed_in_checked_scope",
+        "checkedAt": "2026-11-06T03:10:46+09:00",
+        "scope": "J.League official news/suspension notices and the current match/preview pages listed in this report."
+      }
+    }
+  ],
+  "sourcesChecked": [
+    {
+      "type": "official_schedule_and_deadline",
+      "url": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardSalesTermtotoSP.form?holdCntId=1670",
+      "retrievedAt": "2026-11-06T03:10:46+09:00"
+    },
+    {
+      "type": "official_J1_match_schedule",
+      "url": "https://www.jleague.jp/j1/match/",
+      "retrievedAt": "2026-11-06T03:10:46+09:00"
+    },
+    {
+      "type": "official_J2_match_schedule",
+      "url": "https://www.jleague.jp/j2/match/search-list/?enddate=2026-11-08&period=custom&startdate=2026-11-07",
+      "retrievedAt": "2026-11-06T03:10:46+09:00"
+    },
+    {
+      "type": "official_suspension_notice",
+      "url": "https://www.jleague.jp/news/article/35283/",
+      "publishedAt": "2026-11-04T17:30:00+09:00",
+      "retrievedAt": "2026-11-06T03:10:46+09:00"
+    },
+    {
+      "type": "official_injury_notice",
+      "url": "https://www.jleague.jp/news/article/35287/",
+      "publishedAt": "2026-11-04T18:00:00+09:00",
+      "retrievedAt": "2026-11-06T03:10:46+09:00"
+    },
+    {
+      "type": "official_injury_notice",
+      "url": "https://www.jleague.jp/news/article/35278/",
+      "publishedAt": "2026-11-03T17:30:00+09:00",
+      "retrievedAt": "2026-11-06T03:10:46+09:00"
+    },
+    {
+      "type": "official_historical_injury_notice",
+      "url": "https://www.jleague.jp/news/article/34592/",
+      "publishedAt": "2026-08-07T18:00:00+09:00",
+      "retrievedAt": "2026-11-06T03:10:46+09:00"
+    }
+  ],
+  "lineupAndAvailabilityStatus": {
+    "officialStartingLineups": "not_available_in_checked_official_pages_at_2026-11-06T03:10:46+09:00",
+    "predictedStartingLineups": "not_available_or_not_updated_in_checked_Football_LAB_previews; no XI assumed",
+    "recentRosterChanges": "not_confirmed_in_checked_scope_for_teams_without_an_explicit_record",
+    "note": "This is a checked-scope report, not proof that no injuries or changes exist. Recheck before the 22:00 JST cutoff and before kickoff if official lineups appear."
+  },
+  "modelImpact": {
+    "V1": "No injury/suspension/lineup adjustment. The existing model.js does not accept these news fields; uncertain secondary absence lists are not converted into numeric penalties.",
+    "V2": "Same V1 base, then 30% Poisson baseline + 70% direct official toto vote share. No injury/suspension/lineup adjustment.",
+    "reason": "Only Mito/Urawa suspensions and three official injury records were found; secondary absence candidates are not confirmed and current expected/official XIs are unavailable. Applying manual xG changes would violate the fixed V1/V2 definitions."
+  },
+  "limitations": [
+    "Football LAB absence lists are secondary screening only and explicitly warn that listed players may still play.",
+    "Machida/Hiroshima current preview data was not available; the available preview pages were stale (Machida 2026-09-14, Hiroshima 2026-09-07), so no stale player list was used.",
+    "For Miyazaki, no absence entry appeared in the current Tokushima/Miyazaki preview; this is not interpreted as no injuries.",
+    "Official lineups and some club-level availability/return confirmations remain uncollected.",
+    "The current official J1 schedule page was used for J1 lineup status; only the Tokushima-Miyazaki and Hachinohe-Sapporo J2 match pages were directly opened. The remaining J2 lineup status is linked to the official J2 schedule page."
+  ],
+  "modelExecution": {
+    "executedExactExistingSource": true,
+    "repository": "sigulun555-lab/gpt",
+    "modelPath": "model.js",
+    "historyPath": "data/history.json",
+    "historyCount": 430,
+    "historyUpdatedAt": "2026-11-05T06:42:49.592Z",
+    "historyLatestDate": "2026-11-04",
+    "historyChronological": true,
+    "teamAliasesPath": "data/team_aliases.json",
+    "totoLabTeamsBlobSha": "41096236f986f9456beeb15f1c35e61e0529caeb",
+    "last12MatchesPerTeamVerified": true,
+    "noSubstituteLogicUsed": true,
+    "modelBlobSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+    "historyBlobSha": "ed832e99a3ad7efc6be1e4115f94527263ce4df9",
+    "teamAliasesBlobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab"
+  }
+}

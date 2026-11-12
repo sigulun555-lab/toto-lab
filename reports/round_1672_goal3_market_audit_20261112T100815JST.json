@@ -1,0 +1,20 @@
+{
+  "round": 1672,
+  "product": "totoGOAL3",
+  "marketSnapshotAt": "2026-11-12T09:32:00+09:00",
+  "retrievedAt": "2026-11-12T10:08:15.007+09:00",
+  "deadlineAt": "2026-11-14T13:50:00+09:00",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=02&holdCntId=1672",
+  "snapshotPath": "data/goal3_market_snapshots/round_1672_2026-11-12T0932JST_official.jsonl",
+  "attemptLogPath": "data/goal3_market_snapshot_attempts.jsonl",
+  "displayLagSeconds": 2175.007,
+  "teamTargets": 6,
+  "fixtures": 3,
+  "votesPerTeamSide": 27789,
+  "validation": {
+    "allVoteCountsSum27789": true,
+    "allPercentagesSum100": true,
+    "uniqueTeamSides": true
+  },
+  "notes": "Official displayed snapshot only. The page's displayed timestamp was 36m15.007s older than retrieval despite its five-minute update notice. No forecast, production model, market weight, app Artifact, or fixture updater was changed. Earlier 03:28 and 05:17 snapshots remain unchanged."
+}

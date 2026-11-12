@@ -19,3 +19,14 @@ test('round 1672 GOAL3 snapshot attempt is recorded exactly once and points to t
 test('previous 03:28 official snapshot is preserved unchanged',()=>{
  assert.equal(oldSnapshot.round,1672);assert.equal(oldSnapshot.marketSnapshotAt,'2026-11-12T03:28:00+09:00');assert.equal(oldSnapshot.teams.length,6);
 });
+
+const snapshot0932Path='data/goal3_market_snapshots/round_1672_2026-11-12T0932JST_official.jsonl';
+const snapshot0932=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot0932Path),'utf8').trim());
+test('round 1672 official GOAL3 09:32 snapshot has six complete team-side vectors',()=>{
+ assert.equal(snapshot0932.round,1672);assert.equal(snapshot0932.marketSnapshotAt,'2026-11-12T09:32:00+09:00');assert.equal(snapshot0932.retrievedAt,'2026-11-12T10:08:15.007+09:00');assert.equal(snapshot0932.deadlineAt,'2026-11-14T13:50:00+09:00');assert.equal(snapshot0932.teams.length,6);assert.equal(snapshot0932.captureStatus,'captured');
+ assert.equal(new Set(snapshot0932.teams.map(x=>x.matchNumber+':'+x.side)).size,6);
+ for(const row of snapshot0932.teams){assert.deepEqual(Object.keys(row.voteCounts).sort(),['0','1','2','3+']);assert.deepEqual(Object.keys(row.voteSharePct).sort(),['0','1','2','3+']);assert.equal(Object.values(row.voteCounts).reduce((a,b)=>a+b,0),27789);assert.ok(Math.abs(Object.values(row.voteSharePct).reduce((a,b)=>a+b,0)-100)<1e-8);}
+});
+test('round 1672 09:32 GOAL3 snapshot attempt is recorded exactly once and points to this file',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot0932Path);assert.equal(found.length,1);assert.equal(found[0].captureStatus,'captured');assert.equal(found[0].retrievedAt,'2026-11-12T10:08:15.007+09:00');assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/12 09:32 JST');
+});

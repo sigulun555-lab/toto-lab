@@ -52,7 +52,7 @@
     },
     {
       "matchNumber": 2,
-      "officialGoal3MatchNumber": 3,
+      "officialGoal3MatchNumber": 2,
       "toto13MatchNumber": 4,
       "team": "柏",
       "side": "home",
@@ -73,7 +73,7 @@
     },
     {
       "matchNumber": 2,
-      "officialGoal3MatchNumber": 3,
+      "officialGoal3MatchNumber": 2,
       "toto13MatchNumber": 4,
       "team": "川崎Ｆ",
       "side": "away",
@@ -94,7 +94,7 @@
     },
     {
       "matchNumber": 3,
-      "officialGoal3MatchNumber": 5,
+      "officialGoal3MatchNumber": 3,
       "toto13MatchNumber": 5,
       "team": "新潟",
       "side": "home",
@@ -115,7 +115,7 @@
     },
     {
       "matchNumber": 3,
-      "officialGoal3MatchNumber": 5,
+      "officialGoal3MatchNumber": 3,
       "toto13MatchNumber": 5,
       "team": "宮崎",
       "side": "away",
@@ -168,5 +168,5 @@
     "note": "公式ページの06:21 JST表示を06:40:38 JSTに直接取得。19分38秒差で5分更新表示の許容範囲を超えるためstale。値は補正せず保存し、ライブ値・予測入力として扱わない。"
   },
   "captureStatus": "captured",
-  "note": "Direct official display snapshot only; stale at retrieval. Do not treat as current live vote shares or model probabilities. No secondary source mixed. Internal fixture ordinal matchNumber 1/2/3 maps to official GOAL3 display numbers 1/3/5 and regular toto13 match numbers 2/4/5."
+  "note": "Direct official display snapshot only; stale at retrieval. Do not treat as current live vote shares or model probabilities. No secondary source mixed. The official GOAL3 product card numbers are 1/2/3 (internal fixture ordinals 1/2/3), mapping respectively to regular toto13 match numbers 2/4/5."
 }

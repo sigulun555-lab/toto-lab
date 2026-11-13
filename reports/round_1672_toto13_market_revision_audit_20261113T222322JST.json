@@ -1,0 +1,44 @@
+{
+  "round": 1672,
+  "product": "toto13",
+  "generatedAt": "2026-11-13T13:23:22.000Z",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1672",
+  "officialDisplayAt": "2026-11-13T22:22:00+09:00",
+  "retrievedAt": "2026-11-13T22:23:22+09:00",
+  "displayLagSeconds": 82,
+  "priorRevision": {
+    "officialDisplayAt": "2026-11-13T15:28:00+09:00",
+    "predictionConfirmedAt": "2026-11-13T06:35:23.000Z"
+  },
+  "appendedV2Rows": 13,
+  "preservedV2Rows": 78,
+  "totalV2Rows": 91,
+  "v1Rows": 13,
+  "revisionRule": "Each new match row references the immediately preceding V2 revision for that match; all previous rows remain unchanged.",
+  "formula": "outcomeProbabilities = round8(0.30 * unchanged V1 outcomeProbabilities + 0.70 * official marketVoteShare)",
+  "blendWeights": {
+    "poissonModel": 0.3,
+    "totoVoteShare": 0.7
+  },
+  "integrity": {
+    "matchCount": 13,
+    "allPerMatchVoteTotals712700": true,
+    "allDisplayedPercentTriplesSum100": true,
+    "uniquePredictionIds": 91,
+    "danglingRevisionOf": 0,
+    "probabilitySumTolerance": 2e-8,
+    "internalTargetDeadlineAlreadyMetByEarlierV1V2": true,
+    "officialDeadlineAt": "2026-11-14T04:50:00.000Z"
+  },
+  "teamNewsAndLineups": {
+    "latestEvidenceReport": "reports/round_1672_toto13_team_news_supplement_20261113T1532JST.json",
+    "recheckedInThisMarketRevision": false,
+    "numericalInjuryAdjustmentApplied": false,
+    "note": "This commit updates only the official-market V2 revision and its tests. Team-news and lineup verification remain subject to the separate pre-kickoff recheck; no availability is inferred."
+  },
+  "productionModelChanged": false,
+  "marketWeightChanged": false,
+  "appArtifactChanged": false,
+  "fixtureUpdaterChanged": false,
+  "mainDirectWrite": false
+}

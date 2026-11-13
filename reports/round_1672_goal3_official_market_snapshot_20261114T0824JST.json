@@ -1,0 +1,158 @@
+{
+  "round": 1672,
+  "marketType": "totoGOAL3",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=02&holdCntId=1672",
+  "pageDisplayAt": "2026-11-14T08:24:00+09:00",
+  "retrievedAt": "2026-11-14T08:25:09+09:00",
+  "refreshNotice": "5分毎",
+  "displayAgeSeconds": 69,
+  "stale": false,
+  "totalVotes": 110165,
+  "categoryOrder": [
+    "0",
+    "1",
+    "2",
+    "3+"
+  ],
+  "matches": [
+    {
+      "productMatchNumber": 1,
+      "toto13MatchNumber": 2,
+      "home": "Ｃ大阪",
+      "away": "浦和",
+      "teamSides": [
+        {
+          "team": "Ｃ大阪",
+          "opponent": "浦和",
+          "isHome": true,
+          "voteCounts": [
+            22304,
+            39815,
+            32059,
+            15987
+          ],
+          "percentages": [
+            20.25,
+            36.14,
+            29.1,
+            14.51
+          ],
+          "sumVotes": 110165,
+          "sumPercent": 100
+        },
+        {
+          "team": "浦和",
+          "opponent": "Ｃ大阪",
+          "isHome": false,
+          "voteCounts": [
+            22519,
+            40721,
+            31660,
+            15265
+          ],
+          "percentages": [
+            20.44,
+            36.96,
+            28.74,
+            13.86
+          ],
+          "sumVotes": 110165,
+          "sumPercent": 100
+        }
+      ]
+    },
+    {
+      "productMatchNumber": 2,
+      "toto13MatchNumber": 4,
+      "home": "柏",
+      "away": "川崎Ｆ",
+      "teamSides": [
+        {
+          "team": "柏",
+          "opponent": "川崎Ｆ",
+          "isHome": true,
+          "voteCounts": [
+            12564,
+            26002,
+            39779,
+            31820
+          ],
+          "percentages": [
+            11.41,
+            23.6,
+            36.11,
+            28.88
+          ],
+          "sumVotes": 110165,
+          "sumPercent": 100
+        },
+        {
+          "team": "川崎Ｆ",
+          "opponent": "柏",
+          "isHome": false,
+          "voteCounts": [
+            23374,
+            44214,
+            28926,
+            13651
+          ],
+          "percentages": [
+            21.22,
+            40.13,
+            26.26,
+            12.39
+          ],
+          "sumVotes": 110165,
+          "sumPercent": 100
+        }
+      ]
+    },
+    {
+      "productMatchNumber": 3,
+      "toto13MatchNumber": 5,
+      "home": "新潟",
+      "away": "宮崎",
+      "teamSides": [
+        {
+          "team": "新潟",
+          "opponent": "宮崎",
+          "isHome": true,
+          "voteCounts": [
+            20689,
+            41166,
+            34281,
+            14029
+          ],
+          "percentages": [
+            18.78,
+            37.37,
+            31.12,
+            12.73
+          ],
+          "sumVotes": 110165,
+          "sumPercent": 100
+        },
+        {
+          "team": "宮崎",
+          "opponent": "新潟",
+          "isHome": false,
+          "voteCounts": [
+            28561,
+            38366,
+            28815,
+            14423
+          ],
+          "percentages": [
+            25.92,
+            34.83,
+            26.16,
+            13.09
+          ],
+          "sumVotes": 110165,
+          "sumPercent": 100
+        }
+      ]
+    }
+  ],
+  "interpretation": "Official direct-page snapshot only. It is not a GPT prediction and is not blended into a V2 because no GOAL3 market-blend V2 implementation/definition was found in the inspected repository."
+}

@@ -1,0 +1,121 @@
+{
+  "round": 1672,
+  "product": "toto13",
+  "generatedAt": "2026-11-13T06:35:23.000Z",
+  "retrievedAt": "2026-11-13T15:32:41+09:00",
+  "officialDisplayAt": "2026-11-13T15:28:00+09:00",
+  "displayLagSeconds": 281,
+  "previousV2PredictionCount": 65,
+  "appendedV2RevisionCount": 13,
+  "totalV2PredictionCount": 78,
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1672",
+  "marketSnapshotPath": "reports/round_1672_toto13_official_market_snapshot_20261113T1528JST.json",
+  "overallVotesPerMatch": [
+    552683,
+    552683,
+    552683,
+    552683,
+    552683,
+    552683,
+    552683,
+    552683,
+    552683,
+    552683,
+    552683,
+    552683,
+    552683
+  ],
+  "voteTotalsRange": {
+    "min": 552683,
+    "max": 552683,
+    "spread": 0
+  },
+  "validation": {
+    "v1Rows": 13,
+    "initialV2Rows": 13,
+    "previousV2Rows": 65,
+    "appendedV2RevisionRows": 13,
+    "totalV2Rows": 78,
+    "uniquePredictionIds": 78,
+    "duplicatePredictionIds": 0,
+    "danglingRevisionOf": 0,
+    "allFixturesMatchV1": true,
+    "allVoteCountsMatchDisplayedTotals": true,
+    "allDisplayedSharesSum100": true,
+    "allMarketVoteSharesMatchDisplayedPercent": true,
+    "allV2BlendsMatch30_70": true,
+    "allProbabilityVectorsNormalized": true,
+    "allPreDeadline": true,
+    "newRevisionModelVersionCorrect": true,
+    "prior15_04ModelVersionMismatchCorrectedForward": true
+  },
+  "formula": "V2 outcome probabilities = 0.30 × unchanged V1 Poisson outcome probabilities + 0.70 × official displayed toto vote shares; keys map 0=draw, 1=home win, 2=away win; output rounded to 8 decimal places.",
+  "revisionOf": [
+    {
+      "matchNumber": 1,
+      "previousPredictionId": "toto-1672-chatgpt-score-shared-01-v2-revision-20261112T150936JST",
+      "newPredictionId": "toto-1672-chatgpt-score-shared-01-v2-revision-20261113T153523JST"
+    },
+    {
+      "matchNumber": 2,
+      "previousPredictionId": "toto-1672-chatgpt-score-shared-02-v2-revision-20261112T150936JST",
+      "newPredictionId": "toto-1672-chatgpt-score-shared-02-v2-revision-20261113T153523JST"
+    },
+    {
+      "matchNumber": 3,
+      "previousPredictionId": "toto-1672-chatgpt-score-shared-03-v2-revision-20261112T150936JST",
+      "newPredictionId": "toto-1672-chatgpt-score-shared-03-v2-revision-20261113T153523JST"
+    },
+    {
+      "matchNumber": 4,
+      "previousPredictionId": "toto-1672-chatgpt-score-shared-04-v2-revision-20261112T150936JST",
+      "newPredictionId": "toto-1672-chatgpt-score-shared-04-v2-revision-20261113T153523JST"
+    },
+    {
+      "matchNumber": 5,
+      "previousPredictionId": "toto-1672-chatgpt-score-shared-05-v2-revision-20261112T150936JST",
+      "newPredictionId": "toto-1672-chatgpt-score-shared-05-v2-revision-20261113T153523JST"
+    },
+    {
+      "matchNumber": 6,
+      "previousPredictionId": "toto-1672-chatgpt-score-shared-06-v2-revision-20261112T150936JST",
+      "newPredictionId": "toto-1672-chatgpt-score-shared-06-v2-revision-20261113T153523JST"
+    },
+    {
+      "matchNumber": 7,
+      "previousPredictionId": "toto-1672-chatgpt-score-shared-07-v2-revision-20261112T150936JST",
+      "newPredictionId": "toto-1672-chatgpt-score-shared-07-v2-revision-20261113T153523JST"
+    },
+    {
+      "matchNumber": 8,
+      "previousPredictionId": "toto-1672-chatgpt-score-shared-08-v2-revision-20261112T150936JST",
+      "newPredictionId": "toto-1672-chatgpt-score-shared-08-v2-revision-20261113T153523JST"
+    },
+    {
+      "matchNumber": 9,
+      "previousPredictionId": "toto-1672-chatgpt-score-shared-09-v2-revision-20261112T150936JST",
+      "newPredictionId": "toto-1672-chatgpt-score-shared-09-v2-revision-20261113T153523JST"
+    },
+    {
+      "matchNumber": 10,
+      "previousPredictionId": "toto-1672-chatgpt-score-shared-10-v2-revision-20261112T150936JST",
+      "newPredictionId": "toto-1672-chatgpt-score-shared-10-v2-revision-20261113T153523JST"
+    },
+    {
+      "matchNumber": 11,
+      "previousPredictionId": "toto-1672-chatgpt-score-shared-11-v2-revision-20261112T150936JST",
+      "newPredictionId": "toto-1672-chatgpt-score-shared-11-v2-revision-20261113T153523JST"
+    },
+    {
+      "matchNumber": 12,
+      "previousPredictionId": "toto-1672-chatgpt-score-shared-12-v2-revision-20261112T150936JST",
+      "newPredictionId": "toto-1672-chatgpt-score-shared-12-v2-revision-20261113T153523JST"
+    },
+    {
+      "matchNumber": 13,
+      "previousPredictionId": "toto-1672-chatgpt-score-shared-13-v2-revision-20261112T150936JST",
+      "newPredictionId": "toto-1672-chatgpt-score-shared-13-v2-revision-20261113T153523JST"
+    }
+  ],
+  "notes": "Append-only official market revision. V1, initial V2, and all four prior V2 revisions remain unchanged. The 15:04 JST revision was mislabeled with a V1 modelVersion; this new revision corrects the label forward without rewriting that historical record. Official vote shares are market selection rates, not calibrated true probabilities. No injury/suspension adjustment, production model, market weight, app Artifact, or fixture updater change."
+}

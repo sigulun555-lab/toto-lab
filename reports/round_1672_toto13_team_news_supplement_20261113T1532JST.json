@@ -1,0 +1,119 @@
+{
+  "round": 1672,
+  "product": "toto13",
+  "generatedAt": "2026-11-13T06:35:23.000Z",
+  "checkedAt": "2026-11-13T15:32:41+09:00",
+  "baseReportPath": "reports/round_1672_toto13_team_news_20261112.json",
+  "baseReportCheckedAt": "2026-11-12T03:14:03.433+09:00",
+  "newOfficialInjuryRecords": [
+    {
+      "team": "横浜Ｆ・マリノス",
+      "player": "ジョルディ クルークス",
+      "status": "official_injury_current_availability_unconfirmed",
+      "details": "11/1の川崎フロンターレ戦で負傷。左ハムストリング肉離れ。復帰時期は経過を見ながら判断するとクラブ発表。11/15鹿島戦の出場可否は未確認。",
+      "publishedAt": "2026-11-05",
+      "sourceUrl": "https://www.f-marinos.com/news/team/10877",
+      "retrievedAt": "2026-11-13T15:32:41+09:00",
+      "latestUpdateStatus": "今回確認したクラブ公式ニュース一覧では復帰・出場可否の後続発表を確認できず。欠場確定とは扱わない。"
+    }
+  ],
+  "additionalOfficialSquadNews": [
+    {
+      "team": "横浜Ｆ・マリノス",
+      "player": "三井寺 眞",
+      "status": "official_U21_national_team_withdrawal_due_to_injury_match_availability_unconfirmed",
+      "details": "11/7の岡山戦ウォームアップ時に左外閉鎖筋を負傷し、U-21日本代表遠征を辞退。11/15鹿島戦の登録・出場可否は未確認。",
+      "publishedAt": "2026-11-08",
+      "sourceUrl": "https://www.f-marinos.com/news/team/10887",
+      "retrievedAt": "2026-11-13T15:32:41+09:00"
+    }
+  ],
+  "confirmedSuspensionCarryForward": [
+    {
+      "team": "栃木シティ",
+      "player": "平岡 将豪",
+      "status": "confirmed_suspension_for_round_1672_match_6",
+      "publishedAt": "2026-11-04",
+      "sourceUrl": "https://www.jleague.jp/corporate/news/article/108",
+      "note": "今回新たな変更は確認できず。大分対栃木シティの対象停止として元レポートの確認を維持。"
+    }
+  ],
+  "officialLineupChecks": [
+    {
+      "matchNumber": 5,
+      "fixture": "アルビレックス新潟 vs テゲバジャーロ宮崎",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/111403/preview/",
+      "checkedAt": "2026-11-13T15:32:41+09:00",
+      "result": "ラインナップ欄は表示されたが先発選手リストは掲載されていない。公式先発未確認。"
+    },
+    {
+      "matchNumber": 6,
+      "fixture": "大分トリニータ vs 栃木シティ",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/111405/preview/",
+      "checkedAt": "2026-11-13T15:32:41+09:00",
+      "result": "ラインナップ欄は表示されたが先発選手リストは掲載されていない。公式先発未確認。"
+    },
+    {
+      "matchNumber": 7,
+      "fixture": "北海道コンサドーレ札幌 vs サガン鳥栖",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/111505/preview/",
+      "checkedAt": "2026-11-13T15:32:41+09:00",
+      "result": "ラインナップ欄は表示されたが先発選手リストは掲載されていない。公式先発未確認。"
+    },
+    {
+      "matchNumber": 11,
+      "fixture": "ヴァンラーレ八戸 vs いわきFC",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/111506/preview/",
+      "checkedAt": "2026-11-13T15:32:41+09:00",
+      "result": "ラインナップ欄は表示されたが先発選手リストは掲載されていない。公式先発未確認。"
+    }
+  ],
+  "unverifiedOfficialLineupMatchNumbers": [
+    1,
+    2,
+    3,
+    4,
+    8,
+    9,
+    10,
+    12,
+    13
+  ],
+  "secondaryPredictedLineupChecks": [
+    {
+      "matchNumber": 13,
+      "source": "Football LAB",
+      "sourceUrl": "https://www.football-lab.jp/yama/preview",
+      "sourceUpdatedAt": "2026-11-10",
+      "retrievedAt": "2026-11-13T15:32:41+09:00",
+      "result": "予想フォーメーションは後日更新予定。欠場表示は二次情報であり、公式欠場確定とは扱わない。"
+    },
+    {
+      "matchNumber": 7,
+      "source": "Football LAB",
+      "sourceUrl": "https://www.football-lab.jp/tosu/preview",
+      "sourceUpdatedAt": "2026-11-10",
+      "retrievedAt": "2026-11-13T15:32:41+09:00",
+      "result": "予想フォーメーションは後日更新予定。欠場表示は二次情報であり、公式欠場確定とは扱わない。"
+    },
+    {
+      "matchNumber": 5,
+      "source": "Football LAB",
+      "sourceUrl": "https://www.football-lab.jp/niig/preview",
+      "sourceUpdatedAt": "2026-11-10",
+      "retrievedAt": "2026-11-13T15:32:41+09:00",
+      "result": "予想フォーメーションの更新状況を再取得できず。欠場表示は二次情報としてのみ扱う。"
+    }
+  ],
+  "teamCoverageStatus": "元レポートは26チームを網羅するが、今回の補足では全26クラブの公式ニュースを再検証できていない。新たに確認できた公式情報と、アクセスできた公式試合ページのみ追記し、残りは未確認のままとする。",
+  "modelAdjustment": {
+    "V1": "既存model.js予測を変更せず。新たな負傷情報は数値反映なし。",
+    "V2": "30/70の公式市場ブレンドのみ更新。負傷情報は数値反映なし。",
+    "reason": "負傷者の現在の出場可否・復帰時期が未確認で、校正済みの個別負傷調整係数もないため、推測でxGを変更しない。"
+  },
+  "limitations": [
+    "公式ラインナップ確認は部分的。4/13試合ページを取得し、いずれも先発選手名は未掲載。残り9試合はこの確認パスではページ取得できず、未確認。",
+    "予想先発は十分に取得できていない。Football LABは二次情報であり、一部プレビューは予想フォーメーション更新待ち。",
+    "過去の負傷発表は現在の欠場確定を意味しない。出場可否が未確認の選手は未確認のまま扱う。"
+  ]
+}

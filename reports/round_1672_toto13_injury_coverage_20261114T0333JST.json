@@ -3,7 +3,7 @@
   "product": "toto13",
   "checkedAt": "2026-11-14T03:33:19+09:00",
   "injuryStatusPath": "data/injury_status/round_1672.jsonl",
-  "injuryStatusBlobSha": "pending-after-commit",
+  "injuryStatusBlobSha": "76b2be6ca8317ecb1d03c0bf2c36383c265216be",
   "baseReport": {
     "path": "reports/round_1672_toto13_team_news_20261112.json",
     "blobSha": "f0dcf61be98f6579e56b6e92e3a48080e84da484",

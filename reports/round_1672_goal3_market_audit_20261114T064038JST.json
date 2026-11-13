@@ -36,13 +36,13 @@
     },
     {
       "internalFixture": 2,
-      "officialGoal3MatchNumber": 3,
+      "officialGoal3MatchNumber": 2,
       "toto13MatchNumber": 4,
       "fixture": "柏 vs 川崎Ｆ"
     },
     {
       "internalFixture": 3,
-      "officialGoal3MatchNumber": 5,
+      "officialGoal3MatchNumber": 3,
       "toto13MatchNumber": 5,
       "fixture": "新潟 vs 宮崎"
     }
@@ -55,5 +55,5 @@
     "isLive": false,
     "usedForPrediction": false
   },
-  "notes": "公式totoGOAL3ページから直接取得。表示06:21 JST、取得06:40:38 JST、lag 19分38秒。5分更新表示を超過するためstale。全6 team-sideの4区分口数は各104,454でページ下部総投票口数と一致し、全ベクトルは100.00%。staleのため予測・market blendには使用しない。"
+  "notes": "公式totoGOAL3ページから直接取得。表示06:21 JST、取得06:40:38 JST、lag 19分38秒。5分更新表示を超過するためstale。全6 team-sideの4区分口数は各104,454でページ下部総投票口数と一致し、全ベクトルは100.00%。公式GOAL3商品番号1/2/3は通常toto13番号2/4/5に対応。staleのため予測・market blendには使用しない。"
 }

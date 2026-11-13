@@ -1,0 +1,59 @@
+{
+  "round": 1672,
+  "product": "totoGOAL3",
+  "marketSnapshotAt": "2026-11-14T06:21:00+09:00",
+  "retrievedAt": "2026-11-14T06:40:38+09:00",
+  "deadlineAt": "2026-11-14T13:50:00+09:00",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=02&holdCntId=1672",
+  "snapshotPath": "data/goal3_market_snapshots/round_1672_2026-11-14T0621JST_official.jsonl",
+  "attemptLogPath": "data/goal3_market_snapshot_attempts.jsonl",
+  "displayLagSeconds": 1178,
+  "teamTargets": 6,
+  "fixtures": 3,
+  "pageSummaryVotes": 104454,
+  "categoryCountSums": [
+    104454,
+    104454,
+    104454,
+    104454,
+    104454,
+    104454
+  ],
+  "categoryCountDifferencesFromSummary": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "officialMatchMapping": [
+    {
+      "internalFixture": 1,
+      "officialGoal3MatchNumber": 1,
+      "toto13MatchNumber": 2,
+      "fixture": "Ｃ大阪 vs 浦和"
+    },
+    {
+      "internalFixture": 2,
+      "officialGoal3MatchNumber": 3,
+      "toto13MatchNumber": 4,
+      "fixture": "柏 vs 川崎Ｆ"
+    },
+    {
+      "internalFixture": 3,
+      "officialGoal3MatchNumber": 5,
+      "toto13MatchNumber": 5,
+      "fixture": "新潟 vs 宮崎"
+    }
+  ],
+  "validation": {
+    "allDisplayedPercentagesSum100": true,
+    "uniqueTeamSides": true,
+    "allDisplayedCountSumsMatchSummary": true,
+    "allDisplayValuesPreserved": true,
+    "isLive": false,
+    "usedForPrediction": false
+  },
+  "notes": "公式totoGOAL3ページから直接取得。表示06:21 JST、取得06:40:38 JST、lag 19分38秒。5分更新表示を超過するためstale。全6 team-sideの4区分口数は各104,454でページ下部総投票口数と一致し、全ベクトルは100.00%。staleのため予測・market blendには使用しない。"
+}

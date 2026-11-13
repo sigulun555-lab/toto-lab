@@ -41,3 +41,18 @@ test('round 1672 official GOAL3 15:04 snapshot has six complete team-side vector
 test('round 1672 15:04 GOAL3 snapshot attempt is recorded exactly once and points to this file',()=>{
  const found=attempts.filter(x=>x.snapshotPath===snapshot1504Path);assert.equal(found.length,1);assert.equal(found[0].captureStatus,'captured');assert.equal(found[0].retrievedAt,'2026-11-12T15:08:12+09:00');assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/12 15:04 JST');
 });
+
+const snapshot0854Path='data/goal3_market_snapshots/round_1672_2026-11-13T0854JST_official.jsonl';
+const snapshot0854=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot0854Path),'utf8').trim());
+test('round 1672 official GOAL3 08:54 snapshot has six complete team-side vectors',()=>{
+ assert.equal(snapshot0854.round,1672);assert.equal(snapshot0854.marketSnapshotAt,'2026-11-13T08:54:00+09:00');assert.equal(snapshot0854.retrievedAt,'2026-11-13T13:47:19+09:00');assert.equal(snapshot0854.deadlineAt,'2026-11-14T13:50:00+09:00');assert.equal(snapshot0854.teams.length,6);assert.equal(snapshot0854.captureStatus,'captured');
+ assert.equal(new Set(snapshot0854.teams.map(x=>x.matchNumber+':'+x.side)).size,6);
+ for(const row of snapshot0854.teams){assert.deepEqual(Object.keys(row.voteCounts).sort(),['0','1','2','3+']);assert.deepEqual(Object.keys(row.voteSharePct).sort(),['0','1','2','3+']);assert.equal(Object.values(row.voteCounts).reduce((a,b)=>a+b,0),49432);assert.ok(Math.abs(Object.values(row.voteSharePct).reduce((a,b)=>a+b,0)-100)<1e-8);}
+});
+test('round 1672 08:54 GOAL3 snapshot attempt is recorded exactly once and points to this file',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot0854Path);assert.equal(found.length,1);assert.equal(found[0].captureStatus,'captured');assert.equal(found[0].retrievedAt,'2026-11-13T13:47:19+09:00');assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/13 08:54 JST');
+});
+test('previous 03:50 official snapshot is preserved unchanged',()=>{
+ const old=JSON.parse(fs.readFileSync(path.join(__dirname,'..','data/goal3_market_snapshots/round_1672_2026-11-13T0350JST_official.jsonl'),'utf8').trim());
+ assert.equal(old.round,1672);assert.equal(old.marketSnapshotAt,'2026-11-13T03:50:00+09:00');assert.equal(old.retrievedAt,'2026-11-13T03:50:40+09:00');assert.equal(old.teams.length,6);
+});

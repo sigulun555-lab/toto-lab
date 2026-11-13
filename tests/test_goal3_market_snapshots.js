@@ -83,3 +83,17 @@ test('round 1672 official GOAL3 15:31 snapshot preserves stale display with cons
 test('round 1672 15:31 GOAL3 snapshot attempt is recorded exactly once',()=>{
  const found=attempts.filter(x=>x.snapshotPath===snapshot1531Path);assert.equal(found.length,1);assert.equal(found[0].retrievedAt,'2026-11-13T15:42:02+09:00');assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/13 15:31 JST');
 });
+
+
+const snapshot0621Path='data/goal3_market_snapshots/round_1672_2026-11-14T0621JST_official.jsonl';
+const snapshot0621=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot0621Path),'utf8').trim());
+test('round 1672 official GOAL3 06:21 snapshot preserves stale display and six team-side vectors',()=>{
+ assert.equal(snapshot0621.round,1672);assert.equal(snapshot0621.marketSnapshotAt,'2026-11-14T06:21:00+09:00');assert.equal(snapshot0621.retrievedAt,'2026-11-14T06:40:38+09:00');assert.equal(snapshot0621.deadlineAt,'2026-11-14T13:50:00+09:00');assert.equal(snapshot0621.teams.length,6);assert.equal(snapshot0621.captureStatus,'captured');
+ assert.equal(snapshot0621.dataQuality.isLive,false);assert.equal(snapshot0621.dataQuality.displayLagSeconds,1178);assert.equal(snapshot0621.pageSummary.voteCount,104454);
+ assert.deepEqual(snapshot0621.teams.map(x=>x.officialGoal3MatchNumber),[1,1,3,3,5,5]);assert.deepEqual(snapshot0621.teams.map(x=>x.toto13MatchNumber),[2,2,4,4,5,5]);
+ assert.deepEqual(snapshot0621.teams.map(x=>x.displayedCountSum),Array(6).fill(104454));assert.deepEqual(snapshot0621.teams.map(x=>x.differenceFromSummaryVotes),Array(6).fill(0));
+ for(const row of snapshot0621.teams){assert.deepEqual(Object.keys(row.voteCounts).sort(),['0','1','2','3+']);assert.deepEqual(Object.keys(row.voteSharePct).sort(),['0','1','2','3+']);assert.ok(Math.abs(Object.values(row.voteSharePct).reduce((a,b)=>a+b,0)-100)<1e-8);}
+});
+test('round 1672 06:21 GOAL3 stale snapshot attempt is recorded exactly once',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot0621Path);assert.equal(found.length,1);assert.equal(found[0].captureStatus,'captured');assert.equal(found[0].retrievedAt,'2026-11-14T06:40:38+09:00');assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/14 06:21 JST');
+});

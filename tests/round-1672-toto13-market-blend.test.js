@@ -93,3 +93,12 @@ test('fifth V2 revision uses the directly retrieved 15:28 JST official snapshot 
   checkBlend(row,v1[i],m);
  }
 });
+
+
+const staleMarket0616=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1672_toto13_official_market_stale_20261114T0616JST.json'),'utf8'));
+test('round 1672 official toto13 06:16 stale market display is archived but excluded from V2',()=>{
+ assert.equal(staleMarket0616.round,1672);assert.equal(staleMarket0616.product,'toto13');assert.equal(staleMarket0616.officialDisplayAt,'2026-11-14T06:16:00+09:00');assert.equal(staleMarket0616.retrievedAt,'2026-11-14T06:40:38+09:00');assert.equal(staleMarket0616.displayLagSeconds,1478);assert.equal(staleMarket0616.status,'stale_display');assert.equal(staleMarket0616.usedForPrediction,false);
+ assert.equal(staleMarket0616.rows.length,13);assert.deepEqual(staleMarket0616.rows.map(x=>x.matchNumber),Array.from({length:13},(_,i)=>i+1));
+ for(const row of staleMarket0616.rows){assert.equal(row.totalVotes,876082);assert.equal(row.voteCounts.home+row.voteCounts.draw+row.voteCounts.away,876082);assert.ok(Math.abs(row.displayedVoteSharePercent.home+row.displayedVoteSharePercent.draw+row.displayedVoteSharePercent.away-100)<1e-8);}
+ assert.equal(v2.length,91);assert.equal(v2[v2.length-1].marketOfficialDisplayAt,'2026-11-13T22:22:00+09:00');
+});

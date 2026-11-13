@@ -1,0 +1,167 @@
+{
+  "round": 1672,
+  "product": "toto13",
+  "checkedAt": "2026-11-14T03:33:19+09:00",
+  "injuryStatusPath": "data/injury_status/round_1672.jsonl",
+  "injuryStatusBlobSha": "76b2be6ca8317ecb1d03c0bf2c36383c265216be",
+  "baseReport": {
+    "path": "reports/round_1672_toto13_team_news_20261112.json",
+    "blobSha": "f0dcf61be98f6579e56b6e92e3a48080e84da484",
+    "checkedAt": "2026-11-12T03:14:03.433+09:00"
+  },
+  "latestSupplement": {
+    "path": "reports/round_1672_toto13_team_news_supplement_20261114T0251JST.json",
+    "blobSha": "e66a81a976c6c043fd9a668afbc304689f1e0bde",
+    "checkedAt": "2026-11-14T02:51:15+09:00"
+  },
+  "counts": {
+    "records": 25,
+    "confirmed_out": 5,
+    "unknown": 20,
+    "confirmed_available": 0
+  },
+  "full26ClubOfficialNewsRecheckCompleted": false,
+  "officialStartingLineups": {
+    "status": "not_confirmed",
+    "checkedMatches": [
+      5,
+      6,
+      7,
+      10,
+      11
+    ],
+    "note": "The checked official match pages did not return player-name starting-lineup lists. Other matches were not fully rechecked in this pass."
+  },
+  "matchCoverage": [
+    {
+      "matchNumber": 1,
+      "home": "FC町田ゼルビア",
+      "away": "ヴィッセル神戸",
+      "recordedPlayers": 0,
+      "confirmed_out": 0,
+      "unknown": 0,
+      "coverage": "no_source_backed_player_status_recorded"
+    },
+    {
+      "matchNumber": 2,
+      "home": "セレッソ大阪",
+      "away": "浦和レッズ",
+      "recordedPlayers": 2,
+      "confirmed_out": 0,
+      "unknown": 2,
+      "coverage": "partial"
+    },
+    {
+      "matchNumber": 3,
+      "home": "鹿島アントラーズ",
+      "away": "横浜Ｆ・マリノス",
+      "recordedPlayers": 4,
+      "confirmed_out": 1,
+      "unknown": 3,
+      "coverage": "partial"
+    },
+    {
+      "matchNumber": 4,
+      "home": "柏レイソル",
+      "away": "川崎フロンターレ",
+      "recordedPlayers": 1,
+      "confirmed_out": 0,
+      "unknown": 1,
+      "coverage": "partial"
+    },
+    {
+      "matchNumber": 5,
+      "home": "アルビレックス新潟",
+      "away": "テゲバジャーロ宮崎",
+      "recordedPlayers": 3,
+      "confirmed_out": 0,
+      "unknown": 3,
+      "coverage": "partial"
+    },
+    {
+      "matchNumber": 6,
+      "home": "大分トリニータ",
+      "away": "栃木シティ",
+      "recordedPlayers": 4,
+      "confirmed_out": 1,
+      "unknown": 3,
+      "coverage": "partial"
+    },
+    {
+      "matchNumber": 7,
+      "home": "北海道コンサドーレ札幌",
+      "away": "サガン鳥栖",
+      "recordedPlayers": 5,
+      "confirmed_out": 1,
+      "unknown": 4,
+      "coverage": "partial"
+    },
+    {
+      "matchNumber": 8,
+      "home": "ベガルタ仙台",
+      "away": "ブラウブリッツ秋田",
+      "recordedPlayers": 0,
+      "confirmed_out": 0,
+      "unknown": 0,
+      "coverage": "no_source_backed_player_status_recorded"
+    },
+    {
+      "matchNumber": 9,
+      "home": "FC今治",
+      "away": "ジュビロ磐田",
+      "recordedPlayers": 1,
+      "confirmed_out": 0,
+      "unknown": 1,
+      "coverage": "partial"
+    },
+    {
+      "matchNumber": 10,
+      "home": "カターレ富山",
+      "away": "徳島ヴォルティス",
+      "recordedPlayers": 2,
+      "confirmed_out": 1,
+      "unknown": 1,
+      "coverage": "partial"
+    },
+    {
+      "matchNumber": 11,
+      "home": "ヴァンラーレ八戸",
+      "away": "いわきFC",
+      "recordedPlayers": 1,
+      "confirmed_out": 1,
+      "unknown": 0,
+      "coverage": "partial"
+    },
+    {
+      "matchNumber": 12,
+      "home": "藤枝MYFC",
+      "away": "ヴァンフォーレ甲府",
+      "recordedPlayers": 0,
+      "confirmed_out": 0,
+      "unknown": 0,
+      "coverage": "no_source_backed_player_status_recorded"
+    },
+    {
+      "matchNumber": 13,
+      "home": "RB大宮アルディージャ",
+      "away": "モンテディオ山形",
+      "recordedPlayers": 2,
+      "confirmed_out": 0,
+      "unknown": 2,
+      "coverage": "partial"
+    }
+  ],
+  "limitations": [
+    "No record for a match/team means no source-backed player-specific row was added; it does not mean confirmed_available or zero absences.",
+    "The injury_shadow_check.py output is record-level only. A zero unknown count does not establish full-squad confirmation.",
+    "The official-news recheck did not cover all 26 clubs; current availability for historical injuries remains unknown.",
+    "No V1/V2 probabilities were adjusted. No calibrated player-specific coefficient was available.",
+    "Regular toto13 only. mini toto A/B and totoGOAL3 are not included."
+  ],
+  "sourceUrls": [
+    "https://www.jleague.jp/news/article/35322/",
+    "https://www.jleague.jp/corporate/news/article/114",
+    "https://www.jfa.jp/national_team/u21_2026/news/00036989/",
+    "https://www.jfa.jp/news/00036994/"
+  ]
+}

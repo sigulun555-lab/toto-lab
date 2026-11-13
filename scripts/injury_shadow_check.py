@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-"""試験（shadow）用：欠場・負傷情報の確認状況を回ごとに集計する。
+"""試験（shadow）用：欠場・負傷情報の記録済み選手について回ごとに集計する。
 
 使い方：
   python3 -I scripts/injury_shadow_check.py 1672
-  （data/injury_status/round_1672.jsonl を読み、試合ごとの確認状況を表示する）
+  （data/injury_status/round_1672.jsonl を読み、記録がある試合ごとに人数を表示する）
+
+重要：
+  このスクリプトはJSONLに記録された選手だけを集計する。
+  行がない選手・チームは確認済みとはみなさない。
+  unknown=0 は「全選手の出場可否を確認済み」を意味しない。
 
 本番の予想は変更しない。読み取りと集計のみ。
 """
@@ -43,12 +48,14 @@ def summarize(rows):
     out = []
     for m in sorted(by_match):
         c = by_match[m]
-        flag = "確認不十分" if c.get("unknown", 0) > 0 else "確認済み"
+        unknown = c.get("unknown", 0)
+        flag = "unknownあり" if unknown > 0 else "記録上unknownなし（全員確認ではない）"
         out.append({
             "matchNumber": m,
+            "recorded_players": sum(c.values()),
             "confirmed_out": c.get("confirmed_out", 0),
             "confirmed_available": c.get("confirmed_available", 0),
-            "unknown": c.get("unknown", 0),
+            "unknown": unknown,
             "flag": flag,
         })
     return out
@@ -66,7 +73,12 @@ def main():
         print(f"第{round_no}回：記録が0件です")
         return
     for s in summarize(rows):
-        print(f"試合{s['matchNumber']}: 欠場{s['confirmed_out']} / 出場確認{s['confirmed_available']} / 不明{s['unknown']} → {s['flag']}")
+        print(
+            f"試合{s['matchNumber']}: 記録選手{s['recorded_players']} / "
+            f"欠場{s['confirmed_out']} / 出場確認{s['confirmed_available']} / "
+            f"不明{s['unknown']} → {s['flag']}"
+        )
+    print("注意：未記録の選手・チームは確認済みではありません。unknown=0でも全員確認済みとは扱いません。")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,83 @@
+{
+  "round": 1672,
+  "product": "toto13",
+  "generatedAt": "2026-11-14T02:51:15+09:00",
+  "checkedAt": "2026-11-14T02:51:15+09:00",
+  "baseReportPath": "reports/round_1672_toto13_team_news_20261112.json",
+  "baseReportCheckedAt": "2026-11-12T03:14:03.433+09:00",
+  "baseSupplementPath": "reports/round_1672_toto13_team_news_supplement_20261113T1532JST.json",
+  "newOfficialSuspensionRecords": [
+    {
+      "team": "横浜Ｆ・マリノス",
+      "player": "宮市 亮",
+      "status": "confirmed_suspension_for_round_1672_match_3",
+      "suspensionMatches": 2,
+      "fineYen": 200000,
+      "details": "2026-11-11のルヴァンカップ準々決勝第1戦（横浜Ｆ・マリノス vs 鹿島アントラーズ）で退場。Jリーグ規律委員会が2試合出場停止・罰金20万円を決定。第1対象試合は2026-11-15の準々決勝第2戦 鹿島アントラーズ vs 横浜Ｆ・マリノス（toto13 No.3）。第2対象は準決勝進出時の2027-03-24準決勝第1戦、準々決勝敗退時は2026-11-21の広島 vs 横浜FM。",
+      "publishedAt": "2026-11-12",
+      "sourceUrl": "https://www.jleague.jp/corporate/news/article/114",
+      "retrievedAt": "2026-11-14T02:51:15+09:00",
+      "sourceClass": "Jリーグ公式・規律裁定",
+      "matchNumber": 3,
+      "modelAdjustmentApplied": false,
+      "adjustmentReason": "選手欠場の確定情報は記録するが、個別欠場を数値化する校正済み係数がないため、既存V1/V2確率は変更しない。"
+    }
+  ],
+  "newOfficialInjuryRecords": [],
+  "injuryAvailabilityStatus": "今回の再確認パスでは、既存レポート記載の負傷者について新たな公式復帰・出場可否の確定発表を追加確認できず。既存の未確認状態を維持する。これは26クラブ全てに新情報がないことの証明ではない。",
+  "officialLineupChecks": [
+    {
+      "matchNumber": 5,
+      "fixture": "アルビレックス新潟 vs テゲバジャーロ宮崎",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/111403/preview/",
+      "checkedAt": "2026-11-14T02:51:15+09:00",
+      "result": "公式試合ページを取得。返却内容に先発選手名リストはなく、公式先発は未確認。"
+    },
+    {
+      "matchNumber": 6,
+      "fixture": "大分トリニータ vs 栃木シティ",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/111405/preview/",
+      "checkedAt": "2026-11-14T02:51:15+09:00",
+      "result": "公式試合ページを取得。返却内容に先発選手名リストはなく、公式先発は未確認。"
+    },
+    {
+      "matchNumber": 7,
+      "fixture": "北海道コンサドーレ札幌 vs サガン鳥栖",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/111505/preview/",
+      "checkedAt": "2026-11-14T02:51:15+09:00",
+      "result": "公式試合ページを取得。返却内容に先発選手名リストはなく、公式先発は未確認。"
+    },
+    {
+      "matchNumber": 10,
+      "fixture": "カターレ富山 vs 徳島ヴォルティス",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/111508/",
+      "checkedAt": "2026-11-14T02:51:15+09:00",
+      "result": "公式試合ページの検索取得では対戦・日時・ラインナップタブを確認。先発選手名リストは取得できず、公式先発は未確認。"
+    },
+    {
+      "matchNumber": 11,
+      "fixture": "ヴァンラーレ八戸 vs いわきFC",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/111506/preview/",
+      "checkedAt": "2026-11-14T02:51:15+09:00",
+      "result": "公式試合ページを取得。返却内容に先発選手名リストはなく、公式先発は未確認。"
+    }
+  ],
+  "officialStartingLineups": {
+    "status": "not_confirmed",
+    "note": "今回取得できた公式ページ・検索結果には先発選手名リストがない。残りの試合も未確認を維持し、公式先発確定とは扱わない。"
+  },
+  "full26ClubOfficialNewsRecheckCompleted": false,
+  "teamCoverageStatus": "既存base reportは26チームを網羅するが、今回の追加確認は全26クラブの公式ニュースを網羅したものではない。新たに確認できた公式出場停止1件のみ追記し、他の未確認項目は未確認のまま保持する。",
+  "modelAdjustment": {
+    "v1Applied": false,
+    "v2Applied": false,
+    "reason": "宮市亮の欠場は確定情報として記録するが、個別欠場を反映する校正済み調整係数がない。V1のmodel.js predict()およびV2の30/70公式市場blendを変更せず、確率revisionも作成しない。"
+  },
+  "limitations": [
+    "J1カップ戦4試合の公式マッチページは今回の取得経路で開けず、先発リストは未確認。",
+    "今回確認できたJ2公式ページでも先発選手名リストは取得できず、未発表と断定できるのはページ表示時点でリストが返らなかった範囲のみ。",
+    "26クラブ全ての最新負傷・復帰・出場可否を再確認したものではない。",
+    "Football LAB等の二次情報は公式欠場確定と区別し、既存の未確認状態を維持する。",
+    "選手別欠場の数値補正は実施していない。"
+  ]
+}

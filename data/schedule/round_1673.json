@@ -115,11 +115,59 @@
     2,
     5
   ],
-  "notes": "Official round 1673 card for 2026-11-21. mini toto A uses matches 1-5; mini toto B uses matches 6-10. totoGOAL3 is a separate 3-match product using matches 1, 2, and 5, with six team-side targets and four goal categories (0, 1, 2, 3+). The official page did not display a retrieval timestamp. The official page was re-opened and checked at the recorded retrieval time. Official kickoff times and venue abbreviations are copied from the official round page.",
+  "notes": "Official round 1673 card for 2026-11-21. mini toto A uses matches 1-5; mini toto B uses matches 6-10. totoGOAL3 is a separate 3-match product using matches 1, 2, and 5, with six team-side targets and four goal categories (0, 1, 2, 3+). The official page did not display a retrieval timestamp. The official page was re-opened and checked at the recorded retrieval time. Official kickoff times and venue abbreviations are copied from the official round page. Product numbering clarification: the miniTotoA/miniTotoB/totoGoal3Matches arrays are toto13 match numbers; mini A and mini B product numbers each restart at 1-5, and totoGOAL3 product numbers restart at 1-3. Explicit crosswalk is in productNumbering.",
   "sources": [
     "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardSalesTermtotoSP.form?holdCntId=1673",
     "https://toto.rakuten.co.jp/toto/schedule/1673/"
   ],
   "retrievedAt": "2026-11-14T01:58:59+09:00",
-  "deadline": "2026-11-21T13:50:00+09:00"
+  "deadline": "2026-11-21T13:50:00+09:00",
+  "productNumbering": {
+    "convention": "miniTotoA, miniTotoB and totoGoal3Matches arrays above are expressed in regular toto13 match-number space. Product-specific numbering restarts at 1 within each mini group and within totoGOAL3.",
+    "miniTotoA": {
+      "productMatchNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "toto13MatchNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "miniTotoB": {
+      "productMatchNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "toto13MatchNumbers": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "totoGOAL3": {
+      "productMatchNumbers": [
+        1,
+        2,
+        3
+      ],
+      "toto13MatchNumbers": [
+        1,
+        2,
+        5
+      ]
+    }
+  },
+  "revalidatedAt": "2026-11-14T06:47:12+09:00"
 }

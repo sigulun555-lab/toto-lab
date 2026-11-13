@@ -7,67 +7,93 @@
     {
       "matchNumber": 1,
       "homeTeam": "ＦＣ町田ゼルビア",
-      "awayTeam": "Ｖ・ファーレン長崎"
+      "awayTeam": "Ｖ・ファーレン長崎",
+      "kickoffAt": "2026-11-21T14:00:00+09:00",
+      "venue": "Ｇスタ"
     },
     {
       "matchNumber": 2,
       "homeTeam": "サンフレッチェ広島",
-      "awayTeam": "横浜Ｆ・マリノス"
+      "awayTeam": "横浜Ｆ・マリノス",
+      "kickoffAt": "2026-11-21T14:00:00+09:00",
+      "venue": "Ｅピース"
     },
     {
       "matchNumber": 3,
       "homeTeam": "京都サンガF.C.",
-      "awayTeam": "浦和レッズ"
+      "awayTeam": "浦和レッズ",
+      "kickoffAt": "2026-11-21T14:00:00+09:00",
+      "venue": "サンガＳ"
     },
     {
       "matchNumber": 4,
       "homeTeam": "川崎フロンターレ",
-      "awayTeam": "アビスパ福岡"
+      "awayTeam": "アビスパ福岡",
+      "kickoffAt": "2026-11-21T15:00:00+09:00",
+      "venue": "Ｕ等々力"
     },
     {
       "matchNumber": 5,
       "homeTeam": "ガンバ大阪",
-      "awayTeam": "ファジアーノ岡山"
+      "awayTeam": "ファジアーノ岡山",
+      "kickoffAt": "2026-11-21T16:00:00+09:00",
+      "venue": "パナスタ"
     },
     {
       "matchNumber": 6,
       "homeTeam": "東京ヴェルディ",
-      "awayTeam": "名古屋グランパス"
+      "awayTeam": "名古屋グランパス",
+      "kickoffAt": "2026-11-21T14:00:00+09:00",
+      "venue": "味スタ"
     },
     {
       "matchNumber": 7,
       "homeTeam": "セレッソ大阪",
-      "awayTeam": "ＦＣ東京"
+      "awayTeam": "ＦＣ東京",
+      "kickoffAt": "2026-11-21T15:00:00+09:00",
+      "venue": "ハナサカ"
     },
     {
       "matchNumber": 8,
       "homeTeam": "ブラウブリッツ秋田",
-      "awayTeam": "モンテディオ山形"
+      "awayTeam": "モンテディオ山形",
+      "kickoffAt": "2026-11-21T14:00:00+09:00",
+      "venue": "ソユスタ"
     },
     {
       "matchNumber": 9,
       "homeTeam": "テゲバジャーロ宮崎",
-      "awayTeam": "いわきＦＣ"
+      "awayTeam": "いわきＦＣ",
+      "kickoffAt": "2026-11-21T14:00:00+09:00",
+      "venue": "いちご"
     },
     {
       "matchNumber": 10,
       "homeTeam": "ヴァンフォーレ甲府",
-      "awayTeam": "ヴァンラーレ八戸"
+      "awayTeam": "ヴァンラーレ八戸",
+      "kickoffAt": "2026-11-21T14:00:00+09:00",
+      "venue": "ＪＩＴス"
     },
     {
       "matchNumber": 11,
       "homeTeam": "カターレ富山",
-      "awayTeam": "大分トリニータ"
+      "awayTeam": "大分トリニータ",
+      "kickoffAt": "2026-11-21T14:00:00+09:00",
+      "venue": "富山"
     },
     {
       "matchNumber": 12,
       "homeTeam": "サガン鳥栖",
-      "awayTeam": "ベガルタ仙台"
+      "awayTeam": "ベガルタ仙台",
+      "kickoffAt": "2026-11-21T14:00:00+09:00",
+      "venue": "駅スタ"
     },
     {
       "matchNumber": 13,
       "homeTeam": "ジュビロ磐田",
-      "awayTeam": "ＲＢ大宮アルディージャ"
+      "awayTeam": "ＲＢ大宮アルディージャ",
+      "kickoffAt": "2026-11-21T14:00:00+09:00",
+      "venue": "ヤマハ"
     }
   ],
   "miniTotoA": [
@@ -89,11 +115,11 @@
     2,
     5
   ],
-  "notes": "Official round 1673 card for 2026-11-21. mini toto A uses matches 1-5; mini toto B uses matches 6-10. totoGOAL3 is a separate 3-match product using matches 1, 2, and 5, with six team-side targets and four goal categories (0, 1, 2, 3+). The official page did not display a retrieval timestamp. The official page was re-opened and checked at the recorded retrieval time.",
+  "notes": "Official round 1673 card for 2026-11-21. mini toto A uses matches 1-5; mini toto B uses matches 6-10. totoGOAL3 is a separate 3-match product using matches 1, 2, and 5, with six team-side targets and four goal categories (0, 1, 2, 3+). The official page did not display a retrieval timestamp. The official page was re-opened and checked at the recorded retrieval time. Official kickoff times and venue abbreviations are copied from the official round page.",
   "sources": [
     "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardSalesTermtotoSP.form?holdCntId=1673",
     "https://toto.rakuten.co.jp/toto/schedule/1673/"
   ],
-  "retrievedAt": "2026-11-14T01:48:18+09:00",
+  "retrievedAt": "2026-11-14T01:58:59+09:00",
   "deadline": "2026-11-21T13:50:00+09:00"
 }

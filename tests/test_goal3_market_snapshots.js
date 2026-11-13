@@ -90,7 +90,7 @@ const snapshot0621=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot0
 test('round 1672 official GOAL3 06:21 snapshot preserves stale display and six team-side vectors',()=>{
  assert.equal(snapshot0621.round,1672);assert.equal(snapshot0621.marketSnapshotAt,'2026-11-14T06:21:00+09:00');assert.equal(snapshot0621.retrievedAt,'2026-11-14T06:40:38+09:00');assert.equal(snapshot0621.deadlineAt,'2026-11-14T13:50:00+09:00');assert.equal(snapshot0621.teams.length,6);assert.equal(snapshot0621.captureStatus,'captured');
  assert.equal(snapshot0621.dataQuality.isLive,false);assert.equal(snapshot0621.dataQuality.displayLagSeconds,1178);assert.equal(snapshot0621.pageSummary.voteCount,104454);
- assert.deepEqual(snapshot0621.teams.map(x=>x.officialGoal3MatchNumber),[1,1,3,3,5,5]);assert.deepEqual(snapshot0621.teams.map(x=>x.toto13MatchNumber),[2,2,4,4,5,5]);
+ assert.deepEqual(snapshot0621.teams.map(x=>x.officialGoal3MatchNumber),[1,1,2,2,3,3]);assert.deepEqual(snapshot0621.teams.map(x=>x.toto13MatchNumber),[2,2,4,4,5,5]);
  assert.deepEqual(snapshot0621.teams.map(x=>x.displayedCountSum),Array(6).fill(104454));assert.deepEqual(snapshot0621.teams.map(x=>x.differenceFromSummaryVotes),Array(6).fill(0));
  for(const row of snapshot0621.teams){assert.deepEqual(Object.keys(row.voteCounts).sort(),['0','1','2','3+']);assert.deepEqual(Object.keys(row.voteSharePct).sort(),['0','1','2','3+']);assert.ok(Math.abs(Object.values(row.voteSharePct).reduce((a,b)=>a+b,0)-100)<1e-8);}
 });

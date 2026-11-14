@@ -115,3 +115,20 @@ test('round 1672 GOAL3 11:50 stale capture attempt is appended once and not used
  assert.equal(found[0].retrievedAt,'2026-11-14T12:08:43+09:00');
  assert.match(found[0].voteShareStatus,/stale/);
 });
+
+const snapshot1226Path='reports/round_1672_goal3_official_market_snapshot_20261114T1226JST.json';
+const snapshot1226=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot1226Path),'utf8'));
+test('round 1672 official GOAL3 12:26 snapshot preserves stale six-team market vectors',()=>{
+ assert.equal(snapshot1226.round,1672);assert.equal(snapshot1226.marketType,'totoGOAL3');
+ assert.equal(snapshot1226.pageDisplayAt,'2026-11-14T12:26:00+09:00');assert.equal(snapshot1226.retrievedAt,'2026-11-14T12:54:30+09:00');
+ assert.equal(snapshot1226.displayAgeSeconds,1710);assert.equal(snapshot1226.stale,true);assert.equal(snapshot1226.totalVotesPageSummary,156056);
+ assert.equal(snapshot1226.matches.length,6);assert.equal(new Set(snapshot1226.matches.map(x=>x.matchNumber+':'+x.team)).size,6);
+ assert.deepEqual(snapshot1226.matches.map(x=>x.toto13MatchNumber),[2,2,4,4,5,5]);
+ for(const row of snapshot1226.matches){assert.equal(row.sumVotes,156056);assert.equal(row.voteCounts.reduce((a,b)=>a+b,0),156056);assert.ok(Math.abs(row.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);}
+});
+test('round 1672 GOAL3 12:26 stale capture attempt is appended exactly once and not used as live prediction input',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot1226Path);
+ assert.equal(found.length,1);assert.equal(found[0].captureStatus,'captured');
+ assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/14 12:26 JST');assert.equal(found[0].retrievedAt,'2026-11-14T12:54:30+09:00');
+ assert.match(found[0].voteShareStatus,/stale/);
+});

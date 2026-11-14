@@ -1,0 +1,38 @@
+{
+  "round": 1672,
+  "product": "totoGOAL3",
+  "marketSnapshotAt": "2026-11-13T15:31:00+09:00",
+  "retrievedAt": "2026-11-13T15:42:02+09:00",
+  "deadlineAt": "2026-11-14T13:50:00+09:00",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=02&holdCntId=1672",
+  "snapshotPath": "data/goal3_market_snapshots/round_1672_2026-11-13T1531JST_official.jsonl",
+  "attemptLogPath": "data/goal3_market_snapshot_attempts.jsonl",
+  "displayLagSeconds": 662,
+  "teamTargets": 6,
+  "fixtures": 3,
+  "pageSummaryVotes": 66856,
+  "categoryCountSums": [
+    66856,
+    66856,
+    66856,
+    66856,
+    66856,
+    66856
+  ],
+  "categoryCountDifferencesFromSummary": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "validation": {
+    "allDisplayedPercentagesSum100": true,
+    "uniqueTeamSides": true,
+    "allDisplayedCountSumsMatchPageSummary": true,
+    "allDisplayValuesPreserved": true,
+    "isLive": false
+  },
+  "notes": "Official display snapshot only. The official page displayed 15:31 JST and was directly retrieved at 15:42:02 JST (11m02s lag), beyond the five-minute refresh notice. All six team-side count sums match the page summary 66,856 and all displayed percentage vectors sum to 100.00%. No forecast, production model, market weight, app Artifact, or fixture updater was changed."
+}

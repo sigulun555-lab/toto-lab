@@ -1,0 +1,172 @@
+{
+  "round": 1672,
+  "marketSnapshotAt": "2026-11-14T06:21:00+09:00",
+  "retrievedAt": "2026-11-14T06:40:38+09:00",
+  "deadlineAt": "2026-11-14T13:50:00+09:00",
+  "source": "Official toto-dream.com totoGOAL3 vote status page",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=02&holdCntId=1672",
+  "sourceDisplayedTimestamp": "2026年11月14日（土）06時21分時点",
+  "dataType": "vote_share_percent_by_goal_bucket",
+  "teams": [
+    {
+      "matchNumber": 1,
+      "officialGoal3MatchNumber": 1,
+      "toto13MatchNumber": 2,
+      "team": "Ｃ大阪",
+      "side": "home",
+      "voteCounts": {
+        "0": 21399,
+        "1": 37656,
+        "2": 30366,
+        "3+": 15033
+      },
+      "voteSharePct": {
+        "0": 20.49,
+        "1": 36.05,
+        "2": 29.07,
+        "3+": 14.39
+      },
+      "displayedCountSum": 104454,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 1,
+      "officialGoal3MatchNumber": 1,
+      "toto13MatchNumber": 2,
+      "team": "浦和",
+      "side": "away",
+      "voteCounts": {
+        "0": 21578,
+        "1": 38472,
+        "2": 29797,
+        "3+": 14607
+      },
+      "voteSharePct": {
+        "0": 20.66,
+        "1": 36.83,
+        "2": 28.53,
+        "3+": 13.98
+      },
+      "displayedCountSum": 104454,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 2,
+      "officialGoal3MatchNumber": 2,
+      "toto13MatchNumber": 4,
+      "team": "柏",
+      "side": "home",
+      "voteCounts": {
+        "0": 12040,
+        "1": 24569,
+        "2": 37620,
+        "3+": 30225
+      },
+      "voteSharePct": {
+        "0": 11.53,
+        "1": 23.52,
+        "2": 36.01,
+        "3+": 28.94
+      },
+      "displayedCountSum": 104454,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 2,
+      "officialGoal3MatchNumber": 2,
+      "toto13MatchNumber": 4,
+      "team": "川崎Ｆ",
+      "side": "away",
+      "voteCounts": {
+        "0": 22290,
+        "1": 41576,
+        "2": 27543,
+        "3+": 13045
+      },
+      "voteSharePct": {
+        "0": 21.34,
+        "1": 39.8,
+        "2": 26.37,
+        "3+": 12.49
+      },
+      "displayedCountSum": 104454,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 3,
+      "officialGoal3MatchNumber": 3,
+      "toto13MatchNumber": 5,
+      "team": "新潟",
+      "side": "home",
+      "voteCounts": {
+        "0": 19687,
+        "1": 38888,
+        "2": 32447,
+        "3+": 13432
+      },
+      "voteSharePct": {
+        "0": 18.85,
+        "1": 37.23,
+        "2": 31.06,
+        "3+": 12.86
+      },
+      "displayedCountSum": 104454,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 3,
+      "officialGoal3MatchNumber": 3,
+      "toto13MatchNumber": 5,
+      "team": "宮崎",
+      "side": "away",
+      "voteCounts": {
+        "0": 27370,
+        "1": 36302,
+        "2": 27124,
+        "3+": 13658
+      },
+      "voteSharePct": {
+        "0": 26.2,
+        "1": 34.75,
+        "2": 25.97,
+        "3+": 13.08
+      },
+      "displayedCountSum": 104454,
+      "differenceFromSummaryVotes": 0
+    }
+  ],
+  "pageSummary": {
+    "salesAmountYen": 10445400,
+    "voteCount": 104454,
+    "ticketCount": 16611
+  },
+  "dataQuality": {
+    "status": "stale_display",
+    "displayLagSeconds": 1178,
+    "refreshNotice": "5分毎に最新情報を表示",
+    "isLive": false,
+    "pageSummaryVotes": 104454,
+    "categoryCountSums": [
+      104454,
+      104454,
+      104454,
+      104454,
+      104454,
+      104454
+    ],
+    "categoryCountDifferencesFromSummary": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "allDisplayedPercentagesSum100": true,
+    "uniqueTeamSides": true,
+    "allDisplayedCountSumsMatchSummary": true,
+    "note": "公式ページの06:21 JST表示を06:40:38 JSTに直接取得。19分38秒差で5分更新表示の許容範囲を超えるためstale。値は補正せず保存し、ライブ値・予測入力として扱わない。"
+  },
+  "captureStatus": "captured",
+  "note": "Direct official display snapshot only; stale at retrieval. Do not treat as current live vote shares or model probabilities. No secondary source mixed. The official GOAL3 product card numbers are 1/2/3 (internal fixture ordinals 1/2/3), mapping respectively to regular toto13 match numbers 2/4/5."
+}

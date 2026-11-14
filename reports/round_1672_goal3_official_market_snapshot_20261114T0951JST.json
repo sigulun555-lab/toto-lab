@@ -1,0 +1,163 @@
+{
+  "round": 1672,
+  "marketType": "totoGOAL3",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=02&holdCntId=1672",
+  "pageDisplayAt": "2026-11-14T09:51:00+09:00",
+  "retrievedAt": "2026-11-14T10:40:31+09:00",
+  "refreshNotice": "5分毎",
+  "displayAgeSeconds": 2971,
+  "stale": true,
+  "totalVotes": 122241,
+  "categoryOrder": [
+    "0",
+    "1",
+    "2",
+    "3+"
+  ],
+  "matches": [
+    {
+      "productMatchNumber": 1,
+      "toto13MatchNumber": 2,
+      "home": "Ｃ大阪",
+      "away": "浦和",
+      "teamSides": [
+        {
+          "team": "Ｃ大阪",
+          "opponent": "浦和",
+          "isHome": true,
+          "voteCounts": [
+            24750,
+            44168,
+            35553,
+            17770
+          ],
+          "percentages": [
+            20.25,
+            36.13,
+            29.08,
+            14.54
+          ],
+          "sumVotes": 122241,
+          "sumPercent": 100
+        },
+        {
+          "team": "浦和",
+          "opponent": "Ｃ大阪",
+          "isHome": false,
+          "voteCounts": [
+            25003,
+            45315,
+            35003,
+            16920
+          ],
+          "percentages": [
+            20.45,
+            37.07,
+            28.64,
+            13.84
+          ],
+          "sumVotes": 122241,
+          "sumPercent": 100
+        }
+      ]
+    },
+    {
+      "productMatchNumber": 2,
+      "toto13MatchNumber": 4,
+      "home": "柏",
+      "away": "川崎Ｆ",
+      "teamSides": [
+        {
+          "team": "柏",
+          "opponent": "川崎Ｆ",
+          "isHome": true,
+          "voteCounts": [
+            14101,
+            29294,
+            43756,
+            35090
+          ],
+          "percentages": [
+            11.54,
+            23.96,
+            35.79,
+            28.71
+          ],
+          "sumVotes": 122241,
+          "sumPercent": 100
+        },
+        {
+          "team": "川崎Ｆ",
+          "opponent": "柏",
+          "isHome": false,
+          "voteCounts": [
+            26335,
+            49082,
+            31900,
+            14924
+          ],
+          "percentages": [
+            21.54,
+            40.15,
+            26.1,
+            12.21
+          ],
+          "sumVotes": 122241,
+          "sumPercent": 100
+        }
+      ]
+    },
+    {
+      "productMatchNumber": 3,
+      "toto13MatchNumber": 5,
+      "home": "新潟",
+      "away": "宮崎",
+      "teamSides": [
+        {
+          "team": "新潟",
+          "opponent": "宮崎",
+          "isHome": true,
+          "voteCounts": [
+            23199,
+            45664,
+            37960,
+            15418
+          ],
+          "percentages": [
+            18.98,
+            37.36,
+            31.05,
+            12.61
+          ],
+          "sumVotes": 122241,
+          "sumPercent": 100
+        },
+        {
+          "team": "宮崎",
+          "opponent": "新潟",
+          "isHome": false,
+          "voteCounts": [
+            31433,
+            42613,
+            31962,
+            16233
+          ],
+          "percentages": [
+            25.71,
+            34.86,
+            26.15,
+            13.28
+          ],
+          "sumVotes": 122241,
+          "sumPercent": 100
+        }
+      ]
+    }
+  ],
+  "dataQuality": {
+    "allSixTeamSideCountSumsMatchTotal": true,
+    "allSixPercentageSums": 100,
+    "note": "Raw official display values preserved. Display age exceeded the stated 5-minute refresh interval at retrieval; this snapshot is archival only and is not used for a new GOAL3 V2 revision."
+  },
+  "interpretation": "Official direct-page GOAL3 market snapshot. The latest category breakdown was displayed at 09:51 JST and was already stale when retrieved at 10:40:31 JST. No V2 prediction is generated from this stale data."
+}

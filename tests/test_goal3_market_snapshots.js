@@ -19,3 +19,136 @@ test('round 1672 GOAL3 snapshot attempt is recorded exactly once and points to t
 test('previous 03:28 official snapshot is preserved unchanged',()=>{
  assert.equal(oldSnapshot.round,1672);assert.equal(oldSnapshot.marketSnapshotAt,'2026-11-12T03:28:00+09:00');assert.equal(oldSnapshot.teams.length,6);
 });
+
+const snapshot0932Path='data/goal3_market_snapshots/round_1672_2026-11-12T0932JST_official.jsonl';
+const snapshot0932=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot0932Path),'utf8').trim());
+test('round 1672 official GOAL3 09:32 snapshot has six complete team-side vectors',()=>{
+ assert.equal(snapshot0932.round,1672);assert.equal(snapshot0932.marketSnapshotAt,'2026-11-12T09:32:00+09:00');assert.equal(snapshot0932.retrievedAt,'2026-11-12T10:08:15.007+09:00');assert.equal(snapshot0932.deadlineAt,'2026-11-14T13:50:00+09:00');assert.equal(snapshot0932.teams.length,6);assert.equal(snapshot0932.captureStatus,'captured');
+ assert.equal(new Set(snapshot0932.teams.map(x=>x.matchNumber+':'+x.side)).size,6);
+ for(const row of snapshot0932.teams){assert.deepEqual(Object.keys(row.voteCounts).sort(),['0','1','2','3+']);assert.deepEqual(Object.keys(row.voteSharePct).sort(),['0','1','2','3+']);assert.equal(Object.values(row.voteCounts).reduce((a,b)=>a+b,0),27789);assert.ok(Math.abs(Object.values(row.voteSharePct).reduce((a,b)=>a+b,0)-100)<1e-8);}
+});
+test('round 1672 09:32 GOAL3 snapshot attempt is recorded exactly once and points to this file',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot0932Path);assert.equal(found.length,1);assert.equal(found[0].captureStatus,'captured');assert.equal(found[0].retrievedAt,'2026-11-12T10:08:15.007+09:00');assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/12 09:32 JST');
+});
+
+const snapshot1504Path='data/goal3_market_snapshots/round_1672_2026-11-12T1504JST_official.jsonl';
+const snapshot1504=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot1504Path),'utf8').trim());
+test('round 1672 official GOAL3 15:04 snapshot has six complete team-side vectors',()=>{
+ assert.equal(snapshot1504.round,1672);assert.equal(snapshot1504.marketSnapshotAt,'2026-11-12T15:04:00+09:00');assert.equal(snapshot1504.retrievedAt,'2026-11-12T15:08:12+09:00');assert.equal(snapshot1504.deadlineAt,'2026-11-14T13:50:00+09:00');assert.equal(snapshot1504.teams.length,6);assert.equal(snapshot1504.captureStatus,'captured');
+ assert.equal(new Set(snapshot1504.teams.map(x=>x.matchNumber+':'+x.side)).size,6);
+ for(const row of snapshot1504.teams){assert.deepEqual(Object.keys(row.voteCounts).sort(),['0','1','2','3+']);assert.deepEqual(Object.keys(row.voteSharePct).sort(),['0','1','2','3+']);assert.equal(Object.values(row.voteCounts).reduce((a,b)=>a+b,0),34446);assert.ok(Math.abs(Object.values(row.voteSharePct).reduce((a,b)=>a+b,0)-100)<1e-8);}
+});
+test('round 1672 15:04 GOAL3 snapshot attempt is recorded exactly once and points to this file',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot1504Path);assert.equal(found.length,1);assert.equal(found[0].captureStatus,'captured');assert.equal(found[0].retrievedAt,'2026-11-12T15:08:12+09:00');assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/12 15:04 JST');
+});
+
+const snapshot0854Path='data/goal3_market_snapshots/round_1672_2026-11-13T0854JST_official.jsonl';
+const snapshot0854=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot0854Path),'utf8').trim());
+test('round 1672 official GOAL3 08:54 snapshot has six complete team-side vectors',()=>{
+ assert.equal(snapshot0854.round,1672);assert.equal(snapshot0854.marketSnapshotAt,'2026-11-13T08:54:00+09:00');assert.equal(snapshot0854.retrievedAt,'2026-11-13T13:47:19+09:00');assert.equal(snapshot0854.deadlineAt,'2026-11-14T13:50:00+09:00');assert.equal(snapshot0854.teams.length,6);assert.equal(snapshot0854.captureStatus,'captured');
+ assert.equal(new Set(snapshot0854.teams.map(x=>x.matchNumber+':'+x.side)).size,6);
+ for(const row of snapshot0854.teams){assert.deepEqual(Object.keys(row.voteCounts).sort(),['0','1','2','3+']);assert.deepEqual(Object.keys(row.voteSharePct).sort(),['0','1','2','3+']);assert.equal(Object.values(row.voteCounts).reduce((a,b)=>a+b,0),49432);assert.ok(Math.abs(Object.values(row.voteSharePct).reduce((a,b)=>a+b,0)-100)<1e-8);}
+});
+test('round 1672 08:54 GOAL3 snapshot attempt is recorded exactly once and points to this file',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot0854Path);assert.equal(found.length,1);assert.equal(found[0].captureStatus,'captured');assert.equal(found[0].retrievedAt,'2026-11-13T13:47:19+09:00');assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/13 08:54 JST');
+});
+test('previous 03:50 official snapshot is preserved unchanged',()=>{
+ const old=JSON.parse(fs.readFileSync(path.join(__dirname,'..','data/goal3_market_snapshots/round_1672_2026-11-13T0350JST_official.jsonl'),'utf8').trim());
+ assert.equal(old.round,1672);assert.equal(old.marketSnapshotAt,'2026-11-13T03:50:00+09:00');assert.equal(old.retrievedAt,'2026-11-13T03:50:40+09:00');assert.equal(old.teams.length,6);
+});
+
+
+const snapshot1400Path='data/goal3_market_snapshots/round_1672_2026-11-13T1400JST_official.jsonl';
+const snapshot1400=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot1400Path),'utf8').trim());
+test('round 1672 official GOAL3 14:00 snapshot preserves stale display and count discrepancies',()=>{
+ assert.equal(snapshot1400.round,1672);assert.equal(snapshot1400.marketSnapshotAt,'2026-11-13T14:00:00+09:00');assert.equal(snapshot1400.retrievedAt,'2026-11-13T15:32:41+09:00');assert.equal(snapshot1400.deadlineAt,'2026-11-14T13:50:00+09:00');assert.equal(snapshot1400.teams.length,6);assert.equal(snapshot1400.captureStatus,'captured');
+ assert.equal(snapshot1400.dataQuality.isLive,false);assert.equal(snapshot1400.dataQuality.displayLagSeconds,5561);assert.equal(snapshot1400.pageSummary.voteCount,61943);
+ assert.deepEqual(snapshot1400.teams.map(x=>x.displayedCountSum),[61938,61938,61941,61943,61943,61943]);
+ assert.deepEqual(snapshot1400.teams.map(x=>x.differenceFromSummaryVotes),[-5,-5,-2,0,0,0]);
+ for(const row of snapshot1400.teams){assert.deepEqual(Object.keys(row.voteCounts).sort(),['0','1','2','3+']);assert.deepEqual(Object.keys(row.voteSharePct).sort(),['0','1','2','3+']);assert.ok(Math.abs(Object.values(row.voteSharePct).reduce((a,b)=>a+b,0)-100)<1e-8);}
+});
+test('round 1672 14:00 GOAL3 stale snapshot attempt is recorded exactly once and points to this file',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot1400Path);assert.equal(found.length,1);assert.equal(found[0].captureStatus,'captured');assert.equal(found[0].retrievedAt,'2026-11-13T15:32:41+09:00');assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/13 14:00 JST');
+});
+
+
+const snapshot1531Path='data/goal3_market_snapshots/round_1672_2026-11-13T1531JST_official.jsonl';
+const snapshot1531=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot1531Path),'utf8').trim());
+test('round 1672 official GOAL3 15:31 snapshot preserves stale display with consistent counts',()=>{
+ assert.equal(snapshot1531.round,1672);assert.equal(snapshot1531.marketSnapshotAt,'2026-11-13T15:31:00+09:00');assert.equal(snapshot1531.retrievedAt,'2026-11-13T15:42:02+09:00');assert.equal(snapshot1531.deadlineAt,'2026-11-14T13:50:00+09:00');assert.equal(snapshot1531.teams.length,6);assert.equal(snapshot1531.captureStatus,'captured');
+ assert.equal(snapshot1531.dataQuality.isLive,false);assert.equal(snapshot1531.dataQuality.displayLagSeconds,662);assert.equal(snapshot1531.pageSummary.voteCount,66856);
+ assert.deepEqual(snapshot1531.teams.map(x=>x.displayedCountSum),Array(6).fill(66856));assert.deepEqual(snapshot1531.teams.map(x=>x.differenceFromSummaryVotes),Array(6).fill(0));
+ for(const row of snapshot1531.teams){assert.deepEqual(Object.keys(row.voteCounts).sort(),['0','1','2','3+']);assert.deepEqual(Object.keys(row.voteSharePct).sort(),['0','1','2','3+']);assert.ok(Math.abs(Object.values(row.voteSharePct).reduce((a,b)=>a+b,0)-100)<1e-8);}
+});
+test('round 1672 15:31 GOAL3 snapshot attempt is recorded exactly once',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot1531Path);assert.equal(found.length,1);assert.equal(found[0].retrievedAt,'2026-11-13T15:42:02+09:00');assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/13 15:31 JST');
+});
+
+
+const snapshot0621Path='data/goal3_market_snapshots/round_1672_2026-11-14T0621JST_official.jsonl';
+const snapshot0621=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot0621Path),'utf8').trim());
+test('round 1672 official GOAL3 06:21 snapshot preserves stale display and six team-side vectors',()=>{
+ assert.equal(snapshot0621.round,1672);assert.equal(snapshot0621.marketSnapshotAt,'2026-11-14T06:21:00+09:00');assert.equal(snapshot0621.retrievedAt,'2026-11-14T06:40:38+09:00');assert.equal(snapshot0621.deadlineAt,'2026-11-14T13:50:00+09:00');assert.equal(snapshot0621.teams.length,6);assert.equal(snapshot0621.captureStatus,'captured');
+ assert.equal(snapshot0621.dataQuality.isLive,false);assert.equal(snapshot0621.dataQuality.displayLagSeconds,1178);assert.equal(snapshot0621.pageSummary.voteCount,104454);
+ assert.deepEqual(snapshot0621.teams.map(x=>x.officialGoal3MatchNumber),[1,1,2,2,3,3]);assert.deepEqual(snapshot0621.teams.map(x=>x.toto13MatchNumber),[2,2,4,4,5,5]);
+ assert.deepEqual(snapshot0621.teams.map(x=>x.displayedCountSum),Array(6).fill(104454));assert.deepEqual(snapshot0621.teams.map(x=>x.differenceFromSummaryVotes),Array(6).fill(0));
+ for(const row of snapshot0621.teams){assert.deepEqual(Object.keys(row.voteCounts).sort(),['0','1','2','3+']);assert.deepEqual(Object.keys(row.voteSharePct).sort(),['0','1','2','3+']);assert.ok(Math.abs(Object.values(row.voteSharePct).reduce((a,b)=>a+b,0)-100)<1e-8);}
+});
+test('round 1672 06:21 GOAL3 stale snapshot attempt is recorded exactly once',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot0621Path);assert.equal(found.length,1);assert.equal(found[0].captureStatus,'captured');assert.equal(found[0].retrievedAt,'2026-11-14T06:40:38+09:00');assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/14 06:21 JST');
+});
+
+const snapshot1150Path='reports/round_1672_goal3_official_market_snapshot_20261114T1150JST.json';
+const snapshot1150=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot1150Path),'utf8'));
+test('round 1672 official GOAL3 11:50 snapshot preserves stale six-team market vectors',()=>{
+ assert.equal(snapshot1150.round,1672);assert.equal(snapshot1150.marketType,'totoGOAL3');
+ assert.equal(snapshot1150.pageDisplayAt,'2026-11-14T11:50:00+09:00');assert.equal(snapshot1150.retrievedAt,'2026-11-14T12:08:43+09:00');
+ assert.equal(snapshot1150.displayAgeSeconds,1123);assert.equal(snapshot1150.stale,true);assert.equal(snapshot1150.totalVotesPageSummary,149413);
+ assert.equal(snapshot1150.matches.length,6);assert.equal(new Set(snapshot1150.matches.map(x=>x.matchNumber+':'+x.team)).size,6);
+ assert.deepEqual(snapshot1150.matches.map(x=>x.toto13MatchNumber),[2,2,4,4,5,5]);
+ for(const row of snapshot1150.matches){assert.equal(row.sumVotes,149413);assert.equal(row.voteCounts.reduce((a,b)=>a+b,0),149413);assert.ok(Math.abs(row.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);}
+});
+test('round 1672 GOAL3 11:50 stale capture attempt is appended once and not used as live prediction input',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot1150Path);
+ assert.equal(found.length,1);assert.equal(found[0].captureStatus,'captured');
+ assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/14 11:50 JST');
+ assert.equal(found[0].retrievedAt,'2026-11-14T12:08:43+09:00');
+ assert.match(found[0].voteShareStatus,/stale/);
+});
+
+const snapshot1226Path='reports/round_1672_goal3_official_market_snapshot_20261114T1226JST.json';
+const snapshot1226=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot1226Path),'utf8'));
+test('round 1672 official GOAL3 12:26 snapshot preserves stale six-team market vectors',()=>{
+ assert.equal(snapshot1226.round,1672);assert.equal(snapshot1226.marketType,'totoGOAL3');
+ assert.equal(snapshot1226.pageDisplayAt,'2026-11-14T12:26:00+09:00');assert.equal(snapshot1226.retrievedAt,'2026-11-14T12:54:30+09:00');
+ assert.equal(snapshot1226.displayAgeSeconds,1710);assert.equal(snapshot1226.stale,true);assert.equal(snapshot1226.totalVotesPageSummary,156056);
+ assert.equal(snapshot1226.matches.length,6);assert.equal(new Set(snapshot1226.matches.map(x=>x.matchNumber+':'+x.team)).size,6);
+ assert.deepEqual(snapshot1226.matches.map(x=>x.toto13MatchNumber),[2,2,4,4,5,5]);
+ for(const row of snapshot1226.matches){assert.equal(row.sumVotes,156056);assert.equal(row.voteCounts.reduce((a,b)=>a+b,0),156056);assert.ok(Math.abs(row.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);}
+});
+test('round 1672 GOAL3 12:26 stale capture attempt is appended exactly once and not used as live prediction input',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot1226Path);
+ assert.equal(found.length,1);assert.equal(found[0].captureStatus,'captured');
+ assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/14 12:26 JST');assert.equal(found[0].retrievedAt,'2026-11-14T12:54:30+09:00');
+ assert.match(found[0].voteShareStatus,/stale/);
+});
+
+const snapshot1345Path='reports/round_1672_goal3_official_market_snapshot_20261114T1345JST.json';
+const snapshot1345=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot1345Path),'utf8'));
+test('round 1672 official GOAL3 13:45 snapshot preserves six team-side vectors as post-deadline stale data',()=>{
+ assert.equal(snapshot1345.round,1672);assert.equal(snapshot1345.marketType,'totoGOAL3');
+ assert.equal(snapshot1345.pageDisplayAt,'2026-11-14T13:45:00+09:00');assert.equal(snapshot1345.retrievedAt,'2026-11-14T13:52:04+09:00');
+ assert.equal(snapshot1345.displayAgeSeconds,424);assert.equal(snapshot1345.stale,true);assert.equal(snapshot1345.totalVotesPageSummary,173108);
+ assert.equal(snapshot1345.matches.length,6);assert.equal(new Set(snapshot1345.matches.map(x=>x.matchNumber+':'+x.team)).size,6);
+ assert.deepEqual(snapshot1345.matches.map(x=>x.toto13MatchNumber),[2,2,4,4,5,5]);
+ assert.deepEqual(snapshot1345.matches.map(x=>x.differenceFromSummaryVotes),[-4,-4,-4,-4,-4,-2]);
+ assert.equal(snapshot1345.countConsistency.allSixTeamSideTotalsMatchPageSummary,false);
+ assert.equal(snapshot1345.countConsistency.allSixPercentageVectorsSumTo100,true);
+ for(const row of snapshot1345.matches){assert.equal(row.sumVotes,row.voteCounts.reduce((a,b)=>a+b,0));assert.ok(Math.abs(row.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);}
+ assert.match(snapshot1345.interpretation,/after the 13:50 JST sales deadline/);
+});
+test('round 1672 GOAL3 13:45 stale post-deadline capture attempt is appended exactly once',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot1345Path);assert.equal(found.length,1);
+ assert.equal(found[0].captureStatus,'captured');assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/14 13:45 JST');
+ assert.equal(found[0].retrievedAt,'2026-11-14T13:52:04+09:00');assert.match(found[0].voteShareStatus,/stale/);
+});

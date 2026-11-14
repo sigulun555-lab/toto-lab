@@ -1,0 +1,38 @@
+{
+  "round": 1672,
+  "product": "totoGOAL3",
+  "marketSnapshotAt": "2026-11-13T14:00:00+09:00",
+  "retrievedAt": "2026-11-13T15:32:41+09:00",
+  "deadlineAt": "2026-11-14T13:50:00+09:00",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=02&holdCntId=1672",
+  "snapshotPath": "data/goal3_market_snapshots/round_1672_2026-11-13T1400JST_official.jsonl",
+  "attemptLogPath": "data/goal3_market_snapshot_attempts.jsonl",
+  "displayLagSeconds": 5561,
+  "teamTargets": 6,
+  "fixtures": 3,
+  "pageSummaryVotes": 61943,
+  "categoryCountSums": [
+    61938,
+    61938,
+    61941,
+    61943,
+    61943,
+    61943
+  ],
+  "categoryCountDifferencesFromSummary": [
+    -5,
+    -5,
+    -2,
+    0,
+    0,
+    0
+  ],
+  "validation": {
+    "allDisplayedPercentagesSum100": true,
+    "uniqueTeamSides": true,
+    "allDisplayedCountSumsMatchPageSummary": false,
+    "allDisplayValuesPreserved": true,
+    "isLive": false
+  },
+  "notes": "Official display snapshot only. The official page displayed 14:00 JST and was directly retrieved at 15:32:41 JST (92m41s lag), well beyond the five-minute refresh notice. The first three team-side category count sums differ from the page summary by 5, 5, and 2 votes. Values are preserved exactly as displayed; no inference or correction. No GOAL3 forecast, production model, market weight, app Artifact, or fixture updater was changed."
+}

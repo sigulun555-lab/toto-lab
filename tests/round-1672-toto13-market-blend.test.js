@@ -129,3 +129,16 @@ test('round 1672 official toto13 06:16 stale market display is archived but excl
  for(const row of staleMarket0616.rows){assert.equal(row.totalVotes,876082);assert.equal(row.voteCounts.home+row.voteCounts.draw+row.voteCounts.away,876082);assert.ok(Math.abs(row.displayedVoteSharePercent.home+row.displayedVoteSharePercent.draw+row.displayedVoteSharePercent.away-100)<1e-8);}
  assert.equal(v2.length,104);assert.equal(v2[v2.length-1].marketOfficialDisplayAt,'2026-11-14T10:50:00+09:00');
 });
+
+const staleMarket1157Path='reports/round_1672_toto13_official_market_snapshot_20261114T1157JST.json';
+const staleMarket1157=JSON.parse(fs.readFileSync(path.join(__dirname,'..',staleMarket1157Path),'utf8'));
+test('round 1672 toto13 11:57 official snapshot is archived as stale and excluded from V2',()=>{
+ assert.equal(staleMarket1157.round,1672);assert.equal(staleMarket1157.marketType,'toto13');
+ assert.equal(staleMarket1157.pageDisplayAt,'2026-11-14T11:57:00+09:00');assert.equal(staleMarket1157.retrievedAt,'2026-11-14T12:08:43+09:00');
+ assert.equal(staleMarket1157.displayAgeSeconds,703);assert.equal(staleMarket1157.stale,true);
+ assert.equal(staleMarket1157.totalVotesPageSummary,1206686);assert.equal(staleMarket1157.matches.length,13);
+ assert.deepEqual(staleMarket1157.matches.map(x=>x.matchNumber),Array.from({length:13},(_,i)=>i+1));
+ for(const row of staleMarket1157.matches){assert.equal(row.sumVotes,row.voteCounts.reduce((a,b)=>a+b,0));assert.ok(Math.abs(row.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);assert.equal(row.differenceFromSummaryVotes,row.sumVotes-1206686);}
+ assert.deepEqual(staleMarket1157.matches.map(x=>x.differenceFromSummaryVotes),[-117,-117,-117,-117,-117,-117,-117,-117,-117,-110,-70,-39,0]);
+ assert.equal(v2.length,104);assert.equal(v2[v2.length-1].marketOfficialDisplayAt,'2026-11-14T10:50:00+09:00');
+});

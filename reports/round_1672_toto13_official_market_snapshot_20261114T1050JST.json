@@ -1,0 +1,294 @@
+{
+  "round": 1672,
+  "marketType": "toto13",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1672",
+  "pageDisplayAt": "2026-11-14T10:50:00+09:00",
+  "retrievedAt": "2026-11-14T10:50:31+09:00",
+  "refreshNotice": "5分毎",
+  "displayAgeSeconds": 31,
+  "stale": false,
+  "totalVotesPageSummary": 1085879,
+  "outcomeOrder": [
+    "1",
+    "0",
+    "2"
+  ],
+  "outcomes": [
+    "home90Win",
+    "drawOther",
+    "home90Loss"
+  ],
+  "matches": [
+    {
+      "matchNumber": 1,
+      "home": "町田",
+      "away": "神戸",
+      "voteCounts": [
+        442126,
+        340175,
+        303528
+      ],
+      "percentages": [
+        40.72,
+        31.33,
+        27.95
+      ],
+      "sumVotes": 1085829,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 2,
+      "home": "Ｃ大阪",
+      "away": "浦和",
+      "voteCounts": [
+        353509,
+        285496,
+        446860
+      ],
+      "percentages": [
+        32.56,
+        26.29,
+        41.15
+      ],
+      "sumVotes": 1085865,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 3,
+      "home": "鹿島",
+      "away": "横浜FM",
+      "voteCounts": [
+        642302,
+        236854,
+        206709
+      ],
+      "percentages": [
+        59.15,
+        21.81,
+        19.04
+      ],
+      "sumVotes": 1085865,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 4,
+      "home": "柏",
+      "away": "川崎Ｆ",
+      "voteCounts": [
+        702922,
+        201577,
+        181366
+      ],
+      "percentages": [
+        64.74,
+        18.56,
+        16.7
+      ],
+      "sumVotes": 1085865,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 5,
+      "home": "新潟",
+      "away": "宮崎",
+      "voteCounts": [
+        476579,
+        255811,
+        353475
+      ],
+      "percentages": [
+        43.89,
+        23.56,
+        32.55
+      ],
+      "sumVotes": 1085865,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 6,
+      "home": "大分",
+      "away": "栃木Ｃ",
+      "voteCounts": [
+        768187,
+        196923,
+        120755
+      ],
+      "percentages": [
+        70.74,
+        18.14,
+        11.12
+      ],
+      "sumVotes": 1085865,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 7,
+      "home": "札幌",
+      "away": "鳥栖",
+      "voteCounts": [
+        632150,
+        208387,
+        245338
+      ],
+      "percentages": [
+        58.22,
+        19.19,
+        22.59
+      ],
+      "sumVotes": 1085875,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 8,
+      "home": "仙台",
+      "away": "秋田",
+      "voteCounts": [
+        774004,
+        191172,
+        120699
+      ],
+      "percentages": [
+        71.28,
+        17.6,
+        11.12
+      ],
+      "sumVotes": 1085875,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 9,
+      "home": "今治",
+      "away": "磐田",
+      "voteCounts": [
+        111960,
+        173177,
+        800738
+      ],
+      "percentages": [
+        10.31,
+        15.95,
+        73.74
+      ],
+      "sumVotes": 1085875,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 10,
+      "home": "富山",
+      "away": "徳島",
+      "voteCounts": [
+        770345,
+        166285,
+        149245
+      ],
+      "percentages": [
+        70.94,
+        15.31,
+        13.75
+      ],
+      "sumVotes": 1085875,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 11,
+      "home": "八戸",
+      "away": "いわき",
+      "voteCounts": [
+        151812,
+        178356,
+        755707
+      ],
+      "percentages": [
+        13.98,
+        16.43,
+        69.59
+      ],
+      "sumVotes": 1085875,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 12,
+      "home": "藤枝",
+      "away": "甲府",
+      "voteCounts": [
+        499519,
+        359710,
+        226650
+      ],
+      "percentages": [
+        46,
+        33.13,
+        20.87
+      ],
+      "sumVotes": 1085879,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 13,
+      "home": "大宮",
+      "away": "山形",
+      "voteCounts": [
+        856792,
+        131182,
+        97905
+      ],
+      "percentages": [
+        78.9,
+        12.08,
+        9.02
+      ],
+      "sumVotes": 1085879,
+      "sumPercent": 100
+    }
+  ],
+  "countConsistency": {
+    "matchesWithCountsBelowPageSummary": [
+      {
+        "matchNumber": 1,
+        "shortfall": 50
+      },
+      {
+        "matchNumber": 2,
+        "shortfall": 14
+      },
+      {
+        "matchNumber": 3,
+        "shortfall": 14
+      },
+      {
+        "matchNumber": 4,
+        "shortfall": 14
+      },
+      {
+        "matchNumber": 5,
+        "shortfall": 14
+      },
+      {
+        "matchNumber": 6,
+        "shortfall": 14
+      },
+      {
+        "matchNumber": 7,
+        "shortfall": 4
+      },
+      {
+        "matchNumber": 8,
+        "shortfall": 4
+      },
+      {
+        "matchNumber": 9,
+        "shortfall": 4
+      },
+      {
+        "matchNumber": 10,
+        "shortfall": 4
+      },
+      {
+        "matchNumber": 11,
+        "shortfall": 4
+      }
+    ],
+    "note": "Raw displayed counts are preserved without adjustment. All 13 displayed percentage triples sum to 100.00%."
+  },
+  "interpretation": "Official direct-page raw snapshot. Page display 10:50 JST and retrieval 10:50:31 JST (31-second lag, within the stated five-minute refresh interval). Used only as the official market input for the append-only toto13 V2 revisions below. No secondary source mixed."
+}

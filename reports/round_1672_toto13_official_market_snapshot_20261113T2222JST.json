@@ -1,0 +1,382 @@
+{
+  "round": 1672,
+  "product": "toto13",
+  "source": "スポーツくじ公式投票状況",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1672",
+  "officialDisplayAt": "2026-11-13T22:22:00+09:00",
+  "retrievedAt": "2026-11-13T22:23:22+09:00",
+  "displayLagSeconds": 82,
+  "overallVotesPerMatch": [
+    712700,
+    712700,
+    712700,
+    712700,
+    712700,
+    712700,
+    712700,
+    712700,
+    712700,
+    712700,
+    712700,
+    712700,
+    712700
+  ],
+  "voteTotalsRange": {
+    "min": 712700,
+    "max": 712700,
+    "spread": 0
+  },
+  "rows": [
+    {
+      "matchNumber": 1,
+      "date": "2026-11-15",
+      "kickoff": "14:00",
+      "homeTeam": "ＦＣ町田ゼルビア",
+      "awayTeam": "ヴィッセル神戸",
+      "canonicalHomeTeam": "ＦＣ町田ゼルビア",
+      "canonicalAwayTeam": "ヴィッセル神戸",
+      "displayedHomeName": "町田",
+      "displayedAwayName": "神戸",
+      "voteCounts": {
+        "home": 291912,
+        "draw": 223588,
+        "away": 197200
+      },
+      "totalVotes": 712700,
+      "displayedVoteSharePercent": {
+        "home": 40.96,
+        "draw": 31.37,
+        "away": 27.67
+      },
+      "marketVoteShare": {
+        "0": 0.3137,
+        "1": 0.4096,
+        "2": 0.2767
+      }
+    },
+    {
+      "matchNumber": 2,
+      "date": "2026-11-15",
+      "kickoff": "15:00",
+      "homeTeam": "セレッソ大阪",
+      "awayTeam": "浦和レッズ",
+      "canonicalHomeTeam": "セレッソ大阪",
+      "canonicalAwayTeam": "浦和レッズ",
+      "displayedHomeName": "Ｃ大阪",
+      "displayedAwayName": "浦和",
+      "voteCounts": {
+        "home": 231205,
+        "draw": 191979,
+        "away": 289516
+      },
+      "totalVotes": 712700,
+      "displayedVoteSharePercent": {
+        "home": 32.44,
+        "draw": 26.94,
+        "away": 40.62
+      },
+      "marketVoteShare": {
+        "0": 0.2694,
+        "1": 0.3244,
+        "2": 0.4062
+      }
+    },
+    {
+      "matchNumber": 3,
+      "date": "2026-11-15",
+      "kickoff": "15:00",
+      "homeTeam": "鹿島アントラーズ",
+      "awayTeam": "横浜Ｆ・マリノス",
+      "canonicalHomeTeam": "鹿島アントラーズ",
+      "canonicalAwayTeam": "横浜Ｆ・マリノス",
+      "displayedHomeName": "鹿島",
+      "displayedAwayName": "横浜FM",
+      "voteCounts": {
+        "home": 401773,
+        "draw": 163920,
+        "away": 147007
+      },
+      "totalVotes": 712700,
+      "displayedVoteSharePercent": {
+        "home": 56.37,
+        "draw": 23,
+        "away": 20.63
+      },
+      "marketVoteShare": {
+        "0": 0.23,
+        "1": 0.5637,
+        "2": 0.2063
+      }
+    },
+    {
+      "matchNumber": 4,
+      "date": "2026-11-15",
+      "kickoff": "17:00",
+      "homeTeam": "柏レイソル",
+      "awayTeam": "川崎フロンターレ",
+      "canonicalHomeTeam": "柏レイソル",
+      "canonicalAwayTeam": "川崎フロンターレ",
+      "displayedHomeName": "柏",
+      "displayedAwayName": "川崎Ｆ",
+      "voteCounts": {
+        "home": 459734,
+        "draw": 132855,
+        "away": 120111
+      },
+      "totalVotes": 712700,
+      "displayedVoteSharePercent": {
+        "home": 64.51,
+        "draw": 18.64,
+        "away": 16.85
+      },
+      "marketVoteShare": {
+        "0": 0.1864,
+        "1": 0.6451,
+        "2": 0.1685
+      }
+    },
+    {
+      "matchNumber": 5,
+      "date": "2026-11-14",
+      "kickoff": "14:00",
+      "homeTeam": "アルビレックス新潟",
+      "awayTeam": "テゲバジャーロ宮崎",
+      "canonicalHomeTeam": "アルビレックス新潟",
+      "canonicalAwayTeam": "テゲバジャーロ宮崎",
+      "displayedHomeName": "新潟",
+      "displayedAwayName": "宮崎",
+      "voteCounts": {
+        "home": 338226,
+        "draw": 165345,
+        "away": 209129
+      },
+      "totalVotes": 712700,
+      "displayedVoteSharePercent": {
+        "home": 47.46,
+        "draw": 23.2,
+        "away": 29.34
+      },
+      "marketVoteShare": {
+        "0": 0.232,
+        "1": 0.4746,
+        "2": 0.2934
+      }
+    },
+    {
+      "matchNumber": 6,
+      "date": "2026-11-14",
+      "kickoff": "14:00",
+      "homeTeam": "大分トリニータ",
+      "awayTeam": "栃木シティ",
+      "canonicalHomeTeam": "大分トリニータ",
+      "canonicalAwayTeam": "栃木シティ",
+      "displayedHomeName": "大分",
+      "displayedAwayName": "栃木Ｃ",
+      "voteCounts": {
+        "home": 513516,
+        "draw": 123913,
+        "away": 75271
+      },
+      "totalVotes": 712700,
+      "displayedVoteSharePercent": {
+        "home": 72.05,
+        "draw": 17.39,
+        "away": 10.56
+      },
+      "marketVoteShare": {
+        "0": 0.1739,
+        "1": 0.7205,
+        "2": 0.1056
+      }
+    },
+    {
+      "matchNumber": 7,
+      "date": "2026-11-15",
+      "kickoff": "13:00",
+      "homeTeam": "北海道コンサドーレ札幌",
+      "awayTeam": "サガン鳥栖",
+      "canonicalHomeTeam": "北海道コンサドーレ札幌",
+      "canonicalAwayTeam": "サガン鳥栖",
+      "displayedHomeName": "札幌",
+      "displayedAwayName": "鳥栖",
+      "voteCounts": {
+        "home": 448210,
+        "draw": 140183,
+        "away": 124307
+      },
+      "totalVotes": 712700,
+      "displayedVoteSharePercent": {
+        "home": 62.89,
+        "draw": 19.67,
+        "away": 17.44
+      },
+      "marketVoteShare": {
+        "0": 0.1967,
+        "1": 0.6289,
+        "2": 0.1744
+      }
+    },
+    {
+      "matchNumber": 8,
+      "date": "2026-11-15",
+      "kickoff": "13:05",
+      "homeTeam": "ベガルタ仙台",
+      "awayTeam": "ブラウブリッツ秋田",
+      "canonicalHomeTeam": "ベガルタ仙台",
+      "canonicalAwayTeam": "ブラウブリッツ秋田",
+      "displayedHomeName": "仙台",
+      "displayedAwayName": "秋田",
+      "voteCounts": {
+        "home": 496007,
+        "draw": 128081,
+        "away": 88612
+      },
+      "totalVotes": 712700,
+      "displayedVoteSharePercent": {
+        "home": 69.6,
+        "draw": 17.97,
+        "away": 12.43
+      },
+      "marketVoteShare": {
+        "0": 0.1797,
+        "1": 0.696,
+        "2": 0.1243
+      }
+    },
+    {
+      "matchNumber": 9,
+      "date": "2026-11-15",
+      "kickoff": "14:00",
+      "homeTeam": "ＦＣ今治",
+      "awayTeam": "ジュビロ磐田",
+      "canonicalHomeTeam": "ＦＣ今治",
+      "canonicalAwayTeam": "ジュビロ磐田",
+      "displayedHomeName": "今治",
+      "displayedAwayName": "磐田",
+      "voteCounts": {
+        "home": 72829,
+        "draw": 110274,
+        "away": 529597
+      },
+      "totalVotes": 712700,
+      "displayedVoteSharePercent": {
+        "home": 10.22,
+        "draw": 15.47,
+        "away": 74.31
+      },
+      "marketVoteShare": {
+        "0": 0.1547,
+        "1": 0.1022,
+        "2": 0.7431
+      }
+    },
+    {
+      "matchNumber": 10,
+      "date": "2026-11-15",
+      "kickoff": "14:00",
+      "homeTeam": "カターレ富山",
+      "awayTeam": "徳島ヴォルティス",
+      "canonicalHomeTeam": "カターレ富山",
+      "canonicalAwayTeam": "徳島ヴォルティス",
+      "displayedHomeName": "富山",
+      "displayedAwayName": "徳島",
+      "voteCounts": {
+        "home": 515078,
+        "draw": 104775,
+        "away": 92847
+      },
+      "totalVotes": 712700,
+      "displayedVoteSharePercent": {
+        "home": 72.27,
+        "draw": 14.7,
+        "away": 13.03
+      },
+      "marketVoteShare": {
+        "0": 0.147,
+        "1": 0.7227,
+        "2": 0.1303
+      }
+    },
+    {
+      "matchNumber": 11,
+      "date": "2026-11-15",
+      "kickoff": "13:00",
+      "homeTeam": "ヴァンラーレ八戸",
+      "awayTeam": "いわきＦＣ",
+      "canonicalHomeTeam": "ヴァンラーレ八戸",
+      "canonicalAwayTeam": "いわきＦＣ",
+      "displayedHomeName": "八戸",
+      "displayedAwayName": "いわき",
+      "voteCounts": {
+        "home": 87349,
+        "draw": 113879,
+        "away": 511472
+      },
+      "totalVotes": 712700,
+      "displayedVoteSharePercent": {
+        "home": 12.26,
+        "draw": 15.98,
+        "away": 71.76
+      },
+      "marketVoteShare": {
+        "0": 0.1598,
+        "1": 0.1226,
+        "2": 0.7176
+      }
+    },
+    {
+      "matchNumber": 12,
+      "date": "2026-11-14",
+      "kickoff": "14:00",
+      "homeTeam": "藤枝ＭＹＦＣ",
+      "awayTeam": "ヴァンフォーレ甲府",
+      "canonicalHomeTeam": "藤枝ＭＹＦＣ",
+      "canonicalAwayTeam": "ヴァンフォーレ甲府",
+      "displayedHomeName": "藤枝",
+      "displayedAwayName": "甲府",
+      "voteCounts": {
+        "home": 317315,
+        "draw": 242828,
+        "away": 152557
+      },
+      "totalVotes": 712700,
+      "displayedVoteSharePercent": {
+        "home": 44.52,
+        "draw": 34.07,
+        "away": 21.41
+      },
+      "marketVoteShare": {
+        "0": 0.3407,
+        "1": 0.4452,
+        "2": 0.2141
+      }
+    },
+    {
+      "matchNumber": 13,
+      "date": "2026-11-14",
+      "kickoff": "14:00",
+      "homeTeam": "ＲＢ大宮アルディージャ",
+      "awayTeam": "モンテディオ山形",
+      "canonicalHomeTeam": "ＲＢ大宮アルディージャ",
+      "canonicalAwayTeam": "モンテディオ山形",
+      "displayedHomeName": "大宮",
+      "displayedAwayName": "山形",
+      "voteCounts": {
+        "home": 556817,
+        "draw": 89051,
+        "away": 66832
+      },
+      "totalVotes": 712700,
+      "displayedVoteSharePercent": {
+        "home": 78.13,
+        "draw": 12.49,
+        "away": 9.38
+      },
+      "marketVoteShare": {
+        "0": 0.1249,
+        "1": 0.7813,
+        "2": 0.0938
+      }
+    }
+  ]
+}

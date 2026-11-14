@@ -14,12 +14,13 @@ const marketRevision4=JSON.parse(fs.readFileSync(path.join(__dirname,'..','repor
 const marketRevision5=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1672_toto13_official_market_snapshot_20261113T1528JST.json'),'utf8'));
 const marketRevision6=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1672_toto13_official_market_snapshot_20261113T2222JST.json'),'utf8'));
 const marketRevision7=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1672_toto13_official_market_snapshot_20261114T1050JST.json'),'utf8'));
+const marketRevision8=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1672_toto13_market_transcription_20261114T1224JST.json'),'utf8'));
 const teams=JSON.parse(fs.readFileSync(path.join(__dirname,'..','data/teams.json'),'utf8')).clubs.map(x=>x.canonical);
 const initialV2=v2.filter(x=>x.revisionOf===null);
 const revisionsByMatch=Array.from({length:13},(_,i)=>v2.filter(x=>x.matchNumber===i+1&&x.revisionOf!==null).sort((a,b)=>Date.parse(a.predictionConfirmedAt)-Date.parse(b.predictionConfirmedAt)));
 const checkBlend=(row,base,market)=>{assert.deepEqual(row.baseModelOutcomeProbabilities,base.outcomeProbabilities);assert.deepEqual(row.marketVoteShare,market.marketVoteShare);assert.deepEqual(row.blendWeights,{poissonModel:0.3,totoVoteShare:0.7});for(const k of ['0','1','2'])assert.ok(Math.abs(row.outcomeProbabilities[k]-(0.3*base.outcomeProbabilities[k]+0.7*market.marketVoteShare[k]))<2e-8);};
 const checkMarketSnapshot=(market,display,retrieved,votes)=>{assert.equal(market.rows.length,13);assert.equal(market.officialDisplayAt,display);assert.equal(market.retrievedAt,retrieved);assert.equal(market.overallVotes,votes);for(let i=0;i<13;i++){const m=market.rows[i];assert.equal(m.matchNumber,i+1);assert.equal(m.totalVotes,votes);assert.equal(m.voteCounts.home+m.voteCounts.draw+m.voteCounts.away,votes);assert.ok(Math.abs(m.displayedVoteSharePercent.home+m.displayedVoteSharePercent.draw+m.displayedVoteSharePercent.away-100)<1e-8);}};
-test('round 1672 preserves V1 and initial V2 and appends seven complete 13-row V2 revisions',()=>{assert.equal(v1.length,13);assert.equal(initialV2.length,13);assert.equal(v2.length,104);assert.equal(new Set(v2.map(x=>x.predictionId)).size,104);for(let i=0;i<13;i++){const chain=v2.filter(x=>x.matchNumber===i+1).sort((a,b)=>Date.parse(a.predictionConfirmedAt)-Date.parse(b.predictionConfirmedAt));assert.equal(chain.length,8);assert.equal(chain[0].revisionOf,null);for(let j=1;j<8;j++)assert.equal(chain[j].revisionOf,chain[j-1].predictionId);}});
+test('round 1672 preserves V1 and initial V2 and appends seven complete 13-row V2 revisions',()=>{assert.equal(v1.length,13);assert.equal(initialV2.length,13);assert.equal(v2.length,117);assert.equal(new Set(v2.map(x=>x.predictionId)).size,117);for(let i=0;i<13;i++){const chain=v2.filter(x=>x.matchNumber===i+1).sort((a,b)=>Date.parse(a.predictionConfirmedAt)-Date.parse(b.predictionConfirmedAt));assert.equal(chain.length,9);assert.equal(chain[0].revisionOf,null);for(let j=1;j<9;j++)assert.equal(chain[j].revisionOf,chain[j-1].predictionId);}});
 test('all V1/V2 outcome and goal bucket distributions are normalized',()=>{for(const row of [...v1,...v2]){assert.ok(Math.abs(Object.values(row.outcomeProbabilities).reduce((a,b)=>a+b,0)-1)<2e-8);assert.ok(Math.abs(row.homeGoalProbabilities.reduce((a,b)=>a+b,0)-1)<2e-8);assert.ok(Math.abs(row.awayGoalProbabilities.reduce((a,b)=>a+b,0)-1)<2e-8);}});
 test('initial V2 remains the 02:15 JST official 30/70 snapshot',()=>{checkMarketSnapshot(marketInitial,'2026-11-12T02:15:00+09:00','2026-11-12T02:54:30+09:00',248284);for(let i=0;i<13;i++)checkBlend(initialV2[i],v1[i],marketInitial.rows[i]);});
 test('first revision remains the 03:13 JST official snapshot',()=>{checkMarketSnapshot(marketRevision1,'2026-11-12T03:13:00+09:00','2026-11-12T04:12:20+09:00',250174);for(let i=0;i<13;i++){const row=revisionsByMatch[i][0];assert.equal(row.marketOfficialDisplayAt,marketRevision1.officialDisplayAt);assert.equal(row.marketRetrievedAt,marketRevision1.retrievedAt);checkBlend(row,v1[i],marketRevision1.rows[i]);}});
@@ -74,7 +75,7 @@ test('seventh V2 revision uses the fresh 10:50 JST official toto13 snapshot and 
  }
 });
 
-test('all snapshots were generated before the published deadline',()=>{const times=[...new Set(v2.map(x=>x.predictionConfirmedAt))];assert.equal(times.length,8);for(const row of [...v1,...v2])assert.ok(Date.parse(row.predictionConfirmedAt)<Date.parse(row.deadlineAt));});
+test('all snapshots were generated before the published deadline',()=>{const times=[...new Set(v2.map(x=>x.predictionConfirmedAt))];assert.equal(times.length,9);for(const row of [...v1,...v2])assert.ok(Date.parse(row.predictionConfirmedAt)<Date.parse(row.deadlineAt));});
 test('canonical team labels and all revision links remain closed',()=>{const ids=new Set(v2.map(x=>x.predictionId));for(const row of [...v1,...v2]){assert.ok(teams.includes(row.homeTeam),row.homeTeam);assert.ok(teams.includes(row.awayTeam),row.awayTeam);}for(const row of v2.filter(x=>x.revisionOf!==null))assert.ok(ids.has(row.revisionOf),row.revisionOf);});
 
 test('fourth V2 revision uses the directly retrieved 15:04 JST official toto snapshot and preserves per-match vote totals',()=>{
@@ -127,7 +128,7 @@ test('round 1672 official toto13 06:16 stale market display is archived but excl
  assert.equal(staleMarket0616.round,1672);assert.equal(staleMarket0616.product,'toto13');assert.equal(staleMarket0616.officialDisplayAt,'2026-11-14T06:16:00+09:00');assert.equal(staleMarket0616.retrievedAt,'2026-11-14T06:40:38+09:00');assert.equal(staleMarket0616.displayLagSeconds,1478);assert.equal(staleMarket0616.status,'stale_display');assert.equal(staleMarket0616.usedForPrediction,false);
  assert.equal(staleMarket0616.rows.length,13);assert.deepEqual(staleMarket0616.rows.map(x=>x.matchNumber),Array.from({length:13},(_,i)=>i+1));
  for(const row of staleMarket0616.rows){assert.equal(row.totalVotes,876082);assert.equal(row.voteCounts.home+row.voteCounts.draw+row.voteCounts.away,876082);assert.ok(Math.abs(row.displayedVoteSharePercent.home+row.displayedVoteSharePercent.draw+row.displayedVoteSharePercent.away-100)<1e-8);}
- assert.equal(v2.length,104);assert.equal(v2[v2.length-1].marketOfficialDisplayAt,'2026-11-14T10:50:00+09:00');
+ assert.equal(v2.length,117);assert.equal(v2[v2.length-1].marketOfficialDisplayAt,'2026-11-14T12:24:00+09:00');
 });
 
 const staleMarket1157Path='reports/round_1672_toto13_official_market_snapshot_20261114T1157JST.json';
@@ -141,4 +142,23 @@ test('round 1672 toto13 11:57 official snapshot is archived as stale and exclude
  for(const row of staleMarket1157.matches){assert.equal(row.sumVotes,row.voteCounts.reduce((a,b)=>a+b,0));assert.ok(Math.abs(row.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);assert.equal(row.differenceFromSummaryVotes,row.sumVotes-1206686);}
  assert.deepEqual(staleMarket1157.matches.map(x=>x.differenceFromSummaryVotes),[-117,-117,-117,-117,-117,-117,-117,-117,-117,-110,-70,-39,0]);
  assert.equal(v2.length,104);assert.equal(v2[v2.length-1].marketOfficialDisplayAt,'2026-11-14T10:50:00+09:00');
+});
+
+test('eighth V2 revision uses the 12:24 Claude-transcribed market snapshot with explicit unverified provenance',()=>{
+ assert.equal(marketRevision8.round,1672);assert.equal(marketRevision8.product,'toto13');
+ assert.equal(marketRevision8.pageDisplayAt,'2026-11-14T12:24:00+09:00');
+ assert.equal(marketRevision8.retrievedAt,null);assert.equal(marketRevision8.displayAgeSeconds,null);
+ assert.equal(marketRevision8.stale,null);assert.equal(marketRevision8.usedForPrediction,true);
+ assert.match(marketRevision8.provenance,/did not independently retrieve/i);
+ assert.equal(marketRevision8.rows.length,13);
+ for(let i=0;i<13;i++){
+  const m=marketRevision8.rows[i],row=revisionsByMatch[i][7];
+  assert.equal(m.matchNumber,i+1);
+  assert.equal(row.revisionOf,revisionsByMatch[i][6].predictionId);
+  assert.equal(row.predictionConfirmedAt,'2026-11-14T12:26:00+09:00');
+  assert.equal(row.marketOfficialDisplayAt,marketRevision8.pageDisplayAt);
+  assert.equal(row.marketRetrievedAt,null);
+  assert.deepEqual(row.marketVoteShare,m.marketVoteShare);
+  checkBlend(row,v1[i],m);
+ }
 });

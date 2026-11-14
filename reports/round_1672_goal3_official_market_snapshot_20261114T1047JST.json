@@ -1,0 +1,164 @@
+{
+  "round": 1672,
+  "marketType": "totoGOAL3",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=02&holdCntId=1672",
+  "pageDisplayAt": "2026-11-14T10:47:00+09:00",
+  "retrievedAt": "2026-11-14T10:50:31+09:00",
+  "refreshNotice": "5分毎",
+  "displayAgeSeconds": 211,
+  "stale": false,
+  "totalVotesPageSummary": 133365,
+  "categoryOrder": [
+    "0",
+    "1",
+    "2",
+    "3+"
+  ],
+  "categories": [
+    "0点",
+    "1点",
+    "2点",
+    "3点以上"
+  ],
+  "matches": [
+    {
+      "matchNumber": 1,
+      "home": "Ｃ大阪",
+      "away": "浦和",
+      "team": "Ｃ大阪",
+      "isHome": true,
+      "toto13MatchNumber": 2,
+      "voteCounts": [
+        27202,
+        48445,
+        38603,
+        19115
+      ],
+      "percentages": [
+        20.4,
+        36.32,
+        28.95,
+        14.33
+      ],
+      "sumVotes": 133365,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 1,
+      "home": "Ｃ大阪",
+      "away": "浦和",
+      "team": "浦和",
+      "isHome": false,
+      "toto13MatchNumber": 2,
+      "voteCounts": [
+        27092,
+        49488,
+        38225,
+        18560
+      ],
+      "percentages": [
+        20.31,
+        37.11,
+        28.66,
+        13.92
+      ],
+      "sumVotes": 133365,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 2,
+      "home": "柏",
+      "away": "川崎Ｆ",
+      "team": "柏",
+      "isHome": true,
+      "toto13MatchNumber": 4,
+      "voteCounts": [
+        15165,
+        32164,
+        47799,
+        38237
+      ],
+      "percentages": [
+        11.37,
+        24.12,
+        35.84,
+        28.67
+      ],
+      "sumVotes": 133365,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 2,
+      "home": "柏",
+      "away": "川崎Ｆ",
+      "team": "川崎Ｆ",
+      "isHome": false,
+      "toto13MatchNumber": 4,
+      "voteCounts": [
+        28940,
+        53665,
+        34658,
+        16102
+      ],
+      "percentages": [
+        21.7,
+        40.24,
+        25.99,
+        12.07
+      ],
+      "sumVotes": 133365,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 3,
+      "home": "新潟",
+      "away": "宮崎",
+      "team": "新潟",
+      "isHome": true,
+      "toto13MatchNumber": 5,
+      "voteCounts": [
+        25160,
+        49881,
+        41537,
+        16787
+      ],
+      "percentages": [
+        18.87,
+        37.4,
+        31.14,
+        12.59
+      ],
+      "sumVotes": 133365,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 3,
+      "home": "新潟",
+      "away": "宮崎",
+      "team": "宮崎",
+      "isHome": false,
+      "toto13MatchNumber": 5,
+      "voteCounts": [
+        34242,
+        46801,
+        34920,
+        17402
+      ],
+      "percentages": [
+        25.68,
+        35.09,
+        26.18,
+        13.05
+      ],
+      "sumVotes": 133365,
+      "sumPercent": 100
+    }
+  ],
+  "countConsistency": {
+    "allSixTeamSideTotalsMatchPageSummary": true,
+    "allSixPercentageVectorsSumTo100": true,
+    "note": "Raw official counts and percentages preserved without adjustment."
+  },
+  "mappingNote": "GOAL3 product match 1/2/3 map to toto13 match 2/4/5 respectively. Six team-side records are not toto13 1X2 outcomes.",
+  "interpretation": "Official direct-page raw snapshot only. Display 10:47 JST and retrieval 10:50:31 JST (211-second lag, within the stated five-minute refresh interval). No GOAL3 prediction revision was generated because GPT already has a round-1672 GOAL3 prediction snapshot saved; this file records market evidence only."
+}

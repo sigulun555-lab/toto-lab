@@ -132,3 +132,23 @@ test('round 1672 GOAL3 12:26 stale capture attempt is appended exactly once and 
  assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/14 12:26 JST');assert.equal(found[0].retrievedAt,'2026-11-14T12:54:30+09:00');
  assert.match(found[0].voteShareStatus,/stale/);
 });
+
+const snapshot1345Path='reports/round_1672_goal3_official_market_snapshot_20261114T1345JST.json';
+const snapshot1345=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot1345Path),'utf8'));
+test('round 1672 official GOAL3 13:45 snapshot preserves six team-side vectors as post-deadline stale data',()=>{
+ assert.equal(snapshot1345.round,1672);assert.equal(snapshot1345.marketType,'totoGOAL3');
+ assert.equal(snapshot1345.pageDisplayAt,'2026-11-14T13:45:00+09:00');assert.equal(snapshot1345.retrievedAt,'2026-11-14T13:52:04+09:00');
+ assert.equal(snapshot1345.displayAgeSeconds,424);assert.equal(snapshot1345.stale,true);assert.equal(snapshot1345.totalVotesPageSummary,173108);
+ assert.equal(snapshot1345.matches.length,6);assert.equal(new Set(snapshot1345.matches.map(x=>x.matchNumber+':'+x.team)).size,6);
+ assert.deepEqual(snapshot1345.matches.map(x=>x.toto13MatchNumber),[2,2,4,4,5,5]);
+ assert.deepEqual(snapshot1345.matches.map(x=>x.differenceFromSummaryVotes),[-4,-4,-4,-4,-4,-2]);
+ assert.equal(snapshot1345.countConsistency.allSixTeamSideTotalsMatchPageSummary,false);
+ assert.equal(snapshot1345.countConsistency.allSixPercentageVectorsSumTo100,true);
+ for(const row of snapshot1345.matches){assert.equal(row.sumVotes,row.voteCounts.reduce((a,b)=>a+b,0));assert.ok(Math.abs(row.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);}
+ assert.match(snapshot1345.interpretation,/after the 13:50 JST sales deadline/);
+});
+test('round 1672 GOAL3 13:45 stale post-deadline capture attempt is appended exactly once',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot1345Path);assert.equal(found.length,1);
+ assert.equal(found[0].captureStatus,'captured');assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/14 13:45 JST');
+ assert.equal(found[0].retrievedAt,'2026-11-14T13:52:04+09:00');assert.match(found[0].voteShareStatus,/stale/);
+});

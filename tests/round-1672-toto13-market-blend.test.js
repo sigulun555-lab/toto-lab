@@ -176,3 +176,17 @@ test('round 1672 official toto13 12:27 market display is preserved as stale and 
  for(const row of staleMarket1227.matches)assert.ok(Math.abs(row.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);
  assert.match(staleMarket1227.interpretation,/stale/);assert.match(staleMarket1227.interpretation,/not be treated as live market data/);
 });
+
+const staleMarket1328=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1672_toto13_official_market_snapshot_20261114T1328JST.json'),'utf8'));
+test('round 1672 official toto13 13:28 market display is preserved as stale and excluded from V2 after deadline',()=>{
+ assert.equal(staleMarket1328.round,1672);assert.equal(staleMarket1328.marketType,'toto13');
+ assert.equal(staleMarket1328.pageDisplayAt,'2026-11-14T13:28:00+09:00');assert.equal(staleMarket1328.retrievedAt,'2026-11-14T13:50:46+09:00');
+ assert.equal(staleMarket1328.displayAgeSeconds,1366);assert.equal(staleMarket1328.stale,true);
+ assert.equal(staleMarket1328.totalVotesPageSummary,1406491);assert.equal(staleMarket1328.matches.length,13);
+ assert.deepEqual(staleMarket1328.matches.map(x=>x.matchNumber),Array.from({length:13},(_,i)=>i+1));
+ assert.deepEqual(staleMarket1328.matches.map(x=>x.differenceFromSummaryVotes),[-122,-84,-41,-33,-33,-33,-33,-33,-33,-33,-33,-33,-33]);
+ assert.equal(staleMarket1328.countConsistency.allThirteenDisplayedPercentageVectorsSumTo100,true);
+ assert.equal(staleMarket1328.countConsistency.allMatchVoteTotalsEqualPageSummary,false);
+ for(const row of staleMarket1328.matches){assert.equal(row.sumVotes,row.voteCounts.reduce((a,b)=>a+b,0));assert.ok(Math.abs(row.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);}
+ assert.match(staleMarket1328.interpretation,/stale/);assert.match(staleMarket1328.interpretation,/after the 13:50 JST sales deadline/);
+});

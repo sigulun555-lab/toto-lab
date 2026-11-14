@@ -63,7 +63,7 @@ test('seventh V2 revision uses the fresh 10:50 JST official toto13 snapshot and 
   assert.equal(m.matchNumber,i+1);
   assert.equal(m.sumVotes,m.voteCounts.reduce((a,b)=>a+b,0));
   assert.equal(m.sumPercent,100);
-  const expected={'0':Number((m.percentages[1]/100).toFixed(4)),'1':Number((m.percentages[0]/100).toFixed(4)),'2':Number((m.percentages[2]/100).toFixed(4))};
+  const expected={'0':m.percentages[1]/100,'1':m.percentages[0]/100,'2':m.percentages[2]/100};
   const row=revisionsByMatch[i][6];
   assert.equal(row.revisionOf,revisionsByMatch[i][5].predictionId);
   assert.equal(row.predictionConfirmedAt,'2026-11-14T01:50:31.000Z');

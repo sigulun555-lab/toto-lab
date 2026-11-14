@@ -162,3 +162,33 @@ test('eighth V2 revision uses the 12:24 Claude-transcribed market snapshot with 
   checkBlend(row,v1[i],m);
  }
 });
+
+
+const round1673V1=readJsonl('predictions/round_1673_ChatGPT_shared_score_v1.jsonl');
+const round1673V2=readJsonl('predictions/round_1673_ChatGPT_shared_score_v2.jsonl');
+const round1673Market=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_toto13_official_market_snapshot_20261115T0709JST.json'),'utf8'));
+test('round 1673 toto13 V2 uses the fresh official 07:09 market snapshot and the documented 30/70 blend',()=>{
+ assert.equal(round1673V1.length,13);assert.equal(round1673V2.length,13);
+ assert.equal(new Set(round1673V2.map(x=>x.predictionId)).size,13);
+ assert.equal(round1673Market.round,1673);assert.equal(round1673Market.marketType,'toto13');
+ assert.equal(round1673Market.pageDisplayAt,'2026-11-15T07:09:00+09:00');
+ assert.equal(round1673Market.retrievedAt,'2026-11-15T07:11:41+09:00');
+ assert.equal(round1673Market.displayAgeSeconds,161);assert.equal(round1673Market.stale,false);
+ assert.equal(round1673Market.totalVotesPageSummary,27816);assert.equal(round1673Market.matches.length,13);
+ assert.equal(round1673Market.countConsistency.allThirteenDisplayedPercentageVectorsSumTo100,true);
+ assert.equal(round1673Market.countConsistency.allMatchVoteTotalsEqualPageSummary,true);
+ for(let i=0;i<13;i++){
+  const base=round1673V1[i],row=round1673V2[i],market=round1673Market.matches[i];
+  assert.equal(row.round,1673);assert.equal(row.matchNumber,i+1);
+  assert.equal(row.predictionId,'toto-1673-chatgpt-score-shared-'+String(i+1).padStart(2,'0')+'-v2');
+  assert.equal(row.revisionOf,null);assert.equal(row.predictionConfirmedAt,'2026-11-14T22:13:23.000Z');
+  assert.deepEqual(row.baseModelOutcomeProbabilities,base.outcomeProbabilities);
+  assert.deepEqual(row.marketVoteShare,market.marketVoteShare);
+  assert.deepEqual(row.blendWeights,{poissonModel:0.3,totoVoteShare:0.7});
+  for(const k of ['0','1','2'])assert.ok(Math.abs(row.outcomeProbabilities[k]-(0.3*base.outcomeProbabilities[k]+0.7*market.marketVoteShare[k]))<2e-8);
+  assert.ok(Math.abs(Object.values(row.outcomeProbabilities).reduce((a,b)=>a+b,0)-1)<2e-8);
+  assert.deepEqual(row.homeGoalProbabilities,base.homeGoalProbabilities);
+  assert.deepEqual(row.awayGoalProbabilities,base.awayGoalProbabilities);
+  assert.equal(market.sumVotes,27816);assert.equal(market.differenceFromSummaryVotes,0);
+ }
+});

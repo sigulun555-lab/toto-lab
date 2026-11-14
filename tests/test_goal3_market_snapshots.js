@@ -97,3 +97,21 @@ test('round 1672 official GOAL3 06:21 snapshot preserves stale display and six t
 test('round 1672 06:21 GOAL3 stale snapshot attempt is recorded exactly once',()=>{
  const found=attempts.filter(x=>x.snapshotPath===snapshot0621Path);assert.equal(found.length,1);assert.equal(found[0].captureStatus,'captured');assert.equal(found[0].retrievedAt,'2026-11-14T06:40:38+09:00');assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/14 06:21 JST');
 });
+
+const snapshot1150Path='reports/round_1672_goal3_official_market_snapshot_20261114T1150JST.json';
+const snapshot1150=JSON.parse(fs.readFileSync(path.join(__dirname,'..',snapshot1150Path),'utf8'));
+test('round 1672 official GOAL3 11:50 snapshot preserves stale six-team market vectors',()=>{
+ assert.equal(snapshot1150.round,1672);assert.equal(snapshot1150.marketType,'totoGOAL3');
+ assert.equal(snapshot1150.pageDisplayAt,'2026-11-14T11:50:00+09:00');assert.equal(snapshot1150.retrievedAt,'2026-11-14T12:08:43+09:00');
+ assert.equal(snapshot1150.displayAgeSeconds,1123);assert.equal(snapshot1150.stale,true);assert.equal(snapshot1150.totalVotesPageSummary,149413);
+ assert.equal(snapshot1150.matches.length,6);assert.equal(new Set(snapshot1150.matches.map(x=>x.matchNumber+':'+x.team)).size,6);
+ assert.deepEqual(snapshot1150.matches.map(x=>x.toto13MatchNumber),[2,2,4,4,5,5]);
+ for(const row of snapshot1150.matches){assert.equal(row.sumVotes,149413);assert.equal(row.voteCounts.reduce((a,b)=>a+b,0),149413);assert.ok(Math.abs(row.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);}
+});
+test('round 1672 GOAL3 11:50 stale capture attempt is appended once and not used as live prediction input',()=>{
+ const found=attempts.filter(x=>x.snapshotPath===snapshot1150Path);
+ assert.equal(found.length,1);assert.equal(found[0].captureStatus,'captured');
+ assert.equal(found[0].sourceDisplayedTimestamp,'2026/11/14 11:50 JST');
+ assert.equal(found[0].retrievedAt,'2026-11-14T12:08:43+09:00');
+ assert.match(found[0].voteShareStatus,/stale/);
+});

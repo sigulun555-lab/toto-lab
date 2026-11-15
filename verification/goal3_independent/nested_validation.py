@@ -96,6 +96,41 @@ def select_training(h2025, h2026, target_date, window):
         raise AssertionError("Temporal leakage in training selection")
     return prior
 
+OPTIMIZER_METHOD = "L-BFGS-B"
+OPTIMIZER_MAXITER = 300
+LOGIT_CLIP = 20.0
+
+
+def poisson_penalized_objective_and_gradient(x, homes, aways, hg, ag, n, lam_pen):
+    """Return the penalized Poisson NLL and its analytic gradient.
+
+    The strict clip mask is the derivative of clip(eta_raw, -20, 20):
+    it is zero at and beyond either boundary.
+    """
+    mu, home_adv = x[0], x[1]
+    attack = x[2:2+n]
+    defense = x[2+n:2+2*n]
+    eta_h_raw = mu + home_adv + attack[homes] - defense[aways]
+    eta_a_raw = mu + attack[aways] - defense[homes]
+    eta_h = np.clip(eta_h_raw, -LOGIT_CLIP, LOGIT_CLIP)
+    eta_a = np.clip(eta_a_raw, -LOGIT_CLIP, LOGIT_CLIP)
+    lh, la = np.exp(eta_h), np.exp(eta_a)
+    value = np.sum(lh - hg * eta_h) + np.sum(la - ag * eta_a)
+    value += lam_pen * (np.sum(attack**2) + np.sum(defense**2))
+    # Chain rule through clip: derivative is zero outside the open interval.
+    eh = (lh - hg) * ((eta_h_raw > -LOGIT_CLIP) & (eta_h_raw < LOGIT_CLIP))
+    ea = (la - ag) * ((eta_a_raw > -LOGIT_CLIP) & (eta_a_raw < LOGIT_CLIP))
+    da, dd = np.zeros(n), np.zeros(n)
+    np.add.at(da, homes, eh)
+    np.add.at(dd, aways, -eh)
+    np.add.at(da, aways, ea)
+    np.add.at(dd, homes, -ea)
+    da += 2 * lam_pen * attack
+    dd += 2 * lam_pen * defense
+    grad = np.concatenate(([eh.sum() + ea.sum(), eh.sum()], da, dd))
+    return float(value), grad
+
+
 def fit_shrinkage(prior, lam_pen):
     teams = sorted({m["home"] for m in prior} | {m["away"] for m in prior})
     if not teams:
@@ -110,32 +145,11 @@ def fit_shrinkage(prior, lam_pen):
     x0[0] = math.log(1.3)
 
     def objective(x):
-        mu, home_adv = x[0], x[1]
-        attack = x[2:2+n]
-        defense = x[2+n:2+2*n]
-        eta_h_raw = mu + home_adv + attack[homes] - defense[aways]
-        eta_a_raw = mu + attack[aways] - defense[homes]
-        eta_h = np.clip(eta_h_raw, -20, 20)
-        eta_a = np.clip(eta_a_raw, -20, 20)
-        lh, la = np.exp(eta_h), np.exp(eta_a)
-        value = np.sum(lh - hg * eta_h) + np.sum(la - ag * eta_a)
-        value += lam_pen * (np.sum(attack**2) + np.sum(defense**2))
-        # Match the reference implementation's gradient convention. The
-        # clip is a numerical guard; diagnostics record every optimizer fit.
-        # Chain rule through clip: clipped logits have zero derivative outside bounds.
-        eh = (lh - hg) * ((eta_h_raw > -20) & (eta_h_raw < 20))
-        ea = (la - ag) * ((eta_a_raw > -20) & (eta_a_raw < 20))
-        da, dd = np.zeros(n), np.zeros(n)
-        np.add.at(da, homes, eh)
-        np.add.at(dd, aways, -eh)
-        np.add.at(da, aways, ea)
-        np.add.at(dd, homes, -ea)
-        da += 2 * lam_pen * attack
-        dd += 2 * lam_pen * defense
-        grad = np.concatenate(([eh.sum() + ea.sum(), eh.sum()], da, dd))
-        return float(value), grad
+        return poisson_penalized_objective_and_gradient(
+            x, homes, aways, hg, ag, n, lam_pen
+        )
 
-    res = minimize(objective, x0, jac=True, method="L-BFGS-B", options={"maxiter": 300})
+    res = minimize(objective, x0, jac=True, method=OPTIMIZER_METHOD, options={"maxiter": OPTIMIZER_MAXITER})
     info = {"success": bool(res.success), "status": int(res.status),
             "nit": int(res.nit), "message": str(res.message)}
     if not res.success:

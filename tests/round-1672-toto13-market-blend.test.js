@@ -192,3 +192,39 @@ test('round 1673 toto13 V2 uses the fresh official 07:09 market snapshot and the
   assert.equal(market.sumVotes,27816);assert.equal(market.differenceFromSummaryVotes,0);
  }
 });
+
+
+const round1673Market0523=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_toto13_official_market_snapshot_20261116T0523JST.json'),'utf8'));
+const round1673V2With0523Revision=readJsonl('predictions/round_1673_ChatGPT_shared_score_v2.jsonl');
+test('round 1673 toto13 V2 appends a fresh official 05:23 market revision without overwriting prior rows',()=>{
+ assert.equal(round1673Market0523.round,1673);assert.equal(round1673Market0523.marketType,'toto13');
+ assert.equal(round1673Market0523.pageDisplayAt,'2026-11-16T05:23:00+09:00');
+ assert.equal(round1673Market0523.retrievedAt,'2026-11-16T05:25:42+09:00');
+ assert.equal(round1673Market0523.displayAgeSeconds,162);assert.equal(round1673Market0523.stale,false);
+ assert.equal(round1673Market0523.totalVotesPageSummary,70766);
+ assert.equal(round1673Market0523.matches.length,13);
+ assert.equal(round1673Market0523.countConsistency.allThirteenDisplayedPercentageVectorsSumTo100,true);
+ assert.equal(round1673Market0523.countConsistency.allMatchVoteTotalsEqualPageSummary,true);
+ assert.equal(round1673V2With0523Revision.length,26);
+ assert.equal(new Set(round1673V2With0523Revision.map(x=>x.predictionId)).size,26);
+ assert.deepEqual(round1673V2With0523Revision.slice(0,13),round1673V2);
+ for(let i=0;i<13;i++){
+  const base=round1673V1[i],old=round1673V2[i],row=round1673V2With0523Revision[i+13],market=round1673Market0523.matches[i];
+  assert.equal(market.matchNumber,i+1);
+  assert.equal(market.sumVotes,70766);assert.equal(market.differenceFromSummaryVotes,0);
+  assert.ok(Math.abs(market.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);
+  assert.equal(row.round,1673);assert.equal(row.matchNumber,i+1);
+  assert.equal(row.predictionId,'toto-1673-chatgpt-score-shared-'+String(i+1).padStart(2,'0')+'-v2-revision-20261116T052542JST');
+  assert.equal(row.revisionOf,old.predictionId);
+  assert.equal(row.predictionConfirmedAt,'2026-11-16T05:25:42+09:00');
+  assert.equal(row.marketOfficialDisplayAt,round1673Market0523.pageDisplayAt);
+  assert.equal(row.marketRetrievedAt,round1673Market0523.retrievedAt);
+  assert.deepEqual(row.baseModelOutcomeProbabilities,base.outcomeProbabilities);
+  assert.deepEqual(row.marketVoteShare,market.marketVoteShare);
+  assert.deepEqual(row.blendWeights,{poissonModel:0.3,totoVoteShare:0.7});
+  for(const k of ['0','1','2'])assert.ok(Math.abs(row.outcomeProbabilities[k]-(0.3*base.outcomeProbabilities[k]+0.7*market.marketVoteShare[k]))<2e-8);
+  assert.ok(Math.abs(Object.values(row.outcomeProbabilities).reduce((a,b)=>a+b,0)-1)<2e-8);
+  assert.deepEqual(row.homeGoalProbabilities,base.homeGoalProbabilities);
+  assert.deepEqual(row.awayGoalProbabilities,base.awayGoalProbabilities);
+ }
+});

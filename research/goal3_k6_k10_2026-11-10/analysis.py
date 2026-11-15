@@ -17,7 +17,7 @@ def sha256_file(path):
 
 def git_blob_sha(path):
     data = Path(path).read_bytes()
-    payload = b"blob " + str(len(data)).encode("ascii") + b"\\0" + data
+    payload = b"blob " + str(len(data)).encode("ascii") + b"\0" + data
     return hashlib.sha1(payload).hexdigest()
 
 for name, entry in manifest["files"].items():

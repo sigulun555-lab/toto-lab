@@ -327,3 +327,33 @@ assert.strictEqual(round1673Goal3Market0215.countConsistency.allSixTeamSideTotal
 assert.strictEqual(round1673Goal3Market0215.countConsistency.allSixPercentageVectorsSumTo100,true);
 console.log('OK - round 1673 stale official GOAL3 market snapshot (02:15 JST)');
 
+
+
+// Round 1673 official totoGOAL3 market snapshot at 05:23 JST (fresh at retrieval).
+const round1673Goal3Market0523=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T0523JST.json'),'utf8'));
+assert.strictEqual(round1673Goal3Market0523.round,1673);
+assert.strictEqual(round1673Goal3Market0523.marketType,'totoGOAL3');
+assert.strictEqual(round1673Goal3Market0523.pageDisplayAt,'2026-11-16T05:23:00+09:00');
+assert.strictEqual(round1673Goal3Market0523.retrievedAt,'2026-11-16T05:24:01+09:00');
+assert.strictEqual(round1673Goal3Market0523.displayAgeSeconds,61);
+assert.strictEqual(round1673Goal3Market0523.stale,false);
+assert.strictEqual(round1673Goal3Market0523.totalVotesPageSummary,14073);
+assert.deepStrictEqual(round1673Goal3Market0523.categoryOrder,['0','1','2','3+']);
+assert.strictEqual(round1673Goal3Market0523.matches.length,6);
+assert.deepStrictEqual(round1673Goal3Market0523.matches.map(x=>x.toto13MatchNumber),[1,1,2,2,5,5]);
+assert.deepStrictEqual(round1673Goal3Market0523.matches.map(x=>x.voteCounts),[
+ [1898,2808,4548,4819],
+ [5887,4558,2081,1547],
+ [2155,3345,4636,3937],
+ [3336,4598,3692,2447],
+ [2991,4766,3958,2358],
+ [3413,5085,3581,1994]
+]);
+for(const row of round1673Goal3Market0523.matches){
+ assert.strictEqual(row.sumVotes,row.voteCounts.reduce((a,b)=>a+b,0));
+ assert.strictEqual(row.sumVotes,14073);
+ assert.ok(Math.abs(row.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);
+}
+assert.strictEqual(round1673Goal3Market0523.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);
+assert.strictEqual(round1673Goal3Market0523.countConsistency.allSixPercentageVectorsSumTo100,true);
+console.log('OK - round 1673 fresh official GOAL3 market snapshot (05:23 JST)');

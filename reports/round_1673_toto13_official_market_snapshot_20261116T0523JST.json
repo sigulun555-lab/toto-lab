@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 1,
+  "round": 1673,
+  "marketType": "toto13",
+  "sourceUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=01&fromId=SSIN026&gameAssortment=1&holdCntId=1673",
+  "pageDisplayAt": "2026-11-16T05:23:00+09:00",
+  "retrievedAt": "2026-11-16T05:25:42+09:00",
+  "refreshNotice": "5分毎",
+  "displayAgeSeconds": 162,
+  "stale": false,
+  "totalVotesPageSummary": 70766,
+  "outcomeOrder": [
+    "1",
+    "0",
+    "2"
+  ],
+  "outcomes": [
+    "home90Win",
+    "drawOther",
+    "home90Loss"
+  ],
+  "matches": [
+    {
+      "matchNumber": 1,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "町田",
+      "away": "長崎",
+      "voteCounts": [
+        53947,
+        8721,
+        8098
+      ],
+      "percentages": [
+        76.23,
+        12.33,
+        11.44
+      ],
+      "marketVoteShare": {
+        "0": 0.1233,
+        "1": 0.7623,
+        "2": 0.1144
+      },
+      "sumVotes": 70766,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 2,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "広島",
+      "away": "横浜FM",
+      "voteCounts": [
+        41639,
+        13670,
+        15457
+      ],
+      "percentages": [
+        58.84,
+        19.32,
+        21.84
+      ],
+      "marketVoteShare": {
+        "0": 0.1932,
+        "1": 0.5884,
+        "2": 0.2184
+      },
+      "sumVotes": 70766,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 3,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "京都",
+      "away": "浦和",
+      "voteCounts": [
+        20487,
+        19722,
+        30557
+      ],
+      "percentages": [
+        28.95,
+        27.87,
+        43.18
+      ],
+      "marketVoteShare": {
+        "0": 0.2787,
+        "1": 0.2895,
+        "2": 0.4318
+      },
+      "sumVotes": 70766,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 4,
+      "date": "2026-11-21",
+      "kickoff": "15:00",
+      "home": "川崎Ｆ",
+      "away": "福岡",
+      "voteCounts": [
+        53508,
+        8948,
+        8310
+      ],
+      "percentages": [
+        75.61,
+        12.65,
+        11.74
+      ],
+      "marketVoteShare": {
+        "0": 0.1265,
+        "1": 0.7561,
+        "2": 0.1174
+      },
+      "sumVotes": 70766,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 5,
+      "date": "2026-11-21",
+      "kickoff": "16:00",
+      "home": "Ｇ大阪",
+      "away": "岡山",
+      "voteCounts": [
+        31005,
+        19199,
+        20562
+      ],
+      "percentages": [
+        43.81,
+        27.13,
+        29.06
+      ],
+      "marketVoteShare": {
+        "0": 0.2713,
+        "1": 0.4381,
+        "2": 0.2906
+      },
+      "sumVotes": 70766,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 6,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "東京Ｖ",
+      "away": "名古屋",
+      "voteCounts": [
+        27106,
+        19696,
+        23964
+      ],
+      "percentages": [
+        38.3,
+        27.83,
+        33.87
+      ],
+      "marketVoteShare": {
+        "0": 0.2783,
+        "1": 0.383,
+        "2": 0.3387
+      },
+      "sumVotes": 70766,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 7,
+      "date": "2026-11-21",
+      "kickoff": "15:00",
+      "home": "Ｃ大阪",
+      "away": "FC東京",
+      "voteCounts": [
+        10772,
+        11324,
+        48670
+      ],
+      "percentages": [
+        15.22,
+        16,
+        68.78
+      ],
+      "marketVoteShare": {
+        "0": 0.16,
+        "1": 0.1522,
+        "2": 0.6878
+      },
+      "sumVotes": 70766,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 8,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "秋田",
+      "away": "山形",
+      "voteCounts": [
+        31309,
+        18875,
+        20582
+      ],
+      "percentages": [
+        44.24,
+        26.67,
+        29.09
+      ],
+      "marketVoteShare": {
+        "0": 0.2667,
+        "1": 0.4424,
+        "2": 0.2909
+      },
+      "sumVotes": 70766,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 9,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "宮崎",
+      "away": "いわき",
+      "voteCounts": [
+        47486,
+        12170,
+        11110
+      ],
+      "percentages": [
+        67.1,
+        17.2,
+        15.7
+      ],
+      "marketVoteShare": {
+        "0": 0.172,
+        "1": 0.671,
+        "2": 0.157
+      },
+      "sumVotes": 70766,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 10,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "甲府",
+      "away": "八戸",
+      "voteCounts": [
+        27066,
+        22242,
+        21458
+      ],
+      "percentages": [
+        38.25,
+        31.43,
+        30.32
+      ],
+      "marketVoteShare": {
+        "0": 0.3143,
+        "1": 0.3825,
+        "2": 0.3032
+      },
+      "sumVotes": 70766,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 11,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "富山",
+      "away": "大分",
+      "voteCounts": [
+        47963,
+        12240,
+        10563
+      ],
+      "percentages": [
+        67.78,
+        17.29,
+        14.93
+      ],
+      "marketVoteShare": {
+        "0": 0.1729,
+        "1": 0.6778,
+        "2": 0.1493
+      },
+      "sumVotes": 70766,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 12,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "鳥栖",
+      "away": "仙台",
+      "voteCounts": [
+        15106,
+        12624,
+        43036
+      ],
+      "percentages": [
+        21.35,
+        17.84,
+        60.81
+      ],
+      "marketVoteShare": {
+        "0": 0.1784,
+        "1": 0.2135,
+        "2": 0.6081
+      },
+      "sumVotes": 70766,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 13,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "磐田",
+      "away": "大宮",
+      "voteCounts": [
+        17024,
+        16258,
+        37484
+      ],
+      "percentages": [
+        24.06,
+        22.97,
+        52.97
+      ],
+      "marketVoteShare": {
+        "0": 0.2297,
+        "1": 0.2406,
+        "2": 0.5297
+      },
+      "sumVotes": 70766,
+      "differenceFromSummaryVotes": 0
+    }
+  ],
+  "voteTotalsRange": {
+    "min": 70766,
+    "max": 70766
+  },
+  "countConsistency": {
+    "allThirteenDisplayedPercentageVectorsSumTo100": true,
+    "allMatchVoteTotalsEqualPageSummary": true,
+    "perMatchDifferencesFromSummary": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "note": "Official displayed vote counts and percentages are preserved verbatim; no correction or normalization of source counts."
+  },
+  "v2Blend": {
+    "generatedAt": "2026-11-16T05:25:42+09:00",
+    "weights": {
+      "poissonModel": 0.3,
+      "totoVoteShare": 0.7
+    },
+    "basePredictionPath": "predictions/round_1673_ChatGPT_shared_score_v1.jsonl",
+    "basePredictionBlobSha": "399834b7d836c4f58370ae0af3bb979d821de251",
+    "predictionPath": "predictions/round_1673_ChatGPT_shared_score_v2.jsonl",
+    "predictionRows": 26,
+    "uniquePredictionIds": 26,
+    "previousRowsPreserved": 13,
+    "revisionRowsAppended": 13,
+    "revisionOf": [
+      "toto-1673-chatgpt-score-shared-01-v2",
+      "toto-1673-chatgpt-score-shared-02-v2",
+      "toto-1673-chatgpt-score-shared-03-v2",
+      "toto-1673-chatgpt-score-shared-04-v2",
+      "toto-1673-chatgpt-score-shared-05-v2",
+      "toto-1673-chatgpt-score-shared-06-v2",
+      "toto-1673-chatgpt-score-shared-07-v2",
+      "toto-1673-chatgpt-score-shared-08-v2",
+      "toto-1673-chatgpt-score-shared-09-v2",
+      "toto-1673-chatgpt-score-shared-10-v2",
+      "toto-1673-chatgpt-score-shared-11-v2",
+      "toto-1673-chatgpt-score-shared-12-v2",
+      "toto-1673-chatgpt-score-shared-13-v2"
+    ],
+    "modelVersion": "GPT-shared-poisson-score-v2-market-blend-30-70-2026-11-16-0525"
+  },
+  "interpretation": "Official direct-page snapshot. Display 05:23 JST and retrieval 05:25:42 JST (162-second lag, within the stated five-minute refresh interval). All 13 displayed count vectors sum to the page summary of 70,766 and all percentage vectors sum to 100.00%. The appended V2 revision applies the existing 30/70 probability-level blend to the original round 1673 V1 probabilities. The 13 previous V2 rows are preserved and each new row has revisionOf pointing to its corresponding prior V2 row. No injury, suspension, availability, or lineup adjustment is applied."
+}

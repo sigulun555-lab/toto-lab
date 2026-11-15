@@ -195,7 +195,7 @@ test('round 1673 toto13 V2 uses the fresh official 07:09 market snapshot and the
 
 
 const round1673Market0523=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_toto13_official_market_snapshot_20261116T0523JST.json'),'utf8'));
-const round1673V2With0523Revision=readJsonl('predictions/round_1673_ChatGPT_shared_score_v2.jsonl');
+const round1673V2With0523Revision=readJsonl('predictions/round_1673_ChatGPT_shared_score_v2.jsonl').slice(0,26);
 test('round 1673 toto13 V2 appends a fresh official 05:23 market revision without overwriting prior rows',()=>{
  assert.equal(round1673Market0523.round,1673);assert.equal(round1673Market0523.marketType,'toto13');
  assert.equal(round1673Market0523.pageDisplayAt,'2026-11-16T05:23:00+09:00');

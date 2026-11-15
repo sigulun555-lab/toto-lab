@@ -1,0 +1,109 @@
+{
+  "manifestId": "goal3-k6-k10-retrospective-20261116-v1",
+  "createdAt": "2026-11-16T01:40:40+09:00",
+  "researchOnly": true,
+  "productionAdoption": false,
+  "source": {
+    "repo": "sigulun555-lab/gpt",
+    "ref": "research/goal3-k-penalty-sweep-20261104",
+    "commit": "2adf65a20247dd30c5b86ae95c22bd75980cda89",
+    "artifactRunId": 43527604151,
+    "artifactId": 14085113748,
+    "artifactName": "goal3-all-k-outer-reconstruction-43527604151",
+    "artifactZipSha256": "1793be8afbe023e43c9bb5997df7760bb212e23f76d127bb9b4c5650c5c7b512",
+    "allKJsonSha256": "ed2829dfd1cc767c2a51ec935db5174f329351c404be85bf8377f7b2dd5f1a8c"
+  },
+  "cohort": {
+    "historyRows": 429,
+    "historyDistinctDates": 37,
+    "historyFetchedAtUniqueCount": 1,
+    "historyFetchedAt": "2026-11-03T23:21:25.123Z",
+    "outerMatches": 236,
+    "teamSideTargets": 472,
+    "targetDates": 17,
+    "targetDateRange": [
+      "2026-09-19",
+      "2026-11-03"
+    ],
+    "folds": {
+      "1": 5,
+      "2": 6,
+      "3": 6
+    },
+    "leagueTargets": {
+      "J1": 120,
+      "J2": 178,
+      "J3": 174
+    }
+  },
+  "protocol": {
+    "trainingWindow": "2026_only",
+    "fixedCandidates": {
+      "baselineK": 10,
+      "candidateK": 6
+    },
+    "legacyBootstrap": {
+      "rng": "random.Random",
+      "seed": 1,
+      "replicates": 10000,
+      "clusterUnits": [
+        "date",
+        "match"
+      ],
+      "role": "retrospective sensitivity only"
+    },
+    "artifactBootstrap": {
+      "rng": "NumPy PCG64",
+      "seed": 20261104,
+      "replicates": 10000,
+      "blockLengthDates": 2,
+      "blockType": "circular moving date blocks",
+      "role": "retrospective sensitivity only"
+    },
+    "roundClusterPrimary": "not computed: source cohort has no official round IDs",
+    "prospectiveOutcomes": false,
+    "noProductionAdoption": true
+  },
+  "optimizer": {
+    "objective": "Poisson negative log-likelihood plus L2 penalty on attack and defense",
+    "method": "L-BFGS-B",
+    "maxiter": 300,
+    "initialMu": "log(1.3)",
+    "logitClip": [
+      -20,
+      20
+    ],
+    "clipDerivative": "strict open-interval mask; zero at and outside boundaries"
+  },
+  "files": {
+    "history": {
+      "path": "research/goal3_k6_k10_2026-11-10/inputs/history_2026.json",
+      "sha256": "efca00ea491fcfea6a1267af403cb5ba80ae540fca97a076def25815fc318201",
+      "gitBlobSha": "f5cc8c044758e45b1e679e4ce796e68b3f27a854",
+      "sourcePath": "data/history.json"
+    },
+    "aliases": {
+      "path": "research/goal3_k6_k10_2026-11-10/inputs/team_aliases.json",
+      "sha256": "92e6377068df8dd63935e0c003adfd7b355e7adac23f7aace4f947be4f5f027e",
+      "gitBlobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab",
+      "sourcePath": "data/team_aliases.json"
+    },
+    "csv2025": {
+      "path": "research/goal3_k6_k10_2026-11-10/inputs/2025.csv",
+      "sha256": "6175674bc28d4311b219eed5ea2aa5e478fe0f17b8e6b8653f37718057da4288",
+      "gitBlobSha": "847d324c5a6168d02efe328f8173418a951af720",
+      "sourcePath": "verification/goal3_independent/2025.csv"
+    },
+    "nestedValidation": {
+      "path": "verification/goal3_independent/nested_validation.py",
+      "sha256": "6fa1d02f3aadcee9e6cf2ce3ce23fa539c7f0260c47d982426774d57121a7d9a",
+      "gitBlobSha": "ad223acee6243fd4eddade20187b222d5eb9e8de",
+      "sourcePath": "verification/goal3_independent/nested_validation.py"
+    },
+    "analysis": {
+      "path": "research/goal3_k6_k10_2026-11-10/analysis.py",
+      "sha256": "9d531998b2510a8b9305773e036428fe6bf4ef82f43d58edc812a5a4fb4c68e0",
+      "gitBlobSha": "d8372b4e95cf231cdfcceeb5201af562afd26395"
+    }
+  }
+}

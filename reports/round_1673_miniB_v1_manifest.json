@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "product": "mini toto B",
+  "round": 1673,
+  "drawDate": "2026-11-21",
+  "productMatchNumbers": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "toto13MatchNumbers": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "matchNumberSpaceInPredictionRecords": "regular-toto13",
+  "predictionFile": "predictions/round_1673_ChatGPT_miniB.jsonl",
+  "generatedAt": "2026-11-15T22:05:36Z",
+  "sourceRetrievedAt": "2026-11-15T22:05:27Z",
+  "deadlineAt": "2026-11-21T04:50:00Z",
+  "model": {
+    "repository": "sigulun555-lab/gpt",
+    "commit": "562bcc37775f343605137a0d5471c1ca956bead5",
+    "modelPath": "model.js",
+    "modelBlobSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+    "function": "predict(history, fixture)",
+    "historyPath": "data/history.json",
+    "historyBlobSha": "479d024a8df8903ef210b33240a00d6a24852bcf",
+    "historyRows": 480,
+    "historyUpdatedAt": "2026-11-15T18:49:33.391Z",
+    "historyFetchedAtUniqueCount": 1,
+    "historyFetchedAt": "2026-11-15T18:49:33.391Z",
+    "aliasesPath": "data/team_aliases.json",
+    "aliasesBlobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab",
+    "sourceRun": 43748909203,
+    "sourceArtifact": 14175063917,
+    "historyChronological": true,
+    "uniqueHistoryMatchKeys": 480
+  },
+  "schedule": {
+    "repository": "sigulun555-lab/toto-lab",
+    "pr": 107,
+    "branch": "data/round-1673-schedule",
+    "headSha": "8c487dce1f6af9c25390055e91ad54f7adde8a29",
+    "path": "data/schedule/round_1673.json"
+  },
+  "diagnostics": [
+    {
+      "productMatchNumber": 1,
+      "toto13MatchNumber": 6,
+      "homeExpectedGoals": 1.1030307254617089,
+      "awayExpectedGoals": 1.1498638256007874,
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12,
+      "maxAbsDifferenceFromExistingToto13V1": 0.0009602663022038604
+    },
+    {
+      "productMatchNumber": 2,
+      "toto13MatchNumber": 7,
+      "homeExpectedGoals": 0.15,
+      "awayExpectedGoals": 2.874659564001968,
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12,
+      "maxAbsDifferenceFromExistingToto13V1": 0.00038740917625113003
+    },
+    {
+      "productMatchNumber": 3,
+      "toto13MatchNumber": 8,
+      "homeExpectedGoals": 1.158182261734794,
+      "awayExpectedGoals": 0.5110505891559055,
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12,
+      "maxAbsDifferenceFromExistingToto13V1": 0.04115660479677541
+    },
+    {
+      "productMatchNumber": 4,
+      "toto13MatchNumber": 9,
+      "homeExpectedGoals": 1.7207279317202655,
+      "awayExpectedGoals": 1.0038493715562429,
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12,
+      "maxAbsDifferenceFromExistingToto13V1": 0.014272985240281089
+    },
+    {
+      "productMatchNumber": 5,
+      "toto13MatchNumber": 10,
+      "homeExpectedGoals": 0.8107275832143559,
+      "awayExpectedGoals": 1.2319969560008437,
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12,
+      "maxAbsDifferenceFromExistingToto13V1": 0.058798197315417355
+    }
+  ],
+  "market": {
+    "v2Status": "held_stale_official_market",
+    "officialVotePage": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=07&fromId=SSIN026&holdCntId=1673",
+    "lastDisplayAt": "2026-11-15T09:51:00+09:00",
+    "retrievedAt": "2026-11-15T22:05:27Z",
+    "reason": "Display is more than 21 hours old at retrieval; no V2 market blend created."
+  },
+  "teamNews": {
+    "status": "not_verified",
+    "adjustmentsApplied": false
+  },
+  "notes": "The five mini B fixtures are product numbers 1-5 and correspond to regular toto13 match numbers 6-10. The exact shared 1X2 model function was rerun against the pinned 480-match history; outputs differ from the earlier toto13 V1 (468-match history), so these are not copied rows."
+}

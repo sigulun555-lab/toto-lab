@@ -38,3 +38,31 @@ test('GOAL3 V2 uses the existing normalized 30/70 blend and preserves four-categ
   assert.match(r.notes,/provisional/);
  }
 });
+
+
+const v2_0835=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0835JST.jsonl');
+const market_0835=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T0835JST.json'),'utf8'));
+test('official 08:35 GOAL3 snapshot has six reconciled team-side vectors and is fresh at retrieval',()=>{
+ assert.equal(market_0835.round,1673);assert.equal(market_0835.marketType,'totoGOAL3');
+ assert.equal(market_0835.pageDisplayAt,'2026-11-16T08:35:00+09:00');assert.equal(market_0835.retrievedAt,'2026-11-16T08:35:21+09:00');
+ assert.equal(market_0835.displayAgeSeconds,21);assert.equal(market_0835.stale,false);assert.equal(market_0835.totalVotesPageSummary,14730);
+ assert.deepEqual(market_0835.categoryOrder,['0','1','2','3+']);assert.equal(market_0835.matches.length,6);
+ assert.equal(market_0835.matches.every(m=>m.sumVotes===14730&&m.sumPercent===100),true);
+ assert.deepEqual(market_0835.matches.map(m=>m.toto13MatchNumber),[1,1,2,2,5,5]);
+ assert.equal(v2_0835.length,6);assert.equal(new Set(v2_0835.map(r=>r.predictionId)).size,6);
+});
+test('08:35 GOAL3 V2 revisions append to 06:46 V2, retain the same V1 base and frozen 30/70 method',()=>{
+ const latest=latestV1();const prior=new Map(v2.map(r=>[r.matchNumber+'|'+(r.isHome?'home':'away'),r]));
+ for(const r of v2_0835){
+  const k=r.matchNumber+'|'+(r.isHome?'home':'away');const base=latest.get(k);const previous=prior.get(k);
+  const marketRow=market_0835.matches.find(m=>m.matchNumber===r.matchNumber&&m.isHome===r.isHome);
+  assert.ok(base);assert.ok(previous);assert.ok(marketRow);
+  assert.equal(r.revisionOf,previous.predictionId);assert.deepEqual(r.baseModelProbabilities,base.probabilities);
+  assert.deepEqual(r.marketVoteShare,Object.fromEntries(['0','1','2','3'].map((key,i)=>[key,Number((marketRow.percentages[i]/100).toFixed(4))])));
+  assert.deepEqual(r.blendWeights,{poissonModel:0.3,officialTotoGoal3VoteShare:0.7});
+  for(const key of ['0','1','2','3'])assert.ok(Math.abs(r.probabilities[key]-(0.3*base.probabilities[key]+0.7*r.marketVoteShare[key]))<2e-8);
+  assert.ok(Math.abs(Object.values(r.probabilities).reduce((a,b)=>a+b,0)-1)<2e-8);
+  assert.equal(r.predictionConfirmedAt,'2026-11-16T08:35:21+09:00');
+  assert.equal(r.marketSnapshotPath,'reports/round_1673_goal3_official_market_snapshot_20261116T0835JST.json');
+ }
+});

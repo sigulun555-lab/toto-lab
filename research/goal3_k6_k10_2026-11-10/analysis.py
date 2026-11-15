@@ -1,12 +1,48 @@
-import sys, json, math, random, statistics, os
-MOD_DIR = "/home/claude/work/pr19/verification/goal3_independent"
+import argparse, hashlib, json, math, random, statistics, os, sys
+from pathlib import Path
+from datetime import datetime, timezone
+
+ROOT = Path(__file__).resolve().parents[2]
+RESEARCH_DIR = Path(__file__).resolve().parent
+parser = argparse.ArgumentParser(description="Reproduce the retrospective GOAL3 k=6/k=10 audit")
+parser.add_argument("--manifest", default=str(RESEARCH_DIR / "input_manifest.json"))
+parser.add_argument("--output-dir", default=str(RESEARCH_DIR / "outputs"))
+parser.add_argument("--verify-only", action="store_true")
+args = parser.parse_args()
+MANIFEST_PATH = Path(args.manifest).resolve()
+manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
+
+def sha256_file(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+def git_blob_sha(path):
+    data = Path(path).read_bytes()
+    payload = b"blob " + str(len(data)).encode("ascii") + b"\\0" + data
+    return hashlib.sha1(payload).hexdigest()
+
+for name, entry in manifest["files"].items():
+    path = ROOT / entry["path"]
+    if not path.is_file():
+        raise SystemExit(f"manifest input missing: {name} -> {path}")
+    if entry.get("sha256") and sha256_file(path) != entry["sha256"]:
+        raise SystemExit(f"SHA-256 mismatch: {name}")
+    if entry.get("gitBlobSha") and git_blob_sha(path) != entry["gitBlobSha"]:
+        raise SystemExit(f"Git blob SHA mismatch: {name}")
+
+print("manifest verified:", manifest["manifestId"])
+print("cohort:", manifest["cohort"])
+if args.verify_only:
+    raise SystemExit(0)
+
+MOD_DIR = str(ROOT / "verification" / "goal3_independent")
 sys.path.insert(0, MOD_DIR)
 import nested_validation as nv
 
-HIST = "/home/claude/work/history_pr19.json"
-ALIAS = "/home/claude/work/aliases_pr19.json"
-CSV = os.path.join(MOD_DIR, "2025.csv")
-OUT = "/home/claude/work/out"
+HIST = ROOT / manifest["files"]["history"]["path"]
+ALIAS = ROOT / manifest["files"]["aliases"]["path"]
+CSV = ROOT / manifest["files"]["csv2025"]["path"]
+OUT = str(Path(args.output_dir).resolve())
+os.makedirs(OUT, exist_ok=True)
 K_A, K_B = 6.0, 10.0
 
 h2025, h2026 = nv.load_data(HIST, ALIAS, CSV)
@@ -116,7 +152,17 @@ hits = {k: mean([1.0 if max(range(4), key=lambda j: r[k][j]) == r["actual"] else
 print("accuracy", hits)
 
 json.dump(rows, open(f"{OUT}/goal3_outer_matches.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-json.dump({"protocol": "17 outer dates (2026-only train, fixed k=6 vs k=10), D=score(k6)-score(k10), date-block bootstrap B=10000 seed=1 percentile 95%; match-cluster sensitivity",
+json.dump({"protocol": "17 outer dates (2026-only train, fixed k=6 vs k=10), D=score(k6)-score(k10), legacy date-cluster bootstrap B=10000 seed=1 percentile 95%; match-cluster sensitivity; retrospective only, not round-cluster primary",
            "team_side_targets": N, "matches": matches, "overall": {"D_brier": Db, "D_ll": Dl}, "bootstrap": res,
            "leagues": leagues, "calibration": calib, "accuracy": hits},
           open(f"{OUT}/goal3_summary.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+
+with open(os.path.join(OUT, "run_manifest.json"), "w", encoding="utf-8") as f:
+    json.dump({
+        "manifestId": manifest["manifestId"],
+        "generatedAt": datetime.now(timezone.utc).isoformat(),
+        "sourceCommit": manifest["source"]["commit"],
+        "sourceArtifactRunId": manifest["source"]["artifactRunId"],
+        "cohort": manifest["cohort"],
+        "interpretation": "retrospective sensitivity only; no prospective round-cluster primary and no production adoption"
+    }, f, ensure_ascii=False, indent=2)

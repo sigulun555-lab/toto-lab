@@ -129,7 +129,8 @@ def test_input_manifest_pins_source_artifact_and_local_gradient_code():
     assert manifest["manifestId"] == "goal3-k6-k10-retrospective-20261116-v1"
     assert manifest["source"]["repo"] == "sigulun555-lab/gpt"
     assert manifest["source"]["commit"] == "2adf65a20247dd30c5b86ae95c22bd75980cda89"
-    assert manifest["source"]["artifactRunId"] == 43527604151
+    assert manifest["artifact"]["runId"] == 43527604151
+    assert manifest["artifact"]["artifactId"] == 14085113748
     assert manifest["cohort"]["teamSideTargets"] == 472
     assert manifest["cohort"]["outerMatches"] == 236
     assert analysis.EXPECTED["history"] == manifest["files"]["history"]["sha256"]

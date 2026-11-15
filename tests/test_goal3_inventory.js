@@ -297,3 +297,33 @@ for(const row of round1673Goal3Market2352.matches){
 assert.strictEqual(round1673Goal3Market2352.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);
 assert.strictEqual(round1673Goal3Market2352.countConsistency.allSixPercentageVectorsSumTo100,true);
 console.log('OK - round 1673 stale official GOAL3 market snapshot (23:52 JST)');
+
+// Round 1673 official totoGOAL3 market snapshot at 02:15 JST (stale at retrieval).
+const round1673Goal3Market0215=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T0215JST.json'),'utf8'));
+assert.strictEqual(round1673Goal3Market0215.round,1673);
+assert.strictEqual(round1673Goal3Market0215.marketType,'totoGOAL3');
+assert.strictEqual(round1673Goal3Market0215.pageDisplayAt,'2026-11-16T02:15:00+09:00');
+assert.strictEqual(round1673Goal3Market0215.retrievedAt,'2026-11-16T02:50:55+09:00');
+assert.strictEqual(round1673Goal3Market0215.displayAgeSeconds,2155);
+assert.strictEqual(round1673Goal3Market0215.stale,true);
+assert.strictEqual(round1673Goal3Market0215.totalVotesPageSummary,13745);
+assert.deepStrictEqual(round1673Goal3Market0215.categoryOrder,['0','1','2','3+']);
+assert.strictEqual(round1673Goal3Market0215.matches.length,6);
+assert.deepStrictEqual(round1673Goal3Market0215.matches.map(x=>x.toto13MatchNumber),[1,1,2,2,5,5]);
+assert.deepStrictEqual(round1673Goal3Market0215.matches.map(x=>x.voteCounts),[
+ [1878,2758,4436,4673],
+ [5685,4458,2073,1529],
+ [2098,3309,4516,3822],
+ [3254,4508,3612,2371],
+ [2925,4618,3883,2319],
+ [3358,4951,3468,1968]
+]);
+for(const row of round1673Goal3Market0215.matches){
+ assert.strictEqual(row.sumVotes,row.voteCounts.reduce((a,b)=>a+b,0));
+ assert.strictEqual(row.sumVotes,13745);
+ assert.ok(Math.abs(row.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);
+}
+assert.strictEqual(round1673Goal3Market0215.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);
+assert.strictEqual(round1673Goal3Market0215.countConsistency.allSixPercentageVectorsSumTo100,true);
+console.log('OK - round 1673 stale official GOAL3 market snapshot (02:15 JST)');
+

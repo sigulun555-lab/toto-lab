@@ -337,9 +337,11 @@ function computeT2(history, options = {}) {
   ));
   const leagues = {};
   for (const league of ['J1', 'J2', 'J3']) {
+    const withLeague = withBoostRows.filter((row) => row.competition === league);
+    const withoutLeague = withoutBoostRows.filter((row) => row.competition === league);
     leagues[league] = {
-      withBoost: metrics(withBoostRows.filter((row) => row.competition === league)),
-      withoutBoost: metrics(withoutBoostRows.filter((row) => row.competition === league))
+      withBoost: withLeague.length ? metrics(withLeague) : null,
+      withoutBoost: withoutLeague.length ? metrics(withoutLeague) : null
     };
   }
   return {

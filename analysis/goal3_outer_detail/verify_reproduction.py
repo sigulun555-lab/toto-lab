@@ -12,9 +12,7 @@ import numpy as np
 
 
 def git_value(root: str, spec: str) -> str:
-    return subprocess.check_output(
-        ["git", "-C", root, "rev-parse", spec], text=True
-    ).strip()
+    return subprocess.check_output(["git", "-C", root, "rev-parse", spec], text=True).strip()
 
 
 def load_json(path: str):
@@ -41,40 +39,17 @@ def check_inputs(manifest, gpt_root: str, claude_root: str) -> None:
     print("Pinned commits and all six Git blob SHAs verified.")
 
 
-def bootstrap(rows, field: str):
-    groups = defaultdict(list)
-    for row in rows:
-        groups[row["date"]].append(row)
-    keys = sorted(groups)
-    assert len(keys) == 17, f"expected 17 date clusters, got {len(keys)}"
-
-    rng = random.Random(1)
-    samples = []
-    for _ in range(10000):
-        picked = rng.choices(keys, k=len(keys))
-        sample = [row for key in picked for row in groups[key]]
-        samples.append(float(np.mean([row[field] for row in sample])))
-    return np.percentile(np.asarray(samples), [2.5, 97.5]).tolist()
-
-
-def check_output(manifest, generated_path: str, claude_root: str, log_path: str) -> None:
-    expected = manifest["protocol"]["expected"]
-    reference_path = str(Path(claude_root) / manifest["claude"]["referencePath"])
-    generated = load_json(generated_path)
-    reference = load_json(reference_path)
-
-    assert generated == reference, "clean-checkout output differs from Claude's pinned 472-target JSON"
-    assert generated["window"] == "2026_only"
-    assert generated["k"] == [6, 10]
-
-    rows = generated["targets"]
-    assert len(rows) == manifest["protocol"]["targets"] == 472
+def validate_rows(obj, expected, label):
+    assert obj["window"] == "2026_only"
+    assert obj["k"] == [6, 10]
+    rows = obj["targets"]
     keys = {(r["date"], r["match"], r["side"]) for r in rows}
     matches = {r["match"] for r in rows}
     dates = {r["date"] for r in rows}
-    assert len(keys) == 472, "duplicate target keys"
-    assert len(matches) == 236
-    assert len(dates) == 17
+    assert len(rows) == expected["targets"], f"{label}: target count {len(rows)}"
+    assert len(keys) == expected["targets"], f"{label}: duplicate target key"
+    assert len(matches) == expected["matches"], f"{label}: match count {len(matches)}"
+    assert len(dates) == expected["dates"], f"{label}: date count {len(dates)}"
 
     per_match = defaultdict(set)
     for row in rows:
@@ -86,35 +61,93 @@ def check_output(manifest, generated_path: str, claude_root: str, log_path: str)
             assert len(p) == 4
             assert all(math.isfinite(x) and 0 <= x <= 1 for x in p)
             assert abs(sum(p) - 1.0) <= 1e-8
-    assert all(sides == {"home", "away"} for sides in per_match.values())
+    assert all(sides == {"home", "away"} for sides in per_match.values()), f"{label}: missing home/away pair"
+    return rows, keys
 
+
+def bootstrap(rows, field: str):
+    groups = defaultdict(list)
+    for row in rows:
+        groups[row["date"]].append(row)
+    keys = sorted(groups)
+    rng = random.Random(1)
+    samples = []
+    for _ in range(10000):
+        picked = rng.choices(keys, k=len(keys))
+        sample = [row for key in picked for row in groups[key]]
+        samples.append(float(np.mean([row[field] for row in sample])))
+    return np.percentile(np.asarray(samples), [2.5, 97.5], method="linear").tolist()
+
+
+def summarize(rows):
     mean_b = float(np.mean([r["dB"] for r in rows]))
     mean_l = float(np.mean([r["dL"] for r in rows]))
     ci_b = bootstrap(rows, "dB")
     ci_l = bootstrap(rows, "dL")
+    return mean_b, ci_b, mean_l, ci_l
 
+
+def check_expected(actual, expected, label):
     values = [
-        (mean_b, expected["meanDeltaBrier"], "mean ΔBrier"),
-        (mean_l, expected["meanDeltaLogLoss"], "mean ΔLogLoss"),
-        (ci_b[0], expected["deltaBrier95"][0], "Brier CI lower"),
-        (ci_b[1], expected["deltaBrier95"][1], "Brier CI upper"),
-        (ci_l[0], expected["deltaLogLoss95"][0], "LogLoss CI lower"),
-        (ci_l[1], expected["deltaLogLoss95"][1], "LogLoss CI upper"),
+        (actual[0], expected["meanDeltaBrier"], "mean ΔBrier"),
+        (actual[1][0], expected["deltaBrier95"][0], "Brier CI lower"),
+        (actual[1][1], expected["deltaBrier95"][1], "Brier CI upper"),
+        (actual[2], expected["meanDeltaLogLoss"], "mean ΔLogLoss"),
+        (actual[3][0], expected["deltaLogLoss95"][0], "LogLoss CI lower"),
+        (actual[3][1], expected["deltaLogLoss95"][1], "LogLoss CI upper"),
     ]
-    for actual, target, label in values:
-        assert abs(actual - target) <= 5e-10, f"{label} mismatch: {actual} != {target}"
+    for got, want, metric in values:
+        assert abs(got - want) <= 5e-10, f"{label} {metric} mismatch: {got} != {want}"
+
+
+def check_output(manifest, generated_path: str, claude_root: str, log_path: str) -> None:
+    reference_path = str(Path(claude_root) / manifest["claude"]["referencePath"])
+    historical = load_json(reference_path)
+    current = load_json(generated_path)
+
+    old_cfg = manifest["protocol"]["historicalReference"]
+    new_cfg = manifest["protocol"]["currentReproduction"]
+
+    old_rows, old_keys = validate_rows(historical, old_cfg, "historical Claude reference")
+    new_rows, new_keys = validate_rows(current, new_cfg, "current clean-checkout reproduction")
+
+    old_summary = summarize(old_rows)
+    new_summary = summarize(new_rows)
+    check_expected(old_summary, old_cfg["expected"], "historical Claude reference")
+    check_expected(new_summary, new_cfg["expected"], "current clean-checkout reproduction")
+
+    # Cohorts differ because the historical artifact predates the current pinned 480-row history.
+    # Report overlap and exact equality without asserting same-input parity.
+    old_by_key = {(r["date"], r["match"], r["side"]): r for r in old_rows}
+    new_by_key = {(r["date"], r["match"], r["side"]): r for r in new_rows}
+    common = old_keys & new_keys
+    exact_rows = 0
+    max_probability_delta = 0.0
+    for key in common:
+        a, b = old_by_key[key], new_by_key[key]
+        if a == b:
+            exact_rows += 1
+        for name in ("p_k6", "p_k10"):
+            max_probability_delta = max(
+                max_probability_delta,
+                max(abs(x-y) for x, y in zip(a[name], b[name]))
+            )
 
     log = Path(log_path).read_text(encoding="utf-8")
-    assert "targets 472 dates 17 matches 236" in log
+    assert "targets 480 dates 19 matches 240" in log
     assert "date-block 95% CI" in log
 
     digest = hashlib.sha256(Path(generated_path).read_bytes()).hexdigest()
-    print(f"Reference JSON exact structural parity: PASS")
-    print(f"Targets={len(rows)} matches={len(matches)} dates={len(dates)}")
-    print(f"mean ΔBrier={mean_b:.12f}; 95% CI={ci_b}")
-    print(f"mean ΔLogLoss={mean_l:.12f}; 95% CI={ci_l}")
+    print(f"Historical Claude reference: {len(old_rows)} targets / {len(old_keys)//2} matches / {len({r['date'] for r in old_rows})} dates")
+    print(f"  ΔBrier={old_summary[0]:.14f}; 95% CI={old_summary[1]}")
+    print(f"  ΔLogLoss={old_summary[2]:.14f}; 95% CI={old_summary[3]}")
+    print(f"Current clean checkout: {len(new_rows)} targets / {len(new_keys)//2} matches / {len({r['date'] for r in new_rows})} dates")
+    print(f"  ΔBrier={new_summary[0]:.14f}; 95% CI={new_summary[1]}")
+    print(f"  ΔLogLoss={new_summary[2]:.14f}; 95% CI={new_summary[3]}")
+    print(f"Historical/current common target keys={len(common)}/{len(old_keys)}; exactly equal rows={exact_rows}; max common-row probability delta={max_probability_delta:.12g}")
     print(f"Generated JSON SHA-256={digest}")
-    print("Probability simplex, paired home/away coverage, and date cutoffs: PASS")
+    print("Probability simplex, home/away pairing, unique keys, and date cutoffs: PASS")
+    print("Historical and current cohorts were verified separately; no same-input equivalence is claimed.")
 
 
 def main():

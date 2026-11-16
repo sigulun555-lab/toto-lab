@@ -93,3 +93,43 @@ test('09:38 GOAL3 V2 revisions append to 08:35 V2 and retain the same V1 base an
   assert.equal(r.marketSnapshotPath,'reports/round_1673_goal3_official_market_snapshot_20261116T0938JST.json');
  }
 });
+
+
+const v2_1151=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl');
+const market_1151=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T1151JST.json'),'utf8'));
+const attemptLog1151=readJsonl('data/goal3_market_snapshot_attempts.jsonl');
+test('official 11:51 GOAL3 snapshot has six reconciled team-side vectors and is fresh at retrieval',()=>{
+ assert.equal(market_1151.round,1673);assert.equal(market_1151.marketType,'totoGOAL3');
+ assert.equal(market_1151.pageDisplayAt,'2026-11-16T11:51:00+09:00');assert.equal(market_1151.retrievedAt,'2026-11-16T11:55:17+09:00');
+ assert.equal(market_1151.displayAgeSeconds,257);assert.equal(market_1151.stale,false);assert.equal(market_1151.totalVotesPageSummary,17340);
+ assert.deepEqual(market_1151.categoryOrder,['0','1','2','3+']);assert.equal(market_1151.matches.length,6);
+ assert.equal(market_1151.matches.every(m=>m.sumVotes===17340&&m.sumPercent===100),true);
+ assert.deepEqual(market_1151.matches.map(m=>m.toto13MatchNumber),[1,1,2,2,5,5]);
+ assert.deepEqual(market_1151.matches.map(m=>m.voteCounts),[
+  [2350,3498,5560,5932],[7228,5717,2557,1838],[2570,4191,5793,4786],
+  [4124,5810,4558,2848],[3492,5863,5074,2911],[4169,6362,4428,2381]
+ ]);
+ const attempt=attemptLog1151.find(a=>a.snapshotPath==='reports/round_1673_goal3_official_market_snapshot_20261116T1151JST.json');
+ assert.ok(attempt);assert.equal(attempt.attemptedAt,market_1151.retrievedAt);assert.equal(attempt.captureStatus,'captured');
+ assert.equal(attempt.officialFixtureCount,3);assert.equal(attempt.officialTeamTargetCount,6);
+ assert.equal(new Set(attemptLog1151.map(a=>a.attemptedAt)).size,attemptLog1151.length);
+});
+test('11:51 GOAL3 V2 revisions append to 09:38 V2 and retain latest V1 base and frozen normalized 30/70 method',()=>{
+ assert.equal(v2_1151.length,6);assert.equal(new Set(v2_1151.map(r=>r.predictionId)).size,6);
+ const latest=latestV1();const prior=new Map(v2_0938.map(r=>[r.matchNumber+'|'+(r.isHome?'home':'away'),r]));
+ for(const r of v2_1151){
+  const k=r.matchNumber+'|'+(r.isHome?'home':'away');const base=latest.get(k);const previous=prior.get(k);
+  const marketRow=market_1151.matches.find(m=>m.matchNumber===r.matchNumber&&m.isHome===r.isHome);
+  assert.ok(base);assert.ok(previous);assert.ok(marketRow);
+  assert.equal(r.revisionOf,previous.predictionId);assert.deepEqual(r.baseModelProbabilities,base.probabilities);
+  assert.deepEqual(r.marketVoteShare,Object.fromEntries(['0','1','2','3'].map((key,i)=>[key,Number((marketRow.percentages[i]/100).toFixed(4))])));
+  assert.deepEqual(r.blendWeights,{poissonModel:0.3,officialTotoGoal3VoteShare:0.7});
+  for(const key of ['0','1','2','3'])assert.ok(Math.abs(r.probabilities[key]-(0.3*base.probabilities[key]+0.7*r.marketVoteShare[key]))<2e-8);
+  assert.ok(Math.abs(Object.values(r.probabilities).reduce((a,b)=>a+b,0)-1)<2e-8);
+  assert.equal(r.predictionConfirmedAt,market_1151.retrievedAt);
+  assert.equal(r.marketOfficialDisplayAt,market_1151.pageDisplayAt);
+  assert.equal(r.marketRetrievedAt,market_1151.retrievedAt);
+  assert.equal(r.deadlineAt,'2026-11-21T04:50:00.000Z');
+  assert.equal(r.marketSnapshotPath,'reports/round_1673_goal3_official_market_snapshot_20261116T1151JST.json');
+ }
+});

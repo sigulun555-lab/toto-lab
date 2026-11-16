@@ -90,6 +90,11 @@ jobs:
             ${{ runner.temp }}/goal3_outer_matches.json
             ${{ runner.temp }}/reproduction.log
             toto-lab/analysis/goal3_outer_detail/claude_input_manifest_2026-11-16.json
+            claude-source/analysis/goal3_outer_detail/goal3_outer_matches.json
+            gpt-source/data/history.json
+            gpt-source/data/team_aliases.json
+            gpt-source/verification/goal3_independent/nested_validation.py
+            gpt-source/verification/goal3_independent/2025.csv
           if-no-files-found: warn
           retention-days: 30
           overwrite: false

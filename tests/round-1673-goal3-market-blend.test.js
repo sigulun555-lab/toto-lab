@@ -133,3 +133,23 @@ test('11:51 GOAL3 V2 revisions append to 09:38 V2 and retain latest V1 base and 
   assert.equal(r.marketSnapshotPath,'reports/round_1673_goal3_official_market_snapshot_20261116T1151JST.json');
  }
 });
+
+
+const market_1540=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T1540JST.json'),'utf8'));
+const attemptLog1540=readJsonl('data/goal3_market_snapshot_attempts.jsonl');
+test('official 15:40 GOAL3 snapshot is archived as stale and excluded from V2',()=>{
+ assert.equal(market_1540.round,1673);assert.equal(market_1540.marketType,'totoGOAL3');
+ assert.equal(market_1540.pageDisplayAt,'2026-11-16T15:40:00+09:00');
+ assert.equal(market_1540.retrievedAt,'2026-11-16T18:12:05+09:00');
+ assert.equal(market_1540.displayAgeSeconds,9125);assert.equal(market_1540.stale,true);
+ assert.equal(market_1540.totalVotesPageSummary,19503);assert.equal(market_1540.matches.length,6);
+ assert.deepEqual(market_1540.categoryOrder,['0','1','2','3+']);
+ assert.deepEqual(market_1540.matches.map(m=>m.toto13MatchNumber),[1,1,2,2,5,5]);
+ assert.equal(market_1540.matches.every(m=>m.sumVotes===19503&&m.sumPercent===100),true);
+ const attempt=attemptLog1540.find(a=>a.snapshotPath==='reports/round_1673_goal3_official_market_snapshot_20261116T1540JST.json');
+ assert.ok(attempt);assert.equal(attempt.attemptedAt,market_1540.retrievedAt);
+ assert.equal(attempt.captureStatus,'captured');assert.match(attempt.voteShareStatus,/stale/);
+ assert.equal(new Set(attemptLog1540.map(a=>a.attemptedAt)).size,attemptLog1540.length);
+ assert.equal(v2_1151.length,6,'no stale 15:40 V2 revision was added');
+ assert.equal(market_1540.v2Eligibility.eligible,false);
+});

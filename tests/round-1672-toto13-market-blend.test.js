@@ -168,7 +168,7 @@ const round1673V1=readJsonl('predictions/round_1673_ChatGPT_shared_score_v1.json
 const round1673V2=readJsonl('predictions/round_1673_ChatGPT_shared_score_v2.jsonl').slice(0,13);
 const round1673Market=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_toto13_official_market_snapshot_20261115T0709JST.json'),'utf8'));
 test('round 1673 toto13 V2 uses the fresh official 07:09 market snapshot and the documented 30/70 blend',()=>{
- assert.equal(round1673V1.length,13);assert.equal(round1673V2.length,13);
+ assert.equal(round1673V1.length,26);assert.equal(new Set(round1673V1.map(x=>x.predictionId)).size,26);assert.equal(round1673V2.length,13);
  assert.equal(new Set(round1673V2.map(x=>x.predictionId)).size,13);
  assert.equal(round1673Market.round,1673);assert.equal(round1673Market.marketType,'toto13');
  assert.equal(round1673Market.pageDisplayAt,'2026-11-15T07:09:00+09:00');

@@ -23,6 +23,16 @@ assert.strictEqual(confirmedOut[0].resolutionSourceAt, '2026-11-15');
 assert.strictEqual(confirmedOut[0].recordedAt, '2026-11-15T20:36:27+09:00');
 assert.match(confirmedOut[0].note, /鹿島3-2横浜FM/);
 
+
+const verdyPlayers = new Set(['宮原 和也', '森田 晃樹', '寺沼 星文']);
+const verdyRows = rows.filter((row) =>
+  row.matchNumber === 6 && row.team === '東京Ｖ' && verdyPlayers.has(row.player)
+);
+assert.strictEqual(verdyRows.length, 3, 'record all three officially reported Tokyo Verdy injuries');
+assert.ok(verdyRows.every((row) => row.status === 'unknown'), 'do not infer match availability from an old recovery estimate');
+assert.ok(verdyRows.every((row) => row.sourceUrl === 'https://www.verdy.co.jp/news/15208'));
+assert.ok(verdyRows.every((row) => row.sourceAt === '2026-09-10'));
+
 const exactKeys = rows.map((row) => [
   row.round, row.matchNumber, row.team, row.player, row.status, row.recordedAt
 ].join('|'));

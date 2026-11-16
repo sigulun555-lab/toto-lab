@@ -184,3 +184,18 @@ test('01:32 official GOAL3 snapshot is archived as stale and excluded from explo
  assert.ok(attempt);assert.equal(attempt.attemptedAt,market_0132.retrievedAt);assert.equal(attempt.captureStatus,'captured');
  assert.equal(v2_1151.length,6,'stale 01:32 snapshot must not create a V2 revision');
 });
+
+
+const market_0856=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261117T0856JST.json'),'utf8'));
+test('08:56 official GOAL3 snapshot is fresh, six-team-side complete, and archived without a new V2',()=>{
+ assert.equal(market_0856.round,1673);assert.equal(market_0856.marketType,'totoGOAL3');
+ assert.equal(market_0856.pageDisplayAt,'2026-11-17T08:56:00+09:00');assert.equal(market_0856.retrievedAt,'2026-11-17T08:57:15+09:00');
+ assert.equal(market_0856.displayAgeSeconds,75);assert.equal(market_0856.stale,false);assert.equal(market_0856.totalVotesPageSummary,25880);
+ assert.deepEqual(market_0856.categoryOrder,['0','1','2','3+']);assert.equal(market_0856.matches.length,6);
+ assert.equal(market_0856.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);assert.equal(market_0856.countConsistency.allSixPercentageVectorsSumTo100,true);
+ assert.deepEqual(market_0856.matches.map(m=>m.toto13MatchNumber),[1,1,2,2,5,5]);assert.equal(market_0856.v2Eligibility.eligible,false);
+ assert.match(market_0856.v2Eligibility.reason,/no runnable.*V2 generator/i);
+ const attempts=readJsonl('data/goal3_market_snapshot_attempts.jsonl');const a=attempts.find(x=>x.snapshotPath==='reports/round_1673_goal3_official_market_snapshot_20261117T0856JST.json');
+ assert.ok(a);assert.equal(a.attemptedAt,market_0856.retrievedAt);assert.equal(a.captureStatus,'captured');
+ assert.equal(readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl').length,6,'no V2 revision was synthesized');
+});

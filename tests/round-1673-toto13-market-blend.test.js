@@ -57,3 +57,21 @@ test('new V2 rows use the unchanged 30/70 blend and preserve V1 score distributi
   assert.ok(Math.abs(Object.values(row.outcomeProbabilities).reduce((a,b)=>a+b,0)-1)<2e-8);
  }
 });
+
+
+const market1355=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_toto13_official_market_snapshot_20261116T1355JST.json'),'utf8'));
+test('13:55 official toto13 snapshot is archived as stale and excluded from V2',()=>{
+ assert.equal(market1355.round,1673);
+ assert.equal(market1355.marketType,'toto13');
+ assert.equal(market1355.pageDisplayAt,'2026-11-16T13:55:00+09:00');
+ assert.equal(market1355.retrievedAt,'2026-11-16T14:02:50+09:00');
+ assert.equal(market1355.displayAgeSeconds,470);
+ assert.equal(market1355.stale,true);
+ assert.equal(market1355.totalVotesPageSummary,94552);
+ assert.equal(market1355.matches.length,13);
+ assert.equal(market1355.matches.every(m=>m.sumVotes===94552&&m.differenceFromSummaryVotes===0),true);
+ assert.equal(market1355.matches.every(m=>Math.abs(m.percentages.reduce((a,b)=>a+b,0)-100)<1e-8),true);
+ assert.equal(market1355.v2Eligibility.eligible,false);
+ assert.equal(v2.length,39,'stale market snapshot must not append a V2 revision');
+ for(let n=1;n<=13;n++) assert.equal(latestForMatch(n).length,3);
+});

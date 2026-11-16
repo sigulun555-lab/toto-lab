@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "purpose": "Read-only clean-checkout reproduction of Claude's GOAL3 2026-only k=6/k=10 outer-detail script. Historical reference and current-input reproduction are deliberately reported as separate cohorts.",
+  "purpose": "Read-only clean-checkout reproduction of Claude's GOAL3 2026-only k=6/k=10 outer-detail script. Historical reference and current-input reproduction are reported as separate cohorts.",
   "claude": {
     "repository": "sigulun555-lab/toto-lab",
     "commit": "d9148be49bb28c28da31428395a82ede2863fe47",
@@ -9,7 +9,7 @@
     "referencePath": "analysis/goal3_outer_detail/goal3_outer_matches.json",
     "referenceBlobSha": "6f8ac699cd907d72a97575f4ff15efa842fa043b",
     "historicalReferenceOriginalInputManifestAvailable": false,
-    "historicalReferenceNote": "The 472-target JSON was produced before the current pinned GPT input snapshot. Its original history/nested_validation input SHAs were not recorded; it is verified as a historical artifact, not required to equal the current reproduction."
+    "historicalReferenceNote": "The 472-target JSON predates the current pinned GPT input snapshot. Its original history/nested_validation input SHAs were not recorded; verify it as a historical artifact, not as a same-input expected output."
   },
   "gpt": {
     "repository": "sigulun555-lab/gpt",
@@ -74,8 +74,8 @@
   "knownLimitations": [
     "The current 2026 history is a community mirror snapshot, not an official J.League publication-time feed.",
     "All 480 current history rows share fetchedAt=2026-11-16T06:25:20.060Z; this cannot establish each row's first-known time.",
-    "The alias map was updated 2026-10-22; 9 of the 19 current target dates predate that update, so the present alias map is not proof of the exact mapping known on each historical target date.",
-    "The historical 472-target/17-date reference has no original input SHA manifest. The current pinned input expands the output to 480 targets/240 matches/19 dates; these cohorts must not be pooled or described as a same-input rerun.",
+    "The alias map was updated 2026-10-22; 9 of the 19 current target dates predate that update, so the present alias map is not proof of the mapping known on each historical target date.",
+    "The historical 472-target/17-date reference has no original input SHA manifest. The current pinned input expands the run to 480 targets/240 matches/19 dates; the cohorts must not be pooled or described as a same-input rerun.",
     "The current 19-date retrospective cohort remains below the predeclared 20-round prospective adoption threshold. Both current 95% intervals include zero.",
     "No production model, market weight, main branch, prediction log, or existing shadow artifact is changed or authorized by this audit."
   ]

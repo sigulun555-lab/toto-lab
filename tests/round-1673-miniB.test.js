@@ -27,3 +27,20 @@ test('mini toto B rows pass the existing 1X2 prediction schema and append-only v
   assert.ok(r.modelVersion.includes('479d024a8df8903ef210b33240a00d6a24852bcf'));
  }
 });
+
+const market2033=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_miniB_official_market_snapshot_20261116T2033JST.json'),'utf8'));
+test('mini toto B 20:33 official snapshot is archived as stale and V2 remains held',()=>{
+ assert.equal(market2033.product,'mini toto B');
+ assert.equal(market2033.round,1673);
+ assert.equal(market2033.pageDisplayAt,'2026-11-16T20:33:00+09:00');
+ assert.equal(market2033.retrievedAt,'2026-11-16T20:39:01+09:00');
+ assert.equal(market2033.displayAgeSeconds,361);
+ assert.equal(market2033.stale,true);
+ assert.equal(market2033.totalVotesPageSummary,12297);
+ assert.deepEqual(market2033.matches.map(m=>m.productMatchNumber),[1,2,3,4,5]);
+ assert.deepEqual(market2033.matches.map(m=>m.toto13MatchNumber),[6,7,8,9,10]);
+ assert.equal(market2033.countConsistency.allPerMatchTotalsMatchPageSummary,true);
+ assert.equal(market2033.countConsistency.allDisplayedPercentageTriplesSumTo100,true);
+ assert.equal(market2033.v2Eligibility.eligible,false);
+ assert.equal(manifest.market.v2Status,'held_stale_official_market');
+});

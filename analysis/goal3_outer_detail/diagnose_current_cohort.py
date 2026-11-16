@@ -292,14 +292,13 @@ def main():
     }
 
     # Leave-one-team-out is descriptive only; remove both sides of every match involving that team.
-    teams = sorted({r["team"] for r in all_rows})
+    teams = sorted({(r["league"], r["team"]) for r in all_rows})
     team_sensitivity = {}
     for metric, field in (("brier","dB"),("logloss","dL")):
         flips = 0
         for team in teams:
-            remain = [r for r in paired if r["team"] != team]
-            # Also remove the opponent-side target in each match involving the team.
-            involved = {r["match"] for r in all_rows if r["team"] == team}
+            # Remove both team-side targets from every match involving this league/team.
+            involved = {r["match"] for r in all_rows if (r["league"], r["team"]) == team}
             remain = [r for r in paired if r["match"] not in involved]
             value = float(np.mean([r[field] for r in remain]))
             flips += int((value >= 0) != (paired_summary["meanDeltaBrier"] >= 0 if metric=="brier" else paired_summary["meanDeltaLogLoss"] >= 0))
@@ -323,6 +322,8 @@ def main():
 
     report = {
         "scope":"current pinned GPT main input; retrospective 2026_only outer dates; research-only",
+        "diagnosticScriptSha256":sha256(__file__),
+        "portablePredictionsSha256":sha256(args.predictions),
         "inputProvenance":{
             "historyPath":str(history_path),"historySha256":sha256(history_path),
             "historyRows":len(eligible_raw),"historyDistinctDates":len({m["date"] for m in eligible_raw}),

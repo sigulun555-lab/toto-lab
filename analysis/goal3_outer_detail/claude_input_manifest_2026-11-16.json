@@ -78,5 +78,9 @@
     "The historical 472-target/17-date reference has no original input SHA manifest. The current pinned input expands the run to 480 targets/240 matches/19 dates; the cohorts must not be pooled or described as a same-input rerun.",
     "The current 19-date retrospective cohort remains below the predeclared 20-round prospective adoption threshold. Both current 95% intervals include zero.",
     "No production model, market weight, main branch, prediction log, or existing shadow artifact is changed or authorized by this audit."
-  ]
+  ],
+  "audit": {
+    "diagnosticScriptPath": "analysis/goal3_outer_detail/diagnose_current_cohort.py",
+    "diagnosticScriptBlobSha": "f612d86ed344d93a90bac70653c5f90e71638562"
+  }
 }

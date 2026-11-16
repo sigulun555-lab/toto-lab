@@ -142,3 +142,14 @@ test('01:32 official toto13 snapshot is archived as stale and excluded from V2',
  assert.equal(market0132.countConsistency.allDisplayedPercentageTriplesSumTo100,true);assert.equal(market0132.v2Eligibility.eligible,false);
  assert.equal(v2.length,39,'stale market snapshot must not append a V2 revision');
 });
+
+
+const market0856=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_toto13_official_market_snapshot_20261117T0856JST.json'),'utf8'));
+test('08:56 official toto13 snapshot is fresh and reconciled; no V2 is synthesized without a runnable generator',()=>{
+ assert.equal(market0856.round,1673);assert.equal(market0856.marketType,'toto13');
+ assert.equal(market0856.pageDisplayAt,'2026-11-17T08:56:00+09:00');assert.equal(market0856.retrievedAt,'2026-11-17T08:57:15+09:00');
+ assert.equal(market0856.displayAgeSeconds,75);assert.equal(market0856.stale,false);assert.equal(market0856.totalVotesPageSummary,133203);
+ assert.equal(market0856.matches.length,13);assert.equal(market0856.countConsistency.allPerMatchTotalsMatchPageSummary,true);
+ assert.equal(market0856.countConsistency.allDisplayedPercentageTriplesSumTo100,true);assert.equal(market0856.v2Eligibility.eligible,false);
+ assert.match(market0856.v2Eligibility.reason,/no runnable.*V2 generator/i);assert.equal(v2.length,39,'fresh snapshot is archived but no unimplemented V2 is synthesized');
+});

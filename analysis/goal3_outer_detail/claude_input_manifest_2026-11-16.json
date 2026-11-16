@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Read-only clean-checkout reproduction of Claude's GOAL3 2026-only k=6/k=10 outer-detail artifact. This is retrospective research, not prospective shadow evidence.",
+  "claude": {
+    "repository": "sigulun555-lab/toto-lab",
+    "commit": "d9148be49bb28c28da31428395a82ede2863fe47",
+    "scriptPath": "analysis/goal3_outer_detail/goal3_detail.py",
+    "scriptBlobSha": "17888eba14095a4a914ada242055887531620ae4",
+    "referencePath": "analysis/goal3_outer_detail/goal3_outer_matches.json",
+    "referenceBlobSha": "6f8ac699cd907d72a97575f4ff15efa842fa043b"
+  },
+  "gpt": {
+    "repository": "sigulun555-lab/gpt",
+    "commit": "395fa5442a670896df4113d69962123b06413533",
+    "inputs": {
+      "data/history.json": "e7b6a068e4fc459642b7c07e46f6fd211d256329",
+      "data/team_aliases.json": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab",
+      "verification/goal3_independent/nested_validation.py": "b6342d13038129bb8a8d474b0653930cb2e1d461",
+      "verification/goal3_independent/2025.csv": "847d324c5a6168d02efe328f8173418a951af720"
+    }
+  },
+  "protocol": {
+    "window": "2026_only",
+    "targets": 472,
+    "matches": 236,
+    "dates": 17,
+    "bootstrap": {
+      "unit": "date",
+      "rng": "Python random.Random(1)",
+      "sampling": "sorted unique dates; choices(k=17) with replacement",
+      "replicates": 10000,
+      "percentile": "NumPy linear percentile at 2.5 and 97.5"
+    },
+    "expected": {
+      "meanDeltaBrier": -0.00061666832112453,
+      "deltaBrier95": [
+        -0.003679873043345173,
+        0.0024272209554595738
+      ],
+      "meanDeltaLogLoss": -0.002158787442366624,
+      "deltaLogLoss95": [
+        -0.008482506988436216,
+        0.0037774027204055395
+      ]
+    }
+  },
+  "knownLimitations": [
+    "The 2026 history input is from the k-addtimes/jleague_open_data community mirror, not an official J.League publication-time feed.",
+    "All 429 history rows in the audited snapshot share fetchedAt=2026-11-03T23:21:25.123Z; this cannot establish each row's first-known time.",
+    "12 of 17 target dates predate the 2026-10-22 alias-map update; the current alias map is not proof of the exact historical mapping consumed by the original forecast process.",
+    "The 17-date retrospective cohort is below the predeclared 20-round/60-match prospective adoption threshold.",
+    "No production model, market weight, main branch, prediction log, or existing shadow artifact is changed or authorized by this audit."
+  ]
+}

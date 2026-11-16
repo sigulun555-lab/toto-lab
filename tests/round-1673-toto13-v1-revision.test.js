@@ -4,7 +4,7 @@ const path=require('node:path');
 const test=require('node:test');
 const assert=require('node:assert/strict');
 const root=path.join(__dirname,'..');
-const rows=fs.readFileSync(path.join(root,'predictions/round_1673_ChatGPT_shared_score_v1.jsonl'),'utf8').trim().split(/\\r?\\n/).map(JSON.parse);
+const rows=fs.readFileSync(path.join(root,'predictions/round_1673_ChatGPT_shared_score_v1.jsonl'),'utf8').trim().split(/\r?\n/).map(JSON.parse);
 const report=JSON.parse(fs.readFileSync(path.join(root,'reports/round_1673_toto13_v1_revision_20261116T183508JST.json'),'utf8'));
 const closeToOne=a=>Math.abs(a.reduce((s,v)=>s+v,0)-1)<1e-7;
 test('round 1673 toto13 V1 history-480 revision is append-only and linked',()=>{

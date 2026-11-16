@@ -71,6 +71,13 @@ jobs:
             --output "$RUNNER_TEMP/goal3_outer_matches.json" \
             2>&1 | tee "$RUNNER_TEMP/reproduction.log"
 
+      - name: Recompute current-cohort k sensitivity, calibration, and Poisson residuals
+        run: |
+          python toto-lab/analysis/goal3_outer_detail/diagnose_current_cohort.py \
+            --gpt-root gpt-source \
+            --predictions "$RUNNER_TEMP/goal3_outer_matches.json" \
+            --out "$RUNNER_TEMP/goal3_current_cohort_diagnostics.json" \
+            2>&1 | tee "$RUNNER_TEMP/diagnostics.log"
       - name: Verify exact reference parity and canonical bootstrap
         run: |
           python toto-lab/analysis/goal3_outer_detail/verify_reproduction.py \
@@ -89,6 +96,8 @@ jobs:
           path: |
             ${{ runner.temp }}/goal3_outer_matches.json
             ${{ runner.temp }}/reproduction.log
+            ${{ runner.temp }}/goal3_current_cohort_diagnostics.json
+            ${{ runner.temp }}/diagnostics.log
             toto-lab/analysis/goal3_outer_detail/claude_input_manifest_2026-11-16.json
             claude-source/analysis/goal3_outer_detail/goal3_outer_matches.json
             gpt-source/data/history.json

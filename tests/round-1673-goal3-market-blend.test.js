@@ -153,3 +153,20 @@ test('official 15:40 GOAL3 snapshot is archived as stale and excluded from V2',(
  assert.equal(v2_1151.length,6,'no stale 15:40 V2 revision was added');
  assert.equal(market_1540.v2Eligibility.eligible,false);
 });
+
+const market2033=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T2033JST.json'),'utf8'));
+const v2_0938=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0938JST.jsonl');
+test('20:33 official GOAL3 snapshot is archived as stale and excluded from the exploratory V2 chain',()=>{
+ assert.equal(market2033.round,1673);
+ assert.equal(market2033.marketType,'totoGOAL3');
+ assert.equal(market2033.pageDisplayAt,'2026-11-16T20:33:00+09:00');
+ assert.equal(market2033.retrievedAt,'2026-11-16T20:39:01+09:00');
+ assert.equal(market2033.displayAgeSeconds,361);
+ assert.equal(market2033.stale,true);
+ assert.equal(market2033.totalVotesPageSummary,22706);
+ assert.equal(market2033.matches.length,6);
+ assert.equal(market2033.matches.every(m=>m.sumVotes===22706&&m.sumPercent===100),true);
+ assert.deepEqual(market2033.matches.map(m=>m.toto13MatchNumber),[1,1,2,2,5,5]);
+ assert.equal(market2033.v2Eligibility.eligible,false);
+ assert.equal(v2_0938.length,6,'no V2 revision is created from a stale official display');
+});

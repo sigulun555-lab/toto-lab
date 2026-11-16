@@ -357,3 +357,47 @@ for(const row of round1673Goal3Market0523.matches){
 assert.strictEqual(round1673Goal3Market0523.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);
 assert.strictEqual(round1673Goal3Market0523.countConsistency.allSixPercentageVectorsSumTo100,true);
 console.log('OK - round 1673 fresh official GOAL3 market snapshot (05:23 JST)');
+
+
+// Round 1673 official totoGOAL3 market snapshot at 13:22 JST (stale at retrieval).
+const round1673Goal3Market1322=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T1322JST.json'),'utf8'));
+assert.strictEqual(round1673Goal3Market1322.round,1673);
+assert.strictEqual(round1673Goal3Market1322.marketType,'totoGOAL3');
+assert.strictEqual(round1673Goal3Market1322.pageDisplayAt,'2026-11-16T13:22:00+09:00');
+assert.strictEqual(round1673Goal3Market1322.retrievedAt,'2026-11-16T13:57:20+09:00');
+assert.strictEqual(round1673Goal3Market1322.displayAgeSeconds,2120);
+assert.strictEqual(round1673Goal3Market1322.stale,true);
+assert.strictEqual(round1673Goal3Market1322.totalVotesPageSummary,18259);
+assert.deepStrictEqual(round1673Goal3Market1322.categoryOrder,['0','1','2','3+']);
+assert.strictEqual(round1673Goal3Market1322.matches.length,6);
+assert.deepStrictEqual(round1673Goal3Market1322.matches.map(x=>x.toto13MatchNumber),[1,1,2,2,5,5]);
+assert.deepStrictEqual(round1673Goal3Market1322.matches.map(x=>x.voteCounts),[
+ [2455,3681,5825,6298],
+ [7614,6013,2655,1977],
+ [2687,4432,6081,5059],
+ [4322,6107,4797,3033],
+ [3676,6142,5369,3072],
+ [4360,6769,4650,2480]
+]);
+assert.deepStrictEqual(round1673Goal3Market1322.matches.map(x=>x.percentages),[
+ [13.45,20.16,31.90,34.49],
+ [41.70,32.93,14.54,10.83],
+ [14.72,24.27,33.30,27.71],
+ [23.67,33.45,26.27,16.61],
+ [20.13,33.64,29.41,16.82],
+ [23.88,37.07,25.47,13.58]
+]);
+for(const row of round1673Goal3Market1322.matches){
+ assert.strictEqual(row.sumVotes,row.voteCounts.reduce((a,b)=>a+b,0));
+ assert.strictEqual(row.sumVotes,18259);
+ assert.ok(Math.abs(row.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);
+}
+assert.strictEqual(round1673Goal3Market1322.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);
+assert.strictEqual(round1673Goal3Market1322.countConsistency.allSixPercentageVectorsSumTo100,true);
+const attempt1322=readJsonl('data/goal3_market_snapshot_attempts.jsonl').find(a=>a.snapshotPath==='reports/round_1673_goal3_official_market_snapshot_20261116T1322JST.json');
+assert.ok(attempt1322);
+assert.strictEqual(attempt1322.attemptedAt,'2026-11-16T13:57:20+09:00');
+assert.strictEqual(attempt1322.captureStatus,'captured');
+const v2_1151After1322=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl');
+assert.strictEqual(v2_1151After1322.length,6,'stale 13:22 snapshot must not create another V2 revision');
+console.log('OK - round 1673 stale official GOAL3 market snapshot (13:22 JST), no V2 revision');

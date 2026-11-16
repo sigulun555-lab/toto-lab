@@ -46,4 +46,20 @@ const exactKeys = rows.map((row) => [
   row.round, row.matchNumber, row.team, row.player, row.status, row.recordedAt
 ].join('|'));
 assert.strictEqual(new Set(exactKeys).size, exactKeys.length, 'no duplicate ledger event keys');
+
+
+const nov16Suspensions = [
+  { matchNumber: 11, team: '大分', player: '林田 滉也' },
+  { matchNumber: 13, team: '磐田', player: '金子 大毅' },
+];
+for (const item of nov16Suspensions) {
+  const matches = rows.filter((row) =>
+    row.matchNumber === item.matchNumber && row.team === item.team && row.player === item.player
+  );
+  assert.strictEqual(matches.length, 1, `record exactly one ${item.player} suspension`);
+  assert.strictEqual(matches[0].status, 'confirmed_out');
+  assert.strictEqual(matches[0].sourceUrl, 'https://www.jleague.jp/news/article/35370/');
+  assert.strictEqual(matches[0].sourceAt, '2026-11-16T19:00:00+09:00');
+  assert.strictEqual(matches[0].recordedAt, '2026-11-16T21:13:40+09:00');
+}
 console.log('OK - round 1673 injury ledger append-only Miyachi resolution');

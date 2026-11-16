@@ -1,11 +1,18 @@
-import sys, os, json, math, hashlib
+import sys, os, json, math, hashlib, argparse, random
 from collections import defaultdict
 import numpy as np
-REPO = "/home/claude/gpt/verification/goal3_independent"
+
+ap = argparse.ArgumentParser()
+ap.add_argument("--gpt-repo-root", required=True,
+                help="path to a checkout of sigulun555-lab/gpt (contains verification/goal3_independent and data/)")
+ap.add_argument("--output", required=True, help="output JSON path for per-target rows")
+args = ap.parse_args()
+
+REPO = os.path.join(args.gpt_repo_root, "verification", "goal3_independent")
 sys.path.insert(0, REPO)
 import nested_validation as nv
 
-ROOT = nv.ROOT
+ROOT = args.gpt_repo_root
 h2025, h2026 = nv.load_data(os.path.join(ROOT, "data", "history.json"),
                             os.path.join(ROOT, "data", "team_aliases.json"),
                             os.path.join(REPO, "2025.csv"))
@@ -58,10 +65,11 @@ for r in rows:
     r["ll_k6"] = ll(r["p_k6"], r["actual"]); r["ll_k10"] = ll(r["p_k10"], r["actual"])
     r["dB"] = r["brier_k6"] - r["brier_k10"]; r["dL"] = r["ll_k6"] - r["ll_k10"]
 
-out_dir = "/tmp/claude-0/-home-claude/8953a589-ecdc-5af9-80ec-160476e17948/scratchpad"
-with open(os.path.join(out_dir, "goal3_outer_matches.json"), "w") as f:
+out_path = args.output
+os.makedirs(os.path.dirname(os.path.abspath(out_path)), exist_ok=True)
+with open(out_path, "w", encoding="utf-8") as f:
     json.dump({"window": WINDOW, "k": [6, 10], "targets": rows}, f, ensure_ascii=False)
-sha = hashlib.sha256(open(os.path.join(out_dir, "goal3_outer_matches.json"), "rb").read()).hexdigest()
+sha = hashlib.sha256(open(out_path, "rb").read()).hexdigest()
 
 n = len(rows)
 dB = np.array([r["dB"] for r in rows]); dL = np.array([r["dL"] for r in rows])
@@ -69,18 +77,20 @@ print("targets", n, "dates", len({r["date"] for r in rows}), "matches", len({r["
 print("mean dBrier %.6f  mean dLogLoss %.6f" % (dB.mean(), dL.mean()))
 print("json sha256", sha)
 
-# date-block bootstrap (ratio of pooled sums), 10000 reps, seed 1
-dates_u = sorted({r["date"] for r in rows})
-by_date = {d: [r for r in rows if r["date"] == d] for d in dates_u}
-rng = np.random.default_rng(1)
-def boot(key_fn_rows_groups):
-    keys = list(key_fn_rows_groups.keys())
+# canonical date-block bootstrap: Python random.Random(1), sorted unique keys,
+# rng.choices(k=len(keys)) with replacement, 10,000 replicates, linear percentile 95%
+def boot(groups):
+    keys = sorted(groups.keys())
+    rng = random.Random(1)
     bs_b, bs_l = [], []
     for _ in range(10000):
-        pick = rng.choice(len(keys), size=len(keys), replace=True)
-        rr = [x for i in pick for x in key_fn_rows_groups[keys[i]]]
+        pick = rng.choices(keys, k=len(keys))
+        rr = [x for key in pick for x in groups[key]]
         bs_b.append(np.mean([x["dB"] for x in rr])); bs_l.append(np.mean([x["dL"] for x in rr]))
     return np.percentile(bs_b, [2.5, 97.5]), np.percentile(bs_l, [2.5, 97.5])
+
+by_date = defaultdict(list)
+for r in rows: by_date[r["date"]].append(r)
 db, dl = boot(by_date)
 print("date-block 95%% CI dBrier [%.6f, %.6f]  dLogLoss [%.6f, %.6f]" % (db[0], db[1], dl[0], dl[1]))
 by_match = defaultdict(list)

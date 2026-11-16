@@ -65,7 +65,19 @@ jobs:
         run: npm test
       - name: Check canonical team dictionary
         run: npm run check:teams
+      - name: Detect whether synchronization produced prediction changes
+        id: sync_changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain -- predictions/)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Create or update sync pull request
+        if: steps.sync_changes.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

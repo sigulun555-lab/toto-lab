@@ -44,7 +44,7 @@
         "2": 0.1388
       },
       "sumVotes": 15740,
-      "differenceFromSummaryVotes": 15740
+      "differenceFromSummaryVotes": 0
     },
     {
       "productMatchNumber": 2,
@@ -69,7 +69,7 @@
         "2": 0.24710000000000001
       },
       "sumVotes": 15740,
-      "differenceFromSummaryVotes": 15740
+      "differenceFromSummaryVotes": 0
     },
     {
       "productMatchNumber": 3,
@@ -94,7 +94,7 @@
         "2": 0.40880000000000005
       },
       "sumVotes": 15740,
-      "differenceFromSummaryVotes": 15740
+      "differenceFromSummaryVotes": 0
     },
     {
       "productMatchNumber": 4,
@@ -119,7 +119,7 @@
         "2": 0.1442
       },
       "sumVotes": 15740,
-      "differenceFromSummaryVotes": 15740
+      "differenceFromSummaryVotes": 0
     },
     {
       "productMatchNumber": 5,
@@ -144,7 +144,7 @@
         "2": 0.3105
       },
       "sumVotes": 15740,
-      "differenceFromSummaryVotes": 15740
+      "differenceFromSummaryVotes": 0
     }
   ],
   "countConsistency": {

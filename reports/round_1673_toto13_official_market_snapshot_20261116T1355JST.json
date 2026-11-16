@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 1,
+  "round": 1673,
+  "marketType": "toto13",
+  "sourceUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=01&fromId=SSIN026&gameAssortment=1&holdCntId=1673",
+  "pageDisplayAt": "2026-11-16T13:55:00+09:00",
+  "retrievedAt": "2026-11-16T14:02:50+09:00",
+  "refreshNotice": "5分毎",
+  "displayAgeSeconds": 470,
+  "stale": true,
+  "totalVotesPageSummary": 94552,
+  "outcomeOrder": [
+    "1",
+    "0",
+    "2"
+  ],
+  "outcomes": [
+    "home90Win",
+    "drawOther",
+    "home90Loss"
+  ],
+  "matches": [
+    {
+      "matchNumber": 1,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "町田",
+      "away": "長崎",
+      "voteCounts": [
+        73896,
+        11179,
+        9477
+      ],
+      "percentages": [
+        78.16,
+        11.82,
+        10.02
+      ],
+      "marketVoteShare": {
+        "0": 0.1182,
+        "1": 0.7816,
+        "2": 0.1002
+      },
+      "sumVotes": 94552,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 2,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "広島",
+      "away": "横浜FM",
+      "voteCounts": [
+        57220,
+        17978,
+        19354
+      ],
+      "percentages": [
+        60.52,
+        19.01,
+        20.47
+      ],
+      "marketVoteShare": {
+        "0": 0.19010000000000002,
+        "1": 0.6052000000000001,
+        "2": 0.2047
+      },
+      "sumVotes": 94552,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 3,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "京都",
+      "away": "浦和",
+      "voteCounts": [
+        27176,
+        26128,
+        41248
+      ],
+      "percentages": [
+        28.74,
+        27.63,
+        43.63
+      ],
+      "marketVoteShare": {
+        "0": 0.2763,
+        "1": 0.2874,
+        "2": 0.4363
+      },
+      "sumVotes": 94552,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 4,
+      "date": "2026-11-21",
+      "kickoff": "15:00",
+      "home": "川崎Ｆ",
+      "away": "福岡",
+      "voteCounts": [
+        74169,
+        10656,
+        9727
+      ],
+      "percentages": [
+        78.44,
+        11.27,
+        10.29
+      ],
+      "marketVoteShare": {
+        "0": 0.1127,
+        "1": 0.7844,
+        "2": 0.10289999999999999
+      },
+      "sumVotes": 94552,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 5,
+      "date": "2026-11-21",
+      "kickoff": "16:00",
+      "home": "Ｇ大阪",
+      "away": "岡山",
+      "voteCounts": [
+        40758,
+        26452,
+        27342
+      ],
+      "percentages": [
+        43.11,
+        27.97,
+        28.92
+      ],
+      "marketVoteShare": {
+        "0": 0.2797,
+        "1": 0.4311,
+        "2": 0.2892
+      },
+      "sumVotes": 94552,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 6,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "東京Ｖ",
+      "away": "名古屋",
+      "voteCounts": [
+        37374,
+        26076,
+        31102
+      ],
+      "percentages": [
+        39.53,
+        27.58,
+        32.89
+      ],
+      "marketVoteShare": {
+        "0": 0.2758,
+        "1": 0.3953,
+        "2": 0.3289
+      },
+      "sumVotes": 94552,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 7,
+      "date": "2026-11-21",
+      "kickoff": "15:00",
+      "home": "Ｃ大阪",
+      "away": "FC東京",
+      "voteCounts": [
+        12819,
+        14522,
+        67211
+      ],
+      "percentages": [
+        13.56,
+        15.36,
+        71.08
+      ],
+      "marketVoteShare": {
+        "0": 0.1536,
+        "1": 0.1356,
+        "2": 0.7108
+      },
+      "sumVotes": 94552,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 8,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "秋田",
+      "away": "山形",
+      "voteCounts": [
+        42561,
+        26076,
+        25915
+      ],
+      "percentages": [
+        45.01,
+        27.58,
+        27.41
+      ],
+      "marketVoteShare": {
+        "0": 0.2758,
+        "1": 0.4501,
+        "2": 0.2741
+      },
+      "sumVotes": 94552,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 9,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "宮崎",
+      "away": "いわき",
+      "voteCounts": [
+        65920,
+        14786,
+        13846
+      ],
+      "percentages": [
+        69.72,
+        15.64,
+        14.64
+      ],
+      "marketVoteShare": {
+        "0": 0.1564,
+        "1": 0.6972,
+        "2": 0.1464
+      },
+      "sumVotes": 94552,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 10,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "甲府",
+      "away": "八戸",
+      "voteCounts": [
+        36483,
+        30129,
+        27940
+      ],
+      "percentages": [
+        38.59,
+        31.86,
+        29.55
+      ],
+      "marketVoteShare": {
+        "0": 0.3186,
+        "1": 0.3859,
+        "2": 0.2955
+      },
+      "sumVotes": 94552,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 11,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "富山",
+      "away": "大分",
+      "voteCounts": [
+        65557,
+        15477,
+        13518
+      ],
+      "percentages": [
+        69.33,
+        16.37,
+        14.3
+      ],
+      "marketVoteShare": {
+        "0": 0.1637,
+        "1": 0.6933,
+        "2": 0.14300000000000002
+      },
+      "sumVotes": 94552,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 12,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "鳥栖",
+      "away": "仙台",
+      "voteCounts": [
+        19717,
+        15703,
+        59132
+      ],
+      "percentages": [
+        20.85,
+        16.61,
+        62.54
+      ],
+      "marketVoteShare": {
+        "0": 0.1661,
+        "1": 0.20850000000000002,
+        "2": 0.6254
+      },
+      "sumVotes": 94552,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 13,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "磐田",
+      "away": "大宮",
+      "voteCounts": [
+        22376,
+        21047,
+        51129
+      ],
+      "percentages": [
+        23.67,
+        22.26,
+        54.07
+      ],
+      "marketVoteShare": {
+        "0": 0.22260000000000002,
+        "1": 0.23670000000000002,
+        "2": 0.5407
+      },
+      "sumVotes": 94552,
+      "differenceFromSummaryVotes": 0
+    }
+  ],
+  "voteTotalsRange": {
+    "min": 94552,
+    "max": 94552
+  },
+  "countConsistency": {
+    "allThirteenDisplayedPercentageVectorsSumTo100": true,
+    "allMatchVoteTotalsEqualPageSummary": true,
+    "perMatchDifferencesFromSummaryVotes": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "note": "Official displayed vote counts and percentages are preserved verbatim; no correction or normalization of source counts."
+  },
+  "v2Eligibility": {
+    "eligible": false,
+    "reason": "Page display 13:55 JST was 470 seconds old at the 14:02:50 JST direct retrieval, exceeding the stated five-minute refresh interval. This stale snapshot is archived for evidence only; no V2 revision was generated."
+  },
+  "interpretation": "Official direct-page snapshot only. Display 13:55 JST and retrieval 14:02:50 JST (470-second lag, outside the stated five-minute refresh interval). All 13 raw count triples sum to 94,552 and all displayed percentage triples sum to 100.00%. Marked stale and excluded from V2. Existing 39 V2 rows and all V1 rows remain unchanged; no injury, suspension, availability, or lineup adjustment is applied."
+}

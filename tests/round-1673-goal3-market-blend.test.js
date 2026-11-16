@@ -7,11 +7,12 @@ const readJsonl=p=>fs.readFileSync(path.join(__dirname,'..',p),'utf8').trim().sp
 const v1=readJsonl('predictions/round_1673_ChatGPT_goal3.jsonl');
 const v2=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0646JST.jsonl');
 const market=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T0646JST.json'),'utf8'));
-const latestV1=()=>{const m=new Map();for(const r of v1){const k=r.matchNumber+'|'+(r.isHome?'home':'away');const old=m.get(k);if(!old||Date.parse(r.predictionConfirmedAt)>Date.parse(old.predictionConfirmedAt))m.set(k,r);}return m;};
-test('round 1673 GOAL3 has six V1 team-side chains and six V2 revisions referencing the latest V1 rows',()=>{
- assert.equal(v1.length,30);assert.equal(new Set(v1.map(r=>r.predictionId)).size,30);
+const baselineV1=()=>{const m=new Map();for(const r of v1){if(r.predictionConfirmedAt!=='2026-11-15T18:49:33.391Z')continue;const k=r.matchNumber+'|'+(r.isHome?'home':'away');m.set(k,r);}return m;};
+test('round 1673 GOAL3 has six V1 team-side chains and six V2 revisions referencing the frozen 18:49 V1 baseline',()=>{
+ assert.equal(v1.length,36);assert.equal(new Set(v1.map(r=>r.predictionId)).size,36);
+ const latestSync=v1.filter(r=>r.predictionConfirmedAt==='2026-11-16T06:25:20.060Z');assert.equal(latestSync.length,6);
  assert.equal(v2.length,6);assert.equal(new Set(v2.map(r=>r.predictionId)).size,6);
- const latest=latestV1();assert.equal(latest.size,6);
+ const latest=baselineV1();assert.equal(latest.size,6);
  for(const r of v2){const k=r.matchNumber+'|'+(r.isHome?'home':'away');assert.equal(r.revisionOf,latest.get(k).predictionId);assert.equal(r.round,1673);assert.equal(r.marketType,'totoGOAL3');}
 });
 test('official 06:46 snapshot has three matches, six team-side rows, four categories and reconciled totals',()=>{
@@ -23,7 +24,7 @@ test('official 06:46 snapshot has three matches, six team-side rows, four catego
  assert.deepEqual(market.matches.map(m=>m.toto13MatchNumber),[1,1,2,2,5,5]);
 });
 test('GOAL3 V2 uses the existing normalized 30/70 blend and preserves four-category distributions',()=>{
- const latest=latestV1();
+ const latest=baselineV1();
  for(const r of v2){
   const base=latest.get(r.matchNumber+'|'+(r.isHome?'home':'away'));
   const marketRow=market.matches.find(m=>m.matchNumber===r.matchNumber&&m.isHome===r.isHome);
@@ -52,7 +53,7 @@ test('official 08:35 GOAL3 snapshot has six reconciled team-side vectors and is 
  assert.equal(v2_0835.length,6);assert.equal(new Set(v2_0835.map(r=>r.predictionId)).size,6);
 });
 test('08:35 GOAL3 V2 revisions append to 06:46 V2, retain the same V1 base and frozen 30/70 method',()=>{
- const latest=latestV1();const prior=new Map(v2.map(r=>[r.matchNumber+'|'+(r.isHome?'home':'away'),r]));
+ const latest=baselineV1();const prior=new Map(v2.map(r=>[r.matchNumber+'|'+(r.isHome?'home':'away'),r]));
  for(const r of v2_0835){
   const k=r.matchNumber+'|'+(r.isHome?'home':'away');const base=latest.get(k);const previous=prior.get(k);
   const marketRow=market_0835.matches.find(m=>m.matchNumber===r.matchNumber&&m.isHome===r.isHome);
@@ -79,7 +80,7 @@ test('official 09:38 GOAL3 snapshot has six reconciled team-side vectors and is 
  assert.equal(v2_0938.length,6);assert.equal(new Set(v2_0938.map(r=>r.predictionId)).size,6);
 });
 test('09:38 GOAL3 V2 revisions append to 08:35 V2 and retain the same V1 base and frozen 30/70 method',()=>{
- const latest=latestV1();const prior=new Map(v2_0835.map(r=>[r.matchNumber+'|'+(r.isHome?'home':'away'),r]));
+ const latest=baselineV1();const prior=new Map(v2_0835.map(r=>[r.matchNumber+'|'+(r.isHome?'home':'away'),r]));
  for(const r of v2_0938){
   const k=r.matchNumber+'|'+(r.isHome?'home':'away');const base=latest.get(k);const previous=prior.get(k);
   const marketRow=market_0938.matches.find(m=>m.matchNumber===r.matchNumber&&m.isHome===r.isHome);
@@ -116,7 +117,7 @@ test('official 11:51 GOAL3 snapshot has six reconciled team-side vectors and is 
 });
 test('11:51 GOAL3 V2 revisions append to 09:38 V2 and retain latest V1 base and frozen normalized 30/70 method',()=>{
  assert.equal(v2_1151.length,6);assert.equal(new Set(v2_1151.map(r=>r.predictionId)).size,6);
- const latest=latestV1();const prior=new Map(v2_0938.map(r=>[r.matchNumber+'|'+(r.isHome?'home':'away'),r]));
+ const latest=baselineV1();const prior=new Map(v2_0938.map(r=>[r.matchNumber+'|'+(r.isHome?'home':'away'),r]));
  for(const r of v2_1151){
   const k=r.matchNumber+'|'+(r.isHome?'home':'away');const base=latest.get(k);const previous=prior.get(k);
   const marketRow=market_1151.matches.find(m=>m.matchNumber===r.matchNumber&&m.isHome===r.isHome);
@@ -169,4 +170,17 @@ test('20:33 official GOAL3 snapshot is archived as stale and excluded from the e
  assert.deepEqual(market2033.matches.map(m=>m.toto13MatchNumber),[1,1,2,2,5,5]);
  assert.equal(market2033.v2Eligibility.eligible,false);
  assert.equal(v2_0938_staleCheck.length,6,'no V2 revision is created from a stale official display');
+});
+
+const market_0132=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261117T0132JST.json'),'utf8'));
+const attempts_0132=readJsonl('data/goal3_market_snapshot_attempts.jsonl');
+test('01:32 official GOAL3 snapshot is archived as stale and excluded from exploratory V2',()=>{
+ assert.equal(market_0132.round,1673);assert.equal(market_0132.marketType,'totoGOAL3');
+ assert.equal(market_0132.pageDisplayAt,'2026-11-17T01:32:00+09:00');assert.equal(market_0132.retrievedAt,'2026-11-17T01:44:22+09:00');
+ assert.equal(market_0132.displayAgeSeconds,742);assert.equal(market_0132.stale,true);assert.equal(market_0132.totalVotesPageSummary,24677);
+ assert.equal(market_0132.matches.length,6);assert.equal(market_0132.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);
+ assert.equal(market_0132.countConsistency.allSixPercentageVectorsSumTo100,true);assert.equal(market_0132.v2Eligibility.eligible,false);
+ const attempt=attempts_0132.find(a=>a.snapshotPath==='reports/round_1673_goal3_official_market_snapshot_20261117T0132JST.json');
+ assert.ok(attempt);assert.equal(attempt.attemptedAt,market_0132.retrievedAt);assert.equal(attempt.captureStatus,'captured');
+ assert.equal(v2_1151.length,6,'stale 01:32 snapshot must not create a V2 revision');
 });

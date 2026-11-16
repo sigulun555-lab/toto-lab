@@ -437,3 +437,31 @@ assert.strictEqual(attempt1356.captureStatus,'captured');
 const v2After1356=fs.readFileSync(path.join(__dirname,'..','predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl'),'utf8').trim().split(/\r?\n/).filter(Boolean);
 assert.strictEqual(v2After1356.length,6,'stale 13:56 snapshot must not create another V2 revision');
 console.log('OK - round 1673 stale official GOAL3 market snapshot (13:56 JST), no V2 revision');
+
+
+// Round 1673 official totoGOAL3 market snapshot at 01:32 JST (stale at retrieval).
+const round1673Goal3Market0132=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261117T0132JST.json'),'utf8'));
+assert.strictEqual(round1673Goal3Market0132.round,1673);
+assert.strictEqual(round1673Goal3Market0132.marketType,'totoGOAL3');
+assert.strictEqual(round1673Goal3Market0132.pageDisplayAt,'2026-11-17T01:32:00+09:00');
+assert.strictEqual(round1673Goal3Market0132.retrievedAt,'2026-11-17T01:44:22+09:00');
+assert.strictEqual(round1673Goal3Market0132.displayAgeSeconds,742);
+assert.strictEqual(round1673Goal3Market0132.stale,true);
+assert.strictEqual(round1673Goal3Market0132.totalVotesPageSummary,24677);
+assert.deepStrictEqual(round1673Goal3Market0132.categoryOrder,['0','1','2','3+']);
+assert.strictEqual(round1673Goal3Market0132.matches.length,6);
+assert.deepStrictEqual(round1673Goal3Market0132.matches.map(x=>x.toto13MatchNumber),[1,1,2,2,5,5]);
+assert.strictEqual(new Set(round1673Goal3Market0132.matches.map(x=>x.matchNumber+':'+x.team)).size,6);
+for(const row of round1673Goal3Market0132.matches){
+ assert.strictEqual(row.sumVotes,24677);
+ assert.strictEqual(row.sumPercent,100);
+}
+assert.strictEqual(round1673Goal3Market0132.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);
+assert.strictEqual(round1673Goal3Market0132.countConsistency.allSixPercentageVectorsSumTo100,true);
+const attempt0132=fs.readFileSync(path.join(__dirname,'..','data/goal3_market_snapshot_attempts.jsonl'),'utf8').trim().split(/\r?\n/).filter(Boolean).map(JSON.parse).find(a=>a.snapshotPath==='reports/round_1673_goal3_official_market_snapshot_20261117T0132JST.json');
+assert.ok(attempt0132);
+assert.strictEqual(attempt0132.attemptedAt,'2026-11-17T01:44:22+09:00');
+assert.strictEqual(attempt0132.captureStatus,'captured');
+const v2After0132=fs.readFileSync(path.join(__dirname,'..','predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl'),'utf8').trim().split(/\r?\n/).filter(Boolean);
+assert.strictEqual(v2After0132.length,6,'stale 01:32 snapshot must not create a V2 revision');
+console.log('OK - round 1673 stale official GOAL3 market snapshot (01:32 JST), no V2 revision');

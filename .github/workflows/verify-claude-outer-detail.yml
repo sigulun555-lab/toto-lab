@@ -1,6 +1,13 @@
 name: Verify Claude GOAL3 outer-detail clean checkout
 
 on:
+  push:
+    branches:
+      - audit/claude-outer-detail-clean-checkout-20261116
+    paths:
+      - ".github/workflows/verify-claude-outer-detail.yml"
+      - "analysis/goal3_outer_detail/claude_input_manifest_2026-11-16.json"
+      - "analysis/goal3_outer_detail/verify_reproduction.py"
   pull_request:
     branches: [main]
     paths:

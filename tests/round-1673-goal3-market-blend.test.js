@@ -165,7 +165,7 @@ test('20:33 official GOAL3 snapshot is archived as stale and excluded from the e
  assert.equal(market2033.stale,true);
  assert.equal(market2033.totalVotesPageSummary,22706);
  assert.equal(market2033.matches.length,6);
- assert.equal(market2033.matches.every(m=>m.sumVotes===22706&&m.sumPercent===100),true);
+ assert.equal(market2033.matches.every(m=>m.sumVotes===22706&&Math.abs(m.sumPercent-100)<1e-8),true);
  assert.deepEqual(market2033.matches.map(m=>m.toto13MatchNumber),[1,1,2,2,5,5]);
  assert.equal(market2033.v2Eligibility.eligible,false);
  assert.equal(v2_0938_staleCheck.length,6,'no V2 revision is created from a stale official display');

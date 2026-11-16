@@ -9,9 +9,16 @@ const v2=readJsonl('predictions/round_1673_ChatGPT_shared_score_v2.jsonl');
 const market=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_toto13_official_market_snapshot_20261116T0643JST.json'),'utf8'));
 const latestForMatch=n=>v2.filter(r=>r.matchNumber===n).sort((a,b)=>Date.parse(a.predictionConfirmedAt)-Date.parse(b.predictionConfirmedAt));
 test('round 1673 keeps V1 and appends two complete V2 revisions without replacing prior rows',()=>{
- assert.equal(v1.length,13);
+ assert.equal(v1.length,26);
  assert.equal(v2.length,39);
- assert.equal(new Set(v1.map(r=>r.predictionId)).size,13);
+ assert.equal(new Set(v1.map(r=>r.predictionId)).size,26);
+ for(let n=1;n<=13;n++){
+  const chain=v1.filter(r=>r.matchNumber===n).sort((a,b)=>Date.parse(a.predictionConfirmedAt)-Date.parse(b.predictionConfirmedAt));
+  assert.equal(chain.length,2);
+  assert.equal(chain[0].revisionOf,null);
+  assert.equal(chain[1].revisionOf,chain[0].predictionId);
+  assert.equal(chain[1].predictionConfirmedAt,'2026-11-16T09:35:08.000Z');
+ }
  assert.equal(new Set(v2.map(r=>r.predictionId)).size,39);
  for(let n=1;n<=13;n++){
   const chain=latestForMatch(n);
@@ -123,5 +130,15 @@ test('00:39 official toto13 snapshot is archived as stale and excluded from V2',
  assert.equal(market0039.countConsistency.allPerMatchTotalsMatchPageSummary,true);
  assert.equal(market0039.countConsistency.allDisplayedPercentageTriplesSumTo100,true);
  assert.equal(market0039.v2Eligibility.eligible,false);
+ assert.equal(v2.length,39,'stale market snapshot must not append a V2 revision');
+});
+
+const market0132=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_toto13_official_market_snapshot_20261117T0132JST.json'),'utf8'));
+test('01:32 official toto13 snapshot is archived as stale and excluded from V2',()=>{
+ assert.equal(market0132.round,1673);assert.equal(market0132.marketType,'toto13');
+ assert.equal(market0132.pageDisplayAt,'2026-11-17T01:32:00+09:00');assert.equal(market0132.retrievedAt,'2026-11-17T01:44:22+09:00');
+ assert.equal(market0132.displayAgeSeconds,742);assert.equal(market0132.stale,true);assert.equal(market0132.totalVotesPageSummary,126685);
+ assert.equal(market0132.matches.length,13);assert.equal(market0132.countConsistency.allPerMatchTotalsMatchPageSummary,true);
+ assert.equal(market0132.countConsistency.allDisplayedPercentageTriplesSumTo100,true);assert.equal(market0132.v2Eligibility.eligible,false);
  assert.equal(v2.length,39,'stale market snapshot must not append a V2 revision');
 });

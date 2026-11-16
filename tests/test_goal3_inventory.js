@@ -394,10 +394,10 @@ for(const row of round1673Goal3Market1322.matches){
 }
 assert.strictEqual(round1673Goal3Market1322.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);
 assert.strictEqual(round1673Goal3Market1322.countConsistency.allSixPercentageVectorsSumTo100,true);
-const attempt1322=readJsonl('data/goal3_market_snapshot_attempts.jsonl').find(a=>a.snapshotPath==='reports/round_1673_goal3_official_market_snapshot_20261116T1322JST.json');
+const attempt1322=fs.readFileSync(path.join(__dirname,'..','data/goal3_market_snapshot_attempts.jsonl'),'utf8').trim().split(/\r?\n/).filter(Boolean).map(JSON.parse).find(a=>a.snapshotPath==='reports/round_1673_goal3_official_market_snapshot_20261116T1322JST.json');
 assert.ok(attempt1322);
 assert.strictEqual(attempt1322.attemptedAt,'2026-11-16T13:57:20+09:00');
 assert.strictEqual(attempt1322.captureStatus,'captured');
-const v2_1151After1322=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl');
+const v2_1151After1322=fs.readFileSync(path.join(__dirname,'..','predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl'),'utf8').trim().split(/\r?\n/).filter(Boolean);
 assert.strictEqual(v2_1151After1322.length,6,'stale 13:22 snapshot must not create another V2 revision');
 console.log('OK - round 1673 stale official GOAL3 market snapshot (13:22 JST), no V2 revision');

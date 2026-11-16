@@ -155,7 +155,7 @@ test('official 15:40 GOAL3 snapshot is archived as stale and excluded from V2',(
 });
 
 const market2033=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T2033JST.json'),'utf8'));
-const v2_0938=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0938JST.jsonl');
+const v2_0938_staleCheck=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0938JST.jsonl');
 test('20:33 official GOAL3 snapshot is archived as stale and excluded from the exploratory V2 chain',()=>{
  assert.equal(market2033.round,1673);
  assert.equal(market2033.marketType,'totoGOAL3');
@@ -168,5 +168,5 @@ test('20:33 official GOAL3 snapshot is archived as stale and excluded from the e
  assert.equal(market2033.matches.every(m=>m.sumVotes===22706&&m.sumPercent===100),true);
  assert.deepEqual(market2033.matches.map(m=>m.toto13MatchNumber),[1,1,2,2,5,5]);
  assert.equal(market2033.v2Eligibility.eligible,false);
- assert.equal(v2_0938.length,6,'no V2 revision is created from a stale official display');
+ assert.equal(v2_0938_staleCheck.length,6,'no V2 revision is created from a stale official display');
 });

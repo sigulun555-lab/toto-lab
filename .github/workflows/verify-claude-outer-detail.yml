@@ -8,6 +8,7 @@ on:
       - ".github/workflows/verify-claude-outer-detail.yml"
       - "analysis/goal3_outer_detail/claude_input_manifest_2026-11-16.json"
       - "analysis/goal3_outer_detail/verify_reproduction.py"
+      - "analysis/goal3_outer_detail/diagnose_current_cohort.py"
   pull_request:
     branches: [main]
     paths:

@@ -24,3 +24,11 @@ assert.equal(buildRecords(snapshot, original.concat(result.records)).records.len
 assert.throws(() => buildRecords({ ...snapshot, generatedAt: '2026-11-01T00:00:00Z' }, original), /sales deadline/);
 assert.throws(() => buildRecords({ ...snapshot, predictions: snapshot.predictions.slice(0, 2) }, original), /Expected 3/);
 console.log('OK - GPT GOAL3 sync appends six revisions, preserves probabilities, is idempotent, and rejects post-deadline snapshots');
+
+const fs = require('node:fs');
+const path = require('node:path');
+const syncWorkflow = fs.readFileSync(path.join(__dirname, '..', '.github/workflows/sync-gpt-goal3.yml'), 'utf8');
+assert.match(syncWorkflow, /id: sync_changes/, 'workflow must expose the synchronization change detector');
+assert.match(syncWorkflow, /git status --porcelain -- predictions\//, 'workflow must detect tracked and untracked prediction changes');
+assert.match(syncWorkflow, /if: steps\.sync_changes\.outputs\.changed == 'true'/, 'no-op runs must skip create-pull-request to avoid rewriting an unchanged PR branch');
+console.log('OK - no-op GOAL3 sync runs skip pull-request branch updates');

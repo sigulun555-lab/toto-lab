@@ -25,17 +25,14 @@ def check_inputs(manifest, gpt_root: str, claude_root: str) -> None:
     claude = manifest["claude"]
     assert git_value(gpt_root, "HEAD") == gpt["commit"], "GPT checkout commit mismatch"
     assert git_value(claude_root, "HEAD") == claude["commit"], "Claude checkout commit mismatch"
-
     for path, expected in gpt["inputs"].items():
         actual = git_value(gpt_root, "HEAD:" + path)
         assert actual == expected, f"GPT input blob mismatch: {path}: {actual}"
-
     for path_key, sha_key in (("scriptPath", "scriptBlobSha"), ("referencePath", "referenceBlobSha")):
         path = claude[path_key]
         actual = git_value(claude_root, "HEAD:" + path)
         expected = claude[sha_key]
         assert actual == expected, f"Claude pinned blob mismatch: {path}: {actual}"
-
     print("Pinned commits and all six Git blob SHAs verified.")
 
 
@@ -50,7 +47,6 @@ def validate_rows(obj, expected, label):
     assert len(keys) == expected["targets"], f"{label}: duplicate target key"
     assert len(matches) == expected["matches"], f"{label}: match count {len(matches)}"
     assert len(dates) == expected["dates"], f"{label}: date count {len(dates)}"
-
     per_match = defaultdict(set)
     for row in rows:
         assert row["cutoff_exclusive"] == row["date"]
@@ -80,11 +76,12 @@ def bootstrap(rows, field: str):
 
 
 def summarize(rows):
-    mean_b = float(np.mean([r["dB"] for r in rows]))
-    mean_l = float(np.mean([r["dL"] for r in rows]))
-    ci_b = bootstrap(rows, "dB")
-    ci_l = bootstrap(rows, "dL")
-    return mean_b, ci_b, mean_l, ci_l
+    return (
+        float(np.mean([r["dB"] for r in rows])),
+        bootstrap(rows, "dB"),
+        float(np.mean([r["dL"] for r in rows])),
+        bootstrap(rows, "dL"),
+    )
 
 
 def check_expected(actual, expected, label):
@@ -104,20 +101,16 @@ def check_output(manifest, generated_path: str, claude_root: str, log_path: str)
     reference_path = str(Path(claude_root) / manifest["claude"]["referencePath"])
     historical = load_json(reference_path)
     current = load_json(generated_path)
-
     old_cfg = manifest["protocol"]["historicalReference"]
     new_cfg = manifest["protocol"]["currentReproduction"]
 
     old_rows, old_keys = validate_rows(historical, old_cfg, "historical Claude reference")
     new_rows, new_keys = validate_rows(current, new_cfg, "current clean-checkout reproduction")
-
     old_summary = summarize(old_rows)
     new_summary = summarize(new_rows)
     check_expected(old_summary, old_cfg["expected"], "historical Claude reference")
     check_expected(new_summary, new_cfg["expected"], "current clean-checkout reproduction")
 
-    # Cohorts differ because the historical artifact predates the current pinned 480-row history.
-    # Report overlap and exact equality without asserting same-input parity.
     old_by_key = {(r["date"], r["match"], r["side"]): r for r in old_rows}
     new_by_key = {(r["date"], r["match"], r["side"]): r for r in new_rows}
     common = old_keys & new_keys
@@ -128,16 +121,13 @@ def check_output(manifest, generated_path: str, claude_root: str, log_path: str)
         if a == b:
             exact_rows += 1
         for name in ("p_k6", "p_k10"):
-            max_probability_delta = max(
-                max_probability_delta,
-                max(abs(x-y) for x, y in zip(a[name], b[name]))
-            )
+            max_probability_delta = max(max_probability_delta, max(abs(x-y) for x, y in zip(a[name], b[name])))
 
     log = Path(log_path).read_text(encoding="utf-8")
     assert "targets 480 dates 19 matches 240" in log
     assert "date-block 95% CI" in log
-
     digest = hashlib.sha256(Path(generated_path).read_bytes()).hexdigest()
+
     print(f"Historical Claude reference: {len(old_rows)} targets / {len(old_keys)//2} matches / {len({r['date'] for r in old_rows})} dates")
     print(f"  ΔBrier={old_summary[0]:.14f}; 95% CI={old_summary[1]}")
     print(f"  ΔLogLoss={old_summary[2]:.14f}; 95% CI={old_summary[3]}")
@@ -147,7 +137,7 @@ def check_output(manifest, generated_path: str, claude_root: str, log_path: str)
     print(f"Historical/current common target keys={len(common)}/{len(old_keys)}; exactly equal rows={exact_rows}; max common-row probability delta={max_probability_delta:.12g}")
     print(f"Generated JSON SHA-256={digest}")
     print("Probability simplex, home/away pairing, unique keys, and date cutoffs: PASS")
-    print("Historical and current cohorts were verified separately; no same-input equivalence is claimed.")
+    print("Historical and current cohorts verified separately; no same-input equivalence is claimed.")
 
 
 def main():
@@ -160,7 +150,6 @@ def main():
     ap.add_argument("--generated")
     ap.add_argument("--log")
     args = ap.parse_args()
-
     manifest = load_json(args.manifest)
     if args.check_inputs:
         check_inputs(manifest, args.gpt_root, args.claude_root)

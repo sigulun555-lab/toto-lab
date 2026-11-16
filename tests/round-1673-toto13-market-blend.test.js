@@ -109,3 +109,19 @@ test('21:45 official toto13 snapshot is archived as stale and excluded from V2',
  assert.equal(v2.length,39,'stale market snapshot must not append a V2 revision');
  for(let n=1;n<=13;n++) assert.equal(latestForMatch(n).length,3);
 });
+
+const market0039=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_toto13_official_market_snapshot_20261117T0039JST.json'),'utf8'));
+test('00:39 official toto13 snapshot is archived as stale and excluded from V2',()=>{
+ assert.equal(market0039.round,1673);
+ assert.equal(market0039.marketType,'toto13');
+ assert.equal(market0039.pageDisplayAt,'2026-11-17T00:39:00+09:00');
+ assert.equal(market0039.retrievedAt,'2026-11-17T01:33:22+09:00');
+ assert.equal(market0039.displayAgeSeconds,3262);
+ assert.equal(market0039.stale,true);
+ assert.equal(market0039.totalVotesPageSummary,123609);
+ assert.equal(market0039.matches.length,13);
+ assert.equal(market0039.countConsistency.allPerMatchTotalsMatchPageSummary,true);
+ assert.equal(market0039.countConsistency.allDisplayedPercentageTriplesSumTo100,true);
+ assert.equal(market0039.v2Eligibility.eligible,false);
+ assert.equal(v2.length,39,'stale market snapshot must not append a V2 revision');
+});

@@ -33,6 +33,15 @@ assert.ok(verdyRows.every((row) => row.status === 'unknown'), 'do not infer matc
 assert.ok(verdyRows.every((row) => row.sourceUrl === 'https://www.verdy.co.jp/news/15208'));
 assert.ok(verdyRows.every((row) => row.sourceAt === '2026-09-10'));
 
+
+const mihira = rows.filter((row) =>
+  row.matchNumber === 10 && row.team === '甲府' && row.player === '三平 和司'
+);
+assert.strictEqual(mihira.length, 1, 'record Kofu official injury update');
+assert.strictEqual(mihira[0].status, 'unknown', 'do not infer 11/21 availability from 11/02 injury notice');
+assert.strictEqual(mihira[0].sourceUrl, 'https://www.ventforet.jp/sp/news/mobile_presents/525697');
+assert.strictEqual(mihira[0].sourceAt, '2026-11-02');
+
 const exactKeys = rows.map((row) => [
   row.round, row.matchNumber, row.team, row.player, row.status, row.recordedAt
 ].join('|'));

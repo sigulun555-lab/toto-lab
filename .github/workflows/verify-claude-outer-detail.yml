@@ -78,10 +78,10 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: claude-goal3-outer-detail-clean-checkout-\${{ github.sha }}
+          name: claude-goal3-outer-detail-clean-checkout-${{ github.sha }}
           path: |
-            \${{ runner.temp }}/goal3_outer_matches.json
-            \${{ runner.temp }}/reproduction.log
+            ${{ runner.temp }}/goal3_outer_matches.json
+            ${{ runner.temp }}/reproduction.log
             toto-lab/analysis/goal3_outer_detail/claude_input_manifest_2026-11-16.json
           if-no-files-found: warn
           retention-days: 30

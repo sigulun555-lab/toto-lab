@@ -25,3 +25,20 @@ assert.strictEqual(round1673Goal3Market1810.v2Eligibility.eligible,false);
 const v2After1810=fs.readFileSync(path.join(__dirname,'..','predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl'),'utf8').trim().split(/\r?\n/).filter(Boolean);
 assert.strictEqual(v2After1810.length,6,'stale 18:10 snapshot must not create a V2 revision');
 console.log('OK - round 1673 stale official GOAL3 market snapshot (18:10 JST), no V2 revision');
+
+
+const goal3Market1943=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261117T1943JST.json'),'utf8'));
+test('19:43 official GOAL3 snapshot is stale history only and reconciles six four-category team-sides',()=>{
+ assert.equal(goal3Market1943.round,1673);assert.equal(goal3Market1943.marketType,'totoGOAL3');
+ assert.equal(goal3Market1943.pageDisplayAt,'2026-11-17T19:43:00+09:00');assert.equal(goal3Market1943.retrievedAt,'2026-11-17T20:13:02+09:00');
+ assert.equal(goal3Market1943.displayAgeSeconds,1802);assert.equal(goal3Market1943.stale,true);assert.equal(goal3Market1943.totalVotesPageSummary,32833);
+ assert.equal(goal3Market1943.matches.length,6);assert.deepEqual(goal3Market1943.categoryOrder,['0','1','2','3+']);
+ assert.deepEqual(goal3Market1943.matches.map(m=>m.toto13MatchNumber),[1,1,2,2,5,5]);
+ assert.deepEqual(goal3Market1943.matches.map(m=>m.team),['町田','長崎','広島','横浜FM','Ｇ大阪','岡山']);
+ assert.equal(goal3Market1943.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);
+ assert.equal(goal3Market1943.countConsistency.allSixPercentageVectorsSumTo100,true);
+ assert.ok(goal3Market1943.matches.every(m=>m.sumVotes===32833&&Math.abs(m.sumPercent-100)<1e-8));
+ assert.ok(goal3Market1943.matches.every(m=>m.voteCounts.reduce((a,b)=>a+b,0)===32833));
+ assert.ok(goal3Market1943.matches.every(m=>Math.abs(m.percentages.reduce((a,b)=>a+b,0)-100)<1e-8));
+ assert.equal(goal3Market1943.v2Eligibility.eligible,false);
+});

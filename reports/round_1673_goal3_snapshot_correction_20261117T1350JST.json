@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "round": 1673,
+  "marketType": "totoGOAL3",
+  "recordedAt": "2026-11-17T13:50:54+09:00",
+  "status": "superseded_unverified",
+  "priorSnapshotPath": "reports/round_1673_goal3_official_market_snapshot_20261117T1342JST.json",
+  "priorSnapshotClaimedDisplayAt": "2026-11-17T13:42:00+09:00",
+  "priorSnapshotClaimedTotalVotes": 28585,
+  "correctionReason": "The earlier 13:42/28,585 record cannot be reproduced from the currently visible official page response. A direct re-open of the same official URL at 13:47 returned an older 12:53/28,072 display, then the direct 13:50 re-open returned 13:50/28,759. Because the 13:42 response is not independently visible/reproducible in the retrieved source output, retain its file for audit but mark it unverified and exclude it from V2 or current-market claims.",
+  "intermediateRegressionAttempt": {
+    "pageDisplayAt": "2026-11-17T12:53:00+09:00",
+    "retrievedAt": "2026-11-17T13:47:05+09:00",
+    "totalVotesPageSummary": 28072,
+    "captureStatus": "stale_regressed_display"
+  },
+  "verifiedReplacementSnapshotPath": "reports/round_1673_goal3_official_market_snapshot_20261117T1350JST.json",
+  "verifiedReplacement": {
+    "pageDisplayAt": "2026-11-17T13:50:00+09:00",
+    "retrievedAt": "2026-11-17T13:50:54+09:00",
+    "totalVotesPageSummary": 28759,
+    "teamSideCount": 6,
+    "allTeamSideTotalsReconcile": true,
+    "allCategoryVectorsSumTo100": true
+  },
+  "safety": {
+    "priorSnapshotDeleted": false,
+    "priorSnapshotOverwritten": false,
+    "existingPredictionsChanged": false,
+    "v2Generated": false,
+    "mainModified": false
+  }
+}

@@ -198,3 +198,18 @@ test('19:36 official toto13 snapshot is archived with raw count mismatches and e
  assert.equal(market1936.countConsistency.allDisplayedPercentageTriplesSumTo100,true);
  assert.equal(market1936.v2Eligibility.eligible,false);assert.equal(v2.length,39,'stale 19:36 snapshot must not append V2');
 });
+
+
+const market2010=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_toto13_official_market_snapshot_20261117T2010JST.json'),'utf8'));
+test('20:10 official toto13 snapshot is fresh and reconciled; no V2 is synthesized without a runnable generator',()=>{
+ assert.equal(market2010.round,1673);assert.equal(market2010.marketType,'toto13');
+ assert.equal(market2010.pageDisplayAt,'2026-11-17T20:10:00+09:00');assert.equal(market2010.retrievedAt,'2026-11-17T20:13:02+09:00');
+ assert.equal(market2010.displayAgeSeconds,182);assert.equal(market2010.stale,false);assert.equal(market2010.totalVotesPageSummary,166048);
+ assert.equal(market2010.matches.length,13);assert.equal(market2010.countConsistency.allThirteenMatchTotalsMatchPageSummary,true);
+ assert.equal(market2010.countConsistency.allDisplayedPercentageTriplesSumTo100,true);
+ assert.ok(market2010.matches.every(m=>m.sumVotes===166048&&m.differenceFromSummaryVotes===0));
+ assert.ok(market2010.matches.every(m=>Math.abs(m.percentages.reduce((a,b)=>a+b,0)-100)<1e-8));
+ assert.equal(market2010.v2Eligibility.eligible,false);
+ assert.equal(v2.length,39,'fresh snapshot is archived but no unimplemented V2 generator is synthesized');
+ for(let n=1;n<=13;n++)assert.equal(latestForMatch(n).length,3);
+});

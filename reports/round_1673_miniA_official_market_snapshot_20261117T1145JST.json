@@ -27,7 +27,7 @@
       "away": "長崎",
       "voteCounts": [
         12148,
-        2937,
+        2986,
         2416
       ],
       "percentages": [
@@ -148,7 +148,7 @@
     }
   ],
   "countConsistency": {
-    "allPerMatchTotalsMatchPageSummary": false,
+    "allPerMatchTotalsMatchPageSummary": true,
     "allDisplayedPercentageTriplesSumTo100": true,
     "perMatchVoteTotalRange": {
       "min": 17550,

@@ -48,7 +48,6 @@ test('GOAL3 V2 uses the existing normalized 30/70 blend and preserves four-categ
 });
 
 
-const v2_0835=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0835JST.jsonl');
 const market_0835=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T0835JST.json'),'utf8'));
 test('official 08:35 GOAL3 snapshot has six reconciled team-side vectors and is fresh at retrieval',()=>{
  assert.equal(market_0835.round,1673);assert.equal(market_0835.marketType,'totoGOAL3');
@@ -75,7 +74,6 @@ test('08:35 GOAL3 V2 revisions append to 06:46 V2, retain the same V1 base and f
  }
 });
 
-const v2_0938=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0938JST.jsonl');
 const market_0938=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T0938JST.json'),'utf8'));
 test('official 09:38 GOAL3 snapshot has six reconciled team-side vectors and is fresh at retrieval',()=>{
  assert.equal(market_0938.round,1673);assert.equal(market_0938.marketType,'totoGOAL3');
@@ -103,7 +101,6 @@ test('09:38 GOAL3 V2 revisions append to 08:35 V2 and retain the same V1 base an
 });
 
 
-const v2_1151=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl');
 const market_1151=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T1151JST.json'),'utf8'));
 const attemptLog1151=readJsonl('data/goal3_market_snapshot_attempts.jsonl');
 test('official 11:51 GOAL3 snapshot has six reconciled team-side vectors and is fresh at retrieval',()=>{
@@ -229,9 +226,6 @@ const market1342Unverified=JSON.parse(fs.readFileSync(path.join(__dirname,'..','
 const market1350=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261117T1350JST.json'),'utf8'));
 const correction1350=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_snapshot_correction_20261117T1350JST.json'),'utf8'));
 const attempts1350=readJsonl('data/goal3_market_snapshot_attempts.jsonl');
-const v2_0835=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0835JST.jsonl');
-const v2_0938=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0938JST.jsonl');
-const v2_1151=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl');
 test('prior 13:42 GOAL3 record is retained but explicitly marked unverified; 12:53 stale regression is logged',()=>{
  assert.equal(market1342Unverified.round,1673);
  assert.equal(correction1350.status,'superseded_unverified');

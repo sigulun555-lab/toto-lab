@@ -9,8 +9,15 @@ const v2=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0646JST
 const market=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T0646JST.json'),'utf8'));
 const baselineV1=()=>{const m=new Map();for(const r of v1){if(r.predictionConfirmedAt!=='2026-11-15T18:49:33.391Z')continue;const k=r.matchNumber+'|'+(r.isHome?'home':'away');m.set(k,r);}return m;};
 test('round 1673 GOAL3 has six V1 team-side chains and six V2 revisions referencing the frozen 18:49 V1 baseline',()=>{
- assert.equal(v1.length,36);assert.equal(new Set(v1.map(r=>r.predictionId)).size,36);
+ assert.equal(v1.length,42);assert.equal(new Set(v1.map(r=>r.predictionId)).size,42);
  const latestSync=v1.filter(r=>r.predictionConfirmedAt==='2026-11-16T06:25:20.060Z');assert.equal(latestSync.length,6);
+ const latestByKey=new Map(latestSync.map(r=>[r.matchNumber+'|'+(r.isHome?'home':'away'),r]));
+ const refreshed=v1.filter(r=>r.predictionConfirmedAt==='2026-11-16T21:59:16.594Z');assert.equal(refreshed.length,6);
+ for(const r of refreshed){
+  const k=r.matchNumber+'|'+(r.isHome?'home':'away');
+  assert.equal(r.revisionOf,latestByKey.get(k).predictionId);
+  assert.equal(r.round,1673);assert.equal(r.marketType,'totoGOAL3');
+ }
  assert.equal(v2.length,6);assert.equal(new Set(v2.map(r=>r.predictionId)).size,6);
  const latest=baselineV1();assert.equal(latest.size,6);
  for(const r of v2){const k=r.matchNumber+'|'+(r.isHome?'home':'away');assert.equal(r.revisionOf,latest.get(k).predictionId);assert.equal(r.round,1673);assert.equal(r.marketType,'totoGOAL3');}

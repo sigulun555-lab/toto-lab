@@ -91,6 +91,14 @@ jobs:
           find predictions -maxdepth 1 -type f -name '*_ChatGPT_goal3.jsonl' -print0 |
             while IFS= read -r -d '' file; do cp "$file" "$tmpdir/"; done
 
+          # The sync script may have modified tracked JSONL files and created
+          # untracked JSONL files. The verified union is saved above, so restore
+          # the checkout before switching to the fetched remote sync branch.
+          # Without this cleanup, git checkout -B can fail with "local changes
+          # would be overwritten" when main and the sync branch differ.
+          git restore --worktree --staged -- predictions/
+          git clean -fd -- predictions/
+
           git fetch --no-tags origin main
           if git ls-remote --exit-code --heads origin "$SYNC_BRANCH" >/dev/null 2>&1; then
             git fetch --no-tags origin "$SYNC_BRANCH"

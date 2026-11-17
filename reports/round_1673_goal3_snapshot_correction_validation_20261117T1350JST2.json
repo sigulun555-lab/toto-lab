@@ -12,6 +12,14 @@
     "cause": "The correction test redeclared v2_0835/v2_0938/v2_1151 constants already defined earlier in the test file."
   },
   "correctionCommit": "98c38fcd6c9932a1ba63bb1ef0c79d04f3c7f513",
-  "correction": "Removed duplicate const declarations and reused the existing parsed V2 fixtures; no prediction or market data changed.",
-  "nextValidation": "Fresh pull_request validation required on this commit."
+  "correction": "Restored the three shared parsed V2 fixture declarations at the top of the test file; no prediction or market data changed.",
+  "nextValidation": "Fresh pull_request validation required on this commit.",
+  "priorRun2": {
+    "runNumber": 646,
+    "runId": 44020219531,
+    "headSha": "98c38fcd6c9932a1ba63bb1ef0c79d04f3c7f513",
+    "conclusion": "failure",
+    "cause": "The prior cleanup removed shared v2_0835/v2_0938/v2_1151 declarations used by earlier tests; the snapshot correction assertions themselves were not the failure."
+  },
+  "correctedTestCommit": "fc0bcec89bef4044fb2736f34b6626ac8de7f789"
 }

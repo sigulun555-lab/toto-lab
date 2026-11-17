@@ -222,3 +222,18 @@ test('09:47 official GOAL3 snapshot is archived as stale, six-team-side complete
  assert.equal(new Set(attempts_0947.map(a=>a.attemptedAt)).size,attempts_0947.length);
  assert.equal(v2_1151.length,6,'stale 09:47 market snapshot must not append a V2 revision');
 });
+
+
+const market1342=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261117T1342JST.json'),'utf8'));
+const attempts1342=readJsonl('data/goal3_market_snapshot_attempts.jsonl');
+test('13:42 official GOAL3 snapshot is fresh, six team-side vectors reconcile, and no unverified V2 is generated',()=>{
+ assert.equal(market1342.round,1673);assert.equal(market1342.marketType,'totoGOAL3');
+ assert.equal(market1342.pageDisplayAt,'2026-11-17T13:42:00+09:00');assert.equal(market1342.retrievedAt,'2026-11-17T13:44:16+09:00');
+ assert.equal(market1342.displayAgeSeconds,136);assert.equal(market1342.stale,false);assert.equal(market1342.totalVotesPageSummary,28585);
+ assert.deepEqual(market1342.categoryOrder,['0','1','2','3+']);assert.equal(market1342.matches.length,6);
+ assert.equal(market1342.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);assert.equal(market1342.countConsistency.allSixPercentageVectorsSumTo100,true);
+ assert.equal(market1342.matches.every(m=>m.sumVotes===28585&&m.sumPercent===100),true);
+ assert.equal(market1342.v2Eligibility.eligible,false);assert.equal(v1.length,42);assert.equal(v2.length,24);
+ assert.equal(attempts1342.at(-1).snapshotPath,'reports/round_1673_goal3_official_market_snapshot_20261117T1342JST.json');
+ assert.equal(attempts1342.at(-1).totalVotesPageSummary,28585);
+});

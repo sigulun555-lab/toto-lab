@@ -6,6 +6,9 @@ const path=require('node:path');
 const readJsonl=p=>fs.readFileSync(path.join(__dirname,'..',p),'utf8').trim().split(/\r?\n/).filter(Boolean).map(JSON.parse);
 const v1=readJsonl('predictions/round_1673_ChatGPT_goal3.jsonl');
 const v2=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0646JST.jsonl');
+const v2_0835=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0835JST.jsonl');
+const v2_0938=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0938JST.jsonl');
+const v2_1151=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl');
 const market=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T0646JST.json'),'utf8'));
 const baselineV1=()=>{const m=new Map();for(const r of v1){if(r.predictionConfirmedAt!=='2026-11-15T18:49:33.391Z')continue;const k=r.matchNumber+'|'+(r.isHome?'home':'away');m.set(k,r);}return m;};
 test('round 1673 GOAL3 has six V1 team-side chains and six V2 revisions referencing the frozen 18:49 V1 baseline',()=>{

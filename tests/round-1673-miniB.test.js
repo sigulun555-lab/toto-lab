@@ -117,3 +117,14 @@ test('13:43 official mini toto B snapshot is archived as stale and V2 remains he
  assert.equal(market1343.countConsistency.allPerMatchTotalsMatchPageSummary,true);assert.equal(market1343.countConsistency.allDisplayedPercentageTriplesSumTo100,true);
  assert.equal(market1343.v2Eligibility.eligible,false);assert.equal(rows.length,5);
 });
+
+
+const market1810B=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_miniB_official_market_snapshot_20261117T1810JST.json'),'utf8'));
+test('18:10 official mini toto B snapshot is archived as stale and V2 remains held',()=>{
+ assert.equal(market1810B.round,1673);assert.equal(market1810B.product,'mini toto B');
+ assert.equal(market1810B.pageDisplayAt,'2026-11-17T18:10:00+09:00');assert.equal(market1810B.retrievedAt,'2026-11-17T19:45:06+09:00');
+ assert.equal(market1810B.displayAgeSeconds,5706);assert.equal(market1810B.stale,true);assert.equal(market1810B.totalVotesPageSummary,18134);
+ assert.deepEqual(market1810B.matches.map(m=>m.productMatchNumber),[1,2,3,4,5]);assert.deepEqual(market1810B.matches.map(m=>m.toto13MatchNumber),[6,7,8,9,10]);
+ assert.equal(market1810B.countConsistency.allPerMatchTotalsMatchPageSummary,true);assert.equal(market1810B.countConsistency.allDisplayedPercentageTriplesSumTo100,true);
+ assert.equal(market1810B.v2Eligibility.eligible,false);assert.equal(rows.length,5);assert.equal(manifest.market.v2Status,'held_stale_official_market');
+});

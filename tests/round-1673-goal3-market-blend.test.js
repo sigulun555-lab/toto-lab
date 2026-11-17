@@ -233,7 +233,7 @@ test('13:42 official GOAL3 snapshot is fresh, six team-side vectors reconcile, a
  assert.deepEqual(market1342.categoryOrder,['0','1','2','3+']);assert.equal(market1342.matches.length,6);
  assert.equal(market1342.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);assert.equal(market1342.countConsistency.allSixPercentageVectorsSumTo100,true);
  assert.equal(market1342.matches.every(m=>m.sumVotes===28585&&m.sumPercent===100),true);
- assert.equal(market1342.v2Eligibility.eligible,false);assert.equal(v1.length,42);assert.equal(v2.length,6);const v2_1151=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl');assert.equal(v2_1151.length,24);assert.equal(new Set(v2_1151.map(r=>r.predictionId)).size,24);
+ assert.equal(market1342.v2Eligibility.eligible,false);assert.equal(v1.length,42);assert.equal(v2.length,6);const v2_1151=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl');assert.equal(v2_1151.length,6);assert.equal(new Set(v2_1151.map(r=>r.predictionId)).size,6);
  assert.equal(attempts1342.at(-1).snapshotPath,'reports/round_1673_goal3_official_market_snapshot_20261117T1342JST.json');
  assert.equal(attempts1342.at(-1).totalVotesPageSummary,28585);
 });

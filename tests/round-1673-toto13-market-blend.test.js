@@ -164,3 +164,14 @@ test('09:47 official toto13 snapshot is archived as stale and excluded from V2',
  assert.equal(market0947.countConsistency.allDisplayedPercentageTriplesSumTo100,true);assert.equal(market0947.v2Eligibility.eligible,false);
  assert.equal(v2.length,39,'stale 09:47 market snapshot must not append a V2 revision');
 });
+
+
+const market1127=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_toto13_official_market_snapshot_20261117T1127JST.json'),'utf8'));
+test('11:27 official toto13 snapshot is archived as stale and excluded from V2',()=>{
+ assert.equal(market1127.round,1673);assert.equal(market1127.marketType,'toto13');
+ assert.equal(market1127.pageDisplayAt,'2026-11-17T11:27:00+09:00');assert.equal(market1127.retrievedAt,'2026-11-17T11:39:41+09:00');
+ assert.equal(market1127.displayAgeSeconds,761);assert.equal(market1127.stale,true);assert.equal(market1127.totalVotesPageSummary,139374);
+ assert.equal(market1127.matches.length,13);assert.deepEqual(market1127.matches.map(m=>m.matchNumber),Array.from({length:13},(_,i)=>i+1));
+ assert.equal(market1127.countConsistency.allPerMatchTotalsMatchPageSummary,true);assert.equal(market1127.countConsistency.allDisplayedPercentageTriplesSumTo100,true);
+ assert.equal(market1127.v2Eligibility.eligible,false);assert.equal(v2.length,39,'stale 11:27 snapshot must not append V2');
+});

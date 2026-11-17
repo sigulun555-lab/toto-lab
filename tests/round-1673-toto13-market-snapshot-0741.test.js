@@ -11,8 +11,8 @@ test('07:41 official toto13 snapshot is archived as stale history and excluded f
   assert.equal(market.product, 'toto13');
   assert.equal(market.marketType, 'toto13');
   assert.equal(market.pageDisplayAt, '2026-11-18T07:41:00+09:00');
-  assert.equal(market.retrievedAt, '2026-11-18T07:52:45+09:00');
-  assert.equal(market.displayAgeSeconds, 705);
+  assert.equal(market.retrievedAt, '2026-11-18T07:59:06+09:00');
+  assert.equal(market.displayAgeSeconds, 1086);
   assert.equal(market.stale, true);
   assert.equal(market.totalVotesPageSummary, 183258);
   assert.equal(market.matches.length, 13);

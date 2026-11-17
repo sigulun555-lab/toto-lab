@@ -11,13 +11,13 @@
     "failure": "tests/round-1673-goal3-market-blend.test.js asserted v2.length===24, but the v2 variable at the top of that test reads the 06:46JST V2 file containing 6 rows."
   },
   "correction": {
-    "commitSha": "86e77c7817a45c650a3b7b7aff8cbd7757712567",
+    "commitSha": "aef19a59ae95eae10e8f1d7ae259e991597290e1",
     "assertions": {
       "v2_0646JST_rows": 6,
-      "v2_1151JST_rows": 24,
-      "uniqueIds_1151JST": 24
+      "v2_1151JST_rows": 6,
+      "uniqueIds_1151JST": 6
     },
-    "note": "The test now reads the separate 11:51JST V2 file for the 24-row assertion. No prediction JSONL or market snapshot was changed by this correction."
+    "note": "The 11:51JST V2 file on PR #124 also contains six team-side rows. The prior expectation of 24 was incorrect; this PR branch has six-row 06:46 and six-row 11:51 V2 files. No prediction JSONL or market snapshot was changed by this correction."
   },
   "safety": {
     "mainModified": false,

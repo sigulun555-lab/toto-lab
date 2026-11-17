@@ -229,15 +229,17 @@ const market1342Unverified=JSON.parse(fs.readFileSync(path.join(__dirname,'..','
 const market1350=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261117T1350JST.json'),'utf8'));
 const correction1350=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_snapshot_correction_20261117T1350JST.json'),'utf8'));
 const attempts1350=readJsonl('data/goal3_market_snapshot_attempts.jsonl');
+const attemptRegression1350=attempts1350.find(a=>a.attemptedAt==='2026-11-17T13:47:05+09:00');
+const attemptFresh1350=attempts1350.find(a=>a.attemptedAt==='2026-11-17T13:50:54+09:00');
 test('prior 13:42 GOAL3 record is retained but explicitly marked unverified; 12:53 stale regression is logged',()=>{
  assert.equal(market1342Unverified.round,1673);
  assert.equal(correction1350.status,'superseded_unverified');
  assert.equal(correction1350.priorSnapshotPath,'reports/round_1673_goal3_official_market_snapshot_20261117T1342JST.json');
  assert.equal(correction1350.intermediateRegressionAttempt.pageDisplayAt,'2026-11-17T12:53:00+09:00');
  assert.equal(correction1350.intermediateRegressionAttempt.totalVotesPageSummary,28072);
- assert.equal(attempts1350.at(-2).captureStatus,'stale_regressed_display');
- assert.equal(attempts1350.at(-2).sourceDisplayedTimestamp,'2026/11/17 12:53 JST');
- assert.equal(attempts1350.at(-2).totalVotesPageSummary,28072);
+ assert.ok(attemptRegression1350);assert.equal(attemptRegression1350.captureStatus,'stale_regressed_display');
+ assert.equal(attemptRegression1350.sourceDisplayedTimestamp,'2026/11/17 12:53 JST');
+ assert.equal(attemptRegression1350.totalVotesPageSummary,28072);
 });
 test('13:50 official GOAL3 snapshot is fresh and all six four-category team-side vectors reconcile',()=>{
  assert.equal(market1350.round,1673);assert.equal(market1350.marketType,'totoGOAL3');
@@ -246,8 +248,8 @@ test('13:50 official GOAL3 snapshot is fresh and all six four-category team-side
  assert.deepEqual(market1350.categoryOrder,['0','1','2','3+']);assert.equal(market1350.matches.length,6);
  assert.equal(market1350.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);assert.equal(market1350.countConsistency.allSixPercentageVectorsSumTo100,true);
  assert.equal(market1350.matches.every(m=>m.sumVotes===28759&&m.sumPercent===100),true);
- assert.equal(market1350.v2Eligibility.eligible,false);assert.equal(attempts1350.at(-1).snapshotPath,'reports/round_1673_goal3_official_market_snapshot_20261117T1350JST.json');
- assert.equal(attempts1350.at(-1).totalVotesPageSummary,28759);
+ assert.equal(market1350.v2Eligibility.eligible,false);assert.ok(attemptFresh1350);assert.equal(attemptFresh1350.snapshotPath,'reports/round_1673_goal3_official_market_snapshot_20261117T1350JST.json');
+ assert.equal(attemptFresh1350.totalVotesPageSummary,28759);
  assert.equal(v1.length,42);assert.equal(v2.length,6);
  assert.equal(v2_0835.length,6);assert.equal(v2_0938.length,6);assert.equal(v2_1151.length,6);
  assert.equal([v2,v2_0835,v2_0938,v2_1151].flat().length,24);

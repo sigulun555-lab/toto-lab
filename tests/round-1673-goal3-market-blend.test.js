@@ -194,7 +194,7 @@ test('08:56 official GOAL3 snapshot is fresh, six-team-side complete, and archiv
  assert.deepEqual(market_0856.categoryOrder,['0','1','2','3+']);assert.equal(market_0856.matches.length,6);
  assert.equal(market_0856.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);assert.equal(market_0856.countConsistency.allSixPercentageVectorsSumTo100,true);
  assert.deepEqual(market_0856.matches.map(m=>m.toto13MatchNumber),[1,1,2,2,5,5]);assert.equal(market_0856.v2Eligibility.eligible,false);
- assert.match(market_0856.v2Eligibility.reason,/no runnable.*V2 generator/i);
+ assert.match(market_0856.v2Eligibility.reason,/V2 revisionは生成せずsnapshotのみ追記/);
  const attempts=readJsonl('data/goal3_market_snapshot_attempts.jsonl');const a=attempts.find(x=>x.snapshotPath==='reports/round_1673_goal3_official_market_snapshot_20261117T0856JST.json');
  assert.ok(a);assert.equal(a.attemptedAt,market_0856.retrievedAt);assert.equal(a.captureStatus,'captured');
  assert.equal(readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl').length,6,'no V2 revision was synthesized');

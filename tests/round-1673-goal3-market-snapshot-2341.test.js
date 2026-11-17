@@ -2,7 +2,8 @@
 const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
 const market=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261117T2341JST.json'),'utf8'));
 const attempts=fs.readFileSync(path.join(__dirname,'..','data/goal3_market_snapshot_attempts.jsonl'),'utf8').trim().split(/\r?\n/).map(JSON.parse);
-const v2Files=['0646','0835','0938','1151'].map(t=>path.join(__dirname,'..','predictions',`round_1673_ChatGPT_goal3_market_blend_v2_${t}JST.jsonl'));
+const suffixes=['0646','0835','0938','1151'];
+const v2Files=suffixes.map(t=>path.join(__dirname,'..','predictions','round_1673_ChatGPT_goal3_market_blend_v2_'+t+'JST.jsonl'));
 const v2=v2Files.flatMap(p=>fs.readFileSync(p,'utf8').trim().split(/\r?\n/).map(JSON.parse));
 const attempt=attempts.find(x=>x.snapshotPath==='reports/round_1673_goal3_official_market_snapshot_20261117T2341JST.json');
 test('23:41 official totoGOAL3 snapshot is fresh, complete and reconciled; existing V2 remains unchanged',()=>{

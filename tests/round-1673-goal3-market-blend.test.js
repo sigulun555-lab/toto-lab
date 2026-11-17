@@ -224,16 +224,35 @@ test('09:47 official GOAL3 snapshot is archived as stale, six-team-side complete
 });
 
 
-const market1342=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261117T1342JST.json'),'utf8'));
-const attempts1342=readJsonl('data/goal3_market_snapshot_attempts.jsonl');
-test('13:42 official GOAL3 snapshot is fresh, six team-side vectors reconcile, and no unverified V2 is generated',()=>{
- assert.equal(market1342.round,1673);assert.equal(market1342.marketType,'totoGOAL3');
- assert.equal(market1342.pageDisplayAt,'2026-11-17T13:42:00+09:00');assert.equal(market1342.retrievedAt,'2026-11-17T13:44:16+09:00');
- assert.equal(market1342.displayAgeSeconds,136);assert.equal(market1342.stale,false);assert.equal(market1342.totalVotesPageSummary,28585);
- assert.deepEqual(market1342.categoryOrder,['0','1','2','3+']);assert.equal(market1342.matches.length,6);
- assert.equal(market1342.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);assert.equal(market1342.countConsistency.allSixPercentageVectorsSumTo100,true);
- assert.equal(market1342.matches.every(m=>m.sumVotes===28585&&m.sumPercent===100),true);
- assert.equal(market1342.v2Eligibility.eligible,false);assert.equal(v1.length,42);assert.equal(v2.length,6);const v2_1151=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl');assert.equal(v2_1151.length,6);assert.equal(new Set(v2_1151.map(r=>r.predictionId)).size,6);
- assert.equal(attempts1342.at(-1).snapshotPath,'reports/round_1673_goal3_official_market_snapshot_20261117T1342JST.json');
- assert.equal(attempts1342.at(-1).totalVotesPageSummary,28585);
+
+const market1342Unverified=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261117T1342JST.json'),'utf8'));
+const market1350=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261117T1350JST.json'),'utf8'));
+const correction1350=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_snapshot_correction_20261117T1350JST.json'),'utf8'));
+const attempts1350=readJsonl('data/goal3_market_snapshot_attempts.jsonl');
+const v2_0835=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0835JST.jsonl');
+const v2_0938=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_0938JST.jsonl');
+const v2_1151=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl');
+test('prior 13:42 GOAL3 record is retained but explicitly marked unverified; 12:53 stale regression is logged',()=>{
+ assert.equal(market1342Unverified.round,1673);
+ assert.equal(correction1350.status,'superseded_unverified');
+ assert.equal(correction1350.priorSnapshotPath,'reports/round_1673_goal3_official_market_snapshot_20261117T1342JST.json');
+ assert.equal(correction1350.intermediateRegressionAttempt.pageDisplayAt,'2026-11-17T12:53:00+09:00');
+ assert.equal(correction1350.intermediateRegressionAttempt.totalVotesPageSummary,28072);
+ assert.equal(attempts1350.at(-2).captureStatus,'stale_regressed_display');
+ assert.equal(attempts1350.at(-2).sourceDisplayedTimestamp,'2026/11/17 12:53 JST');
+ assert.equal(attempts1350.at(-2).totalVotesPageSummary,28072);
+});
+test('13:50 official GOAL3 snapshot is fresh and all six four-category team-side vectors reconcile',()=>{
+ assert.equal(market1350.round,1673);assert.equal(market1350.marketType,'totoGOAL3');
+ assert.equal(market1350.pageDisplayAt,'2026-11-17T13:50:00+09:00');assert.equal(market1350.retrievedAt,'2026-11-17T13:50:54+09:00');
+ assert.equal(market1350.displayAgeSeconds,54);assert.equal(market1350.stale,false);assert.equal(market1350.totalVotesPageSummary,28759);
+ assert.deepEqual(market1350.categoryOrder,['0','1','2','3+']);assert.equal(market1350.matches.length,6);
+ assert.equal(market1350.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);assert.equal(market1350.countConsistency.allSixPercentageVectorsSumTo100,true);
+ assert.equal(market1350.matches.every(m=>m.sumVotes===28759&&m.sumPercent===100),true);
+ assert.equal(market1350.v2Eligibility.eligible,false);assert.equal(attempts1350.at(-1).snapshotPath,'reports/round_1673_goal3_official_market_snapshot_20261117T1350JST.json');
+ assert.equal(attempts1350.at(-1).totalVotesPageSummary,28759);
+ assert.equal(v1.length,42);assert.equal(v2.length,6);
+ assert.equal(v2_0835.length,6);assert.equal(v2_0938.length,6);assert.equal(v2_1151.length,6);
+ assert.equal([v2,v2_0835,v2_0938,v2_1151].flat().length,24);
+ assert.equal(new Set([v2,v2_0835,v2_0938,v2_1151].flat().map(r=>r.predictionId)).size,24);
 });

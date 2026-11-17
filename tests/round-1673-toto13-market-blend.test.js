@@ -151,5 +151,5 @@ test('08:56 official toto13 snapshot is fresh and reconciled; no V2 is synthesiz
  assert.equal(market0856.displayAgeSeconds,75);assert.equal(market0856.stale,false);assert.equal(market0856.totalVotesPageSummary,133203);
  assert.equal(market0856.matches.length,13);assert.equal(market0856.countConsistency.allPerMatchTotalsMatchPageSummary,true);
  assert.equal(market0856.countConsistency.allDisplayedPercentageTriplesSumTo100,true);assert.equal(market0856.v2Eligibility.eligible,false);
- assert.match(market0856.v2Eligibility.reason,/no runnable.*V2 generator/i);assert.equal(v2.length,39,'fresh snapshot is archived but no unimplemented V2 is synthesized');
+ assert.match(market0856.v2Eligibility.reason,/V2 revisionは生成せずsnapshotのみ追記/);assert.equal(v2.length,39,'fresh snapshot is archived but no unimplemented V2 is synthesized');
 });

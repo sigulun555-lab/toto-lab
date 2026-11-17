@@ -13,12 +13,20 @@ GPT 側コメント（toto-lab PR #81、2026-11-17）の依頼に対応した、
 
 410行の control（blob 45295867…）とは別母集団です。混ぜていません。
 
-## 実行
+## 実行（推奨: 入力検査つきラッパー）
+    python3 -I run_checked.py <history.json のパス>
+    # SHA-256 と 429 行を検査し、不一致なら停止（fail closed）
+    # その後、正本 t1_t2_repro_rev2_0to10.py を無変更で実行
+
+直接実行する場合は次のとおりです。
     python3 -I t1_t2_repro_rev2_0to10.py <history.json のパス>
     # 出力: rev2_0to10_pred_*.csv（8 変種） → pred/ に格納
     python3 -I paired_boot.py <pred/ のパス>   # 日付単位 paired bootstrap（seed 20261117, 10,000 回）
 
-- スクリプトは正本（claude/t1-t2-429-check-20261104 の scripts/t1_t2/t1_t2_repro_rev2_0to10.py、blob 243f7166bcbd579a9133b108e58eec32b863b940）をそのまま使用。
+## 注意（訂正）
+- 正本スクリプト `t1_t2_repro_rev2_0to10.py`（blob 243f7166bcbd579a9133b108e58eec32b863b940）の docstring には「410行 control（blob 45295867…）」と書かれていますが、これは古い記述です。本作業の入力は 429 行（上記 SHA-256）です。スクリプト本体は変更していません（blob を固定するため）。
+- 正本は入力の SHA や行数を自身では検査しません。そのため `run_checked.py` を追加し、入力を固定しました。
+- `run_checked.py` の行数検査は、JSON 内で最も長いリストの件数を数えています。history.json の構造は未確認のため、これは暫定の検査です。
 - 正本の内部 bootstrap（boot 2,000 回・seed 1）は k6−k0 と T2 のみ。k10−k6 / k8−k6 の区間は paired_boot.py（seed 20261117、10,000 回）で別途計算。
 
 ## 指標（310試合・26日付）
@@ -44,3 +52,4 @@ GPT 側コメント（toto-lab PR #81、2026-11-17）の依頼に対応した、
 ## 留意点
 - 入力の history.json は全行の fetchedAt が共通の過去時刻（2026-11-03T23:21:25Z 付近）であり、各試合の当時の利用可能性は証明されていません。遡及的な参考値です。
 - 締切前記録（既存 shadow）との件数照合は本作業では行っていません。
+- W2 の manifest、PCG64 bootstrap、clean checkout 再実行、専用 CI は未実施です。

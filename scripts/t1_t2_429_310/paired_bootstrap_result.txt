@@ -1,0 +1,37 @@
+{
+ "k10-k6 LogLoss": {
+  "mean": -0.0066,
+  "ci_lo": -0.0161,
+  "ci_hi": 0.0021
+ },
+ "k10-k6 Brier": {
+  "mean": -0.0039,
+  "ci_lo": -0.01,
+  "ci_hi": 0.0019
+ },
+ "k8-k6 LogLoss": {
+  "mean": -0.0044,
+  "ci_lo": -0.0099,
+  "ci_hi": 0.0006
+ },
+ "k8-k6 Brier": {
+  "mean": -0.0026,
+  "ci_lo": -0.006,
+  "ci_hi": 0.0007
+ },
+ "k6-k0 LogLoss": {
+  "mean": -0.0676,
+  "ci_lo": -0.1191,
+  "ci_hi": -0.0262
+ },
+ "k6-k0 Brier": {
+  "mean": -0.0311,
+  "ci_lo": -0.0525,
+  "ci_hi": -0.0127
+ }
+}
+n 310 dates 26
+k0 LL 1.1229 Brier 0.6671 acc 0.4419
+k6 LL 1.0552 Brier 0.636 acc 0.4645
+k8 LL 1.0508 Brier 0.6334 acc 0.4774
+k10 LL 1.0486 Brier 0.6321 acc 0.4806

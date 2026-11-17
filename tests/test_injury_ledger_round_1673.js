@@ -50,6 +50,22 @@ assert.strictEqual(mihira[0].status, 'unknown', 'do not infer 11/21 availability
 assert.strictEqual(mihira[0].sourceUrl, 'https://www.ventforet.jp/sp/news/mobile_presents/525697');
 assert.strictEqual(mihira[0].sourceAt, '2026-11-02');
 
+
+const kyotoNov17 = [
+  { player: '加藤 蓮', surgery: '2026-11-11', recovery: /6〜8か月/ },
+  { player: 'エンリケ・トレヴィザン', surgery: '2026-11-05', recovery: /3か月/ },
+  { player: 'ファンティーニ 燦', surgery: '2026-10-21', recovery: /3〜4か月/ },
+];
+for (const item of kyotoNov17) {
+  const matches = rows.filter((row) =>
+    row.matchNumber === 3 && row.team === '京都' && row.player === item.player &&
+    row.status === 'confirmed_out' && row.sourceUrl === 'https://www.sanga-fc.jp/news/detail/22137' &&
+    row.sourceAt === '2026-11-17' && row.recordedAt === '2026-11-17T23:58:09+09:00' &&
+    row.retrievedAt === '2026-11-17T23:58:09+09:00' && row.note.includes(item.surgery) && item.recovery.test(row.note)
+  );
+  assert.strictEqual(matches.length, 1, 'append one official Kyoto injury record for ' + item.player);
+}
+
 const exactKeys = rows.map((row) => [
   row.round, row.matchNumber, row.team, row.player, row.status, row.recordedAt
 ].join('|'));

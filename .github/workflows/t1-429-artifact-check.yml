@@ -1,0 +1,83 @@
+name: Validate pinned toto13 T1/T2 429-row reproduction
+
+on:
+  push:
+    branches:
+      - gpt/t1-429-wrapper-acceptance-20261118
+    paths:
+      - "scripts/t1_t2_429_310/**"
+      - ".github/workflows/t1-429-artifact-check.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout research branch
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Record environment
+        run: |
+          python --version
+          python -c "import platform; print(platform.platform())"
+          git rev-parse HEAD
+
+      - name: Test explicit history schema guard
+        run: |
+          python -m unittest discover \
+            -s scripts/t1_t2_429_310 \
+            -p "test_run_checked.py" -v
+
+      - name: Fetch immutable canonical 429-row input
+        env:
+          INPUT_URL: https://raw.githubusercontent.com/sigulun555-lab/gpt/2309d08e3a449c9271fa3194ccf3fbc4799f9215/data/history.json
+        run: |
+          curl --fail --location --silent --show-error "$INPUT_URL" \
+            --output "$RUNNER_TEMP/history.json"
+          echo "29b1cb2110b91a8a8d1f1bc5ced504b3dd8a0e86ee3beddb111a5f2309af4f19  $RUNNER_TEMP/history.json" \
+            | sha256sum --check
+
+      - name: Run canonical script through the checked wrapper
+        run: |
+          mkdir -p "$RUNNER_TEMP/t1-generated"
+          cd "$RUNNER_TEMP/t1-generated"
+          python -I "$GITHUB_WORKSPACE/scripts/t1_t2_429_310/run_checked.py" \
+            "$RUNNER_TEMP/history.json"
+
+      - name: Verify all regenerated artifacts
+        run: |
+          python -I scripts/t1_t2_429_310/verify_artifacts.py \
+            "$RUNNER_TEMP/t1-generated" \
+            scripts/t1_t2_429_310/SHA256SUMS_pred.txt
+
+      - name: Write reproduction manifest
+        run: |
+          {
+            echo "repository=sigulun555-lab/toto-lab"
+            echo "branch=$GITHUB_REF_NAME"
+            echo "commit=$GITHUB_SHA"
+            echo "input_repository=sigulun555-lab/gpt"
+            echo "input_commit=2309d08e3a449c9271fa3194ccf3fbc4799f9215"
+            echo "input_path=data/history.json"
+            echo "input_git_blob=fb6f11ec4ceae82c2c610891a1c294f2aa8f38bd"
+            echo "input_sha256=29b1cb2110b91a8a8d1f1bc5ced504b3dd8a0e86ee3beddb111a5f2309af4f19"
+            echo "command=python -I scripts/t1_t2_429_310/run_checked.py $RUNNER_TEMP/history.json"
+            python --version
+            python -c "import platform; print(platform.platform())"
+          } > "$RUNNER_TEMP/t1-generated/reproduction-manifest.txt"
+
+      - name: Upload regenerated research artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: toto13-t1-429-row-clean-reproduction
+          path: ${{ runner.temp }}/t1-generated/
+          if-no-files-found: error
+          retention-days: 14

@@ -201,5 +201,6 @@
     "eligible": false,
     "reason": "公式表示から1802秒経過し、5分更新案内を超過。履歴保存のみでV2 revisionには使用しない。"
   },
-  "interpretation": "公式第1673回totoGOAL3の3試合・6 team-side・各0/1/2/3+の4カテゴリ投票状況。stale履歴のみ。"
+  "interpretation": "公式第1673回totoGOAL3の3試合・6 team-side・各0/1/2/3+の4カテゴリ投票状況。stale履歴のみ。",
+  "stale": true
 }

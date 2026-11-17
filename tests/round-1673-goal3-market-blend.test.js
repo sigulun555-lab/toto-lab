@@ -11,14 +11,21 @@ const v2_0938=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_09
 const v2_1151=readJsonl('predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl');
 const market=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261116T0646JST.json'),'utf8'));
 const baselineV1=()=>{const m=new Map();for(const r of v1){if(r.predictionConfirmedAt!=='2026-11-15T18:49:33.391Z')continue;const k=r.matchNumber+'|'+(r.isHome?'home':'away');m.set(k,r);}return m;};
-test('round 1673 GOAL3 has six V1 team-side chains and six V2 revisions referencing the frozen 18:49 V1 baseline',()=>{
- assert.equal(v1.length,42);assert.equal(new Set(v1.map(r=>r.predictionId)).size,42);
+test('round 1673 GOAL3 preserves append-only V1 history through the 07:52 source revision and six V2 revisions referencing the frozen 18:49 V1 baseline',()=>{
+ assert.equal(v1.length,48);assert.equal(new Set(v1.map(r=>r.predictionId)).size,48);
  const latestSync=v1.filter(r=>r.predictionConfirmedAt==='2026-11-16T06:25:20.060Z');assert.equal(latestSync.length,6);
  const latestByKey=new Map(latestSync.map(r=>[r.matchNumber+'|'+(r.isHome?'home':'away'),r]));
  const refreshed=v1.filter(r=>r.predictionConfirmedAt==='2026-11-16T21:59:16.594Z');assert.equal(refreshed.length,6);
  for(const r of refreshed){
   const k=r.matchNumber+'|'+(r.isHome?'home':'away');
   assert.equal(r.revisionOf,latestByKey.get(k).predictionId);
+  assert.equal(r.round,1673);assert.equal(r.marketType,'totoGOAL3');
+ }
+ const newest=v1.filter(r=>r.predictionConfirmedAt==='2026-11-17T07:52:36.644Z');assert.equal(newest.length,6);
+ const refreshedByKey=new Map(refreshed.map(r=>[r.matchNumber+'|'+(r.isHome?'home':'away'),r]));
+ for(const r of newest){
+  const k=r.matchNumber+'|'+(r.isHome?'home':'away');
+  assert.equal(r.revisionOf,refreshedByKey.get(k).predictionId);
   assert.equal(r.round,1673);assert.equal(r.marketType,'totoGOAL3');
  }
  assert.equal(v2.length,6);assert.equal(new Set(v2.map(r=>r.predictionId)).size,6);

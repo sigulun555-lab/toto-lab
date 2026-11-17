@@ -13,7 +13,7 @@ test('21:25 official totoGOAL3 snapshot is archived as stale history and exclude
 
 
 // The 21:25 official snapshot must also have an append-only attempt-ledger entry.
-const attempts1673=fs.readFileSync(path.join(__dirname,'..','data','goal3_market_snapshot_attempts.jsonl'),'utf8').trim().split(/\\r?\\n/).map(JSON.parse);
+const attempts1673=fs.readFileSync(path.join(__dirname,'..','data','goal3_market_snapshot_attempts.jsonl'),'utf8').trim().split(/\r?\n/).map(JSON.parse);
 const attempt2125=attempts1673.find(x=>x.snapshotPath==='reports/round_1673_goal3_official_market_snapshot_20261117T2125JST.json');
 test('21:25 official GOAL3 snapshot has matching stale attempt-ledger entry',()=>{
  assert.ok(attempt2125);

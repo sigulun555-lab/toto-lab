@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "round": 1673,
   "pageDisplayAt": "2026-11-18T07:41:00+09:00",
-  "retrievedAt": "2026-11-18T07:52:45+09:00",
+  "retrievedAt": "2026-11-18T07:59:06+09:00",
   "refreshNotice": "5分毎",
-  "displayAgeSeconds": 705,
+  "displayAgeSeconds": 1086,
   "stale": true,
   "product": "toto13",
   "marketType": "toto13",
@@ -373,7 +373,7 @@
   },
   "v2Eligibility": {
     "eligible": false,
-    "reason": "公式ページ表示07:41 JSTから取得07:52:45 JSTまで705秒（11分45秒）経過し、5分更新案内を超過。stale履歴snapshotとして保存し、V2には使用しない。"
+    "reason": "公式ページ表示07:41 JSTから再取得07:59:06 JSTまで1,086秒（18分06秒）経過し、5分更新案内を超過。stale履歴snapshotとして保存し、V2には使用しない。"
   },
   "interpretation": "第1673回通常toto13の公式1/X/2投票状況ページから直接取得したstale履歴snapshot。13試合の口数・表示百分率はページ総計と整合。最新市場値とは扱わず、既存V1/V2予測は変更しない。"
 }

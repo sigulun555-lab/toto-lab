@@ -82,5 +82,5 @@ test('08:56 official mini toto B snapshot is fresh and reconciled; V2 remains wi
  assert.equal(market0856.displayAgeSeconds,75);assert.equal(market0856.stale,false);assert.equal(market0856.totalVotesPageSummary,14191);
  assert.deepEqual(market0856.matches.map(m=>m.productMatchNumber),[1,2,3,4,5]);assert.deepEqual(market0856.matches.map(m=>m.toto13MatchNumber),[6,7,8,9,10]);
  assert.equal(market0856.countConsistency.allPerMatchTotalsMatchPageSummary,true);assert.equal(market0856.countConsistency.allDisplayedPercentageTriplesSumTo100,true);
- assert.equal(market0856.v2Eligibility.eligible,false);assert.match(market0856.v2Eligibility.reason,/no runnable.*V2 generator/i);assert.equal(rows.length,5);
+ assert.equal(market0856.v2Eligibility.eligible,false);assert.match(market0856.v2Eligibility.reason,/V2 revisionは生成せずsnapshotのみ追記/);assert.equal(rows.length,5);
 });

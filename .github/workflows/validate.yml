@@ -16,3 +16,11 @@ jobs:
           node-version: 20
       - run: npm test
       - run: npm run check:teams
+      - name: Recompute round 1665 market-blend scoring report
+        run: npm run score:1665:blend
+      - name: Upload round 1665 scoring report for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: round-1665-market-blend-scoring-report
+          path: reports/round_1665_market_blend_comparison.json
+          if-no-files-found: error

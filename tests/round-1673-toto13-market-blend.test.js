@@ -213,3 +213,18 @@ test('20:10 official toto13 snapshot is fresh and reconciled; no V2 is synthesiz
  assert.equal(v2.length,39,'fresh snapshot is archived but no unimplemented V2 generator is synthesized');
  for(let n=1;n<=13;n++)assert.equal(latestForMatch(n).length,3);
 });
+
+
+const market2023=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_toto13_official_market_snapshot_20261117T2023JST.json'),'utf8'));
+test('20:23 official toto13 snapshot is fresh and reconciled; no V2 is synthesized without a runnable generator',()=>{
+ assert.equal(market2023.round,1673);assert.equal(market2023.marketType,'toto13');
+ assert.equal(market2023.pageDisplayAt,'2026-11-17T20:23:00+09:00');assert.equal(market2023.retrievedAt,'2026-11-17T20:23:52+09:00');
+ assert.equal(market2023.displayAgeSeconds,52);assert.equal(market2023.stale,false);assert.equal(market2023.totalVotesPageSummary,168608);
+ assert.equal(market2023.matches.length,13);assert.equal(market2023.countConsistency.allThirteenMatchTotalsMatchPageSummary,true);
+ assert.equal(market2023.countConsistency.allDisplayedPercentageTriplesSumTo100,true);
+ assert.ok(market2023.matches.every(m=>m.sumVotes===168608&&m.differenceFromSummaryVotes===0));
+ assert.ok(market2023.matches.every(m=>Math.abs(m.percentages.reduce((a,b)=>a+b,0)-100)<1e-8));
+ assert.equal(market2023.v2Eligibility.eligible,false);
+ assert.equal(v2.length,39,'fresh snapshot is archived but no unimplemented V2 generator is synthesized');
+ for(let n=1;n<=13;n++)assert.equal(latestForMatch(n).length,3);
+});

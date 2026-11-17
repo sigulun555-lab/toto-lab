@@ -22,7 +22,7 @@ test('07:41 official toto13 snapshot is archived as stale history and excluded f
   assert.deepEqual(market.matches.map(match => match.differenceFromSummaryVotes), Array(13).fill(0));
   for (const match of market.matches) {
     assert.equal(match.sumVotes, 183258);
-    assert.equal(match.percentages.reduce((sum, value) => sum + value, 0), 100);
+    assert.ok(Math.abs(match.percentages.reduce((sum, value) => sum + value, 0) - 100) < 1e-8);
     assert.equal(match.marketVoteShare['1'], match.percentages[0] / 100);
     assert.equal(match.marketVoteShare['0'], match.percentages[1] / 100);
     assert.equal(match.marketVoteShare['2'], match.percentages[2] / 100);

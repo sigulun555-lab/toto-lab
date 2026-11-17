@@ -15,13 +15,21 @@ const miyachi = rows.filter((row) =>
 const oldUnknown = miyachi.filter((row) => row.status === 'unknown');
 const confirmedOut = miyachi.filter((row) => row.status === 'confirmed_out');
 assert.strictEqual(oldUnknown.length, 1, 'preserve the earlier conditional unknown snapshot');
-assert.strictEqual(confirmedOut.length, 1, 'append one resolved confirmed-out snapshot');
-assert.ok(Date.parse(confirmedOut[0].recordedAt) > Date.parse(oldUnknown[0].recordedAt));
-assert.strictEqual(confirmedOut[0].sourceUrl, 'https://www.jleague.jp/news/article/35343/');
-assert.strictEqual(confirmedOut[0].resolutionSourceUrl, 'https://www.jleague.jp/match/leaguecup/2026/111503/');
-assert.strictEqual(confirmedOut[0].resolutionSourceAt, '2026-11-15');
-assert.strictEqual(confirmedOut[0].recordedAt, '2026-11-15T20:36:27+09:00');
-assert.match(confirmedOut[0].note, /鹿島3-2横浜FM/);
+assert.strictEqual(confirmedOut.length, 2, 'preserve the earlier resolution and append the latest official re-confirmation');
+const initialResolved = confirmedOut.find((row) => row.sourceUrl === 'https://www.jleague.jp/news/article/35343/');
+assert.ok(initialResolved);
+assert.ok(Date.parse(initialResolved.recordedAt) > Date.parse(oldUnknown[0].recordedAt));
+assert.strictEqual(initialResolved.resolutionSourceUrl, 'https://www.jleague.jp/match/leaguecup/2026/111503/');
+assert.strictEqual(initialResolved.resolutionSourceAt, '2026-11-15');
+assert.strictEqual(initialResolved.recordedAt, '2026-11-15T20:36:27+09:00');
+assert.match(initialResolved.note, /鹿島3-2横浜FM/);
+const latestResolved = confirmedOut.find((row) => row.sourceUrl === 'https://www.jleague.jp/news/article/35370/');
+assert.ok(latestResolved);
+assert.strictEqual(latestResolved.sourceAt, '2026-11-16T19:00:00+09:00');
+assert.strictEqual(latestResolved.recordedAt, '2026-11-17T11:39:41+09:00');
+assert.strictEqual(latestResolved.resolutionSourceUrl, 'https://www.jleague.jp/match/leaguecup/2026/111503/stats/');
+assert.strictEqual(latestResolved.resolutionSourceAt, '2026-11-15T15:00:00+09:00');
+assert.match(latestResolved.note, /2戦合計6-4/);
 
 
 const verdyPlayers = new Set(['宮原 和也', '森田 晃樹', '寺沼 星文']);
@@ -49,17 +57,22 @@ assert.strictEqual(new Set(exactKeys).size, exactKeys.length, 'no duplicate ledg
 
 
 const nov16Suspensions = [
-  { matchNumber: 11, team: '大分', player: '林田 滉也' },
+  { matchNumber: 2, team: '横浜FM', player: '諏訪間 幸成' },
+  { matchNumber: 2, team: '横浜FM', player: '宮市 亮' },
+  { matchNumber: 7, team: 'FC東京', player: 'ダニ ゴメス' },
+  { matchNumber: 7, team: 'Ｃ大阪', player: 'パブロ サバック' },
+  { matchNumber: 7, team: 'Ｃ大阪', player: 'ルーカス フェルナンデス' },
+  { matchNumber: 5, team: '岡山', player: '鈴木 喜丈' },
   { matchNumber: 13, team: '磐田', player: '金子 大毅' },
+  { matchNumber: 11, team: '大分', player: '林田 滉也' },
 ];
 for (const item of nov16Suspensions) {
   const matches = rows.filter((row) =>
-    row.matchNumber === item.matchNumber && row.team === item.team && row.player === item.player
+    row.matchNumber === item.matchNumber && row.team === item.team && row.player === item.player &&
+    row.sourceUrl === 'https://www.jleague.jp/news/article/35370/' &&
+    row.sourceAt === '2026-11-16T19:00:00+09:00' && row.recordedAt === '2026-11-17T11:39:41+09:00'
   );
-  assert.strictEqual(matches.length, 1, `record exactly one ${item.player} suspension`);
+  assert.strictEqual(matches.length, 1, `append exactly one latest official ${item.player} snapshot`);
   assert.strictEqual(matches[0].status, 'confirmed_out');
-  assert.strictEqual(matches[0].sourceUrl, 'https://www.jleague.jp/news/article/35370/');
-  assert.strictEqual(matches[0].sourceAt, '2026-11-16T19:00:00+09:00');
-  assert.strictEqual(matches[0].recordedAt, '2026-11-16T21:13:40+09:00');
 }
 console.log('OK - round 1673 injury ledger append-only Miyachi resolution');

@@ -28,7 +28,7 @@
       "voteCounts": [
         12148,
         2937,
-        2394
+        2416
       ],
       "percentages": [
         69.22,
@@ -40,8 +40,8 @@
         "1": 0.6922,
         "2": 0.1377
       },
-      "sumVotes": 17479,
-      "differenceFromSummaryVotes": -71,
+      "sumVotes": 17550,
+      "differenceFromSummaryVotes": 0,
       "productMatchNumber": 1,
       "toto13MatchNumber": 1,
       "matchNumber": 1
@@ -151,13 +151,11 @@
     "allPerMatchTotalsMatchPageSummary": false,
     "allDisplayedPercentageTriplesSumTo100": true,
     "perMatchVoteTotalRange": {
-      "min": 17479,
+      "min": 17550,
       "max": 17550,
-      "spread": 71
+      "spread": 0
     },
-    "mismatchedMatchNumbers": [
-      1
-    ],
+    "mismatchedMatchNumbers": [],
     "note": "公式mini toto A投票状況ページ表示11:45 JST、監査時刻12:42:24 JSTで表示から3444秒。5分更新条件を超過したためstale履歴として保存。5試合すべての生投票数合計は公式ページ総口数17,550口と一致し、表示率も各100.00%。V2には使用しない。"
   },
   "v2Eligibility": {

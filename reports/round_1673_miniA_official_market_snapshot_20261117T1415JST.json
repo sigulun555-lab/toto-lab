@@ -4,7 +4,7 @@
   "pageDisplayAt": "2026-11-17T14:15:00+09:00",
   "retrievedAt": "2026-11-17T14:26:13+09:00",
   "refreshNotice": "5分毎",
-  "displayAgeSeconds": 733,
+  "displayAgeSeconds": 673,
   "stale": true,
   "product": "mini toto A",
   "marketType": "mini toto A",
@@ -156,7 +156,7 @@
       "spread": 0
     },
     "mismatchedMatchNumbers": [],
-    "note": "公式ページ表示14:15 JST、ページ読取後の監査時刻14:26:13 JST、表示から733秒。5分更新条件を超過したためstale履歴として保存し、V2には使用しない。retrievedAtは保守的な監査時刻で、正確なHTTP取得完了時刻は未提供。"
+    "note": "公式ページ表示14:15 JST、ページ読取後の監査時刻14:26:13 JST、表示から673秒。5分更新条件を超過したためstale履歴として保存し、V2には使用しない。retrievedAtは保守的な監査時刻で、正確なHTTP取得完了時刻は未提供。"
   },
   "v2Eligibility": {
     "eligible": false,

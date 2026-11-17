@@ -257,7 +257,7 @@ test('13:50 official GOAL3 snapshot is fresh and all six four-category team-side
  assert.equal(market1350.matches.every(m=>m.sumVotes===28759&&m.sumPercent===100),true);
  assert.equal(market1350.v2Eligibility.eligible,false);assert.ok(attemptFresh1350);assert.equal(attemptFresh1350.snapshotPath,'reports/round_1673_goal3_official_market_snapshot_20261117T1350JST.json');
  assert.equal(attemptFresh1350.totalVotesPageSummary,28759);
- assert.equal(v1.length,42);assert.equal(v2.length,6);
+ assert.equal(v1.length,48);assert.equal(v2.length,6);
  assert.equal(v2_0835.length,6);assert.equal(v2_0938.length,6);assert.equal(v2_1151.length,6);
  assert.equal([v2,v2_0835,v2_0938,v2_1151].flat().length,24);
  assert.equal(new Set([v2,v2_0835,v2_0938,v2_1151].flat().map(r=>r.predictionId)).size,24);

@@ -66,6 +66,20 @@ for (const item of kyotoNov17) {
   assert.strictEqual(matches.length, 1, 'append one official Kyoto injury record for ' + item.player);
 }
 
+
+const hiroshimaNov1 = [
+  { player: '川村 拓夢', source: 'https://www.sanfrecce.co.jp/news/team/13024' },
+  { player: '加藤 陸次樹', source: 'https://www.sanfrecce.co.jp/news/team/13023' },
+];
+for (const item of hiroshimaNov1) {
+  const matches = rows.filter((row) =>
+    row.matchNumber === 2 && row.team === '広島' && row.player === item.player &&
+    row.status === 'unknown' && row.sourceUrl === item.source &&
+    row.sourceAt === '2026-11-01' && row.recordedAt === '2026-11-17T23:58:09+09:00' && row.retrievedAt === '2026-11-17T23:58:09+09:00'
+  );
+  assert.strictEqual(matches.length, 1, 'append one official Hiroshima injury record for ' + item.player);
+}
+
 const exactKeys = rows.map((row) => [
   row.round, row.matchNumber, row.team, row.player, row.status, row.recordedAt
 ].join('|'));

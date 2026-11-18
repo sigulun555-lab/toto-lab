@@ -465,3 +465,27 @@ assert.strictEqual(attempt0132.captureStatus,'captured');
 const v2After0132=fs.readFileSync(path.join(__dirname,'..','predictions/round_1673_ChatGPT_goal3_market_blend_v2_1151JST.jsonl'),'utf8').trim().split(/\r?\n/).filter(Boolean);
 assert.strictEqual(v2After0132.length,6,'stale 01:32 snapshot must not create a V2 revision');
 console.log('OK - round 1673 stale official GOAL3 market snapshot (01:32 JST), no V2 revision');
+
+\n// Round 1673 official totoGOAL3 market snapshot at 09:41 JST (stale at retrieval).
+const round1673Goal3Market0941=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261118T0941JST.json'),'utf8'));
+assert.strictEqual(round1673Goal3Market0941.round,1673);
+assert.strictEqual(round1673Goal3Market0941.marketType,'totoGOAL3');
+assert.strictEqual(round1673Goal3Market0941.pageDisplayAt,'2026-11-18T09:41:00+09:00');
+assert.strictEqual(round1673Goal3Market0941.retrievedAt,'2026-11-18T09:55:36+09:00');
+assert.strictEqual(round1673Goal3Market0941.displayAgeSeconds,876);
+assert.strictEqual(round1673Goal3Market0941.stale,true);
+assert.strictEqual(round1673Goal3Market0941.totalVotesPageSummary,36580);
+assert.deepStrictEqual(round1673Goal3Market0941.categoryOrder,['0','1','2','3+']);
+assert.strictEqual(round1673Goal3Market0941.matches.length,6);
+assert.deepStrictEqual(round1673Goal3Market0941.matches.map(x=>x.toto13MatchNumber),[1,1,2,2,5,5]);
+assert.strictEqual(new Set(round1673Goal3Market0941.matches.map(x=>x.matchNumber+':'+x.team)).size,6);
+for(const row of round1673Goal3Market0941.matches){
+ assert.strictEqual(row.sumVotes,row.voteCounts.reduce((a,b)=>a+b,0));
+ assert.strictEqual(row.sumVotes,36580);
+ assert.ok(Math.abs(row.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);
+}
+assert.strictEqual(round1673Goal3Market0941.countConsistency.allSixTeamSideTotalsMatchPageSummary,true);
+assert.strictEqual(round1673Goal3Market0941.countConsistency.allSixPercentageVectorsSumTo100,true);
+assert.strictEqual(round1673Goal3Market0941.v2Eligibility.eligible,false);
+assert.match(round1673Goal3Market0941.v2Eligibility.reason,/5分更新案内を超過/);
+console.log('OK - round 1673 official GOAL3 market snapshot (09:41 JST)');

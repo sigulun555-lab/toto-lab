@@ -131,23 +131,23 @@
       "player": "川村 拓夢",
       "team": "広島",
       "toto13MatchNumber": 2,
-      "status": "availability_unconfirmed",
+      "status": "unknown",
       "sourceIndex": 2,
       "diagnosis": "右膝内側側副靱帯損傷",
       "injuredAt": "2026-10-24",
       "returnEstimate": null,
-      "note": "公式発表に復帰予定日なし。11/21の出場可否は未確定。"
+      "note": "公式発表に復帰予定日なし。11/21の出場可否は未確定。既存台帳のstatus=unknownを維持。"
     },
     {
       "player": "加藤 陸次樹",
       "team": "広島",
       "toto13MatchNumber": 2,
-      "status": "availability_unconfirmed",
+      "status": "unknown",
       "sourceIndex": 3,
       "diagnosis": "右膝内側側副靱帯損傷",
       "injuredAt": "2026-10-24",
       "returnEstimate": null,
-      "note": "公式発表に復帰予定日なし。11/21の出場可否は未確定。"
+      "note": "公式発表に復帰予定日なし。11/21の出場可否は未確定。既存台帳のstatus=unknownを維持。"
     }
   ],
   "lineupStatus": {

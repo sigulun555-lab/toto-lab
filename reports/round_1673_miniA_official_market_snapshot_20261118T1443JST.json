@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "round": 1673,
+  "pageDisplayAt": "2026-11-18T14:43:00+09:00",
+  "retrievedAt": "2026-11-18T14:45:10+09:00",
+  "refreshNotice": "5分毎",
+  "displayAgeSeconds": 130,
+  "stale": false,
+  "product": "mini toto A",
+  "marketType": "mini toto A",
+  "sourceUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=06&fromId=SSIN026&gameAssortment=1&holdCntId=1673",
+  "totalVotesPageSummary": 25755,
+  "outcomeOrder": [
+    "1",
+    "0",
+    "2"
+  ],
+  "outcomes": [
+    "home90Win",
+    "drawOther",
+    "home90Loss"
+  ],
+  "matches": [
+    {
+      "matchNumber": 1,
+      "productMatchNumber": 1,
+      "toto13MatchNumber": 1,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "町田",
+      "away": "長崎",
+      "voteCounts": [
+        17996,
+        4400,
+        3359
+      ],
+      "percentages": [
+        69.87,
+        17.09,
+        13.04
+      ],
+      "marketVoteShare": {
+        "0": 0.1709,
+        "1": 0.6987000000000001,
+        "2": 0.1304
+      },
+      "sumVotes": 25755,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 2,
+      "productMatchNumber": 2,
+      "toto13MatchNumber": 2,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "広島",
+      "away": "横浜FM",
+      "voteCounts": [
+        12942,
+        6370,
+        6443
+      ],
+      "percentages": [
+        50.25,
+        24.73,
+        25.02
+      ],
+      "marketVoteShare": {
+        "0": 0.2473,
+        "1": 0.5025,
+        "2": 0.2502
+      },
+      "sumVotes": 25755,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 3,
+      "productMatchNumber": 3,
+      "toto13MatchNumber": 3,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "京都",
+      "away": "浦和",
+      "voteCounts": [
+        7638,
+        7498,
+        10619
+      ],
+      "percentages": [
+        29.66,
+        29.11,
+        41.23
+      ],
+      "marketVoteShare": {
+        "0": 0.29109999999999997,
+        "1": 0.2966,
+        "2": 0.41229999999999994
+      },
+      "sumVotes": 25755,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 4,
+      "productMatchNumber": 4,
+      "toto13MatchNumber": 4,
+      "date": "2026-11-21",
+      "kickoff": "15:00",
+      "home": "川崎Ｆ",
+      "away": "福岡",
+      "voteCounts": [
+        17730,
+        4383,
+        3642
+      ],
+      "percentages": [
+        68.84,
+        17.02,
+        14.14
+      ],
+      "marketVoteShare": {
+        "0": 0.1702,
+        "1": 0.6884,
+        "2": 0.1414
+      },
+      "sumVotes": 25755,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 5,
+      "productMatchNumber": 5,
+      "toto13MatchNumber": 5,
+      "date": "2026-11-21",
+      "kickoff": "16:00",
+      "home": "Ｇ大阪",
+      "away": "岡山",
+      "voteCounts": [
+        10191,
+        7617,
+        7947
+      ],
+      "percentages": [
+        39.57,
+        29.57,
+        30.86
+      ],
+      "marketVoteShare": {
+        "0": 0.2957,
+        "1": 0.3957,
+        "2": 0.3086
+      },
+      "sumVotes": 25755,
+      "differenceFromSummaryVotes": 0
+    }
+  ],
+  "countConsistency": {
+    "perMatchVoteCountsAvailable": true,
+    "allPerMatchTotalsMatchPageSummary": true,
+    "allDisplayedPercentageTriplesSumTo100": true,
+    "perMatchVoteTotalRange": {
+      "min": 25755,
+      "max": 25755,
+      "spread": 0
+    },
+    "mismatchedMatchNumbers": [],
+    "note": "公式ページの14:43 JST表示を14:45:10 JSTに直接取得。表示から130秒で5分更新案内内。票数・表示率はページ原値を保存し、補正・正規化しない。"
+  },
+  "v2Eligibility": {
+    "eligible": false,
+    "marketDataFresh": true,
+    "generatorAvailable": false,
+    "reason": "公式市場データはfresh（表示から130秒）だが、この商品・回のV2を生成する既存実行可能CLI/関数は確認できない。既存の30/70式をテスト・過去成果物から手作業で再実装しない。市場snapshotのみ追記し、予測ログは変更しない。"
+  },
+  "interpretation": "第1673回mini toto Aの公式投票状況。市場データはfreshだがV2生成実装が未確認のため、履歴snapshotのみ追記。既存V1/V2予測行は変更しない。"
+}

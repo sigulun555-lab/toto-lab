@@ -200,7 +200,7 @@
   "v2Eligibility": {
     "eligible": false,
     "marketSnapshotFresh": false,
-    "reason": "公式ページ表示09:41 JST・取得09:55:36 JST（876秒差）で5分更新案内を超過。さらに既存GOAL3 V2のV1依存ブランチは30行、最新GPT同期branchは36行で不整合。履歴snapshotのみ追加し、新規V2 revisionは作成しない。"
+    "reason": "公式ページ表示09:41 JST・取得09:55:36 JST（876秒差）で5分更新案内を超過。既存GOAL3 V2は24行・4段階revisionで、root V1は2026-11-15T18:49:33Z。最新V1 JSONLは48行で最新6 team-sideが2026-11-17T07:52:36.644Zに更新済みだが、V2 chainは11/16 11:55 JST以降に更新されていない。今回確認したリポジトリに実行可能なGOAL3 V2 generator/CLIも見つからないため、新規revisionは作成せず履歴snapshotのみ保存。"
   },
   "interpretation": "第1673回totoGOAL3の3試合・6 team-side・0/1/2/3+投票状況。通常toto13の1/X/2、mini toto A/Bとは別商品。"
 }

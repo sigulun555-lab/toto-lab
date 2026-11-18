@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "round": 1673,
+  "marketType": "totoGOAL3",
+  "recordedAt": "2026-11-17T13:47:05+09:00",
+  "recordType": "ci_revalidation_request",
+  "priorRuns": [
+    {
+      "runNumber": 633,
+      "headSha": "de5857a48a9d6f4449f87cb173c564228a6f0436",
+      "conclusion": "failure",
+      "cause": "incorrect expected row count for v2 variable"
+    },
+    {
+      "runNumber": 634,
+      "headSha": "86e77c7817a45c650a3b7b7aff8cbd7757712567",
+      "conclusion": "failure",
+      "cause": "same 24-row assumption; actual 11:51 V2 file on PR #124 branch contains 6 rows"
+    },
+    {
+      "runNumber": 635,
+      "headSha": "262b2dd087bd2c09eca3a24d4bda5d9f93ec04ac",
+      "conclusion": "failure",
+      "cause": "run head predates the final test/audit correction commits"
+    }
+  ],
+  "correctedHeadBeforeThisCommit": "b9c212217a3a95eb9d456f5813f9524df7e3d9a5",
+  "correctedTestCommit": "aef19a59ae95eae10e8f1d7ae259e991597290e1",
+  "expectedBranchHistory": {
+    "v2_0646JST_rows": 6,
+    "v2_1151JST_rows": 6,
+    "uniqueIds_1151JST": 6
+  },
+  "nextValidation": "A fresh pull_request run is expected on this commit; do not treat prior failures as successful.",
+  "safety": {
+    "predictionsChanged": false,
+    "officialSnapshotsChanged": false,
+    "mainModified": false,
+    "prMerged": false
+  }
+}

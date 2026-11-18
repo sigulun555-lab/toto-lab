@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "round": 1673,
+  "marketType": "totoGOAL3",
+  "recordedAt": "2026-11-17T13:47:05+09:00",
+  "recordType": "ci_test_correction",
+  "failedRun": {
+    "runNumber": 633,
+    "runId": 44019438810,
+    "headSha": "de5857a48a9d6f4449f87cb173c564228a6f0436",
+    "failure": "tests/round-1673-goal3-market-blend.test.js asserted v2.length===24, but the v2 variable at the top of that test reads the 06:46JST V2 file containing 6 rows."
+  },
+  "correction": {
+    "commitSha": "aef19a59ae95eae10e8f1d7ae259e991597290e1",
+    "assertions": {
+      "v2_0646JST_rows": 6,
+      "v2_1151JST_rows": 6,
+      "uniqueIds_1151JST": 6
+    },
+    "note": "The 11:51JST V2 file on PR #124 also contains six team-side rows. The prior expectation of 24 was incorrect; this PR branch has six-row 06:46 and six-row 11:51 V2 files. No prediction JSONL or market snapshot was changed by this correction."
+  },
+  "safety": {
+    "mainModified": false,
+    "existingPredictionsModified": false,
+    "marketWeightChanged": false,
+    "productionModelChanged": false,
+    "prMerged": false
+  }
+}

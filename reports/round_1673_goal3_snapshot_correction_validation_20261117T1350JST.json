@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "round": 1673,
+  "marketType": "totoGOAL3",
+  "recordedAt": "2026-11-17T13:50:54+09:00",
+  "recordType": "snapshot-correction-ci-revalidation",
+  "priorFailure": {
+    "runNumber": 641,
+    "runId": 44020119384,
+    "headSha": "a399908ae50fb3280d4b00669568faa63b6e69a2",
+    "cause": "The CI run used the pre-correction test file and still asserted the now-unverified 13:42 snapshot attempt path."
+  },
+  "correctedTestCommit": "fbdccf089c9a0d0f92a8649f994f8ae39a860779",
+  "correctedAssertions": {
+    "prior1342Snapshot": "retained but superseded_unverified",
+    "current1350Snapshot": "fresh; 6 team-side totals 28,759; 4-category vectors sum to 100.00%",
+    "intermediate1253Attempt": "stale_regressed_display only"
+  },
+  "nextValidation": "A new pull_request run is expected on the corrected test head; prior Run #641 is not success.",
+  "safety": {
+    "predictionRowsChanged": false,
+    "existingSnapshotOverwritten": false,
+    "mainModified": false,
+    "prMerged": false
+  }
+}

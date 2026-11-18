@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "round": 1673,
+  "marketType": "totoGOAL3",
+  "sourceUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=02&fromId=SSIN026&gameAssortment=1&holdCntId=1673",
+  "pageDisplayAt": "2026-11-18T14:43:00+09:00",
+  "retrievedAt": "2026-11-18T14:45:10+09:00",
+  "refreshNotice": "5分毎",
+  "displayAgeSeconds": 130,
+  "stale": false,
+  "totalVotesPageSummary": 41172,
+  "categoryOrder": [
+    "0",
+    "1",
+    "2",
+    "3+"
+  ],
+  "categories": [
+    "0点",
+    "1点",
+    "2点",
+    "3点以上"
+  ],
+  "matches": [
+    {
+      "matchNumber": 1,
+      "toto13MatchNumber": 1,
+      "home": "町田",
+      "away": "長崎",
+      "team": "町田",
+      "isHome": true,
+      "voteCounts": [
+        4989,
+        8412,
+        13471,
+        14300
+      ],
+      "percentages": [
+        12.12,
+        20.43,
+        32.72,
+        34.73
+      ],
+      "date": "2026-11-21",
+      "marketVoteShare": {
+        "0": 0.12119999999999999,
+        "1": 0.2043,
+        "2": 0.3272,
+        "3": 0.34729999999999994
+      },
+      "sumVotes": 41172,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 1,
+      "toto13MatchNumber": 1,
+      "home": "町田",
+      "away": "長崎",
+      "team": "長崎",
+      "isHome": false,
+      "voteCounts": [
+        17698,
+        14175,
+        5505,
+        3794
+      ],
+      "percentages": [
+        42.99,
+        34.43,
+        13.37,
+        9.21
+      ],
+      "date": "2026-11-21",
+      "marketVoteShare": {
+        "0": 0.4299,
+        "1": 0.3443,
+        "2": 0.13369999999999999,
+        "3": 0.09210000000000002
+      },
+      "sumVotes": 41172,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 2,
+      "toto13MatchNumber": 2,
+      "home": "広島",
+      "away": "横浜FM",
+      "team": "広島",
+      "isHome": true,
+      "voteCounts": [
+        5270,
+        9825,
+        14053,
+        12024
+      ],
+      "percentages": [
+        12.8,
+        23.86,
+        34.13,
+        29.21
+      ],
+      "date": "2026-11-21",
+      "marketVoteShare": {
+        "0": 0.128,
+        "1": 0.2386,
+        "2": 0.34130000000000005,
+        "3": 0.2921
+      },
+      "sumVotes": 41172,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 2,
+      "toto13MatchNumber": 2,
+      "home": "広島",
+      "away": "横浜FM",
+      "team": "横浜FM",
+      "isHome": false,
+      "voteCounts": [
+        9156,
+        14287,
+        11042,
+        6687
+      ],
+      "percentages": [
+        22.24,
+        34.7,
+        26.82,
+        16.24
+      ],
+      "date": "2026-11-21",
+      "marketVoteShare": {
+        "0": 0.2224,
+        "1": 0.34700000000000003,
+        "2": 0.2682,
+        "3": 0.1624
+      },
+      "sumVotes": 41172,
+      "sumPercent": 99.99999999999999
+    },
+    {
+      "matchNumber": 3,
+      "toto13MatchNumber": 5,
+      "home": "Ｇ大阪",
+      "away": "岡山",
+      "team": "Ｇ大阪",
+      "isHome": true,
+      "voteCounts": [
+        7432,
+        13828,
+        12718,
+        7194
+      ],
+      "percentages": [
+        18.05,
+        33.59,
+        30.89,
+        17.47
+      ],
+      "date": "2026-11-21",
+      "marketVoteShare": {
+        "0": 0.1805,
+        "1": 0.33590000000000003,
+        "2": 0.3089,
+        "3": 0.1747
+      },
+      "sumVotes": 41172,
+      "sumPercent": 100
+    },
+    {
+      "matchNumber": 3,
+      "toto13MatchNumber": 5,
+      "home": "Ｇ大阪",
+      "away": "岡山",
+      "team": "岡山",
+      "isHome": false,
+      "voteCounts": [
+        9782,
+        15703,
+        10510,
+        5177
+      ],
+      "percentages": [
+        23.76,
+        38.14,
+        25.53,
+        12.57
+      ],
+      "date": "2026-11-21",
+      "marketVoteShare": {
+        "0": 0.2376,
+        "1": 0.3814,
+        "2": 0.2553,
+        "3": 0.1257
+      },
+      "sumVotes": 41172,
+      "sumPercent": 100
+    }
+  ],
+  "countConsistency": {
+    "allSixTeamSideTotalsMatchPageSummary": true,
+    "allSixPercentageVectorsSumTo100": true,
+    "mismatchedTeamSides": [],
+    "note": "公式totoGOAL3詳細ページの14:43 JST表示を14:45:10 JSTに直接取得。表示から130秒で5分更新案内内。全6 team-sideの4カテゴリ票数合計は41,172口、各表示率合計100.00%。"
+  },
+  "mappingNote": "GOAL3商品内No.1/2/3は通常toto13 No.1/2/5に対応。各No.にhome/awayの2 team-side、各4カテゴリ。mini toto A/Bとは別商品。",
+  "v2Eligibility": {
+    "eligible": false,
+    "marketDataFresh": true,
+    "generatorAvailable": false,
+    "reason": "市場データはfresh（表示から130秒）だが、既存リポジトリにこの回のGOAL3 V2を生成する実行可能CLI/関数は確認できない。30/70式をテストから手作業で再実装しない。市場snapshotのみ追記し、既存V1/V2予測行は変更しない。"
+  },
+  "interpretation": "第1673回totoGOAL3の3試合・6 team-side・0/1/2/3+公式投票状況。fresh履歴snapshotとして追記し、既存V1/V2予測ログは変更しない。"
+}

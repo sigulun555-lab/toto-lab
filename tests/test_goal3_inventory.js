@@ -489,6 +489,6 @@ assert.strictEqual(round1673Goal3Market0941.countConsistency.allSixTeamSideTotal
 assert.strictEqual(round1673Goal3Market0941.countConsistency.allSixPercentageVectorsSumTo100,true);
 assert.strictEqual(round1673Goal3Market0941.v2Eligibility.eligible,false);
 assert.match(round1673Goal3Market0941.v2Eligibility.reason,/5分更新案内を超過/);
-assert.match(round1673Goal3Market0941.v2Eligibility.reason,/latest V1 JSONLは48行/);
+assert.match(round1673Goal3Market0941.v2Eligibility.reason,/最新V1 JSONLは48行/);
 assert.match(round1673Goal3Market0941.v2Eligibility.reason,/実行可能なGOAL3 V2 generator\/CLI/);
 console.log('OK - round 1673 official GOAL3 market snapshot (09:41 JST)');

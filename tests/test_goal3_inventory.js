@@ -466,7 +466,8 @@ const v2After0132=fs.readFileSync(path.join(__dirname,'..','predictions/round_16
 assert.strictEqual(v2After0132.length,6,'stale 01:32 snapshot must not create a V2 revision');
 console.log('OK - round 1673 stale official GOAL3 market snapshot (01:32 JST), no V2 revision');
 
-\n// Round 1673 official totoGOAL3 market snapshot at 09:41 JST (stale at retrieval).
+
+// Round 1673 official totoGOAL3 market snapshot at 09:41 JST (stale at retrieval).
 const round1673Goal3Market0941=JSON.parse(fs.readFileSync(path.join(__dirname,'..','reports/round_1673_goal3_official_market_snapshot_20261118T0941JST.json'),'utf8'));
 assert.strictEqual(round1673Goal3Market0941.round,1673);
 assert.strictEqual(round1673Goal3Market0941.marketType,'totoGOAL3');

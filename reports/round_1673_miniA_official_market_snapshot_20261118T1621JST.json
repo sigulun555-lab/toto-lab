@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "round": 1673,
+  "pageDisplayAt": "2026-11-18T16:21:00+09:00",
+  "retrievedAt": "2026-11-18T16:23:36.980+09:00",
+  "refreshNotice": "5分毎",
+  "displayAgeSeconds": 156,
+  "stale": false,
+  "product": "mini toto A",
+  "marketType": "mini toto A",
+  "sourceUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=06&fromId=SSIN026&gameAssortment=1&holdCntId=1673",
+  "totalVotesPageSummary": 26342,
+  "outcomeOrder": [
+    "1",
+    "0",
+    "2"
+  ],
+  "outcomes": [
+    "home90Win",
+    "drawOther",
+    "home90Loss"
+  ],
+  "matches": [
+    {
+      "matchNumber": 1,
+      "productMatchNumber": 1,
+      "toto13MatchNumber": 1,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "町田",
+      "away": "長崎",
+      "voteCounts": [
+        18417,
+        4505,
+        3420
+      ],
+      "percentages": [
+        69.92,
+        17.1,
+        12.98
+      ],
+      "marketVoteShare": {
+        "0": 0.171,
+        "1": 0.6992,
+        "2": 0.1298
+      },
+      "sumVotes": 26342,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 2,
+      "productMatchNumber": 2,
+      "toto13MatchNumber": 2,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "広島",
+      "away": "横浜FM",
+      "voteCounts": [
+        13226,
+        6534,
+        6582
+      ],
+      "percentages": [
+        50.21,
+        24.8,
+        24.99
+      ],
+      "marketVoteShare": {
+        "0": 0.248,
+        "1": 0.5021,
+        "2": 0.2499
+      },
+      "sumVotes": 26342,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 3,
+      "productMatchNumber": 3,
+      "toto13MatchNumber": 3,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "京都",
+      "away": "浦和",
+      "voteCounts": [
+        7799,
+        7661,
+        10882
+      ],
+      "percentages": [
+        29.61,
+        29.08,
+        41.31
+      ],
+      "marketVoteShare": {
+        "0": 0.2908,
+        "1": 0.2961,
+        "2": 0.4131
+      },
+      "sumVotes": 26342,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 4,
+      "productMatchNumber": 4,
+      "toto13MatchNumber": 4,
+      "date": "2026-11-21",
+      "kickoff": "15:00",
+      "home": "川崎Ｆ",
+      "away": "福岡",
+      "voteCounts": [
+        18124,
+        4476,
+        3742
+      ],
+      "percentages": [
+        68.8,
+        16.99,
+        14.21
+      ],
+      "marketVoteShare": {
+        "0": 0.1699,
+        "1": 0.688,
+        "2": 0.1421
+      },
+      "sumVotes": 26342,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 5,
+      "productMatchNumber": 5,
+      "toto13MatchNumber": 5,
+      "date": "2026-11-21",
+      "kickoff": "16:00",
+      "home": "Ｇ大阪",
+      "away": "岡山",
+      "voteCounts": [
+        10435,
+        7765,
+        8142
+      ],
+      "percentages": [
+        39.61,
+        29.48,
+        30.91
+      ],
+      "marketVoteShare": {
+        "0": 0.2948,
+        "1": 0.3961,
+        "2": 0.3091
+      },
+      "sumVotes": 26342,
+      "differenceFromSummaryVotes": 0
+    }
+  ],
+  "countConsistency": {
+    "perMatchVoteCountsAvailable": true,
+    "allPerMatchTotalsMatchPageSummary": true,
+    "allDisplayedPercentageTriplesSumTo100": true,
+    "perMatchVoteTotalRange": {
+      "min": 26342,
+      "max": 26342,
+      "spread": 0
+    },
+    "mismatchedMatchNumbers": [],
+    "note": "公式ページの16:21 JST表示を2026-11-18T16:23:36.980+09:00に直接取得。表示から156秒。5分更新案内内のfresh。票数・表示率はページ原値を保存し、補正・正規化しない。"
+  },
+  "v2Eligibility": {
+    "eligible": false,
+    "marketDataFresh": true,
+    "generatorAvailable": false,
+    "reason": "公式市場データはfreshだが、この商品・回のV2を生成する既存実行可能CLI/関数は確認できない。既存式を手作業で再実装しない。市場snapshotのみ追記し、予測ログは変更しない。"
+  },
+  "interpretation": "第1673回mini toto Aの公式投票状況。fresh履歴snapshotとして保存し、既存予測ログ・V1/V2は変更しない。"
+}

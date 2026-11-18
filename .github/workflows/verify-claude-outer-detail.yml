@@ -99,12 +99,12 @@ jobs:
 
       - name: Run independent 50,000-replicate PCG64 sensitivity
         run: |
-          python toto-lab/analysis/goal3_outer_detail/pcg64_50k_sensitivity.py \\
-            --historical claude-source/analysis/goal3_outer_detail/goal3_outer_matches.json \\
-            --current "$RUNNER_TEMP/goal3_outer_matches.json" \\
-            --diagnostics "$RUNNER_TEMP/goal3_current_cohort_diagnostics.json" \\
-            --manifest toto-lab/analysis/goal3_outer_detail/claude_input_manifest_2026-11-16.json \\
-            --out "$RUNNER_TEMP/goal3_pcg64_50k_sensitivity.json" \\
+          python toto-lab/analysis/goal3_outer_detail/pcg64_50k_sensitivity.py \
+            --historical claude-source/analysis/goal3_outer_detail/goal3_outer_matches.json \
+            --current "$RUNNER_TEMP/goal3_outer_matches.json" \
+            --diagnostics "$RUNNER_TEMP/goal3_current_cohort_diagnostics.json" \
+            --manifest toto-lab/analysis/goal3_outer_detail/claude_input_manifest_2026-11-16.json \
+            --out "$RUNNER_TEMP/goal3_pcg64_50k_sensitivity.json" \
             --replicates 50000 --seed 1
 
       - name: Upload clean-checkout reproduction evidence

@@ -26,7 +26,7 @@ const {
 const ALLOWED_EVIDENCE_FIELDS = allowedEvidenceFields(EVIDENCE_STATUS_KEYS_GOAL3);
 
 const ISO_UTC_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,3})?Z$/;
-const MODEL_NAME_ENUM = ['ChatGPT', 'Claude'];
+const MODEL_NAME_ENUM = ['ChatGPT', 'Claude', 'Muse'];
 const MARKET_TYPE_ENUM = ['totoGOAL3'];
 const ALLOWED_FIELDS = new Set([
     'predictionId', 'round', 'matchNumber', 'marketType', 'team', 'opponent', 'isHome',

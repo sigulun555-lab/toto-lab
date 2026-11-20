@@ -3,7 +3,7 @@
  * save_prediction_goal3.js
  *
  * totoGOAL3用レコード（record.round / record.modelName）から
- * predictions/round_<開催回>_<ChatGPT|Claude>_goal3.jsonl という保存先パスを自動決定して追記する
+ * predictions/round_<開催回>_<ChatGPT|Claude|Muse>_goal3.jsonl という保存先パスを自動決定して追記する
  * 薄いラッパー（save_prediction.js のtotoGOAL3版）。
  */
 'use strict';

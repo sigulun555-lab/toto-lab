@@ -2,15 +2,15 @@
 /**
  * save_prediction.js
  *
- * predictions/round_<開催回>_<ChatGPT|Claude>.jsonl という命名規則で、
+ * predictions/round_<開催回>_<ChatGPT|Claude|Muse>.jsonl という命名規則で、
  * 予測レコードを追記する薄いラッパー。
  *
  * validate_prediction.js の appendPrediction()（スキーマ検証・締切判定・
  * predictionId重複防止・追記専用の強制）はそのまま使い、ここでは
  * 「record の round / modelName から保存先ファイルパスを自動的に決める」ことだけを行う。
- * これにより、呼び出し側（ChatGPT側・Claude側のどちらでも）がファイルパスを手で組み立てる
- * 必要がなくなり、「別ラウンド・別モデルのログファイルに書き込んでしまう」というヒューマン
- * エラー（タイプミス含む）を構造的に防ぐ。
+ * これにより、呼び出し側（ChatGPT側・Claude側・Muse側のどちらでも）がファイルパスを手で
+ * 組み立てる必要がなくなり、「別ラウンド・別モデルのログファイルに書き込んでしまう」という
+ * ヒューマンエラー（タイプミス含む）を構造的に防ぐ。
  */
 'use strict';
 const fs = require('fs');
@@ -20,7 +20,7 @@ const { appendPrediction, MODEL_NAME_ENUM } = require('./validate_prediction.js'
 const PREDICTIONS_DIR = path.join(__dirname, '..', 'predictions');
 
 /**
- * round と modelName（"ChatGPT" | "Claude"）から、保存先の正式なファイルパスを決定する。
+ * round と modelName（"ChatGPT" | "Claude" | "Muse"）から、保存先の正式なファイルパスを決定する。
  * modelName が未知の場合はエラーにする（推測でファイル名を作らない）。
  */
 function predictionLogPath(round, modelName) {

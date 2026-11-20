@@ -61,7 +61,7 @@
     },
     "predictionConfirmedAt": { "type": "string", "format": "date-time" },
     "deadlineAt": { "type": "string", "format": "date-time" },
-    "modelName": { "type": "string", "enum": ["ChatGPT", "Claude"] },
+    "modelName": { "type": "string", "enum": ["ChatGPT", "Claude", "Muse"] },
     "modelVersion": { "type": "string", "minLength": 1 },
     "revisionOf": { "type": ["string", "null"] },
     "sourceRetrievedAt": { "type": "string", "format": "date-time" },

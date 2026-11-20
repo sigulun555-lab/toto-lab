@@ -44,7 +44,7 @@ function loadTeamDict() {
 }
 
 const ISO_UTC_RE = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d{1,3})?Z$/;
-const MODEL_NAME_ENUM = ['ChatGPT', 'Claude'];
+const MODEL_NAME_ENUM = ['ChatGPT', 'Claude', 'Muse'];
 const ALLOWED_FIELDS = new Set([
     'predictionId', 'round', 'matchNumber', 'homeTeam', 'awayTeam',
     'probabilities', 'predictionConfirmedAt', 'deadlineAt',

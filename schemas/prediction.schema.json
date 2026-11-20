@@ -77,7 +77,8 @@
       "type": "string",
       "enum": [
         "ChatGPT",
-        "Claude"
+        "Claude",
+        "Muse"
       ]
     },
     "modelVersion": {

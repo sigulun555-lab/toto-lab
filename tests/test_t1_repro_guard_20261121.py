@@ -30,7 +30,7 @@ class HistoryGuardTests(unittest.TestCase):
             expected_rows=1,
             expected_distinct_dates=1,
             expected_min_date="2026-08-07",
-            max_date="2026-11-03",
+            max_date="2026-08-07",
             expected_fetched_at="2026-11-04T06:17:32.213Z",
         )
         self.assertEqual(len(doc["history"]), 1)

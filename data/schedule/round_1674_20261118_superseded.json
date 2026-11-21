@@ -176,6 +176,6 @@
     }
   },
   "supersededAt": "2026-11-21T14:01:00+09:00",
-  "supersededReason": "The official toto-dream round-1674 page displayed a different 13-match card at 2026-11-21 14:01 JST; only match 7 remained unchanged.",
+  "supersededReason": "A newer official page observation was captured at 2026-11-21 14:01 JST. The 13 home/away fixture pairs are identical to this 2026-11-18 snapshot; the later observation refreshes page/retrieval timestamps and sales summary only. This original snapshot is retained for audit.",
   "supersededBy": "data/schedule/round_1674.json"
 }

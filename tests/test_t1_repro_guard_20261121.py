@@ -69,7 +69,7 @@ class HistoryGuardTests(unittest.TestCase):
         raw = make_history([row(fetched="2026-11-04T06:17:32.214Z")])
         with self.assertRaisesRegex(ValueError, "fetchedAt provenance mismatch"):
             guard.validate_history_bytes(raw, expected_sha256=hashlib.sha256(raw).hexdigest(),
-                expected_rows=1, expected_distinct_dates=1, expected_min_date="2026-08-07")
+                expected_rows=1, expected_distinct_dates=1, expected_min_date="2026-08-07", max_date="2026-08-07")
 
 
 class OutputGuardTests(unittest.TestCase):

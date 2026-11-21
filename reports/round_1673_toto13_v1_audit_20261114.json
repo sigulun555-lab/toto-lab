@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "round": 1673,
+  "marketType": "toto13",
+  "generatedAt": "2026-11-14T13:44:15.101Z",
+  "deadline": "2026-11-21T13:50:00+09:00",
+  "model": {
+    "repository": "sigulun555-lab/gpt",
+    "path": "model.js",
+    "blobSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+    "modelVersion": "GPT-shared-poisson-score-v1-2026-11-14"
+  },
+  "parser": {
+    "repository": "sigulun555-lab/gpt",
+    "path": "scripts/auto_pipeline.js",
+    "blobSha": "ef557e084cab802df7830d949bd1f52ddee5db7c",
+    "function": "parseSchedule"
+  },
+  "aliases": {
+    "repository": "sigulun555-lab/gpt",
+    "path": "data/team_aliases.json",
+    "blobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab"
+  },
+  "history": {
+    "sourceUrl": "https://raw.githubusercontent.com/k-addtimes/jleague_open_data/main/current_schedule_file.csv",
+    "sourceType": "community mirror; not official toto feed",
+    "fetchedAt": "2026-11-14T13:44:15.101Z",
+    "parsedScheduleRows": 1140,
+    "completedMatches": 468,
+    "latestResultDate": "2026-11-14",
+    "mainHistoryMatches": 460,
+    "mainHistoryLatestDate": "2026-11-08",
+    "newCompletedMatches": 8,
+    "oldRowsMissingFromFreshSource": 0,
+    "duplicateKeys": 0
+  },
+  "officialSchedule": {
+    "url": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardSalesTermtotoSP.form?holdCntId=1673",
+    "blobSha": "43011d91c2cee4e74014a3105e62db3705bd8208",
+    "storedRetrievedAt": "2026-11-14T01:58:59+09:00",
+    "storedRevalidatedAt": "2026-11-14T06:47:12+09:00",
+    "verifiedAgainThisRun": true,
+    "fixtureCount": 13
+  },
+  "parity": {
+    "comparedCurrentGoal3Fixtures": 3,
+    "maxAbsoluteDifference": 0
+  },
+  "validation": {
+    "predictionRows": 13,
+    "uniquePredictionIds": 13,
+    "allHistoryWindows12": true,
+    "maxProbabilitySumError": 1.0000000050247593e-8,
+    "revisionOfNull": true
+  },
+  "limitations": [
+    "history source is a community mirror, not an official J.League feed",
+    "injury/suspension/availability/lineup audit is incomplete; no adjustment applied",
+    "official vote-share page was stale (display 20:41 JST with 5-minute update notice); no V2 blend was generated"
+  ]
+}

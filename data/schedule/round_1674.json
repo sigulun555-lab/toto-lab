@@ -19,18 +19,22 @@
     "updateNotice": "The official page states that information is refreshed every five minutes.",
     "previousSnapshot": {
       "path": "data/schedule/round_1674_20261118_superseded.json",
+      "originalPath": "data/schedule/round_1674.json",
       "blobSha": "2d7226d17512b97b07ce630a22212e3bc9d71265",
+      "preservedBlobSha": "0f5e4e07cd9e9bcee9acc11b77ab87aeaacf9bb2",
       "pr": 129,
       "commit": "0749e19b210ea97a612284eb77e233ee385db724"
     },
     "supersedesPrevious": true,
-    "changedMatchNumbers": [
+    "changedMatchNumbers": [],
+    "unchangedMatchNumbers": [
       1,
       2,
       3,
       4,
       5,
       6,
+      7,
       8,
       9,
       10,
@@ -38,10 +42,7 @@
       12,
       13
     ],
-    "unchangedMatchNumbers": [
-      7
-    ],
-    "note": "Current official card differs from the 2026-11-18 snapshot in 12 of 13 fixtures. This 2026-11-21 official page is authoritative for future predictions."
+    "note": "The 2026-11-21 official page was revalidated against the 2026-11-18 snapshot: all 13 home/away fixture pairs are identical (0 changed, 13 unchanged). This revision records a later official page observation and updated sales summary, not a fixture correction."
   },
   "fixtures": [
     {

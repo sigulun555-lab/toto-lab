@@ -219,7 +219,7 @@
       {
         "team": "ＦＣ東京",
         "officialInjuryNoticeFound": false,
-        "earlierFixtureSuspensionNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": true,
         "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
       },
       {
@@ -384,7 +384,7 @@
     ],
     "suspensions": [
       {
-        "team": "FC東京",
+        "team": "ＦＣ東京",
         "player": "ダニ ゴメス",
         "servedFor": "2026-11-21",
         "notForRound1674": true,
@@ -507,7 +507,7 @@
     "source": "Exact 12-match windows from pinned GPT history input; official J.League match pages cross-checked for six sample FC Tokyo results.",
     "findings": [
       {
-        "team": "FC東京",
+        "team": "ＦＣ東京",
         "windowMatches": 12,
         "goalsFor": 30,
         "goalsAgainst": 1,

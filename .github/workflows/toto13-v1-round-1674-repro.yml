@@ -1,0 +1,31 @@
+name: toto13 round 1674 V1 model reproduction
+on:
+  push:
+    branches:
+      - gpt/toto13-round-1674-v1-20261121T171145JST
+  pull_request:
+    branches:
+      - main
+    paths:
+      - predictions/round_1674_ChatGPT_shared_score_v1.jsonl
+      - reports/round_1674_toto13_v1_audit_20261121.json
+      - scripts/repro/round-1674-toto13-v1-repro.js
+      - .github/workflows/toto13-v1-round-1674-repro.yml
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: sigulun555-lab/gpt
+          ref: 5dddf94cb83b048a4836a207fa392bf779013453
+          path: gpt-input
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Re-run actual exported GPT model
+        run: node scripts/repro/round-1674-toto13-v1-repro.js

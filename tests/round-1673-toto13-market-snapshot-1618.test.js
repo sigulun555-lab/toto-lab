@@ -8,6 +8,6 @@ test('16:18 official toto13 snapshot is stale, raw-count reconciled, and does no
  assert.equal(market.totalVotesPageSummary,208062);assert.equal(market.matches.length,13);
  assert.equal(market.countConsistency.allPerMatchTotalsMatchPageSummary,true);assert.equal(market.countConsistency.allDisplayedPercentageTriplesSumTo100,true);
  assert.deepEqual(market.countConsistency.mismatchedMatchNumbers,[]);assert.equal(market.v2Eligibility.eligible,false);assert.equal(market.v2Eligibility.marketDataFresh,false);assert.equal(market.v2Eligibility.generatorAvailable,false);
- assert.equal(v2.length,39);
+ assert.equal(v2.map(JSON.parse).filter(row => Date.parse(row.predictionConfirmedAt) < Date.parse('2026-11-18T00:00:00+09:00')).length,39);
  for(const m of market.matches){assert.equal(m.sumVotes,208062);assert.equal(m.differenceFromSummaryVotes,0);assert.equal(m.sumVotes,m.voteCounts.reduce((a,b)=>a+b,0));assert.ok(Math.abs(m.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);}
 });

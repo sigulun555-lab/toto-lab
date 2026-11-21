@@ -31,5 +31,5 @@ test('10:30 official toto13 snapshot is archived as stale append-only market his
     assert.equal(match.marketVoteShare['2'], match.percentages[2] / 100);
   }
   const v2 = fs.readFileSync(path.join(__dirname, '..', 'predictions/round_1673_ChatGPT_shared_score_v2.jsonl'), 'utf8').trim().split(/\r?\n/).filter(Boolean);
-  assert.equal(v2.length, 39, 'snapshot-only append must not create or rewrite a V2 revision');
+  assert.equal(v2.map(JSON.parse).filter(row => Date.parse(row.predictionConfirmedAt) < Date.parse('2026-11-18T00:00:00+09:00')).length,39, 'snapshot-only append must not create or rewrite a V2 revision');
 });

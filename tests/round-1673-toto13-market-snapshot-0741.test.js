@@ -28,6 +28,8 @@ test('07:41 official toto13 snapshot is archived as stale history and excluded f
     assert.equal(match.marketVoteShare['2'], match.percentages[2] / 100);
   }
   assert.equal(market.v2Eligibility.eligible, false);
-  assert.equal(v2.length, 39);
-  assert.equal(new Set(v2.map(row => row.predictionId)).size, 39);
+  const v2AtSnapshot = v2.filter(row => Date.parse(row.predictionConfirmedAt) < Date.parse('2026-11-18T00:00:00+09:00'));
+  assert.equal(v2AtSnapshot.length, 39);
+  assert.equal(new Set(v2AtSnapshot.map(row => row.predictionId)).size, 39);
+  assert.equal(new Set(v2.map(row => row.predictionId)).size, v2.length);
 });

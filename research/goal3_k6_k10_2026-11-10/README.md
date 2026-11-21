@@ -53,7 +53,9 @@ For verification/goal3_independent/nested_validation.py, the runner verifies the
 Git blob SHA 5f73df9e6fdb43d5cf333c04036f87ae16c20d1f. Its SHA-256 is also recorded in the
 run manifest. The exact input commit is pinned above.
 
-The generated manifest records the actual hashes used on every run. The portable unit-test
+The checked-in `input_manifest.json` pins the source commit, all three input SHA-256 values, the exact external PR #19 model Git blob SHA, the local gradient-test module hashes, and the runner hash. The generated `run_manifest.json` records the actual hashes used on every run and the input-manifest ID.
+
+The gradient-mask derivation and optimizer contract are documented in [GRADIENT_MASK.md](GRADIENT_MASK.md), with finite-difference and boundary tests executed in the full numerical CI job. CI pins Python 3.11.18, NumPy 2.4.6, and SciPy 1.17.1; the gradient test can be run locally with `python -I -m unittest discover -s verification/goal3_independent -p 'test_*.py'` after installing those numerical dependencies. The portable unit-test
 workflow alone does not establish that the full reproduction command has been run.
 
 ## Current interpretation

@@ -1,0 +1,108 @@
+{
+  "manifestId": "goal3-k6-k10-retrospective-20261116-v1",
+  "schemaVersion": 1,
+  "researchOnly": true,
+  "productionAdoption": false,
+  "source": {
+    "repo": "sigulun555-lab/gpt",
+    "ref": "research/goal3-k-penalty-sweep-20261104",
+    "commit": "2adf65a20247dd30c5b86ae95c22bd75980cda89",
+    "pr": 19
+  },
+  "artifact": {
+    "repo": "sigulun555-lab/gpt",
+    "runId": 43527604151,
+    "runNumber": 569,
+    "artifactId": 14085113748,
+    "name": "goal3-all-k-outer-reconstruction-43527604151",
+    "zipSha256": "1793be8afbe023e43c9bb5997df7760bb212e23f76d127bb9b4c5650c5c7b512",
+    "innerJson": "goal3_outer_allk_reproduction.json",
+    "innerJsonSha256": "ed2829dfd1cc767c2a51ec935db5174f329351c404be85bf8377f7b2dd5f1a8c"
+  },
+  "cohort": {
+    "historyRows": 429,
+    "historyDistinctDates": 37,
+    "historyFetchedAtUniqueCount": 1,
+    "historyFetchedAt": "2026-11-03T23:21:25.123Z",
+    "outerMatches": 236,
+    "teamSideTargets": 472,
+    "targetDates": 17,
+    "targetDateRange": [
+      "2026-09-19",
+      "2026-11-03"
+    ],
+    "folds": [
+      5,
+      6,
+      6
+    ],
+    "leagueTargets": {
+      "J1": 120,
+      "J2": 178,
+      "J3": 174
+    }
+  },
+  "protocol": {
+    "trainingWindow": "2026_only",
+    "baselineK": 10,
+    "candidateK": 6,
+    "bootstrap": {
+      "rng": "Python random.Random",
+      "seed": 1,
+      "replicates": 10000,
+      "clusterUnits": [
+        "date",
+        "match"
+      ],
+      "percentile": "order statistics at floor(.025*B), floor(.975*B)-1",
+      "role": "retrospective sensitivity only"
+    },
+    "roundClusterPrimary": "not computed; source cohort has no official round IDs",
+    "prospectiveOutcomes": false,
+    "noProductionAdoption": true
+  },
+  "optimizer": {
+    "objective": "Poisson negative log-likelihood plus L2 penalty on team attack and defense",
+    "method": "L-BFGS-B",
+    "jac": true,
+    "maxiter": 300,
+    "initialMu": "log(1.3)",
+    "logitClip": [
+      -20,
+      20
+    ],
+    "clipDerivative": "strict open-interval mask; zero at and outside both boundaries"
+  },
+  "files": {
+    "history": {
+      "path": "data/history.json",
+      "sha256": "efca00ea491fcfea6a1267af403cb5ba80ae540fca97a076def25815fc318201",
+      "sourcePath": "data/history.json"
+    },
+    "aliases": {
+      "path": "data/team_aliases.json",
+      "sha256": "92e6377068df8dd63935e0c003adfd7b355e7adac23f7aace4f947be4f5f027e",
+      "sourcePath": "data/team_aliases.json"
+    },
+    "csv": {
+      "path": "verification/goal3_independent/2025.csv",
+      "sha256": "6175674bc28d4311b219eed5ea2aa5e478fe0f17b8e6b8653f37718057da4288",
+      "sourcePath": "verification/goal3_independent/2025.csv"
+    },
+    "nested_validation": {
+      "path": "verification/goal3_independent/nested_validation.py",
+      "gitBlobSha": "5f73df9e6fdb43d5cf333c04036f87ae16c20d1f",
+      "sourcePath": "verification/goal3_independent/nested_validation.py"
+    },
+    "gradient_module": {
+      "path": "verification/goal3_independent/nested_validation.py",
+      "sha256": "e55ca71fa2d3705d24d6c8d53c2c3f2e6328ffaa257cb160776c57b54c3fb027",
+      "gitBlobSha": "debe8f0960f9e787d550ba874fc91961862a6eea"
+    },
+    "analysis": {
+      "path": "research/goal3_k6_k10_2026-11-10/analysis.py",
+      "sha256": "c103a495270949f3d98974384aac8bf7e4f3610a627a9e2753b59a088c67b26b",
+      "gitBlobSha": "0229a80ffd7142b672d53b0b840c4f7dd4619b10"
+    }
+  }
+}

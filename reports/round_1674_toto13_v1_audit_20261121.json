@@ -502,5 +502,58 @@
     "invalidHistoryRows": 0,
     "marketBlendApplied": false,
     "actualExportParity": "pending dedicated PR CI"
+  },
+  "modelDiagnostics": {
+    "source": "Exact 12-match windows from pinned GPT history input; official J.League match pages cross-checked for six sample FC Tokyo results.",
+    "findings": [
+      {
+        "team": "FC東京",
+        "windowMatches": 12,
+        "goalsFor": 30,
+        "goalsAgainst": 1,
+        "goalsForPerMatch": 2.5,
+        "goalsAgainstPerMatch": 0.08333333333333333,
+        "cleanSheets": 11,
+        "fixtureMatchNumber": 6,
+        "opponent": "サンフレッチェ広島",
+        "rawAwayLambdaBelowFloor": true,
+        "appliedLambdaFloor": 0.15,
+        "predictedAwayExpectedGoals": 0.15,
+        "caution": "The unregularized shared-score baseline clips the Hiroshima away lambda to its 0.15 floor. This extreme 1X2 output is a model boundary effect, not an injury/lineup adjustment."
+      }
+    ],
+    "officialMatchCrossChecks": [
+      {
+        "date": "2026-08-21",
+        "fixture": "FC東京 2-0 ジェフユナイテッド千葉",
+        "url": "https://www.jleague.jp/match/j1/2026/082101/"
+      },
+      {
+        "date": "2026-10-10",
+        "fixture": "FC東京 3-0 浦和レッズ",
+        "url": "https://www.jleague.jp/match/j1/2026/101009/"
+      },
+      {
+        "date": "2026-10-17",
+        "fixture": "東京ヴェルディ 0-4 FC東京",
+        "url": "https://www.jleague.jp/match/j1/2026/101708/"
+      },
+      {
+        "date": "2026-10-25",
+        "fixture": "FC東京 6-0 水戸ホーリーホック",
+        "url": "https://www.jleague.jp/match/j1/2026/102505/"
+      },
+      {
+        "date": "2026-10-31",
+        "fixture": "ファジアーノ岡山 0-4 FC東京",
+        "url": "https://www.jleague.jp/match/j1/2026/103109/"
+      },
+      {
+        "date": "2026-11-07",
+        "fixture": "FC東京 2-0 鹿島アントラーズ",
+        "url": "https://www.jleague.jp/match/j1/2026/110709/"
+      }
+    ],
+    "verificationLimit": "The six cited results are a sample, not a full official re-audit of all 12 history rows."
   }
 }

@@ -26,7 +26,7 @@ test('round 1674 later official observation preserves the same 13 fixture pairs'
 
   const oldByNumber = new Map(previous.matches.map(match => [
     match.matchNumber,
-    [match.homeTeam, match.awayTeam],
+    { home: match.homeTeam, away: match.awayTeam, kickoffAt: match.kickoffAt, venue: match.venue },
   ]));
   const changed = [];
   const unchanged = [];
@@ -34,7 +34,9 @@ test('round 1674 later official observation preserves the same 13 fixture pairs'
     const oldPair = oldByNumber.get(fixture.number);
     assert.ok(oldPair, `missing previous match ${fixture.number}`);
     const currentPair = [fixture.officialHome, fixture.officialAway];
-    if (oldPair[0] === currentPair[0] && oldPair[1] === currentPair[1]) unchanged.push(fixture.number);
+    assert.equal(fixture.venue, oldPair.venue, `venue changed for match ${fixture.number}`);
+    assert.equal(`${fixture.date}T${fixture.kickoff}:00+09:00`, oldPair.kickoffAt, `kickoff changed for match ${fixture.number}`);
+    if (oldPair.home === currentPair[0] && oldPair.away === currentPair[1]) unchanged.push(fixture.number);
     else changed.push(fixture.number);
   }
 

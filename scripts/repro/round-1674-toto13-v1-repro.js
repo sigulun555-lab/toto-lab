@@ -26,7 +26,7 @@ assert.equal(new Set(rows.map(x=>x.predictionId)).size, 13);
 assert.equal(new Set(rows.map(x=>x.matchNumber)).size, 13);
 assert.equal(report.officialFixtures.length, 13);
 assert.equal(report.teamNewsAudit.teams.length, 26);
-assert.equal(report.modelDiagnostics.find(x=>x.team==='ＦＣ東京').findings[0].appliedLambdaFloor, 0.15);
+assert.equal(report.modelDiagnostics.findings.find(x=>x.team==='ＦＣ東京').findings[0].appliedLambdaFloor, 0.15);
 assert.equal(rows.find(x=>x.matchNumber===6).awayExpectedGoals, 0.15);
 const round8 = x => Number(x.toFixed(8));
 const close = (a,b,tol=1e-8) => assert.ok(Math.abs(a-b)<=tol, `expected ${a} ~= ${b}`);

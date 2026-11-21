@@ -1,0 +1,559 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1674,
+  "predictionVersion": "V1",
+  "generatedAt": "2026-11-21T17:11:45+09:00",
+  "generatedAtUtc": "2026-11-21T08:11:45.000Z",
+  "deadlineAt": "2026-11-25T18:50:00+09:00",
+  "deadlineAtUtc": "2026-11-25T09:50:00.000Z",
+  "model": {
+    "repository": "sigulun555-lab/gpt",
+    "commit": "5dddf94cb83b048a4836a207fa392bf779013453",
+    "path": "model.js",
+    "blobSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+    "function": "predict(history, fixture)",
+    "version": "GPT-shared-poisson-score-v1-2026-11-21",
+    "preflight": "line-for-line JavaScript port of the exported function; PR CI calls the actual exported function from the pinned commit"
+  },
+  "input": {
+    "repository": "sigulun555-lab/gpt",
+    "historyPath": "data/history.json",
+    "historyBlobSha": "fd2603fe11c79e51dc090d2f91b4eeef2b67c48d",
+    "historyRows": 483,
+    "latestResultDate": "2026-11-20",
+    "fetchedAt": "2026-11-21T07:03:33.859Z",
+    "sourceUrl": "https://raw.githubusercontent.com/k-addtimes/jleague_open_data/main/current_schedule_file.csv",
+    "teamAliasesPath": "data/team_aliases.json",
+    "teamAliasesBlobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab",
+    "teamAliasCount": 121,
+    "parserPath": "scripts/auto_pipeline.js",
+    "parserBlobSha": "ef557e084cab802df7830d949bd1f52ddee5db7c",
+    "dateSorted": true,
+    "duplicateCanonicalMatchKeys": 0,
+    "invalidRows": 0
+  },
+  "officialSchedule": {
+    "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1674",
+    "pageDisplayAt": "2026-11-21T16:45:00+09:00",
+    "checkedAt": "2026-11-21T17:08:41+09:00",
+    "refreshNotice": "5分毎",
+    "snapshotBranch": "data/round-1674-official-schedule-20261118",
+    "snapshotBlobSha": "78e66a25037b35fe9fd2f43364b4023aa80b3b32",
+    "snapshotObservedAt": "2026-11-21T14:01:00+09:00",
+    "fixtureCount": 13,
+    "deadlineAt": "2026-11-25T18:50:00+09:00",
+    "onlineDeadline": "18:50 JST",
+    "otherDeadlines": "コンビニ決済17:00、スポーツくじ取扱コンビニ11:30、くじ売り場12:00"
+  },
+  "officialFixtures": [
+    {
+      "number": 1,
+      "date": "2026-11-25",
+      "kickoff": "19:00",
+      "venue": "フクアリ",
+      "home": "ジェフユナイテッド千葉",
+      "away": "名古屋グランパス"
+    },
+    {
+      "number": 2,
+      "date": "2026-11-25",
+      "kickoff": "19:00",
+      "venue": "ＪＦＥス",
+      "home": "ファジアーノ岡山",
+      "away": "清水エスパルス"
+    },
+    {
+      "number": 3,
+      "date": "2026-11-25",
+      "kickoff": "19:00",
+      "venue": "ピースタ",
+      "home": "Ｖ・ファーレン長崎",
+      "away": "川崎フロンターレ"
+    },
+    {
+      "number": 4,
+      "date": "2026-11-25",
+      "kickoff": "19:00",
+      "venue": "水戸信ス",
+      "home": "水戸ホーリーホック",
+      "away": "東京ヴェルディ"
+    },
+    {
+      "number": 5,
+      "date": "2026-11-25",
+      "kickoff": "19:00",
+      "venue": "ベススタ",
+      "home": "アビスパ福岡",
+      "away": "横浜Ｆ・マリノス"
+    },
+    {
+      "number": 6,
+      "date": "2026-11-25",
+      "kickoff": "19:00",
+      "venue": "味スタ",
+      "home": "ＦＣ東京",
+      "away": "サンフレッチェ広島"
+    },
+    {
+      "number": 7,
+      "date": "2026-11-25",
+      "kickoff": "19:30",
+      "venue": "埼玉",
+      "home": "浦和レッズ",
+      "away": "セレッソ大阪"
+    },
+    {
+      "number": 8,
+      "date": "2026-11-25",
+      "kickoff": "19:00",
+      "venue": "プレド",
+      "home": "北海道コンサドーレ札幌",
+      "away": "藤枝ＭＹＦＣ"
+    },
+    {
+      "number": 9,
+      "date": "2026-11-25",
+      "kickoff": "19:00",
+      "venue": "ＮＤスタ",
+      "home": "モンテディオ山形",
+      "away": "ジュビロ磐田"
+    },
+    {
+      "number": 10,
+      "date": "2026-11-25",
+      "kickoff": "19:00",
+      "venue": "駅スタ",
+      "home": "サガン鳥栖",
+      "away": "大分トリニータ"
+    },
+    {
+      "number": 11,
+      "date": "2026-11-25",
+      "kickoff": "19:00",
+      "venue": "ハワスタ",
+      "home": "いわきＦＣ",
+      "away": "カターレ富山"
+    },
+    {
+      "number": 12,
+      "date": "2026-11-25",
+      "kickoff": "19:00",
+      "venue": "ニッパツ",
+      "home": "横浜ＦＣ",
+      "away": "ベガルタ仙台"
+    },
+    {
+      "number": 13,
+      "date": "2026-11-25",
+      "kickoff": "19:00",
+      "venue": "ＮＡＣＫ",
+      "home": "ＲＢ大宮アルディージャ",
+      "away": "徳島ヴォルティス"
+    }
+  ],
+  "teamNewsAudit": {
+    "checkedAt": "2026-11-21T17:08:41+09:00",
+    "checkedScope": "全26チームの公式クラブドメインを対象に負傷・欠場・出場停止・選手登録情報を検索。Jリーグ公式の出場停止公表も確認",
+    "teams": [
+      {
+        "team": "ジェフユナイテッド千葉",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "名古屋グランパス",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "ファジアーノ岡山",
+        "officialInjuryNoticeFound": true,
+        "earlierFixtureSuspensionNoticeFound": true,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "清水エスパルス",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "Ｖ・ファーレン長崎",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "川崎フロンターレ",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "水戸ホーリーホック",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "東京ヴェルディ",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "アビスパ福岡",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "横浜Ｆ・マリノス",
+        "officialInjuryNoticeFound": true,
+        "earlierFixtureSuspensionNoticeFound": true,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "ＦＣ東京",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": true,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "サンフレッチェ広島",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "浦和レッズ",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "セレッソ大阪",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": true,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "北海道コンサドーレ札幌",
+        "officialInjuryNoticeFound": true,
+        "earlierFixtureSuspensionNoticeFound": true,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "藤枝ＭＹＦＣ",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "モンテディオ山形",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "ジュビロ磐田",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "サガン鳥栖",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "大分トリニータ",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": true,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "いわきＦＣ",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": true,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "カターレ富山",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "横浜ＦＣ",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "ベガルタ仙台",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "ＲＢ大宮アルディージャ",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      },
+      {
+        "team": "徳島ヴォルティス",
+        "officialInjuryNoticeFound": false,
+        "earlierFixtureSuspensionNoticeFound": false,
+        "availabilityStatus": "未確定。確認した公式検索結果に11/25の出場可否を確定する情報なし"
+      }
+    ],
+    "injuryReports": [
+      {
+        "team": "ファジアーノ岡山",
+        "player": "木村太哉",
+        "publishedAt": "2026-11-13",
+        "injuryDate": "2026-11-10",
+        "diagnosis": "左足内果疲労骨折",
+        "returnEstimate": "全治3か月程度",
+        "availability": "2026-11-25は欠場見込み（診断上の期間内）",
+        "sourceUrl": "https://www.fagiano-okayama.com/news/202611131001/"
+      },
+      {
+        "team": "北海道コンサドーレ札幌",
+        "player": "川原颯斗",
+        "number": 39,
+        "position": "DF",
+        "publishedAt": "2026-11-21",
+        "injuryDate": "2026-11-08",
+        "diagnosis": "右大腿二頭筋肉離れ",
+        "returnEstimate": "未公表",
+        "availability": "不明。復帰発表なし",
+        "sourceUrl": "https://www.consadole-sapporo.jp/news/2026/11/17363/"
+      },
+      {
+        "team": "北海道コンサドーレ札幌",
+        "player": "福森晃斗",
+        "number": 5,
+        "position": "DF",
+        "publishedAt": "2026-11-03",
+        "injuryDate": "2026-10-25",
+        "diagnosis": "右大腿二頭筋肉離れ",
+        "returnEstimate": "未公表",
+        "availability": "不明。復帰発表なし",
+        "sourceUrl": "https://www.consadole-sapporo.jp/news/2026/11/15643/"
+      },
+      {
+        "team": "横浜Ｆ・マリノス",
+        "player": "山根陸",
+        "position": "MF",
+        "publishedAt": "2026-11-19",
+        "injuryDate": "2026-11-15",
+        "diagnosis": "左膝内側側副靱帯損傷",
+        "returnEstimate": "経過を見ながら判断",
+        "availability": "不明。復帰時期未定",
+        "sourceUrl": "https://www.f-marinos.com/news/team/10930"
+      },
+      {
+        "team": "横浜Ｆ・マリノス",
+        "player": "ジョルディ クルークス",
+        "position": "MF",
+        "publishedAt": "2026-11-05",
+        "injuryDate": "2026-11-01",
+        "diagnosis": "左ハムストリング肉離れ",
+        "returnEstimate": "経過を見ながら判断",
+        "availability": "不明。復帰時期未定",
+        "sourceUrl": "https://www.f-marinos.com/news/team/10877"
+      },
+      {
+        "team": "横浜Ｆ・マリノス",
+        "player": "三井寺眞",
+        "position": "MF/U-21",
+        "publishedAt": "2026-11-08",
+        "injuryDate": "2026-11-07",
+        "diagnosis": "左外閉鎖筋負傷",
+        "returnEstimate": "未公表",
+        "availability": "U-21代表遠征辞退は確認。11/25トップチーム選出可否は不明",
+        "sourceUrl": "https://www.f-marinos.com/news/team/10887"
+      }
+    ],
+    "suspensions": [
+      {
+        "team": "ＦＣ東京",
+        "player": "ダニ ゴメス",
+        "servedFor": "2026-11-21",
+        "notForRound1674": true,
+        "sourceUrl": "https://www.jleague.jp/corporate/news/article/109"
+      },
+      {
+        "team": "横浜Ｆ・マリノス",
+        "player": "諏訪間幸成",
+        "servedFor": "2026-11-21",
+        "notForRound1674": true,
+        "sourceUrl": "https://www.jleague.jp/corporate/news/article/109"
+      },
+      {
+        "team": "セレッソ大阪",
+        "player": "パブロ サバック",
+        "servedFor": "2026-11-21",
+        "notForRound1674": true,
+        "sourceUrl": "https://www.jleague.jp/corporate/news/article/109"
+      },
+      {
+        "team": "セレッソ大阪",
+        "player": "ルーカス フェルナンデス",
+        "servedFor": "2026-11-21",
+        "notForRound1674": true,
+        "sourceUrl": "https://www.jleague.jp/corporate/news/article/109"
+      },
+      {
+        "team": "ファジアーノ岡山",
+        "player": "鈴木喜丈",
+        "servedFor": "2026-11-21",
+        "notForRound1674": true,
+        "sourceUrl": "https://www.jleague.jp/corporate/news/article/109"
+      },
+      {
+        "team": "大分トリニータ",
+        "player": "林田滉也",
+        "servedFor": "2026-11-21",
+        "notForRound1674": true,
+        "sourceUrl": "https://www.jleague.jp/corporate/news/article/116"
+      },
+      {
+        "team": "北海道コンサドーレ札幌",
+        "player": "西野奨太",
+        "servedFor": "2026-11-15",
+        "notForRound1674": true,
+        "sourceUrl": "https://www.jleague.jp/corporate/news/article/109"
+      },
+      {
+        "team": "いわきＦＣ",
+        "player": "中野陽斗",
+        "servedFor": "2026-11-15",
+        "notForRound1674": true,
+        "sourceUrl": "https://www.jleague.jp/corporate/news/article/109"
+      }
+    ],
+    "recentSquadChanges": [
+      {
+        "team": "横浜Ｆ・マリノス",
+        "player": "草野陸",
+        "publishedAt": "2026-11-20",
+        "change": "ユース所属DFをJリーグ公式戦に出場可能な第2種所属選手として登録",
+        "availability": "11/25のメンバー入りは未確認",
+        "sourceUrl": "https://www.f-marinos.com/news/team/10923"
+      }
+    ],
+    "additionalClubUpdates": [
+      {
+        "team": "ファジアーノ岡山",
+        "publishedAt": "2026-11-19",
+        "change": "U-18所属 安西来起選手のトップチーム昇格告知",
+        "availability": "11/25の登録・出場可否は未確認",
+        "sourceUrl": "https://www.fagiano-okayama.com/news/"
+      },
+      {
+        "team": "ファジアーノ岡山",
+        "publishedAt": "2026-11-20",
+        "change": "U-18所属 徳田晃大選手のトップチーム登録告知",
+        "availability": "11/25の登録・出場可否は未確認",
+        "sourceUrl": "https://www.fagiano-okayama.com/news/"
+      }
+    ],
+    "officialSuspensionNoticesForRound1674Found": 0,
+    "note": "上記の出場停止は11/15または11/21の対象試合分で、11/25回の停止とは確認していない。11/21の試合終了後に新たな懲戒が公表される可能性がある。その他23チームは今回の対象検索結果で現行の公式負傷情報を確認できなかっただけで、出場可能を意味しない。",
+    "lineups": {
+      "officialLineupsPublished": false,
+      "predictedLineupsFound": 0,
+      "checkedAt": "2026-11-21T17:08:41+09:00",
+      "note": "11/25の公式先発は未発表。クラブ/Jリーグの公式発表として予想先発も確認できず。先発予想を推測で補完していない。"
+    },
+    "adjustmentsApplied": {
+      "injury": false,
+      "suspension": false,
+      "availability": false,
+      "lineup": false
+    }
+  },
+  "marketUse": {
+    "applied": false,
+    "toto13VotePageUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=01&fromId=SSIN026&gameAssortment=1&holdCntId=1674",
+    "toto13VotePageDisplayAt": "2026-11-21T16:47:00+09:00",
+    "checkedAt": "2026-11-21T17:08:41+09:00",
+    "staleAgainstFiveMinuteRefresh": true,
+    "reason": "16:47表示の公式投票ページを17:08:41 JSTに確認し、表示時刻が更新間隔を超えていたためV2には使用しない"
+  },
+  "v2Status": {
+    "status": "pending",
+    "reason": "公式toto13投票ページが5分更新条件を満たさず、mainに再現可能なV2生成CLIも確認できない。既存PR #116のテストは30/70ブレンド規約を定義するが生成CLIではないため、類似ロジックで代用しない。"
+  },
+  "validation": {
+    "rows": 13,
+    "uniquePredictionIds": 13,
+    "all26HistoryWindows12": true,
+    "maximumProbabilitySumError": 1.0000000161269895e-8,
+    "duplicateCanonicalMatchKeys": 0,
+    "invalidHistoryRows": 0,
+    "marketBlendApplied": false,
+    "actualExportParity": "pending dedicated PR CI"
+  },
+  "modelDiagnostics": {
+    "source": "Exact 12-match windows from pinned GPT history input; official J.League match pages cross-checked for six sample FC Tokyo results.",
+    "findings": [
+      {
+        "team": "ＦＣ東京",
+        "windowMatches": 12,
+        "goalsFor": 30,
+        "goalsAgainst": 1,
+        "goalsForPerMatch": 2.5,
+        "goalsAgainstPerMatch": 0.08333333333333333,
+        "cleanSheets": 11,
+        "fixtureMatchNumber": 6,
+        "opponent": "サンフレッチェ広島",
+        "rawAwayLambdaBelowFloor": true,
+        "appliedLambdaFloor": 0.15,
+        "predictedAwayExpectedGoals": 0.15,
+        "caution": "The unregularized shared-score baseline clips the Hiroshima away lambda to its 0.15 floor. This extreme 1X2 output is a model boundary effect, not an injury/lineup adjustment."
+      }
+    ],
+    "officialMatchCrossChecks": [
+      {
+        "date": "2026-08-21",
+        "fixture": "FC東京 2-0 ジェフユナイテッド千葉",
+        "url": "https://www.jleague.jp/match/j1/2026/082101/"
+      },
+      {
+        "date": "2026-10-10",
+        "fixture": "FC東京 3-0 浦和レッズ",
+        "url": "https://www.jleague.jp/match/j1/2026/101009/"
+      },
+      {
+        "date": "2026-10-17",
+        "fixture": "東京ヴェルディ 0-4 FC東京",
+        "url": "https://www.jleague.jp/match/j1/2026/101708/"
+      },
+      {
+        "date": "2026-10-25",
+        "fixture": "FC東京 6-0 水戸ホーリーホック",
+        "url": "https://www.jleague.jp/match/j1/2026/102505/"
+      },
+      {
+        "date": "2026-10-31",
+        "fixture": "ファジアーノ岡山 0-4 FC東京",
+        "url": "https://www.jleague.jp/match/j1/2026/103109/"
+      },
+      {
+        "date": "2026-11-07",
+        "fixture": "FC東京 2-0 鹿島アントラーズ",
+        "url": "https://www.jleague.jp/match/j1/2026/110709/"
+      }
+    ],
+    "verificationLimit": "The six cited results are a sample, not a full official re-audit of all 12 history rows."
+  }
+}

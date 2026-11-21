@@ -246,7 +246,7 @@ test('12:35 official toto13 snapshot preserves all raw count discrepancies and a
  assert.equal(market1235.countConsistency.allDisplayedPercentageTriplesSumTo100,true);
  assert.equal(market1235.v2Eligibility,'eligible_with_disclosed_count_discrepancy');
  for(const m of market1235.matches){
-  assert.equal(m.countTotal-m.totalVotesPageSummary,m.differenceFromPageSummary);
+  assert.equal(m.countTotal-market1235.totalVotesPageSummary,m.differenceFromPageSummary);
   assert.ok(Math.abs(m.percentages.reduce((a,b)=>a+b,0)-100)<1e-8);
   assert.equal(m.marketVoteShare['1'],m.percentages[0]/100);
   assert.equal(m.marketVoteShare['0'],m.percentages[1]/100);

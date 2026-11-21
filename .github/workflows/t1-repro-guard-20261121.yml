@@ -1,0 +1,28 @@
+name: T1 429-row pinned reproduction guard
+on:
+  push:
+    branches:
+      - gpt/t1-repro-guard-20261121
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout research branch
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Checkout pinned GPT history input
+        uses: actions/checkout@v4
+        with:
+          repository: sigulun555-lab/gpt
+          ref: 2309d08e3a449c9271fa3194ccf3fbc4799f9215
+          path: gpt-input
+          persist-credentials: false
+      - name: Test fail-closed history and output guards
+        run: python -m unittest discover -s tests -p "test_t1_repro_guard_20261121.py" -v
+      - name: Run Claude T1 reproduction with pinned input
+        run: python -I scripts/t1_t2/run_checked_20261121.py gpt-input/data/history.json

@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 1,
+  "round": 1673,
+  "pageDisplayAt": "2026-11-18T09:58:00+09:00",
+  "retrievedAt": "2026-11-18T10:00:51+09:00",
+  "refreshNotice": "5分毎",
+  "displayAgeSeconds": 171,
+  "stale": false,
+  "product": "toto13",
+  "marketType": "toto13",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1673",
+  "totalVotesPageSummary": 187328,
+  "outcomeOrder": [
+    "1",
+    "0",
+    "2"
+  ],
+  "outcomes": [
+    "home90Win",
+    "drawOther",
+    "home90Loss"
+  ],
+  "matches": [
+    {
+      "matchNumber": 1,
+      "productMatchNumber": 1,
+      "toto13MatchNumber": 1,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "町田",
+      "away": "長崎",
+      "voteCounts": [
+        152195,
+        20362,
+        14750
+      ],
+      "percentages": [
+        81.25,
+        10.87,
+        7.88
+      ],
+      "marketVoteShare": {
+        "0": 0.10869999999999999,
+        "1": 0.8125,
+        "2": 0.0788
+      },
+      "sumVotes": 187307,
+      "differenceFromSummaryVotes": -21
+    },
+    {
+      "matchNumber": 2,
+      "productMatchNumber": 2,
+      "toto13MatchNumber": 2,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "広島",
+      "away": "横浜FM",
+      "voteCounts": [
+        113993,
+        34550,
+        38764
+      ],
+      "percentages": [
+        60.86,
+        18.45,
+        20.69
+      ],
+      "marketVoteShare": {
+        "0": 0.1845,
+        "1": 0.6086,
+        "2": 0.2069
+      },
+      "sumVotes": 187307,
+      "differenceFromSummaryVotes": -21
+    },
+    {
+      "matchNumber": 3,
+      "productMatchNumber": 3,
+      "toto13MatchNumber": 3,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "京都",
+      "away": "浦和",
+      "voteCounts": [
+        50663,
+        51304,
+        85341
+      ],
+      "percentages": [
+        27.05,
+        27.39,
+        45.56
+      ],
+      "marketVoteShare": {
+        "0": 0.27390000000000003,
+        "1": 0.2705,
+        "2": 0.4556
+      },
+      "sumVotes": 187308,
+      "differenceFromSummaryVotes": -20
+    },
+    {
+      "matchNumber": 4,
+      "productMatchNumber": 4,
+      "toto13MatchNumber": 4,
+      "date": "2026-11-21",
+      "kickoff": "15:00",
+      "home": "川崎Ｆ",
+      "away": "福岡",
+      "voteCounts": [
+        151733,
+        19099,
+        16476
+      ],
+      "percentages": [
+        81.01,
+        10.2,
+        8.79
+      ],
+      "marketVoteShare": {
+        "0": 0.102,
+        "1": 0.8101,
+        "2": 0.08789999999999999
+      },
+      "sumVotes": 187308,
+      "differenceFromSummaryVotes": -20
+    },
+    {
+      "matchNumber": 5,
+      "productMatchNumber": 5,
+      "toto13MatchNumber": 5,
+      "date": "2026-11-21",
+      "kickoff": "16:00",
+      "home": "Ｇ大阪",
+      "away": "岡山",
+      "voteCounts": [
+        81511,
+        53211,
+        52586
+      ],
+      "percentages": [
+        43.52,
+        28.41,
+        28.07
+      ],
+      "marketVoteShare": {
+        "0": 0.2841,
+        "1": 0.43520000000000003,
+        "2": 0.2807
+      },
+      "sumVotes": 187308,
+      "differenceFromSummaryVotes": -20
+    },
+    {
+      "matchNumber": 6,
+      "productMatchNumber": 6,
+      "toto13MatchNumber": 6,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "東京Ｖ",
+      "away": "名古屋",
+      "voteCounts": [
+        75958,
+        51328,
+        60030
+      ],
+      "percentages": [
+        40.55,
+        27.4,
+        32.05
+      ],
+      "marketVoteShare": {
+        "0": 0.27399999999999997,
+        "1": 0.40549999999999997,
+        "2": 0.32049999999999995
+      },
+      "sumVotes": 187316,
+      "differenceFromSummaryVotes": -12
+    },
+    {
+      "matchNumber": 7,
+      "productMatchNumber": 7,
+      "toto13MatchNumber": 7,
+      "date": "2026-11-21",
+      "kickoff": "15:00",
+      "home": "Ｃ大阪",
+      "away": "FC東京",
+      "voteCounts": [
+        24544,
+        27199,
+        135573
+      ],
+      "percentages": [
+        13.1,
+        14.52,
+        72.38
+      ],
+      "marketVoteShare": {
+        "0": 0.1452,
+        "1": 0.131,
+        "2": 0.7238
+      },
+      "sumVotes": 187316,
+      "differenceFromSummaryVotes": -12
+    },
+    {
+      "matchNumber": 8,
+      "productMatchNumber": 8,
+      "toto13MatchNumber": 8,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "秋田",
+      "away": "山形",
+      "voteCounts": [
+        85483,
+        49287,
+        52546
+      ],
+      "percentages": [
+        45.64,
+        26.31,
+        28.05
+      ],
+      "marketVoteShare": {
+        "0": 0.2631,
+        "1": 0.45640000000000003,
+        "2": 0.2805
+      },
+      "sumVotes": 187316,
+      "differenceFromSummaryVotes": -12
+    },
+    {
+      "matchNumber": 9,
+      "productMatchNumber": 9,
+      "toto13MatchNumber": 9,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "宮崎",
+      "away": "いわき",
+      "voteCounts": [
+        136425,
+        26077,
+        24814
+      ],
+      "percentages": [
+        72.83,
+        13.92,
+        13.25
+      ],
+      "marketVoteShare": {
+        "0": 0.1392,
+        "1": 0.7283,
+        "2": 0.1325
+      },
+      "sumVotes": 187316,
+      "differenceFromSummaryVotes": -12
+    },
+    {
+      "matchNumber": 10,
+      "productMatchNumber": 10,
+      "toto13MatchNumber": 10,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "甲府",
+      "away": "八戸",
+      "voteCounts": [
+        71742,
+        61238,
+        54336
+      ],
+      "percentages": [
+        38.3,
+        32.69,
+        29.01
+      ],
+      "marketVoteShare": {
+        "0": 0.32689999999999997,
+        "1": 0.38299999999999995,
+        "2": 0.2901
+      },
+      "sumVotes": 187316,
+      "differenceFromSummaryVotes": -12
+    },
+    {
+      "matchNumber": 11,
+      "productMatchNumber": 11,
+      "toto13MatchNumber": 11,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "富山",
+      "away": "大分",
+      "voteCounts": [
+        132507,
+        29908,
+        24901
+      ],
+      "percentages": [
+        70.74,
+        15.97,
+        13.29
+      ],
+      "marketVoteShare": {
+        "0": 0.1597,
+        "1": 0.7073999999999999,
+        "2": 0.1329
+      },
+      "sumVotes": 187316,
+      "differenceFromSummaryVotes": -12
+    },
+    {
+      "matchNumber": 12,
+      "productMatchNumber": 12,
+      "toto13MatchNumber": 12,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "鳥栖",
+      "away": "仙台",
+      "voteCounts": [
+        37037,
+        29049,
+        121230
+      ],
+      "percentages": [
+        19.77,
+        15.51,
+        64.72
+      ],
+      "marketVoteShare": {
+        "0": 0.1551,
+        "1": 0.1977,
+        "2": 0.6472
+      },
+      "sumVotes": 187316,
+      "differenceFromSummaryVotes": -12
+    },
+    {
+      "matchNumber": 13,
+      "productMatchNumber": 13,
+      "toto13MatchNumber": 13,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "磐田",
+      "away": "大宮",
+      "voteCounts": [
+        45160,
+        40140,
+        102016
+      ],
+      "percentages": [
+        24.11,
+        21.43,
+        54.46
+      ],
+      "marketVoteShare": {
+        "0": 0.2143,
+        "1": 0.24109999999999998,
+        "2": 0.5446
+      },
+      "sumVotes": 187316,
+      "differenceFromSummaryVotes": -12
+    }
+  ],
+  "countConsistency": {
+    "perMatchVoteCountsAvailable": true,
+    "allPerMatchTotalsMatchPageSummary": false,
+    "allDisplayedPercentageTriplesSumTo100": true,
+    "perMatchVoteTotalRange": {
+      "min": 187307,
+      "max": 187316,
+      "spread": 9
+    },
+    "mismatchedMatchNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "note": "公式toto13ページの表示09:58 JST。全13試合の表示率は100.00%。生投票口数はページ総計187,328口に対してNo.1–5が187,307/187,308口、No.6–13が187,316口で不一致。差を補正せず原値のまま保存。"
+  },
+  "v2Eligibility": {
+    "eligible": false,
+    "reason": "表示09:58 JST・取得10:00:51 JSTで5分更新案内内のfresh snapshot。ただし現ブランチに第1673回toto13 V2を再生成する実行可能なproduct-specific generator/CLIを確認できず、テスト内の式を代用実行しない。加えて生票数とページ総計に全13試合で不一致があるため、履歴保存のみとしV2 revisionは作成しない。"
+  },
+  "interpretation": "第1673回通常toto13の13試合・1/X/2公式投票状況。mini toto A/BおよびtotoGOAL3とは別商品。生票数のページ総計差を補正せず保持し、既存V2 39行を変更しない。"
+}

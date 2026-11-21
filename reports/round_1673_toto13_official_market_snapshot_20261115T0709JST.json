@@ -1,0 +1,375 @@
+{
+  "schemaVersion": 1,
+  "round": 1673,
+  "marketType": "toto13",
+  "sourceUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=01&fromId=SSIN026&gameAssortment=1&holdCntId=1673",
+  "pageDisplayAt": "2026-11-15T07:09:00+09:00",
+  "retrievedAt": "2026-11-15T07:11:41+09:00",
+  "refreshNotice": "5分毎",
+  "displayAgeSeconds": 161,
+  "stale": false,
+  "totalVotesPageSummary": 27816,
+  "outcomeOrder": [
+    "1",
+    "0",
+    "2"
+  ],
+  "outcomes": [
+    "home90Win",
+    "drawOther",
+    "home90Loss"
+  ],
+  "matches": [
+    {
+      "matchNumber": 1,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "町田",
+      "away": "長崎",
+      "voteCounts": [
+        17933,
+        4975,
+        4908
+      ],
+      "percentages": [
+        64.47,
+        17.89,
+        17.64
+      ],
+      "marketVoteShare": {
+        "0": 0.1789,
+        "1": 0.6447,
+        "2": 0.1764
+      },
+      "sumVotes": 27816,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 2,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "広島",
+      "away": "横浜FM",
+      "voteCounts": [
+        14406,
+        6044,
+        7366
+      ],
+      "percentages": [
+        51.79,
+        21.73,
+        26.48
+      ],
+      "marketVoteShare": {
+        "0": 0.2173,
+        "1": 0.5179,
+        "2": 0.2648
+      },
+      "sumVotes": 27816,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 3,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "京都",
+      "away": "浦和",
+      "voteCounts": [
+        7952,
+        8158,
+        11706
+      ],
+      "percentages": [
+        28.59,
+        29.33,
+        42.08
+      ],
+      "marketVoteShare": {
+        "0": 0.2933,
+        "1": 0.2859,
+        "2": 0.4208
+      },
+      "sumVotes": 27816,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 4,
+      "date": "2026-11-21",
+      "kickoff": "15:00",
+      "home": "川崎Ｆ",
+      "away": "福岡",
+      "voteCounts": [
+        17797,
+        5251,
+        4768
+      ],
+      "percentages": [
+        63.98,
+        18.88,
+        17.14
+      ],
+      "marketVoteShare": {
+        "0": 0.1888,
+        "1": 0.6398,
+        "2": 0.1714
+      },
+      "sumVotes": 27816,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 5,
+      "date": "2026-11-21",
+      "kickoff": "16:00",
+      "home": "Ｇ大阪",
+      "away": "岡山",
+      "voteCounts": [
+        11801,
+        7468,
+        8547
+      ],
+      "percentages": [
+        42.42,
+        26.85,
+        30.73
+      ],
+      "marketVoteShare": {
+        "0": 0.2685,
+        "1": 0.4242,
+        "2": 0.3073
+      },
+      "sumVotes": 27816,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 6,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "東京Ｖ",
+      "away": "名古屋",
+      "voteCounts": [
+        10335,
+        8092,
+        9389
+      ],
+      "percentages": [
+        37.16,
+        29.09,
+        33.75
+      ],
+      "marketVoteShare": {
+        "0": 0.2909,
+        "1": 0.3716,
+        "2": 0.3375
+      },
+      "sumVotes": 27816,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 7,
+      "date": "2026-11-21",
+      "kickoff": "15:00",
+      "home": "Ｃ大阪",
+      "away": "FC東京",
+      "voteCounts": [
+        6016,
+        6012,
+        15788
+      ],
+      "percentages": [
+        21.63,
+        21.61,
+        56.76
+      ],
+      "marketVoteShare": {
+        "0": 0.2161,
+        "1": 0.2163,
+        "2": 0.5676
+      },
+      "sumVotes": 27816,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 8,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "秋田",
+      "away": "山形",
+      "voteCounts": [
+        11624,
+        8349,
+        7843
+      ],
+      "percentages": [
+        41.79,
+        30.01,
+        28.2
+      ],
+      "marketVoteShare": {
+        "0": 0.3001,
+        "1": 0.4179,
+        "2": 0.282
+      },
+      "sumVotes": 27816,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 9,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "宮崎",
+      "away": "いわき",
+      "voteCounts": [
+        14845,
+        6806,
+        6165
+      ],
+      "percentages": [
+        53.37,
+        24.47,
+        22.16
+      ],
+      "marketVoteShare": {
+        "0": 0.2447,
+        "1": 0.5337,
+        "2": 0.2216
+      },
+      "sumVotes": 27816,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 10,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "甲府",
+      "away": "八戸",
+      "voteCounts": [
+        11381,
+        8528,
+        7907
+      ],
+      "percentages": [
+        40.91,
+        30.66,
+        28.43
+      ],
+      "marketVoteShare": {
+        "0": 0.3066,
+        "1": 0.4091,
+        "2": 0.2843
+      },
+      "sumVotes": 27816,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 11,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "富山",
+      "away": "大分",
+      "voteCounts": [
+        16215,
+        6133,
+        5468
+      ],
+      "percentages": [
+        58.29,
+        22.05,
+        19.66
+      ],
+      "marketVoteShare": {
+        "0": 0.2205,
+        "1": 0.5829,
+        "2": 0.1966
+      },
+      "sumVotes": 27816,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 12,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "鳥栖",
+      "away": "仙台",
+      "voteCounts": [
+        6729,
+        5976,
+        15111
+      ],
+      "percentages": [
+        24.19,
+        21.48,
+        54.33
+      ],
+      "marketVoteShare": {
+        "0": 0.2148,
+        "1": 0.2419,
+        "2": 0.5433
+      },
+      "sumVotes": 27816,
+      "differenceFromSummaryVotes": 0
+    },
+    {
+      "matchNumber": 13,
+      "date": "2026-11-21",
+      "kickoff": "14:00",
+      "home": "磐田",
+      "away": "大宮",
+      "voteCounts": [
+        7374,
+        6953,
+        13489
+      ],
+      "percentages": [
+        26.51,
+        25,
+        48.49
+      ],
+      "marketVoteShare": {
+        "0": 0.25,
+        "1": 0.2651,
+        "2": 0.4849
+      },
+      "sumVotes": 27816,
+      "differenceFromSummaryVotes": 0
+    }
+  ],
+  "voteTotalsRange": {
+    "min": 27816,
+    "max": 27816
+  },
+  "countConsistency": {
+    "allThirteenDisplayedPercentageVectorsSumTo100": true,
+    "allMatchVoteTotalsEqualPageSummary": true,
+    "perMatchDifferencesFromSummary": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "note": "Official displayed vote counts and percentages are preserved verbatim; no correction or normalization of source counts."
+  },
+  "v2Blend": {
+    "generatedAt": "2026-11-14T22:13:23.000Z",
+    "weights": {
+      "poissonModel": 0.3,
+      "totoVoteShare": 0.7
+    },
+    "basePredictionPath": "predictions/round_1673_ChatGPT_shared_score_v1.jsonl",
+    "basePredictionBlobSha": "399834b7d836c4f58370ae0af3bb979d821de251",
+    "predictionPath": "predictions/round_1673_ChatGPT_shared_score_v2.jsonl",
+    "predictionRows": 13,
+    "uniquePredictionIds": 13,
+    "initialRevisionOf": null,
+    "modelVersion": "GPT-shared-poisson-score-v2-market-blend-30-70-2026-11-14"
+  },
+  "interpretation": "Official direct-page snapshot. Display 07:09 JST and retrieval 07:11:41 JST (161-second lag, within the stated five-minute refresh interval). All 13 displayed count vectors sum to the page summary of 27,816 and all percentage vectors sum to 100.00%. The V2 artifact applies the already documented/tested 30/70 probability-level blend to the existing round 1673 V1 probabilities; no injury, suspension, availability, or lineup adjustment is applied."
+}

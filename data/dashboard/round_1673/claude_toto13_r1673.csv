@@ -1,0 +1,14 @@
+round,matchNumber,home,away,pick,home_pct,draw_pct,away_pct,model,computed_at_utc,deadline_utc
+1673,1,町田,長崎,home,68.5,15.6,15.9,Claude toto13-v1 (engine),2026-11-21T03:04Z,2026-11-21T04:50Z
+1673,2,広島,横浜FM,home,67.7,15.2,17.1,Claude toto13-v1 (engine),2026-11-21T03:04Z,2026-11-21T04:50Z
+1673,3,京都,浦和,away,34.3,29.7,36.1,Claude toto13-v1 (engine),2026-11-21T03:04Z,2026-11-21T04:50Z
+1673,4,川崎F,福岡,home,75.9,13.7,10.4,Claude toto13-v1 (engine),2026-11-21T03:04Z,2026-11-21T04:50Z
+1673,5,G大阪,岡山,home,40.8,25.8,33.4,Claude toto13-v1 (engine),2026-11-21T03:04Z,2026-11-21T04:50Z
+1673,6,東京V,名古屋,away,29.0,32.2,38.8,Claude toto13-v1 (engine),2026-11-21T03:04Z,2026-11-21T04:50Z
+1673,7,C大阪,FC東京,away,27.3,20.6,52.1,Claude toto13-v1 (engine),2026-11-21T03:04Z,2026-11-21T04:50Z
+1673,8,秋田,山形,home,45.6,26.6,27.9,Claude toto13-v1 (engine),2026-11-21T03:04Z,2026-11-21T04:50Z
+1673,9,宮崎,いわき,home,51.4,19.7,28.9,Claude toto13-v1 (engine),2026-11-21T03:04Z,2026-11-21T04:50Z
+1673,10,甲府,八戸,home,37.2,33.4,29.4,Claude toto13-v1 (engine),2026-11-21T03:04Z,2026-11-21T04:50Z
+1673,11,富山,大分,home,42.0,24.4,33.6,Claude toto13-v1 (engine),2026-11-21T03:04Z,2026-11-21T04:50Z
+1673,12,鳥栖,仙台,away,34.2,29.2,36.6,Claude toto13-v1 (engine),2026-11-21T03:04Z,2026-11-21T04:50Z
+1673,13,磐田,大宮,home,37.2,28.6,34.3,Claude toto13-v1 (engine),2026-11-21T03:04Z,2026-11-21T04:50Z

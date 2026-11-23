@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: sigulun555-lab/gpt
-          ref: 5dddf94cb83b048a4836a207fa392bf779013453
+          ref: 1e10fa09da1a9dc71feb2ab6e4d1f09cf16dfaef
           path: gpt-input
           persist-credentials: false
       - uses: actions/setup-node@v4

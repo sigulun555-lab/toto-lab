@@ -523,15 +523,307 @@
   },
   "marketUse": {
     "applied": false,
-    "toto13VotePageUrl": "https://store.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=01&fromId=SSIN026&gameAssortment=1&holdCntId=1674",
-    "toto13VotePageDisplayAt": "2026-11-21T20:52:00+09:00",
-    "checkedAt": "2026-11-23T21:02:25+09:00",
+    "toto13VotePageUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=01&fromId=SSIN026&gameAssortment=1&holdCntId=1674",
+    "toto13VotePageDisplayAt": "2026-11-23T21:59:00+09:00",
+    "checkedAt": "2026-11-23T22:08:16+09:00",
     "staleAgainstFiveMinuteRefresh": true,
-    "reason": "The latest official toto13 vote-share page found in the current search is timestamped 2026-11-21 20:52 JST, older than its five-minute refresh notice. It was not used for V2."
+    "reason": "The latest directly retrieved official toto13 vote page is displayed at 2026-11-23 21:59 JST and was retrieved at 22:08:16 JST (age 556 seconds vs a five-minute refresh notice). In addition, match totals 1-7 are 3 votes below the page-level total 217395, while matches 8-13 match it. It is archived as a stale/inconsistent observation only and was not used for V2.",
+    "latestOfficialVoteObservation": {
+      "displayedAt": "2026-11-23T21:59:00+09:00",
+      "retrievedAt": "2026-11-23T22:08:16+09:00",
+      "ageSeconds": 556,
+      "refreshNoticeSeconds": 300,
+      "pageTotalVotes": 217395,
+      "outcomeOrder": [
+        "homeWin",
+        "draw",
+        "awayWin"
+      ],
+      "matches": [
+        {
+          "match": 1,
+          "home": "ジェフユナイテッド千葉",
+          "away": "名古屋グランパス",
+          "counts": {
+            "homeWin": 92000,
+            "draw": 58629,
+            "awayWin": 66763
+          },
+          "sharesPct": {
+            "homeWin": 42.32,
+            "draw": 26.97,
+            "awayWin": 30.71
+          },
+          "total": 217392,
+          "deltaFromPageTotal": -3,
+          "shareSumPct": 100
+        },
+        {
+          "match": 2,
+          "home": "ファジアーノ岡山",
+          "away": "清水エスパルス",
+          "counts": {
+            "homeWin": 110629,
+            "draw": 57950,
+            "awayWin": 48813
+          },
+          "sharesPct": {
+            "homeWin": 50.89,
+            "draw": 26.66,
+            "awayWin": 22.45
+          },
+          "total": 217392,
+          "deltaFromPageTotal": -3,
+          "shareSumPct": 100
+        },
+        {
+          "match": 3,
+          "home": "Ｖ・ファーレン長崎",
+          "away": "川崎フロンターレ",
+          "counts": {
+            "homeWin": 44745,
+            "draw": 44673,
+            "awayWin": 127974
+          },
+          "sharesPct": {
+            "homeWin": 20.58,
+            "draw": 20.55,
+            "awayWin": 58.87
+          },
+          "total": 217392,
+          "deltaFromPageTotal": -3,
+          "shareSumPct": 100
+        },
+        {
+          "match": 4,
+          "home": "水戸ホーリーホック",
+          "away": "東京ヴェルディ",
+          "counts": {
+            "homeWin": 55069,
+            "draw": 61962,
+            "awayWin": 100361
+          },
+          "sharesPct": {
+            "homeWin": 25.33,
+            "draw": 28.5,
+            "awayWin": 46.17
+          },
+          "total": 217392,
+          "deltaFromPageTotal": -3,
+          "shareSumPct": 100
+        },
+        {
+          "match": 5,
+          "home": "アビスパ福岡",
+          "away": "横浜Ｆ・マリノス",
+          "counts": {
+            "homeWin": 40168,
+            "draw": 40991,
+            "awayWin": 136233
+          },
+          "sharesPct": {
+            "homeWin": 18.48,
+            "draw": 18.85,
+            "awayWin": 62.67
+          },
+          "total": 217392,
+          "deltaFromPageTotal": -3,
+          "shareSumPct": 100
+        },
+        {
+          "match": 6,
+          "home": "ＦＣ東京",
+          "away": "サンフレッチェ広島",
+          "counts": {
+            "homeWin": 98594,
+            "draw": 57947,
+            "awayWin": 60851
+          },
+          "sharesPct": {
+            "homeWin": 45.35,
+            "draw": 26.66,
+            "awayWin": 27.99
+          },
+          "total": 217392,
+          "deltaFromPageTotal": -3,
+          "shareSumPct": 100
+        },
+        {
+          "match": 7,
+          "home": "浦和レッズ",
+          "away": "セレッソ大阪",
+          "counts": {
+            "homeWin": 121460,
+            "draw": 52302,
+            "awayWin": 43630
+          },
+          "sharesPct": {
+            "homeWin": 55.87,
+            "draw": 24.06,
+            "awayWin": 20.07
+          },
+          "total": 217392,
+          "deltaFromPageTotal": -3,
+          "shareSumPct": 100
+        },
+        {
+          "match": 8,
+          "home": "北海道コンサドーレ札幌",
+          "away": "藤枝ＭＹＦＣ",
+          "counts": {
+            "homeWin": 146913,
+            "draw": 36973,
+            "awayWin": 33509
+          },
+          "sharesPct": {
+            "homeWin": 67.58,
+            "draw": 17.01,
+            "awayWin": 15.41
+          },
+          "total": 217395,
+          "deltaFromPageTotal": 0,
+          "shareSumPct": 100
+        },
+        {
+          "match": 9,
+          "home": "モンテディオ山形",
+          "away": "ジュビロ磐田",
+          "counts": {
+            "homeWin": 40560,
+            "draw": 42192,
+            "awayWin": 134643
+          },
+          "sharesPct": {
+            "homeWin": 18.66,
+            "draw": 19.41,
+            "awayWin": 61.93
+          },
+          "total": 217395,
+          "deltaFromPageTotal": 0,
+          "shareSumPct": 100
+        },
+        {
+          "match": 10,
+          "home": "サガン鳥栖",
+          "away": "大分トリニータ",
+          "counts": {
+            "homeWin": 108091,
+            "draw": 60540,
+            "awayWin": 48764
+          },
+          "sharesPct": {
+            "homeWin": 49.72,
+            "draw": 27.85,
+            "awayWin": 22.43
+          },
+          "total": 217395,
+          "deltaFromPageTotal": 0,
+          "shareSumPct": 100
+        },
+        {
+          "match": 11,
+          "home": "いわきＦＣ",
+          "away": "カターレ富山",
+          "counts": {
+            "homeWin": 64651,
+            "draw": 57441,
+            "awayWin": 95303
+          },
+          "sharesPct": {
+            "homeWin": 29.74,
+            "draw": 26.42,
+            "awayWin": 43.84
+          },
+          "total": 217395,
+          "deltaFromPageTotal": 0,
+          "shareSumPct": 100
+        },
+        {
+          "match": 12,
+          "home": "横浜ＦＣ",
+          "away": "ベガルタ仙台",
+          "counts": {
+            "homeWin": 64304,
+            "draw": 55433,
+            "awayWin": 97658
+          },
+          "sharesPct": {
+            "homeWin": 29.58,
+            "draw": 25.5,
+            "awayWin": 44.92
+          },
+          "total": 217395,
+          "deltaFromPageTotal": 0,
+          "shareSumPct": 100
+        },
+        {
+          "match": 13,
+          "home": "ＲＢ大宮アルディージャ",
+          "away": "徳島ヴォルティス",
+          "counts": {
+            "homeWin": 138684,
+            "draw": 38220,
+            "awayWin": 40491
+          },
+          "sharesPct": {
+            "homeWin": 63.79,
+            "draw": 17.58,
+            "awayWin": 18.63
+          },
+          "total": 217395,
+          "deltaFromPageTotal": 0,
+          "shareSumPct": 100
+        }
+      ],
+      "all13PercentageVectorsSumTo100": true,
+      "countTotalsMatchPageSummary": false,
+      "countMismatchMatches": [
+        {
+          "match": 1,
+          "total": 217392,
+          "deltaFromPageTotal": -3
+        },
+        {
+          "match": 2,
+          "total": 217392,
+          "deltaFromPageTotal": -3
+        },
+        {
+          "match": 3,
+          "total": 217392,
+          "deltaFromPageTotal": -3
+        },
+        {
+          "match": 4,
+          "total": 217392,
+          "deltaFromPageTotal": -3
+        },
+        {
+          "match": 5,
+          "total": 217392,
+          "deltaFromPageTotal": -3
+        },
+        {
+          "match": 6,
+          "total": 217392,
+          "deltaFromPageTotal": -3
+        },
+        {
+          "match": 7,
+          "total": 217392,
+          "deltaFromPageTotal": -3
+        }
+      ],
+      "v2Eligible": false,
+      "v2IneligibilityReasons": [
+        "The page display is 556 seconds old, exceeding the five-minute refresh notice.",
+        "Matches 1-7 sum to 217392 votes each, three below the page summary of 217395; matches 8-13 sum to 217395. The page appears to have been read during a partial refresh."
+      ]
+    }
   },
   "v2Status": {
     "status": "pending",
-    "reason": "No official toto13 vote-share snapshot within the five-minute refresh window was retrieved; the existing repository has no reusable exact V2 generation CLI. Do not substitute scripts/claude_v2_logic.js or approximate the blend."
+    "reason": "No official toto13 vote-share snapshot within the five-minute refresh window with internally consistent per-match totals has been retrieved. The existing repository still has no reusable exact V2 generation CLI. Do not substitute scripts/claude_v2_logic.js or approximate the blend."
   },
   "validation": {
     "rows": 13,
@@ -823,5 +1115,110 @@
     },
     "fixtureListVerifiedAgainstOfficialPage": true,
     "note": "Product scopes kept separate; this PR contains only normal toto13."
+  },
+  "subsequentTeamNewsAudit": {
+    "checkedAt": "2026-11-23T22:08:16+09:00",
+    "previousSearchCorrection": "The earlier 2026-11-23 20:57 JST refresh reported zero new suspension notices in its returned search results. A direct J.League official notice published at 18:00 JST was subsequently found and identifies three suspensions relevant to round 1674; the earlier zero was a search miss, not evidence that no suspensions existed.",
+    "sources": [
+      {
+        "type": "official_disciplinary_notice",
+        "url": "https://www.jleague.jp/news/article/35431/?navicode=j1",
+        "publishedAt": "2026-11-23T18:00:00+09:00",
+        "retrievedAt": "2026-11-23T22:08:16+09:00"
+      },
+      {
+        "type": "official_j1_preview",
+        "url": "https://www.jleague.jp/news/article/35426/?navicode=j1",
+        "publishedAt": "2026-11-23T17:00:00+09:00",
+        "retrievedAt": "2026-11-23T22:08:16+09:00"
+      }
+    ],
+    "relevantSuspensions": [
+      {
+        "match": 9,
+        "team": "ジュビロ磐田",
+        "player": "ユーリ ララ",
+        "competition": "J2",
+        "suspensionCode": "J2(f)",
+        "suspension": "累積警告による1試合停止",
+        "suspendedFixture": "2026-11-25 J2第19節"
+      },
+      {
+        "match": 12,
+        "team": "横浜ＦＣ",
+        "player": "ジョアン パウロ",
+        "competition": "J2",
+        "suspensionCode": "J2(f)",
+        "suspension": "累積警告による1試合停止",
+        "suspendedFixture": "2026-11-25 J2第19節"
+      },
+      {
+        "match": 13,
+        "team": "ＲＢ大宮アルディージャ",
+        "player": "関口 凱心",
+        "competition": "J2",
+        "suspensionCode": "J2(f)",
+        "suspension": "累積警告による1試合停止",
+        "suspendedFixture": "2026-11-25 J2第19節"
+      }
+    ],
+    "otherSuspensionsNotOnRound1674Card": [
+      {
+        "team": "柏レイソル",
+        "player": "原田 亘",
+        "suspendedFixture": "2026-11-28 J1第17節"
+      },
+      {
+        "team": "ガンバ大阪",
+        "player": "初瀬 亮",
+        "suspendedFixture": "2026-11-29 J1第17節"
+      },
+      {
+        "team": "ヴィッセル神戸",
+        "player": "山川 哲史",
+        "suspendedFixture": "2026-11-28 J1第17節"
+      },
+      {
+        "team": "ヴァンフォーレ甲府",
+        "player": "荒木 翔",
+        "suspendedFixture": "2026-11-25 J2第19節"
+      },
+      {
+        "team": "ＳＣ相模原",
+        "player": "佐々木 快",
+        "suspendedFixture": "2026-11-25 J3第19節"
+      },
+      {
+        "team": "ツエーゲン金沢",
+        "player": "パトリック",
+        "suspendedFixture": "2026-11-25 J3第19節"
+      }
+    ],
+    "j1PreviewNotes": [
+      {
+        "team": "清水エスパルス",
+        "player": "北川 航也",
+        "note": "Jリーグ公式プレビューは前節に負傷から復帰し5試合ぶりの得点と記載。11/25の出場可否は確定していない。"
+      },
+      {
+        "team": "Ｖ・ファーレン長崎",
+        "player": "ノーマン キャンベル",
+        "note": "Jリーグ公式プレビューは前節に復帰したと記載。11/25の出場可否は確定していない。"
+      }
+    ],
+    "coverage": {
+      "officialSuspensionNoticeChecked": true,
+      "officialPreviewCoversJ1Matches": 7,
+      "j2OfficialPreviewFound": false,
+      "officialStartingLineupsPublished": false,
+      "officialPredictedLineupsFound": false,
+      "all26ClubInjuryAndAvailabilityStatusesFullyVerified": false,
+      "note": "The official suspension list was checked for all listed suspensions, but injury/availability checks across all 26 clubs remain incomplete. No official lineup is available at this pre-match time."
+    },
+    "predictionTreatment": {
+      "appliedToV1": false,
+      "reason": "The pinned exported model.js predict(history, fixture) has no injury/suspension/lineup covariates. No manual probability adjustment was applied. Existing V1 and its 13 revision rows remain unchanged.",
+      "note": "The V1 revision at 21:02 JST was generated after the 18:00 JST suspension notice, but its model is a history-only baseline and does not encode player availability."
+    }
   }
 }

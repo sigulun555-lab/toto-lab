@@ -198,6 +198,10 @@ assert.equal(gitBlobSha(fs.readFileSync(HISTORY_PATH)), HISTORY_BLOB);
 assert.equal(gitBlobSha(fs.readFileSync(ALIASES_PATH)), ALIAS_BLOB);
 assert.equal(gitBlobSha(fs.readFileSync(PARSER_PATH)), PARSER_BLOB);
 assert.equal(gitBlobSha(fs.readFileSync(SCHEDULE_PATH)), SCHEDULE_BLOB);
+const scheduleFileClaimedRetrievedAt = schedule.retrievedAt || null;
+const scheduleFileCommitAt = '2026-11-23T15:47:42Z';
+const scheduleFileFutureOffsetSeconds = (Date.parse(scheduleFileClaimedRetrievedAt) - Date.parse(scheduleFileCommitAt)) / 1000;
+assert.equal(scheduleFileFutureOffsetSeconds, 29538, 'pinned PR #133 schedule retrievedAt timestamp drift changed');
 
 const historyDates = history.map(m => m.date);
 assert.deepEqual(historyDates, [...historyDates].sort());
@@ -359,6 +363,11 @@ const manifest = {
     headSha:SCHEDULE_COMMIT,
     path:'data/schedule/round_1674.json',
     blobSha:SCHEDULE_BLOB,
+    sourceFileClaimedRetrievedAt:scheduleFileClaimedRetrievedAt,
+    sourceFileCommitAt:scheduleFileCommitAt,
+    sourceFileTimestampValid:scheduleFileFutureOffsetSeconds <= 0,
+    sourceFileFutureOffsetSeconds,
+    sourceFileTimestampNote:'PR #133 schedule retrievedAt is 8h12m18s after the PR commit time; this claim is not relied upon. Fixture content was independently checked against the official card page.',
     sourceUrl:OFFICIAL_CARD_URL,
     pageDisplayAt:'2026-11-24T00:44:00+09:00',
     checkedAt:generatedAt,

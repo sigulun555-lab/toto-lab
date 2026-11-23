@@ -366,7 +366,7 @@ const manifest = {
     sourceFileClaimedRetrievedAt:scheduleFileClaimedRetrievedAt,
     sourceFileCommitAt:scheduleFileCommitAt,
     sourceFileTimestampValid:scheduleFileFutureOffsetSeconds <= 0,
-    sourceFileFutureOffsetSeconds,
+    sourceFileFutureOffsetSeconds:scheduleFileFutureOffsetSeconds,
     sourceFileTimestampNote:'PR #133 schedule retrievedAt is 8h12m39s after the PR commit time; this claim is not relied upon. Fixture content was independently checked against the official card page.',
     sourceUrl:OFFICIAL_CARD_URL,
     pageDisplayAt:'2026-11-24T00:44:00+09:00',

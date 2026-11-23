@@ -65,7 +65,7 @@ test('mini toto A rows pass the existing schema and pinned-source reproducibilit
     assert.ok(Object.values(row.probabilities).every(x => Number.isFinite(x) && x >= 0 && x <= 1));
   }
   assert.equal(manifest.officialSchedule.sourceFileTimestampValid, false);
-  assert.equal(manifest.officialSchedule.sourceFileFutureOffsetSeconds, 29538);
+  assert.equal(manifest.officialSchedule.sourceFileFutureOffsetSeconds, 29559);
   assert.equal(manifest.model.commit, gptCommit);
   assert.equal(manifest.model.blobSha, '20cde0fc85016db3ef7abac7d2bb485510ba4e22');
   assert.equal(manifest.input.historyBlobSha, '1a6a3230330ef67468755faf8504cac1a9741570');

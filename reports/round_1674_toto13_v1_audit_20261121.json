@@ -1220,5 +1220,31 @@
       "reason": "The pinned exported model.js predict(history, fixture) has no injury/suspension/lineup covariates. No manual probability adjustment was applied. Existing V1 and its 13 revision rows remain unchanged.",
       "note": "The V1 revision at 21:02 JST was generated after the 18:00 JST suspension notice, but its model is a history-only baseline and does not encode player availability."
     }
+  },
+  "officialProductDeadlineCheck": {
+    "checkedAt": "2026-11-23T22:08:16+09:00",
+    "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1674",
+    "pageDisplayedAt": "2026-11-23T21:59:00+09:00",
+    "products": {
+      "toto13": {
+        "fixtures": 13,
+        "networkDeadline": "2026-11-25T18:50:00+09:00"
+      },
+      "miniTotoA": {
+        "fixtures": 5,
+        "networkDeadline": "2026-11-25T18:50:00+09:00"
+      },
+      "miniTotoB": {
+        "fixtures": 5,
+        "networkDeadline": "2026-11-25T18:50:00+09:00"
+      },
+      "totoGOAL3": {
+        "fixtures": 3,
+        "teamSides": 6,
+        "networkDeadline": "2026-11-25T18:50:00+09:00"
+      }
+    },
+    "result": "The official round-1674 page explicitly shows 18:50 JST for all four products. The one-hour GOAL3 discrepancy documented for round 1670 in GPT Issue #21 is not present on the round-1674 page.",
+    "predictionImpact": "No predictions or deadline fields were changed. This is an audit-only confirmation."
   }
 }

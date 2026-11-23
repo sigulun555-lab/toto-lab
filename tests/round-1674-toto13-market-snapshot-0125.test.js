@@ -37,3 +37,37 @@ test('01:25 official round-1674 toto13 snapshot is archived as stale and exclude
     });
   }
 });
+
+const market0237 = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'reports/round_1674_toto13_official_market_snapshot_20261124T0237JST.json'), 'utf8'));
+
+test('02:37 official round-1674 toto13 snapshot is reconciled and excluded from V2 as stale', () => {
+  assert.equal(market0237.schemaVersion, 1);
+  assert.equal(market0237.product, 'toto13');
+  assert.equal(market0237.marketType, 'toto13');
+  assert.equal(market0237.round, 1674);
+  assert.equal(market0237.pageDisplayAt, '2026-11-24T02:37:00+09:00');
+  assert.equal(market0237.retrievedAt, '2026-11-24T03:04:58+09:00');
+  assert.equal(market0237.displayAgeSeconds, 1678);
+  assert.equal(market0237.staleAfterSeconds, 300);
+  assert.equal(market0237.stale, true);
+  assert.equal(market0237.totalVotesPageSummary, 229880);
+  assert.equal(market0237.matches.length, 13);
+  assert.deepEqual(market0237.matches.map(m => m.matchNumber), Array.from({length: 13}, (_, i) => i + 1));
+  assert.equal(market0237.reconciliation.allMatchVoteCountsEqualPageSummary, true);
+  assert.equal(market0237.reconciliation.allPercentageTotalsEqual100, true);
+  assert.deepEqual(market0237.matches.map(m => m.differenceFromPageSummary), Array(13).fill(0));
+  assert.equal(market0237.v2Eligibility.eligible, false);
+  assert.match(market0237.v2Eligibility.reason, /stale/i);
+  assert.equal(market0237.predictionImpact, 'None. No V1/V2 prediction row was created or modified.');
+  for (const m of market0237.matches) {
+    assert.equal(m.sumVotes, m.voteCounts.reduce((a, b) => a + b, 0));
+    assert.equal(m.sumVotes, market0237.totalVotesPageSummary);
+    assert.equal(m.percentageTotal, 100);
+    assert.ok(Math.abs(m.percentages.reduce((a, b) => a + b, 0) - 100) < 1e-8);
+    assert.deepEqual(m.marketVoteShare, {
+      '0': Number((m.percentages[1] / 100).toFixed(4)),
+      '1': Number((m.percentages[0] / 100).toFixed(4)),
+      '2': Number((m.percentages[2] / 100).toFixed(4))
+    });
+  }
+});

@@ -1,0 +1,577 @@
+{
+  "schemaVersion": 1,
+  "product": "mini toto B",
+  "round": 1674,
+  "drawDate": "2026-11-25",
+  "predictionVersion": "V1",
+  "productMatchNumbers": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "toto13MatchNumbers": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "matchNumberSpaceInPredictionRecords": "regular-toto13",
+  "predictionFile": "predictions/round_1674_ChatGPT_miniB.jsonl",
+  "generatedAt": "2026-11-23T16:29:55.189Z",
+  "sourceRetrievedAt": "2026-11-23T07:34:09.504Z",
+  "deadlineAt": "2026-11-25T09:50:00.000Z",
+  "model": {
+    "repository": "sigulun555-lab/gpt",
+    "commit": "1e10fa09da1a9dc71feb2ab6e4d1f09cf16dfaef",
+    "path": "model.js",
+    "blobSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+    "function": "predict(history, fixture)",
+    "version": "GPT-shared-poisson-score-v1-2026-11-23-revision1",
+    "execution": "Actual exported function loaded from a clean checkout pinned to the exact GPT commit; no reimplementation or probability post-processing beyond 8-decimal serialization."
+  },
+  "input": {
+    "repository": "sigulun555-lab/gpt",
+    "historyPath": "data/history.json",
+    "historyBlobSha": "1a6a3230330ef67468755faf8504cac1a9741570",
+    "historyRows": 510,
+    "latestResultDate": "2026-11-22",
+    "fetchedAt": "2026-11-23T07:34:09.504Z",
+    "fetchedAtUniqueCount": 1,
+    "fetchedAtValues": [
+      "2026-11-23T07:34:09.504Z"
+    ],
+    "sourceValues": [
+      "community_jleague_csv"
+    ],
+    "sourceUrl": "https://raw.githubusercontent.com/k-addtimes/jleague_open_data/main/current_schedule_file.csv",
+    "sourceCommitSha": null,
+    "sourceCommitNote": "Community mirror CSV source commit was not separately pinned; exact derived history blob is pinned.",
+    "teamAliasesPath": "data/team_aliases.json",
+    "teamAliasesBlobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab",
+    "teamAliasCount": 121,
+    "aliasMapUpdatedAt": "2026-10-22",
+    "parserPath": "scripts/auto_pipeline.js",
+    "parserBlobSha": "ef557e084cab802df7830d949bd1f52ddee5db7c",
+    "dateSorted": true,
+    "uniqueCanonicalMatchKeys": 510,
+    "duplicateCanonicalMatchKeys": 0,
+    "historyDistinctDates": 45,
+    "historyTeamNameOccurrences": 1020,
+    "aliasMappedOccurrences": 1020,
+    "uniqueAliasKeysUsed": 60,
+    "targetDatesBeforeAliasMapUpdate": 0,
+    "historicalAliasMapNotAsOf": true
+  },
+  "officialSchedule": {
+    "repository": "sigulun555-lab/toto-lab",
+    "pr": 133,
+    "branch": "data/round-1674-schedule",
+    "headSha": "d0af7ae01d66dacf8c1ed124c8edf3a927a29494",
+    "path": "data/schedule/round_1674.json",
+    "blobSha": "94e9dd375d33c44e26eb2b8098fd54b22f346556",
+    "sourceFileClaimedRetrievedAt": "2026-11-24T00:00:00Z",
+    "sourceFileCommitAt": "2026-11-23T15:47:21Z",
+    "sourceFileTimestampValid": false,
+    "sourceFileFutureOffsetSeconds": 29559,
+    "sourceFileTimestampNote": "PR #133 schedule retrievedAt is 8h12m39s after the PR commit time; this claim is not relied upon. Fixture content was independently checked against the official card page.",
+    "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1674",
+    "pageDisplayAt": "2026-11-24T00:44:00+09:00",
+    "checkedAt": "2026-11-23T16:29:55.189Z",
+    "refreshNotice": "5分毎",
+    "fixtureCount": 13,
+    "products": {
+      "toto13": {
+        "matches": 13,
+        "matchNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      "miniTotoA": {
+        "matches": 5,
+        "matchNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "miniTotoB": {
+        "matches": 5,
+        "matchNumbers": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      "totoGOAL3": {
+        "matches": 3,
+        "matchNumbers": [
+          1,
+          2,
+          3
+        ],
+        "teamSides": 6,
+        "categories": [
+          "0",
+          "1",
+          "2",
+          "3+"
+        ]
+      }
+    },
+    "saleDeadlineAt": "2026-11-25T09:50:00.000Z",
+    "fixtureListVerifiedAgainstOfficialPage": true
+  },
+  "diagnostics": [
+    {
+      "productMatchNumber": 1,
+      "toto13MatchNumber": 6,
+      "homeExpectedGoals": 1.6972419544855422,
+      "awayExpectedGoals": 0.15,
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12,
+      "maxAbsDifferenceVsToto13V1Revision": 0
+    },
+    {
+      "productMatchNumber": 2,
+      "toto13MatchNumber": 7,
+      "homeExpectedGoals": 2.496588165307765,
+      "awayExpectedGoals": 1.2187831706150631,
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12,
+      "maxAbsDifferenceVsToto13V1Revision": 0
+    },
+    {
+      "productMatchNumber": 3,
+      "toto13MatchNumber": 8,
+      "homeExpectedGoals": 1.47824299261644,
+      "awayExpectedGoals": 0.30000816507447714,
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12,
+      "maxAbsDifferenceVsToto13V1Revision": 0
+    },
+    {
+      "productMatchNumber": 4,
+      "toto13MatchNumber": 9,
+      "homeExpectedGoals": 0.4379979237382044,
+      "awayExpectedGoals": 1.19534503271862,
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12,
+      "maxAbsDifferenceVsToto13V1Revision": 0
+    },
+    {
+      "productMatchNumber": 5,
+      "toto13MatchNumber": 10,
+      "homeExpectedGoals": 1.1168947055324214,
+      "awayExpectedGoals": 1.1250306190292894,
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12,
+      "maxAbsDifferenceVsToto13V1Revision": 0
+    }
+  ],
+  "crossCheckAgainstToto13V1Revision": {
+    "repository": "sigulun555-lab/toto-lab",
+    "commit": "e5ca5ff2bc08119b9bc591daa282130513d5098b",
+    "file": "predictions/round_1674_ChatGPT_shared_score_v1.jsonl",
+    "fileBlobSha": "e9128701e2636f13728b02d14195b20de10c4453",
+    "matchesCompared": 5,
+    "maxAbsProbabilityDelta": 0,
+    "interpretation": "Same pinned model and history produce the same 1X2 vector for these fixtures. This mini product file is separate and uses the official mini product mapping."
+  },
+  "teamNewsAudit": {
+    "checkedAt": "2026-11-23T16:29:55.189Z",
+    "checkedScope": "J.League official suspension list, J1/J2 official previews, and targeted official club injury notices. This is not a complete 26-club medical/availability audit.",
+    "sources": [
+      {
+        "name": "スポーツくじ公式 第1674回カード",
+        "url": "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1674",
+        "publishedAt": "2026-11-24T00:44:00+09:00",
+        "retrievedAt": "2026-11-23T16:29:55.189Z"
+      },
+      {
+        "name": "Jリーグ公式 出場停止選手のお知らせ（2026/11/23）",
+        "url": "https://www.jleague.jp/news/article/35431/?navicode=j1",
+        "publishedAt": "2026-11-23T18:00:00+09:00",
+        "retrievedAt": "2026-11-23T16:29:55.189Z"
+      },
+      {
+        "name": "Jリーグ公式 J1第16節プレビュー",
+        "url": "https://www.jleague.jp/news/article/35426/",
+        "publishedAt": "2026-11-23T17:00:00+09:00",
+        "retrievedAt": "2026-11-23T16:29:55.189Z"
+      },
+      {
+        "name": "Jリーグ公式 J2第19節プレビュー",
+        "url": "https://www.jleague.jp/news/article/35427/?navicode=j2",
+        "publishedAt": "2026-11-23T18:00:00+09:00",
+        "retrievedAt": "2026-11-23T16:29:55.189Z"
+      },
+      {
+        "name": "ファジアーノ岡山 木村太哉選手の負傷について",
+        "url": "https://www.fagiano-okayama.com/news/202611131001/",
+        "publishedAt": "2026-11-13T00:00:00+09:00",
+        "retrievedAt": "2026-11-23T16:29:55.189Z"
+      },
+      {
+        "name": "北海道コンサドーレ札幌 川原颯斗選手の負傷について",
+        "url": "https://www.consadole-sapporo.jp/news/2026/11/17363/",
+        "publishedAt": "2026-11-21T00:00:00+09:00",
+        "retrievedAt": "2026-11-23T16:29:55.189Z"
+      },
+      {
+        "name": "北海道コンサドーレ札幌 福森晃斗選手の負傷について",
+        "url": "https://www.consadole-sapporo.jp/news/2026/11/15643/",
+        "publishedAt": "2026-11-03T00:00:00+09:00",
+        "retrievedAt": "2026-11-23T16:29:55.189Z"
+      },
+      {
+        "name": "横浜F・マリノス 山根陸選手の負傷について",
+        "url": "https://www.f-marinos.com/news/team/10930",
+        "publishedAt": "2026-11-19T00:00:00+09:00",
+        "retrievedAt": "2026-11-23T16:29:55.189Z"
+      },
+      {
+        "name": "横浜F・マリノス ジョルディ クルークス選手の負傷について",
+        "url": "https://www.f-marinos.com/news/team/10877",
+        "publishedAt": "2026-11-05T00:00:00+09:00",
+        "retrievedAt": "2026-11-23T16:29:55.189Z"
+      }
+    ],
+    "relevantSuspensions": [
+      {
+        "match": 9,
+        "team": "ジュビロ磐田",
+        "player": "ユーリ ララ",
+        "competition": "J2",
+        "code": "J2(f)",
+        "reason": "累積警告による1試合停止",
+        "suspendedFixture": "2026-11-25 J2第19節"
+      }
+    ],
+    "injuryReports": [
+      {
+        "team": "ファジアーノ岡山",
+        "player": "木村太哉",
+        "publishedAt": "2026-11-13",
+        "injuryDate": "2026-11-10",
+        "diagnosis": "左足内果疲労骨折",
+        "returnEstimate": "全治3か月程度",
+        "availability": "11/25は欠場見込み（診断上の期間内）",
+        "sourceUrl": "https://www.fagiano-okayama.com/news/202611131001/"
+      },
+      {
+        "team": "北海道コンサドーレ札幌",
+        "player": "川原颯斗",
+        "number": 39,
+        "position": "DF",
+        "publishedAt": "2026-11-21",
+        "injuryDate": "2026-11-08",
+        "diagnosis": "右大腿二頭筋肉離れ",
+        "returnEstimate": "未公表",
+        "availability": "不明。復帰発表なし",
+        "sourceUrl": "https://www.consadole-sapporo.jp/news/2026/11/17363/"
+      },
+      {
+        "team": "北海道コンサドーレ札幌",
+        "player": "福森晃斗",
+        "number": 5,
+        "position": "DF",
+        "publishedAt": "2026-11-03",
+        "injuryDate": "2026-10-25",
+        "diagnosis": "右大腿二頭筋肉離れ",
+        "returnEstimate": "未公表",
+        "availability": "不明。復帰発表なし",
+        "sourceUrl": "https://www.consadole-sapporo.jp/news/2026/11/15643/"
+      },
+      {
+        "team": "横浜Ｆ・マリノス",
+        "player": "山根陸",
+        "position": "MF",
+        "publishedAt": "2026-11-19",
+        "injuryDate": "2026-11-15",
+        "diagnosis": "左膝内側側副靱帯損傷",
+        "returnEstimate": "経過を見ながら判断",
+        "availability": "不明。復帰時期未定",
+        "sourceUrl": "https://www.f-marinos.com/news/team/10930"
+      },
+      {
+        "team": "横浜Ｆ・マリノス",
+        "player": "ジョルディ クルークス",
+        "position": "MF",
+        "publishedAt": "2026-11-05",
+        "injuryDate": "2026-11-01",
+        "diagnosis": "左ハムストリング肉離れ",
+        "returnEstimate": "経過を見ながら判断",
+        "availability": "不明。復帰時期未定",
+        "sourceUrl": "https://www.f-marinos.com/news/team/10877"
+      }
+    ],
+    "j1PreviewNotes": [
+      {
+        "team": "清水エスパルス",
+        "player": "北川 航也",
+        "note": "前節に負傷から復帰し、5試合ぶりの得点。11/25の出場可否は未確定。"
+      },
+      {
+        "team": "Ｖ・ファーレン長崎",
+        "player": "ノーマン キャンベル",
+        "note": "前節に復帰。11/25の出場可否は未確定。"
+      }
+    ],
+    "j2PreviewNotes": [
+      {
+        "match": 8,
+        "team": "北海道コンサドーレ札幌",
+        "note": "前節は横浜FCに2-0。途中出場のヴィニ ペイショット、アマドゥ バカヨコの起用法が焦点。"
+      },
+      {
+        "match": 9,
+        "team": "ジュビロ磐田",
+        "note": "前節は大宮を下し9試合負けなし。公式プレビューは高強度のプレスとカウンターを記載。"
+      },
+      {
+        "match": 10,
+        "team": "サガン鳥栖",
+        "note": "前節は仙台と引き分け。途中出場の酒井宣福が今季初ゴール。"
+      },
+      {
+        "match": 10,
+        "team": "大分トリニータ",
+        "note": "3試合勝利なし。相澤デイビッドが2試合連続得点。"
+      },
+      {
+        "match": 11,
+        "team": "いわきＦＣ",
+        "note": "前節は宮崎と引き分け、3試合負けなし。桒田大誠がプロ初ゴール。"
+      },
+      {
+        "match": 11,
+        "team": "カターレ富山",
+        "note": "前節は大分と引き分け、2試合勝利なし。坪井清志郎が先制点。"
+      },
+      {
+        "match": 12,
+        "team": "横浜ＦＣ",
+        "note": "前節は札幌に敗れ、2試合連続無得点。ジョアン パウロは11/25出場停止。"
+      },
+      {
+        "match": 13,
+        "team": "ＲＢ大宮アルディージャ",
+        "note": "前節は磐田に敗れ4連勝が止まる。関口凱心は11/25出場停止。"
+      },
+      {
+        "match": 13,
+        "team": "徳島ヴォルティス",
+        "note": "前節は湘南に競り負け。宮崎純真が今季初ゴール。"
+      }
+    ],
+    "teams": [
+      {
+        "team": "いわきＦＣ",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "アビスパ福岡",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "カターレ富山",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "サガン鳥栖",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "サンフレッチェ広島",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "ジェフユナイテッド千葉",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "ジュビロ磐田",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": true,
+        "availabilityStatus": "ユーリ ララ：Jリーグ公式11/23発表、累積警告による1試合停止、11/25 J2第19節が対象。"
+      },
+      {
+        "team": "セレッソ大阪",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "ファジアーノ岡山",
+        "officialInjuryNoticeFound": true,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "木村太哉：11/13公式発表、左足内果疲労骨折、全治3か月程度。11/25は欠場見込み。"
+      },
+      {
+        "team": "ベガルタ仙台",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "モンテディオ山形",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "北海道コンサドーレ札幌",
+        "officialInjuryNoticeFound": true,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "川原颯斗（11/21発表、右大腿二頭筋肉離れ）・福森晃斗（11/3発表、右大腿二頭筋肉離れ）。復帰時期は未公表、11/25出場可否は未確定。"
+      },
+      {
+        "team": "名古屋グランパス",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "大分トリニータ",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "川崎フロンターレ",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "徳島ヴォルティス",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "東京ヴェルディ",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "横浜Ｆ・マリノス",
+        "officialInjuryNoticeFound": true,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "山根陸（11/19発表、左膝内側側副靱帯損傷）・ジョルディ クルークス（11/5発表、左ハムストリング肉離れ）。復帰時期は未確定。"
+      },
+      {
+        "team": "横浜ＦＣ",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": true,
+        "availabilityStatus": "ジョアン パウロ：Jリーグ公式11/23発表、累積警告による1試合停止、11/25 J2第19節が対象。"
+      },
+      {
+        "team": "水戸ホーリーホック",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "浦和レッズ",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "清水エスパルス",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "Jリーグ公式J1プレビューは北川航也が前節に負傷から復帰し5試合ぶりに得点と記載。11/25の出場可否は未確定。"
+      },
+      {
+        "team": "藤枝ＭＹＦＣ",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "ＦＣ東京",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "今回確認した公式資料の範囲で11/25の個別出場可否を確定する情報は未確認。"
+      },
+      {
+        "team": "ＲＢ大宮アルディージャ",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": true,
+        "availabilityStatus": "関口 凱心：Jリーグ公式11/23発表、累積警告による1試合停止、11/25 J2第19節が対象。"
+      },
+      {
+        "team": "Ｖ・ファーレン長崎",
+        "officialInjuryNoticeFound": null,
+        "currentRoundSuspensionFound": false,
+        "availabilityStatus": "Jリーグ公式J1プレビューはノーマン キャンベルが前節に復帰と記載。11/25の出場可否は未確定。"
+      }
+    ],
+    "coverage": {
+      "officialSuspensionListChecked": true,
+      "officialJ1PreviewChecked": true,
+      "officialJ2PreviewChecked": true,
+      "targetedClubInjuryNoticesChecked": true,
+      "officialStartingLineupsPublished": false,
+      "officialPredictedLineupsFound": false,
+      "all26ClubInjuryAndAvailabilityStatusesFullyVerified": false,
+      "note": "Official lineups are not yet available at this pre-match time. Team-news coverage is partial; no availability adjustment was applied."
+    },
+    "predictionTreatment": {
+      "appliedToV1": false,
+      "reason": "Pinned model.js predict(history, fixture) has no injury/suspension/lineup covariates. No manual probability adjustment was applied.",
+      "note": "This is a history-only baseline; team news is preserved as evidence, not injected into probabilities."
+    }
+  },
+  "market": {
+    "v2Status": "held_no_fresh_product_specific_official_vote_snapshot",
+    "officialVotePage": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=07&holdCntId=1674",
+    "attemptedAt": "2026-11-23T16:29:55.189Z",
+    "retrievalStatus": "not_accessible",
+    "pageDisplayAt": null,
+    "reason": "The product-specific official mini toto vote-rate page could not be retrieved in this check. No stale or unrelated toto13 market percentages were substituted; no V2 market blend was created."
+  },
+  "safety": {
+    "productionModelChanged": false,
+    "marketWeightChanged": false,
+    "mainChanged": false,
+    "existingPredictionRowsChanged": false,
+    "existingShadowArtifactChanged": false,
+    "shadowGenerated": false,
+    "researchOnly": true
+  }
+}

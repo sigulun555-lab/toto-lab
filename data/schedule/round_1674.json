@@ -1,0 +1,26 @@
+{
+  "round": 1674,
+  "holdDates": ["2026-11-25"],
+  "matches": [
+    { "matchNumber": 1, "homeTeam": "ジェフユナイテッド千葉", "awayTeam": "名古屋グランパス" },
+    { "matchNumber": 2, "homeTeam": "ファジアーノ岡山", "awayTeam": "清水エスパルス" },
+    { "matchNumber": 3, "homeTeam": "Ｖ・ファーレン長崎", "awayTeam": "川崎フロンターレ" },
+    { "matchNumber": 4, "homeTeam": "水戸ホーリーホック", "awayTeam": "東京ヴェルディ" },
+    { "matchNumber": 5, "homeTeam": "アビスパ福岡", "awayTeam": "横浜Ｆ・マリノス" },
+    { "matchNumber": 6, "homeTeam": "ＦＣ東京", "awayTeam": "サンフレッチェ広島" },
+    { "matchNumber": 7, "homeTeam": "浦和レッズ", "awayTeam": "セレッソ大阪" },
+    { "matchNumber": 8, "homeTeam": "北海道コンサドーレ札幌", "awayTeam": "藤枝ＭＹＦＣ" },
+    { "matchNumber": 9, "homeTeam": "モンテディオ山形", "awayTeam": "ジュビロ磐田" },
+    { "matchNumber": 10, "homeTeam": "サガン鳥栖", "awayTeam": "大分トリニータ" },
+    { "matchNumber": 11, "homeTeam": "いわきＦＣ", "awayTeam": "カターレ富山" },
+    { "matchNumber": 12, "homeTeam": "横浜ＦＣ", "awayTeam": "ベガルタ仙台" },
+    { "matchNumber": 13, "homeTeam": "ＲＢ大宮アルディージャ", "awayTeam": "徳島ヴォルティス" }
+  ],
+  "miniTotoA": [1, 2, 3, 4, 5],
+  "miniTotoB": [6, 7, 8, 9, 10],
+  "sources": [
+    "https://toto.rakuten.co.jp/toto/schedule/1674/",
+    "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1674"
+  ],
+  "retrievedAt": "2026-11-24T00:00:00Z"
+}

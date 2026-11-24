@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1674,
+  "predictionVersion": "V2 market-refresh revision",
+  "generatedAt": "2026-11-24T22:08:37+09:00",
+  "generatedAtUtc": "2026-11-24T13:08:37.000Z",
+  "deadlineAt": "2026-11-25T18:50:00+09:00",
+  "deadlineAtUtc": "2026-11-25T09:50:00.000Z",
+  "v1Source": {
+    "repository": "sigulun555-lab/toto-lab",
+    "pr": 131,
+    "branch": "gpt/toto13-round-1674-v1-20261121T171145JST",
+    "branchHead": "c978aa1ef5fe1dcb457dd19680db305ceb19560d",
+    "path": "predictions/round_1674_ChatGPT_shared_score_v1.jsonl",
+    "blobSha": "e9128701e2636f13728b02d14195b20de10c4453",
+    "totalRows": 26,
+    "uniquePredictionIds": 26,
+    "latestRows": 13,
+    "latestV1GeneratedAt": "2026-11-23T12:02:25.000Z",
+    "modelRepository": "sigulun555-lab/gpt",
+    "modelCommit": "1e10fa09da1a9dc71feb2ab6e4d1f09cf16dfaef",
+    "modelPath": "model.js",
+    "modelBlobSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+    "historyBlobSha": "1a6a3230330ef67468755faf8504cac1a9741570",
+    "historyRows": 510,
+    "latestResultDate": "2026-11-22",
+    "historyFetchedAt": "2026-11-23T07:34:09.504Z",
+    "teamAliasesBlobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab"
+  },
+  "previousV2Source": {
+    "repository": "sigulun555-lab/toto-lab",
+    "pr": 136,
+    "branch": "gpt/toto13-round-1674-v2-20261124T1326JST",
+    "baseHeadBeforeRevision": "82c6427df4aac803bef3ba4c8d3ab3439364be74",
+    "path": "predictions/round_1674_ChatGPT_shared_score_v2.jsonl",
+    "blobSha": "2794a9da84025ec12c79f6f956b5e238269df35d",
+    "rows": 13,
+    "uniquePredictionIds": 13,
+    "previousSnapshotPath": "reports/round_1674_toto13_official_market_snapshot_20261124T1326JST.json",
+    "previousMarketRetrievedAt": "2026-11-24T13:27:36+09:00"
+  },
+  "marketSnapshot": {
+    "path": "reports/round_1674_toto13_official_market_snapshot_20261124T2204JST.json",
+    "blobSha": "d26c71eac5d09604c3aced5549c67acadd76e152",
+    "sourceUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=01&fromId=SSIN026&gameAssortment=1&holdCntId=1674",
+    "pageDisplayAt": "2026-11-24T22:04:00+09:00",
+    "retrievedAt": "2026-11-24T22:08:37+09:00",
+    "displayAgeSeconds": 277,
+    "refreshIntervalSeconds": 300,
+    "stale": false,
+    "totalVotesPageSummary": 353626,
+    "matchCount": 13,
+    "allMatchTotalsReconciled": true,
+    "allDisplayedPercentagesSumTo100": true,
+    "crossEndpointObservation": {
+      "url": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1674",
+      "pageDisplayAt": "2026-11-24T22:06:00+09:00",
+      "retrievedAt": "2026-11-24T22:08:37+09:00",
+      "pageTotalVotes": 354343,
+      "firstFiveMatchVoteTotals": 354332,
+      "discrepancyVotes": -11,
+      "usedForV2": false,
+      "note": "The store-domain endpoint had an 11-vote discrepancy in the first five match totals. The selected sp endpoint used by the pinned V2 generator reconciles all 13 match totals to its own page summary."
+    }
+  },
+  "method": {
+    "name": "probability-level market blend",
+    "formula": "P_V2_revision(outcome)=0.30*P_latest_V1(outcome)+0.70*official_toto13_vote_share(outcome)",
+    "weights": {
+      "poissonModel": 0.3,
+      "totoVoteShare": 0.7
+    },
+    "revisionChain": "Each new V2 revision's revisionOf points to the previous V2 row for the same match; baseModelOutcomeProbabilities retains the latest V1 probabilities.",
+    "historicalReference": {
+      "pr": 136,
+      "helperPath": "scripts/round_1674_toto13_v2_blend.js",
+      "helperBlobSha": "01e0f2ee7207deb85910af56db7994670cac6571"
+    }
+  },
+  "output": {
+    "path": "predictions/round_1674_ChatGPT_shared_score_v2_revision_20261124T2204JST.jsonl",
+    "blobSha": "ce7f9974a6e6a32dc00f61185c52508711f14d69",
+    "rows": 13,
+    "uniquePredictionIds": 13,
+    "revisionRows": 13,
+    "allRevisionOfPreviousV2": true,
+    "allBaseProbabilitiesMatchLatestV1": true,
+    "allProbabilityVectorsNormalized": true,
+    "homeAwayGoalDistributionsPreserved": true
+  },
+  "teamNews": {
+    "previousReportPath": "reports/round_1674_toto13_team_news_recheck_20261124T1327JST.json",
+    "previousReportBlobSha": "91e284f2332696576878fda5ca1c1a83b803fd87",
+    "lastCheckedAt": "2026-11-24T13:27:36+09:00",
+    "recheckedAtRevisionTime": false,
+    "all26MedicalStatusFullyVerified": false,
+    "officialStartingLineupsPublishedAtLastCheck": false,
+    "predictedStartingLineupsConfirmed": false,
+    "probabilityAdjustmentApplied": false,
+    "note": "No fresh all-26 team-news recheck was completed at 22:08 JST. The V2 revision uses the pinned V1 output plus official toto13 vote shares only; no injury or lineup adjustment was applied."
+  },
+  "reproducibility": {
+    "generatorPath": "scripts/round_1674_toto13_v2_revision_20261124T2204JST.js",
+    "generatorBlobSha": "0faf75f00bc07dddf9ca00d418bf2f9755ecf90a",
+    "helperPath": "scripts/round_1674_toto13_v2_blend.js",
+    "helperBlobSha": "01e0f2ee7207deb85910af56db7994670cac6571",
+    "testPath": "tests/round-1674-toto13-v2-revision-2204.test.js",
+    "testBlobSha": "dcfc9b1ec71caa75e79a89a90dc93785104eeb93",
+    "packageJsonPath": "package.json",
+    "packageJsonBlobSha": "d13925bbffa86a06630fbe23d72257a58984bae5",
+    "steps": [
+      "node scripts/round_1674_toto13_v2_revision_20261124T2204JST.js",
+      "npm test (includes tests/round-1674-toto13-v2-revision-2204.test.js)",
+      "npm run check:teams"
+    ]
+  },
+  "limitations": [
+    "Official vote shares are market choices, not calibrated true outcome probabilities.",
+    "The store-domain market endpoint disagreed with the selected sp endpoint by 11 votes in the first five match totals; it was excluded from V2 input.",
+    "All 26 club medical statuses remain not fully verified; official starting lineups and predicted XIs were not confirmed at the last 13:27 JST team-news check.",
+    "The pinned V1 model has no injury/suspension/availability/lineup covariates; no such adjustment was applied.",
+    "This is an experimental research comparison and does not change production or market weights."
+  ],
+  "safety": {
+    "productionModelChanged": false,
+    "marketWeightChanged": false,
+    "mainChanged": false,
+    "existingV1RowsChanged": false,
+    "previousV2RowsChanged": false,
+    "existingPredictionRowsChanged": false,
+    "existingShadowArtifactChanged": false,
+    "shadowGenerated": false,
+    "researchOnly": true,
+    "merged": false
+  }
+}

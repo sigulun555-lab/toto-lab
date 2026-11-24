@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1674,
+  "marketType": "toto13",
+  "source": "スポーツくじ公式・第1674回toto投票状況",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1674",
+  "officialCardUrl": "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1674",
+  "salesTermsUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardSalesTermtotoSP.form?holdCntId=1674",
+  "pageDisplayAt": "2026-11-24T18:16:00+09:00",
+  "retrievedAt": "2026-11-24T18:20:45+09:00",
+  "displayAgeSeconds": 285,
+  "refreshNotice": "5分毎",
+  "staleAfterSeconds": 300,
+  "stale": false,
+  "deadlineAt": "2026-11-25T18:50:00+09:00",
+  "deadlineAtUtc": "2026-11-25T09:50:00.000Z",
+  "totalVotesPageSummary": 313982,
+  "matches": [
+    {
+      "productMatchNumber": 1,
+      "matchNumber": 1,
+      "homeTeam": "ジェフユナイテッド千葉",
+      "awayTeam": "名古屋グランパス",
+      "counts": {
+        "0": 84556,
+        "1": 136171,
+        "2": 93255
+      },
+      "percentages": {
+        "0": 26.93,
+        "1": 43.37,
+        "2": 29.7
+      },
+      "marketVoteShare": {
+        "0": 0.2693,
+        "1": 0.4337,
+        "2": 0.297
+      },
+      "sumVotes": 313982,
+      "sumPercent": 100
+    },
+    {
+      "productMatchNumber": 2,
+      "matchNumber": 2,
+      "homeTeam": "ファジアーノ岡山",
+      "awayTeam": "清水エスパルス",
+      "counts": {
+        "0": 81962,
+        "1": 169811,
+        "2": 62209
+      },
+      "percentages": {
+        "0": 26.11,
+        "1": 54.08,
+        "2": 19.81
+      },
+      "marketVoteShare": {
+        "0": 0.2611,
+        "1": 0.5408,
+        "2": 0.1981
+      },
+      "sumVotes": 313982,
+      "sumPercent": 100
+    },
+    {
+      "productMatchNumber": 3,
+      "matchNumber": 3,
+      "homeTeam": "Ｖ・ファーレン長崎",
+      "awayTeam": "川崎フロンターレ",
+      "counts": {
+        "0": 61303,
+        "1": 58094,
+        "2": 194585
+      },
+      "percentages": {
+        "0": 19.53,
+        "1": 18.5,
+        "2": 61.97
+      },
+      "marketVoteShare": {
+        "0": 0.1953,
+        "1": 0.185,
+        "2": 0.6197
+      },
+      "sumVotes": 313982,
+      "sumPercent": 100
+    },
+    {
+      "productMatchNumber": 4,
+      "matchNumber": 4,
+      "homeTeam": "水戸ホーリーホック",
+      "awayTeam": "東京ヴェルディ",
+      "counts": {
+        "0": 87204,
+        "1": 75852,
+        "2": 150926
+      },
+      "percentages": {
+        "0": 27.77,
+        "1": 24.16,
+        "2": 48.07
+      },
+      "marketVoteShare": {
+        "0": 0.2777,
+        "1": 0.2416,
+        "2": 0.4807
+      },
+      "sumVotes": 313982,
+      "sumPercent": 100
+    },
+    {
+      "productMatchNumber": 5,
+      "matchNumber": 5,
+      "homeTeam": "アビスパ福岡",
+      "awayTeam": "横浜Ｆ・マリノス",
+      "counts": {
+        "0": 54378,
+        "1": 49156,
+        "2": 210448
+      },
+      "percentages": {
+        "0": 17.32,
+        "1": 15.66,
+        "2": 67.02
+      },
+      "marketVoteShare": {
+        "0": 0.1732,
+        "1": 0.1566,
+        "2": 0.6702
+      },
+      "sumVotes": 313982,
+      "sumPercent": 100
+    },
+    {
+      "productMatchNumber": 6,
+      "matchNumber": 6,
+      "homeTeam": "ＦＣ東京",
+      "awayTeam": "サンフレッチェ広島",
+      "counts": {
+        "0": 84059,
+        "1": 146397,
+        "2": 83526
+      },
+      "percentages": {
+        "0": 26.77,
+        "1": 46.63,
+        "2": 26.6
+      },
+      "marketVoteShare": {
+        "0": 0.2677,
+        "1": 0.4663,
+        "2": 0.266
+      },
+      "sumVotes": 313982,
+      "sumPercent": 100
+    },
+    {
+      "productMatchNumber": 7,
+      "matchNumber": 7,
+      "homeTeam": "浦和レッズ",
+      "awayTeam": "セレッソ大阪",
+      "counts": {
+        "0": 72472,
+        "1": 185703,
+        "2": 55807
+      },
+      "percentages": {
+        "0": 23.08,
+        "1": 59.15,
+        "2": 17.77
+      },
+      "marketVoteShare": {
+        "0": 0.2308,
+        "1": 0.5915,
+        "2": 0.1777
+      },
+      "sumVotes": 313982,
+      "sumPercent": 100
+    },
+    {
+      "productMatchNumber": 8,
+      "matchNumber": 8,
+      "homeTeam": "北海道コンサドーレ札幌",
+      "awayTeam": "藤枝ＭＹＦＣ",
+      "counts": {
+        "0": 47700,
+        "1": 226631,
+        "2": 39651
+      },
+      "percentages": {
+        "0": 15.19,
+        "1": 72.18,
+        "2": 12.63
+      },
+      "marketVoteShare": {
+        "0": 0.1519,
+        "1": 0.7218,
+        "2": 0.1263
+      },
+      "sumVotes": 313982,
+      "sumPercent": 100
+    },
+    {
+      "productMatchNumber": 9,
+      "matchNumber": 9,
+      "homeTeam": "モンテディオ山形",
+      "awayTeam": "ジュビロ磐田",
+      "counts": {
+        "0": 54591,
+        "1": 50845,
+        "2": 208546
+      },
+      "percentages": {
+        "0": 17.39,
+        "1": 16.19,
+        "2": 66.42
+      },
+      "marketVoteShare": {
+        "0": 0.1739,
+        "1": 0.1619,
+        "2": 0.6642
+      },
+      "sumVotes": 313982,
+      "sumPercent": 100
+    },
+    {
+      "productMatchNumber": 10,
+      "matchNumber": 10,
+      "homeTeam": "サガン鳥栖",
+      "awayTeam": "大分トリニータ",
+      "counts": {
+        "0": 88503,
+        "1": 160579,
+        "2": 64900
+      },
+      "percentages": {
+        "0": 28.19,
+        "1": 51.14,
+        "2": 20.67
+      },
+      "marketVoteShare": {
+        "0": 0.2819,
+        "1": 0.5114,
+        "2": 0.2067
+      },
+      "sumVotes": 313982,
+      "sumPercent": 100
+    },
+    {
+      "productMatchNumber": 11,
+      "matchNumber": 11,
+      "homeTeam": "いわきＦＣ",
+      "awayTeam": "カターレ富山",
+      "counts": {
+        "0": 81273,
+        "1": 89320,
+        "2": 143389
+      },
+      "percentages": {
+        "0": 25.88,
+        "1": 28.45,
+        "2": 45.67
+      },
+      "marketVoteShare": {
+        "0": 0.2588,
+        "1": 0.2845,
+        "2": 0.4567
+      },
+      "sumVotes": 313982,
+      "sumPercent": 100
+    },
+    {
+      "productMatchNumber": 12,
+      "matchNumber": 12,
+      "homeTeam": "横浜ＦＣ",
+      "awayTeam": "ベガルタ仙台",
+      "counts": {
+        "0": 81649,
+        "1": 90244,
+        "2": 142089
+      },
+      "percentages": {
+        "0": 26.01,
+        "1": 28.74,
+        "2": 45.25
+      },
+      "marketVoteShare": {
+        "0": 0.2601,
+        "1": 0.2874,
+        "2": 0.4525
+      },
+      "sumVotes": 313982,
+      "sumPercent": 100
+    },
+    {
+      "productMatchNumber": 13,
+      "matchNumber": 13,
+      "homeTeam": "ＲＢ大宮アルディージャ",
+      "awayTeam": "徳島ヴォルティス",
+      "counts": {
+        "0": 48122,
+        "1": 212984,
+        "2": 52876
+      },
+      "percentages": {
+        "0": 15.33,
+        "1": 67.83,
+        "2": 16.84
+      },
+      "marketVoteShare": {
+        "0": 0.1533,
+        "1": 0.6783,
+        "2": 0.1684
+      },
+      "sumVotes": 313982,
+      "sumPercent": 100
+    }
+  ],
+  "countConsistency": {
+    "allMatchVoteTotalsEqualPageSummary": true,
+    "allDisplayedPercentagesSumTo100": true,
+    "allMatchVoteTotalsEqualEachOther": true,
+    "matchCount": 13
+  },
+  "v2Eligibility": {
+    "eligible": true,
+    "marketInputFresh": true,
+    "reason": "Official vote-rate page display age is 285 seconds at retrieval, within the stated 300-second refresh interval. Eligible as a toto13 V2 market input; this snapshot itself does not create prediction rows."
+  },
+  "predictionImpact": "None. This is an official market observation only; no prediction row is created by this archive."
+}

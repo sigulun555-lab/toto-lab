@@ -89,7 +89,7 @@ test('02:33 JST team-news delta preserves prior notices and does not claim full 
   assert.equal(teamNewsRecheck0233.matchCount, 13);
   assert.equal(teamNewsRecheck0233.teamCount, 26);
   assert.equal(teamNewsRecheck0233.checkedAt, '2026-11-25T02:33:38.078+09:00');
-  assert.equal(teamNewsRecheck0233.previousSnapshot.sha256, '91e284f2332696576878fda5ca1c1a83b803fd87');
+  assert.equal(teamNewsRecheck0233.previousSnapshot.gitBlobSha, '91e284f2332696576878fda5ca1c1a83b803fd87');
   assert.equal(teamNewsRecheck0233.teamChecks.length, 26);
   assert.equal(teamNewsRecheck0233.recheck.teamSpecificSearchQueryCount, 26);
   assert.equal(teamNewsRecheck0233.recheck.teamSpecificSearchTeams.length, 26);
@@ -109,6 +109,13 @@ test('02:33 JST team-news delta preserves prior notices and does not claim full 
   assert.equal(teamNewsRecheck0233.officialCard.totoGOAL3.teamSides, 6);
   assert.deepEqual(teamNewsRecheck0233.officialCard.totoGOAL3.categories, ['0', '1', '2', '3+']);
   const sourceIds = teamNewsRecheck0233.sources.map(s => s.id);
+  for (const team of teamNewsRecheck0233.teamChecks) {
+    for (const id of team.sourceIds || []) assert.ok(sourceIds.includes(id), 'missing team source ' + id);
+  }
+  for (const note of teamNewsRecheck0233.returnNotes) {
+    assert.ok(sourceIds.includes(note.sourceId), 'missing return-note source ' + note.sourceId);
+  }
+
   assert.equal(new Set(sourceIds).size, sourceIds.length);
   for (const id of ['jleague_suspensions_20261123_recheck', 'jleague_j1_preview_20261123_recheck', 'jleague_j2_preview_20261123_recheck', 'toto_official_round_1674_card_20261125_0233']) {
     assert.ok(sourceIds.includes(id));

@@ -18,7 +18,7 @@ const CONFIG = Object.freeze({
   notes: 'Experimental comparison only. Official vote shares are market choices, not calibrated true outcome probabilities. No injury/suspension/availability/lineup adjustment. Research-only append-only revision of the prior V2; all prior V1 and V2 rows remain unchanged. Not a production model or market-weight change.'
 });
 function readJsonl(file) {
-  return fs.readFileSync(path.join(ROOT, file), 'utf8').trim().split(/\\r?\\n/).filter(Boolean).map(JSON.parse);
+  return fs.readFileSync(path.join(ROOT, file), 'utf8').trim().split(/\r?\n/).filter(Boolean).map(JSON.parse);
 }
 function latestByMatch(rows) {
   const latest = new Map();
@@ -64,13 +64,9 @@ function buildRows(v1Rows, previousV2Rows, marketSnapshot, options = CONFIG) {
   });
 }
 function main() {
-  const rows = buildRows(
-    readJsonl(CONFIG.v1Path),
-    readJsonl(CONFIG.previousV2Path),
-    JSON.parse(fs.readFileSync(path.join(ROOT, CONFIG.marketPath), 'utf8'))
-  );
-  fs.writeFileSync(path.join(ROOT, CONFIG.outputPath), rows.map(row => JSON.stringify(row)).join('\\n') + '\\n');
-  process.stdout.write(JSON.stringify({ product: CONFIG.product, round: 1674, rows: rows.length, predictionIds: rows.map(row => row.predictionId) }, null, 2) + '\\n');
+  const rows = buildRows(readJsonl(CONFIG.v1Path), readJsonl(CONFIG.previousV2Path), JSON.parse(fs.readFileSync(path.join(ROOT, CONFIG.marketPath), 'utf8')));
+  fs.writeFileSync(path.join(ROOT, CONFIG.outputPath), rows.map(row => JSON.stringify(row)).join('\n') + '\n');
+  process.stdout.write(JSON.stringify({ product: CONFIG.product, round: 1674, rows: rows.length, predictionIds: rows.map(row => row.predictionId) }, null, 2) + '\n');
 }
 if (require.main === module) main();
 module.exports = { CONFIG, buildRows };

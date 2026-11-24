@@ -105,7 +105,7 @@
       "npm run check:teams"
     ],
     "packageJsonPath": "package.json",
-    "packageJsonBlobSha": "e13eabd4bdb8c89bbc6167bbc10c25a23a56b9f5"
+    "packageJsonBlobSha": "a421cc9aeab7d3d5b08b20d005034f33aed43591"
   },
   "limitations": [
     "Official vote shares are market choices, not calibrated true outcome probabilities.",

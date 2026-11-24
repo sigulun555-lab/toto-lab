@@ -146,7 +146,7 @@
     "status": "not_retrieved",
     "j1LineupPagesAttempted": 7,
     "j2LineupPagesAttempted": 6,
-    "note": "J1 7試合・J2 6試合の公式ラインナップURLを試したが、全件アクセス不可。公式先発は未取得。予想先発も一次ソースで確定できていない。"
+    "note": "J1 7試合・J2 6試合の公式ラインナップURLを試したが、全件アクセス不可。Jリーグ公式プレビューに横山暁之の先発予想はあるが、公式先発ではない。"
   },
   "retrieval": {
     "retrievedAt": "2026-11-25T08:13:50+09:00",
@@ -211,5 +211,36 @@
     "https://www.jleague.jp/match/j1/2026/112505/lineup/",
     "https://www.jleague.jp/match/j1/2026/112506/lineup/",
     "https://www.jleague.jp/match/j1/2026/112507/lineup/"
+  ],
+  "additionalMatchPreviewCheckAt": "2026-11-25T08:19:04+09:00",
+  "matchPreviewNotes": [
+    {
+      "matchNumber": 9,
+      "match": "山形 vs 磐田",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112511/",
+      "publishedAt": "2026-11-25",
+      "note": "Jリーグ公式プレビューでユーリ ララの出場停止を確認。磐田は札幌戦以降9試合負けなし、直近5試合4勝1分。最近2試合はマテウス ペイショットと野澤零温の2トップを先発起用。これは直近の起用傾向であり、11/25の公式先発ではない。"
+    },
+    {
+      "matchNumber": 12,
+      "match": "横浜FC vs 仙台",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112515/",
+      "publishedAt": "2026-11-25",
+      "note": "Jリーグ公式プレビューでジョアン パウロの出場停止を確認。代役として横山暁之の先発が予想されると記載。これは公式プレビューの予想であり、公式先発確定ではない。"
+    },
+    {
+      "matchNumber": 13,
+      "match": "大宮 vs 徳島",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112514/",
+      "publishedAt": "2026-11-25",
+      "note": "Jリーグ公式プレビューで関口凱心の累積警告による出場停止を確認。中山昂大の起用可能性に言及があるが、先発予想として確定した記載ではない。"
+    },
+    {
+      "matchNumber": 10,
+      "match": "鳥栖 vs 大分",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112517/",
+      "publishedAt": "2026-11-25",
+      "note": "Jリーグ公式プレビューは鳥栖・大分の直近内容と注目選手を紹介。公式先発や負傷者の新規確定情報はなし。"
+    }
   ]
 }

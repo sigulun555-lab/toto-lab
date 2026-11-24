@@ -78,3 +78,38 @@ test('18:16 official round-1674 totoGOAL3 market snapshot is fresh, reconciled, 
     }
   }
 });
+
+
+const market2203 = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'reports/round_1674_totoGOAL3_official_market_snapshot_20261124T2203JST.json'), 'utf8'));
+
+test('22:03 official round-1674 totoGOAL3 market observation is reconciled but stale and forecast-ineligible', () => {
+  assert.equal(market2203.schemaVersion, 1);
+  assert.equal(market2203.product, 'totoGOAL3');
+  assert.equal(market2203.marketType, 'totoGOAL3');
+  assert.equal(market2203.round, 1674);
+  assert.equal(market2203.fixtureCount, 3);
+  assert.equal(market2203.teamSideCount, 6);
+  assert.deepEqual(market2203.categoryOrder, ['0', '1', '2', '3+']);
+  assert.equal(market2203.pageDisplayAt, '2026-11-24T22:03:00+09:00');
+  assert.equal(market2203.retrievedAt, '2026-11-24T22:11:52+09:00');
+  assert.equal(market2203.displayAgeSeconds, 532);
+  assert.equal(market2203.staleAfterSeconds, 300);
+  assert.equal(market2203.stale, true);
+  assert.equal(market2203.totalVotesPageSummary, 73951);
+  assert.equal(market2203.teamSides.length, 6);
+  assert.equal(market2203.reconciliation.allTeamSideVoteCountsEqualPageSummary, true);
+  assert.equal(market2203.reconciliation.allPercentageTotalsEqual100, true);
+  assert.equal(market2203.v2Eligibility.marketInputFresh, false);
+  assert.equal(market2203.v2Eligibility.predictionGenerationEligible, false);
+  for (const side of market2203.teamSides) {
+    assert.equal(side.voteCounts.length, 4);
+    assert.equal(side.percentages.length, 4);
+    assert.equal(side.sumVotes, side.voteCounts.reduce((a, b) => a + b, 0));
+    assert.equal(side.sumVotes, market2203.totalVotesPageSummary);
+    assert.ok(Math.abs(side.percentageTotal - 100) < 1e-8);
+    for (let i = 0; i < 4; i++) {
+      const key = market2203.categoryOrder[i];
+      assert.equal(side.marketVoteShare[key], Number((side.percentages[i] / 100).toFixed(4)));
+    }
+  }
+});

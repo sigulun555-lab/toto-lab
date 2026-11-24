@@ -9,7 +9,7 @@
   "teamCount": 26,
   "previousSnapshot": {
     "path": "reports/round_1674_toto13_team_news_recheck_20261124T1327JST.json",
-    "sha256": "91e284f2332696576878fda5ca1c1a83b803fd87",
+    "gitBlobSha": "91e284f2332696576878fda5ca1c1a83b803fd87",
     "checkedAt": "2026-11-24T13:27:36+09:00",
     "status": "carried_forward_not_rewritten"
   },
@@ -244,6 +244,27 @@
     "checkedAt": "2026-11-25T02:33:38.078+09:00"
   },
   "sources": [
+    {
+      "id": "jleague_suspensions_20261123",
+      "url": "https://www.jleague.jp/news/article/35431/?navicode=j1",
+      "publishedAt": "2026-11-23T18:00:00+09:00",
+      "retrievedAt": "2026-11-24T13:27:36+09:00",
+      "name": "Jリーグ公式 出場停止選手のお知らせ（2026/11/23）"
+    },
+    {
+      "id": "jleague_j1_preview_20261123",
+      "url": "https://www.jleague.jp/news/article/35426/",
+      "publishedAt": "2026-11-23T17:00:00+09:00",
+      "retrievedAt": "2026-11-24T13:27:36+09:00",
+      "name": "Jリーグ公式 J1第16節プレビュー"
+    },
+    {
+      "id": "jleague_j2_preview_20261123",
+      "url": "https://www.jleague.jp/news/article/35427/?navicode=j2",
+      "publishedAt": "2026-11-23T18:00:00+09:00",
+      "retrievedAt": "2026-11-24T13:27:36+09:00",
+      "name": "Jリーグ公式 J2第19節プレビュー"
+    },
     {
       "id": "jleague_mito_matsubara",
       "url": "https://www.jleague.jp/news/article/35409/",

@@ -3,7 +3,7 @@
   "product": "toto13",
   "round": 1674,
   "drawDate": "2026-11-25",
-  "checkedAt": "2026-11-24T01:33:01+09:00",
+  "checkedAt": "2026-11-24T13:27:36+09:00",
   "officialCardUrl": "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1674",
   "matchCount": 13,
   "teamCount": 26,
@@ -247,59 +247,59 @@
   "sources": [
     {
       "id": "jleague_suspensions_20261123",
-      "name": "Jリーグ公式 出場停止選手のお知らせ（2026/11/23）",
       "url": "https://www.jleague.jp/news/article/35431/?navicode=j1",
       "publishedAt": "2026-11-23T18:00:00+09:00",
-      "retrievedAt": "2026-11-24T01:33:01+09:00"
+      "retrievedAt": "2026-11-24T13:27:36+09:00",
+      "name": "Jリーグ公式 出場停止選手のお知らせ（2026/11/23）"
     },
     {
       "id": "jleague_j1_preview_20261123",
-      "name": "Jリーグ公式 J1第16節プレビュー",
       "url": "https://www.jleague.jp/news/article/35426/",
       "publishedAt": "2026-11-23T17:00:00+09:00",
-      "retrievedAt": "2026-11-24T01:33:01+09:00"
+      "retrievedAt": "2026-11-24T13:27:36+09:00",
+      "name": "Jリーグ公式 J1第16節プレビュー"
     },
     {
       "id": "jleague_j2_preview_20261123",
-      "name": "Jリーグ公式 J2第19節プレビュー",
       "url": "https://www.jleague.jp/news/article/35427/?navicode=j2",
       "publishedAt": "2026-11-23T18:00:00+09:00",
-      "retrievedAt": "2026-11-24T01:33:01+09:00"
+      "retrievedAt": "2026-11-24T13:27:36+09:00",
+      "name": "Jリーグ公式 J2第19節プレビュー"
     },
     {
       "id": "jleague_mito_matsubara",
-      "name": "Jリーグ公式 GK松原の負傷を発表（水戸）",
       "url": "https://www.jleague.jp/news/article/35409/",
       "publishedAt": "2026-11-21T17:30:00+09:00",
-      "retrievedAt": "2026-11-24T01:33:01+09:00"
+      "retrievedAt": "2026-11-24T13:27:36+09:00",
+      "name": "Jリーグ公式 GK松原の負傷を発表（水戸）"
     },
     {
       "id": "jleague_nagasaki_shindo",
-      "name": "Jリーグ公式 DF進藤の負傷を発表（長崎）",
       "url": "https://www.jleague.jp/news/article/35410/",
       "publishedAt": "2026-11-21T17:40:00+09:00",
-      "retrievedAt": "2026-11-24T01:33:01+09:00"
+      "retrievedAt": "2026-11-24T13:27:36+09:00",
+      "name": "Jリーグ公式 DF進藤の負傷を発表（長崎）"
     },
     {
       "id": "jleague_iwaki_takahashi",
-      "name": "Jリーグ公式 MF高橋の負傷を発表（いわき）",
       "url": "https://www.jleague.jp/news/article/35420/",
       "publishedAt": "2026-11-22T17:30:00+09:00",
-      "retrievedAt": "2026-11-24T01:33:01+09:00"
+      "retrievedAt": "2026-11-24T13:27:36+09:00",
+      "name": "Jリーグ公式 MF高橋の負傷を発表（いわき）"
     },
     {
       "id": "jleague_oita_yoshikawa",
-      "name": "Jリーグ公式 MF吉川の負傷を発表（大分）",
       "url": "https://www.jleague.jp/news/article/35418/",
       "publishedAt": "2026-11-22T17:30:00+09:00",
-      "retrievedAt": "2026-11-24T01:33:01+09:00"
+      "retrievedAt": "2026-11-24T13:27:36+09:00",
+      "name": "Jリーグ公式 MF吉川の負傷を発表（大分）"
     },
     {
       "id": "jleague_chiba_matheus",
-      "name": "Jリーグ公式 MFマテウス インディオの負傷を発表（千葉）",
       "url": "https://www.jleague.jp/news/article/35325/",
       "publishedAt": "2026-11-09T18:30:00+09:00",
-      "retrievedAt": "2026-11-24T01:33:01+09:00"
+      "retrievedAt": "2026-11-24T13:27:36+09:00",
+      "name": "Jリーグ公式 MFマテウス インディオの負傷を発表（千葉）"
     },
     {
       "id": "club_okayama_kimura",
@@ -335,54 +335,6 @@
       "url": "https://www.f-marinos.com/news/team/10877",
       "publishedAt": "2026-11-05",
       "retrievedAt": "2026-11-24T01:33:01+09:00"
-    },
-    {
-      "id": "jleague_suspensions_20261123",
-      "url": "https://www.jleague.jp/news/article/35431/?navicode=j1",
-      "publishedAt": "2026-11-23T18:00:00+09:00",
-      "retrievedAt": "2026-11-24T13:27:36+09:00"
-    },
-    {
-      "id": "jleague_j1_preview_20261123",
-      "url": "https://www.jleague.jp/news/article/35426/",
-      "publishedAt": "2026-11-23T17:00:00+09:00",
-      "retrievedAt": "2026-11-24T13:27:36+09:00"
-    },
-    {
-      "id": "jleague_j2_preview_20261123",
-      "url": "https://www.jleague.jp/news/article/35427/?navicode=j2",
-      "publishedAt": "2026-11-23T18:00:00+09:00",
-      "retrievedAt": "2026-11-24T13:27:36+09:00"
-    },
-    {
-      "id": "jleague_mito_matsubara",
-      "url": "https://www.jleague.jp/news/article/35409/",
-      "publishedAt": "2026-11-21T17:30:00+09:00",
-      "retrievedAt": "2026-11-24T13:27:36+09:00"
-    },
-    {
-      "id": "jleague_nagasaki_shindo",
-      "url": "https://www.jleague.jp/news/article/35410/",
-      "publishedAt": "2026-11-21T17:40:00+09:00",
-      "retrievedAt": "2026-11-24T13:27:36+09:00"
-    },
-    {
-      "id": "jleague_iwaki_takahashi",
-      "url": "https://www.jleague.jp/news/article/35420/",
-      "publishedAt": "2026-11-22T17:30:00+09:00",
-      "retrievedAt": "2026-11-24T13:27:36+09:00"
-    },
-    {
-      "id": "jleague_oita_yoshikawa",
-      "url": "https://www.jleague.jp/news/article/35418/",
-      "publishedAt": "2026-11-22T17:30:00+09:00",
-      "retrievedAt": "2026-11-24T13:27:36+09:00"
-    },
-    {
-      "id": "jleague_chiba_matheus",
-      "url": "https://www.jleague.jp/news/article/35325/",
-      "publishedAt": "2026-11-09T18:30:00+09:00",
-      "retrievedAt": "2026-11-24T13:27:36+09:00"
     }
   ],
   "recheck": {

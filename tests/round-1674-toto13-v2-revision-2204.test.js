@@ -61,3 +61,28 @@ test('market refresh uses the exact pinned 30/70 probability-level blend helper'
     assert.deepEqual(row.outcomeProbabilities, blendOutcomeProbabilities(row.baseModelOutcomeProbabilities, row.marketVoteShare));
   }
 });
+
+
+const teamNews2212 = JSON.parse(fs.readFileSync(path.join(root, 'reports/round_1674_toto13_team_news_recheck_20261124T2212JST.json'), 'utf8'));
+
+test('22:12 official team-news audit covers all 26 round-1674 toto13 teams without overstating availability', () => {
+  assert.equal(teamNews2212.product, 'toto13');
+  assert.equal(teamNews2212.round, 1674);
+  assert.equal(teamNews2212.checkedAt, '2026-11-24T22:12:47+09:00');
+  assert.equal(teamNews2212.matchNotes.length, 13);
+  assert.equal(teamNews2212.teamCoverage.teamCount, 26);
+  assert.equal(teamNews2212.teamCoverage.all26TeamsMapped, true);
+  assert.equal(teamNews2212.suspensions.length, 3);
+  assert.deepEqual(teamNews2212.suspensions.map(x => x.matchNumber).sort((a,b)=>a-b), [9,12,13]);
+  assert.equal(teamNews2212.knownInjuries.length, 10);
+  assert.equal(teamNews2212.scopeLimitations.all26MedicalStatusFullyVerified, false);
+  assert.equal(teamNews2212.scopeLimitations.officialLineupsAvailable, false);
+  assert.equal(teamNews2212.scopeLimitations.predictedStartingLineupsConfirmed, false);
+  assert.equal(teamNews2212.modelImpact.probabilityAdjustmentApplied, false);
+  assert.equal(teamNews2212.modelImpact.existingV1RowsChanged, false);
+  assert.equal(teamNews2212.modelImpact.existingV2RowsChanged, false);
+  for (const source of teamNews2212.sources) {
+    assert.ok(source.url.startsWith('https://'));
+    assert.equal(source.retrievedAt, teamNews2212.checkedAt);
+  }
+});

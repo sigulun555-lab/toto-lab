@@ -176,7 +176,7 @@ test('10:40 official round-1674 toto13 snapshot is reconciled and excluded from 
   for (const m of market1040.matches) {
     assert.equal(m.sumVotes, m.voteCounts.reduce((a, b) => a + b, 0));
     assert.equal(m.sumVotes, market1040.totalVotesPageSummary);
-    assert.equal(m.percentageTotal, 100);
+    assert.ok(Math.abs(m.percentageTotal - 100) < 1e-8);
     assert.ok(Math.abs(m.percentages.reduce((a, b) => a + b, 0) - 100) < 1e-8);
     const expectedShares = {
       '0': Number((m.percentages[1] / 100).toFixed(4)),

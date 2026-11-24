@@ -1,0 +1,462 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1674,
+  "drawDate": "2026-11-25",
+  "checkedAt": "2026-11-24T01:33:01+09:00",
+  "officialCardUrl": "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1674",
+  "matchCount": 13,
+  "teamCount": 26,
+  "teamChecks": [
+    {
+      "team": "ジェフユナイテッド千葉",
+      "status": "official_notice_found",
+      "sourceIds": [
+        "jleague_chiba_matheus"
+      ],
+      "note": "MFマテウス インディオ：左膝蓋腱断裂（10/29受傷、11/9発表）。復帰時期未公表。"
+    },
+    {
+      "team": "名古屋グランパス",
+      "status": "not_confirmed_in_checked_scope",
+      "sourceIds": [],
+      "note": "今回確認したJリーグ公式ニュース・プレビュー範囲で11/25に直接関係する負傷情報は未確認。無傷を意味しない。"
+    },
+    {
+      "team": "ファジアーノ岡山",
+      "status": "official_notice_found",
+      "sourceIds": [
+        "club_okayama_kimura"
+      ],
+      "note": "木村太哉：左足内果疲労骨折、11/10手術、全治3か月程度（11/13発表）。"
+    },
+    {
+      "team": "清水エスパルス",
+      "status": "return_note",
+      "sourceIds": [
+        "jleague_j1_preview_20261123"
+      ],
+      "note": "北川航也は前節復帰し得点。11/25の出場可否・先発は未確定。"
+    },
+    {
+      "team": "Ｖ・ファーレン長崎",
+      "status": "official_notice_found",
+      "sourceIds": [
+        "jleague_nagasaki_shindo",
+        "jleague_j1_preview_20261123"
+      ],
+      "note": "進藤亮佑：左内側側副靱帯損傷（11/21発表）。ノーマン キャンベルは前節復帰、11/25の可否は未確定。"
+    },
+    {
+      "team": "川崎フロンターレ",
+      "status": "not_confirmed_in_checked_scope",
+      "sourceIds": [],
+      "note": "11/25トップチームの負傷・出場可否は確認した範囲で未確認。U-21関連の古い情報はトップチーム欠場扱いにしない。"
+    },
+    {
+      "team": "水戸ホーリーホック",
+      "status": "official_notice_found",
+      "sourceIds": [
+        "jleague_mito_matsubara"
+      ],
+      "note": "GK松原修平：右アキレス腱断裂（11/20受傷、11/21発表）。復帰時期未公表。"
+    },
+    {
+      "team": "東京ヴェルディ",
+      "status": "not_confirmed_in_checked_scope",
+      "sourceIds": [],
+      "note": "確認した公式ニュース・プレビュー範囲で11/25に直接関係する負傷情報は未確認。"
+    },
+    {
+      "team": "アビスパ福岡",
+      "status": "not_confirmed_in_checked_scope",
+      "sourceIds": [],
+      "note": "確認した公式ニュース・プレビュー範囲で11/25に直接関係する負傷情報は未確認。"
+    },
+    {
+      "team": "横浜Ｆ・マリノス",
+      "status": "official_notice_found",
+      "sourceIds": [
+        "club_marinos_yamane",
+        "club_marinos_krooks"
+      ],
+      "note": "山根陸：左膝内側側副靱帯損傷（11/19発表）。ジョルディ クルークス：左ハムストリング肉離れ（11/5発表）。両者の復帰時期未公表。"
+    },
+    {
+      "team": "FC東京",
+      "status": "not_confirmed_in_checked_scope",
+      "sourceIds": [],
+      "note": "今回確認した公式ニュース・プレビュー範囲で11/25に直接関係する新規負傷情報は未確認。"
+    },
+    {
+      "team": "サンフレッチェ広島",
+      "status": "not_confirmed_in_checked_scope",
+      "sourceIds": [],
+      "note": "確認した公式ニュース・プレビュー範囲で11/25に直接関係する負傷情報は未確認。"
+    },
+    {
+      "team": "浦和レッズ",
+      "status": "not_confirmed_in_checked_scope",
+      "sourceIds": [],
+      "note": "確認した公式ニュース・プレビュー範囲で11/25に直接関係する負傷情報は未確認。"
+    },
+    {
+      "team": "セレッソ大阪",
+      "status": "not_confirmed_in_checked_scope",
+      "sourceIds": [],
+      "note": "確認した公式ニュース・プレビュー範囲で11/25に直接関係する負傷情報は未確認。"
+    },
+    {
+      "team": "北海道コンサドーレ札幌",
+      "status": "official_notice_found",
+      "sourceIds": [
+        "club_sapporo_kawahara",
+        "club_sapporo_fukumori"
+      ],
+      "note": "川原颯斗：右大腿二頭筋肉離れ（11/21発表）。福森晃斗：右大腿二頭筋肉離れ（11/3発表）。復帰時期未公表。"
+    },
+    {
+      "team": "藤枝ＭＹＦＣ",
+      "status": "not_confirmed_in_checked_scope",
+      "sourceIds": [],
+      "note": "確認した公式ニュース・プレビュー範囲で11/25に直接関係する負傷情報は未確認。"
+    },
+    {
+      "team": "モンテディオ山形",
+      "status": "not_confirmed_in_checked_scope",
+      "sourceIds": [],
+      "note": "確認した公式ニュース・プレビュー範囲で11/25に直接関係する負傷情報は未確認。"
+    },
+    {
+      "team": "ジュビロ磐田",
+      "status": "suspension_found",
+      "sourceIds": [
+        "jleague_suspensions_20261123"
+      ],
+      "note": "ユーリ ララ：累積警告による1試合停止、11/25 J2第19節が対象。"
+    },
+    {
+      "team": "サガン鳥栖",
+      "status": "not_confirmed_in_checked_scope",
+      "sourceIds": [],
+      "note": "確認した公式ニュース・プレビュー範囲で11/25に直接関係する負傷情報は未確認。"
+    },
+    {
+      "team": "大分トリニータ",
+      "status": "official_notice_found",
+      "sourceIds": [
+        "jleague_oita_yoshikawa"
+      ],
+      "note": "MF吉川敬進：左足関節脱臼骨折（11/11受傷、11/22発表）。復帰時期未公表。"
+    },
+    {
+      "team": "いわきＦＣ",
+      "status": "official_notice_found",
+      "sourceIds": [
+        "jleague_iwaki_takahashi"
+      ],
+      "note": "MF高橋勇利也：11/21試合中に負傷、脳震盪（11/22発表）。段階的リハビリ予定。11/25の可否は未確定。"
+    },
+    {
+      "team": "カターレ富山",
+      "status": "not_confirmed_in_checked_scope",
+      "sourceIds": [],
+      "note": "確認した公式ニュース・プレビュー範囲で11/25に直接関係する負傷情報は未確認。"
+    },
+    {
+      "team": "横浜ＦＣ",
+      "status": "suspension_found",
+      "sourceIds": [
+        "jleague_suspensions_20261123"
+      ],
+      "note": "ジョアン パウロ：累積警告による1試合停止、11/25 J2第19節が対象。"
+    },
+    {
+      "team": "ベガルタ仙台",
+      "status": "not_confirmed_in_checked_scope",
+      "sourceIds": [],
+      "note": "確認した公式ニュース・プレビュー範囲で11/25に直接関係する負傷情報は未確認。"
+    },
+    {
+      "team": "ＲＢ大宮アルディージャ",
+      "status": "suspension_found",
+      "sourceIds": [
+        "jleague_suspensions_20261123"
+      ],
+      "note": "関口凱心：累積警告による1試合停止、11/25 J2第19節が対象。"
+    },
+    {
+      "team": "徳島ヴォルティス",
+      "status": "not_confirmed_in_checked_scope",
+      "sourceIds": [],
+      "note": "確認した公式ニュース・プレビュー範囲で11/25に直接関係する負傷情報は未確認。"
+    }
+  ],
+  "suspensionSummary": [
+    {
+      "team": "RB大宮アルディージャ",
+      "player": "関口 凱心",
+      "competition": "J2",
+      "matchDate": "2026-11-25",
+      "reason": "累積警告・1試合停止",
+      "sourceId": "jleague_suspensions_20261123"
+    },
+    {
+      "team": "横浜FC",
+      "player": "ジョアン パウロ",
+      "competition": "J2",
+      "matchDate": "2026-11-25",
+      "reason": "累積警告・1試合停止",
+      "sourceId": "jleague_suspensions_20261123"
+    },
+    {
+      "team": "ジュビロ磐田",
+      "player": "ユーリ ララ",
+      "competition": "J2",
+      "matchDate": "2026-11-25",
+      "reason": "累積警告・1試合停止",
+      "sourceId": "jleague_suspensions_20261123"
+    }
+  ],
+  "returnNotes": [
+    {
+      "team": "清水エスパルス",
+      "player": "北川 航也",
+      "note": "J1第16節プレビューで前節復帰・得点に言及。11/25出場可否は未確認。",
+      "sourceId": "jleague_j1_preview_20261123"
+    },
+    {
+      "team": "Ｖ・ファーレン長崎",
+      "player": "ノーマン キャンベル",
+      "note": "J1第16節プレビューで前節復帰に言及。11/25出場可否は未確認。",
+      "sourceId": "jleague_j1_preview_20261123"
+    }
+  ],
+  "lineups": {
+    "officialStartingLineups": "not_published_at_checkedAt",
+    "predictedStartingLineups": "not_confirmed_for_all_13_matches",
+    "checkedAt": "2026-11-24T13:27:36+09:00"
+  },
+  "scopeLimitations": {
+    "all26MedicalStatusFullyVerified": false,
+    "description": "Jリーグ公式ニュース、J1/J2公式プレビュー、および該当する一部クラブ公式発表を確認。全26クラブの非公開・個別の医療情報、当日練習後の状態、全選手の出場可否を網羅したものではない。情報未発見は欠場者なしを意味しない。",
+    "officialLineupsAvailable": false,
+    "modelInputChanged": false,
+    "latestRecheckAt": "2026-11-24T13:27:36+09:00"
+  },
+  "sources": [
+    {
+      "id": "jleague_suspensions_20261123",
+      "name": "Jリーグ公式 出場停止選手のお知らせ（2026/11/23）",
+      "url": "https://www.jleague.jp/news/article/35431/?navicode=j1",
+      "publishedAt": "2026-11-23T18:00:00+09:00",
+      "retrievedAt": "2026-11-24T01:33:01+09:00"
+    },
+    {
+      "id": "jleague_j1_preview_20261123",
+      "name": "Jリーグ公式 J1第16節プレビュー",
+      "url": "https://www.jleague.jp/news/article/35426/",
+      "publishedAt": "2026-11-23T17:00:00+09:00",
+      "retrievedAt": "2026-11-24T01:33:01+09:00"
+    },
+    {
+      "id": "jleague_j2_preview_20261123",
+      "name": "Jリーグ公式 J2第19節プレビュー",
+      "url": "https://www.jleague.jp/news/article/35427/?navicode=j2",
+      "publishedAt": "2026-11-23T18:00:00+09:00",
+      "retrievedAt": "2026-11-24T01:33:01+09:00"
+    },
+    {
+      "id": "jleague_mito_matsubara",
+      "name": "Jリーグ公式 GK松原の負傷を発表（水戸）",
+      "url": "https://www.jleague.jp/news/article/35409/",
+      "publishedAt": "2026-11-21T17:30:00+09:00",
+      "retrievedAt": "2026-11-24T01:33:01+09:00"
+    },
+    {
+      "id": "jleague_nagasaki_shindo",
+      "name": "Jリーグ公式 DF進藤の負傷を発表（長崎）",
+      "url": "https://www.jleague.jp/news/article/35410/",
+      "publishedAt": "2026-11-21T17:40:00+09:00",
+      "retrievedAt": "2026-11-24T01:33:01+09:00"
+    },
+    {
+      "id": "jleague_iwaki_takahashi",
+      "name": "Jリーグ公式 MF高橋の負傷を発表（いわき）",
+      "url": "https://www.jleague.jp/news/article/35420/",
+      "publishedAt": "2026-11-22T17:30:00+09:00",
+      "retrievedAt": "2026-11-24T01:33:01+09:00"
+    },
+    {
+      "id": "jleague_oita_yoshikawa",
+      "name": "Jリーグ公式 MF吉川の負傷を発表（大分）",
+      "url": "https://www.jleague.jp/news/article/35418/",
+      "publishedAt": "2026-11-22T17:30:00+09:00",
+      "retrievedAt": "2026-11-24T01:33:01+09:00"
+    },
+    {
+      "id": "jleague_chiba_matheus",
+      "name": "Jリーグ公式 MFマテウス インディオの負傷を発表（千葉）",
+      "url": "https://www.jleague.jp/news/article/35325/",
+      "publishedAt": "2026-11-09T18:30:00+09:00",
+      "retrievedAt": "2026-11-24T01:33:01+09:00"
+    },
+    {
+      "id": "club_okayama_kimura",
+      "name": "ファジアーノ岡山公式 木村太哉選手の手術について",
+      "url": "https://www.fagiano-okayama.com/news/202611131001/",
+      "publishedAt": "2026-11-13",
+      "retrievedAt": "2026-11-24T01:33:01+09:00"
+    },
+    {
+      "id": "club_sapporo_kawahara",
+      "name": "北海道コンサドーレ札幌公式 川原颯斗選手負傷",
+      "url": "https://www.consadole-sapporo.jp/news/2026/11/17363/",
+      "publishedAt": "2026-11-21",
+      "retrievedAt": "2026-11-24T01:33:01+09:00"
+    },
+    {
+      "id": "club_sapporo_fukumori",
+      "name": "北海道コンサドーレ札幌公式 福森晃斗選手負傷",
+      "url": "https://www.consadole-sapporo.jp/news/2026/11/15643/",
+      "publishedAt": "2026-11-03",
+      "retrievedAt": "2026-11-24T01:33:01+09:00"
+    },
+    {
+      "id": "club_marinos_yamane",
+      "name": "横浜F・マリノス公式 山根陸選手の負傷について",
+      "url": "https://www.f-marinos.com/news/team/10930",
+      "publishedAt": "2026-11-19",
+      "retrievedAt": "2026-11-24T01:33:01+09:00"
+    },
+    {
+      "id": "club_marinos_krooks",
+      "name": "横浜F・マリノス公式 ジョルディ クルークス選手の負傷について",
+      "url": "https://www.f-marinos.com/news/team/10877",
+      "publishedAt": "2026-11-05",
+      "retrievedAt": "2026-11-24T01:33:01+09:00"
+    },
+    {
+      "id": "jleague_suspensions_20261123",
+      "url": "https://www.jleague.jp/news/article/35431/?navicode=j1",
+      "publishedAt": "2026-11-23T18:00:00+09:00",
+      "retrievedAt": "2026-11-24T13:27:36+09:00"
+    },
+    {
+      "id": "jleague_j1_preview_20261123",
+      "url": "https://www.jleague.jp/news/article/35426/",
+      "publishedAt": "2026-11-23T17:00:00+09:00",
+      "retrievedAt": "2026-11-24T13:27:36+09:00"
+    },
+    {
+      "id": "jleague_j2_preview_20261123",
+      "url": "https://www.jleague.jp/news/article/35427/?navicode=j2",
+      "publishedAt": "2026-11-23T18:00:00+09:00",
+      "retrievedAt": "2026-11-24T13:27:36+09:00"
+    },
+    {
+      "id": "jleague_mito_matsubara",
+      "url": "https://www.jleague.jp/news/article/35409/",
+      "publishedAt": "2026-11-21T17:30:00+09:00",
+      "retrievedAt": "2026-11-24T13:27:36+09:00"
+    },
+    {
+      "id": "jleague_nagasaki_shindo",
+      "url": "https://www.jleague.jp/news/article/35410/",
+      "publishedAt": "2026-11-21T17:40:00+09:00",
+      "retrievedAt": "2026-11-24T13:27:36+09:00"
+    },
+    {
+      "id": "jleague_iwaki_takahashi",
+      "url": "https://www.jleague.jp/news/article/35420/",
+      "publishedAt": "2026-11-22T17:30:00+09:00",
+      "retrievedAt": "2026-11-24T13:27:36+09:00"
+    },
+    {
+      "id": "jleague_oita_yoshikawa",
+      "url": "https://www.jleague.jp/news/article/35418/",
+      "publishedAt": "2026-11-22T17:30:00+09:00",
+      "retrievedAt": "2026-11-24T13:27:36+09:00"
+    },
+    {
+      "id": "jleague_chiba_matheus",
+      "url": "https://www.jleague.jp/news/article/35325/",
+      "publishedAt": "2026-11-09T18:30:00+09:00",
+      "retrievedAt": "2026-11-24T13:27:36+09:00"
+    }
+  ],
+  "recheck": {
+    "checkedAt": "2026-11-24T13:27:36+09:00",
+    "searchPerformedAt": "2026-11-24T13:15:00+09:00",
+    "scope": "13 fixture-pair searches for 2026-11-25 injuries, suspensions, availability, expected/official lineups and recent roster changes; direct opens of the J.League 11/23 suspension list, J1/J2 previews, and selected J.League injury notices.",
+    "newOfficialNoticesSurfacedInThisSearchScope": [],
+    "officialStartingLineups": "not_published_at_checkedAt",
+    "predictedStartingLineups": "not_confirmed_for_all_13_matches",
+    "sourcesRechecked": [
+      {
+        "id": "jleague_suspensions_20261123",
+        "url": "https://www.jleague.jp/news/article/35431/?navicode=j1",
+        "publishedAt": "2026-11-23T18:00:00+09:00",
+        "retrievedAt": "2026-11-24T13:27:36+09:00"
+      },
+      {
+        "id": "jleague_j1_preview_20261123",
+        "url": "https://www.jleague.jp/news/article/35426/",
+        "publishedAt": "2026-11-23T17:00:00+09:00",
+        "retrievedAt": "2026-11-24T13:27:36+09:00"
+      },
+      {
+        "id": "jleague_j2_preview_20261123",
+        "url": "https://www.jleague.jp/news/article/35427/?navicode=j2",
+        "publishedAt": "2026-11-23T18:00:00+09:00",
+        "retrievedAt": "2026-11-24T13:27:36+09:00"
+      },
+      {
+        "id": "jleague_mito_matsubara",
+        "url": "https://www.jleague.jp/news/article/35409/",
+        "publishedAt": "2026-11-21T17:30:00+09:00",
+        "retrievedAt": "2026-11-24T13:27:36+09:00"
+      },
+      {
+        "id": "jleague_nagasaki_shindo",
+        "url": "https://www.jleague.jp/news/article/35410/",
+        "publishedAt": "2026-11-21T17:40:00+09:00",
+        "retrievedAt": "2026-11-24T13:27:36+09:00"
+      },
+      {
+        "id": "jleague_iwaki_takahashi",
+        "url": "https://www.jleague.jp/news/article/35420/",
+        "publishedAt": "2026-11-22T17:30:00+09:00",
+        "retrievedAt": "2026-11-24T13:27:36+09:00"
+      },
+      {
+        "id": "jleague_oita_yoshikawa",
+        "url": "https://www.jleague.jp/news/article/35418/",
+        "publishedAt": "2026-11-22T17:30:00+09:00",
+        "retrievedAt": "2026-11-24T13:27:36+09:00"
+      },
+      {
+        "id": "jleague_chiba_matheus",
+        "url": "https://www.jleague.jp/news/article/35325/",
+        "publishedAt": "2026-11-09T18:30:00+09:00",
+        "retrievedAt": "2026-11-24T13:27:36+09:00"
+      }
+    ],
+    "searchQueries": [
+      "ジェフユナイテッド千葉 名古屋グランパス",
+      "ファジアーノ岡山 清水エスパルス",
+      "V・ファーレン長崎 川崎フロンターレ",
+      "水戸ホーリーホック 東京ヴェルディ",
+      "アビスパ福岡 横浜F・マリノス",
+      "FC東京 サンフレッチェ広島",
+      "浦和レッズ セレッソ大阪",
+      "北海道コンサドーレ札幌 藤枝MYFC",
+      "モンテディオ山形 ジュビロ磐田",
+      "サガン鳥栖 大分トリニータ",
+      "いわきFC カターレ富山",
+      "横浜FC ベガルタ仙台",
+      "RB大宮アルディージャ 徳島ヴォルティス"
+    ],
+    "scopeLimitations": "No additional official notices surfaced in this search scope. Search results do not prove that no injuries or availability changes exist. Individual club medical status for all 26 teams remains incomplete; no official predicted XI or official starting XI was confirmed at this pre-match check. No probability adjustment was applied."
+  }
+}

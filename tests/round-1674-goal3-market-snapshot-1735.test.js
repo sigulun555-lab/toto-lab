@@ -113,3 +113,42 @@ test('22:03 official round-1674 totoGOAL3 market observation is reconciled but s
     }
   }
 });
+
+
+const market0214 = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'reports/round_1674_totoGOAL3_official_market_snapshot_20261125T0214JST.json'), 'utf8'));
+
+test('02:14 official round-1674 totoGOAL3 market observation is reconciled but stale and forecast-ineligible', () => {
+  assert.equal(market0214.schemaVersion, 1);
+  assert.equal(market0214.product, 'totoGOAL3');
+  assert.equal(market0214.marketType, 'totoGOAL3');
+  assert.equal(market0214.round, 1674);
+  assert.equal(market0214.fixtureCount, 3);
+  assert.equal(market0214.teamSideCount, 6);
+  assert.deepEqual(market0214.categoryOrder, ['0', '1', '2', '3+']);
+  assert.equal(market0214.pageDisplayAt, '2026-11-25T02:14:00+09:00');
+  assert.equal(market0214.retrievedAt, '2026-11-25T02:33:38.078+09:00');
+  assert.equal(market0214.displayAgeSeconds, 1178);
+  assert.equal(market0214.staleAfterSeconds, 300);
+  assert.equal(market0214.stale, true);
+  assert.equal(market0214.totalVotesPageSummary, 81987);
+  assert.equal(market0214.teamSides.length, 6);
+  assert.deepEqual(market0214.teamSides.map(x => x.teamSideNumber), [1, 2, 3, 4, 5, 6]);
+  assert.equal(market0214.reconciliation.allTeamSideVoteCountsEqualPageSummary, true);
+  assert.equal(market0214.reconciliation.allPercentageTotalsEqual100, true);
+  assert.equal(market0214.v2Eligibility.marketInputFresh, false);
+  assert.equal(market0214.v2Eligibility.predictionGenerationEligible, false);
+  assert.match(market0214.v2Eligibility.reason, /1,178 seconds old/);
+  assert.ok(market0214.predictionImpact.includes('No GOAL3 V1/V2 prediction row'));
+  for (const side of market0214.teamSides) {
+    assert.equal(side.voteCounts.length, 4);
+    assert.equal(side.percentages.length, 4);
+    assert.equal(side.sumVotes, side.voteCounts.reduce((a, b) => a + b, 0));
+    assert.equal(side.sumVotes, market0214.totalVotesPageSummary);
+    assert.ok(Math.abs(side.percentageTotal - 100) < 1e-8);
+    assert.ok(Math.abs(side.percentages.reduce((a, b) => a + b, 0) - 100) < 1e-8);
+    for (let i = 0; i < 4; i++) {
+      const key = market0214.categoryOrder[i];
+      assert.equal(side.marketVoteShare[key], Number((side.percentages[i] / 100).toFixed(4)));
+    }
+  }
+});

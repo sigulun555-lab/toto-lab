@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "round": 1673,
+  "product": "toto13",
+  "retrievedAt": "2026-11-18T12:36:40+09:00",
+  "scope": "Official J.League suspension notice and club injury notices checked for the 2026-11-21 card. These are availability records, not confirmed starting lineups.",
+  "sources": [
+    {
+      "sourceUrl": "https://www.jleague.jp/news/article/35370/",
+      "sourceTitle": "出場停止選手のお知らせ（2026/11/16）",
+      "sourcePublishedAt": "2026-11-16T19:00:00+09:00",
+      "retrievedAt": "2026-11-18T12:36:40+09:00"
+    },
+    {
+      "sourceUrl": "https://www.sanga-fc.jp/news/detail/22137",
+      "sourceTitle": "加藤蓮選手、エンリケ・トレヴィザン選手、ファンティーニ燦選手の負傷について",
+      "sourcePublishedDate": "2026-11-17",
+      "retrievedAt": "2026-11-18T12:36:40+09:00"
+    },
+    {
+      "sourceUrl": "https://www.sanfrecce.co.jp/news/team/13024",
+      "sourceTitle": "川村拓夢選手の負傷について",
+      "sourcePublishedDate": "2026-11-01",
+      "retrievedAt": "2026-11-18T12:36:40+09:00"
+    },
+    {
+      "sourceUrl": "https://www.sanfrecce.co.jp/news/team/13023",
+      "sourceTitle": "加藤陸次樹選手の負傷について",
+      "sourcePublishedDate": "2026-11-01",
+      "retrievedAt": "2026-11-18T12:36:40+09:00"
+    }
+  ],
+  "suspensions": [
+    {
+      "player": "ダニ ゴメス",
+      "team": "FC東京",
+      "toto13MatchNumber": 7,
+      "status": "confirmed_out",
+      "reason": "J1(a)",
+      "sourceIndex": 0
+    },
+    {
+      "player": "諏訪間 幸成",
+      "team": "横浜FM",
+      "toto13MatchNumber": 2,
+      "status": "confirmed_out",
+      "reason": "J1(a)",
+      "sourceIndex": 0
+    },
+    {
+      "player": "宮市 亮",
+      "team": "横浜FM",
+      "toto13MatchNumber": 2,
+      "status": "confirmed_out",
+      "reason": "他大会の出場停止処分による出場不可",
+      "sourceIndex": 0
+    },
+    {
+      "player": "パブロ サバック",
+      "team": "Ｃ大阪",
+      "toto13MatchNumber": 7,
+      "status": "confirmed_out",
+      "reason": "J1(f)",
+      "sourceIndex": 0
+    },
+    {
+      "player": "ルーカス フェルナンデス",
+      "team": "Ｃ大阪",
+      "toto13MatchNumber": 7,
+      "status": "confirmed_out",
+      "reason": "J1(f)",
+      "sourceIndex": 0
+    },
+    {
+      "player": "鈴木 喜丈",
+      "team": "岡山",
+      "toto13MatchNumber": 5,
+      "status": "confirmed_out",
+      "reason": "J1(f)",
+      "sourceIndex": 0
+    },
+    {
+      "player": "金子 大毅",
+      "team": "磐田",
+      "toto13MatchNumber": 13,
+      "status": "confirmed_out",
+      "reason": "J2(f)",
+      "sourceIndex": 0
+    },
+    {
+      "player": "林田 滉也",
+      "team": "大分",
+      "toto13MatchNumber": 11,
+      "status": "confirmed_out",
+      "reason": "J2(a)",
+      "sourceIndex": 0
+    }
+  ],
+  "injuries": [
+    {
+      "player": "加藤 蓮",
+      "team": "京都",
+      "toto13MatchNumber": 3,
+      "status": "confirmed_out",
+      "sourceIndex": 1,
+      "surgeryDate": "2026-11-11",
+      "diagnosis": "右膝前十字靭帯、内側側副靱帯、外側半月板損傷",
+      "recoveryEstimate": "6〜8か月"
+    },
+    {
+      "player": "エンリケ・トレヴィザン",
+      "team": "京都",
+      "toto13MatchNumber": 3,
+      "status": "confirmed_out",
+      "sourceIndex": 1,
+      "surgeryDate": "2026-11-05",
+      "diagnosis": "右脛骨疲労骨折",
+      "recoveryEstimate": "3か月"
+    },
+    {
+      "player": "ファンティーニ 燦",
+      "team": "京都",
+      "toto13MatchNumber": 3,
+      "status": "confirmed_out",
+      "sourceIndex": 1,
+      "surgeryDate": "2026-10-21",
+      "diagnosis": "右膝内側半月板損傷",
+      "recoveryEstimate": "3〜4か月"
+    },
+    {
+      "player": "川村 拓夢",
+      "team": "広島",
+      "toto13MatchNumber": 2,
+      "status": "unknown",
+      "sourceIndex": 2,
+      "diagnosis": "右膝内側側副靱帯損傷",
+      "injuredAt": "2026-10-24",
+      "returnEstimate": null,
+      "note": "公式発表に復帰予定日なし。11/21の出場可否は未確定。既存台帳のstatus=unknownを維持。"
+    },
+    {
+      "player": "加藤 陸次樹",
+      "team": "広島",
+      "toto13MatchNumber": 2,
+      "status": "unknown",
+      "sourceIndex": 3,
+      "diagnosis": "右膝内側側副靱帯損傷",
+      "injuredAt": "2026-10-24",
+      "returnEstimate": null,
+      "note": "公式発表に復帰予定日なし。11/21の出場可否は未確定。既存台帳のstatus=unknownを維持。"
+    }
+  ],
+  "lineupStatus": {
+    "officialStartingXI": "未発表・確認できず",
+    "expectedStartingXI": "公式クラブ情報としては確認できず",
+    "note": "Jリーグ公式match pagesは試合情報・ラインナップ欄を掲載するが、今回の取得範囲では先発メンバーがまだ掲載されていない。予想先発を公式確定として扱わない。"
+  },
+  "coverage": {
+    "suspensionPlayersConfirmed": 8,
+    "suspensionMatches": [
+      2,
+      5,
+      7,
+      11,
+      13
+    ],
+    "injuryPlayersListed": 5,
+    "clubsWithTheseSpecificOfficialRecords": [
+      "FC東京",
+      "横浜FM",
+      "Ｃ大阪",
+      "岡山",
+      "磐田",
+      "大分",
+      "京都",
+      "広島"
+    ],
+    "remainingClubsRequireClubOfficialAvailabilityReview": 18
+  },
+  "constraints": "この監査は上記4つの一次資料に限定。残り18クラブの負傷・出場可否を網羅確認したものではない。既存injury ledgerは変更せず、公式発表時刻・取得時刻を明示した監査レポートのみ追記。"
+}

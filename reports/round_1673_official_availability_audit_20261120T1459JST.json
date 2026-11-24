@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "round": 1673,
+  "product": "toto13",
+  "retrievedAt": "2026-11-20T14:59:18+09:00",
+  "scope": "2026-11-21 card: official J.League match previews for all 13 fixtures checked, official suspension notice reconciled, and current injury/availability notes recorded. This is not a confirmed starting-lineup report.",
+  "sources": [
+    {
+      "sourceUrl": "https://www.jleague.jp/news/article/35370/",
+      "sourceTitle": "出場停止選手のお知らせ（2026/11/16）",
+      "sourcePublishedAt": "2026-11-16T19:00:00+09:00",
+      "retrievedAt": "2026-11-20T14:59:18+09:00"
+    },
+    {
+      "sourceUrl": "https://www.jleague.jp/match/j1/2026/112103/",
+      "sourceTitle": "広島 vs 横浜FM 公式試合プレビュー",
+      "sourcePublishedAt": null,
+      "retrievedAt": "2026-11-20T14:59:18+09:00",
+      "note": "キム・ジュソンの回復状況、諏訪間幸成の出場停止、角田涼太朗の欠場濃厚を確認"
+    },
+    {
+      "sourceUrl": "https://www.jleague.jp/match/j1/2026/112106/",
+      "sourceTitle": "Ｇ大阪 vs 岡山 公式試合プレビュー",
+      "sourcePublishedAt": null,
+      "retrievedAt": "2026-11-20T14:59:18+09:00",
+      "note": "イッサム・ジェバリの別メニュー、イーライ・アダムスの負傷を確認"
+    },
+    {
+      "sourceUrl": "https://www.jleague.jp/match/j1/2026/112105/",
+      "sourceTitle": "Ｃ大阪 vs FC東京 公式試合プレビュー",
+      "sourcePublishedAt": null,
+      "retrievedAt": "2026-11-20T14:59:18+09:00",
+      "note": "パブロ・サバック、ルーカス・フェルナンデスの停止、横山夢樹の遠征後コンディション、本間至恩の復帰状況を確認"
+    },
+    {
+      "sourceUrl": "https://www.jleague.jp/match/j1/2026/112102/",
+      "sourceTitle": "町田 vs 長崎 公式試合プレビュー",
+      "sourcePublishedAt": null,
+      "retrievedAt": "2026-11-20T14:59:18+09:00",
+      "note": "代表活動から戻った町田の選手について確認"
+    },
+    {
+      "sourceUrl": "https://www.jleague.jp/match/j1/2026/112108/",
+      "sourceTitle": "京都 vs 浦和 公式試合プレビュー",
+      "sourcePublishedAt": null,
+      "retrievedAt": "2026-11-20T14:59:18+09:00"
+    },
+    {
+      "sourceUrl": "https://www.jleague.jp/match/j1/2026/112104/",
+      "sourceTitle": "川崎Ｆ vs 福岡 公式試合プレビュー",
+      "sourcePublishedAt": null,
+      "retrievedAt": "2026-11-20T14:59:18+09:00"
+    },
+    {
+      "sourceUrl": "https://www.jleague.jp/match/j1/2026/112101/",
+      "sourceTitle": "東京Ｖ vs 名古屋 公式試合プレビュー",
+      "sourcePublishedAt": null,
+      "retrievedAt": "2026-11-20T14:59:18+09:00"
+    },
+    {
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112110/",
+      "sourceTitle": "秋田 vs 山形 公式試合プレビュー",
+      "sourcePublishedAt": null,
+      "retrievedAt": "2026-11-20T14:59:18+09:00"
+    },
+    {
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112118/",
+      "sourceTitle": "宮崎 vs いわき 公式試合プレビュー",
+      "sourcePublishedAt": null,
+      "retrievedAt": "2026-11-20T14:59:18+09:00"
+    },
+    {
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112113/",
+      "sourceTitle": "甲府 vs 八戸 公式試合プレビュー",
+      "sourcePublishedAt": null,
+      "retrievedAt": "2026-11-20T14:59:18+09:00"
+    },
+    {
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112114/",
+      "sourceTitle": "富山 vs 大分 公式試合プレビュー",
+      "sourcePublishedAt": null,
+      "retrievedAt": "2026-11-20T14:59:18+09:00"
+    },
+    {
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112117/",
+      "sourceTitle": "鳥栖 vs 仙台 公式試合プレビュー",
+      "sourcePublishedAt": null,
+      "retrievedAt": "2026-11-20T14:59:18+09:00"
+    },
+    {
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112115/",
+      "sourceTitle": "磐田 vs 大宮 公式試合プレビュー",
+      "sourcePublishedAt": null,
+      "retrievedAt": "2026-11-20T14:59:18+09:00"
+    }
+  ],
+  "suspensions": [
+    {
+      "player": "ダニ ゴメス",
+      "team": "FC東京",
+      "toto13MatchNumber": 7,
+      "status": "confirmed_out",
+      "sourceIndex": 0
+    },
+    {
+      "player": "諏訪間 幸成",
+      "team": "横浜FM",
+      "toto13MatchNumber": 2,
+      "status": "confirmed_out",
+      "sourceIndex": 0
+    },
+    {
+      "player": "宮市 亮",
+      "team": "横浜FM",
+      "toto13MatchNumber": 2,
+      "status": "confirmed_out",
+      "sourceIndex": 0
+    },
+    {
+      "player": "パブロ サバック",
+      "team": "Ｃ大阪",
+      "toto13MatchNumber": 7,
+      "status": "confirmed_out",
+      "sourceIndex": 0
+    },
+    {
+      "player": "ルーカス フェルナンデス",
+      "team": "Ｃ大阪",
+      "toto13MatchNumber": 7,
+      "status": "confirmed_out",
+      "sourceIndex": 0
+    },
+    {
+      "player": "鈴木 喜丈",
+      "team": "岡山",
+      "toto13MatchNumber": 5,
+      "status": "confirmed_out",
+      "sourceIndex": 0
+    },
+    {
+      "player": "金子 大毅",
+      "team": "磐田",
+      "toto13MatchNumber": 13,
+      "status": "confirmed_out",
+      "sourceIndex": 0
+    },
+    {
+      "player": "林田 滉也",
+      "team": "大分",
+      "toto13MatchNumber": 11,
+      "status": "confirmed_out",
+      "sourceIndex": 0
+    }
+  ],
+  "injuries": [
+    {
+      "player": "イッサム ジェバリ",
+      "team": "Ｇ大阪",
+      "toto13MatchNumber": 5,
+      "status": "unknown",
+      "sourceIndex": 2,
+      "note": "C大阪戦で負傷交代、11/13公開練習は別メニュー。11/21出場可否は未確定。"
+    },
+    {
+      "player": "イーライ アダムス",
+      "team": "Ｇ大阪",
+      "toto13MatchNumber": 5,
+      "status": "unknown",
+      "sourceIndex": 2,
+      "note": "オーストラリア代表活動中の負傷が報じられた。11/21出場可否は未確定。"
+    }
+  ],
+  "availabilityNotes": [
+    {
+      "player": "角田 涼太朗",
+      "team": "横浜FM",
+      "toto13MatchNumber": 2,
+      "status": "likely_out_not_confirmed",
+      "sourceIndex": 1,
+      "note": "Jリーグ公式プレビューはルヴァン杯準々決勝第2戦でHT交代、11/21は欠場濃厚と記載。負傷の確定・復帰時期は未確認。"
+    },
+    {
+      "player": "キム・ジュソン",
+      "team": "広島",
+      "toto13MatchNumber": 2,
+      "status": "returning_not_start_confirmed",
+      "sourceIndex": 1,
+      "note": "本人談としてほぼ100%の状態と記載。先発確定ではない。"
+    },
+    {
+      "player": "本間 至恩",
+      "team": "FC東京",
+      "toto13MatchNumber": 7,
+      "status": "returned_substitute",
+      "sourceIndex": 3,
+      "note": "前々節に復帰し直近2試合は途中出場。11/21の先発は未確定。"
+    },
+    {
+      "player": "横山 夢樹",
+      "team": "Ｃ大阪",
+      "toto13MatchNumber": 7,
+      "status": "fitness_uncertain",
+      "sourceIndex": 3,
+      "note": "U-21日本代表遠征から戻ったばかりでコンディションに不安と記載。"
+    }
+  ],
+  "matchPreviewsChecked": [
+    {
+      "matchNumber": 1,
+      "home": "町田",
+      "away": "長崎",
+      "sourceUrl": "https://www.jleague.jp/match/j1/2026/112102/"
+    },
+    {
+      "matchNumber": 2,
+      "home": "広島",
+      "away": "横浜FM",
+      "sourceUrl": "https://www.jleague.jp/match/j1/2026/112103/"
+    },
+    {
+      "matchNumber": 3,
+      "home": "京都",
+      "away": "浦和",
+      "sourceUrl": "https://www.jleague.jp/match/j1/2026/112108/"
+    },
+    {
+      "matchNumber": 4,
+      "home": "川崎Ｆ",
+      "away": "福岡",
+      "sourceUrl": "https://www.jleague.jp/match/j1/2026/112104/"
+    },
+    {
+      "matchNumber": 5,
+      "home": "Ｇ大阪",
+      "away": "岡山",
+      "sourceUrl": "https://www.jleague.jp/match/j1/2026/112106/"
+    },
+    {
+      "matchNumber": 6,
+      "home": "東京Ｖ",
+      "away": "名古屋",
+      "sourceUrl": "https://www.jleague.jp/match/j1/2026/112101/"
+    },
+    {
+      "matchNumber": 7,
+      "home": "Ｃ大阪",
+      "away": "FC東京",
+      "sourceUrl": "https://www.jleague.jp/match/j1/2026/112105/"
+    },
+    {
+      "matchNumber": 8,
+      "home": "秋田",
+      "away": "山形",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112110/"
+    },
+    {
+      "matchNumber": 9,
+      "home": "宮崎",
+      "away": "いわき",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112118/"
+    },
+    {
+      "matchNumber": 10,
+      "home": "甲府",
+      "away": "八戸",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112113/"
+    },
+    {
+      "matchNumber": 11,
+      "home": "富山",
+      "away": "大分",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112114/"
+    },
+    {
+      "matchNumber": 12,
+      "home": "鳥栖",
+      "away": "仙台",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112117/"
+    },
+    {
+      "matchNumber": 13,
+      "home": "磐田",
+      "away": "大宮",
+      "sourceUrl": "https://www.jleague.jp/match/j2/2026/112115/"
+    }
+  ],
+  "lineupStatus": {
+    "officialStartingXI": {
+      "status": "not_published_as_of_retrieval",
+      "matchesChecked": 13,
+      "confirmedMatches": 0
+    },
+    "expectedStartingXI": {
+      "status": "not_verified_from_club_official_sources",
+      "matchesChecked": 0
+    },
+    "note": "取得時点でJリーグ公式ページのラインナップ欄に公式先発は掲載されていない。予想先発は未取得であり、公式確定と混同しない。"
+  },
+  "coverage": {
+    "matchPreviewsChecked": 13,
+    "suspensionsConfirmed": 8,
+    "injuryPlayersWithNewOfficialNotes": 2,
+    "clubsWithSpecificOfficialRecords": [
+      "FC東京",
+      "横浜FM",
+      "Ｃ大阪",
+      "岡山",
+      "磐田",
+      "大分",
+      "京都",
+      "広島",
+      "Ｇ大阪"
+    ],
+    "remainingClubsRequireClubOfficialAvailabilityReview": [
+      "町田",
+      "長崎",
+      "浦和",
+      "川崎Ｆ",
+      "福岡",
+      "東京Ｖ",
+      "名古屋",
+      "秋田",
+      "山形",
+      "宮崎",
+      "いわき",
+      "甲府",
+      "八戸",
+      "富山",
+      "鳥栖",
+      "仙台",
+      "大宮"
+    ],
+    "remainingClubCount": 17
+  },
+  "constraints": "Jリーグ公式match previewsは13/13確認したが、全26クラブの公式負傷者リストを網羅したものではない。公開日時がページに表示されないプレビューはsourcePublishedAt=nullとし、取得時刻を明記。確認できない選手の欠場を推定しない。公式先発は未発表。予測ログ・V1/V2予測行は変更していない。"
+}

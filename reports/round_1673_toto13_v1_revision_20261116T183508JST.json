@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1673,
+  "generatedAt": "2026-11-16T09:35:08.000Z",
+  "deadlineAt": "2026-11-21T04:50:00.000Z",
+  "model": {
+    "repository": "sigulun555-lab/gpt",
+    "commit": "395fa5442a670896df4113d69962123b06413533",
+    "path": "model.js",
+    "blobSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+    "function": "predict(history, fixture)",
+    "modelVersion": "GPT-shared-poisson-score-v1-2026-11-14"
+  },
+  "history": {
+    "repository": "sigulun555-lab/gpt",
+    "path": "data/history.json",
+    "blobSha": "e7b6a068e4fc459642b7c07e46f6fd211d256329",
+    "rows": 480,
+    "updatedAt": "2026-11-16T06:25:20.060Z",
+    "firstDate": "2026-08-07",
+    "lastDate": "2026-11-15",
+    "uniqueFetchedAt": 1,
+    "source": "J.League open-data community mirror",
+    "sourceUrl": "https://raw.githubusercontent.com/k-addtimes/jleague_open_data/main/current_schedule_file.csv",
+    "sourceRunId": 43816600093,
+    "sourceArtifactId": 14202691250
+  },
+  "aliases": {
+    "path": "data/team_aliases.json",
+    "blobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab"
+  },
+  "schedule": {
+    "repository": "sigulun555-lab/toto-lab",
+    "pr": 107,
+    "branch": "data/round-1673-schedule",
+    "headSha": "8c487dce1f6af9c25390055e91ad54f7adde8a29",
+    "path": "data/schedule/round_1673.json",
+    "blobSha": "43011d91c2cee4e74014a3105e62db3705bd8208",
+    "matches": 13
+  },
+  "revision": {
+    "priorRowsPreserved": 13,
+    "appendedRows": 13,
+    "totalRows": 26,
+    "revisionOfLinks": 13,
+    "priorHistoryRows": 468,
+    "newHistoryRows": 480,
+    "maxAbsOutcomeProbabilityDifference": 0.06692883999999999,
+    "perMatchMaxAbsDiff": [
+      {
+        "matchNumber": 1,
+        "maxAbsDiff": 0.0008080599999999993
+      },
+      {
+        "matchNumber": 2,
+        "maxAbsDiff": 0.0009194900000000228
+      },
+      {
+        "matchNumber": 3,
+        "maxAbsDiff": 0.0012018300000000148
+      },
+      {
+        "matchNumber": 4,
+        "maxAbsDiff": 0.0008868000000000764
+      },
+      {
+        "matchNumber": 5,
+        "maxAbsDiff": 0.0010172300000000356
+      },
+      {
+        "matchNumber": 6,
+        "maxAbsDiff": 0.0009602700000000408
+      },
+      {
+        "matchNumber": 7,
+        "maxAbsDiff": 0.00038740999999997694
+      },
+      {
+        "matchNumber": 8,
+        "maxAbsDiff": 0.041156600000000015
+      },
+      {
+        "matchNumber": 9,
+        "maxAbsDiff": 0.014272989999999985
+      },
+      {
+        "matchNumber": 10,
+        "maxAbsDiff": 0.05879819999999997
+      },
+      {
+        "matchNumber": 11,
+        "maxAbsDiff": 0.038425319999999985
+      },
+      {
+        "matchNumber": 12,
+        "maxAbsDiff": 0.061992019999999926
+      },
+      {
+        "matchNumber": 13,
+        "maxAbsDiff": 0.06692883999999999
+      }
+    ]
+  },
+  "parity": {
+    "miniA": {
+      "matches": 5,
+      "maxAbsDifference": 0
+    },
+    "miniB": {
+      "matches": 5,
+      "maxAbsDifference": 0
+    },
+    "combinedMatches": 10,
+    "maxAbsDifference": 0
+  },
+  "validation": {
+    "fixtures": 13,
+    "teamSideHistoryWindows": 26,
+    "eachWindowMatches": 12,
+    "allOutcomeProbabilitiesSumToOneWithin1eMinus7": true,
+    "allGoalCategoryVectorsSumToOneWithin1eMinus7": true,
+    "uniquePredictionIds": 26,
+    "allRevisionOfLinksResolve": true
+  },
+  "limitations": [
+    "History source is a community mirror rather than an official J.League feed.",
+    "No injury, suspension, availability, predicted-lineup or official-lineup adjustment was applied; the team-news audit remains partial.",
+    "Official market pages checked in this run were stale; no V2 revision was generated from stale market data.",
+    "This V1 is an experimental uncalibrated baseline, not a guarantee."
+  ]
+}

@@ -100,10 +100,12 @@
     "testPath": "tests/round-1674-toto13-v2.test.js",
     "testBlobSha": "75b7862fc63fb141af86db73bd1da18c9d3ef584",
     "steps": [
-      "npm test",
-      "npm run check:teams",
-      "node scripts/round_1674_toto13_v2_generator.js"
-    ]
+      "node scripts/round_1674_toto13_v2_generator.js",
+      "npm test (includes node --test tests/round-1674-toto13-v2.test.js)",
+      "npm run check:teams"
+    ],
+    "packageJsonPath": "package.json",
+    "packageJsonBlobSha": "e13eabd4bdb8c89bbc6167bbc10c25a23a56b9f5"
   },
   "limitations": [
     "Official vote shares are market choices, not calibrated true outcome probabilities.",

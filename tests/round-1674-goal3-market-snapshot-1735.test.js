@@ -33,7 +33,8 @@ test('round-1674 official totoGOAL3 market snapshot is fresh, reconciled, and do
     assert.equal(side.percentages.length, 4);
     assert.equal(side.sumVotes, side.voteCounts.reduce((a, b) => a + b, 0));
     assert.equal(side.sumVotes, market.totalVotesPageSummary);
-    assert.equal(side.percentageTotal, 100);
+    // Decimal percentages are stored as binary floats; compare with a small tolerance.
+    assert.ok(Math.abs(side.percentageTotal - 100) < 1e-8, `percentageTotal=${side.percentageTotal}`);
     assert.ok(Math.abs(side.percentages.reduce((a, b) => a + b, 0) - 100) < 1e-8);
     for (let i = 0; i < 4; i++) {
       const key = market.categoryOrder[i];

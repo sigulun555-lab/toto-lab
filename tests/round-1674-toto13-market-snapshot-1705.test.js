@@ -26,7 +26,7 @@ test('17:05 official round-1674 toto13 snapshot is stale and count-mismatched; e
   assert.equal(market.reconciliation.allPercentageTotalsEqual100, true);
   assert.equal(market.v2Eligibility.eligible, false);
   assert.match(market.v2Eligibility.reason, /difference -1,139/);
-  assert.match(market.predictionImpact, /No V1\\/V2 prediction row/);
+  assert.ok(market.predictionImpact.includes('No V1/V2 prediction row'));
   for (const m of market.matches) {
     assert.equal(m.sumVotes, m.voteCounts.reduce((a, b) => a + b, 0));
     assert.equal(m.sumVotes, 302807);

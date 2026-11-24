@@ -13,9 +13,10 @@
     "clubOfficialSiteQueriesAttempted": 26,
     "jleagueOfficialSuspensionNoticeReopened": true,
     "jleagueJ1J2PreviewsReopened": true,
-    "officialLineupPagesAttempted": 7,
+    "officialLineupPagesAttempted": 13,
     "officialStartingXIsRetrieved": 0,
-    "note": "検索結果に見当たらないことは負傷なし・出場可能を意味しない。先発予想は公式先発と区別し、一次ソースで確定できないものは未確認とする。"
+    "note": "26クラブの公式サイト検索、Jリーグ公式のJ1/J2プレビューを確認。J1 7試合・J2 6試合の公式ラインナップURLを試したが全件取得不可。検索結果に見当たらないことは負傷なし・出場可能を意味しない。先発予想は公式先発と区別し、一次ソースで確定できないものは未確認とする。",
+    "j2LineupPagesAttempted": 6
   },
   "newFindings": [
     {
@@ -144,8 +145,8 @@
   "officialStartingLineups": {
     "status": "not_retrieved",
     "j1LineupPagesAttempted": 7,
-    "j2LineupPagesAttempted": 0,
-    "note": "公式先発は未取得。予想先発も一次ソースで確定できていない。試合前の公式メンバー発表後に再確認する。"
+    "j2LineupPagesAttempted": 6,
+    "note": "J1 7試合・J2 6試合の公式ラインナップURLを試したが、全件アクセス不可。公式先発は未取得。予想先発も一次ソースで確定できていない。"
   },
   "retrieval": {
     "retrievedAt": "2026-11-25T08:13:50+09:00",
@@ -155,5 +156,51 @@
   "predictionImpact": {
     "revisionsGenerated": 0,
     "reason": "公式先発未取得。負傷・停止情報の一部は既存V1/V2生成後に判明したが、現行のtoto13モデルに検証済みの個別欠場補正手順がないため、確率を手動変更しない。"
-  }
+  },
+  "j2MatchPages": [
+    {
+      "matchNumber": 8,
+      "match": "札幌 vs 藤枝",
+      "url": "https://www.jleague.jp/match/j2/2026/112510/",
+      "retrievedAt": "2026-11-25T08:13:50+09:00"
+    },
+    {
+      "matchNumber": 9,
+      "match": "山形 vs 磐田",
+      "url": "https://www.jleague.jp/match/j2/2026/112511/",
+      "retrievedAt": "2026-11-25T08:13:50+09:00"
+    },
+    {
+      "matchNumber": 11,
+      "match": "いわき vs 富山",
+      "url": "https://www.jleague.jp/match/j2/2026/112512/",
+      "retrievedAt": "2026-11-25T08:13:50+09:00"
+    },
+    {
+      "matchNumber": 13,
+      "match": "大宮 vs 徳島",
+      "url": "https://www.jleague.jp/match/j2/2026/112514/",
+      "retrievedAt": "2026-11-25T08:13:50+09:00"
+    },
+    {
+      "matchNumber": 12,
+      "match": "横浜FC vs 仙台",
+      "url": "https://www.jleague.jp/match/j2/2026/112515/",
+      "retrievedAt": "2026-11-25T08:13:50+09:00"
+    },
+    {
+      "matchNumber": 10,
+      "match": "鳥栖 vs 大分",
+      "url": "https://www.jleague.jp/match/j2/2026/112517/",
+      "retrievedAt": "2026-11-25T08:13:50+09:00"
+    }
+  ],
+  "lineupPageAttempts": [
+    "https://www.jleague.jp/match/j2/2026/112510/lineup/",
+    "https://www.jleague.jp/match/j2/2026/112511/lineup/",
+    "https://www.jleague.jp/match/j2/2026/112512/lineup/",
+    "https://www.jleague.jp/match/j2/2026/112514/lineup/",
+    "https://www.jleague.jp/match/j2/2026/112515/lineup/",
+    "https://www.jleague.jp/match/j2/2026/112517/lineup/"
+  ]
 }

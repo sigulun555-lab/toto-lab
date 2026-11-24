@@ -29,7 +29,7 @@
   },
   "marketSnapshot": {
     "path": "reports/round_1674_toto13_official_market_snapshot_20261124T1326JST.json",
-    "blobSha": "be37cb7150abacdcf340da1f54dab1e688562275",
+    "blobSha": "156207006a3b89920c9b9b2e8e1bd4d42af0bb9c",
     "sourceUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=01&fromId=SSIN026&gameAssortment=1&holdCntId=1674",
     "pageDisplayAt": "2026-11-24T13:26:00+09:00",
     "retrievedAt": "2026-11-24T13:27:36+09:00",

@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1674,
+  "checkedAt": "2026-11-25T08:13:50+09:00",
+  "priorSnapshot": {
+    "path": "reports/round_1674_toto13_team_news_recheck_20261125T0233JST.json",
+    "blobSha": "b73cdbf3c5e10c5a9d6a1d5f4a9a2b1a7d2c1f0b"
+  },
+  "coverage": {
+    "fixtures": 13,
+    "teams": 26,
+    "clubOfficialSiteQueriesAttempted": 26,
+    "jleagueOfficialSuspensionNoticeReopened": true,
+    "jleagueJ1J2PreviewsReopened": true,
+    "officialLineupPagesAttempted": 7,
+    "officialStartingXIsRetrieved": 0,
+    "note": "検索結果に見当たらないことは負傷なし・出場可能を意味しない。先発予想は公式先発と区別し、一次ソースで確定できないものは未確認とする。"
+  },
+  "newFindings": [
+    {
+      "team": "藤枝MYFC",
+      "player": "松木駿之介",
+      "status": "injury_notice",
+      "injuryDate": "2026-11-14",
+      "publishedAt": "2026-11-17",
+      "diagnosis": "右肘関節脱臼",
+      "estimatedReturn": "約8週",
+      "matchImpact": "11/25の出場は困難と考えられるが、クラブは当該試合の欠場を明示していないためavailabilityは未確定",
+      "sourceUrl": "https://myfc.co.jp/news/20261117/1193914/",
+      "retrievedAt": "2026-11-25T08:13:50+09:00"
+    },
+    {
+      "team": "大分トリニータ",
+      "player": "林田滉也",
+      "status": "reported_suspension_in_pre_match_preview",
+      "publishedAt": "2026-11-24",
+      "note": "大分公式メディアの鳥栖戦プレビュー検索スニペットに、林田滉也の出場停止と負傷者が出ているチーム事情への言及あり。記事本文は取得できず、Jリーグ公式11/23出場停止一覧でも当該選手を確認できていないため、停止理由・対象試合は未確定として扱う。",
+      "sourceUrl": "https://toriten.oita-trinita.co.jp/toriten/preview/202611144468/",
+      "retrievalStatus": "search_snippet_only",
+      "retrievedAt": "2026-11-25T08:13:50+09:00"
+    }
+  ],
+  "confirmedSuspensions": [
+    {
+      "team": "RB大宮アルディージャ",
+      "player": "関口凱心",
+      "matchNumber": 13,
+      "reason": "累積警告",
+      "sourceUrl": "https://www.jleague.jp/news/article/35431/?navicode=j1",
+      "publishedAt": "2026-11-23T18:00:00+09:00"
+    },
+    {
+      "team": "横浜FC",
+      "player": "ジョアン パウロ",
+      "matchNumber": 12,
+      "reason": "累積警告",
+      "sourceUrl": "https://www.jleague.jp/news/article/35431/?navicode=j1",
+      "publishedAt": "2026-11-23T18:00:00+09:00"
+    },
+    {
+      "team": "ジュビロ磐田",
+      "player": "ユーリ ララ",
+      "matchNumber": 9,
+      "reason": "累積警告",
+      "sourceUrl": "https://www.jleague.jp/news/article/35431/?navicode=j1",
+      "publishedAt": "2026-11-23T18:00:00+09:00"
+    }
+  ],
+  "previouslyRecordedInjuriesRechecked": [
+    {
+      "team": "千葉",
+      "player": "マテウス インディオ",
+      "sourceUrl": "https://www.jleague.jp/news/article/35325/",
+      "publishedAt": "2026-11-09"
+    },
+    {
+      "team": "岡山",
+      "player": "木村太哉",
+      "sourceUrl": "https://www.fagiano-okayama.com/news/202611131001/",
+      "publishedAt": "2026-11-13"
+    },
+    {
+      "team": "長崎",
+      "player": "進藤亮佑",
+      "sourceUrl": "https://www.jleague.jp/news/article/35410/",
+      "publishedAt": "2026-11-21T17:40:00+09:00"
+    },
+    {
+      "team": "水戸",
+      "player": "松原修平",
+      "sourceUrl": "https://www.jleague.jp/news/article/35409/",
+      "publishedAt": "2026-11-21T17:30:00+09:00"
+    },
+    {
+      "team": "横浜F・マリノス",
+      "player": "山根陸",
+      "sourceUrl": "https://www.f-marinos.com/news/team/10930",
+      "publishedAt": "2026-11-19"
+    },
+    {
+      "team": "横浜F・マリノス",
+      "player": "ジョルディ クルークス",
+      "sourceUrl": "https://www.f-marinos.com/news/team/10877",
+      "publishedAt": "2026-11-05"
+    },
+    {
+      "team": "札幌",
+      "player": "川原颯斗",
+      "sourceUrl": "https://www.consadole-sapporo.jp/news/2026/11/17363/",
+      "publishedAt": "2026-11-21"
+    },
+    {
+      "team": "札幌",
+      "player": "福森晃斗",
+      "sourceUrl": "https://www.consadole-sapporo.jp/news/2026/11/15643/",
+      "publishedAt": "2026-11-03"
+    },
+    {
+      "team": "大分",
+      "player": "吉川敬進",
+      "sourceUrl": "https://www.oita-trinita.co.jp/news/news-38562/",
+      "publishedAt": "2026-11-22"
+    },
+    {
+      "team": "いわき",
+      "player": "高橋勇利也",
+      "sourceUrl": "https://www.jleague.jp/news/article/35420/",
+      "publishedAt": "2026-11-22"
+    }
+  ],
+  "leaguePreviews": [
+    {
+      "name": "Jリーグ公式 J1第16節プレビュー",
+      "sourceUrl": "https://www.jleague.jp/news/article/35426/",
+      "publishedAt": "2026-11-23T17:00:00+09:00"
+    },
+    {
+      "name": "Jリーグ公式 J2第19節プレビュー",
+      "sourceUrl": "https://www.jleague.jp/news/article/35427/?navicode=j2",
+      "publishedAt": "2026-11-23T18:00:00+09:00"
+    }
+  ],
+  "officialStartingLineups": {
+    "status": "not_retrieved",
+    "j1LineupPagesAttempted": 7,
+    "j2LineupPagesAttempted": 0,
+    "note": "公式先発は未取得。予想先発も一次ソースで確定できていない。試合前の公式メンバー発表後に再確認する。"
+  },
+  "retrieval": {
+    "retrievedAt": "2026-11-25T08:13:50+09:00",
+    "searchRecencyDays": 7,
+    "noNewOfficialNoticeForOtherTeams": "26クラブの公式サイトを対象に検索したが、上記以外で11/25に直接適用できる新しい負傷・出場停止通知は今回の検索範囲で確認できず。これは出場可能の確認ではない。"
+  },
+  "predictionImpact": {
+    "revisionsGenerated": 0,
+    "reason": "公式先発未取得。負傷・停止情報の一部は既存V1/V2生成後に判明したが、現行のtoto13モデルに検証済みの個別欠場補正手順がないため、確率を手動変更しない。"
+  }
+}

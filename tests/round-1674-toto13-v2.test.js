@@ -10,6 +10,9 @@ const readJsonl = p => fs.readFileSync(path.join(root, p), 'utf8').trim().split(
 const v1 = readJsonl(CONFIG.v1Path);
 const v2 = readJsonl(CONFIG.outputPath);
 const market = JSON.parse(fs.readFileSync(path.join(root, CONFIG.marketPath), 'utf8'));
+const teamNewsPath = 'reports/round_1674_toto13_team_news_recheck_20261124T1327JST.json';
+const teamNews = JSON.parse(fs.readFileSync(path.join(root, teamNewsPath), 'utf8'));
+
 test('round 1674 toto13 V2 appends 13 rows against the latest V1 revisions without replacing V1 history', () => {
   assert.equal(v1.length, 26);
   assert.equal(new Set(v1.map(r => r.predictionId)).size, 26);
@@ -61,5 +64,15 @@ test('saved V2 rows are exactly reproducible from latest V1 rows and the officia
     assert.ok(Math.abs(sum - 1) < 2e-8);
     assert.equal(row.blendWeights.poissonModel, 0.3);
     assert.equal(row.blendWeights.totoVoteShare, 0.7);
+  }
+});
+
+test('team-news recheck timestamp and source provenance are internally consistent', () => {
+  assert.equal(teamNews.checkedAt, '2026-11-24T13:27:36+09:00');
+  assert.equal(teamNews.scopeLimitations.latestRecheckAt, teamNews.checkedAt);
+  const ids = teamNews.sources.map(source => source.id);
+  assert.equal(new Set(ids).size, ids.length);
+  for (const source of teamNews.sources) {
+    assert.ok(Date.parse(source.retrievedAt) <= Date.parse(teamNews.checkedAt));
   }
 });

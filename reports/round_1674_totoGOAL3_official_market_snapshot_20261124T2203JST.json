@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "product": "totoGOAL3",
+  "marketType": "totoGOAL3",
+  "round": 1674,
+  "fixtureCount": 3,
+  "teamSideCount": 6,
+  "categoryOrder": [
+    "0",
+    "1",
+    "2",
+    "3+"
+  ],
+  "source": "スポーツくじ公式・第1674回totoGOAL3投票状況",
+  "sourceUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=02&fromId=SSIN026&gameAssortment=1&holdCntId=1674",
+  "pageDisplayAt": "2026-11-24T22:03:00+09:00",
+  "retrievedAt": "2026-11-24T22:11:52+09:00",
+  "displayAgeSeconds": 532,
+  "staleAfterSeconds": 300,
+  "refreshNotice": "5分毎",
+  "stale": true,
+  "totalVotesPageSummary": 73951,
+  "teamSides": [
+    {
+      "teamSideNumber": 1,
+      "fixtureNumber": 1,
+      "team": "千葉",
+      "venue": "フクアリ",
+      "voteCounts": [
+        15789,
+        28247,
+        20426,
+        9489
+      ],
+      "percentages": [
+        21.35,
+        38.2,
+        27.62,
+        12.83
+      ],
+      "percentageTotal": 100,
+      "sumVotes": 73951,
+      "marketVoteShare": {
+        "0": 0.2135,
+        "1": 0.382,
+        "2": 0.2762,
+        "3+": 0.1283
+      }
+    },
+    {
+      "teamSideNumber": 2,
+      "fixtureNumber": 1,
+      "team": "名古屋",
+      "venue": "フクアリ",
+      "voteCounts": [
+        21996,
+        26015,
+        17008,
+        8932
+      ],
+      "percentages": [
+        29.74,
+        35.18,
+        23,
+        12.08
+      ],
+      "percentageTotal": 100,
+      "sumVotes": 73951,
+      "marketVoteShare": {
+        "0": 0.2974,
+        "1": 0.3518,
+        "2": 0.23,
+        "3+": 0.1208
+      }
+    },
+    {
+      "teamSideNumber": 3,
+      "fixtureNumber": 2,
+      "team": "岡山",
+      "venue": "ＪＦＥス",
+      "voteCounts": [
+        14550,
+        28643,
+        21584,
+        9174
+      ],
+      "percentages": [
+        19.67,
+        38.73,
+        29.19,
+        12.41
+      ],
+      "percentageTotal": 100,
+      "sumVotes": 73951,
+      "marketVoteShare": {
+        "0": 0.1967,
+        "1": 0.3873,
+        "2": 0.2919,
+        "3+": 0.1241
+      }
+    },
+    {
+      "teamSideNumber": 4,
+      "fixtureNumber": 2,
+      "team": "清水",
+      "venue": "ＪＦＥス",
+      "voteCounts": [
+        27070,
+        27337,
+        12536,
+        7008
+      ],
+      "percentages": [
+        36.6,
+        36.97,
+        16.95,
+        9.48
+      ],
+      "percentageTotal": 100,
+      "sumVotes": 73951,
+      "marketVoteShare": {
+        "0": 0.366,
+        "1": 0.3697,
+        "2": 0.1695,
+        "3+": 0.0948
+      }
+    },
+    {
+      "teamSideNumber": 5,
+      "fixtureNumber": 3,
+      "team": "長崎",
+      "venue": "ピースタ",
+      "voteCounts": [
+        22276,
+        28653,
+        15021,
+        8001
+      ],
+      "percentages": [
+        30.12,
+        38.75,
+        20.31,
+        10.82
+      ],
+      "percentageTotal": 100,
+      "sumVotes": 73951,
+      "marketVoteShare": {
+        "0": 0.3012,
+        "1": 0.3875,
+        "2": 0.2031,
+        "3+": 0.1082
+      }
+    },
+    {
+      "teamSideNumber": 6,
+      "fixtureNumber": 3,
+      "team": "川崎Ｆ",
+      "venue": "ピースタ",
+      "voteCounts": [
+        10199,
+        19912,
+        25410,
+        18430
+      ],
+      "percentages": [
+        13.79,
+        26.93,
+        34.36,
+        24.92
+      ],
+      "percentageTotal": 100,
+      "sumVotes": 73951,
+      "marketVoteShare": {
+        "0": 0.1379,
+        "1": 0.2693,
+        "2": 0.3436,
+        "3+": 0.2492
+      }
+    }
+  ],
+  "reconciliation": {
+    "teamSideCount": 6,
+    "allTeamSideVoteCountsEqualPageSummary": true,
+    "allPercentageTotalsEqual100": true
+  },
+  "v2Eligibility": {
+    "marketInputFresh": false,
+    "predictionGenerationEligible": false,
+    "reason": "The official page was 532 seconds old at retrieval, exceeding the 300-second freshness limit. Archive-only; no GOAL3 V2 forecast was generated. This run also had no new Claude completion trigger and no approved executable GOAL3 V2 generator/output schema."
+  },
+  "predictionImpact": "Official stale observation only. No GOAL3 forecast, V1/V2 prediction row, research shadow, market weight, production model, existing log, or existing shadow artifact was created or modified."
+}

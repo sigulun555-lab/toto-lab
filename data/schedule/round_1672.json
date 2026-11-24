@@ -1,0 +1,150 @@
+{
+  "round": 1672,
+  "holdDates": [
+    "2026-11-14",
+    "2026-11-15"
+  ],
+  "matches": [
+    {
+      "matchNumber": 1,
+      "homeTeam": "FC町田ゼルビア",
+      "awayTeam": "ヴィッセル神戸"
+    },
+    {
+      "matchNumber": 2,
+      "homeTeam": "セレッソ大阪",
+      "awayTeam": "浦和レッズ"
+    },
+    {
+      "matchNumber": 3,
+      "homeTeam": "鹿島アントラーズ",
+      "awayTeam": "横浜Ｆ・マリノス"
+    },
+    {
+      "matchNumber": 4,
+      "homeTeam": "柏レイソル",
+      "awayTeam": "川崎フロンターレ"
+    },
+    {
+      "matchNumber": 5,
+      "homeTeam": "アルビレックス新潟",
+      "awayTeam": "テゲバジャーロ宮崎"
+    },
+    {
+      "matchNumber": 6,
+      "homeTeam": "大分トリニータ",
+      "awayTeam": "栃木シティ"
+    },
+    {
+      "matchNumber": 7,
+      "homeTeam": "北海道コンサドーレ札幌",
+      "awayTeam": "サガン鳥栖"
+    },
+    {
+      "matchNumber": 8,
+      "homeTeam": "ベガルタ仙台",
+      "awayTeam": "ブラウブリッツ秋田"
+    },
+    {
+      "matchNumber": 9,
+      "homeTeam": "FC今治",
+      "awayTeam": "ジュビロ磐田"
+    },
+    {
+      "matchNumber": 10,
+      "homeTeam": "カターレ富山",
+      "awayTeam": "徳島ヴォルティス"
+    },
+    {
+      "matchNumber": 11,
+      "homeTeam": "ヴァンラーレ八戸",
+      "awayTeam": "いわきFC"
+    },
+    {
+      "matchNumber": 12,
+      "homeTeam": "藤枝MYFC",
+      "awayTeam": "ヴァンフォーレ甲府"
+    },
+    {
+      "matchNumber": 13,
+      "homeTeam": "RB大宮アルディージャ",
+      "awayTeam": "モンテディオ山形"
+    }
+  ],
+  "miniTotoA": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "miniTotoB": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "notes": "Matches 1-4 (町田vs神戸, Ｃ大阪vs浦和, 鹿島vs横浜FM, 柏vs川崎Ｆ) are the Yamazaki Biscuit Levain Cup Prime Round quarterfinal 2nd leg (home/away reversed from the 11/11 1st leg), not regular J1 league matches. Product numbering clarification: the miniTotoA/miniTotoB/totoGoal3Matches arrays are toto13 match numbers; mini A and mini B product numbers each restart at 1-5, and totoGOAL3 product numbers restart at 1-3. Explicit crosswalk is in productNumbering.",
+  "sources": [
+    "https://store.toto-dream.com/dcs/subos/screen/ps01/spsl000/PGSPSL00001MoveTotoLoto.form",
+    "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form",
+    "https://www.jpnsport.go.jp/sinko/Portals/0/sinko/toto/pdf/shiteijiai_1672.pdf",
+    "http://ukiukitotoyosou.jp/blog-entry-1856.html",
+    "https://note.com/totoken_note/n/nebdefef2ddf6"
+  ],
+  "retrievedAt": "2026-11-13T16:30:00Z",
+  "totoGoal3Matches": [
+    2,
+    4,
+    5
+  ],
+  "productNumbering": {
+    "convention": "miniTotoA, miniTotoB and totoGoal3Matches arrays above are expressed in regular toto13 match-number space. Product-specific numbering restarts at 1 within each mini group and within totoGOAL3.",
+    "miniTotoA": {
+      "productMatchNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "toto13MatchNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    "miniTotoB": {
+      "productMatchNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "toto13MatchNumbers": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "totoGOAL3": {
+      "productMatchNumbers": [
+        1,
+        2,
+        3
+      ],
+      "toto13MatchNumbers": [
+        2,
+        4,
+        5
+      ]
+    }
+  },
+  "revalidatedAt": "2026-11-14T06:47:12+09:00"
+}

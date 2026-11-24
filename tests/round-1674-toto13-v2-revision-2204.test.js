@@ -5,7 +5,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { CONFIG, buildRows } = require('../scripts/round_1674_toto13_v2_revision_20261124T2204JST');
 const root = path.join(__dirname, '..');
-const readJsonl = p => fs.readFileSync(path.join(root, p), 'utf8').trim().split(/\\r?\\n/).filter(Boolean).map(JSON.parse);
+const readJsonl = p => fs.readFileSync(path.join(root, p), 'utf8').trim().split(/\r?\n/).filter(Boolean).map(JSON.parse);
 const v1 = readJsonl(CONFIG.v1Path);
 const priorV2 = readJsonl(CONFIG.previousV2Path);
 const revision = readJsonl(CONFIG.outputPath);
@@ -54,9 +54,10 @@ test('official 22:04 toto13 snapshot is fresh and all 13 vote rows reconcile', (
 });
 
 test('market refresh uses the exact pinned 30/70 probability-level blend helper', () => {
+  const { blendOutcomeProbabilities } = require('../scripts/round_1674_toto13_v2_blend');
   for (const row of revision) {
     assert.equal(row.blendWeights.poissonModel, 0.3);
     assert.equal(row.blendWeights.totoVoteShare, 0.7);
-    assert.deepEqual(row.outcomeProbabilities, require('../scripts/round_1674_toto13_v2_blend').blendOutcomeProbabilities(row.baseModelOutcomeProbabilities, row.marketVoteShare));
+    assert.deepEqual(row.outcomeProbabilities, blendOutcomeProbabilities(row.baseModelOutcomeProbabilities, row.marketVoteShare));
   }
 });

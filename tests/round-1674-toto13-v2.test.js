@@ -70,6 +70,9 @@ test('saved V2 rows are exactly reproducible from latest V1 rows and the officia
 test('team-news recheck timestamp and source provenance are internally consistent', () => {
   assert.equal(teamNews.checkedAt, '2026-11-24T13:27:36+09:00');
   assert.equal(teamNews.scopeLimitations.latestRecheckAt, teamNews.checkedAt);
+  const manifest = JSON.parse(fs.readFileSync(path.join(root, 'reports/round_1674_toto13_v2_manifest_20261124T1327JST.json'), 'utf8'));
+  assert.equal(manifest.teamNews.recheckPath, teamNewsPath);
+  assert.equal(manifest.teamNews.checkedAt, teamNews.checkedAt);
   const ids = teamNews.sources.map(source => source.id);
   assert.equal(new Set(ids).size, ids.length);
   for (const source of teamNews.sources) {

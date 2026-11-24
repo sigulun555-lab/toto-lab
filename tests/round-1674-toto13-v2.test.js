@@ -79,3 +79,38 @@ test('team-news recheck timestamp and source provenance are internally consisten
     assert.ok(Date.parse(source.retrievedAt) <= Date.parse(teamNews.checkedAt));
   }
 });
+
+
+const teamNewsRecheck0233 = JSON.parse(fs.readFileSync(path.join(root, 'reports/round_1674_toto13_team_news_recheck_20261125T0233JST.json'), 'utf8'));
+
+test('02:33 JST team-news delta preserves prior notices and does not claim full medical or lineup verification', () => {
+  assert.equal(teamNewsRecheck0233.product, 'toto13');
+  assert.equal(teamNewsRecheck0233.round, 1674);
+  assert.equal(teamNewsRecheck0233.matchCount, 13);
+  assert.equal(teamNewsRecheck0233.teamCount, 26);
+  assert.equal(teamNewsRecheck0233.checkedAt, '2026-11-25T02:33:38.078+09:00');
+  assert.equal(teamNewsRecheck0233.previousSnapshot.sha256, '91e284f2332696576878fda5ca1c1a83b803fd87');
+  assert.equal(teamNewsRecheck0233.teamChecks.length, 26);
+  assert.equal(teamNewsRecheck0233.recheck.teamSpecificSearchQueryCount, 26);
+  assert.equal(teamNewsRecheck0233.recheck.teamSpecificSearchTeams.length, 26);
+  assert.equal(new Set(teamNewsRecheck0233.recheck.teamSpecificSearchTeams).size, 26);
+  assert.equal(teamNewsRecheck0233.recheck.newRelevantOfficialMedicalNoticeIdentifiedInReturnedSearchResults, false);
+  assert.match(teamNewsRecheck0233.recheck.searchCoverage, /not an exhaustive crawl/);
+  assert.equal(teamNewsRecheck0233.recheck.officialSuspensionsRelevantToThisCard, 3);
+  assert.equal(teamNewsRecheck0233.lineups.officialStartingLineups, 'not_published_at_checkedAt');
+  assert.equal(teamNewsRecheck0233.lineups.predictedStartingLineups, 'not_confirmed_for_all_13_matches');
+  assert.equal(teamNewsRecheck0233.recheck.modelInputChanged, false);
+  assert.equal(teamNewsRecheck0233.recheck.revisionRequired, false);
+  assert.equal(teamNewsRecheck0233.scopeLimitations.all26MedicalStatusFullyVerified, false);
+  assert.equal(teamNewsRecheck0233.officialCard.regularTotoMatches, 13);
+  assert.deepEqual(teamNewsRecheck0233.officialCard.miniTotoA.matches, [1, 2, 3, 4, 5]);
+  assert.deepEqual(teamNewsRecheck0233.officialCard.miniTotoB.matches, [6, 7, 8, 9, 10]);
+  assert.deepEqual(teamNewsRecheck0233.officialCard.totoGOAL3.matches, [1, 2, 3]);
+  assert.equal(teamNewsRecheck0233.officialCard.totoGOAL3.teamSides, 6);
+  assert.deepEqual(teamNewsRecheck0233.officialCard.totoGOAL3.categories, ['0', '1', '2', '3+']);
+  const sourceIds = teamNewsRecheck0233.sources.map(s => s.id);
+  assert.equal(new Set(sourceIds).size, sourceIds.length);
+  for (const id of ['jleague_suspensions_20261123_recheck', 'jleague_j1_preview_20261123_recheck', 'jleague_j2_preview_20261123_recheck', 'toto_official_round_1674_card_20261125_0233']) {
+    assert.ok(sourceIds.includes(id));
+  }
+});

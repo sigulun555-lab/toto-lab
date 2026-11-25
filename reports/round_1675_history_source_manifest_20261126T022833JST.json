@@ -10,11 +10,11 @@
   "retrievedAtJst": "2026-11-26T02:28:54+09:00",
   "sourceType": "community mirror; not official J.League feed",
   "csvRows": 1140,
-  "completedMatches": 536,
+  "completedMatches": 537,
   "latestCompletedDate": "2026/11/25",
   "completedRowsOn2026_11_25": 27,
   "previousPinnedHistoryRows": 512,
-  "newlyAvailableCompletedMatchesComparedWithPinnedHistory": 24,
+  "newlyAvailableCompletedMatchesComparedWithPinnedHistory": 25,
   "officialRound1675FixtureCount": 13,
   "note": "This snapshot is frozen for reproducibility. The source CSV contains the 2026-11-25 completed matches that were absent from the GPT main history snapshot fetched at 2026-11-25T08:29:27.168Z. It is a community mirror, not an official J.League source."
 }

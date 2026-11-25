@@ -156,14 +156,16 @@
   ],
   "teamNewsAudit": {
     "path": "reports/round_1675_toto13_team_news_audit_20261126T0155JST.json",
-    "blobSha": "a4dd76ddc554fddc3b460047c8188afc590af2ab",
+    "blobSha": "f7a95c5646e93b3119a18007b57e66d325020f46",
     "checkedAt": "2026-11-26T01:55:28+09:00",
     "teamsChecked": 26,
     "officialSuspensionsConfirmed": 3,
     "officialInjuryNotices": 1,
     "coverageComplete": false,
     "officialStartingLineupsPublished": false,
-    "appliedToV1": false
+    "appliedToV1": false,
+    "officialHistoricalNagasakiInjuryPagesRetrieved": 0,
+    "officialSourceFetchFailures": 3
   },
   "marketSnapshot": {
     "used": false,

@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1674,
+  "checkedAt": "2026-11-25T12:11:02+09:00",
+  "previousReport": {
+    "path": "reports/round_1674_toto13_team_news_delta_20261125T0813JST.json",
+    "blobSha": "022148ca6a1ceeec5f590138a29f321930bc188d"
+  },
+  "coverage": {
+    "fixtures": 13,
+    "teams": 26,
+    "clubSpecificSearchQueriesAttempted": 26,
+    "searchWindowDays": 7,
+    "returnedNewRelevantOfficialMedicalNotices": 0,
+    "officialJLeagueSuspensionNoticeReopened": true,
+    "jleagueJ1J2PreviewsReopened": true,
+    "officialLineupPagesAttempted": 13,
+    "officialStartingXIsRetrieved": 0,
+    "officialLineupPagesAccessible": 0,
+    "note": "26クラブ別の公式ニュース検索を試行。検索結果から新しい公式医療情報は得られなかったが、これは負傷者なし・出場可能の証明ではなく、検索結果も網羅的クロールではない。J1 7試合/J2 6試合の公式ラインナップURLを再試行したが13件すべて取得不可。"
+  },
+  "confirmedSuspensions": [
+    {
+      "player": "関口 凱心",
+      "team": "ＲＢ大宮アルディージャ",
+      "status": "confirmed_suspension",
+      "reason": "警告累積による1試合停止",
+      "targetFixture": "大宮対徳島",
+      "publishedAt": "2026-11-23T18:00:00+09:00",
+      "retrievedAt": "2026-11-25T12:11:02+09:00",
+      "sourceUrl": "https://www.jleague.jp/news/article/35431/?navicode=j1"
+    },
+    {
+      "player": "ジョアン パウロ",
+      "team": "横浜ＦＣ",
+      "status": "confirmed_suspension",
+      "reason": "警告累積による1試合停止",
+      "targetFixture": "横浜FC対仙台",
+      "publishedAt": "2026-11-23T18:00:00+09:00",
+      "retrievedAt": "2026-11-25T12:11:02+09:00",
+      "sourceUrl": "https://www.jleague.jp/news/article/35431/?navicode=j1"
+    },
+    {
+      "player": "ユーリ ララ",
+      "team": "ジュビロ磐田",
+      "status": "confirmed_suspension",
+      "reason": "警告累積による1試合停止",
+      "targetFixture": "山形対磐田",
+      "publishedAt": "2026-11-23T18:00:00+09:00",
+      "retrievedAt": "2026-11-25T12:11:02+09:00",
+      "sourceUrl": "https://www.jleague.jp/news/article/35431/?navicode=j1"
+    }
+  ],
+  "outOfCardSuspensions": [
+    {
+      "player": "荒木 翔",
+      "team": "ヴァンフォーレ甲府",
+      "status": "confirmed_suspension_but_not_in_this_toto13_card",
+      "reason": "警告累積による1試合停止",
+      "targetFixture": "湘南対甲府（対象カード外）",
+      "publishedAt": "2026-11-23T18:00:00+09:00",
+      "retrievedAt": "2026-11-25T12:11:02+09:00",
+      "sourceUrl": "https://www.jleague.jp/news/article/35431/?navicode=j1"
+    }
+  ],
+  "carriedForwardInjuries": [
+    {
+      "team": "藤枝ＭＹＦＣ",
+      "player": "松木駿之介",
+      "status": "injury_notice_carried_forward",
+      "injuryDate": "2026-11-14",
+      "publishedAt": "2026-11-17",
+      "diagnosis": "右肘関節脱臼",
+      "estimatedReturn": "約8週",
+      "matchAvailability": "クラブは11/25の欠場を明示していないため未確定。出場困難の可能性はあるが欠場確定とは扱わない。",
+      "sourceUrl": "https://myfc.co.jp/news/20261117/1193914/",
+      "lastRetrievedAt": "2026-11-25T08:13:50+09:00"
+    },
+    {
+      "team": "大分トリニータ",
+      "player": "林田滉也",
+      "status": "unverified_suspension_snippet_carried_forward",
+      "note": "大分公式メディアのプレビュー検索スニペットに出場停止との記述があったが本文未取得、Jリーグ公式停止一覧でも確認できていない。停止理由・対象試合は未確定。",
+      "sourceUrl": "https://toriten.oit"
+    }
+  ],
+  "leaguePreviews": [
+    {
+      "competition": "J1",
+      "publishedAt": "2026-11-23T17:00:00+09:00",
+      "retrievedAt": "2026-11-25T12:11:02+09:00",
+      "sourceUrl": "https://www.jleague.jp/news/article/35426/",
+      "scope": "第16節7試合の公式プレビュー。直近フォーム・注目選手の言及であり、公式先発表ではない。"
+    },
+    {
+      "competition": "J2",
+      "publishedAt": "2026-11-23T18:00:00+09:00",
+      "retrievedAt": "2026-11-25T12:11:02+09:00",
+      "sourceUrl": "https://www.jleague.jp/news/article/35427/?navicode=j2",
+      "scope": "第19節10試合の公式プレビュー。カード対象6試合の注目選手・直近フォームを含むが、公式先発表ではない。"
+    }
+  ],
+  "lineups": {
+    "officialStartingXIs": "not_retrieved",
+    "predictedStartingLineups": "not_confirmed_for_all_13_matches",
+    "checkedAt": "2026-11-25T12:11:02+09:00",
+    "attempted": 13,
+    "accessible": 0,
+    "note": "公式先発未確認。プレビューの注目選手を先発予想・確定XIへ読み替えない。"
+  },
+  "predictionImpact": {
+    "modelInputChanged": false,
+    "probabilitiesChanged": false,
+    "revisionRequired": false,
+    "reason": "新しい確定出場情報・公式先発を取得できていない。確認済み出場停止は既存予測の情報注記に留め、既存確率は変更しない。"
+  }
+}

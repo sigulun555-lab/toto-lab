@@ -1,0 +1,204 @@
+{
+  "round": 1675,
+  "source": "official toto-dream draw information page",
+  "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1675",
+  "pageDisplayedAt": "2026-11-25T19:09:00+09:00",
+  "retrievedAt": "2026-11-25T19:14:53+09:00",
+  "saleStartAt": "2026-11-25T08:00:00+09:00",
+  "networkDeadlineAt": "2026-11-28T13:50:00+09:00",
+  "convenienceStoreDeadlineAt": "2026-11-28T12:00:00+09:00",
+  "retailStoreDeadlineAt": "2026-11-28T12:00:00+09:00",
+  "drawDate": "2026-11-29",
+  "fixtures": [
+    {
+      "matchNumber": 1,
+      "date": "2026-11-28",
+      "kickoff": "14:00",
+      "venue": "サンガＳ",
+      "homeTeam": "京都サンガF.C.",
+      "awayTeam": "セレッソ大阪"
+    },
+    {
+      "matchNumber": 2,
+      "date": "2026-11-28",
+      "kickoff": "16:00",
+      "venue": "三協Ｆ柏",
+      "homeTeam": "柏レイソル",
+      "awayTeam": "サンフレッチェ広島"
+    },
+    {
+      "matchNumber": 3,
+      "date": "2026-11-29",
+      "kickoff": "14:00",
+      "venue": "日産ス",
+      "homeTeam": "横浜Ｆ・マリノス",
+      "awayTeam": "ＦＣ東京"
+    },
+    {
+      "matchNumber": 4,
+      "date": "2026-11-29",
+      "kickoff": "14:00",
+      "venue": "水戸信ス",
+      "homeTeam": "水戸ホーリーホック",
+      "awayTeam": "Ｖ・ファーレン長崎"
+    },
+    {
+      "matchNumber": 5,
+      "date": "2026-11-29",
+      "kickoff": "15:00",
+      "venue": "豊田ス",
+      "homeTeam": "名古屋グランパス",
+      "awayTeam": "アビスパ福岡"
+    },
+    {
+      "matchNumber": 6,
+      "date": "2026-11-28",
+      "kickoff": "14:00",
+      "venue": "アイスタ",
+      "homeTeam": "清水エスパルス",
+      "awayTeam": "浦和レッズ"
+    },
+    {
+      "matchNumber": 7,
+      "date": "2026-11-28",
+      "kickoff": "15:00",
+      "venue": "メルスタ",
+      "homeTeam": "鹿島アントラーズ",
+      "awayTeam": "ファジアーノ岡山"
+    },
+    {
+      "matchNumber": 8,
+      "date": "2026-11-28",
+      "kickoff": "15:00",
+      "venue": "ノエスタ",
+      "homeTeam": "ヴィッセル神戸",
+      "awayTeam": "ジェフユナイテッド千葉"
+    },
+    {
+      "matchNumber": 9,
+      "date": "2026-11-29",
+      "kickoff": "16:00",
+      "venue": "Ｇスタ",
+      "homeTeam": "ＦＣ町田ゼルビア",
+      "awayTeam": "東京ヴェルディ"
+    },
+    {
+      "matchNumber": 10,
+      "date": "2026-11-29",
+      "kickoff": "15:00",
+      "venue": "Ｕ等々力",
+      "homeTeam": "川崎フロンターレ",
+      "awayTeam": "ガンバ大阪"
+    },
+    {
+      "matchNumber": 11,
+      "date": "2026-11-29",
+      "kickoff": "13:00",
+      "venue": "プラスタ",
+      "homeTeam": "ヴァンラーレ八戸",
+      "awayTeam": "藤枝ＭＹＦＣ"
+    },
+    {
+      "matchNumber": 12,
+      "date": "2026-11-29",
+      "kickoff": "14:00",
+      "venue": "クロスタ",
+      "homeTeam": "テゲバジャーロ宮崎",
+      "awayTeam": "サガン鳥栖"
+    },
+    {
+      "matchNumber": 13,
+      "date": "2026-11-29",
+      "kickoff": "14:00",
+      "venue": "ユアスタ",
+      "homeTeam": "ベガルタ仙台",
+      "awayTeam": "モンテディオ山形"
+    }
+  ],
+  "products": {
+    "toto13": {
+      "matchNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "outcomes": [
+        "home",
+        "draw",
+        "away"
+      ]
+    },
+    "miniTotoA": {
+      "productMatchNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "toto13MatchNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "outcomes": [
+        "home",
+        "draw",
+        "away"
+      ]
+    },
+    "miniTotoB": {
+      "productMatchNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "toto13MatchNumbers": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outcomes": [
+        "home",
+        "draw",
+        "away"
+      ]
+    },
+    "totoGOAL3": {
+      "productMatchNumbers": [
+        1,
+        2,
+        3
+      ],
+      "toto13MatchNumbers": [
+        1,
+        3,
+        5
+      ],
+      "teamSideCount": 6,
+      "goalCategories": [
+        "0",
+        "1",
+        "2",
+        "3+"
+      ]
+    }
+  },
+  "note": "Official page snapshot only. No predictions, model outputs, market probabilities, or injury/lineup adjustments are included."
+}

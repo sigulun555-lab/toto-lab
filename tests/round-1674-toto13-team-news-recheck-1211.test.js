@@ -19,6 +19,8 @@ test('12:11 toto13 team-news recheck records official suspensions but does not c
   assert.equal(report.carriedForwardInjuries[0].player, '松木駿之介');
   assert.match(report.carriedForwardInjuries[0].matchAvailability, /未確定/);
   assert.equal(report.carriedForwardInjuries[1].status, 'unverified_suspension_snippet_carried_forward');
+  assert.equal(report.carriedForwardInjuries[1].sourceUrl, null);
+  assert.equal(report.carriedForwardInjuries[1].sourceStatus, 'search_snippet_only_not_opened');
   assert.equal(report.lineups.officialStartingXIs, 'not_retrieved');
   assert.equal(report.predictionImpact.modelInputChanged, false);
   assert.equal(report.predictionImpact.probabilitiesChanged, false);

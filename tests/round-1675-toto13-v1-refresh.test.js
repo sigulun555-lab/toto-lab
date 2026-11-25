@@ -31,7 +31,8 @@ assert.ok(rows.every(r=>Date.parse(r.predictionConfirmedAt)<Date.parse(r.deadlin
 assert.ok(rows.every(r=>Math.abs(Object.values(r.outcomeProbabilities).reduce((a,b)=>a+b,0)-1)<=1e-7),'1X2 probability vectors normalize');
 assert.ok(rows.every(r=>Math.abs(r.homeGoalProbabilities.reduce((a,b)=>a+b,0)-1)<=1e-7),'home goal probability vectors normalize');
 assert.ok(rows.every(r=>Math.abs(r.awayGoalProbabilities.reduce((a,b)=>a+b,0)-1)<=1e-7),'away goal probability vectors normalize');
-assert.ok(rows.every(r=>r.revisionOf && !/market/i.test(r.notes) || true),'revision metadata present');
+assert.ok(rows.every(r=>r.notes.includes('No market blend')),'no market blend in revision notes');
+assert.ok(rows.every(r=>r.dataSource.includes('537 completed matches')),'data source records 537 completed matches');
 assert.equal(manifest.product,'toto13');
 assert.equal(manifest.round,1675);
 assert.equal(manifest.previousPredictionRows,13);

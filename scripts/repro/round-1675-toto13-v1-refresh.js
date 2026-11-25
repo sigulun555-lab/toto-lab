@@ -113,7 +113,7 @@ const revisions = fixtures.map(f => {
       '; aliases blob ' + EXPECTED_ALIAS_BLOB +
       '; frozen community CSV Git blob ' + sourceManifest.sourceBlobSha +
       ' retrieved ' + sourceManifest.retrievedAtUtc +
-      '; 536 completed matches, 25 newly available since prior 512-row history.',
+      '; 537 completed matches, 25 newly available since prior 512-row history.',
     notes: 'Append-only V1 revision of ' + previous.predictionId +
       '. Incorporates 25 newly available completed matches from 2026-11-25. No market blend and no manual injury/lineup probability adjustment. Experimental baseline, uncalibrated.'
   };

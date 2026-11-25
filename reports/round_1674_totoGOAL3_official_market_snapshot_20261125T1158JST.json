@@ -201,8 +201,33 @@
     "status": "not_generated",
     "marketInputFresh": false,
     "predictionGenerationEligible": false,
-    "reason": "表示時刻から782秒経過し300秒を超過。さらにリポジトリに実行可能な商品専用GOAL3 V2 generator/受入仕様がない。toto13のblend式や研究用k=6/k=10を流用しない。"
+    "reason": "表示時刻から782秒経過し300秒を超過。過去に第1666回のhard-coded GOAL3 V2 prototypeと第1668/1671回の30/70 exploratory artifactsは存在するが、blend.pyは第1666回入力を固定し、0.7はGOAL3で未検証。第1674回用の汎用・テスト済みrunner/採用基準は確認できない。古くなったこの市場観測からV2は生成しない。"
   },
   "predictionImpact": "この観測から新しいGOAL3 V1/V2 prediction row、revision、shadowは生成していない。既存記録を保持。",
-  "notes": "公式投票率は公開投票シェアであり、校正済み得点確率ではない。"
+  "notes": "公式投票率は公開投票シェアであり、校正済み得点確率ではない。",
+  "historicalV2Prototype": {
+    "status": "hardcoded_round1666_prototype_only",
+    "formula": "p_v2 = 0.3 * v1 + 0.7 * official_vote_share",
+    "marketWeight": 0.7,
+    "marketWeightStatus": "provisional_and_not_independently_validated_for_GOAL3",
+    "sources": [
+      {
+        "path": "docs/round-1666-goal3-v2/blend.py",
+        "blobSha": "da5ba003c9c65d28ce47f25e69c8d885b41c82fb"
+      },
+      {
+        "path": "docs/round-1666-goal3-v2/README.md",
+        "blobSha": "2f57cb865037449a81a418a5abb65684d4d27b91"
+      },
+      {
+        "path": "predictions/round_1668_ChatGPT_goal3_market_blend_v2_1307JST.jsonl",
+        "blobSha": "e8b5f702b409c6b6dbc5c57d1d0d06e76a9ba3bb"
+      },
+      {
+        "path": "predictions/round_1671_ChatGPT_goal3_market_blend_v2_1652JST.jsonl",
+        "blobSha": "7f4409132bac2fa298a845ecefd3dbbece790dfc"
+      }
+    ],
+    "limitation": "blend.py hardcodes round 1666 inputs. Round 1668/1671 V2 artifacts confirm the exploratory 30/70 formula but do not provide a generic, tested round-1674 runner or validated acceptance criteria."
+  }
 }

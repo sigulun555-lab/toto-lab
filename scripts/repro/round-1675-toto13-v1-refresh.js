@@ -43,7 +43,7 @@ assert.equal(gitBlobSha(csvText), sourceManifest.sourceBlobSha, 'frozen CSV Git 
 assert.equal(gitBlobSha(fs.readFileSync(path.join(GPT, 'model.js'), 'utf8')), EXPECTED_MODEL_BLOB, 'pinned model.js blob');
 assert.equal(gitBlobSha(fs.readFileSync(path.join(GPT, 'scripts/auto_pipeline.js'), 'utf8')), EXPECTED_PARSER_BLOB, 'pinned parser blob');
 assert.equal(gitBlobSha(fs.readFileSync(path.join(GPT, 'data/team_aliases.json'), 'utf8')), EXPECTED_ALIAS_BLOB, 'pinned aliases blob');
-assert.equal(gitBlobSha(oldRowsText + '\n'), gitBlobSha(oldRowsText + '\n'), 'previous prediction file readable');
+assert.equal(gitBlobSha(oldRowsText + '\n'), 'e8b3be0316105de2e9fed804108ae14696ae2ce4', 'previous prediction file blob');
 assert.equal(oldRows.length, 13, 'previous V1 row count');
 assert.equal(fixtures.length, 13, 'official fixture count');
 assert.equal(oldHistoryFile.history.length, 512, 'pinned old history count');
@@ -71,8 +71,8 @@ for (const m of history) {
 }
 const removed = [...oldKeys].filter(k => !currentKeys.has(k));
 const nov25 = history.filter(m => m.date === '2026-11-25');
-assert.equal(history.length, 536, 'fresh completed history rows');
-assert.equal(newKeys.size, 24, 'new completed matches since pinned 512-row history');
+assert.equal(history.length, 537, 'fresh completed history rows');
+assert.equal(newKeys.size, 25, 'new completed matches since pinned 512-row history');
 assert.equal(removed.length, 0, 'no prior history match removed');
 assert.equal(nov25.length, 27, '2026-11-25 completed match count');
 assert.ok([...newKeys].every(k => k.startsWith('2026-11-25|')), 'all newly available matches are 2026-11-25');
@@ -113,9 +113,9 @@ const revisions = fixtures.map(f => {
       '; aliases blob ' + EXPECTED_ALIAS_BLOB +
       '; frozen community CSV Git blob ' + sourceManifest.sourceBlobSha +
       ' retrieved ' + sourceManifest.retrievedAtUtc +
-      '; 536 completed matches, 24 newly available since prior 512-row history.',
+      '; 536 completed matches, 25 newly available since prior 512-row history.',
     notes: 'Append-only V1 revision of ' + previous.predictionId +
-      '. Incorporates 24 newly available completed matches from 2026-11-25. No market blend and no manual injury/lineup probability adjustment. Experimental baseline, uncalibrated.'
+      '. Incorporates 25 newly available completed matches from 2026-11-25. No market blend and no manual injury/lineup probability adjustment. Experimental baseline, uncalibrated.'
   };
   const sum = Object.values(row.outcomeProbabilities).reduce((a, b) => a + b, 0);
   assert.ok(Math.abs(sum - 1) <= 1e-7, 'outcome probabilities normalize');

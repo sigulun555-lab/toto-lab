@@ -1,0 +1,45 @@
+name: toto13 round 1675 V1 model reproduction
+on:
+  push:
+    branches:
+      - gpt/toto13-round-1675-v1-20261126T0155JST
+  pull_request:
+    branches:
+      - main
+    paths:
+      - predictions/round_1675_ChatGPT_shared_score_v1.jsonl
+      - reports/round_1675_toto13_v1_manifest_20261126T0155JST.json
+      - reports/round_1675_toto13_team_news_audit_20261126T0155JST.json
+      - scripts/repro/round-1675-toto13-v1-repro.js
+      - tests/round-1675-toto13-v1.test.js
+      - .github/workflows/toto13-v1-round-1675-repro.yml
+permissions:
+  contents: read
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: sigulun555-lab/gpt
+          ref: a678a296a13eea4beec142083107e69ffda2fed4
+          path: gpt-input
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: sigulun555-lab/toto-lab
+          ref: b614453d782c1073b3469e1c973cba539e6ab47a
+          path: schedule-input
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run repository tests
+        run: npm test
+      - name: Validate team dictionary
+        run: npm run check:teams
+      - name: Re-run actual exported GPT model
+        run: node scripts/repro/round-1675-toto13-v1-repro.js
+      - name: Validate saved snapshot schema
+        run: node --test tests/round-1675-toto13-v1.test.js

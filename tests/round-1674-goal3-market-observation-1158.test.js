@@ -3,7 +3,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const market = require('../reports/round_1674_totoGOAL3_official_market_snapshot_20261125T1158JST.json');
 
-test('11:58 official totoGOAL3 observation is archived stale and remains forecast-ineligible', () => {
+test('11:58 official totoGOAL3 observation is archived stale; historical V2 prototype is documented but not run', () => {
   assert.equal(market.product, 'totoGOAL3');
   assert.equal(market.marketType, 'totoGOAL3');
   assert.equal(market.round, 1674);
@@ -25,6 +25,11 @@ test('11:58 official totoGOAL3 observation is archived stale and remains forecas
     assert.ok(Math.abs(side.percentageTotal-100)<1e-8);
     assert.ok(Math.abs(Object.values(side.marketVoteShare).reduce((a,b)=>a+b,0)-1)<1e-8);
   }
+  assert.equal(market.historicalV2Prototype.status, 'hardcoded_round1666_prototype_only');
+  assert.equal(market.historicalV2Prototype.marketWeight, 0.7);
+  assert.equal(market.historicalV2Prototype.marketWeightStatus, 'provisional_and_not_independently_validated_for_GOAL3');
+  assert.equal(market.historicalV2Prototype.sources.length, 4);
+  assert.match(market.historicalV2Prototype.limitation, /hardcodes round 1666 inputs/);
   assert.equal(market.v2Eligibility.predictionGenerationEligible, false);
-  assert.match(market.v2Eligibility.reason, /実行可能な商品専用GOAL3 V2 generator/);
+  assert.match(market.v2Eligibility.reason, /0.7はGOAL3で未検証/);
 });

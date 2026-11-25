@@ -81,8 +81,9 @@
       "team": "大分トリニータ",
       "player": "林田滉也",
       "status": "unverified_suspension_snippet_carried_forward",
-      "note": "大分公式メディアのプレビュー検索スニペットに出場停止との記述があったが本文未取得、Jリーグ公式停止一覧でも確認できていない。停止理由・対象試合は未確定。",
-      "sourceUrl": "https://toriten.oit"
+      "note": "大分公式メディアの検索スニペットに出場停止との記述があったが、記事本文と正確なURLを取得できていない。Jリーグ公式停止一覧でも確認できていない。停止理由・対象試合は未確定。",
+      "sourceUrl": null,
+      "sourceStatus": "search_snippet_only_not_opened"
     }
   ],
   "leaguePreviews": [

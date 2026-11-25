@@ -6,6 +6,7 @@ const market = require('../reports/round_1674_toto13_official_market_snapshot_20
 test('12:03 official toto13 observation is archived stale and inconsistent; no V2 revision is generated', () => {
   assert.equal(market.product, 'toto13');
   assert.equal(market.round, 1674);
+  assert.deepEqual(market.outcomeOrder, ['1','0','2']); // official order: home win, draw/other, away win
   assert.equal(market.pageDisplayAt, '2026-11-25T12:03:00+09:00');
   assert.equal(market.retrievedAt, '2026-11-25T12:11:02+09:00');
   assert.equal(market.displayAgeSeconds, 482);
@@ -17,6 +18,9 @@ test('12:03 official toto13 observation is archived stale and inconsistent; no V
   for (const m of market.matches) {
     assert.equal(m.sumVotes, m.voteCounts.reduce((a,b)=>a+b,0));
     assert.equal(m.sumPercent, 100);
+    assert.equal(m.marketVoteShare['1'], Number((m.displayedPercentages['1']/100).toFixed(4)));
+    assert.equal(m.marketVoteShare['0'], Number((m.displayedPercentages['0']/100).toFixed(4)));
+    assert.equal(m.marketVoteShare['2'], Number((m.displayedPercentages['2']/100).toFixed(4)));
     assert.ok(Math.abs(Object.values(m.marketVoteShare).reduce((a,b)=>a+b,0)-1)<1e-8);
   }
   const mismatches = market.matches.filter(m => m.sumVotes !== market.totalVotesPageSummary);

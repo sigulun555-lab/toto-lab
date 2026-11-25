@@ -48,31 +48,28 @@
       ]
     },
     {
-      "type": "official_historical_injury_notices",
+      "type": "official_source_fetch_failure",
       "url": "https://www.v-varen.com/news/248112.html",
-      "publishedAt": "2026-09-13",
       "retrievedAt": "2026-11-26T01:55:28+09:00",
-      "items": [
-        "長崎 高畑奎汰：左内側側副靱帯損傷および内側ハムストリング損傷。11/29の状態は未確認。"
-      ]
+      "httpStatus": 403,
+      "verified": false,
+      "note": "公式ページを取得できず、内容・現在の出場可否は未確認。"
     },
     {
-      "type": "official_historical_injury_notices",
+      "type": "official_source_fetch_failure",
       "url": "https://www.v-varen.com/news/248116.html",
-      "publishedAt": "2026-09-13",
       "retrievedAt": "2026-11-26T01:55:28+09:00",
-      "items": [
-        "長崎 ルカ ラドティッチ：右膝内側半月板損傷。11/29の状態は未確認。"
-      ]
+      "httpStatus": 403,
+      "verified": false,
+      "note": "公式ページを取得できず、内容・現在の出場可否は未確認。"
     },
     {
-      "type": "official_historical_injury_notices",
+      "type": "official_source_fetch_failure",
       "url": "https://www.v-varen.com/news/248600.html",
-      "publishedAt": "2026-09-19",
       "retrievedAt": "2026-11-26T01:55:28+09:00",
-      "items": [
-        "長崎 ノーマン キャンベル：右大腿二頭筋外側頭肉離れ。11/29の状態は未確認。"
-      ]
+      "httpStatus": 403,
+      "verified": false,
+      "note": "公式ページを取得できず、内容・現在の出場可否は未確認。"
     }
   ],
   "teams": [
@@ -418,7 +415,7 @@
     "officialPredictedLineupsFound": false,
     "all26AvailabilityFullyVerified": false,
     "recentLineupChangesFullyChecked": false,
-    "note": "出場停止3名は公式確定。松原修平の負傷はクラブ公式発表。長崎の欠場表示は二次情報であり今節の確定欠場ではない。その他のクラブは確認した検索範囲で未確認。"
+    "note": "出場停止3名はJリーグ公式で確定。松原修平の負傷は水戸クラブ公式で確認。長崎の欠場表示はFootball-Labの二次情報であり今節の確定欠場ではない。長崎クラブ公式の過去負傷ページ3件は403で取得できず、公式確認扱いしない。その他クラブは確認した検索範囲で未確認。"
   },
   "predictionTreatment": {
     "appliedToV1": false,

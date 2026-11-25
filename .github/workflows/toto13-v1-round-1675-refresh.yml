@@ -10,6 +10,7 @@ on:
       - predictions/round_1675_ChatGPT_shared_score_v1_revision_20261126T022833JST.jsonl
       - reports/round_1675_toto13_v1_revision_manifest_20261126T022833JST.json
       - tests/round-1675-toto13-v1-refresh.test.js
+      - reports/round_1675_v1_revision_review_notes.md
       - .github/workflows/toto13-v1-round-1675-refresh.yml
 
 permissions:

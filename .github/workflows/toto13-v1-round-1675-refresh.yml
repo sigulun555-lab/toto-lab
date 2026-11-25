@@ -1,0 +1,59 @@
+name: Round 1675 toto13 V1 refreshed-history reproduction
+
+on:
+  push:
+    branches:
+      - gpt/toto13-round-1675-v1-revision-20261126T022854JST
+    paths:
+      - reports/round_1675_history_source_20261126T022833JST.csv
+      - reports/round_1675_history_source_manifest_20261126T022833JST.json
+      - scripts/repro/round-1675-toto13-v1-refresh.js
+      - .github/workflows/toto13-v1-round-1675-refresh.yml
+  pull_request:
+    branches: [main]
+    paths:
+      - reports/round_1675_history_source_20261126T022833JST.csv
+      - reports/round_1675_history_source_manifest_20261126T022833JST.json
+      - scripts/repro/round-1675-toto13-v1-refresh.js
+      - predictions/round_1675_ChatGPT_shared_score_v1_revision_20261126T022833JST.jsonl
+      - reports/round_1675_toto13_v1_revision_manifest_20261126T022833JST.json
+      - tests/round-1675-toto13-v1-refresh.test.js
+      - .github/workflows/toto13-v1-round-1675-refresh.yml
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: sigulun555-lab/toto-lab
+          ref: ec5b8a05f8b8833f7556f147696758487c0a5df7
+          path: prior-input
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: sigulun555-lab/gpt
+          ref: a678a296a13eea4beec142083107e69ffda2fed4
+          path: gpt-input
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Repository tests
+        run: npm test
+      - name: Team dictionary check
+        run: npm run check:teams
+      - name: Reproduce refreshed V1 revision using pinned exported model
+        run: node scripts/repro/round-1675-toto13-v1-refresh.js
+      - name: Upload exact revision output and manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: round-1675-toto13-v1-refresh-reproduction
+          path: |
+            tmp/round_1675_toto13_v1_revision_20261126T022833JST.jsonl
+            tmp/round_1675_toto13_v1_revision_manifest_20261126T022833JST.json
+          if-no-files-found: error

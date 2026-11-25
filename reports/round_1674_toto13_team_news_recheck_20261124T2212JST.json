@@ -1,0 +1,427 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1674,
+  "checkedAt": "2026-11-24T22:12:47+09:00",
+  "scopeLimitations": {
+    "all26MedicalStatusFullyVerified": false,
+    "officialLineupsAvailable": false,
+    "predictedStartingLineupsConfirmed": false,
+    "description": "Official J.League suspensions and J1/J2 previews plus selected official league/club injury announcements were re-opened. This is not a complete medical audit of every squad or a confirmation of every player's matchday availability."
+  },
+  "sources": [
+    {
+      "id": "jleague_suspensions_20261123",
+      "name": "Jリーグ公式 出場停止選手のお知らせ（2026/11/23）",
+      "url": "https://www.jleague.jp/news/article/35431/?navicode=j1",
+      "publishedAt": "2026-11-23T18:00:00+09:00",
+      "retrievedAt": "2026-11-24T22:12:47+09:00"
+    },
+    {
+      "id": "jleague_j1_preview_20261123",
+      "name": "Jリーグ公式 J1第16節プレビュー",
+      "url": "https://www.jleague.jp/news/article/35426/",
+      "publishedAt": "2026-11-23T17:00:00+09:00",
+      "retrievedAt": "2026-11-24T22:12:47+09:00"
+    },
+    {
+      "id": "jleague_j2_preview_20261123",
+      "name": "Jリーグ公式 J2第19節プレビュー",
+      "url": "https://www.jleague.jp/news/article/35427/?navicode=j2",
+      "publishedAt": "2026-11-23T18:00:00+09:00",
+      "retrievedAt": "2026-11-24T22:12:47+09:00"
+    },
+    {
+      "id": "jleague_mito_matsubara",
+      "name": "Jリーグ公式 GK松原の負傷を発表（水戸）",
+      "url": "https://www.jleague.jp/news/article/35409/",
+      "publishedAt": "2026-11-21T17:30:00+09:00",
+      "retrievedAt": "2026-11-24T22:12:47+09:00"
+    },
+    {
+      "id": "jleague_nagasaki_shindo",
+      "name": "Jリーグ公式 DF進藤の負傷を発表（長崎）",
+      "url": "https://www.jleague.jp/news/article/35410/",
+      "publishedAt": "2026-11-21T17:40:00+09:00",
+      "retrievedAt": "2026-11-24T22:12:47+09:00"
+    },
+    {
+      "id": "jleague_iwaki_takahashi",
+      "name": "Jリーグ公式 MF高橋の負傷を発表（いわき）",
+      "url": "https://www.jleague.jp/news/article/35420/",
+      "publishedAt": "2026-11-22T17:30:00+09:00",
+      "retrievedAt": "2026-11-24T22:12:47+09:00"
+    },
+    {
+      "id": "jleague_oita_yoshikawa",
+      "name": "Jリーグ公式 MF吉川の負傷を発表（大分）",
+      "url": "https://www.jleague.jp/news/article/35418/",
+      "publishedAt": "2026-11-22T17:30:00+09:00",
+      "retrievedAt": "2026-11-24T22:12:47+09:00"
+    },
+    {
+      "id": "jleague_chiba_matheus",
+      "name": "Jリーグ公式 MFマテウス インディオの負傷を発表（千葉）",
+      "url": "https://www.jleague.jp/news/article/35325/",
+      "publishedAt": "2026-11-09T18:30:00+09:00",
+      "retrievedAt": "2026-11-24T22:12:47+09:00"
+    },
+    {
+      "id": "club_okayama_kimura",
+      "name": "ファジアーノ岡山公式 木村太哉選手の手術について",
+      "url": "https://www.fagiano-okayama.com/news/202611131001/",
+      "publishedAt": "2026-11-13",
+      "retrievedAt": "2026-11-24T22:12:47+09:00"
+    },
+    {
+      "id": "club_sapporo_kawahara",
+      "name": "北海道コンサドーレ札幌公式 川原颯斗選手負傷",
+      "url": "https://www.consadole-sapporo.jp/news/2026/11/17363/",
+      "publishedAt": "2026-11-21",
+      "retrievedAt": "2026-11-24T22:12:47+09:00"
+    },
+    {
+      "id": "club_sapporo_fukumori",
+      "name": "北海道コンサドーレ札幌公式 福森晃斗選手負傷",
+      "url": "https://www.consadole-sapporo.jp/news/2026/11/15643/",
+      "publishedAt": "2026-11-03",
+      "retrievedAt": "2026-11-24T22:12:47+09:00"
+    },
+    {
+      "id": "club_marinos_yamane",
+      "name": "横浜F・マリノス公式 山根陸選手の負傷について",
+      "url": "https://www.f-marinos.com/news/team/10930",
+      "publishedAt": "2026-11-19",
+      "retrievedAt": "2026-11-24T22:12:47+09:00"
+    },
+    {
+      "id": "club_marinos_krooks",
+      "name": "横浜F・マリノス公式 ジョルディ クルークス選手の負傷について",
+      "url": "https://www.f-marinos.com/news/team/10877",
+      "publishedAt": "2026-11-05",
+      "retrievedAt": "2026-11-24T22:12:47+09:00"
+    }
+  ],
+  "suspensions": [
+    {
+      "player": "ユーリ ララ",
+      "team": "磐田",
+      "matchNumber": 9,
+      "competition": "J2(f)",
+      "suspendedMatch": "2026-11-25 明治安田J2リーグ第19節第1日",
+      "sourceId": "jleague_suspensions_20261123"
+    },
+    {
+      "player": "ジョアン パウロ",
+      "team": "横浜FC",
+      "matchNumber": 12,
+      "competition": "J2(f)",
+      "suspendedMatch": "2026-11-25 明治安田J2リーグ第19節第1日",
+      "sourceId": "jleague_suspensions_20261123"
+    },
+    {
+      "player": "関口 凱心",
+      "team": "大宮",
+      "matchNumber": 13,
+      "competition": "J2(f)",
+      "suspendedMatch": "2026-11-25 明治安田J2リーグ第19節第1日",
+      "sourceId": "jleague_suspensions_20261123"
+    }
+  ],
+  "knownInjuries": [
+    {
+      "team": "千葉",
+      "player": "マテウス インディオ",
+      "description": "左膝蓋腱断裂（10/29練習中に受傷）",
+      "sourceId": "jleague_chiba_matheus",
+      "returnStatus": "今回確認した公式資料で復帰発表は未確認"
+    },
+    {
+      "team": "岡山",
+      "player": "木村 太哉",
+      "description": "クラブ公式の手術発表あり。今回取得した本文から診断詳細は未抽出",
+      "sourceId": "club_okayama_kimura",
+      "returnStatus": "今回確認した公式資料で復帰発表は未確認"
+    },
+    {
+      "team": "水戸",
+      "player": "松原 修平",
+      "description": "右アキレス腱断裂（11/20トレーニング中に受傷）",
+      "sourceId": "jleague_mito_matsubara",
+      "returnStatus": "今回確認した公式資料で復帰発表は未確認"
+    },
+    {
+      "team": "長崎",
+      "player": "進藤 亮佑",
+      "description": "左内側側副靭帯損傷（トレーニング中に受傷）",
+      "sourceId": "jleague_nagasaki_shindo",
+      "returnStatus": "今回確認した公式資料で復帰発表は未確認"
+    },
+    {
+      "team": "いわき",
+      "player": "高橋 勇利也",
+      "description": "脳震盪（11/21の第18節で受傷）",
+      "sourceId": "jleague_iwaki_takahashi",
+      "returnStatus": "段階的リハビリと発表。11/25の出場可否は未確認"
+    },
+    {
+      "team": "大分",
+      "player": "吉川 敬進",
+      "description": "左足関節脱臼骨折（11/11トレーニング中に受傷）",
+      "sourceId": "jleague_oita_yoshikawa",
+      "returnStatus": "今回確認した公式資料で復帰発表は未確認"
+    },
+    {
+      "team": "札幌",
+      "player": "川原 颯斗",
+      "description": "クラブ公式の負傷発表あり。今回取得した本文から診断詳細は未抽出",
+      "sourceId": "club_sapporo_kawahara",
+      "returnStatus": "今回確認した公式資料で復帰発表は未確認"
+    },
+    {
+      "team": "札幌",
+      "player": "福森 晃斗",
+      "description": "クラブ公式の負傷発表あり。今回取得した本文から診断詳細は未抽出",
+      "sourceId": "club_sapporo_fukumori",
+      "returnStatus": "今回確認した公式資料で復帰発表は未確認"
+    },
+    {
+      "team": "横浜FM",
+      "player": "山根 陸",
+      "description": "クラブ公式の負傷発表あり。今回取得した本文から診断詳細は未抽出",
+      "sourceId": "club_marinos_yamane",
+      "returnStatus": "今回確認した公式資料で復帰発表は未確認"
+    },
+    {
+      "team": "横浜FM",
+      "player": "ジョルディ クルークス",
+      "description": "クラブ公式の負傷発表あり。今回取得した本文から診断詳細は未抽出",
+      "sourceId": "club_marinos_krooks",
+      "returnStatus": "今回確認した公式資料で復帰発表は未確認"
+    }
+  ],
+  "matchNotes": [
+    {
+      "matchNumber": 1,
+      "home": "千葉",
+      "away": "名古屋",
+      "league": "J1",
+      "officialPreviewNote": "千葉は3連勝、名古屋は5試合勝ちなし。山岸祐也の先発可能性に触れる一方、連戦でメンバー予想は難しいとJリーグ公式が記載。",
+      "homeSuspensions": [],
+      "awaySuspensions": [],
+      "homeKnownInjuries": [
+        "マテウス インディオ"
+      ],
+      "awayKnownInjuries": [],
+      "officialPredictedLineup": "not verified in official J.League preview sources",
+      "officialStartingLineup": "not published as of checkedAt",
+      "individualAvailability": "not fully verified for all players"
+    },
+    {
+      "matchNumber": 2,
+      "home": "岡山",
+      "away": "清水",
+      "league": "J1",
+      "officialPreviewNote": "岡山は4試合ぶり勝利。清水は6試合勝利なし。北川航也は負傷から復帰し前節5試合ぶりの得点と公式プレビューが記載。",
+      "homeSuspensions": [],
+      "awaySuspensions": [],
+      "homeKnownInjuries": [
+        "木村 太哉"
+      ],
+      "awayKnownInjuries": [],
+      "officialPredictedLineup": "not verified in official J.League preview sources",
+      "officialStartingLineup": "not published as of checkedAt",
+      "individualAvailability": "not fully verified for all players"
+    },
+    {
+      "matchNumber": 3,
+      "home": "長崎",
+      "away": "川崎Ｆ",
+      "league": "J1",
+      "officialPreviewNote": "長崎は4試合勝利なし、ノーマン キャンベルは前節復帰。川崎は連敗を2で止め伊藤達哉が決勝点。",
+      "homeSuspensions": [],
+      "awaySuspensions": [],
+      "homeKnownInjuries": [
+        "進藤 亮佑"
+      ],
+      "awayKnownInjuries": [],
+      "officialPredictedLineup": "not verified in official J.League preview sources",
+      "officialStartingLineup": "not published as of checkedAt",
+      "individualAvailability": "not fully verified for all players"
+    },
+    {
+      "matchNumber": 4,
+      "home": "水戸",
+      "away": "東京Ｖ",
+      "league": "J1",
+      "officialPreviewNote": "水戸は8連敗を止め森直樹体制初勝利、西原源樹が加入後初得点。東京Vは5試合負けなし。",
+      "homeSuspensions": [],
+      "awaySuspensions": [],
+      "homeKnownInjuries": [
+        "松原 修平"
+      ],
+      "awayKnownInjuries": [],
+      "officialPredictedLineup": "not verified in official J.League preview sources",
+      "officialStartingLineup": "not published as of checkedAt",
+      "individualAvailability": "not fully verified for all players"
+    },
+    {
+      "matchNumber": 5,
+      "home": "福岡",
+      "away": "横浜FM",
+      "league": "J1",
+      "officialPreviewNote": "福岡は川崎に敗れ城福浩監督の初陣を白星で飾れず。横浜FMは11試合負けなしだが8試合がドロー。",
+      "homeSuspensions": [],
+      "awaySuspensions": [],
+      "homeKnownInjuries": [],
+      "awayKnownInjuries": [
+        "山根 陸",
+        "ジョルディ クルークス"
+      ],
+      "officialPredictedLineup": "not verified in official J.League preview sources",
+      "officialStartingLineup": "not published as of checkedAt",
+      "individualAvailability": "not fully verified for all players"
+    },
+    {
+      "matchNumber": 6,
+      "home": "FC東京",
+      "away": "広島",
+      "league": "J1",
+      "officialPreviewNote": "FC東京は4連勝・14試合負けなし。広島は2試合勝利なし。",
+      "homeSuspensions": [],
+      "awaySuspensions": [],
+      "homeKnownInjuries": [],
+      "awayKnownInjuries": [],
+      "officialPredictedLineup": "not verified in official J.League preview sources",
+      "officialStartingLineup": "not published as of checkedAt",
+      "individualAvailability": "not fully verified for all players"
+    },
+    {
+      "matchNumber": 7,
+      "home": "浦和",
+      "away": "Ｃ大阪",
+      "league": "J1",
+      "officialPreviewNote": "浦和は3試合勝利なし。C大阪はFC東京に敗れ、今季初の連勝ならず。",
+      "homeSuspensions": [],
+      "awaySuspensions": [],
+      "homeKnownInjuries": [],
+      "awayKnownInjuries": [],
+      "officialPredictedLineup": "not verified in official J.League preview sources",
+      "officialStartingLineup": "not published as of checkedAt",
+      "individualAvailability": "not fully verified for all players"
+    },
+    {
+      "matchNumber": 8,
+      "home": "札幌",
+      "away": "藤枝",
+      "league": "J2",
+      "officialPreviewNote": "札幌は前節2-0勝利。ヴィニ ペイショットとアマドゥ バカヨコの途中出場が鍵。藤枝は今治に敗戦。",
+      "homeSuspensions": [],
+      "awaySuspensions": [],
+      "homeKnownInjuries": [
+        "川原 颯斗",
+        "福森 晃斗"
+      ],
+      "awayKnownInjuries": [],
+      "officialPredictedLineup": "not verified in official J.League preview sources",
+      "officialStartingLineup": "not published as of checkedAt",
+      "individualAvailability": "not fully verified for all players"
+    },
+    {
+      "matchNumber": 9,
+      "home": "山形",
+      "away": "磐田",
+      "league": "J2",
+      "officialPreviewNote": "山形は3連敗・3試合連続複数失点。磐田は大宮を破り9試合負けなし。ユーリ ララは出場停止。",
+      "homeSuspensions": [],
+      "awaySuspensions": [
+        "ユーリ ララ"
+      ],
+      "homeKnownInjuries": [],
+      "awayKnownInjuries": [],
+      "officialPredictedLineup": "not verified in official J.League preview sources",
+      "officialStartingLineup": "not published as of checkedAt",
+      "individualAvailability": "not fully verified for all players"
+    },
+    {
+      "matchNumber": 10,
+      "home": "鳥栖",
+      "away": "大分",
+      "league": "J2",
+      "officialPreviewNote": "鳥栖は仙台と引分。大分は3試合勝利なし、相澤デイビッドは2戦連発。",
+      "homeSuspensions": [],
+      "awaySuspensions": [],
+      "homeKnownInjuries": [],
+      "awayKnownInjuries": [
+        "吉川 敬進"
+      ],
+      "officialPredictedLineup": "not verified in official J.League preview sources",
+      "officialStartingLineup": "not published as of checkedAt",
+      "individualAvailability": "not fully verified for all players"
+    },
+    {
+      "matchNumber": 11,
+      "home": "いわき",
+      "away": "富山",
+      "league": "J2",
+      "officialPreviewNote": "いわきは3試合負けなし、桒田大誠がプロ初ゴール。富山は2試合勝利なし。",
+      "homeSuspensions": [],
+      "awaySuspensions": [],
+      "homeKnownInjuries": [
+        "高橋 勇利也"
+      ],
+      "awayKnownInjuries": [],
+      "officialPredictedLineup": "not verified in official J.League preview sources",
+      "officialStartingLineup": "not published as of checkedAt",
+      "individualAvailability": "not fully verified for all players"
+    },
+    {
+      "matchNumber": 12,
+      "home": "横浜FC",
+      "away": "仙台",
+      "league": "J2",
+      "officialPreviewNote": "横浜FCは今季初の連敗。仙台は鳥栖と引分で3連勝ならず。ジョアン パウロは出場停止。",
+      "homeSuspensions": [
+        "ジョアン パウロ"
+      ],
+      "awaySuspensions": [],
+      "homeKnownInjuries": [],
+      "awayKnownInjuries": [],
+      "officialPredictedLineup": "not verified in official J.League preview sources",
+      "officialStartingLineup": "not published as of checkedAt",
+      "individualAvailability": "not fully verified for all players"
+    },
+    {
+      "matchNumber": 13,
+      "home": "大宮",
+      "away": "徳島",
+      "league": "J2",
+      "officialPreviewNote": "大宮は4連勝が止まり、徳島は湘南に敗戦。宮崎純真が今季初ゴール。関口凱心は出場停止。",
+      "homeSuspensions": [
+        "関口 凱心"
+      ],
+      "awaySuspensions": [],
+      "homeKnownInjuries": [],
+      "awayKnownInjuries": [],
+      "officialPredictedLineup": "not verified in official J.League preview sources",
+      "officialStartingLineup": "not published as of checkedAt",
+      "individualAvailability": "not fully verified for all players"
+    }
+  ],
+  "teamCoverage": {
+    "fixtureCount": 13,
+    "teamCount": 26,
+    "all26TeamsMapped": true,
+    "officialPreviewCoverage": "J1 preview covers the seven J1 fixtures; J2 preview covers the six J2 fixtures on the round-1674 toto13 card.",
+    "officialPredictedXIAvailable": false,
+    "officialStartingXIAvailable": false
+  },
+  "modelImpact": {
+    "probabilityAdjustmentApplied": false,
+    "modelInputChanged": false,
+    "existingV1RowsChanged": false,
+    "existingV2RowsChanged": false,
+    "notes": "The 22:08:37 JST V2 market-refresh revision predates this 22:12:47 JST team-news audit. No injury or lineup adjustment is retroactively applied. A new revision would require a confirmed model-input change and append-only revisionOf linkage."
+  },
+  "nextCheck": "Recheck official starting lineups and late availability before the 2026-11-25 18:50 JST online cutoff. Do not infer availability from absence of a report."
+}

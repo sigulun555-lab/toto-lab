@@ -14,6 +14,7 @@ on:
       - scripts/repro/round-1675-toto13-v1-repro.js
       - tests/round-1675-toto13-v1.test.js
       - .github/workflows/toto13-v1-round-1675-repro.yml
+      - reports/round_1675_toto13_v1_cleanup_status.md
 
 permissions:
   contents: read

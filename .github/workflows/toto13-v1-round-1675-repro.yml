@@ -13,6 +13,12 @@ on:
       - scripts/repro/round-1675-toto13-v1-repro.js
       - tests/round-1675-toto13-v1.test.js
       - .github/workflows/toto13-v1-round-1675-repro.yml
+      - reports/round_1675_history_source_20261126T022833JST.csv
+      - reports/round_1675_history_source_manifest_20261126T022833JST.json
+      - scripts/repro/round-1675-toto13-v1-refresh.js
+      - predictions/round_1675_ChatGPT_shared_score_v1_revision_20261126T022833JST.jsonl
+      - reports/round_1675_toto13_v1_revision_manifest_20261126T022833JST.json
+      - tests/round-1675-toto13-v1-refresh.test.js
 permissions:
   contents: read
 jobs:
@@ -43,3 +49,13 @@ jobs:
         run: node scripts/repro/round-1675-toto13-v1-repro.js
       - name: Validate saved snapshot schema
         run: node --test tests/round-1675-toto13-v1.test.js
+      - name: Reproduce refreshed V1 revision from frozen history source
+        run: node scripts/repro/round-1675-toto13-v1-refresh.js
+      - name: Upload refreshed revision output and manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: round-1675-toto13-v1-refresh-reproduction
+          path: |
+            tmp/round_1675_toto13_v1_revision_20261126T022833JST.jsonl
+            tmp/round_1675_toto13_v1_revision_manifest_20261126T022833JST.json
+          if-no-files-found: error

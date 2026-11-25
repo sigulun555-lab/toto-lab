@@ -121,3 +121,37 @@ test('02:33 JST team-news delta preserves prior notices and does not claim full 
     assert.ok(sourceIds.includes(id));
   }
 });
+
+
+const market0935 = JSON.parse(fs.readFileSync(path.join(root, 'reports/round_1674_toto13_official_market_snapshot_20261125T0935JST.json'), 'utf8'));
+const v2Revision2204 = readJsonl('predictions/round_1674_ChatGPT_shared_score_v2_revision_20261124T2204JST.jsonl');
+
+test('09:35 official toto13 market observation is archived stale and excluded from any new V2 revision', () => {
+  assert.equal(market0935.schemaVersion, 1);
+  assert.equal(market0935.product, 'toto13');
+  assert.equal(market0935.round, 1674);
+  assert.equal(market0935.pageDisplayAt, '2026-11-25T09:35:00+09:00');
+  assert.equal(market0935.retrievedAt, '2026-11-25T10:17:29+09:00');
+  assert.equal(market0935.displayAgeSeconds, 2549);
+  assert.equal(market0935.refreshIntervalSeconds, 300);
+  assert.equal(market0935.stale, true);
+  assert.equal(market0935.totalVotesPageSummary, 435677);
+  assert.equal(market0935.matchCount, 13);
+  assert.equal(market0935.matches.length, 13);
+  assert.deepEqual(market0935.matches.map(m => m.matchNumber), Array.from({length: 13}, (_, i) => i + 1));
+  assert.equal(market0935.matches.every(m => m.sumVotes === 435677 && m.sumPercent === 100), true);
+  assert.equal(market0935.countConsistency.allMatchVoteTotalsEqualPageSummary, true);
+  assert.equal(market0935.countConsistency.allDisplayedPercentagesSumTo100, true);
+  assert.equal(market0935.countConsistency.allMarketVoteShareRowsMatchDisplayedPercentages, true);
+  assert.equal(market0935.v2Eligibility.marketInputFresh, false);
+  assert.equal(market0935.v2Eligibility.predictionGenerationEligible, false);
+  assert.match(market0935.v2Eligibility.reason, /2549 seconds old/);
+  assert.ok(market0935.predictionImpact.includes('No new toto13 V2 revision'));
+  assert.equal(v2.length, 13);
+  assert.equal(v2Revision2204.length, 13);
+  assert.equal(new Set(v2.map(r => r.predictionId)).size, 13);
+  assert.equal(new Set(v2Revision2204.map(r => r.predictionId)).size, 13);
+  assert.equal(new Set(v2.map(r => r.predictionConfirmedAt)).size, 1);
+  assert.equal(new Set(v2Revision2204.map(r => r.predictionConfirmedAt)).size, 1);
+  assert.equal(v2Revision2204[0].predictionConfirmedAt, '2026-11-24T13:08:37.000Z');
+});

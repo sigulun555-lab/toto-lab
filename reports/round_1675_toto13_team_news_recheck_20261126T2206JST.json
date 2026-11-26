@@ -174,6 +174,22 @@
           "detail": "左足内果疲労骨折、11/10手術、全治約3か月"
         }
       ]
+    },
+    {
+      "source": "JEF United official injury notice",
+      "url": "https://jefunited.co.jp/news/detail/5736",
+      "publishedAt": "2026-11-09",
+      "retrievedAt": "2026-11-26T22:06:06+09:00",
+      "findings": [
+        {
+          "team": "千葉",
+          "player": "マテウス インディオ",
+          "matchNumber": 8,
+          "side": "away",
+          "publishedAt": "2026-11-09",
+          "detail": "左膝蓋腱断裂、受傷日2026-10-29。クラブ公式の復帰時期は今回の確認範囲で未確認"
+        }
+      ]
     }
   ],
   "secondarySources": [
@@ -670,11 +686,17 @@
           ]
         }
       ],
-      "officialInjuries": [],
+      "officialInjuries": [
+        {
+          "player": "マテウス インディオ",
+          "publishedAt": "2026-11-09",
+          "detail": "左膝蓋腱断裂、受傷日2026-10-29。クラブ公式の復帰時期は今回の確認範囲で未確認"
+        }
+      ],
       "secondaryAbsences": [],
       "secondarySource": null,
       "secondaryPageUpdatedAt": null,
-      "officialAvailabilityStatus": "official_suspension_confirmed",
+      "officialAvailabilityStatus": "official_suspension_and_injury_notice_found",
       "predictedLineupStatus": "確認した範囲で未確認",
       "officialStartingLineupStatus": "未発表（2026-11-26 22:06 JST時点）",
       "sourceURLs": [
@@ -871,7 +893,8 @@
     "officialInjuryNoticesFoundForTeams": [
       "京都",
       "水戸",
-      "岡山"
+      "岡山",
+      "千葉"
     ],
     "secondaryPreviewMatches": [
       3,
@@ -882,12 +905,23 @@
     "officialInjuryCoverageComplete": false,
     "predictedLineupCoverageComplete": false,
     "officialLineupCoverageComplete": false,
-    "overallCoverageComplete": false
+    "overallCoverageComplete": false,
+    "officialInjuryNoticePlayerCount": 6
   },
   "policy": {
     "availabilityInformationAppliedToV1": false,
     "availabilityInformationAppliedToV2": false,
     "marketBlendOnly": true,
     "notes": "No manual injury, suspension, availability, or lineup adjustment was applied to any probability. Secondary absence lists are not treated as confirmed. Recheck before the 2026-11-28 13:50 JST deadline and after official lineups are published."
-  }
+  },
+  "dataQualityConflicts": [
+    {
+      "team": "千葉",
+      "player": "植田 悠太",
+      "source": "JEF United official loan-extension notice",
+      "url": "https://jefunited.co.jp/news/detail/5215",
+      "publishedAt": "2026-06-23",
+      "detail": "2026-07-01〜2027-06-30の育成型期限付き移籍で京都所属。京都との公式戦には出場できない。Chibaの欠場選手として扱わない。"
+    }
+  ]
 }

@@ -1,26 +1,95 @@
 {
   "round": 1675,
-  "holdDates": ["2026-11-28", "2026-11-29"],
+  "holdDates": [
+    "2026-11-28",
+    "2026-11-29"
+  ],
   "matches": [
-    { "matchNumber": 1, "homeTeam": "京都サンガF.C.", "awayTeam": "セレッソ大阪" },
-    { "matchNumber": 2, "homeTeam": "柏レイソル", "awayTeam": "サンフレッチェ広島" },
-    { "matchNumber": 3, "homeTeam": "横浜F・マリノス", "awayTeam": "FC東京" },
-    { "matchNumber": 4, "homeTeam": "水戸ホーリーホック", "awayTeam": "V・ファーレン長崎" },
-    { "matchNumber": 5, "homeTeam": "名古屋グランパス", "awayTeam": "アビスパ福岡" },
-    { "matchNumber": 6, "homeTeam": "清水エスパルス", "awayTeam": "浦和レッズ" },
-    { "matchNumber": 7, "homeTeam": "鹿島アントラーズ", "awayTeam": "ファジアーノ岡山" },
-    { "matchNumber": 8, "homeTeam": "ヴィッセル神戸", "awayTeam": "ジェフユナイテッド千葉" },
-    { "matchNumber": 9, "homeTeam": "FC町田ゼルビア", "awayTeam": "東京ヴェルディ" },
-    { "matchNumber": 10, "homeTeam": "川崎フロンターレ", "awayTeam": "ガンバ大阪" },
-    { "matchNumber": 11, "homeTeam": "ヴァンラーレ八戸", "awayTeam": "藤枝MYFC" },
-    { "matchNumber": 12, "homeTeam": "テゲバジャーロ宮崎", "awayTeam": "サガン鳥栖" },
-    { "matchNumber": 13, "homeTeam": "ベガルタ仙台", "awayTeam": "モンテディオ山形" }
+    {
+      "matchNumber": 1,
+      "homeTeam": "京都サンガF.C.",
+      "awayTeam": "セレッソ大阪"
+    },
+    {
+      "matchNumber": 2,
+      "homeTeam": "柏レイソル",
+      "awayTeam": "サンフレッチェ広島"
+    },
+    {
+      "matchNumber": 3,
+      "homeTeam": "横浜F・マリノス",
+      "awayTeam": "FC東京"
+    },
+    {
+      "matchNumber": 4,
+      "homeTeam": "水戸ホーリーホック",
+      "awayTeam": "V・ファーレン長崎"
+    },
+    {
+      "matchNumber": 5,
+      "homeTeam": "名古屋グランパス",
+      "awayTeam": "アビスパ福岡"
+    },
+    {
+      "matchNumber": 6,
+      "homeTeam": "清水エスパルス",
+      "awayTeam": "浦和レッズ"
+    },
+    {
+      "matchNumber": 7,
+      "homeTeam": "鹿島アントラーズ",
+      "awayTeam": "ファジアーノ岡山"
+    },
+    {
+      "matchNumber": 8,
+      "homeTeam": "ヴィッセル神戸",
+      "awayTeam": "ジェフユナイテッド千葉"
+    },
+    {
+      "matchNumber": 9,
+      "homeTeam": "FC町田ゼルビア",
+      "awayTeam": "東京ヴェルディ"
+    },
+    {
+      "matchNumber": 10,
+      "homeTeam": "川崎フロンターレ",
+      "awayTeam": "ガンバ大阪"
+    },
+    {
+      "matchNumber": 11,
+      "homeTeam": "ヴァンラーレ八戸",
+      "awayTeam": "藤枝MYFC"
+    },
+    {
+      "matchNumber": 12,
+      "homeTeam": "テゲバジャーロ宮崎",
+      "awayTeam": "サガン鳥栖"
+    },
+    {
+      "matchNumber": 13,
+      "homeTeam": "ベガルタ仙台",
+      "awayTeam": "モンテディオ山形"
+    }
   ],
-  "miniTotoA": [1, 2, 3, 4, 5],
-  "miniTotoB": [6, 7, 8, 9, 10],
+  "miniTotoA": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "miniTotoB": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
   "sources": [
-    "https://toto.rakuten.co.jp/toto/schedule/1675/",
-    "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1675"
+    "https://sp.toto-dream.com/dcs/subos/screen/ss01/sssl021/PGSSSL02101InittotoSP.form?commodityId=01&fromId=SSIN026&holdCntId=1675",
+    "https://sp.toto-dream.com/dcs/subos/screen/ss01/sssl021/PGSSSL02101InittotoSP.form?commodityId=06&fromId=SSIN026&holdCntId=1675",
+    "https://sp.toto-dream.com/dcs/subos/screen/ss01/sssl021/PGSSSL02101InittotoSP.form?commodityId=07&fromId=SSIN026&holdCntId=1675",
+    "https://toto.rakuten.co.jp/toto/schedule/1675/"
   ],
-  "retrievedAt": "2026-11-27T05:00:00Z"
+  "retrievedAt": "2026-11-27T02:06:05+09:00"
 }

@@ -107,10 +107,10 @@
   },
   "teamNewsAudit": {
     "path": "reports/round_1675_toto13_team_news_recheck_20261126T2206JST.json",
-    "blobSha": "2790c3780b74866714fb0a56c1abc61fd093f719",
+    "blobSha": "4763f1951bf75f935fc929c0ee45db996845e308",
     "teamsReviewed": 26,
     "officialSuspensionPlayersRelevant": 9,
-    "officialInjuryNoticesFound": 5,
+    "officialInjuryNoticesFound": 6,
     "secondaryPreviewMatches": [
       3,
       4,
@@ -119,7 +119,13 @@
     ],
     "officialStartingLineupsPublished": false,
     "coverageComplete": false,
-    "probabilityAdjustmentApplied": false
+    "probabilityAdjustmentApplied": false,
+    "officialInjuryNoticesFoundForTeams": [
+      "京都",
+      "水戸",
+      "岡山",
+      "千葉"
+    ]
   },
   "dependencies": {
     "stackedOnPR140": true,

@@ -3,7 +3,7 @@
   "product": "toto13",
   "round": 1675,
   "predictionVersion": "V2",
-  "status": "saved_on_stacked_pr_branch_ci_pending",
+  "status": "saved_on_stacked_pr_branch_ci_success",
   "generatedAt": "2026-11-26T22:06:06+09:00",
   "generatedAtUtc": "2026-11-26T13:06:06.000Z",
   "deadlineAt": "2026-11-28T13:50:00+09:00",
@@ -139,10 +139,19 @@
     "mergePerformed": false
   },
   "ci": {
-    "status": "pending_after_pr_creation",
+    "status": "success",
     "npmTestRequired": true,
     "checkTeamsRequired": true,
-    "doNotTreatAsSuccessUntilChecksComplete": true
+    "doNotTreatAsSuccessUntilChecksComplete": true,
+    "runNumber": 936,
+    "runId": 45828912215,
+    "runUrl": "https://github.com/sigulun555-lab/toto-lab/actions/runs/45828912215",
+    "jobCount": 1,
+    "stepCount": 8,
+    "npmTest": "success",
+    "checkTeams": "success",
+    "verifiedAtUtc": "2026-11-27T03:06:25.402Z",
+    "note": "Manifest status reconciled after reading completed GitHub run #936; no prediction or market data changed."
   },
   "safety": {
     "mainModified": false,

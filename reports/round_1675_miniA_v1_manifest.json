@@ -79,7 +79,8 @@
         "home": "名古屋グランパス",
         "away": "アビスパ福岡"
       }
-    ]
+    ],
+    "officialScheduleEvidenceUrl": "https://sp.toto-dream.com/dcs/subos/screen/ss01/sssl021/PGSSSL02101InittotoSP.form?commodityId=01&fromId=SSIN026&holdCntId=1675"
   },
   "model": {
     "repository": "sigulun555-lab/gpt",

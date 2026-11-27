@@ -52,3 +52,24 @@ test('the copied pinned 30/70 helper retains its exact probability-level behavio
     { '1': 0.46, '0': 0.27, '2': 0.27 }
   );
 });
+
+test('round 1675 team-level suspensions reconcile with the J.League official list', () => {
+  const newsPath = path.join(ROOT, 'reports/round_1675_toto13_team_news_recheck_20261126T2206JST.json');
+  const news = JSON.parse(fs.readFileSync(newsPath, 'utf8'));
+  const official = news.officialSources.find(x => x.source === 'J.League official suspension list');
+  assert.ok(official, 'official J.League suspension source is recorded');
+  const expected = official.findings.map(x => [x.matchNumber, x.side, x.player, x.suspension].join('|')).sort();
+  const actual = news.teams.flatMap(team => (team.officialSuspensions || []).map(x =>
+    [team.matchNumber, team.side, x.player, x.code].join('|')
+  )).sort();
+  assert.equal(news.coverage.teamsReviewed, 26);
+  assert.equal(news.coverage.officialSuspensionPlayerCount, 9);
+  assert.equal(news.coverage.officialSuspensionTeamCount, 8);
+  assert.equal(expected.length, 9);
+  assert.deepEqual(actual, expected);
+  const gamba = news.teams.find(x => x.matchNumber === 10 && x.side === 'away');
+  assert.ok(gamba.officialSuspensions.some(x => x.player === '初瀬 亮' && x.code === 'J1(a)'));
+  assert.equal(news.coverage.officialInjuryNoticePlayerCount, 6);
+  assert.equal(news.lineupStatus.officialStartingLineupsPublished, false);
+  assert.equal(news.coverage.officialLineupCoverageComplete, false);
+});

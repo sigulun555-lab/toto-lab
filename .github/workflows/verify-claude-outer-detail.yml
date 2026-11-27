@@ -1,0 +1,129 @@
+name: Verify Claude GOAL3 outer-detail clean checkout
+
+on:
+  push:
+    branches:
+      - audit/claude-outer-detail-clean-checkout-20261116
+    paths:
+      - ".github/workflows/verify-claude-outer-detail.yml"
+      - "analysis/goal3_outer_detail/claude_input_manifest_2026-11-16.json"
+      - "analysis/goal3_outer_detail/verify_reproduction.py"
+      - "analysis/goal3_outer_detail/diagnose_current_cohort.py"
+      - "analysis/goal3_outer_detail/pcg64_50k_sensitivity.py"
+      - "tests/test_goal3_pcg64_50k.py"
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/verify-claude-outer-detail.yml"
+      - "analysis/goal3_outer_detail/claude_input_manifest_2026-11-16.json"
+      - "analysis/goal3_outer_detail/verify_reproduction.py"
+      - "analysis/goal3_outer_detail/diagnose_current_cohort.py"
+      - "analysis/goal3_outer_detail/pcg64_50k_sensitivity.py"
+      - "tests/test_goal3_pcg64_50k.py"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout audit PR
+        uses: actions/checkout@v4
+        with:
+          path: toto-lab
+          persist-credentials: false
+
+      - name: Checkout pinned Claude source and reference
+        uses: actions/checkout@v4
+        with:
+          repository: sigulun555-lab/toto-lab
+          ref: d9148be49bb28c28da31428395a82ede2863fe47
+          path: claude-source
+          persist-credentials: false
+
+      - name: Checkout pinned GPT inputs
+        uses: actions/checkout@v4
+        with:
+          repository: sigulun555-lab/gpt
+          ref: 395fa5442a670896df4113d69962123b06413533
+          path: gpt-source
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install pinned numerical dependencies
+        run: python -m pip install numpy==2.1.3 scipy==1.14.1
+
+      - name: Run supplemental PCG64 bootstrap unit tests
+        run: python toto-lab/tests/test_goal3_pcg64_50k.py
+
+      - name: Verify immutable input commits and Git blob SHAs
+        run: |
+          python toto-lab/analysis/goal3_outer_detail/verify_reproduction.py \
+            --manifest toto-lab/analysis/goal3_outer_detail/claude_input_manifest_2026-11-16.json \
+            --gpt-root gpt-source \
+            --claude-root claude-source \
+            --check-inputs
+
+      - name: Re-run Claude's portable CLI from clean checkouts
+        shell: bash
+        run: |
+          set -euo pipefail
+          python claude-source/analysis/goal3_outer_detail/goal3_detail.py \
+            --gpt-repo-root "$GITHUB_WORKSPACE/gpt-source" \
+            --output "$RUNNER_TEMP/goal3_outer_matches.json" \
+            2>&1 | tee "$RUNNER_TEMP/reproduction.log"
+
+      - name: Recompute current-cohort k sensitivity, calibration, and Poisson residuals
+        run: |
+          python toto-lab/analysis/goal3_outer_detail/diagnose_current_cohort.py \
+            --gpt-root gpt-source \
+            --predictions "$RUNNER_TEMP/goal3_outer_matches.json" \
+            --out "$RUNNER_TEMP/goal3_current_cohort_diagnostics.json" \
+            2>&1 | tee "$RUNNER_TEMP/diagnostics.log"
+      - name: Verify exact reference parity and canonical bootstrap
+        run: |
+          python toto-lab/analysis/goal3_outer_detail/verify_reproduction.py \
+            --manifest toto-lab/analysis/goal3_outer_detail/claude_input_manifest_2026-11-16.json \
+            --gpt-root gpt-source \
+            --claude-root claude-source \
+            --generated "$RUNNER_TEMP/goal3_outer_matches.json" \
+            --log "$RUNNER_TEMP/reproduction.log" \
+            --check-output
+
+      - name: Run independent 50,000-replicate PCG64 sensitivity
+        run: |
+          python toto-lab/analysis/goal3_outer_detail/pcg64_50k_sensitivity.py \
+            --historical claude-source/analysis/goal3_outer_detail/goal3_outer_matches.json \
+            --current "$RUNNER_TEMP/goal3_outer_matches.json" \
+            --diagnostics "$RUNNER_TEMP/goal3_current_cohort_diagnostics.json" \
+            --manifest toto-lab/analysis/goal3_outer_detail/claude_input_manifest_2026-11-16.json \
+            --out "$RUNNER_TEMP/goal3_pcg64_50k_sensitivity.json" \
+            --replicates 50000 --seed 1
+
+      - name: Upload clean-checkout reproduction evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: claude-goal3-outer-detail-clean-checkout-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/goal3_outer_matches.json
+            ${{ runner.temp }}/reproduction.log
+            ${{ runner.temp }}/goal3_current_cohort_diagnostics.json
+            ${{ runner.temp }}/diagnostics.log
+            ${{ runner.temp }}/goal3_pcg64_50k_sensitivity.json
+            toto-lab/analysis/goal3_outer_detail/claude_input_manifest_2026-11-16.json
+            claude-source/analysis/goal3_outer_detail/goal3_outer_matches.json
+            gpt-source/data/history.json
+            gpt-source/data/team_aliases.json
+            gpt-source/verification/goal3_independent/nested_validation.py
+            gpt-source/verification/goal3_independent/2025.csv
+          if-no-files-found: warn
+          retention-days: 30
+          overwrite: false

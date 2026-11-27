@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Read-only clean-checkout reproduction of Claude's GOAL3 2026-only k=6/k=10 outer-detail script. Historical reference and current-input reproduction are reported as separate cohorts.",
+  "claude": {
+    "repository": "sigulun555-lab/toto-lab",
+    "commit": "d9148be49bb28c28da31428395a82ede2863fe47",
+    "scriptPath": "analysis/goal3_outer_detail/goal3_detail.py",
+    "scriptBlobSha": "17888eba14095a4a914ada242055887531620ae4",
+    "referencePath": "analysis/goal3_outer_detail/goal3_outer_matches.json",
+    "referenceBlobSha": "6f8ac699cd907d72a97575f4ff15efa842fa043b",
+    "historicalReferenceOriginalInputManifestAvailable": false,
+    "historicalReferenceNote": "The 472-target JSON predates the current pinned GPT input snapshot. Its original history/nested_validation input SHAs were not recorded; verify it as a historical artifact, not as a same-input expected output."
+  },
+  "gpt": {
+    "repository": "sigulun555-lab/gpt",
+    "commit": "395fa5442a670896df4113d69962123b06413533",
+    "inputs": {
+      "data/history.json": "e7b6a068e4fc459642b7c07e46f6fd211d256329",
+      "data/team_aliases.json": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab",
+      "verification/goal3_independent/nested_validation.py": "b6342d13038129bb8a8d474b0653930cb2e1d461",
+      "verification/goal3_independent/2025.csv": "847d324c5a6168d02efe328f8173418a951af720"
+    },
+    "historyRows": 480,
+    "historyUpdatedAt": "2026-11-16T06:25:20.060Z",
+    "historyFetchedAtUniqueCount": 1,
+    "historyFetchedAt": "2026-11-16T06:25:20.060Z",
+    "historySource": "k-addtimes/jleague_open_data community mirror",
+    "aliasMapUpdatedAt": "2026-10-22"
+  },
+  "protocol": {
+    "window": "2026_only",
+    "bootstrap": {
+      "unit": "date",
+      "rng": "Python random.Random(1)",
+      "sampling": "sorted unique dates; choices(k=number of unique dates) with replacement",
+      "replicates": 10000,
+      "percentile": "NumPy linear percentile at 2.5 and 97.5"
+    },
+    "historicalReference": {
+      "targets": 472,
+      "matches": 236,
+      "dates": 17,
+      "expected": {
+        "meanDeltaBrier": -0.00061666832112453,
+        "deltaBrier95": [
+          -0.003679873043345173,
+          0.0024272209554595738
+        ],
+        "meanDeltaLogLoss": -0.002158787442366624,
+        "deltaLogLoss95": [
+          -0.008482506988436216,
+          0.0037774027204055395
+        ]
+      }
+    },
+    "currentReproduction": {
+      "targets": 480,
+      "matches": 240,
+      "dates": 19,
+      "expected": {
+        "meanDeltaBrier": 0.00038798117169906894,
+        "deltaBrier95": [
+          -0.0026222629257773365,
+          0.0031258669339772607
+        ],
+        "meanDeltaLogLoss": 0.0004293892871072435,
+        "deltaLogLoss95": [
+          -0.0059253946663251214,
+          0.006448556559726574
+        ]
+      }
+    }
+  },
+  "knownLimitations": [
+    "The current 2026 history is a community mirror snapshot, not an official J.League publication-time feed.",
+    "All 480 current history rows share fetchedAt=2026-11-16T06:25:20.060Z; this cannot establish each row's first-known time.",
+    "The alias map was updated 2026-10-22; 9 of the 19 current target dates predate that update, so the present alias map is not proof of the mapping known on each historical target date.",
+    "The historical 472-target/17-date reference has no original input SHA manifest. The current pinned input expands the run to 480 targets/240 matches/19 dates; the cohorts must not be pooled or described as a same-input rerun.",
+    "The current 19-date retrospective cohort remains below the predeclared 20-round prospective adoption threshold. Both current 95% intervals include zero.",
+    "No production model, market weight, main branch, prediction log, or existing shadow artifact is changed or authorized by this audit."
+  ],
+  "audit": {
+    "diagnosticScriptPath": "analysis/goal3_outer_detail/diagnose_current_cohort.py",
+    "diagnosticScriptBlobSha": "f612d86ed344d93a90bac70653c5f90e71638562"
+  }
+}

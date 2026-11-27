@@ -16,7 +16,7 @@ const CONFIG = Object.freeze({
   marketSnapshotPath: 'reports/round_1675_toto13_official_market_snapshot_20261126T2205JST.json',
   requireFreshVoteData: true,
   maxVoteAgeSeconds: 300,
-  notes: 'Historical comparison only. The saved snapshot did not capture the separate official vote-status update timestamp, so vote-data freshness is unverified. The 30/70 weights are unchanged. No injury/suspension/availability/lineup adjustment; not a production model or market-weight change.'
+  notes: 'Experimental comparison only. Official vote shares are market choices, not calibrated true outcome probabilities. No injury/suspension/availability/lineup adjustment. Research-only; not a production model or market-weight change.'
 });
 function readJsonl(file) {
   return fs.readFileSync(path.join(ROOT, file), 'utf8').trim().split(/\r?\n/).filter(Boolean).map(JSON.parse);
@@ -66,7 +66,7 @@ function buildRows(v1Rows, marketSnapshot, options = CONFIG) {
       revisionOf: base.predictionId,
       outcomeProbabilities,
       modelVersion: options.modelVersion,
-      dataSource: 'V2 probability-level blend: 30% latest GPT Poisson V1 revision + 70% official product-specific toto vote share. Base V1 row ' + base.predictionId + '; model.js commit a678a296a13eea4beec142083107e69ffda2fed4; 537 completed J1/J2/J3 matches through 2026-11-25. Official market snapshot ' + options.marketSnapshotPath + ' (page display 2026-11-26 22:05 JST; retrieved 22:06:06 JST; vote-status timestamp not captured).',
+      dataSource: 'V2 probability-level blend: 30% latest GPT Poisson V1 revision + 70% official product-specific toto vote share. Base V1 row ' + base.predictionId + '; model.js commit a678a296a13eea4beec142083107e69ffda2fed4; 537 completed J1/J2/J3 matches through 2026-11-25. Official market snapshot ' + options.marketSnapshotPath + ' (display 2026-11-26 22:05 JST; retrieved 22:06:06 JST).',
       notes: options.notes,
       baseModelOutcomeProbabilities: base.outcomeProbabilities,
       marketVoteShare: market.marketVoteShare,

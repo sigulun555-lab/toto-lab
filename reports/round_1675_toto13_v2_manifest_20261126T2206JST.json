@@ -113,7 +113,7 @@
   },
   "generator": {
     "path": "scripts/round_1675_toto13_v2_generator.js",
-    "blobSha": "6b7347c7c2e52bef4635c054e164616b1d5c1f5d",
+    "blobSha": "63c72ab14b403753ac65084fbbe6935d8a833264",
     "testPath": "tests/round-1675-toto13-v2.test.js",
     "testBlobSha": "5ae92351807946ab587f51a36b9b6f63fa417685",
     "packageJsonBlobSha": "64df82b2636bb06db9dcfedb1e9ab724bcc4afeb",
@@ -153,12 +153,15 @@
     "mergePerformed": false
   },
   "ci": {
-    "status": "pending_new_head",
-    "previousValidatedHead": "adb730869cbaf5f1a0a4900055adf29b921df783",
-    "previousRunNumber": 944,
-    "previousRunId": 45988173450,
-    "previousRunUrl": "https://github.com/sigulun555-lab/toto-lab/actions/runs/45988173450",
-    "previousRunConclusion": "success",
+    "status": "pending_fix_for_failed_run",
+    "failedHead": "5b87cef71f646783d042ed0b8ad73ae60e933a79",
+    "failedRunNumber": 954,
+    "failedRunId": 46062426987,
+    "failedRunUrl": "https://github.com/sigulun555-lab/toto-lab/actions/runs/46062426987",
+    "failedConclusion": "failure",
+    "failedStep": "npm test",
+    "failedTest": "round 1675 legacy V2 rows reproduce exactly without rewriting the saved artifact",
+    "failureCause": "The freshness-guard commit changed legacy row notes/dataSource strings, so exact JSON reproduction differed even though the 30/70 probabilities were unchanged. The generator text is restored to the pinned historical values in this fix.",
     "runNumber": null,
     "runId": null,
     "runUrl": null,
@@ -167,7 +170,7 @@
     "npmTest": "pending",
     "checkTeams": "pending",
     "verifiedAtUtc": null,
-    "note": "Run #944 validated the previous head adb730. The new vote-data freshness guard and legacy-only reproduction change are not yet validated; do not treat this new head as passed until its own PR CI completes."
+    "note": "The other four V2 tests passed in run #954; check:teams was skipped because npm test failed. This corrective head is pending its own CI."
   },
   "safety": {
     "mainModified": false,

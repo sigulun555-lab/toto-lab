@@ -123,3 +123,23 @@ def test_exclusive_output_file_creation_never_overwrites(tmp_path):
     with pytest.raises(FileExistsError):
         analysis.write_exclusive(target, "replacement")
     assert target.read_text(encoding="utf-8") == "original"
+
+def test_input_manifest_pins_source_artifact_and_local_gradient_code():
+    manifest = analysis.INPUT_MANIFEST
+    assert manifest["manifestId"] == "goal3-k6-k10-retrospective-20261116-v1"
+    assert manifest["source"]["repo"] == "sigulun555-lab/gpt"
+    assert manifest["source"]["commit"] == "2adf65a20247dd30c5b86ae95c22bd75980cda89"
+    assert manifest["artifact"]["runId"] == 43527604151
+    assert manifest["artifact"]["artifactId"] == 14085113748
+    assert manifest["cohort"]["teamSideTargets"] == 472
+    assert manifest["cohort"]["outerMatches"] == 236
+    assert analysis.EXPECTED["history"] == manifest["files"]["history"]["sha256"]
+    assert analysis.EXPECTED["aliases"] == manifest["files"]["aliases"]["sha256"]
+    assert analysis.EXPECTED["csv"] == manifest["files"]["csv"]["sha256"]
+    assert analysis.EXPECTED["nested_validation_git_blob"] == manifest["files"]["nested_validation"]["gitBlobSha"]
+
+    runner = SCRIPT_DIR / "analysis.py"
+    assert analysis.verify_sha256(runner, manifest["files"]["analysis"]["sha256"], "analysis.py")
+    local_module = SCRIPT_DIR.parents[1] / "verification" / "goal3_independent" / "nested_validation.py"
+    assert analysis.verify_sha256(local_module, manifest["files"]["gradient_module"]["sha256"], "gradient module")
+    assert analysis.verify_git_blob(local_module, manifest["files"]["gradient_module"]["gitBlobSha"], "gradient module")

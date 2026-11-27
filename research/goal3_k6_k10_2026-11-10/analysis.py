@@ -14,11 +14,13 @@ import sys
 from importlib.metadata import PackageNotFoundError, version as distribution_version
 from pathlib import Path
 
+INPUT_MANIFEST_PATH = Path(__file__).resolve().with_name("input_manifest.json")
+INPUT_MANIFEST = json.loads(INPUT_MANIFEST_PATH.read_text(encoding="utf-8"))
 EXPECTED = {
-    "history": "efca00ea491fcfea6a1267af403cb5ba80ae540fca97a076def25815fc318201",
-    "aliases": "92e6377068df8dd63935e0c003adfd7b355e7adac23f7aace4f947be4f5f027e",
-    "csv": "6175674bc28d4311b219eed5ea2aa5e478fe0f17b8e6b8653f37718057da4288",
-    "nested_validation_git_blob": "5f73df9e6fdb43d5cf333c04036f87ae16c20d1f",
+    "history": INPUT_MANIFEST["files"]["history"]["sha256"],
+    "aliases": INPUT_MANIFEST["files"]["aliases"]["sha256"],
+    "csv": INPUT_MANIFEST["files"]["csv"]["sha256"],
+    "nested_validation_git_blob": INPUT_MANIFEST["files"]["nested_validation"]["gitBlobSha"],
 }
 
 
@@ -128,6 +130,18 @@ def main(argv=None):
     aliases_path = args.aliases.expanduser().resolve()
     csv_path = args.csv.expanduser().resolve()
     out_dir = args.out_dir.expanduser().resolve()
+    verify_sha256(
+        Path(__file__).resolve(), INPUT_MANIFEST["files"]["analysis"]["sha256"], "analysis.py"
+    )
+    local_gradient_module = Path(__file__).resolve().parents[2] / "verification" / "goal3_independent" / "nested_validation.py"
+    verify_sha256(
+        local_gradient_module, INPUT_MANIFEST["files"]["gradient_module"]["sha256"],
+        "local gradient module",
+    )
+    verify_git_blob(
+        local_gradient_module, INPUT_MANIFEST["files"]["gradient_module"]["gitBlobSha"],
+        "local gradient module",
+    )
     for label, path in (("history", history_path), ("aliases", aliases_path), ("csv", csv_path)):
         if not path.is_file():
             raise FileNotFoundError(f"{label} input not found: {path}")
@@ -300,6 +314,10 @@ def main(argv=None):
             },
         },
         "code": {"analysis.py": sha256_file(Path(__file__).resolve())},
+        "inputManifest": {
+            "manifestId": INPUT_MANIFEST["manifestId"],
+            "sha256": sha256_file(INPUT_MANIFEST_PATH),
+        },
         "environment": {
             "python": platform.python_version(),
             "implementation": platform.python_implementation(),

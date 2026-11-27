@@ -92,3 +92,20 @@ test('round 1675 team-level suspensions reconcile with the J.League official lis
   assert.equal(news.lineupStatus.officialStartingLineupsPublished, false);
   assert.equal(news.coverage.officialLineupCoverageComplete, false);
 });
+
+test('2026-11-28 official injury addendum records two new notices without changing V2 probabilities', () => {
+  const addendumPath = path.join(ROOT, 'reports/round_1675_toto13_team_news_addendum_20261128T051743JST.json');
+  const addendum = JSON.parse(fs.readFileSync(addendumPath, 'utf8'));
+  assert.equal(addendum.round, 1675);
+  assert.equal(addendum.product, 'toto13');
+  assert.equal(addendum.newOfficialInjuryNotices.length, 2);
+  assert.ok(addendum.newOfficialInjuryNotices.some(x => x.player === '蓮川 壮大' && x.matchNumber === 6 && x.side === 'home'));
+  assert.ok(addendum.newOfficialInjuryNotices.some(x => x.player === 'ウェルトン' && x.matchNumber === 10 && x.side === 'away'));
+  assert.equal(addendum.suspensionSource.roundRelevantSuspensionPlayerCount, 9);
+  assert.equal(addendum.coverage.totalOfficialInjuryNoticePlayers, 8);
+  assert.equal(addendum.coverage.teamsInToto13, 26);
+  assert.equal(addendum.lineupStatus.match1OfficialStartingLineupPublished, false);
+  assert.equal(addendum.lineupStatus.all13OfficialLineupPagesChecked, false);
+  assert.equal(addendum.modelAdjustmentApplied, false);
+  assert.equal(addendum.predictionRevisionCreated, false);
+});

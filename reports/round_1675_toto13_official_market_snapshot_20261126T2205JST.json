@@ -11,7 +11,7 @@
   "retrievedAt": "2026-11-26T22:06:06+09:00",
   "displayAgeSeconds": 66,
   "refreshNotice": "5分毎",
-  "stale": false,
+  "stale": null,
   "deadlineAt": "2026-11-28T13:50:00+09:00",
   "deadlineAtUtc": "2026-11-28T04:50:00.000Z",
   "totalVotesPageSummaryPerMatch": 177968,
@@ -320,5 +320,10 @@
       "sumPercent": 100
     }
   ],
-  "interpretation": "Official 1/X/2 vote shares are bettor selections, not calibrated true outcome probabilities. This snapshot is used only by the experimental 30/70 blend."
+  "interpretation": "Official 1/X/2 vote shares are bettor selections, not calibrated true outcome probabilities. This snapshot is used only by the experimental 30/70 blend.",
+  "pageSnapshotStale": false,
+  "pageDisplayAgeScope": "Page-display-to-retrieval interval only; it does not establish when the vote-share data itself was updated.",
+  "voteStatusUpdatedAt": null,
+  "voteDataFreshnessVerified": false,
+  "voteDataFreshnessNote": "The original 2026-11-26 capture did not persist the separate official 投票状況更新日時. A later 2026-11-28 05:06 JST page view reported vote status last updated 2026-11-27 07:51 JST; that later timestamp cannot be backfilled into this historical snapshot."
 }

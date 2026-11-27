@@ -14,12 +14,33 @@ const CONFIG = Object.freeze({
   generatedAtUtc: '2026-11-26T13:06:06.000Z',
   modelVersion: 'GPT-shared-poisson-score-v2-market-blend-30-70-2026-11-26',
   marketSnapshotPath: 'reports/round_1675_toto13_official_market_snapshot_20261126T2205JST.json',
-  notes: 'Experimental comparison only. Official vote shares are market choices, not calibrated true outcome probabilities. No injury/suspension/availability/lineup adjustment. Research-only; not a production model or market-weight change.'
+  requireFreshVoteData: true,
+  maxVoteAgeSeconds: 300,
+  notes: 'Historical comparison only. The saved snapshot did not capture the separate official vote-status update timestamp, so vote-data freshness is unverified. The 30/70 weights are unchanged. No injury/suspension/availability/lineup adjustment; not a production model or market-weight change.'
 });
 function readJsonl(file) {
   return fs.readFileSync(path.join(ROOT, file), 'utf8').trim().split(/\r?\n/).filter(Boolean).map(JSON.parse);
 }
+function assertVoteShareFreshness(marketSnapshot, maxAgeSeconds = 300) {
+  if (!marketSnapshot || !marketSnapshot.voteStatusUpdatedAt) {
+    throw new Error('official voteStatusUpdatedAt is required; pageDisplayAt is not a vote-data update timestamp');
+  }
+  const updatedAt = Date.parse(marketSnapshot.voteStatusUpdatedAt);
+  const retrievedAt = Date.parse(marketSnapshot.retrievedAt);
+  if (!Number.isFinite(updatedAt) || !Number.isFinite(retrievedAt)) {
+    throw new Error('official vote-status and retrieval timestamps must be valid ISO dates');
+  }
+  const ageSeconds = (retrievedAt - updatedAt) / 1000;
+  if (ageSeconds < 0) throw new Error('official vote-status timestamp is after retrieval');
+  if (ageSeconds > maxAgeSeconds) {
+    throw new Error('official vote data is stale: age ' + ageSeconds + 's exceeds ' + maxAgeSeconds + 's');
+  }
+  return ageSeconds;
+}
 function buildRows(v1Rows, marketSnapshot, options = CONFIG) {
+  if (options.requireFreshVoteData !== false) {
+    assertVoteShareFreshness(marketSnapshot, options.maxVoteAgeSeconds || 300);
+  }
   const latest = new Map();
   for (const row of v1Rows) {
     const previous = latest.get(row.matchNumber);
@@ -45,7 +66,7 @@ function buildRows(v1Rows, marketSnapshot, options = CONFIG) {
       revisionOf: base.predictionId,
       outcomeProbabilities,
       modelVersion: options.modelVersion,
-      dataSource: 'V2 probability-level blend: 30% latest GPT Poisson V1 revision + 70% official product-specific toto vote share. Base V1 row ' + base.predictionId + '; model.js commit a678a296a13eea4beec142083107e69ffda2fed4; 537 completed J1/J2/J3 matches through 2026-11-25. Official market snapshot ' + options.marketSnapshotPath + ' (display 2026-11-26 22:05 JST; retrieved 22:06:06 JST).',
+      dataSource: 'V2 probability-level blend: 30% latest GPT Poisson V1 revision + 70% official product-specific toto vote share. Base V1 row ' + base.predictionId + '; model.js commit a678a296a13eea4beec142083107e69ffda2fed4; 537 completed J1/J2/J3 matches through 2026-11-25. Official market snapshot ' + options.marketSnapshotPath + ' (page display 2026-11-26 22:05 JST; retrieved 22:06:06 JST; vote-status timestamp not captured).',
       notes: options.notes,
       baseModelOutcomeProbabilities: base.outcomeProbabilities,
       marketVoteShare: market.marketVoteShare,
@@ -58,10 +79,25 @@ function buildRows(v1Rows, marketSnapshot, options = CONFIG) {
     };
   });
 }
+function buildRowsLegacy(v1Rows, marketSnapshot) {
+  return buildRows(v1Rows, marketSnapshot, { ...CONFIG, requireFreshVoteData: false });
+}
 function main() {
-  const rows = buildRows(readJsonl(CONFIG.v1Path), JSON.parse(fs.readFileSync(path.join(ROOT, CONFIG.marketPath), 'utf8')));
-  fs.writeFileSync(path.join(ROOT, CONFIG.outputPath), rows.map(row => JSON.stringify(row)).join('\n') + '\n');
-  process.stdout.write(JSON.stringify({ product: CONFIG.product, round: 1675, rows: rows.length, predictionIds: rows.map(row => row.predictionId) }, null, 2) + '\n');
+  const v1Rows = readJsonl(CONFIG.v1Path);
+  const market = JSON.parse(fs.readFileSync(path.join(ROOT, CONFIG.marketPath), 'utf8'));
+  const regenerated = buildRowsLegacy(v1Rows, market);
+  const saved = readJsonl(CONFIG.outputPath);
+  if (JSON.stringify(regenerated) !== JSON.stringify(saved)) {
+    throw new Error('legacy V2 reproduction differs from the saved artifact');
+  }
+  process.stdout.write(JSON.stringify({
+    product: CONFIG.product,
+    round: 1675,
+    rows: regenerated.length,
+    verified: true,
+    wroteOutput: false,
+    voteDataFreshnessVerified: false
+  }, null, 2) + '\n');
 }
 if (require.main === module) main();
-module.exports = { CONFIG, buildRows };
+module.exports = { CONFIG, buildRows, buildRowsLegacy, assertVoteShareFreshness };

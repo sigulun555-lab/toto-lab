@@ -17,6 +17,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
+          persist-credentials: true
       - name: Checkout GPT source
         uses: actions/checkout@v4
         with:
@@ -37,8 +38,7 @@ jobs:
                   tmp_branch="$(mktemp)"
                   git show "FETCH_HEAD:$file" > "$tmp_branch"
                   if [ -f "$file" ]; then
-                    # Union merge: keep every line already on main, then add lines
-                    # that exist only on the sync branch. Never drop a line.
+                    # Union merge: retain every main/PR line exactly once.
                     tmp_union="$(mktemp)"
                     cat "$file" "$tmp_branch" | awk 'NF && !seen[$0]++' > "$tmp_union"
                     mv "$tmp_union" "$file"
@@ -65,16 +65,98 @@ jobs:
         run: npm test
       - name: Check canonical team dictionary
         run: npm run check:teams
-      - name: Create or update sync pull request
-        uses: peter-evans/create-pull-request@v7
+
+      - name: Detect whether synchronization produced prediction changes
+        id: sync_changes
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain -- predictions/)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publish sync branch with fast-forward-only push
+        if: steps.sync_changes.outputs.changed == 'true'
+        env:
+          SYNC_BRANCH: automation/sync-gpt-goal3
+        shell: bash
+        run: |
+          set -euo pipefail
+          tmpdir="$(mktemp -d)"
+          trap 'rm -rf "$tmpdir"' EXIT
+
+          # Preserve the already unioned main + existing-PR + new-source files.
+          find predictions -maxdepth 1 -type f -name '*_ChatGPT_goal3.jsonl' -print0 |
+            while IFS= read -r -d '' file; do cp "$file" "$tmpdir/"; done
+
+          # The sync script may have modified tracked JSONL files and created
+          # untracked JSONL files. The verified union is saved above, so restore
+          # the checkout before switching to the fetched remote sync branch.
+          # Without this cleanup, git checkout -B can fail with "local changes
+          # would be overwritten" when main and the sync branch differ.
+          git restore --worktree --staged -- predictions/
+          git clean -fd -- predictions/
+
+          git fetch --no-tags origin main
+          if git ls-remote --exit-code --heads origin "$SYNC_BRANCH" >/dev/null 2>&1; then
+            git fetch --no-tags origin "$SYNC_BRANCH"
+            git checkout -B "$SYNC_BRANCH" FETCH_HEAD
+            # Merge main history first; conflicts prefer current main, then the
+            # verified append-only union saved above is restored below.
+            git merge --no-edit -X theirs origin/main
+          else
+            git checkout -B "$SYNC_BRANCH" origin/main
+          fi
+
+          mkdir -p predictions
+          find "$tmpdir" -maxdepth 1 -type f -name '*_ChatGPT_goal3.jsonl' -print0 |
+            while IFS= read -r -d '' file; do cp "$file" predictions/; done
+
+          git add -- predictions/*_ChatGPT_goal3.jsonl
+          if git diff --cached --quiet; then
+            echo "No new branch commit is needed after reconciling the fetched branch."
+            exit 0
+          fi
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'sync: append latest GPT GOAL3 forecast snapshot'
+          # Deliberately no force option. A concurrent remote update rejects
+          # this push safely and the next scheduled run can retry.
+          git push origin "HEAD:refs/heads/$SYNC_BRANCH"
+
+      - name: Create or update the existing sync pull request
+        if: steps.sync_changes.outputs.changed == 'true'
+        uses: actions/github-script@v7
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: automation/sync-gpt-goal3
-          delete-branch: false
-          commit-message: 'sync: append latest GPT GOAL3 forecast snapshot'
-          title: 'sync: latest GPT totoGOAL3 forecast'
-          body: |
-            Automated append-only synchronization from sigulun555-lab/gpt main data/predictions.json.
-            Original snapshots are preserved, source probabilities are copied without recalculation, and CI must pass before merge.
-          add-paths: |
-            predictions/*_ChatGPT_goal3.jsonl
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const branch = 'automation/sync-gpt-goal3';
+            const title = 'sync: latest GPT totoGOAL3 forecast';
+            const body = [
+              'Automated append-only synchronization from sigulun555-lab/gpt main data/predictions.json.',
+              'Original snapshots are retained and source probabilities are copied without recalculation.',
+              'The branch is updated by a normal fast-forward-only push; concurrent updates fail safely without force-push.',
+              'CI must pass before merge.'
+            ].join('\n\n');
+            const { data: open } = await github.rest.pulls.list({
+              owner, repo, state: 'open', head: `${owner}:${branch}`, base: 'main'
+            });
+            if (open.length > 1) {
+              throw new Error(`Multiple open sync PRs found for ${branch}: ${open.map(p => p.number).join(', ')}`);
+            }
+            if (open.length === 1) {
+              const pr = open[0];
+              await github.rest.pulls.update({
+                owner, repo, pull_number: pr.number, title, body
+              });
+              core.info(`Updated existing sync PR #${pr.number}`);
+            } else {
+              const pr = await github.rest.pulls.create({
+                owner, repo, head: branch, base: 'main', title, body
+              });
+              core.info(`Created sync PR #${pr.data.number}`);
+            }

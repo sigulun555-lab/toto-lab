@@ -1,0 +1,36 @@
+name: round-1675-miniA-v1-reproduction
+on:
+  pull_request:
+    branches: [data/round-1675-schedule]
+    paths:
+      - 'predictions/round_1675_ChatGPT_miniA.jsonl'
+      - 'reports/round_1675_miniA_v1_manifest.json'
+      - 'tools/generate_round_1675_miniA_v1.js'
+      - 'tests/round-1675-miniA-v1-generation.test.js'
+      - '.github/workflows/miniA-round-1675-v1.yml'
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Checkout pinned GPT source
+        run: |
+          git clone --filter=blob:none --no-checkout https://github.com/sigulun555-lab/gpt.git gpt-source
+          git -C gpt-source fetch --depth=1 origin a678a296a13eea4beec142083107e69ffda2fed4
+          git -C gpt-source checkout --detach FETCH_HEAD
+      - name: Checkout pinned toto13 V1 reference
+        run: |
+          git clone --filter=blob:none --no-checkout https://github.com/sigulun555-lab/toto-lab.git toto13-source
+          git -C toto13-source fetch --depth=1 origin 23a8ddaacd96f2f0ba2adefd2d91ed0af26cafd0
+          git -C toto13-source checkout --detach FETCH_HEAD
+      - name: Reproduce exact shared-score model output
+        run: node tools/generate_round_1675_miniA_v1.js --verify
+      - name: Validate prediction schema and product mapping
+        run: node --test tests/round-1675-miniA-v1-generation.test.js
+      - name: Validate team dictionary
+        run: npm run check:teams

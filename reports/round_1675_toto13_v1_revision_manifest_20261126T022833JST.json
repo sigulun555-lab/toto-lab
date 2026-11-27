@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1675,
+  "predictionVersion": "GPT shared-score V1 revision",
+  "generatedAtUtc": "2026-11-25T17:35:38.560Z",
+  "generatedAtJst": "2026-11-26T02:35:38+09:00",
+  "deadlineAt": "2026-11-28T04:50:00.000Z",
+  "previousPredictionFile": "predictions/round_1675_ChatGPT_shared_score_v1.jsonl",
+  "previousPredictionRows": 13,
+  "previousPredictionGitBlobSha": "e8b3be0316105de2e9fed804108ae14696ae2ce4",
+  "revisionPredictionFile": "predictions/round_1675_ChatGPT_shared_score_v1_revision_20261126T022833JST.jsonl",
+  "revisionRows": 13,
+  "revisionOfCount": 13,
+  "history": {
+    "sourceRepository": "k-addtimes/jleague_open_data",
+    "sourcePath": "current_schedule_file.csv",
+    "sourceBlobSha": "3ddebaf4eeef4195ae89e942974bc3c505aa3235",
+    "retrievedAtUtc": "2026-11-25T17:28:54.653Z",
+    "retrievedAtJst": "2026-11-26T02:28:54+09:00",
+    "sourceType": "community mirror; not official J.League feed",
+    "completedMatches": 537,
+    "priorHistoryMatches": 512,
+    "newlyAvailableMatches": 25,
+    "removedPriorMatches": 0,
+    "latestResultDate": "2026-11-25",
+    "completedMatchesOn2026_11_25": 27
+  },
+  "model": {
+    "repository": "sigulun555-lab/gpt",
+    "commit": "a678a296a13eea4beec142083107e69ffda2fed4",
+    "path": "model.js",
+    "blobSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+    "function": "predict(history, fixture)",
+    "version": "GPT-shared-poisson-score-v1-2026-11-21"
+  },
+  "parser": {
+    "path": "scripts/auto_pipeline.js",
+    "blobSha": "ef557e084cab802df7830d949bd1f52ddee5db7c",
+    "function": "parseSchedule(text)"
+  },
+  "aliases": {
+    "path": "data/team_aliases.json",
+    "blobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab"
+  },
+  "officialSchedule": {
+    "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1675",
+    "pageDisplayedAt": "2026-11-25T19:09:00+09:00",
+    "retrievedAt": "2026-11-25T19:14:53+09:00",
+    "saleStartAt": "2026-11-25T08:00:00+09:00",
+    "networkDeadlineAt": "2026-11-28T13:50:00+09:00",
+    "drawDate": "2026-11-29",
+    "snapshotBranch": "data/round-1675-official-schedule-20261125",
+    "snapshotCommit": "b614453d782c1073b3469e1c973cba539e6ab47a",
+    "snapshotManifestBlobSha": "0c5fb48ffe35083c84d535b43cb864db3373f13e",
+    "snapshotScheduleBlobSha": "be7518326ab0865a649c4540fe7d68d8a94b6253",
+    "fixtureCount": 13,
+    "onlineDeadline": "13:50 JST"
+  },
+  "officialFixtures": [
+    {
+      "number": 1,
+      "date": "2026-11-28",
+      "kickoff": "14:00",
+      "venue": "サンガＳ",
+      "home": "京都サンガF.C.",
+      "away": "セレッソ大阪"
+    },
+    {
+      "number": 2,
+      "date": "2026-11-28",
+      "kickoff": "16:00",
+      "venue": "三協Ｆ柏",
+      "home": "柏レイソル",
+      "away": "サンフレッチェ広島"
+    },
+    {
+      "number": 3,
+      "date": "2026-11-29",
+      "kickoff": "14:00",
+      "venue": "日産ス",
+      "home": "横浜Ｆ・マリノス",
+      "away": "ＦＣ東京"
+    },
+    {
+      "number": 4,
+      "date": "2026-11-29",
+      "kickoff": "14:00",
+      "venue": "水戸信ス",
+      "home": "水戸ホーリーホック",
+      "away": "Ｖ・ファーレン長崎"
+    },
+    {
+      "number": 5,
+      "date": "2026-11-29",
+      "kickoff": "15:00",
+      "venue": "豊田ス",
+      "home": "名古屋グランパス",
+      "away": "アビスパ福岡"
+    },
+    {
+      "number": 6,
+      "date": "2026-11-28",
+      "kickoff": "14:00",
+      "venue": "アイスタ",
+      "home": "清水エスパルス",
+      "away": "浦和レッズ"
+    },
+    {
+      "number": 7,
+      "date": "2026-11-28",
+      "kickoff": "15:00",
+      "venue": "メルスタ",
+      "home": "鹿島アントラーズ",
+      "away": "ファジアーノ岡山"
+    },
+    {
+      "number": 8,
+      "date": "2026-11-28",
+      "kickoff": "15:00",
+      "venue": "ノエスタ",
+      "home": "ヴィッセル神戸",
+      "away": "ジェフユナイテッド千葉"
+    },
+    {
+      "number": 9,
+      "date": "2026-11-29",
+      "kickoff": "16:00",
+      "venue": "Ｇスタ",
+      "home": "ＦＣ町田ゼルビア",
+      "away": "東京ヴェルディ"
+    },
+    {
+      "number": 10,
+      "date": "2026-11-29",
+      "kickoff": "15:00",
+      "venue": "Ｕ等々力",
+      "home": "川崎フロンターレ",
+      "away": "ガンバ大阪"
+    },
+    {
+      "number": 11,
+      "date": "2026-11-29",
+      "kickoff": "13:00",
+      "venue": "プラスタ",
+      "home": "ヴァンラーレ八戸",
+      "away": "藤枝ＭＹＦＣ"
+    },
+    {
+      "number": 12,
+      "date": "2026-11-29",
+      "kickoff": "14:00",
+      "venue": "クロスタ",
+      "home": "テゲバジャーロ宮崎",
+      "away": "サガン鳥栖"
+    },
+    {
+      "number": 13,
+      "date": "2026-11-29",
+      "kickoff": "14:00",
+      "venue": "ユアスタ",
+      "home": "ベガルタ仙台",
+      "away": "モンテディオ山形"
+    }
+  ],
+  "teamWindows": [
+    {
+      "matchNumber": 1,
+      "home": "京都サンガF.C.",
+      "away": "セレッソ大阪",
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12
+    },
+    {
+      "matchNumber": 2,
+      "home": "柏レイソル",
+      "away": "サンフレッチェ広島",
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12
+    },
+    {
+      "matchNumber": 3,
+      "home": "横浜Ｆ・マリノス",
+      "away": "ＦＣ東京",
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12
+    },
+    {
+      "matchNumber": 4,
+      "home": "水戸ホーリーホック",
+      "away": "Ｖ・ファーレン長崎",
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12
+    },
+    {
+      "matchNumber": 5,
+      "home": "名古屋グランパス",
+      "away": "アビスパ福岡",
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12
+    },
+    {
+      "matchNumber": 6,
+      "home": "清水エスパルス",
+      "away": "浦和レッズ",
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12
+    },
+    {
+      "matchNumber": 7,
+      "home": "鹿島アントラーズ",
+      "away": "ファジアーノ岡山",
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12
+    },
+    {
+      "matchNumber": 8,
+      "home": "ヴィッセル神戸",
+      "away": "ジェフユナイテッド千葉",
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12
+    },
+    {
+      "matchNumber": 9,
+      "home": "ＦＣ町田ゼルビア",
+      "away": "東京ヴェルディ",
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12
+    },
+    {
+      "matchNumber": 10,
+      "home": "川崎フロンターレ",
+      "away": "ガンバ大阪",
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12
+    },
+    {
+      "matchNumber": 11,
+      "home": "ヴァンラーレ八戸",
+      "away": "藤枝ＭＹＦＣ",
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12
+    },
+    {
+      "matchNumber": 12,
+      "home": "テゲバジャーロ宮崎",
+      "away": "サガン鳥栖",
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12
+    },
+    {
+      "matchNumber": 13,
+      "home": "ベガルタ仙台",
+      "away": "モンテディオ山形",
+      "historyHomeMatches": 12,
+      "historyAwayMatches": 12
+    }
+  ],
+  "teamNewsAudit": {
+    "path": "reports/round_1675_toto13_team_news_audit_20261126T0155JST.json",
+    "lastCheckedAt": "2026-11-26T01:55:28+09:00",
+    "complete": false,
+    "carriedForwardWithoutRefresh": true,
+    "note": "Injury, suspension, predicted-lineup and official-lineup coverage remains incomplete; no manual probability adjustment was made."
+  },
+  "marketSnapshot": {
+    "used": false,
+    "reason": "V1 revision; no market blend."
+  },
+  "validation": {
+    "actualExportedFunction": true,
+    "all13Fixtures": true,
+    "all26TeamWindowsHave12Matches": true,
+    "uniqueRevisionIds": true,
+    "revisionOfLinksPreviousV1": true,
+    "allProbabilityVectorsNormalize": true,
+    "generatedBeforeDeadline": true,
+    "marketBlend": false
+  },
+  "notes": "This revision supersedes the earlier V1 for current comparison but does not overwrite it. It uses the same pinned model and official round-1675 fixtures, with a fresher frozen community history snapshot. The community mirror is not an official J.League feed."
+}

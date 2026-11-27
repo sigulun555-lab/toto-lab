@@ -1,0 +1,425 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1675,
+  "checkedAt": "2026-11-26T01:55:28+09:00",
+  "retrievedAt": "2026-11-26T01:55:28+09:00",
+  "scope": "全13カードの両チーム26クラブ名を13組の検索で確認。Jリーグ公式出場停止一覧とクラブ公式ニュースを優先。検索結果に現れた二次情報は公式確定と分離。",
+  "sources": [
+    {
+      "type": "official_disciplinary_list",
+      "url": "https://aboutj.jleague.jp/corporate/news/article/118",
+      "publishedAt": "2026-11-23",
+      "retrievedAt": "2026-11-26T01:55:28+09:00",
+      "items": [
+        "柏レイソル 原田亘（11/28 J1第17節）",
+        "ガンバ大阪 初瀬亮（11/29 J1第17節）",
+        "ヴィッセル神戸 山川哲史（11/28 J1第17節）"
+      ]
+    },
+    {
+      "type": "official_club_injury",
+      "url": "https://www.mito-hollyhock.net/news/p%3D56229/",
+      "publishedAt": "2026-11-21",
+      "injuryDate": "2026-11-20",
+      "retrievedAt": "2026-11-26T01:55:28+09:00",
+      "items": [
+        "水戸ホーリーホック 松原修平：右アキレス腱断裂、同日手術終了"
+      ]
+    },
+    {
+      "type": "secondary_preview",
+      "url": "https://www.football-lab.jp/mito/preview",
+      "updatedAt": "2026-11-22",
+      "retrievedAt": "2026-11-26T01:55:28+09:00",
+      "items": [
+        "水戸：岩﨑博、河面旺成、鳥海芳樹、松原修平",
+        "長崎：名倉巧、エドゥアルド、ルカ ラドティッチ、米田隼也、進藤亮佑"
+      ],
+      "caveat": "欠場情報は軽度負傷等でも表示され、出場可能性が残る。公式確定扱いしない。"
+    },
+    {
+      "type": "official_previous_match_review",
+      "url": "https://www.jleague.jp/match/j1/2026/112101/review/",
+      "publishedAt": "2026-11-21",
+      "retrievedAt": "2026-11-26T01:55:28+09:00",
+      "items": [
+        "東京ヴェルディのチョ ユミン、藤本寛也が負傷により前節先発外。11/29の出場可否は未確定。"
+      ]
+    },
+    {
+      "type": "official_source_fetch_failure",
+      "url": "https://www.v-varen.com/news/248112.html",
+      "retrievedAt": "2026-11-26T01:55:28+09:00",
+      "httpStatus": 403,
+      "verified": false,
+      "note": "公式ページを取得できず、内容・現在の出場可否は未確認。"
+    },
+    {
+      "type": "official_source_fetch_failure",
+      "url": "https://www.v-varen.com/news/248116.html",
+      "retrievedAt": "2026-11-26T01:55:28+09:00",
+      "httpStatus": 403,
+      "verified": false,
+      "note": "公式ページを取得できず、内容・現在の出場可否は未確認。"
+    },
+    {
+      "type": "official_source_fetch_failure",
+      "url": "https://www.v-varen.com/news/248600.html",
+      "retrievedAt": "2026-11-26T01:55:28+09:00",
+      "httpStatus": 403,
+      "verified": false,
+      "note": "公式ページを取得できず、内容・現在の出場可否は未確認。"
+    }
+  ],
+  "teams": [
+    {
+      "team": "京都サンガF.C.",
+      "match": 1,
+      "side": "home",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "セレッソ大阪",
+      "match": 1,
+      "side": "away",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "柏レイソル",
+      "match": 2,
+      "side": "home",
+      "status": "出場停止確定",
+      "absences": [
+        {
+          "player": "原田 亘",
+          "type": "出場停止",
+          "publishedAt": "2026-11-23",
+          "suspendedMatch": "2026-11-28 J1第17節"
+        }
+      ],
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "サンフレッチェ広島",
+      "match": 2,
+      "side": "away",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "横浜Ｆ・マリノス",
+      "match": 3,
+      "side": "home",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "ＦＣ東京",
+      "match": 3,
+      "side": "away",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "水戸ホーリーホック",
+      "match": 4,
+      "side": "home",
+      "status": "負傷公表あり・今節出場可否未確定",
+      "absences": [
+        {
+          "player": "松原 修平",
+          "type": "負傷",
+          "publishedAt": "2026-11-21",
+          "diagnosis": "右アキレス腱断裂",
+          "injuryDate": "2026-11-20",
+          "note": "同日手術終了。GK。"
+        }
+      ],
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "Ｖ・ファーレン長崎",
+      "match": 4,
+      "side": "away",
+      "status": "補助情報あり・今節出場可否未確定",
+      "absences": [
+        {
+          "player": "名倉 巧",
+          "type": "二次情報の欠場表示",
+          "publishedAt": "2026-11-22"
+        },
+        {
+          "player": "エドゥアルド",
+          "type": "二次情報の欠場表示",
+          "publishedAt": "2026-11-22"
+        },
+        {
+          "player": "ルカ ラドティッチ",
+          "type": "二次情報の欠場表示・過去の公式負傷発表あり",
+          "publishedAt": "2026-11-22"
+        },
+        {
+          "player": "米田 隼也",
+          "type": "二次情報の欠場表示",
+          "publishedAt": "2026-11-22"
+        },
+        {
+          "player": "進藤 亮佑",
+          "type": "二次情報の欠場表示",
+          "publishedAt": "2026-11-22"
+        }
+      ],
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "名古屋グランパス",
+      "match": 5,
+      "side": "home",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "アビスパ福岡",
+      "match": 5,
+      "side": "away",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "清水エスパルス",
+      "match": 6,
+      "side": "home",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "浦和レッズ",
+      "match": 6,
+      "side": "away",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "鹿島アントラーズ",
+      "match": 7,
+      "side": "home",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "ファジアーノ岡山",
+      "match": 7,
+      "side": "away",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "ヴィッセル神戸",
+      "match": 8,
+      "side": "home",
+      "status": "出場停止確定",
+      "absences": [
+        {
+          "player": "山川 哲史",
+          "type": "出場停止",
+          "publishedAt": "2026-11-23",
+          "suspendedMatch": "2026-11-28 J1第17節"
+        }
+      ],
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "ジェフユナイテッド千葉",
+      "match": 8,
+      "side": "away",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "ＦＣ町田ゼルビア",
+      "match": 9,
+      "side": "home",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "東京ヴェルディ",
+      "match": 9,
+      "side": "away",
+      "status": "前節負傷による先発変更情報あり・今節出場可否未確定",
+      "absences": [
+        {
+          "player": "チョ ユミン",
+          "type": "前節負傷で先発外",
+          "publishedAt": "2026-11-21"
+        },
+        {
+          "player": "藤本 寛也",
+          "type": "前節負傷で先発外",
+          "publishedAt": "2026-11-21"
+        }
+      ],
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "川崎フロンターレ",
+      "match": 10,
+      "side": "home",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "ガンバ大阪",
+      "match": 10,
+      "side": "away",
+      "status": "出場停止確定",
+      "absences": [
+        {
+          "player": "初瀬 亮",
+          "type": "出場停止",
+          "publishedAt": "2026-11-23",
+          "suspendedMatch": "2026-11-29 J1第17節"
+        }
+      ],
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "ヴァンラーレ八戸",
+      "match": 11,
+      "side": "home",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "藤枝ＭＹＦＣ",
+      "match": 11,
+      "side": "away",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "テゲバジャーロ宮崎",
+      "match": 12,
+      "side": "home",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "サガン鳥栖",
+      "match": 12,
+      "side": "away",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "ベガルタ仙台",
+      "match": 13,
+      "side": "home",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    },
+    {
+      "team": "モンテディオ山形",
+      "match": 13,
+      "side": "away",
+      "status": "確認した範囲で未確認",
+      "officialStartingLineup": "未公表（2026-11-26 01:55 JST確認）",
+      "officialPredictedLineup": "確認した範囲で未確認",
+      "latestSquadChange": "この監査範囲では未確認",
+      "currentAvailabilityConfirmed": false
+    }
+  ],
+  "coverage": {
+    "clubsListed": 26,
+    "matchPairSearches": 13,
+    "officialDisciplinaryListChecked": true,
+    "officialStartingLineupsPublished": false,
+    "officialPredictedLineupsFound": false,
+    "all26AvailabilityFullyVerified": false,
+    "recentLineupChangesFullyChecked": false,
+    "note": "出場停止3名はJリーグ公式で確定。松原修平の負傷は水戸クラブ公式で確認。長崎の欠場表示はFootball-Labの二次情報であり今節の確定欠場ではない。長崎クラブ公式の過去負傷ページ3件は403で取得できず、公式確認扱いしない。その他クラブは確認した検索範囲で未確認。"
+  },
+  "predictionTreatment": {
+    "appliedToV1": false,
+    "reason": "既存のmodel.js predict(history, fixture)には負傷・出場停止・先発の共変量がない。手動確率補正は行わず、情報を別監査として記録。",
+    "nextCheck": "11/27 22:00 JSTまでに公式発表・前節からの変更を再確認。公式先発は発表後にのみ確定扱い。"
+  }
+}

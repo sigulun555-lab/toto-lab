@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1675,
+  "predictionVersion": "V1",
+  "generatedAtJst": "2026-11-26T02:13:09.595+09:00",
+  "generatedAtUtc": "2026-11-25T17:13:09.595Z",
+  "deadlineAt": "2026-11-28T13:50:00+09:00",
+  "deadlineAtUtc": "2026-11-28T04:50:00.000Z",
+  "model": {
+    "repository": "sigulun555-lab/gpt",
+    "commit": "a678a296a13eea4beec142083107e69ffda2fed4",
+    "path": "model.js",
+    "blobSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+    "function": "predict(history, fixture)",
+    "version": "GPT-shared-poisson-score-v1-2026-11-21",
+    "preflight": "line-for-line JavaScript port of the exported function; PR CI calls the actual exported function from the pinned commit"
+  },
+  "input": {
+    "repository": "sigulun555-lab/gpt",
+    "commit": "a678a296a13eea4beec142083107e69ffda2fed4",
+    "historyPath": "data/history.json",
+    "historyBlobSha": "7fb3869a3c4e7c536c7d1180342873c4dbc5252b",
+    "historyRows": 512,
+    "latestResultDate": "2026-11-25",
+    "fetchedAt": "2026-11-25T08:29:27.168Z",
+    "sourceUrl": "https://raw.githubusercontent.com/k-addtimes/jleague_open_data/main/current_schedule_file.csv",
+    "teamAliasesPath": "data/team_aliases.json",
+    "teamAliasesBlobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab",
+    "teamAliasCount": 121,
+    "parserPath": "scripts/auto_pipeline.js",
+    "parserBlobSha": "ef557e084cab802df7830d949bd1f52ddee5db7c",
+    "dateSorted": true,
+    "duplicateCanonicalMatchKeys": 0,
+    "invalidRows": 0
+  },
+  "officialSchedule": {
+    "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1675",
+    "pageDisplayedAt": "2026-11-25T19:09:00+09:00",
+    "retrievedAt": "2026-11-25T19:14:53+09:00",
+    "saleStartAt": "2026-11-25T08:00:00+09:00",
+    "networkDeadlineAt": "2026-11-28T13:50:00+09:00",
+    "drawDate": "2026-11-29",
+    "snapshotBranch": "data/round-1675-official-schedule-20261125",
+    "snapshotCommit": "b614453d782c1073b3469e1c973cba539e6ab47a",
+    "snapshotManifestBlobSha": "0c5fb48ffe35083c84d535b43cb864db3373f13e",
+    "snapshotScheduleBlobSha": "be7518326ab0865a649c4540fe7d68d8a94b6253",
+    "fixtureCount": 13,
+    "onlineDeadline": "13:50 JST"
+  },
+  "officialFixtures": [
+    {
+      "number": 1,
+      "date": "2026-11-28",
+      "kickoff": "14:00",
+      "venue": "サンガＳ",
+      "home": "京都サンガF.C.",
+      "away": "セレッソ大阪"
+    },
+    {
+      "number": 2,
+      "date": "2026-11-28",
+      "kickoff": "16:00",
+      "venue": "三協Ｆ柏",
+      "home": "柏レイソル",
+      "away": "サンフレッチェ広島"
+    },
+    {
+      "number": 3,
+      "date": "2026-11-29",
+      "kickoff": "14:00",
+      "venue": "日産ス",
+      "home": "横浜Ｆ・マリノス",
+      "away": "ＦＣ東京"
+    },
+    {
+      "number": 4,
+      "date": "2026-11-29",
+      "kickoff": "14:00",
+      "venue": "水戸信ス",
+      "home": "水戸ホーリーホック",
+      "away": "Ｖ・ファーレン長崎"
+    },
+    {
+      "number": 5,
+      "date": "2026-11-29",
+      "kickoff": "15:00",
+      "venue": "豊田ス",
+      "home": "名古屋グランパス",
+      "away": "アビスパ福岡"
+    },
+    {
+      "number": 6,
+      "date": "2026-11-28",
+      "kickoff": "14:00",
+      "venue": "アイスタ",
+      "home": "清水エスパルス",
+      "away": "浦和レッズ"
+    },
+    {
+      "number": 7,
+      "date": "2026-11-28",
+      "kickoff": "15:00",
+      "venue": "メルスタ",
+      "home": "鹿島アントラーズ",
+      "away": "ファジアーノ岡山"
+    },
+    {
+      "number": 8,
+      "date": "2026-11-28",
+      "kickoff": "15:00",
+      "venue": "ノエスタ",
+      "home": "ヴィッセル神戸",
+      "away": "ジェフユナイテッド千葉"
+    },
+    {
+      "number": 9,
+      "date": "2026-11-29",
+      "kickoff": "16:00",
+      "venue": "Ｇスタ",
+      "home": "ＦＣ町田ゼルビア",
+      "away": "東京ヴェルディ"
+    },
+    {
+      "number": 10,
+      "date": "2026-11-29",
+      "kickoff": "15:00",
+      "venue": "Ｕ等々力",
+      "home": "川崎フロンターレ",
+      "away": "ガンバ大阪"
+    },
+    {
+      "number": 11,
+      "date": "2026-11-29",
+      "kickoff": "13:00",
+      "venue": "プラスタ",
+      "home": "ヴァンラーレ八戸",
+      "away": "藤枝ＭＹＦＣ"
+    },
+    {
+      "number": 12,
+      "date": "2026-11-29",
+      "kickoff": "14:00",
+      "venue": "クロスタ",
+      "home": "テゲバジャーロ宮崎",
+      "away": "サガン鳥栖"
+    },
+    {
+      "number": 13,
+      "date": "2026-11-29",
+      "kickoff": "14:00",
+      "venue": "ユアスタ",
+      "home": "ベガルタ仙台",
+      "away": "モンテディオ山形"
+    }
+  ],
+  "teamNewsAudit": {
+    "path": "reports/round_1675_toto13_team_news_audit_20261126T0155JST.json",
+    "blobSha": "f7a95c5646e93b3119a18007b57e66d325020f46",
+    "checkedAt": "2026-11-26T01:55:28+09:00",
+    "teamsChecked": 26,
+    "officialSuspensionsConfirmed": 3,
+    "officialInjuryNotices": 1,
+    "coverageComplete": false,
+    "officialStartingLineupsPublished": false,
+    "appliedToV1": false,
+    "officialHistoricalNagasakiInjuryPagesRetrieved": 0,
+    "officialSourceFetchFailures": 3
+  },
+  "marketSnapshot": {
+    "used": false,
+    "sourceUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=01&fromId=SSIN026&gameAssortment=1&holdCntId=1675",
+    "pageDisplayedAt": "2026-11-26T01:19:00+09:00",
+    "retrievedAt": "2026-11-26T01:55:28+09:00",
+    "ageSeconds": 2170,
+    "freshnessThresholdSeconds": 300,
+    "eligibleForV2": false,
+    "reason": "公式表示時刻から取得時刻まで36分10秒経過しており、V2のfreshness条件を満たさない。V1には市場確率を混ぜていない。"
+  },
+  "predictionFile": {
+    "path": "predictions/round_1675_ChatGPT_shared_score_v1.jsonl",
+    "rows": 13,
+    "originalRows": 13,
+    "revisionRows": 0,
+    "revisionOfLinks": 0,
+    "uniquePredictionIds": 13,
+    "all26HistoryWindows12": true,
+    "marketBlend": false
+  },
+  "teamWindows": [
+    {
+      "matchNumber": 1,
+      "home": "京都サンガF.C.",
+      "away": "セレッソ大阪",
+      "homeMatches": 12,
+      "awayMatches": 12
+    },
+    {
+      "matchNumber": 2,
+      "home": "柏レイソル",
+      "away": "サンフレッチェ広島",
+      "homeMatches": 12,
+      "awayMatches": 12
+    },
+    {
+      "matchNumber": 3,
+      "home": "横浜F・マリノス",
+      "away": "FC東京",
+      "homeMatches": 12,
+      "awayMatches": 12
+    },
+    {
+      "matchNumber": 4,
+      "home": "水戸ホーリーホック",
+      "away": "V・ファーレン長崎",
+      "homeMatches": 12,
+      "awayMatches": 12
+    },
+    {
+      "matchNumber": 5,
+      "home": "名古屋グランパス",
+      "away": "アビスパ福岡",
+      "homeMatches": 12,
+      "awayMatches": 12
+    },
+    {
+      "matchNumber": 6,
+      "home": "清水エスパルス",
+      "away": "浦和レッズ",
+      "homeMatches": 12,
+      "awayMatches": 12
+    },
+    {
+      "matchNumber": 7,
+      "home": "鹿島アントラーズ",
+      "away": "ファジアーノ岡山",
+      "homeMatches": 12,
+      "awayMatches": 12
+    },
+    {
+      "matchNumber": 8,
+      "home": "ヴィッセル神戸",
+      "away": "ジェフユナイテッド千葉",
+      "homeMatches": 12,
+      "awayMatches": 12
+    },
+    {
+      "matchNumber": 9,
+      "home": "FC町田ゼルビア",
+      "away": "東京ヴェルディ",
+      "homeMatches": 12,
+      "awayMatches": 12
+    },
+    {
+      "matchNumber": 10,
+      "home": "川崎フロンターレ",
+      "away": "ガンバ大阪",
+      "homeMatches": 12,
+      "awayMatches": 12
+    },
+    {
+      "matchNumber": 11,
+      "home": "ヴァンラーレ八戸",
+      "away": "藤枝MYFC",
+      "homeMatches": 12,
+      "awayMatches": 12
+    },
+    {
+      "matchNumber": 12,
+      "home": "テゲバジャーロ宮崎",
+      "away": "サガン鳥栖",
+      "homeMatches": 12,
+      "awayMatches": 12
+    },
+    {
+      "matchNumber": 13,
+      "home": "ベガルタ仙台",
+      "away": "モンテディオ山形",
+      "homeMatches": 12,
+      "awayMatches": 12
+    }
+  ],
+  "notes": "通常toto13のみ（13試合・home/draw/away）。mini toto A（1-5）、mini toto B（6-10）、totoGOAL3（1/3/5の3試合・6 team-side・0/1/2/3+）はこのPRに含めない。"
+}

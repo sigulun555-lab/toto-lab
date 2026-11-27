@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1675,
+  "predictionVersion": "V2",
+  "status": "saved_legacy_v2_vote_freshness_unverified_ci_pending_for_guard",
+  "generatedAt": "2026-11-26T22:06:06+09:00",
+  "generatedAtUtc": "2026-11-26T13:06:06.000Z",
+  "deadlineAt": "2026-11-28T13:50:00+09:00",
+  "sourceV1": {
+    "pr": 140,
+    "branch": "gpt/toto13-round-1675-v1-revision-20261126T022854JST",
+    "path": "predictions/round_1675_ChatGPT_shared_score_v1_revision_20261126T022833JST.jsonl",
+    "blobSha": "7d530d61f1f1a102eccfe74cceeab4cfedae11bb",
+    "rowCount": 13,
+    "revisionManifestPath": "reports/round_1675_toto13_v1_revision_manifest_20261126T022833JST.json",
+    "revisionManifestBlobSha": "c9cdffc52c1bdfde60b0cdc61d4e4f270d63feb8",
+    "revisionOfCount": 13,
+    "predecessorPR": 139,
+    "historySourceManifestPath": "reports/round_1675_history_source_manifest_20261126T022833JST.json",
+    "historySourceManifestBlobSha": "ee7acd66f4778b025843157bb61248a2d014276c"
+  },
+  "model": {
+    "name": "ChatGPT",
+    "modelVersion": "GPT-shared-poisson-score-v2-market-blend-30-70-2026-11-26",
+    "baseModelVersion": "GPT-shared-poisson-score-v1-2026-11-21",
+    "modelCommit": "a678a296a13eea4beec142083107e69ffda2fed4",
+    "modelJsBlobSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+    "historyMatches": 537,
+    "latestHistoryDate": "2026/11/25",
+    "historySource": "k-addtimes/jleague_open_data",
+    "historySourceBlobSha": "3ddebaf4eeef4195ae89e942974bc3c505aa3235",
+    "historyIsOfficialJLeagueFeed": false,
+    "note": "V2 uses the already-saved V1 Poisson outcome probabilities; no refit or model change was made."
+  },
+  "marketSnapshot": {
+    "path": "reports/round_1675_toto13_official_market_snapshot_20261126T2205JST.json",
+    "blobSha": "a8010e5fecf4f7579eca40ade3485c83c6e0120a",
+    "sourceUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=01&fromId=SSIN026&gameAssortment=1&holdCntId=1675",
+    "pageDisplayAt": "2026-11-26T22:05:00+09:00",
+    "retrievedAt": "2026-11-26T22:06:06+09:00",
+    "displayAgeSeconds": 66,
+    "refreshIntervalSeconds": 300,
+    "stale": null,
+    "totalVotesPageSummaryPerMatch": 177968,
+    "aggregateVotesAcrossAll13Matches": 2313584,
+    "matchCount": 13,
+    "allMatchVoteTotalsMatchPageSummary": true,
+    "allDisplayedPercentagesSumTo100": true,
+    "pageSnapshotStale": false,
+    "pageDisplayAgeScope": "Page-display-to-retrieval interval only; it does not establish vote-share data freshness.",
+    "voteStatusUpdatedAt": null,
+    "voteDataFreshnessVerified": false,
+    "freshnessGateSeconds": 300,
+    "latestRecheck": {
+      "pageReportedAt": "2026-11-28T05:06:00+09:00",
+      "voteStatusUpdatedAt": "2026-11-27T07:51:00+09:00",
+      "voteStatusAgeSeconds": 76500,
+      "freshnessGateSeconds": 300,
+      "eligibleForNewV2Revision": false,
+      "note": "The page-level display timestamp was current, but the separate official vote-status timestamp was 21h15m old. No new V2 revision was generated."
+    },
+    "freshnessNote": "The original capture did not persist voteStatusUpdatedAt; its 66-second page display/retrieval delta is not evidence that vote data itself was updated within 300 seconds."
+  },
+  "blend": {
+    "helperPath": "scripts/round_1675_toto13_v2_blend.js",
+    "helperBlobSha": "01e0f2ee7207deb85910af56db7994670cac6571",
+    "sourceHelperPath": "scripts/round_1674_toto13_v2_blend.js",
+    "sourceHelperBlobSha": "01e0f2ee7207deb85910af56db7994670cac6571",
+    "formula": "P_v2 = 0.30 * P_latest_V1 + 0.70 * P_official_toto13_vote_share",
+    "weights": {
+      "poissonModel": 0.3,
+      "totoVoteShare": 0.7
+    },
+    "rounding": "8 decimal places, same as pinned helper"
+  },
+  "output": {
+    "path": "predictions/round_1675_ChatGPT_shared_score_v2.jsonl",
+    "blobSha": "4afe9834dd835581dcb51adad44b8c7a977795c8",
+    "rowCount": 13,
+    "predictionIds": [
+      "toto-1675-chatgpt-score-shared-01-v2-market-20261126T2206JST",
+      "toto-1675-chatgpt-score-shared-02-v2-market-20261126T2206JST",
+      "toto-1675-chatgpt-score-shared-03-v2-market-20261126T2206JST",
+      "toto-1675-chatgpt-score-shared-04-v2-market-20261126T2206JST",
+      "toto-1675-chatgpt-score-shared-05-v2-market-20261126T2206JST",
+      "toto-1675-chatgpt-score-shared-06-v2-market-20261126T2206JST",
+      "toto-1675-chatgpt-score-shared-07-v2-market-20261126T2206JST",
+      "toto-1675-chatgpt-score-shared-08-v2-market-20261126T2206JST",
+      "toto-1675-chatgpt-score-shared-09-v2-market-20261126T2206JST",
+      "toto-1675-chatgpt-score-shared-10-v2-market-20261126T2206JST",
+      "toto-1675-chatgpt-score-shared-11-v2-market-20261126T2206JST",
+      "toto-1675-chatgpt-score-shared-12-v2-market-20261126T2206JST",
+      "toto-1675-chatgpt-score-shared-13-v2-market-20261126T2206JST"
+    ],
+    "revisionOf": [
+      "toto-1675-chatgpt-score-shared-01-v1-rev-20261125T173538Z",
+      "toto-1675-chatgpt-score-shared-02-v1-rev-20261125T173538Z",
+      "toto-1675-chatgpt-score-shared-03-v1-rev-20261125T173538Z",
+      "toto-1675-chatgpt-score-shared-04-v1-rev-20261125T173538Z",
+      "toto-1675-chatgpt-score-shared-05-v1-rev-20261125T173538Z",
+      "toto-1675-chatgpt-score-shared-06-v1-rev-20261125T173538Z",
+      "toto-1675-chatgpt-score-shared-07-v1-rev-20261125T173538Z",
+      "toto-1675-chatgpt-score-shared-08-v1-rev-20261125T173538Z",
+      "toto-1675-chatgpt-score-shared-09-v1-rev-20261125T173538Z",
+      "toto-1675-chatgpt-score-shared-10-v1-rev-20261125T173538Z",
+      "toto-1675-chatgpt-score-shared-11-v1-rev-20261125T173538Z",
+      "toto-1675-chatgpt-score-shared-12-v1-rev-20261125T173538Z",
+      "toto-1675-chatgpt-score-shared-13-v1-rev-20261125T173538Z"
+    ],
+    "allProbabilityVectorsNormalized": true,
+    "independentPreflightExact": true
+  },
+  "generator": {
+    "path": "scripts/round_1675_toto13_v2_generator.js",
+    "blobSha": "63c72ab14b403753ac65084fbbe6935d8a833264",
+    "testPath": "tests/round-1675-toto13-v2.test.js",
+    "testBlobSha": "5ae92351807946ab587f51a36b9b6f63fa417685",
+    "packageJsonBlobSha": "64df82b2636bb06db9dcfedb1e9ab724bcc4afeb",
+    "npmTestIncludesRound1675V2": true
+  },
+  "teamNewsAudit": {
+    "path": "reports/round_1675_toto13_team_news_recheck_20261126T2206JST.json",
+    "blobSha": "4763f1951bf75f935fc929c0ee45db996845e308",
+    "teamsReviewed": 26,
+    "officialSuspensionPlayersRelevant": 9,
+    "officialInjuryNoticesFound": 6,
+    "secondaryPreviewMatches": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "officialStartingLineupsPublished": false,
+    "coverageComplete": false,
+    "probabilityAdjustmentApplied": false,
+    "officialInjuryNoticesFoundForTeams": [
+      "京都",
+      "水戸",
+      "岡山",
+      "千葉"
+    ],
+    "addendumPath": "reports/round_1675_toto13_team_news_addendum_20261128T051743JST.json",
+    "addendumBlobSha": "819e388366a1727590856dd32ff497526673de00",
+    "baseOfficialInjuryNoticesFound": 6,
+    "newOfficialInjuryNoticesFound": 2,
+    "totalOfficialInjuryNoticesFound": 8,
+    "officialInjuryNoticeTeams": [
+      "京都サンガF.C.",
+      "水戸ホーリーホック",
+      "ファジアーノ岡山",
+      "ジェフユナイテッド千葉",
+      "清水エスパルス",
+      "ガンバ大阪"
+    ],
+    "latestCheckedAt": "2026-11-28T05:17:43.684+09:00",
+    "officialLineupCoverageComplete": false
+  },
+  "dependencies": {
+    "stackedOnPR140": true,
+    "baseBranch": "gpt/toto13-round-1675-v1-revision-20261126T022854JST",
+    "PR140DependsOnPR139": true,
+    "requiredMergeOrderIfApproved": [
+      139,
+      140,
+      "this V2 PR"
+    ],
+    "mergePerformed": false
+  },
+  "ci": {
+    "status": "pending_new_head",
+    "previousValidatedHead": "699814dd4411a8d71b7e382eaa823342a242e5ff",
+    "previousRunNumber": 955,
+    "previousRunId": 46062520209,
+    "previousRunUrl": "https://github.com/sigulun555-lab/toto-lab/actions/runs/46062520209",
+    "previousRunConclusion": "success",
+    "runNumber": null,
+    "runId": null,
+    "runUrl": null,
+    "jobCount": 0,
+    "stepCount": 0,
+    "npmTest": "pending",
+    "checkTeams": "pending",
+    "verifiedAtUtc": null,
+    "note": "Run #955 validated the vote-freshness guard and exact legacy V2 reproduction on the preceding head. This addendum/test commit is a new head and pending its own CI."
+  },
+  "safety": {
+    "mainModified": false,
+    "productionModelChanged": false,
+    "marketWeightChanged": false,
+    "existingPredictionLogsOverwritten": false,
+    "existingShadowArtifactsModified": false,
+    "merged": false
+  }
+}

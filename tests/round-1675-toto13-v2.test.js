@@ -1,0 +1,111 @@
+'use strict';
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const { CONFIG, buildRows, buildRowsLegacy, assertVoteShareFreshness } = require('../scripts/round_1675_toto13_v2_generator');
+const { blendOutcomeProbabilities, WEIGHTS } = require('../scripts/round_1675_toto13_v2_blend');
+const ROOT = path.join(__dirname, '..');
+function readJsonl(file) {
+  return fs.readFileSync(path.join(ROOT, file), 'utf8').trim().split(/\r?\n/).filter(Boolean).map(JSON.parse);
+}
+test('round 1675 legacy V2 rows reproduce exactly without rewriting the saved artifact', () => {
+  const v1 = readJsonl(CONFIG.v1Path);
+  const market = JSON.parse(fs.readFileSync(path.join(ROOT, CONFIG.marketPath), 'utf8'));
+  const saved = readJsonl(CONFIG.outputPath);
+  const regenerated = buildRowsLegacy(v1, market);
+  assert.deepEqual(saved, regenerated);
+  assert.equal(saved.length, 13);
+  assert.deepEqual(saved.map(x => x.matchNumber), Array.from({length:13}, (_,i)=>i+1));
+  assert.equal(new Set(saved.map(x => x.predictionId)).size, 13);
+  const baseByMatch = new Map(v1.map(x => [x.matchNumber, x]));
+  for (const row of saved) {
+    const base = baseByMatch.get(row.matchNumber);
+    assert.equal(row.round, 1675);
+    assert.equal(row.product, 'toto13');
+    assert.equal(row.marketType, 'toto13');
+    assert.equal(row.revisionOf, base.predictionId);
+    assert.deepEqual(row.baseModelOutcomeProbabilities, base.outcomeProbabilities);
+    assert.deepEqual(row.blendWeights, WEIGHTS);
+    assert.equal(row.predictionConfirmedAt, CONFIG.generatedAtUtc);
+    assert.ok(Math.abs(Object.values(row.outcomeProbabilities).reduce((a,b)=>a+b,0)-1) <= 2e-8);
+  }
+});
+test('historical official snapshot is internally reconciled but vote-data freshness is unverified', () => {
+  const market = JSON.parse(fs.readFileSync(path.join(ROOT, CONFIG.marketPath), 'utf8'));
+  assert.equal(market.product, 'toto13');
+  assert.equal(market.round, 1675);
+  assert.equal(market.marketType, 'toto13');
+  assert.equal(market.pageSnapshotStale, false);
+  assert.ok(market.displayAgeSeconds <= 300, 'this only measures page-display to retrieval time');
+  assert.equal(market.stale, null);
+  assert.equal(market.voteStatusUpdatedAt, null);
+  assert.equal(market.voteDataFreshnessVerified, false);
+  assert.equal(market.totalVotesPageSummaryPerMatch, 177968);
+  assert.equal(market.matches.length, 13);
+  for (const row of market.matches) {
+    assert.equal(row.sumVotes, 177968);
+    assert.equal(row.sumPercent, 100);
+    assert.ok(Math.abs(Object.values(row.marketVoteShare).reduce((a,b)=>a+b,0)-1) <= 1e-9);
+  }
+  const v1 = readJsonl(CONFIG.v1Path);
+  assert.throws(() => buildRows(v1, market), /voteStatusUpdatedAt/);
+});
+test('future V2 revisions require the official vote-status update timestamp within 300 seconds', () => {
+  const retrievedAt = '2026-11-28T05:06:00+09:00';
+  assert.throws(
+    () => assertVoteShareFreshness({ retrievedAt, voteStatusUpdatedAt: null }),
+    /voteStatusUpdatedAt/
+  );
+  assert.throws(
+    () => assertVoteShareFreshness({ retrievedAt, voteStatusUpdatedAt: '2026-11-27T07:51:00+09:00' }),
+    /stale/
+  );
+  assert.equal(
+    assertVoteShareFreshness({ retrievedAt, voteStatusUpdatedAt: '2026-11-28T05:03:30+09:00' }),
+    150
+  );
+});
+test('the copied pinned 30/70 helper retains its exact probability-level behavior', () => {
+  assert.deepEqual(
+    blendOutcomeProbabilities({ '1': 0.6, '0': 0.2, '2': 0.2 }, { '1': 0.4, '0': 0.3, '2': 0.3 }),
+    { '1': 0.46, '0': 0.27, '2': 0.27 }
+  );
+});
+test('round 1675 team-level suspensions reconcile with the J.League official list', () => {
+  const newsPath = path.join(ROOT, 'reports/round_1675_toto13_team_news_recheck_20261126T2206JST.json');
+  const news = JSON.parse(fs.readFileSync(newsPath, 'utf8'));
+  const official = news.officialSources.find(x => x.source === 'J.League official suspension list');
+  assert.ok(official, 'official J.League suspension source is recorded');
+  const expected = official.findings.map(x => [x.matchNumber, x.side, x.player, x.suspension].join('|')).sort();
+  const actual = news.teams.flatMap(team => (team.officialSuspensions || []).map(x =>
+    [team.matchNumber, team.side, x.player, x.code].join('|')
+  )).sort();
+  assert.equal(news.coverage.teamsReviewed, 26);
+  assert.equal(news.coverage.officialSuspensionPlayerCount, 9);
+  assert.equal(news.coverage.officialSuspensionTeamCount, 8);
+  assert.equal(expected.length, 9);
+  assert.deepEqual(actual, expected);
+  const gamba = news.teams.find(x => x.matchNumber === 10 && x.side === 'away');
+  assert.ok(gamba.officialSuspensions.some(x => x.player === '初瀬 亮' && x.code === 'J1(a)'));
+  assert.equal(news.coverage.officialInjuryNoticePlayerCount, 6);
+  assert.equal(news.lineupStatus.officialStartingLineupsPublished, false);
+  assert.equal(news.coverage.officialLineupCoverageComplete, false);
+});
+
+test('2026-11-28 official injury addendum records two new notices without changing V2 probabilities', () => {
+  const addendumPath = path.join(ROOT, 'reports/round_1675_toto13_team_news_addendum_20261128T051743JST.json');
+  const addendum = JSON.parse(fs.readFileSync(addendumPath, 'utf8'));
+  assert.equal(addendum.round, 1675);
+  assert.equal(addendum.product, 'toto13');
+  assert.equal(addendum.newOfficialInjuryNotices.length, 2);
+  assert.ok(addendum.newOfficialInjuryNotices.some(x => x.player === '蓮川 壮大' && x.matchNumber === 6 && x.side === 'home'));
+  assert.ok(addendum.newOfficialInjuryNotices.some(x => x.player === 'ウェルトン' && x.matchNumber === 10 && x.side === 'away'));
+  assert.equal(addendum.suspensionSource.roundRelevantSuspensionPlayerCount, 9);
+  assert.equal(addendum.coverage.totalOfficialInjuryNoticePlayers, 8);
+  assert.equal(addendum.coverage.teamsInToto13, 26);
+  assert.equal(addendum.lineupStatus.match1OfficialStartingLineupPublished, false);
+  assert.equal(addendum.lineupStatus.all13OfficialLineupPagesChecked, false);
+  assert.equal(addendum.modelAdjustmentApplied, false);
+  assert.equal(addendum.predictionRevisionCreated, false);
+});

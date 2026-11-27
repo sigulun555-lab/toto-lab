@@ -1,0 +1,169 @@
+{
+  "round": 1675,
+  "product": "toto13",
+  "cardDates": [
+    "2026-11-28",
+    "2026-11-29"
+  ],
+  "checkedAt": "2026-11-28T05:17:43.684+09:00",
+  "retrievedAt": "2026-11-28T05:17:43.684+09:00",
+  "baseReportPath": "reports/round_1675_toto13_team_news_recheck_20261126T2206JST.json",
+  "newOfficialInjuryNotices": [
+    {
+      "matchNumber": 6,
+      "side": "home",
+      "team": "清水エスパルス",
+      "player": "蓮川 壮大",
+      "sourceType": "official_club_injury_notice",
+      "sourceUrl": "https://www.s-pulse.co.jp/news/detail/57586",
+      "publishedAt": "2026-11-15",
+      "injuryDate": "2026-10-31",
+      "diagnosis": "左大腿二頭筋肉離れ",
+      "returnEstimate": "復帰まで負傷日から3ヶ月を要する見込み",
+      "availabilityAssessment": "The published return estimate indicates likely unavailability for the 2026-11-29 fixture, but this is not a matchday squad confirmation.",
+      "sourceCheckedAt": "2026-11-28T05:17:43.684+09:00"
+    },
+    {
+      "matchNumber": 10,
+      "side": "away",
+      "team": "ガンバ大阪",
+      "player": "ウェルトン",
+      "sourceType": "official_club_injury_notice",
+      "sourceUrl": "https://www.gamba-osaka.net/news/index/no/21229/c/0/year/2026/month/11/",
+      "publishedAt": "2026-11-09",
+      "injuryDate": "2026-11-01",
+      "diagnosis": "左大腿直筋肉離れ",
+      "returnEstimate": null,
+      "availabilityAssessment": "The official notice provides no return date; matchday availability remains unconfirmed.",
+      "sourceCheckedAt": "2026-11-28T05:17:43.684+09:00"
+    }
+  ],
+  "suspensionSource": {
+    "sourceType": "J.League official suspension list",
+    "sourceUrl": "https://www.jleague.jp/news/article/35474/",
+    "publishedAt": "2026-11-26T17:00:00+09:00",
+    "sourceCheckedAt": "2026-11-28T05:17:43.684+09:00",
+    "publishedSuspensionPlayerCount": 12,
+    "roundRelevantSuspensionPlayerCount": 9,
+    "outsideCardSuspensionPlayerCount": 3,
+    "roundRelevantPlayers": [
+      {
+        "matchNumber": 8,
+        "side": "away",
+        "team": "ジェフユナイテッド千葉",
+        "player": "津久井 匠海",
+        "code": "J1(f)",
+        "matches": 1
+      },
+      {
+        "matchNumber": 2,
+        "side": "home",
+        "team": "柏レイソル",
+        "player": "原田 亘",
+        "code": "J1(f)",
+        "matches": 1
+      },
+      {
+        "matchNumber": 9,
+        "side": "away",
+        "team": "東京ヴェルディ",
+        "player": "新井 悠太",
+        "code": "J1(b)",
+        "matches": 2
+      },
+      {
+        "matchNumber": 10,
+        "side": "away",
+        "team": "ガンバ大阪",
+        "player": "初瀬 亮",
+        "code": "J1(a)",
+        "matches": 1
+      },
+      {
+        "matchNumber": 1,
+        "side": "away",
+        "team": "セレッソ大阪",
+        "player": "櫻川 ソロモン",
+        "code": "J1(f)",
+        "matches": 1
+      },
+      {
+        "matchNumber": 1,
+        "side": "away",
+        "team": "セレッソ大阪",
+        "player": "ディオン クールズ",
+        "code": "J1(f)",
+        "matches": 1
+      },
+      {
+        "matchNumber": 8,
+        "side": "home",
+        "team": "ヴィッセル神戸",
+        "player": "山川 哲史",
+        "code": "J1(a)",
+        "matches": 1
+      },
+      {
+        "matchNumber": 4,
+        "side": "away",
+        "team": "V・ファーレン長崎",
+        "player": "ノーマン キャンベル",
+        "code": "J1(f)",
+        "matches": 1
+      },
+      {
+        "matchNumber": 12,
+        "side": "home",
+        "team": "テゲバジャーロ宮崎",
+        "player": "家坂 葉光",
+        "code": "J2(f)",
+        "matches": 1
+      }
+    ],
+    "outsideCardPlayers": [
+      {
+        "team": "ＦＣ今治",
+        "player": "梅木 怜",
+        "code": "J2(f)"
+      },
+      {
+        "team": "大分トリニータ",
+        "player": "小田 逸稀",
+        "code": "J2(f)"
+      },
+      {
+        "team": "ギラヴァンツ北九州",
+        "player": "高 昇辰",
+        "code": "J3(f)"
+      }
+    ]
+  },
+  "lineupStatus": {
+    "match1OfficialPage": "https://www.jleague.jp/match/j1/2026/112807/",
+    "match1CheckedAt": "2026-11-28T05:17:43.684+09:00",
+    "match1OfficialStartingLineupPublished": false,
+    "all13OfficialLineupPagesChecked": false,
+    "coverageComplete": false,
+    "note": "The official match page for Kyoto vs Cerezo had a lineup tab but no confirmed starting XI at this check. The other 12 official match pages were not all individually checked in this pass; do not mark lineup coverage complete."
+  },
+  "coverage": {
+    "teamsInToto13": 26,
+    "officialSuspensionPlayersRelevant": 9,
+    "officialSuspensionTeamsRelevant": 8,
+    "baseOfficialInjuryNoticePlayers": 6,
+    "newOfficialInjuryNoticePlayers": 2,
+    "totalOfficialInjuryNoticePlayers": 8,
+    "teamsWithOfficialInjuryNotices": [
+      "京都サンガF.C.",
+      "水戸ホーリーホック",
+      "ファジアーノ岡山",
+      "ジェフユナイテッド千葉",
+      "清水エスパルス",
+      "ガンバ大阪"
+    ],
+    "officialLineupCoverageComplete": false
+  },
+  "modelAdjustmentApplied": false,
+  "predictionRevisionCreated": false,
+  "notes": "This is an append-only evidence addendum. Injury notices are not matchday availability confirmations. No V1/V2 probability adjustment or new prediction snapshot was created."
+}

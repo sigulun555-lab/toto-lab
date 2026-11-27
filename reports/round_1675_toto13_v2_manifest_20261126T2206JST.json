@@ -142,7 +142,7 @@
     "status": "success",
     "npmTestRequired": true,
     "checkTeamsRequired": true,
-    "doNotTreatAsSuccessUntilChecksComplete": true,
+    "doNotTreatAsSuccessUntilChecksComplete": false,
     "runNumber": 936,
     "runId": 45828912215,
     "runUrl": "https://github.com/sigulun555-lab/toto-lab/actions/runs/45828912215",
@@ -151,7 +151,8 @@
     "npmTest": "success",
     "checkTeams": "success",
     "verifiedAtUtc": "2026-11-27T03:06:25.402Z",
-    "note": "Manifest status reconciled after reading completed GitHub run #936; no prediction or market data changed."
+    "note": "Manifest status reconciled after reading completed GitHub run #936; no prediction or market data changed.",
+    "validationScope": "The completed run #936 validates the V2 prediction files, generator, npm test, and team dictionary. This later manifest-only commit was not included in run #936 and has no new workflow run."
   },
   "safety": {
     "mainModified": false,

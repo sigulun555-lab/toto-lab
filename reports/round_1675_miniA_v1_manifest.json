@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "product": "mini toto A",
+  "productKey": "miniA",
+  "round": 1675,
+  "predictionVersion": "GPT shared-score V1 (product-specific mini-A selection)",
+  "generatedAtUtc": "2026-11-27T13:20:07.000Z",
+  "generatedAtJst": "2026-11-27T22:20:07+09:00",
+  "generatedAfterDayBefore22JstCheckpoint": true,
+  "officialDeadlineNotPassed": true,
+  "deadlineAt": "2026-11-28T04:50:00.000Z",
+  "deadlineAtJst": "2026-11-28T13:50:00+09:00",
+  "officialSchedule": {
+    "round": 1675,
+    "holdDates": [
+      "2026-11-28",
+      "2026-11-29"
+    ],
+    "fixtureCount": 13,
+    "productMatchNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "toto13MatchNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "matchNumberSpaceInPredictionRecords": "regular-toto13 matchNumber",
+    "scheduleBranch": "data/round-1675-schedule",
+    "scheduleCommit": "b28439c0992f9edf0bcfbd9b65c04bd1b3440aa5",
+    "scheduleBlobSha": "5c37c472d543e164ff01d1366d62859dadad01d1",
+    "officialScheduleSourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1675",
+    "officialSchedulePageDisplayedAt": "2026-11-25T19:09:00+09:00",
+    "officialScheduleRetrievedAt": "2026-11-25T19:14:53+09:00",
+    "officialFixtures": [
+      {
+        "number": 1,
+        "date": "2026-11-28",
+        "kickoff": "14:00",
+        "venue": "サンガＳ",
+        "home": "京都サンガF.C.",
+        "away": "セレッソ大阪"
+      },
+      {
+        "number": 2,
+        "date": "2026-11-28",
+        "kickoff": "16:00",
+        "venue": "三協Ｆ柏",
+        "home": "柏レイソル",
+        "away": "サンフレッチェ広島"
+      },
+      {
+        "number": 3,
+        "date": "2026-11-29",
+        "kickoff": "14:00",
+        "venue": "日産ス",
+        "home": "横浜Ｆ・マリノス",
+        "away": "ＦＣ東京"
+      },
+      {
+        "number": 4,
+        "date": "2026-11-29",
+        "kickoff": "14:00",
+        "venue": "水戸信ス",
+        "home": "水戸ホーリーホック",
+        "away": "Ｖ・ファーレン長崎"
+      },
+      {
+        "number": 5,
+        "date": "2026-11-29",
+        "kickoff": "15:00",
+        "venue": "豊田ス",
+        "home": "名古屋グランパス",
+        "away": "アビスパ福岡"
+      }
+    ],
+    "officialScheduleEvidenceUrl": "https://sp.toto-dream.com/dcs/subos/screen/ss01/sssl021/PGSSSL02101InittotoSP.form?commodityId=01&fromId=SSIN026&holdCntId=1675"
+  },
+  "model": {
+    "repository": "sigulun555-lab/gpt",
+    "commit": "a678a296a13eea4beec142083107e69ffda2fed4",
+    "path": "model.js",
+    "blobSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+    "function": "predict(history, fixture)",
+    "version": "GPT-shared-poisson-score-v1-2026-11-21"
+  },
+  "parser": {
+    "repository": "sigulun555-lab/gpt",
+    "commit": "a678a296a13eea4beec142083107e69ffda2fed4",
+    "path": "scripts/auto_pipeline.js",
+    "blobSha": "ef557e084cab802df7830d949bd1f52ddee5db7c",
+    "function": "parseSchedule(text)"
+  },
+  "aliases": {
+    "repository": "sigulun555-lab/gpt",
+    "commit": "a678a296a13eea4beec142083107e69ffda2fed4",
+    "path": "data/team_aliases.json",
+    "blobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab",
+    "updatedAt": "2026-10-22",
+    "keyCount": 121
+  },
+  "history": {
+    "sourceRepository": "k-addtimes/jleague_open_data",
+    "sourcePath": "current_schedule_file.csv",
+    "sourceType": "community mirror; not official J.League feed",
+    "sourceBlobSha": "3ddebaf4eeef4195ae89e942974bc3c505aa3235",
+    "sourceManifestBlobSha": "ee7acd66f4778b025843157bb61248a2d014276c",
+    "retrievedAtUtc": "2026-11-25T17:28:54.653Z",
+    "rows": 537,
+    "priorPinnedRows": 512,
+    "newlyAvailableRows": 25,
+    "removedPriorRows": 0,
+    "latestCompletedDate": "2026-11-25",
+    "completedRowsOn2026_11_25": 27
+  },
+  "currentGptMainHistoryCrosscheck": {
+    "commit": "f2143db39a13b91a5170de45e2592dfe3143e48d",
+    "blobSha": "f87cee6eee1076abae24d95d404d57d9b1a4ae56",
+    "rows": 537,
+    "canonicalMatchScoreMismatches": 0
+  },
+  "reference": {
+    "repository": "sigulun555-lab/toto-lab",
+    "commit": "23a8ddaacd96f2f0ba2adefd2d91ed0af26cafd0",
+    "path": "predictions/round_1675_ChatGPT_shared_score_v1_revision_20261126T022833JST.jsonl",
+    "blobSha": "7d530d61f1f1a102eccfe74cceeab4cfedae11bb",
+    "manifestPath": "reports/round_1675_toto13_v1_revision_manifest_20261126T022833JST.json",
+    "manifestBlobSha": "c9cdffc52c1bdfde60b0cdc61d4e4f270d63feb8",
+    "matchesCompared": 5,
+    "maxAbsProbabilityDifference": 0
+  },
+  "officialSourcesRetrievedAtUtc": "2026-11-27T13:20:07.000Z",
+  "marketSnapshot": {
+    "officialProductPageUrl": "https://sp.toto-dream.com/dcs/subos/screen/ss01/sssl021/PGSSSL02101InittotoSP.form?commodityId=06&fromId=SSIN026&holdCntId=1675",
+    "displayedUpdatedAt": "2026-11-27T22:12:00+09:00",
+    "retrievedAtUtc": "2026-11-27T13:20:07.000Z",
+    "ageSeconds": 487,
+    "used": false,
+    "v2Status": "withheld: no existing mini-A-specific V2 generator/acceptance path; snapshot age exceeds 300-second freshness gate"
+  },
+  "teamNewsAudit": {
+    "complete": false,
+    "allTargetClubsChecked": false,
+    "injurySuspensionAvailability": "not fully verified",
+    "officialStartingLineups": "not verified at generation time",
+    "quantitativeAdjustment": "none"
+  },
+  "output": {
+    "predictionFile": "predictions/round_1675_ChatGPT_miniA.jsonl",
+    "rows": 5,
+    "productMatchNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "toto13MatchNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "predictionFileBlobSha": "37594798ddfc6920497409991763c83cd4a6cbcb"
+  },
+  "generator": {
+    "path": "tools/generate_round_1675_miniA_v1.js",
+    "mode": "reproducible verify against pinned GPT model/parser and toto13 V1 reference"
+  },
+  "test": {
+    "path": "tests/round-1675-miniA-v1-generation.test.js",
+    "workflow": ".github/workflows/miniA-round-1675-v1.yml"
+  },
+  "safety": {
+    "mainChanged": false,
+    "productionModelChanged": false,
+    "marketWeightChanged": false,
+    "existingPredictionLogsOverwritten": false,
+    "existingShadowArtifactChanged": false,
+    "prMerged": false
+  }
+}

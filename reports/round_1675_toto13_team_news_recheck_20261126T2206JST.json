@@ -764,12 +764,20 @@
       "matchNumber": 10,
       "side": "away",
       "team": "ガンバ大阪",
-      "officialSuspensions": [],
+      "officialSuspensions": [
+        {
+          "player": "初瀬 亮",
+          "code": "J1(a)",
+          "dates": [
+            "2026-11-29"
+          ]
+        }
+      ],
       "officialInjuries": [],
       "secondaryAbsences": [],
       "secondarySource": null,
       "secondaryPageUpdatedAt": null,
-      "officialAvailabilityStatus": "確認した範囲で未確認",
+      "officialAvailabilityStatus": "official_suspension_confirmed",
       "predictedLineupStatus": "確認した範囲で未確認",
       "officialStartingLineupStatus": "未発表（2026-11-26 22:06 JST時点）",
       "sourceURLs": [
@@ -906,7 +914,9 @@
     "predictedLineupCoverageComplete": false,
     "officialLineupCoverageComplete": false,
     "overallCoverageComplete": false,
-    "officialInjuryNoticePlayerCount": 6
+    "officialInjuryNoticePlayerCount": 6,
+    "officialSuspensionPlayerCount": 9,
+    "officialSuspensionTeamCount": 8
   },
   "policy": {
     "availabilityInformationAppliedToV1": false,
@@ -923,5 +933,10 @@
       "publishedAt": "2026-06-23",
       "detail": "2026-07-01〜2027-06-30の育成型期限付き移籍で京都所属。京都との公式戦には出場できない。Chibaの欠場選手として扱わない。"
     }
-  ]
+  ],
+  "auditCorrection": {
+    "recordedAt": "2026-11-27T20:07:10+09:00",
+    "reason": "The existing officialSources finding from the J.League official suspension list already recorded 初瀬 亮 (Ｇ大阪, match 10 away, J1(a), 2026-11-29), but the corresponding teams[matchNumber=10, side=away] summary row omitted him. Added the missing team-level entry. No V1/V2 probabilities or weights were changed.",
+    "sourceUrl": "https://www.jleague.jp/news/article/35474/"
+  }
 }

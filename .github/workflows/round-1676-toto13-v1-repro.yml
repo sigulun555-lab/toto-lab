@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: sigulun555-lab/gpt
-          ref: c2b3a8e943446d41adb803b918b7a75a36ae982d
+          ref: 38d03bcf8e42b22b26ec16de9886848a00f95fb7
           path: gpt-input
           persist-credentials: false
       - name: Set up Node.js

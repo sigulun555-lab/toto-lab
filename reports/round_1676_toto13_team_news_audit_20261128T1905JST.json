@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1676,
+  "checkedAt": "2026-11-28T19:05:00+09:00",
+  "teamsQueried": 26,
+  "teamsListed": 26,
+  "all26AvailabilityFullyVerified": false,
+  "officialStartingLineupsPublished": false,
+  "predictedStartingLineupsVerified": false,
+  "confirmedInjuryNotices": 0,
+  "confirmedSuspensionsForRound1676": 0,
+  "absenceOfNoticeIsNotEvidenceOfAvailability": true,
+  "appliedToV1": false,
+  "summary": "26クラブを対象に個別検索し、公式Jリーグ/クラブ情報を確認できた範囲を記録。負傷・出場可否を26クラブ全てについて確定できる公式情報は取得できず、0件は『欠場者なし』を意味しない。公式先発はまだ未発表。締切前に再確認が必要。",
+  "teams": [
+    {
+      "team": "ジェフユナイテッド千葉",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "鹿島アントラーズ",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "浦和レッズ",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "名古屋グランパス",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "東京ヴェルディ",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "京都サンガF.C.",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "セレッソ大阪",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "水戸ホーリーホック",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "Ｖ・ファーレン長崎",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "清水エスパルス",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "サンフレッチェ広島",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "ヴィッセル神戸",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "ガンバ大阪",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "横浜Ｆ・マリノス",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "柏レイソル",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "アビスパ福岡",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "ＦＣ町田ゼルビア",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "ファジアーノ岡山",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "北海道コンサドーレ札幌",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "アルビレックス新潟",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "藤枝ＭＹＦＣ",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "ブラウブリッツ秋田",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "徳島ヴォルティス",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "ジュビロ磐田",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "ベガルタ仙台",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    },
+    {
+      "team": "湘南ベルマーレ",
+      "availabilityStatus": "not_verified",
+      "injuryStatus": "no official injury/availability confirmation surfaced in current search; not proof of full availability",
+      "suspensionStatus": "no round-1676 suspension confirmed in current official search; recheck required",
+      "predictedLineupStatus": "not_verified",
+      "officialLineupStatus": "not_published_or_not_found_as_of_checkedAt",
+      "appliedToV1": false
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.jleague.jp/j1/match/search-list/?category=j1&enddate=2027-06-30&period=custom&startdate=2026-08-01",
+      "type": "official J.League fixture schedule",
+      "retrievedAt": "2026-11-28T19:05:00+09:00"
+    },
+    {
+      "url": "https://www.jleague.jp/news/article/35271/",
+      "type": "official J.League suspension notice; checked to distinguish 11/2 round-15 suspensions from round 1676",
+      "publishedAt": "2026-11-02T18:40:00+09:00",
+      "retrievedAt": "2026-11-28T19:05:00+09:00"
+    },
+    {
+      "url": "https://aboutj.jleague.jp/corporate/news/article/120",
+      "type": "official J.League discipline notice; Gamba's H. Hatsuse suspension applies to 11/29 Kawasaki vs Gamba, not round 1676",
+      "publishedAt": "2026-11-23",
+      "retrievedAt": "2026-11-28T19:05:00+09:00"
+    },
+    {
+      "url": "https://www.cerezo.jp/special_games/match_data/20261205/",
+      "type": "official Cerezo match preview; fixture 12/5 15:00; no lineup/availability confirmation in retrieved page",
+      "retrievedAt": "2026-11-28T19:05:00+09:00"
+    },
+    {
+      "url": "https://www.cerezo.jp/team/schedule/202612/",
+      "type": "official Cerezo team schedule; conflicts with toto/J.League schedule by showing 12/4 for Cerezo vs Mito",
+      "retrievedAt": "2026-11-28T19:05:00+09:00"
+    },
+    {
+      "url": "https://www.s-pulse.co.jp/games/prompt_report/2026120506",
+      "type": "official Shimizu match information; 12/5 15:00",
+      "retrievedAt": "2026-11-28T19:05:00+09:00"
+    },
+    {
+      "url": "https://www.s-pulse.co.jp/schedules/topteam/20261201",
+      "type": "official Shimizu top-team schedule; 12/5 vs Nagasaki",
+      "retrievedAt": "2026-11-28T19:05:00+09:00"
+    },
+    {
+      "url": "https://www.v-varen.com/game_information/249978.html",
+      "type": "official V-Varen match information; 12/5 vs Shimizu",
+      "retrievedAt": "2026-11-28T19:05:00+09:00"
+    },
+    {
+      "url": "https://www.sanfrecce.co.jp/matches/20261206/event",
+      "type": "official Sanfrecce match information; 12/6 vs Kobe",
+      "retrievedAt": "2026-11-28T19:05:00+09:00"
+    },
+    {
+      "url": "https://www.gamba-osaka.net/gameinfo/news/no/20692/",
+      "type": "official Gamba match information; 12/6 vs Yokohama FM",
+      "retrievedAt": "2026-11-28T19:05:00+09:00"
+    },
+    {
+      "url": "https://www.f-marinos.com/schedule/",
+      "type": "official Yokohama FM schedule; 12/6 away at Gamba",
+      "retrievedAt": "2026-11-28T19:05:00+09:00"
+    },
+    {
+      "url": "https://www.vissel-kobe.co.jp/match/broadcast/",
+      "type": "official Vissel match schedule; 12/6 at Hiroshima",
+      "retrievedAt": "2026-11-28T19:05:00+09:00"
+    },
+    {
+      "url": "https://www.consadole-sapporo.jp/news/2026/11/12940-2/",
+      "type": "official Consadole match/ticket information; 12/5 vs Niigata",
+      "retrievedAt": "2026-11-28T19:05:00+09:00"
+    },
+    {
+      "url": "https://myfc.co.jp/news/20261122/1194220/",
+      "type": "official Fujieda match information; 12/5 vs Akita",
+      "publishedAt": "2026-11-22",
+      "retrievedAt": "2026-11-28T19:05:00+09:00"
+    }
+  ],
+  "discrepancies": [
+    {
+      "team": "セレッソ大阪",
+      "clubPage": "https://www.cerezo.jp/team/schedule/202612/",
+      "clubPageDisplayedDate": "2026-12-04",
+      "officialTotoAndJLeagueDate": "2026-12-05 15:00",
+      "resolution": "official toto card and J.League official schedule agree on 2026-12-05; use that date and recheck before deadline"
+    }
+  ],
+  "nextChecks": [
+    "12/2〜12/3に26クラブの負傷/復帰/出場停止/予想先発を再確認",
+    "締切前に公式先発が公表された場合のみrevisionOf付き追記を検討"
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "product": "totoGOAL3",
+  "marketType": "totoGOAL3",
+  "round": 1674,
+  "fixtureCount": 3,
+  "teamSideCount": 6,
+  "categoryOrder": [
+    "0",
+    "1",
+    "2",
+    "3+"
+  ],
+  "source": "スポーツくじ公式・第1674回totoGOAL3投票状況",
+  "sourceUrl": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=02&fromId=SSIN026&gameAssortment=1&holdCntId=1674",
+  "pageDisplayAt": "2026-11-24T18:16:00+09:00",
+  "retrievedAt": "2026-11-24T18:20:45+09:00",
+  "displayAgeSeconds": 285,
+  "staleAfterSeconds": 300,
+  "refreshNotice": "5分毎",
+  "stale": false,
+  "totalVotesPageSummary": 62956,
+  "teamSides": [
+    {
+      "teamSideNumber": 1,
+      "fixtureNumber": 1,
+      "team": "千葉",
+      "venue": "フクアリ",
+      "voteCounts": [
+        13439,
+        24122,
+        17359,
+        8036
+      ],
+      "percentages": [
+        21.35,
+        38.32,
+        27.57,
+        12.76
+      ],
+      "percentageTotal": 100,
+      "sumVotes": 62956,
+      "marketVoteShare": {
+        "0": 0.2135,
+        "1": 0.3832,
+        "2": 0.2757,
+        "3+": 0.1276
+      }
+    },
+    {
+      "teamSideNumber": 2,
+      "fixtureNumber": 1,
+      "team": "名古屋",
+      "venue": "フクアリ",
+      "voteCounts": [
+        18569,
+        22324,
+        14584,
+        7479
+      ],
+      "percentages": [
+        29.49,
+        35.46,
+        23.17,
+        11.88
+      ],
+      "percentageTotal": 100,
+      "sumVotes": 62956,
+      "marketVoteShare": {
+        "0": 0.2949,
+        "1": 0.3546,
+        "2": 0.2317,
+        "3+": 0.1188
+      }
+    },
+    {
+      "teamSideNumber": 3,
+      "fixtureNumber": 2,
+      "team": "岡山",
+      "venue": "ＪＦＥス",
+      "voteCounts": [
+        12266,
+        24222,
+        18532,
+        7936
+      ],
+      "percentages": [
+        19.48,
+        38.47,
+        29.44,
+        12.61
+      ],
+      "percentageTotal": 100,
+      "sumVotes": 62956,
+      "marketVoteShare": {
+        "0": 0.1948,
+        "1": 0.3847,
+        "2": 0.2944,
+        "3+": 0.1261
+      }
+    },
+    {
+      "teamSideNumber": 4,
+      "fixtureNumber": 2,
+      "team": "清水",
+      "venue": "ＪＦＥス",
+      "voteCounts": [
+        22970,
+        23197,
+        10788,
+        6001
+      ],
+      "percentages": [
+        36.49,
+        36.85,
+        17.13,
+        9.53
+      ],
+      "percentageTotal": 100,
+      "sumVotes": 62956,
+      "marketVoteShare": {
+        "0": 0.3649,
+        "1": 0.3685,
+        "2": 0.1713,
+        "3+": 0.0953
+      }
+    },
+    {
+      "teamSideNumber": 5,
+      "fixtureNumber": 3,
+      "team": "長崎",
+      "venue": "ピースタ",
+      "voteCounts": [
+        18854,
+        24438,
+        12790,
+        6874
+      ],
+      "percentages": [
+        29.95,
+        38.82,
+        20.31,
+        10.92
+      ],
+      "percentageTotal": 100,
+      "sumVotes": 62956,
+      "marketVoteShare": {
+        "0": 0.2995,
+        "1": 0.3882,
+        "2": 0.2031,
+        "3+": 0.1092
+      }
+    },
+    {
+      "teamSideNumber": 6,
+      "fixtureNumber": 3,
+      "team": "川崎Ｆ",
+      "venue": "ピースタ",
+      "voteCounts": [
+        8470,
+        17067,
+        21794,
+        15625
+      ],
+      "percentages": [
+        13.45,
+        27.11,
+        34.62,
+        24.82
+      ],
+      "percentageTotal": 100,
+      "sumVotes": 62956,
+      "marketVoteShare": {
+        "0": 0.1345,
+        "1": 0.2711,
+        "2": 0.3462,
+        "3+": 0.2482
+      }
+    }
+  ],
+  "reconciliation": {
+    "teamSideCount": 6,
+    "allTeamSideVoteCountsEqualPageSummary": true,
+    "allPercentageTotalsEqual100": true
+  },
+  "v2Eligibility": {
+    "marketInputFresh": true,
+    "predictionGenerationEligible": false,
+    "reason": "The official market input is fresh, but no executable GOAL3 V2 prediction generator and approved output schema are present in this research PR. Archive only; do not create a forecast."
+  },
+  "predictionImpact": "No GOAL3 forecast, V1/V2 prediction row, research shadow, market weight, production model, existing log, or existing shadow artifact was created or modified."
+}

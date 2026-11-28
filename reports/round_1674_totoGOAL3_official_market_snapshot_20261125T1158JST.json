@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "snapshotType": "official_vote_share_snapshot",
+  "product": "totoGOAL3",
+  "marketType": "totoGOAL3",
+  "round": 1674,
+  "deadlineAt": "2026-11-25T18:50:00+09:00",
+  "fixtureCount": 3,
+  "teamSideCount": 6,
+  "categoryOrder": [
+    "0",
+    "1",
+    "2",
+    "3+"
+  ],
+  "source": {
+    "publisher": "独立行政法人日本スポーツ振興センター toto公式サイト",
+    "url": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=02&fromId=SSIN026&gameAssortment=1&holdCntId=1674",
+    "cardUrl": "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1674",
+    "retrievalMethod": "公式totoGOAL3投票状況ページを直接開いて表示値を記録"
+  },
+  "pageDisplayAt": "2026-11-25T11:58:00+09:00",
+  "retrievedAt": "2026-11-25T12:11:02+09:00",
+  "displayAgeSeconds": 782,
+  "refreshNotice": "5分毎に最新情報を表示しています",
+  "staleAfterSeconds": 300,
+  "stale": true,
+  "totalVotesPageSummary": 110882,
+  "teamSides": [
+    {
+      "teamSideNumber": 1,
+      "matchNumber": 1,
+      "teamSide": "home",
+      "team": "ジェフユナイテッド千葉",
+      "opponent": "名古屋グランパス",
+      "voteCounts": [
+        23402,
+        41982,
+        31022,
+        14476
+      ],
+      "percentages": [
+        21.1,
+        37.86,
+        27.98,
+        13.06
+      ],
+      "sumVotes": 110882,
+      "percentageTotal": 100,
+      "marketVoteShare": {
+        "0": 0.211,
+        "1": 0.3786,
+        "2": 0.2798,
+        "3+": 0.1306
+      }
+    },
+    {
+      "teamSideNumber": 2,
+      "matchNumber": 1,
+      "teamSide": "away",
+      "team": "名古屋グランパス",
+      "opponent": "ジェフユナイテッド千葉",
+      "voteCounts": [
+        33722,
+        38677,
+        25447,
+        13036
+      ],
+      "percentages": [
+        30.41,
+        34.88,
+        22.95,
+        11.76
+      ],
+      "sumVotes": 110882,
+      "percentageTotal": 100.00000000000001,
+      "marketVoteShare": {
+        "0": 0.3041,
+        "1": 0.3488,
+        "2": 0.2295,
+        "3+": 0.1176
+      }
+    },
+    {
+      "teamSideNumber": 3,
+      "matchNumber": 2,
+      "teamSide": "home",
+      "team": "ファジアーノ岡山",
+      "opponent": "清水エスパルス",
+      "voteCounts": [
+        21528,
+        42692,
+        32548,
+        14114
+      ],
+      "percentages": [
+        19.42,
+        38.5,
+        29.35,
+        12.73
+      ],
+      "sumVotes": 110882,
+      "percentageTotal": 100.00000000000001,
+      "marketVoteShare": {
+        "0": 0.1942,
+        "1": 0.385,
+        "2": 0.2935,
+        "3+": 0.1273
+      }
+    },
+    {
+      "teamSideNumber": 4,
+      "matchNumber": 2,
+      "teamSide": "away",
+      "team": "清水エスパルス",
+      "opponent": "ファジアーノ岡山",
+      "voteCounts": [
+        41451,
+        40685,
+        18547,
+        10199
+      ],
+      "percentages": [
+        37.38,
+        36.69,
+        16.73,
+        9.2
+      ],
+      "sumVotes": 110882,
+      "percentageTotal": 100,
+      "marketVoteShare": {
+        "0": 0.3738,
+        "1": 0.3669,
+        "2": 0.1673,
+        "3+": 0.092
+      }
+    },
+    {
+      "teamSideNumber": 5,
+      "matchNumber": 3,
+      "teamSide": "home",
+      "team": "Ｖ・ファーレン長崎",
+      "opponent": "川崎フロンターレ",
+      "voteCounts": [
+        33340,
+        42595,
+        22933,
+        12014
+      ],
+      "percentages": [
+        30.07,
+        38.41,
+        20.68,
+        10.84
+      ],
+      "sumVotes": 110882,
+      "percentageTotal": 100,
+      "marketVoteShare": {
+        "0": 0.3007,
+        "1": 0.3841,
+        "2": 0.2068,
+        "3+": 0.1084
+      }
+    },
+    {
+      "teamSideNumber": 6,
+      "matchNumber": 3,
+      "teamSide": "away",
+      "team": "川崎フロンターレ",
+      "opponent": "Ｖ・ファーレン長崎",
+      "voteCounts": [
+        14739,
+        29844,
+        37939,
+        28360
+      ],
+      "percentages": [
+        13.29,
+        26.91,
+        34.22,
+        25.58
+      ],
+      "sumVotes": 110882,
+      "percentageTotal": 100,
+      "marketVoteShare": {
+        "0": 0.1329,
+        "1": 0.2691,
+        "2": 0.3422,
+        "3+": 0.2558
+      }
+    }
+  ],
+  "reconciliation": {
+    "teamSideRows": 6,
+    "uniqueMatchNumbers": 3,
+    "allTeamSideVoteCountSumsMatchPageTotal": true,
+    "allPercentageTotalsEqual100": true,
+    "categoryOrderMatchesOfficialPage": true
+  },
+  "v2Eligibility": {
+    "status": "not_generated",
+    "marketInputFresh": false,
+    "predictionGenerationEligible": false,
+    "reason": "表示時刻から782秒経過し300秒を超過。過去に第1666回のhard-coded GOAL3 V2 prototypeと第1668/1671回の30/70 exploratory artifactsは存在するが、blend.pyは第1666回入力を固定し、0.7はGOAL3で未検証。第1674回用の汎用・テスト済みrunner/採用基準は確認できない。古くなったこの市場観測からV2は生成しない。"
+  },
+  "predictionImpact": "この観測から新しいGOAL3 V1/V2 prediction row、revision、shadowは生成していない。既存記録を保持。",
+  "notes": "公式投票率は公開投票シェアであり、校正済み得点確率ではない。",
+  "historicalV2Prototype": {
+    "status": "hardcoded_round1666_prototype_only",
+    "formula": "p_v2 = 0.3 * v1 + 0.7 * official_vote_share",
+    "marketWeight": 0.7,
+    "marketWeightStatus": "provisional_and_not_independently_validated_for_GOAL3",
+    "sources": [
+      {
+        "path": "docs/round-1666-goal3-v2/blend.py",
+        "blobSha": "da5ba003c9c65d28ce47f25e69c8d885b41c82fb"
+      },
+      {
+        "path": "docs/round-1666-goal3-v2/README.md",
+        "blobSha": "2f57cb865037449a81a418a5abb65684d4d27b91"
+      },
+      {
+        "path": "predictions/round_1668_ChatGPT_goal3_market_blend_v2_1307JST.jsonl",
+        "blobSha": "e8b5f702b409c6b6dbc5c57d1d0d06e76a9ba3bb"
+      },
+      {
+        "path": "predictions/round_1671_ChatGPT_goal3_market_blend_v2_1652JST.jsonl",
+        "blobSha": "7f4409132bac2fa298a845ecefd3dbbece790dfc"
+      }
+    ],
+    "limitation": "blend.py hardcodes round 1666 inputs. Round 1668/1671 V2 artifacts confirm the exploratory 30/70 formula but do not provide a generic, tested round-1674 runner or validated acceptance criteria."
+  }
+}

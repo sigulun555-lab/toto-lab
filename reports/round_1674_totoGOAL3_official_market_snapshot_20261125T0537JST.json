@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "snapshotType": "official_vote_share_snapshot",
+  "product": "totoGOAL3",
+  "marketType": "totoGOAL3",
+  "round": 1674,
+  "deadlineAt": "2026-11-25T18:50:00+09:00",
+  "fixtureCount": 3,
+  "teamSideCount": 6,
+  "categoryOrder": [
+    "0",
+    "1",
+    "2",
+    "3+"
+  ],
+  "source": {
+    "publisher": "独立行政法人日本スポーツ振興センター toto公式サイト",
+    "url": "https://sp.toto-dream.com/dcs/subos/screen/si01/ssin025/PGSSIN02501ForwardVotetotoSP.form?commodityId=02&fromId=SSIN026&gameAssortment=1&holdCntId=1674",
+    "cardUrl": "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1674",
+    "retrievalMethod": "Direct page open of the official totoGOAL3 vote-rate page"
+  },
+  "pageDisplayAt": "2026-11-25T05:37:00+09:00",
+  "retrievedAt": "2026-11-25T06:01:14+09:00",
+  "displayAgeSeconds": 1454,
+  "refreshNotice": "5分毎に最新情報を表示しています",
+  "staleAfterSeconds": 300,
+  "stale": true,
+  "totalVotesPageSummary": 83611,
+  "teamSides": [
+    {
+      "teamSideNumber": 1,
+      "matchNumber": 1,
+      "teamSide": "home",
+      "team": "ジェフユナイテッド千葉",
+      "opponent": "名古屋グランパス",
+      "voteCounts": [
+        17725,
+        31504,
+        23350,
+        11032
+      ],
+      "percentages": [
+        21.2,
+        37.68,
+        27.93,
+        13.19
+      ],
+      "sumVotes": 83611,
+      "percentageTotal": 100,
+      "marketVoteShare": {
+        "0": 0.212,
+        "1": 0.3768,
+        "2": 0.2793,
+        "3+": 0.1319
+      }
+    },
+    {
+      "teamSideNumber": 2,
+      "matchNumber": 1,
+      "teamSide": "away",
+      "team": "名古屋グランパス",
+      "opponent": "ジェフユナイテッド千葉",
+      "voteCounts": [
+        25198,
+        28898,
+        19200,
+        10315
+      ],
+      "percentages": [
+        30.14,
+        34.56,
+        22.96,
+        12.34
+      ],
+      "sumVotes": 83611,
+      "percentageTotal": 100,
+      "marketVoteShare": {
+        "0": 0.3014,
+        "1": 0.3456,
+        "2": 0.2296,
+        "3+": 0.1234
+      }
+    },
+    {
+      "teamSideNumber": 3,
+      "matchNumber": 2,
+      "teamSide": "home",
+      "team": "ファジアーノ岡山",
+      "opponent": "清水エスパルス",
+      "voteCounts": [
+        16492,
+        31962,
+        24416,
+        10741
+      ],
+      "percentages": [
+        19.72,
+        38.23,
+        29.2,
+        12.85
+      ],
+      "sumVotes": 83611,
+      "percentageTotal": 100,
+      "marketVoteShare": {
+        "0": 0.1972,
+        "1": 0.3823,
+        "2": 0.292,
+        "3+": 0.1285
+      }
+    },
+    {
+      "teamSideNumber": 4,
+      "matchNumber": 2,
+      "teamSide": "away",
+      "team": "清水エスパルス",
+      "opponent": "ファジアーノ岡山",
+      "voteCounts": [
+        30509,
+        30685,
+        14395,
+        8022
+      ],
+      "percentages": [
+        36.49,
+        36.7,
+        17.22,
+        9.59
+      ],
+      "sumVotes": 83611,
+      "percentageTotal": 100,
+      "marketVoteShare": {
+        "0": 0.3649,
+        "1": 0.367,
+        "2": 0.1722,
+        "3+": 0.0959
+      }
+    },
+    {
+      "teamSideNumber": 5,
+      "matchNumber": 3,
+      "teamSide": "home",
+      "team": "Ｖ・ファーレン長崎",
+      "opponent": "川崎フロンターレ",
+      "voteCounts": [
+        25073,
+        31833,
+        17440,
+        9265
+      ],
+      "percentages": [
+        29.99,
+        38.07,
+        20.86,
+        11.08
+      ],
+      "sumVotes": 83611,
+      "percentageTotal": 100,
+      "marketVoteShare": {
+        "0": 0.2999,
+        "1": 0.3807,
+        "2": 0.2086,
+        "3+": 0.1108
+      }
+    },
+    {
+      "teamSideNumber": 6,
+      "matchNumber": 3,
+      "teamSide": "away",
+      "team": "川崎フロンターレ",
+      "opponent": "Ｖ・ファーレン長崎",
+      "voteCounts": [
+        11646,
+        22640,
+        28285,
+        21040
+      ],
+      "percentages": [
+        13.93,
+        27.08,
+        33.83,
+        25.16
+      ],
+      "sumVotes": 83611,
+      "percentageTotal": 100,
+      "marketVoteShare": {
+        "0": 0.1393,
+        "1": 0.2708,
+        "2": 0.3383,
+        "3+": 0.2516
+      }
+    }
+  ],
+  "reconciliation": {
+    "teamSideRows": 6,
+    "uniqueMatchNumbers": 3,
+    "allTeamSideVoteCountSumsMatchPageTotal": true,
+    "allPercentageTotalsEqual100": true,
+    "categoryOrderMatchesOfficialPage": true
+  },
+  "v2Eligibility": {
+    "status": "not_generated",
+    "marketInputFresh": false,
+    "predictionGenerationEligible": false,
+    "reason": "The official observation is stale (1,454 seconds old; threshold 300 seconds), and no validated product-specific totoGOAL3 V2 generator or approved blend is available."
+  },
+  "predictionImpact": "none; this commit archives only the directly observed official vote-share snapshot. The observation is stale at retrieval and no prediction or shadow is generated.",
+  "limitations": [
+    "Official vote shares are ticket-choice proportions, not calibrated true goal probabilities.",
+    "The page display was 1,454 seconds old at retrieval, beyond its stated five-minute refresh interval.",
+    "Official starting lineups were not confirmed in this observation.",
+    "No injury, suspension, availability, or lineup adjustment is applied to the existing GOAL3 baseline."
+  ]
+}

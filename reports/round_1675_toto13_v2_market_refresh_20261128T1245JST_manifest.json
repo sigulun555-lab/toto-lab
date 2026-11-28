@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1675,
+  "predictionVersion": "V2",
+  "status": "provisional_latest_available_market_snapshot_freshness_unverified",
+  "generatedAt": "2026-11-28T12:56:06+09:00",
+  "generatedAtUtc": "2026-11-28T03:56:06.000Z",
+  "deadlineAt": "2026-11-28T13:50:00+09:00",
+  "sourceV1": {
+    "path": "predictions/round_1675_ChatGPT_shared_score_v1_revision_20261126T022833JST.jsonl",
+    "blobSha": "7d530d61f1f1a102eccfe74cceeab4cfedae11bb",
+    "rowCount": 13
+  },
+  "marketSnapshot": {
+    "path": "reports/round_1675_toto13_official_market_snapshot_20261128T1245JST.json",
+    "pageDisplayAt": "2026-11-28T12:45:00+09:00",
+    "retrievedAt": "2026-11-28T12:56:06+09:00",
+    "displayAgeSeconds": 666,
+    "voteStatusUpdatedAt": null,
+    "voteDataFreshnessVerified": false,
+    "freshnessGateSeconds": 300
+  },
+  "blend": {
+    "formula": "P_v2 = 0.30 * P_latest_V1 + 0.70 * P_official_toto13_vote_share",
+    "weights": {
+      "poissonModel": 0.3,
+      "totoVoteShare": 0.7
+    }
+  },
+  "output": {
+    "path": "predictions/round_1675_ChatGPT_shared_score_v2_market_refresh_20261128T1245JST.jsonl",
+    "rowCount": 13,
+    "allProbabilityVectorsNormalized": true
+  },
+  "safeguards": {
+    "existingV2Overwritten": false,
+    "existingPredictionLogsOverwritten": false,
+    "productionModelChanged": false,
+    "marketWeightChanged": false,
+    "merged": false,
+    "eligibleForFreshSubmission": false
+  },
+  "note": "This is an explicitly provisional recalculation from the latest official page render obtained in this run (12:45 JST). At retrieval (12:56:06 JST) it was 666 seconds old; no separate voteStatusUpdatedAt was exposed. It does not pass or prove the 300-second freshness gate."
+}

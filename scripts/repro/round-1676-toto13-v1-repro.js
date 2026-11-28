@@ -17,7 +17,7 @@ const deadlineAt = '2026-12-05T12:50:00+09:00';
 const deadlineAtUtc = '2026-12-05T03:50:00.000Z';
 const modelVersion = 'GPT-shared-poisson-score-v1-2026-11-28';
 const expected = Object.freeze({
-  gptCommit: 'c2b3a8e943446d41adb803b918b7a75a36ae982d',
+  gptCommit: '38d03bcf8e42b22b26ec16de9886848a00f95fb7',
   modelBlob: '20cde0fc85016db3ef7abac7d2bb485510ba4e22',
   historyBlob: 'bfb8bdc2b2a29c828d3a2041ce6e514a8b40ab6f',
   aliasesBlob: '5de22584524ff4c07ddac1d27f49afbbbc5f88ab',

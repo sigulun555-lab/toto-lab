@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1676,
+  "reportType": "official_team_news_delta_and_prior_audit_correction",
+  "checkedAt": "2026-11-29T01:09:35+09:00",
+  "source": {
+    "name": "J.LEAGUE official suspension notice",
+    "url": "https://www.jleague.jp/news/article/35474/",
+    "publishedAt": "2026-11-26T17:00:00+09:00",
+    "retrievedAt": "2026-11-29T01:09:35+09:00"
+  },
+  "relevantConfirmedSuspensions": [
+    {
+      "player": "新井 悠太",
+      "team": "東京ヴェルディ",
+      "competition": "J1",
+      "suspensionType": "J1(b), two-match suspension",
+      "suspendedMatches": [
+        "2026-11-29",
+        "2026-12-05"
+      ],
+      "round1676MatchNumber": 3,
+      "round1676Fixture": "東京ヴェルディ vs 京都サンガF.C.",
+      "status": "confirmed_by_official_J_LEAGUE_notice"
+    }
+  ],
+  "otherRelevantClubRowsInSameNotice": [
+    {
+      "team": "ジェフユナイテッド千葉",
+      "player": "津久井 匠海",
+      "suspendedDate": "2026-11-28",
+      "round1676": false
+    },
+    {
+      "team": "柏レイソル",
+      "player": "原田 亘",
+      "suspendedDate": "2026-11-28",
+      "round1676": false
+    },
+    {
+      "team": "ガンバ大阪",
+      "player": "初瀬 亮",
+      "suspendedDate": "2026-11-29",
+      "round1676": false
+    },
+    {
+      "team": "セレッソ大阪",
+      "player": "櫻川 ソロモン",
+      "suspendedDate": "2026-11-28",
+      "round1676": false
+    },
+    {
+      "team": "セレッソ大阪",
+      "player": "ディオン クールズ",
+      "suspendedDate": "2026-11-28",
+      "round1676": false
+    },
+    {
+      "team": "ヴィッセル神戸",
+      "player": "山川 哲史",
+      "suspendedDate": "2026-11-28",
+      "round1676": false
+    },
+    {
+      "team": "Ｖ・ファーレン長崎",
+      "player": "ノーマン キャンベル",
+      "suspendedDate": "2026-11-29",
+      "round1676": false
+    }
+  ],
+  "priorTeamNewsAudit": {
+    "path": "reports/round_1676_toto13_team_news_audit_20261128T1905JST.json",
+    "checkedAt": "2026-11-28T19:05:00+09:00",
+    "teamsQueried": 26,
+    "all26AvailabilityFullyVerified": false,
+    "officialStartingLineupsPublished": false,
+    "recordedConfirmedSuspensions": 0
+  },
+  "priorAuditCorrection": {
+    "correction": "The prior audit's count of zero confirmed suspensions was incomplete. The official J.LEAGUE notice above had already been published on 2026-11-26 17:00 JST and lists Arai Yuta for the 2026-12-05 J1 match. The 2026-11-28 19:05 JST 26-club audit missed this notice.",
+    "impact": "Round 1676 toto13 match 3 (Tokyo Verdy vs Kyoto Sanga) has one confirmed suspended player; this is not a GOAL3 target because GOAL3 fixtures are toto13 matches 1, 4 and 5."
+  },
+  "currentRunLimitations": {
+    "all26ClubAvailabilityRechecked": false,
+    "officialStartingLineupsRechecked": false,
+    "absenceOfAdditionalNoticesIsNotEvidenceOfAvailability": true
+  },
+  "marketSnapshot": {
+    "product": "toto13",
+    "officialUrl": "https://store.toto-dream.com/dcs/subos/screen/pi09/spin003/PGSPIN00301InitVoteRate.form?commodityId=01&holdCntId=1676",
+    "displayedAt": "2026-11-28T22:48:00+09:00",
+    "checkedAt": "2026-11-29T01:09:35+09:00",
+    "displayAgeSeconds": 8495,
+    "freshnessGateSeconds": 300,
+    "directPageOpen": "failed",
+    "eligibleForV2": false,
+    "reason": "display timestamp is older than the 300-second freshness gate; no V2 market blend generated"
+  },
+  "predictionHandling": {
+    "existingV1PredictionFile": "predictions/round_1676_ChatGPT_shared_score_v1.jsonl",
+    "existingV1Modified": false,
+    "injuryOrSuspensionAdjustmentApplied": false,
+    "V2Generated": false,
+    "noRetroactiveTimestamp": true
+  },
+  "note": "Branch-only addendum and correction. The original 19:05 audit and saved V1 rows are preserved; no V1 revision or V2 is generated here, and main is unchanged."
+}

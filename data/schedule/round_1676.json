@@ -1,0 +1,137 @@
+{
+  "round": 1676,
+  "holdDates": [
+    "2026-12-05",
+    "2026-12-06"
+  ],
+  "matches": [
+    {
+      "matchNumber": 1,
+      "date": "2026-12-05",
+      "kickoff": "13:00",
+      "venue": "フクアリ",
+      "homeTeam": "ジェフユナイテッド千葉",
+      "awayTeam": "鹿島アントラーズ"
+    },
+    {
+      "matchNumber": 2,
+      "date": "2026-12-05",
+      "kickoff": "14:00",
+      "venue": "埼玉",
+      "homeTeam": "浦和レッズ",
+      "awayTeam": "名古屋グランパス"
+    },
+    {
+      "matchNumber": 3,
+      "date": "2026-12-05",
+      "kickoff": "14:00",
+      "venue": "味スタ",
+      "homeTeam": "東京ヴェルディ",
+      "awayTeam": "京都サンガF.C."
+    },
+    {
+      "matchNumber": 4,
+      "date": "2026-12-05",
+      "kickoff": "15:00",
+      "venue": "ハナサカ",
+      "homeTeam": "セレッソ大阪",
+      "awayTeam": "水戸ホーリーホック"
+    },
+    {
+      "matchNumber": 5,
+      "date": "2026-12-05",
+      "kickoff": "15:00",
+      "venue": "ピースタ",
+      "homeTeam": "Ｖ・ファーレン長崎",
+      "awayTeam": "清水エスパルス"
+    },
+    {
+      "matchNumber": 6,
+      "date": "2026-12-06",
+      "kickoff": "14:00",
+      "venue": "Ｅピース",
+      "homeTeam": "サンフレッチェ広島",
+      "awayTeam": "ヴィッセル神戸"
+    },
+    {
+      "matchNumber": 7,
+      "date": "2026-12-06",
+      "kickoff": "15:00",
+      "venue": "パナスタ",
+      "homeTeam": "ガンバ大阪",
+      "awayTeam": "横浜Ｆ・マリノス"
+    },
+    {
+      "matchNumber": 8,
+      "date": "2026-12-06",
+      "kickoff": "16:00",
+      "venue": "三協Ｆ柏",
+      "homeTeam": "柏レイソル",
+      "awayTeam": "アビスパ福岡"
+    },
+    {
+      "matchNumber": 9,
+      "date": "2026-12-06",
+      "kickoff": "16:00",
+      "venue": "Ｇスタ",
+      "homeTeam": "ＦＣ町田ゼルビア",
+      "awayTeam": "ファジアーノ岡山"
+    },
+    {
+      "matchNumber": 10,
+      "date": "2026-12-05",
+      "kickoff": "14:00",
+      "venue": "プレド",
+      "homeTeam": "北海道コンサドーレ札幌",
+      "awayTeam": "アルビレックス新潟"
+    },
+    {
+      "matchNumber": 11,
+      "date": "2026-12-05",
+      "kickoff": "14:00",
+      "venue": "藤枝サ",
+      "homeTeam": "藤枝ＭＹＦＣ",
+      "awayTeam": "ブラウブリッツ秋田"
+    },
+    {
+      "matchNumber": 12,
+      "date": "2026-12-05",
+      "kickoff": "14:00",
+      "venue": "鳴門大塚",
+      "homeTeam": "徳島ヴォルティス",
+      "awayTeam": "ジュビロ磐田"
+    },
+    {
+      "matchNumber": 13,
+      "date": "2026-12-06",
+      "kickoff": "14:00",
+      "venue": "ユアスタ",
+      "homeTeam": "ベガルタ仙台",
+      "awayTeam": "湘南ベルマーレ"
+    }
+  ],
+  "miniTotoA": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "miniTotoB": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "totoGOAL3": [
+    1,
+    4,
+    5
+  ],
+  "sources": [
+    "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1676",
+    "https://www.jleague.jp/j1/match/search-list/?category=j1&enddate=2027-06-30&period=custom&startdate=2026-08-01"
+  ],
+  "retrievedAt": "2026-11-28T10:05:00Z"
+}

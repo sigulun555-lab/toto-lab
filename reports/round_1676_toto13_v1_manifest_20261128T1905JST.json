@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "product": "toto13",
+  "round": 1676,
+  "predictionVersion": "V1",
+  "status": "generated_by_pinned_gpt_model_saved_on_dedicated_branch",
+  "generatedAtJst": "2026-11-28T19:20:30.046+09:00",
+  "generatedAtUtc": "2026-11-28T10:20:30.046Z",
+  "deadlineAt": "2026-12-05T12:50:00+09:00",
+  "deadlineAtUtc": "2026-12-05T03:50:00.000Z",
+  "model": {
+    "repository": "sigulun555-lab/gpt",
+    "commit": "38d03bcf8e42b22b26ec16de9886848a00f95fb7",
+    "path": "model.js",
+    "blobSha": "20cde0fc85016db3ef7abac7d2bb485510ba4e22",
+    "function": "predict(history, fixture)",
+    "version": "GPT-shared-poisson-score-v1-2026-11-28"
+  },
+  "input": {
+    "repository": "sigulun555-lab/gpt",
+    "commit": "38d03bcf8e42b22b26ec16de9886848a00f95fb7",
+    "historyPath": "data/history.json",
+    "historyBlobSha": "bfb8bdc2b2a29c828d3a2041ce6e514a8b40ab6f",
+    "historyRows": 540,
+    "latestResultDate": "2026-11-28",
+    "fetchedAt": "2026-11-28T07:45:33.310Z",
+    "sourceUrl": "https://raw.githubusercontent.com/k-addtimes/jleague_open_data/main/current_schedule_file.csv",
+    "sourceName": "k-addtimes/jleague_open_data",
+    "sourceKind": "community mirror; not official toto feed",
+    "teamAliasesPath": "data/team_aliases.json",
+    "teamAliasesBlobSha": "5de22584524ff4c07ddac1d27f49afbbbc5f88ab",
+    "parserPath": "scripts/auto_pipeline.js",
+    "parserBlobSha": "ef557e084cab802df7830d949bd1f52ddee5db7c",
+    "dateSorted": true
+  },
+  "officialSchedule": {
+    "sourceUrl": "https://store.toto-dream.com/dcs/subos/screen/pi01/spin000/PGSPIN00001DisptotoLotInfo.form?holdCntId=1676",
+    "pageDisplayedAt": "2026-11-28T18:42:00+09:00",
+    "retrievedAt": "2026-11-28T19:05:00+09:00",
+    "snapshotBranch": "gpt/toto13-round-1676-v1-20261128T1905JST",
+    "snapshotCommit": "99e727faa68fa74211b1f7f09a7933140b30ccde",
+    "snapshotManifestPath": "reports/round_1676_schedule_manifest.json",
+    "snapshotManifestBlobSha": "f3fe3f834dffea613af966dc0559642278d3716c",
+    "snapshotSchedulePath": "data/schedule/round_1676.json",
+    "snapshotScheduleBlobSha": "10327e8e969d057e9a8c2d347a463b20dcb8c06b",
+    "fixtureCount": 13
+  },
+  "officialFixtures": [
+    {
+      "number": 1,
+      "date": "2026-12-05",
+      "kickoff": "13:00",
+      "venue": "フクアリ",
+      "home": "ジェフユナイテッド千葉",
+      "away": "鹿島アントラーズ"
+    },
+    {
+      "number": 2,
+      "date": "2026-12-05",
+      "kickoff": "14:00",
+      "venue": "埼玉",
+      "home": "浦和レッズ",
+      "away": "名古屋グランパス"
+    },
+    {
+      "number": 3,
+      "date": "2026-12-05",
+      "kickoff": "14:00",
+      "venue": "味スタ",
+      "home": "東京ヴェルディ",
+      "away": "京都サンガF.C."
+    },
+    {
+      "number": 4,
+      "date": "2026-12-05",
+      "kickoff": "15:00",
+      "venue": "ハナサカ",
+      "home": "セレッソ大阪",
+      "away": "水戸ホーリーホック"
+    },
+    {
+      "number": 5,
+      "date": "2026-12-05",
+      "kickoff": "15:00",
+      "venue": "ピースタ",
+      "home": "Ｖ・ファーレン長崎",
+      "away": "清水エスパルス"
+    },
+    {
+      "number": 6,
+      "date": "2026-12-06",
+      "kickoff": "14:00",
+      "venue": "Ｅピース",
+      "home": "サンフレッチェ広島",
+      "away": "ヴィッセル神戸"
+    },
+    {
+      "number": 7,
+      "date": "2026-12-06",
+      "kickoff": "15:00",
+      "venue": "パナスタ",
+      "home": "ガンバ大阪",
+      "away": "横浜Ｆ・マリノス"
+    },
+    {
+      "number": 8,
+      "date": "2026-12-06",
+      "kickoff": "16:00",
+      "venue": "三協Ｆ柏",
+      "home": "柏レイソル",
+      "away": "アビスパ福岡"
+    },
+    {
+      "number": 9,
+      "date": "2026-12-06",
+      "kickoff": "16:00",
+      "venue": "Ｇスタ",
+      "home": "ＦＣ町田ゼルビア",
+      "away": "ファジアーノ岡山"
+    },
+    {
+      "number": 10,
+      "date": "2026-12-05",
+      "kickoff": "14:00",
+      "venue": "プレド",
+      "home": "北海道コンサドーレ札幌",
+      "away": "アルビレックス新潟"
+    },
+    {
+      "number": 11,
+      "date": "2026-12-05",
+      "kickoff": "14:00",
+      "venue": "藤枝サ",
+      "home": "藤枝ＭＹＦＣ",
+      "away": "ブラウブリッツ秋田"
+    },
+    {
+      "number": 12,
+      "date": "2026-12-05",
+      "kickoff": "14:00",
+      "venue": "鳴門大塚",
+      "home": "徳島ヴォルティス",
+      "away": "ジュビロ磐田"
+    },
+    {
+      "number": 13,
+      "date": "2026-12-06",
+      "kickoff": "14:00",
+      "venue": "ユアスタ",
+      "home": "ベガルタ仙台",
+      "away": "湘南ベルマーレ"
+    }
+  ],
+  "teamNewsAudit": {
+    "path": "reports/round_1676_toto13_team_news_audit_20261128T1905JST.json",
+    "blobSha": "043a996dcaa46a565dc70118ea572e90fc3aae71",
+    "checkedAt": "2026-11-28T19:05:00+09:00",
+    "teamsQueried": 26,
+    "coverageComplete": false,
+    "officialStartingLineupsPublished": false,
+    "appliedToV1": false
+  },
+  "marketSnapshot": {
+    "used": false,
+    "eligibleForV2": false,
+    "freshnessGateSeconds": 300,
+    "note": "V2 requires a separate official toto13 vote-share capture with voteStatusUpdatedAt age <=300 seconds; current page display time is not sufficient."
+  },
+  "predictionFile": {
+    "path": "predictions/round_1676_ChatGPT_shared_score_v1.jsonl",
+    "rows": 13,
+    "revisionRows": 0,
+    "revisionOfLinks": 0,
+    "marketBlend": false,
+    "sha256": "e8301daa76c06f5ba336f02e848187ae5af5663bfbd011cc5942678f0e00b866"
+  },
+  "teamWindows": [
+    {
+      "matchNumber": 1,
+      "homeTeam": "ジェフユナイテッド千葉",
+      "awayTeam": "鹿島アントラーズ",
+      "homePriorMatches": 12,
+      "awayPriorMatches": 12,
+      "historyCutoffExclusive": "2026-12-05"
+    },
+    {
+      "matchNumber": 2,
+      "homeTeam": "浦和レッズ",
+      "awayTeam": "名古屋グランパス",
+      "homePriorMatches": 12,
+      "awayPriorMatches": 12,
+      "historyCutoffExclusive": "2026-12-05"
+    },
+    {
+      "matchNumber": 3,
+      "homeTeam": "東京ヴェルディ",
+      "awayTeam": "京都サンガF.C.",
+      "homePriorMatches": 12,
+      "awayPriorMatches": 12,
+      "historyCutoffExclusive": "2026-12-05"
+    },
+    {
+      "matchNumber": 4,
+      "homeTeam": "セレッソ大阪",
+      "awayTeam": "水戸ホーリーホック",
+      "homePriorMatches": 12,
+      "awayPriorMatches": 12,
+      "historyCutoffExclusive": "2026-12-05"
+    },
+    {
+      "matchNumber": 5,
+      "homeTeam": "Ｖ・ファーレン長崎",
+      "awayTeam": "清水エスパルス",
+      "homePriorMatches": 12,
+      "awayPriorMatches": 12,
+      "historyCutoffExclusive": "2026-12-05"
+    },
+    {
+      "matchNumber": 6,
+      "homeTeam": "サンフレッチェ広島",
+      "awayTeam": "ヴィッセル神戸",
+      "homePriorMatches": 12,
+      "awayPriorMatches": 12,
+      "historyCutoffExclusive": "2026-12-06"
+    },
+    {
+      "matchNumber": 7,
+      "homeTeam": "ガンバ大阪",
+      "awayTeam": "横浜Ｆ・マリノス",
+      "homePriorMatches": 12,
+      "awayPriorMatches": 12,
+      "historyCutoffExclusive": "2026-12-06"
+    },
+    {
+      "matchNumber": 8,
+      "homeTeam": "柏レイソル",
+      "awayTeam": "アビスパ福岡",
+      "homePriorMatches": 12,
+      "awayPriorMatches": 12,
+      "historyCutoffExclusive": "2026-12-06"
+    },
+    {
+      "matchNumber": 9,
+      "homeTeam": "ＦＣ町田ゼルビア",
+      "awayTeam": "ファジアーノ岡山",
+      "homePriorMatches": 12,
+      "awayPriorMatches": 12,
+      "historyCutoffExclusive": "2026-12-06"
+    },
+    {
+      "matchNumber": 10,
+      "homeTeam": "北海道コンサドーレ札幌",
+      "awayTeam": "アルビレックス新潟",
+      "homePriorMatches": 12,
+      "awayPriorMatches": 12,
+      "historyCutoffExclusive": "2026-12-05"
+    },
+    {
+      "matchNumber": 11,
+      "homeTeam": "藤枝ＭＹＦＣ",
+      "awayTeam": "ブラウブリッツ秋田",
+      "homePriorMatches": 12,
+      "awayPriorMatches": 12,
+      "historyCutoffExclusive": "2026-12-05"
+    },
+    {
+      "matchNumber": 12,
+      "homeTeam": "徳島ヴォルティス",
+      "awayTeam": "ジュビロ磐田",
+      "homePriorMatches": 12,
+      "awayPriorMatches": 12,
+      "historyCutoffExclusive": "2026-12-05"
+    },
+    {
+      "matchNumber": 13,
+      "homeTeam": "ベガルタ仙台",
+      "awayTeam": "湘南ベルマーレ",
+      "homePriorMatches": 12,
+      "awayPriorMatches": 12,
+      "historyCutoffExclusive": "2026-12-06"
+    }
+  ],
+  "limitations": [
+    "history.json is a community mirror snapshot, not an official J.League publication-time feed.",
+    "All 540 history rows share one fetchedAt timestamp; first-known historical availability is not proven.",
+    "Team-news audit is incomplete: absence of a found notice is not evidence of full availability.",
+    "Official starting lineups were not published/found at the audit time; no injury or lineup adjustment was applied.",
+    "Cerezo club schedule page conflicts with the official toto/J.League 12/5 date; official lottery card and J.League schedule were used."
+  ]
+}

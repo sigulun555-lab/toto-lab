@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "product": "toto13",
   "round": 1676,
-  "reportType": "official_team_news_delta",
+  "reportType": "official_team_news_delta_and_prior_audit_correction",
   "checkedAt": "2026-11-29T01:09:35+09:00",
   "source": {
     "name": "J.LEAGUE official suspension notice",
@@ -74,7 +74,12 @@
     "checkedAt": "2026-11-28T19:05:00+09:00",
     "teamsQueried": 26,
     "all26AvailabilityFullyVerified": false,
-    "officialStartingLineupsPublished": false
+    "officialStartingLineupsPublished": false,
+    "recordedConfirmedSuspensions": 0
+  },
+  "priorAuditCorrection": {
+    "correction": "The prior audit's count of zero confirmed suspensions was incomplete. The official J.LEAGUE notice above had already been published on 2026-11-26 17:00 JST and lists Arai Yuta for the 2026-12-05 J1 match. The 2026-11-28 19:05 JST 26-club audit missed this notice.",
+    "impact": "Round 1676 toto13 match 3 (Tokyo Verdy vs Kyoto Sanga) has one confirmed suspended player; this is not a GOAL3 target because GOAL3 fixtures are toto13 matches 1, 4 and 5."
   },
   "currentRunLimitations": {
     "all26ClubAvailabilityRechecked": false,
@@ -99,5 +104,5 @@
     "V2Generated": false,
     "noRetroactiveTimestamp": true
   },
-  "note": "This is a branch-only addendum. It does not revise the saved V1 probabilities, create a V2, or modify main."
+  "note": "Branch-only addendum and correction. The original 19:05 audit and saved V1 rows are preserved; no V1 revision or V2 is generated here, and main is unchanged."
 }

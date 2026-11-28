@@ -143,7 +143,7 @@ const manifest = {
   product: 'toto13',
   round: 1676,
   predictionVersion: 'V1',
-  status: 'generated_by_pinned_gpt_model_pending_saved_pr_ci',
+  status: 'generated_by_pinned_gpt_model_saved_on_dedicated_branch',
   generatedAtJst,
   generatedAtUtc,
   deadlineAt,

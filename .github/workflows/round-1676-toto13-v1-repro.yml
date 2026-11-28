@@ -49,9 +49,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add predictions/round_1676_ChatGPT_shared_score_v1.jsonl reports/round_1676_toto13_v1_manifest_20261128T1905JST.json
-          changed="$(git diff --cached --name-only | sort | tr '\n' ' ')"
-          test "$changed" = "predictions/round_1676_ChatGPT_shared_score_v1.jsonl reports/round_1676_toto13_v1_manifest_20261128T1905JST.json "
-          if ! git diff --cached --quiet; then
+          if git diff --cached --quiet; then
+            echo "Saved V1 snapshot already matches the pinned generator; no new commit required."
+          else
+            changed="$(git diff --cached --name-only | sort | tr '\n' ' ')"
+            test "$changed" = "predictions/round_1676_ChatGPT_shared_score_v1.jsonl reports/round_1676_toto13_v1_manifest_20261128T1905JST.json "
             git commit -m "predictions: save round 1676 toto13 V1 snapshot"
             git push origin "HEAD:refs/heads/$EXPECTED_BRANCH"
           fi

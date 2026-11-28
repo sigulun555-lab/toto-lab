@@ -7,7 +7,7 @@ const V1 = 'predictions/round_1675_ChatGPT_shared_score_v1_revision_20261126T022
 const MARKET = 'reports/round_1675_toto13_official_market_snapshot_20261128T1245JST.json';
 const OUTPUT = 'predictions/round_1675_ChatGPT_shared_score_v2_market_refresh_20261128T1245JST.jsonl';
 function readJsonl(file) {
-  return fs.readFileSync(path.join(ROOT, file), 'utf8').trim().split(/\\r?\\n/).filter(Boolean).map(JSON.parse);
+  return fs.readFileSync(path.join(ROOT, file), 'utf8').trim().split(/\r?\n/).filter(Boolean).map(JSON.parse);
 }
 function buildProvisionalRows(v1Rows, market) {
   if (market.product !== 'toto13' || market.round !== 1675 || market.matches.length !== 13) throw new Error('expected round 1675 toto13 market with 13 matches');
@@ -33,8 +33,8 @@ function buildProvisionalRows(v1Rows, market) {
 }
 function main() {
  const rows = buildProvisionalRows(readJsonl(V1), JSON.parse(fs.readFileSync(path.join(ROOT, MARKET), 'utf8')));
- fs.writeFileSync(path.join(ROOT, OUTPUT), rows.map(x=>JSON.stringify(x)).join('\\n')+'\\n');
- process.stdout.write(JSON.stringify({rows:rows.length, provisional:true, voteDataFreshnessVerified:false, output:OUTPUT}, null, 2)+'\\n');
+ fs.writeFileSync(path.join(ROOT, OUTPUT), rows.map(x=>JSON.stringify(x)).join('\n')+'\n');
+ process.stdout.write(JSON.stringify({rows:rows.length, provisional:true, voteDataFreshnessVerified:false, output:OUTPUT}, null, 2)+'\n');
 }
 if (require.main === module) main();
 module.exports = { buildProvisionalRows };

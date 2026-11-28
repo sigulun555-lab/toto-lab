@@ -1,4 +1,5 @@
 name: Round 1676 toto13 V1 reproducible generation
+# Re-run after the branch-only prediction snapshot commit to verify the saved bytes.
 on:
   push:
     branches:
